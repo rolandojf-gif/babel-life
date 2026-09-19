@@ -24,6 +24,10 @@ export const copy = {
   noLegibleVolume: 'NO LEGIBLE VOLUME',
   noLegibleNote: 'A volume stands at this address. Nothing in it can be read.',
   browseShelf: 'BROWSE THIS SHELF',
+  // One page of a volume nobody can read. Not an account of anything.
+  lookInside: 'LOOK INSIDE',
+  pageOf: 'One page of four hundred and ten.',
+  pageDescription: 'A page of symbols that spell nothing in any language.',
   // A record of this consultation, not a claim about the reader.
   consulted: 'Consulted at {time} on a {day}.',
   anotherLife: 'SHOW ME ANOTHER LIFE',

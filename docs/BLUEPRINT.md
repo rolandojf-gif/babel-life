@@ -73,12 +73,21 @@ When a visitor opens a life, the interface presents an authored volume from the 
     *   `SHOW ME ANOTHER LIFE`: Deterministically advances to the next distinct thematic cluster in the wall sequence, cycling continuously without repetition.
     *   `← Wall of Lives`: Returns directly to the wall.
 
+### The Unreadable Volumes (`pages.ts`, `AddressView.ts`)
+At an address holding nothing this edition can print, the visitor is not told the shelf is empty. A quiet `LOOK INSIDE` offers one page of the volume that stands there.
+*   **Never unasked, never on a legible volume.** The control appears only on the address view, opens nothing on its own, and is replaced by the page it was asked for rather than left disabled.
+*   **Twenty-five orthographic symbols**, as the story has them: twenty-two letters, the space, the comma and the period. The twenty-two are the classical Latin alphabet without J, U, W or Z. The story names none of them; this is an editorial choice of this edition, frozen like the coordinate display.
+*   **Fixed for its address.** 192 symbols drawn by splitmix64 seeded with the address's own 64-bit position: the same page on every device, in every session, for as long as the address exists. No clock, no randomness, no storage, and nothing about the reader anywhere in it.
+*   **One page of four hundred and ten**, said plainly beneath it. The volume is not offered in full and no page count is faked elsewhere.
+*   **Read by eye alone.** The symbols carry `aria-hidden`; a visually hidden line says what the page is, and focus moves to it when the control is replaced, so a screen reader is told about the page instead of being made to spell out 192 symbols of nothing.
+*   **It asserts nothing.** Noise cannot claim that any account is true, which is why it is safe here and why it belongs here: it is the one place the edition lets a visitor see what the Library is almost entirely made of.
+
 ### Routing, Coordinates & Technical Invariants
 *   **Hash-Based Routing (`routing.ts`):**
     *   `#` or empty string: Wall of Lives.
     *   `#book=bXXXX`: Discovered book view, addressed by accession number.
     *   `#shelf=<HEXAGON>-<wall>-<shelf>`: Shelf view (`ShelfView.ts`). The thirty-two addresses of one shelf in order, each showing either the spine of a legible volume or `not legible`. Header: `Thirty-two volumes stand here. N of them can be read.` Walkable with `PREVIOUS SHELF` / `NEXT SHELF`. This is the one surface outside the book view where a title appears, because a shelf is read by its spines; the Wall still shows none.
-    *   `#volume=<HEXAGON>-<wall>-<shelf>-<volume>`: One address. If the accession shelved there belongs to this edition, the book view renders for that volume; otherwise the address view (`AddressView.ts`): `NO LEGIBLE VOLUME` — `A volume stands at this address. Nothing in it can be read.` — with the walk continuing in both directions and back to the shelf.
+    *   `#volume=<HEXAGON>-<wall>-<shelf>-<volume>`: One address. If the accession shelved there belongs to this edition, the book view renders for that volume; otherwise the address view (`AddressView.ts`): `NO LEGIBLE VOLUME` — `A volume stands at this address. Nothing in it can be read.` — with the page above, the walk continuing in both directions, and the way back to the shelf.
     *   Any other hash, and any coordinate whose fields fall outside the address space: `invalidAddress` view (`This address is not in this edition.`) with a direct button to `Enter the Library`.
     *   Native browser history (`pushState` / `popstate` / `hashchange`) supports standard Back and Forward navigation without custom state machines.
 *   **Deterministic 64-Bit Coordinates (`coordinates.ts`):**
@@ -99,12 +108,14 @@ When a visitor opens a life, the interface presents an authored volume from the 
     *   Support for `prefers-reduced-motion`.
 
 ### Verification (`tests/`)
-Vitest, six files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
+Vitest, eight files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
 *   `coordinates.test.ts` — the address space. Every expected value is derived independently of the module under test, never by calling it: the published positions of known volumes, the inverse over the whole `b0001`–`b9999` registry, field ranges, unpadded printing, one spelling per hexagon, the wrap at both ends of the space, the 384 addresses past the end, and the property the shelf copy depends on — every printed volume stands alone on its shelf.
 *   `catalog.test.ts` — the shipped inventory, re-deriving the rules rather than calling the validator: 24 lives and 48 variations, accession numbers unique and never recycled, every icon present in the illustration set, word counts inside the editorial range, no repeated passage or title, edges that stay inside one life, every variation reachable from its root, and the wall as exactly the set of roots in curated order.
 *   `validator.test.ts` — the load-time refusals, one case per rejection, against catalogs built to be wrong.
 *   `blueprint.test.ts` — this document against the catalog: the 24 `TITLE` and `WALL HOOK` lines of the frozen map in section 4, in wall order, plus the inventory this section states. A title edited in one place and not the other fails here.
 *   `routing.test.ts` — every route the Library answers to, the strangers it does not, and a round trip through the hash writers for all 72 volumes.
+*   `pages.test.ts` — the page at an unreadable address: the alphabet, the length, determinism across repeat readings, every symbol inside the alphabet and none of them favoured out of all recognition, a different page at every address, and two fixtures produced by a separate implementation of the same scramble rather than by calling this one.
+*   `address-view.test.ts` — the address view under jsdom: the page is offered and not opened, the control is replaced by it, focus follows, the symbols are hidden from assistive technology behind a line that describes them, and the same address reads the same twice.
 *   `controller.test.ts` — the routing table as behaviour, under jsdom: a legible address opens a book, an illegible one is not an error, an address outside the space is, navigation clears what the previous view held, and the same location never renders twice.
 
 ---
@@ -326,6 +337,7 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Discovered book view with `YOU FOUND THE BOOK`, full 4-field coordinates, `This book was already here.`, the consultation note, passage, aftertaste, nearby volumes and the shelf walk.
 *   **The full 72-volume canonical catalog:** 24 root lives on the Wall, 48 nearby volumes reachable only from inside a book, exactly two nearby volumes each, passages of 113–155 words. Validated at load time: ID syntax, duplicate identities, unresolved edges, edges leaving their root life, unlabelled edges, and a wall that is not exactly the set of roots.
 *   Nearby volumes navigation naming specific differences from the current passage.
+*   **A page at every unreadable address:** `LOOK INSIDE` on the address view, 192 symbols of the Library's 25-symbol alphabet, fixed for that address by splitmix64 over its position, hidden from assistive technology behind a line that describes it.
 *   **Navigable address space:** `#shelf=` and `#volume=` routes, a shelf view of thirty-two spines, an address view for addresses holding nothing legible, and volume-by-volume walking in both directions.
 *   Deterministic 64-bit coordinate mapping using BigInt linear congruential arithmetic, invertible in both directions.
 *   Deterministic `SHOW ME ANOTHER LIFE` sequence cycling between distinct clusters.
@@ -333,8 +345,8 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Zero backend, zero AI generation, zero user tracking, zero data collection, zero persistence.
 
 ### KNOWN GAPS
-*   **The views are untested.** Everything below them is covered (see section 2); `WallOfLives`, `BookView`, `ShelfView`, `AddressView`, `NearbyVolumes` and the illustrations are exercised only by reading the page.
-*   **No browser verification pass on record.** Typecheck and build pass; layout, focus order, screen-reader behaviour and reduced motion have not been formally walked at 320 / 390 / 1440 px.
+*   **Most views are untested.** Everything below them is covered, and `AddressView` now has cases of its own (see section 2); `WallOfLives`, `BookView`, `ShelfView`, `NearbyVolumes` and the illustrations are exercised only by reading the page.
+*   **Only the address view has been walked in a browser.** Chromium at 320 / 390 / 1440 px: no horizontal overflow, the page opens on request, focus lands on it, and the symbols are identical at all three widths. Every other view, and any screen reader, remains unverified.
 *   The final-hexagon boundary condition described in section 2.
 *   No hosting or deployment. The build produces a static bundle and nothing publishes it.
 
