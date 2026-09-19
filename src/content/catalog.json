@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "scenarios": [
+    {
+      "id": "s01",
+      "selectorText": "you win an Oscar, but the speech you rehearsed for eleven years is in a coat at home.",
+      "category": "Familiar",
+      "depth": 0,
+      "order": 1,
+      "baseBookId": "b0001"
+    },
+    {
+      "id": "s03",
+      "selectorText": "at 27, despite never having played professional football, you play exactly 47 seconds of a top-flight match.",
+      "category": "Hyper-specific",
+      "depth": 0,
+      "order": 2,
+      "baseBookId": "b0003"
+    },
+    {
+      "id": "s05",
+      "selectorText": "every day of your life is right except one Tuesday afternoon you cannot remember.",
+      "category": "Hyper-specific",
+      "depth": 0,
+      "order": 3,
+      "baseBookId": "b0005"
+    },
+    {
+      "id": "s06",
+      "selectorText": "every detail of your life matches until tomorrow’s breakfast: the cup is one centimetre farther left.",
+      "category": "Tiny variation",
+      "depth": 0,
+      "order": 4,
+      "baseBookId": "b0006"
+    }
+  ],
+  "books": [
+    {
+      "id": "b0001",
+      "scenarioId": "s01",
+      "passage": "You win an Oscar. The speech you have rehearsed for eleven years is in the pocket of a coat you left at home. You thank the person who lent you a pen.",
+      "neighbors": []
+    },
+    {
+      "id": "b0003",
+      "scenarioId": "s03",
+      "passage": "At twenty-seven, you make your professional debut in a top-flight match. You touch the ball once. Exactly forty-seven seconds after you enter, the referee ends the match. You never play professionally again.",
+      "neighbors": []
+    },
+    {
+      "id": "b0005",
+      "scenarioId": "s05",
+      "passage": "Every remembered event is recorded correctly. On a Tuesday afternoon you cannot remember, the book says you walked to the river. The next morning is correct again.",
+      "neighbors": []
+    },
+    {
+      "id": "b0006",
+      "scenarioId": "s06",
+      "passage": "Until tomorrow morning, the account matches your life. At breakfast, you put a cup one centimetre farther left. The next sentence describes an ordinary day.",
+      "neighbors": []
+    }
+  ]
+}
