@@ -1,5 +1,7 @@
 /** Logical shapes of the catalog and of the state the controller keeps in memory. */
 
+import type { Coordinate, ShelfCoordinate } from './coordinates';
+
 /** An ordered destination from one book to a nearby life in the Library. */
 export interface NeighborEdge {
   targetBookId: string;
@@ -51,7 +53,7 @@ export interface Catalog {
   books: Book[];
 }
 
-export type View = 'wall' | 'book' | 'invalidAddress';
+export type View = 'wall' | 'book' | 'shelf' | 'address' | 'invalidAddress';
 
 /** Which curated selection the wall is currently showing. */
 export type WallSelection = 'first' | 'second' | 'all';
@@ -60,6 +62,10 @@ export interface AppState {
   view: View;
   wallSelection: WallSelection;
   currentBookId: string | null;
+  /** The address being looked at, when the visitor came in by one. */
+  address: Coordinate | null;
+  /** The shelf being walked. */
+  shelf: ShelfCoordinate | null;
 }
 
 /** Where focus should land after a render, and what to announce politely. */

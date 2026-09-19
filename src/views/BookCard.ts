@@ -1,5 +1,6 @@
 import { copy } from '../content/copy';
-import { coordinateFields, coordinateFor } from '../library/coordinates';
+import { coordinateFields, coordinateFor, shelfOf, type Coordinate } from '../library/coordinates';
+import { hashForShelf } from '../library/routing';
 import type { RootBook } from '../library/model';
 import { createIllustration } from './illustrations';
 import { element, glyph, link } from './view';
@@ -41,13 +42,14 @@ export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   return item;
 }
 
-/** The full address, wrapping at its separators. */
-export function createCoordinateLine(bookId: string): HTMLParagraphElement {
-  const paragraph = element('p', 'coordinate');
-  for (const [index, field] of coordinateFields(coordinateFor(bookId)).entries()) {
-    if (index > 0) paragraph.append(element('span', 'coordinate__separator', ' · '));
+/** The full address, wrapping at its separators, and leading to its shelf. */
+export function createCoordinateLine(coordinate: Coordinate): HTMLAnchorElement {
+  const anchor = link(hashForShelf(shelfOf(coordinate)), 'coordinate coordinate--link');
+  for (const [index, field] of coordinateFields(coordinate).entries()) {
+    if (index > 0) anchor.append(element('span', 'coordinate__separator', ' · '));
     // A no-break space keeps each field whole; the line breaks at the separators.
-    paragraph.append(element('span', 'coordinate__field', `${field.name} ${field.value}`));
+    anchor.append(element('span', 'coordinate__field', `${field.name} ${field.value}`));
   }
-  return paragraph;
+  anchor.append(element('span', 'visually-hidden', ` — ${copy.openThisShelf}`));
+  return anchor;
 }

@@ -321,7 +321,7 @@ body {
 }
 
 .found {
-  margin: 1.5rem 0 0.6rem;
+  margin: 1.5rem 0 0.1rem;
   color: var(--oxblood);
   font-size: 0.6875rem;
   font-weight: 600;
@@ -329,7 +329,7 @@ body {
 }
 
 .already-here {
-  margin: 0.75rem 0 0;
+  margin: 0.4rem 0 0;
   color: var(--ink-soft);
   font-family: var(--serif);
   font-size: 1rem;
@@ -514,6 +514,179 @@ body {
   color: var(--ink-soft);
   font-family: var(--serif);
   font-size: 1.0625rem;
+}
+
+/* The shelf ---------------------------------------------------------------- */
+
+.coordinate--link {
+  display: block;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0.7rem 0;
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 160ms ease-out;
+}
+
+.coordinate--link:hover,
+.coordinate--link:focus-visible {
+  color: var(--oxblood);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.coordinate--link:focus-visible {
+  outline: 2px solid var(--oxblood);
+  outline-offset: 4px;
+}
+
+.found--absent {
+  color: var(--ink-faint);
+}
+
+.shelf {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.shelf__address {
+  margin: 0.4rem 0 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.shelf__address:focus-visible {
+  outline: 2px solid var(--oxblood);
+  outline-offset: 6px;
+}
+
+.shelf__count {
+  margin: 0.85rem 0 1.75rem;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  font-style: italic;
+}
+
+.shelf__list {
+  margin: 0 0 2rem;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+  list-style: none;
+}
+
+.shelf__item {
+  border-bottom: 1px solid var(--rule);
+}
+
+.shelf__link {
+  display: flex;
+  min-height: 44px;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 0.25rem;
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 160ms ease-out, background-color 160ms ease-out;
+}
+
+.shelf__link:hover {
+  background: rgba(110, 31, 39, 0.05);
+  color: var(--oxblood);
+}
+
+.shelf__link:focus-visible {
+  outline: 2px solid var(--oxblood);
+  outline-offset: -2px;
+}
+
+.shelf__number {
+  flex: none;
+  width: 2.25rem;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.shelf__spine {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+  overflow-wrap: break-word;
+}
+
+/* The one volume on the shelf this edition can print. */
+.shelf__link--legible {
+  color: var(--ink);
+}
+
+.shelf__link--legible .shelf__spine {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.shelf__link--legible .shelf__number {
+  color: var(--oxblood);
+}
+
+.address__note {
+  margin: 1.1rem 0 2rem;
+  font-family: var(--serif);
+  font-size: clamp(1.375rem, 1.1rem + 1.2vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.address__note:focus-visible {
+  outline: 2px solid var(--oxblood);
+  outline-offset: 8px;
+}
+
+.consulted {
+  margin: 0.35rem 0 0;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.consulted__time {
+  font-variant-numeric: tabular-nums;
+}
+
+.shelfwalk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 2.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.shelfwalk__link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--ink-faint);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  transition: color 160ms ease-out;
+}
+
+.shelfwalk__link:hover {
+  color: var(--oxblood);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.shelfwalk__link:focus-visible {
+  outline: 2px solid var(--oxblood);
+  outline-offset: 3px;
 }
 
 /* Actions ----------------------------------------------------------------- */

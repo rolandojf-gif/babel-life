@@ -1,12 +1,21 @@
 import { copy } from '../content/copy';
 import { findBook } from '../library/catalog';
+import { formatCoordinate, shelfFields, type ShelfCoordinate } from '../library/coordinates';
 import type { Controller } from '../library/controller';
 import type { AppState, RenderHint } from '../library/model';
+import { createAddressView } from './AddressView';
 import { createBookView } from './BookView';
+import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
 import { element, link, type ViewHandle } from './view';
 
 const SITE_TITLE = 'The Library of Lives';
+
+function formatShelf(shelf: ShelfCoordinate): string {
+  return shelfFields(shelf)
+    .map((field) => `${field.name} ${field.value}`)
+    .join(' \u00b7 ');
+}
 
 /**
  * The page: paper, the reading column, the footer, the polite status region, and
@@ -71,8 +80,10 @@ export function mountAppShell(
 
   function build(state: AppState): ViewHandle {
     if (state.view === 'book' && state.currentBookId !== null) {
-      return createBookView(state.currentBookId);
+      return createBookView(state.currentBookId, state.address);
     }
+    if (state.view === 'shelf' && state.shelf !== null) return createShelfView(state.shelf);
+    if (state.view === 'address' && state.address !== null) return createAddressView(state.address);
     if (state.view === 'invalidAddress') return invalidAddressView();
     return createWallOfLives(state, {
       onSomethingStranger: () => {
@@ -89,11 +100,19 @@ export function mountAppShell(
       const book = findBook(state.currentBookId);
       if (book) return `${book.title} — ${SITE_TITLE}`;
     }
+    if (state.view === 'shelf' && state.shelf !== null) {
+      return `${formatShelf(state.shelf)} — ${SITE_TITLE}`;
+    }
+    if (state.view === 'address' && state.address !== null) {
+      return `${formatCoordinate(state.address)} — ${SITE_TITLE}`;
+    }
     return SITE_TITLE;
   }
 
   return function render(state: AppState, hint: RenderHint): void {
-    const key = `${state.view}:${state.currentBookId ?? ''}`;
+    const key = `${state.view}:${state.currentBookId ?? ''}:${
+      state.address ? formatCoordinate(state.address) : ''
+    }:${state.shelf ? formatShelf(state.shelf) : ''}`;
     let view = currentView;
 
     if (key !== currentKey || view === null) {

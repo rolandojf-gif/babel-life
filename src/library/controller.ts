@@ -1,4 +1,5 @@
 import { findBook } from './catalog';
+import { accessionAt, positionOf, shelfOf } from './coordinates';
 import type { AppState, RenderHint, WallSelection } from './model';
 import { parseRoute } from './routing';
 
@@ -21,6 +22,8 @@ export function createController(render: Render): Controller {
     view: 'wall',
     wallSelection: 'first',
     currentBookId: null,
+    address: null,
+    shelf: null,
   };
 
   /** The URL the current rendering corresponds to, so a repeat event is a no-op. */
@@ -28,6 +31,9 @@ export function createController(render: Render): Controller {
 
   function applyLocation(hint: RenderHint): void {
     const route = parseRoute(window.location.hash);
+    state.currentBookId = null;
+    state.address = null;
+    state.shelf = null;
 
     if (route.kind === 'book') {
       const book = findBook(route.bookId);
@@ -36,14 +42,28 @@ export function createController(render: Render): Controller {
         state.currentBookId = book.id;
       } else {
         state.view = 'invalidAddress';
-        state.currentBookId = null;
+      }
+    } else if (route.kind === 'shelf') {
+      // A shelf is real when its first volume addresses somewhere in the space.
+      state.view = positionOf({ ...route.shelf, volume: 1 }) === undefined ? 'invalidAddress' : 'shelf';
+      state.shelf = state.view === 'shelf' ? route.shelf : null;
+    } else if (route.kind === 'address') {
+      const position = positionOf(route.coordinate);
+      if (position === undefined) {
+        state.view = 'invalidAddress';
+      } else {
+        // Every address holds a volume; this edition can print seventy-two of them.
+        const bookId = accessionAt(position);
+        const book = bookId === undefined ? undefined : findBook(bookId);
+        state.address = route.coordinate;
+        state.shelf = shelfOf(route.coordinate);
+        state.view = book ? 'book' : 'address';
+        state.currentBookId = book?.id ?? null;
       }
     } else if (route.kind === 'wall') {
       state.view = 'wall';
-      state.currentBookId = null;
     } else {
       state.view = 'invalidAddress';
-      state.currentBookId = null;
     }
 
     renderedHref = window.location.href;

@@ -1,5 +1,7 @@
 import { copy } from '../content/copy';
 import { anotherLifeAfter, findBook } from '../library/catalog';
+import { coordinateFor, shelfOf, step, type Coordinate } from '../library/coordinates';
+import { hashForAddress, hashForShelf } from '../library/routing';
 import { createCoordinateLine } from './BookCard';
 import { createIllustration } from './illustrations';
 import { createNearbyVolumes } from './NearbyVolumes';
@@ -7,10 +9,36 @@ import { element, glyph, link, type ViewHandle } from './view';
 
 const TIMESTAMP = /^\d{2}:\d{2}(:\d{2})?$/;
 
+const DAYS = [
+  'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
+];
+
+/**
+ * The Library's note of this consultation: the clock on the reader's own device,
+ * written down the way a reading room writes down that a volume was taken out.
+ * It records the reading, and claims nothing whatever about the reader.
+ */
+function createConsultationLine(now: Date): HTMLParagraphElement {
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const day = DAYS[now.getDay()] ?? '';
+
+  const stamp = element('time', 'consulted__time', `${hours}:${minutes}`);
+  stamp.dateTime = `${hours}:${minutes}`;
+  const [before, rest] = copy.consulted.split('{time}');
+  const [between, after] = (rest ?? '').split('{day}');
+
+  const line = element('p', 'consulted');
+  line.append(document.createTextNode(before ?? ''), stamp);
+  line.append(document.createTextNode(`${between ?? ''}${day}${after ?? ''}`));
+  return line;
+}
+
 /** A discovered volume: where it sits, what it says, and where it leads. */
-export function createBookView(bookId: string): ViewHandle {
+export function createBookView(bookId: string, address: Coordinate | null): ViewHandle {
   const book = findBook(bookId);
   if (!book) throw new Error(`No such book: ${bookId}`);
+  const coordinate = address ?? coordinateFor(book.id);
 
   const root = element('article', 'book');
 
@@ -34,8 +62,24 @@ export function createBookView(bookId: string): ViewHandle {
 
   const aftertaste = element('p', 'aftertaste', book.aftertaste);
 
-  const next = anotherLifeAfter(book.id);
-  const anotherLink = link(`#book=${next.id}`, 'action action--primary', copy.anotherLife);
+  // The shelf this volume stands on, walkable in both directions.
+  const shelfWalk = element('div', 'shelfwalk');
+  const previous = step(coordinate, -1n);
+  const next = step(coordinate, 1n);
+  if (previous) {
+    const anchor = link(hashForAddress(previous), 'shelfwalk__link');
+    anchor.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.previousVolume));
+    shelfWalk.append(anchor);
+  }
+  shelfWalk.append(link(hashForShelf(shelfOf(coordinate)), 'shelfwalk__link', copy.browseShelf));
+  if (next) {
+    const anchor = link(hashForAddress(next), 'shelfwalk__link');
+    anchor.append(document.createTextNode(copy.nextVolume), glyph('card__arrow', '→'));
+    shelfWalk.append(anchor);
+  }
+
+  const nextLife = anotherLifeAfter(book.id);
+  const anotherLink = link(`#book=${nextLife.id}`, 'action action--primary', copy.anotherLife);
   const wallLink = link('#', 'action action--quiet');
   wallLink.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
 
@@ -45,13 +89,15 @@ export function createBookView(bookId: string): ViewHandle {
   root.append(
     back,
     marker,
-    createCoordinateLine(book.id),
+    createCoordinateLine(coordinate),
     element('p', 'already-here', copy.alreadyHere),
+    createConsultationLine(new Date()),
     visual,
     title,
     passage,
     aftertaste,
     createNearbyVolumes(book),
+    shelfWalk,
     actions,
   );
 
