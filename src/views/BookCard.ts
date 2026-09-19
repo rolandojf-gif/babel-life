@@ -1,6 +1,6 @@
 import { copy } from '../content/copy';
 import { coordinateFields, coordinateFor } from '../library/coordinates';
-import type { Book } from '../library/model';
+import type { RootBook } from '../library/model';
 import { createIllustration } from './illustrations';
 import { element, glyph, link } from './view';
 
@@ -9,7 +9,7 @@ import { element, glyph, link } from './view';
  * says the volume is already shelved. The premise underneath is the whole hook,
  * so nothing has to be opened to be understood.
  */
-export function createBookCard(book: Book, index: number): HTMLLIElement {
+export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const item = element('li', 'wall__cell');
 
   const card = link(`#book=${book.id}`, 'card');

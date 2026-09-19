@@ -1,5 +1,5 @@
 import { copy } from '../content/copy';
-import { TOTAL_BOOKS, wallBooks } from '../library/catalog';
+import { TOTAL_ROOTS, wallBooks } from '../library/catalog';
 import type { AppState } from '../library/model';
 import { createBookCard } from './BookCard';
 import { element, type ViewHandle } from './view';
@@ -52,7 +52,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
 
     const word = COUNT_WORDS[books.length] ?? String(books.length);
     count.textContent =
-      books.length === TOTAL_BOOKS
+      books.length === TOTAL_ROOTS
         ? `${word} volumes.`
         : `${word} of twenty-four volumes.`;
 

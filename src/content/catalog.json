@@ -1,87 +1,50 @@
 {
-  "schemaVersion": 2,
-  "clusters": [
-    {
-      "id": "train",
-      "name": "Chance"
-    },
-    {
-      "id": "football",
-      "name": "The improbable afternoon"
-    },
-    {
-      "id": "cup",
-      "name": "Tomorrow"
-    },
-    {
-      "id": "letter",
-      "name": "The letter"
-    },
-    {
-      "id": "tuesday",
-      "name": "A forgotten Tuesday"
-    },
-    {
-      "id": "selfReference",
-      "name": "This reading"
-    },
-    {
-      "id": "future",
-      "name": "The return"
-    },
-    {
-      "id": "mortality",
-      "name": "The last sentence"
-    }
-  ],
+  "schemaVersion": 3,
   "wall": {
     "first": [
       "b0007",
+      "b0003",
+      "b0031",
       "b0006",
-      "b0012",
+      "b0005",
       "b0008",
       "b0010",
-      "b0003",
-      "b0005",
       "b0011",
-      "b0022",
-      "b0020",
-      "b0018",
-      "b0029"
+      "b0012",
+      "b0038",
+      "b0041",
+      "b0044"
     ],
     "second": [
-      "b0019",
-      "b0002",
-      "b0028",
-      "b0025",
-      "b0016",
-      "b0023",
-      "b0021",
-      "b0027",
-      "b0017",
-      "b0030",
-      "b0009",
-      "b0026"
+      "b0047",
+      "b0050",
+      "b0053",
+      "b0056",
+      "b0059",
+      "b0062",
+      "b0065",
+      "b0068",
+      "b0071",
+      "b0074",
+      "b0077",
+      "b0080"
     ]
   },
   "books": [
     {
       "id": "b0007",
-      "clusterId": "train",
+      "rootId": "b0007",
+      "kind": "root",
       "icon": "platform",
       "headline": "MISSED TRAIN",
-      "hook": "you miss the 08:14 by two seconds, start talking to the stranger beside you on the platform, and live with them for the next thirty-one years.",
+      "hook": "you miss the 08:14 by two seconds. The stranger beside you misses it too. You spend the next thirty-one years together.",
       "title": "The 08:14",
       "passage": [
         "08:14:02",
-        "The doors close while you are still running. You reach the platform two seconds too late, stop beside someone holding a paper cup, and swear quietly enough that you believe they cannot hear you.",
-        "They laugh.",
-        "“I missed it too.”",
-        "You do not know their name yet. You learn it four minutes later, on a bench with one slat missing, while the board above you gives up and changes to 08:31.",
-        "The 08:31 arrives. Neither of you gets on it.",
-        "You are ninety minutes late to a meeting you will not be able to recall by November. They are late to a dentist who charges them for the appointment anyway. The account records both facts and does not comment on them.",
-        "In this book you live together for thirty-one years. You buy a flat with bad light on the north side and argue about the light for nine years before you move. You learn the exact sound of their key in a door, and you learn it so well that for two years after they change jobs you still hear the old shift in it. One of you is better at endings, and it is not you.",
-        "On page 1,204 they say your name from another room and you do not answer, because you are reading. They say it again. You answer.",
+        "The doors close while you are still running. You stop beside someone holding a paper cup and swear quietly enough that you believe they cannot hear you.",
+        "They laugh. “I missed it too.”",
+        "You learn their name four minutes later, on a bench with one slat missing, while the board gives up and changes to 08:31. The 08:31 arrives. Neither of you gets on it.",
+        "Thirty-one years follow. A flat with bad light on the north side, and nine years of arguing about the light. The exact sound of their key in a door, learned so well that for two years after they change jobs you still hear the old shift in it.",
         "Nothing in the book marks the two seconds as important. They get one line, between the closing of the doors and the paper cup."
       ],
       "aftertaste": "Two seconds separate these books.",
@@ -98,20 +61,18 @@
     },
     {
       "id": "b0022",
-      "clusterId": "train",
+      "rootId": "b0007",
+      "kind": "nearby",
       "icon": "doorway",
       "headline": "08:13:59",
-      "hook": "you reach the same platform three seconds earlier, board the 08:14, and never meet the person you would have spent thirty-one years with.",
       "title": "Three Seconds Earlier",
       "passage": [
         "08:13:59",
-        "You reach the platform with three seconds in hand. The doors are still open. You step through them the way you have stepped through them four hundred times, without deciding to.",
+        "You reach the platform with three seconds in hand and step through the doors the way you have stepped through them four hundred times, without deciding to.",
         "Someone on the platform is holding a paper cup. You do not see them. There is no reason to see them.",
-        "You get the seat by the window on the left, which is the better seat in the morning. You arrive at 08:41. You are eleven minutes early for the meeting and you spend them answering a message about a delivery.",
-        "The account is not sad about this. It is only thorough.",
-        "Four years later, at a colleague’s fortieth, you meet someone by a table of warm white wine. That marriage is good and it lasts. There is a house with better light than the flat on the north side, and a long argument about a car instead. You are happy in the ordinary, uneven, entirely real way that the book records without adjectives.",
-        "The person with the paper cup appears once, in a subordinate clause, standing on the platform as the train pulls out. They are not named. They are never mentioned again.",
-        "The book is four hundred pages longer than the one next to it and contains no reference to a bench with a missing slat."
+        "You take the window seat on the left, which is the better seat in the morning, and arrive at 08:41, eleven minutes early for the meeting.",
+        "Four years later you meet someone at a colleague’s fortieth, by a table of warm white wine. That marriage is good and it lasts. There is a house with better light, and a long argument about a car instead.",
+        "The person with the paper cup appears once, in a subordinate clause, standing on the platform as the train pulls out. They are not named."
       ],
       "aftertaste": "Nothing else needs to change.",
       "neighbors": [
@@ -127,20 +88,18 @@
     },
     {
       "id": "b0019",
-      "clusterId": "train",
+      "rootId": "b0007",
+      "kind": "nearby",
       "icon": "platform",
       "headline": "NEITHER OF YOU SPEAKS",
-      "hook": "you miss the 08:14 by the same two seconds, stand a metre from that person for seventeen minutes, and neither of you says a word.",
       "title": "The Same Two Seconds",
       "passage": [
         "08:14:02",
-        "The doors close while you are still running. You reach the platform two seconds too late and stop beside someone holding a paper cup.",
-        "You swear under your breath, and in this account you get it right: they do not hear you.",
-        "So they do not laugh, and so there is nothing to answer.",
-        "You stand a metre apart for seventeen minutes. They look at their phone twice. You look at the board four times, although it says the same thing each time. At one point you both step back from the edge for the same fast train and your sleeves touch, and the book records this because the book records everything.",
+        "The doors close while you are still running. You stop beside someone holding a paper cup and swear under your breath, and in this account you get it right: they do not hear you.",
+        "So they do not laugh, and there is nothing to answer.",
+        "You stand a metre apart for seventeen minutes. They look at their phone twice. You look at the board four times, although it says the same thing each time. Once you both step back from the edge for a fast train and your sleeves touch, and the book records it, because the book records everything.",
         "The 08:31 arrives. You get into the third carriage. They get into the fifth.",
-        "You are ninety minutes late to the meeting. The rest of the day is unremarkable and so is the rest of the book, which is not the same as saying it is unhappy.",
-        "You will pass this person twice more. Once in a supermarket eleven years from now, in the aisle with the tinned tomatoes, and once at an airport gate where their flight is called before yours. Neither time do you look up. The account notes both crossings in the same flat voice it uses for the weather."
+        "You will pass them twice more, eleven years apart, and neither time do you look up."
       ],
       "aftertaste": "The difference is one sentence, said out loud.",
       "neighbors": [
@@ -156,29 +115,24 @@
     },
     {
       "id": "b0003",
-      "clusterId": "football",
+      "rootId": "b0003",
+      "kind": "root",
       "icon": "pitch",
       "headline": "FORTY-SEVEN SECONDS",
-      "hook": "you become a professional footballer at 27, play exactly 47 seconds, touch the ball once, and never play professionally again.",
+      "hook": "at 27, you make your professional football debut. Forty-seven seconds later, your entire professional career is over.",
       "title": "Forty-Seven Seconds",
       "passage": [
-        "You are twenty-seven. Until March you were playing on Saturdays for a side that shares its pitch with a rugby club, and working the rest of the week. A hamstring goes in the eighty-first minute and the bench is thin, and the manager looks along it twice before he looks at you.",
+        "You are twenty-seven. Until March you were playing on Saturdays for a side that shares its pitch with a rugby club. A hamstring goes in the eighty-first minute, the bench is thin, and the manager looks along it twice before he looks at you.",
         "You warm up for eleven minutes. The fourth official holds the board up. Your number is on it.",
-        "You cross the line in the eighty-eighth minute.",
-        "You touch the ball once: a header back towards your own defender, from a clearance that was never really contested. It is a completely unremarkable contact. Forty-seven seconds after you cross the line, the referee ends the match.",
+        "You cross the line in the eighty-eighth minute and touch the ball once: a header back towards your own defender, from a clearance nobody really contested. Forty-seven seconds later the referee ends the match.",
         "You never play professionally again.",
-        "Your mother watched on a stream that buffered twice, and missed it. Someone cuts a nine-second clip that circulates for a week among people who know you. You keep the shirt. It is washed once and then never again, which you are slightly embarrassed about.",
-        "The book gives the forty-seven seconds four pages. It gives the eleven years that follow one paragraph, and the paragraph is not unkind. It says you were good at it, that there was no dramatic reason, and that on a Tuesday in your forties you drove past the ground and did not slow down."
+        "The book gives the forty-seven seconds four pages and the eleven years that follow one paragraph. The paragraph is not unkind. It says there was no dramatic reason, and that on a Tuesday in your forties you drove past the ground and did not slow down."
       ],
       "aftertaste": "The eleven years are in the Library too. They are simply not this book.",
       "neighbors": [
         {
           "targetBookId": "b0016",
           "difference": "The referee ends the match one second earlier."
-        },
-        {
-          "targetBookId": "b0017",
-          "difference": "You never step onto the pitch."
         },
         {
           "targetBookId": "b0018",
@@ -188,112 +142,149 @@
     },
     {
       "id": "b0016",
-      "clusterId": "football",
+      "rootId": "b0003",
+      "kind": "nearby",
       "icon": "pitch",
       "headline": "ONE SECOND EARLIER",
-      "hook": "the referee ends your debut one second earlier, the ball is still in the air, and your whole professional career lasts 46 seconds.",
       "title": "Forty-Six Seconds",
       "passage": [
         "Everything is the same. The hamstring in the eighty-first minute, the eleven minutes of warming up, the board with your number on it, the eighty-eighth minute.",
-        "The clearance goes up. You are under it. You have already decided what to do with it, which is nothing interesting: head it back, safe side, let the defender deal with it.",
+        "The clearance goes up and you are under it. You have already decided what to do with it, which is nothing interesting: head it back, safe side, let the defender deal with it.",
         "The whistle goes while the ball is in the air.",
-        "You head it anyway, out of habit, and it does not count, and a defender near you laughs in a way that is not unkind. Forty-six seconds. One fewer than the book on the shelf beside this one.",
-        "You never play professionally again.",
-        "The stream buffers. Your mother misses it. Nobody cuts a nine-second clip, because there is nothing in it to cut. You keep the shirt and wash it once.",
-        "In this account, when people ask, you say you came on at the end of a game and nothing happened, and that is exactly true, and it is easier to say than the other version. You say it perhaps thirty times over the following decades, always in the same words, and the book records the words each time without remarking on the repetition."
+        "You head it anyway, out of habit. It does not count, and a defender near you laughs in a way that is not unkind. Forty-six seconds.",
+        "You never play professionally again. Nobody cuts a clip, because there is nothing in it to cut.",
+        "When people ask, you say you came on at the end of a game and nothing happened. That is exactly true, and it is easier to say than the other version."
       ],
       "aftertaste": "One second. Everything else on the page is unchanged.",
       "neighbors": [
         {
           "targetBookId": "b0003",
-          "difference": "The referee ends the match one second later."
+          "difference": "The referee ends the match one second later, and the header counts."
         },
         {
           "targetBookId": "b0018",
           "difference": "Your only touch goes in."
-        },
-        {
-          "targetBookId": "b0017",
-          "difference": "You never step onto the pitch."
-        }
-      ]
-    },
-    {
-      "id": "b0017",
-      "clusterId": "football",
-      "icon": "pitch",
-      "headline": "THE TOUCHLINE",
-      "hook": "you warm up, your number goes up on the board, and the match ends while you are still standing on the touchline.",
-      "title": "The Touchline",
-      "passage": [
-        "You are twenty-seven, and everything runs the same way up to the board.",
-        "Then the ball stays in play.",
-        "That is all it is. There is no stoppage. The fourth official holds the board up and lowers it and holds it up again, and you stand on the touchline with your hands on your hips and your shirt already untucked from the warm-up, and the game goes on somewhere to your left.",
-        "You stand there for forty-seven seconds.",
-        "The referee ends the match. The manager puts a hand on your shoulder on the way past and says something that is meant well and that you do not hear properly.",
-        "You never play professionally.",
-        "The shirt is in a drawer in this book too. It is the one detail that is materially different: it has no number sewn on it, because the number was only ever on the board. For a long time you think this is the sad part, and then at some point in your fifties you find it in the drawer while looking for something else, and it is just a shirt, and you put it back.",
-        "The account does not tell you whether the other version would have been better. It has no access to the other version. It only has this one, in full, for another three hundred pages."
-      ],
-      "aftertaste": "Forty-seven seconds, spent on the wrong side of a white line.",
-      "neighbors": [
-        {
-          "targetBookId": "b0003",
-          "difference": "You step on, and play forty-seven seconds."
-        },
-        {
-          "targetBookId": "b0016",
-          "difference": "You step on, and play forty-six."
         }
       ]
     },
     {
       "id": "b0018",
-      "clusterId": "football",
+      "rootId": "b0003",
+      "kind": "nearby",
       "icon": "spotlight",
       "headline": "YOUR ONLY TOUCH",
-      "hook": "your only touch of the ball in professional football is a header from thirty-one yards that goes in, and you never play again.",
       "title": "The Only Touch",
       "passage": [
-        "The hamstring, the eleven minutes, the board, the eighty-eighth minute. The clearance goes up and you are under it and you head it back, safe side, exactly as you intended.",
-        "It is a bad clearance from their goalkeeper, who has come too far, and your header goes over him from thirty-one yards.",
-        "Forty-seven seconds after you cross the line, the referee ends the match.",
-        "You never play professionally again. The club does not renew. There is no injury and no scandal; you are twenty-seven and the season ends and the phone does not ring, and that is the whole of it.",
-        "But there is a clip. It is two minutes and four seconds long, most of which is other people’s goals, and it has been retitled several times by people who have never met you. It reaches 2.1 million views. For about nine years, at parties, someone will eventually realise, and you will watch them decide whether to mention it.",
-        "You resent the nine seconds for a while. Then you stop. Then you are old, and someone’s child asks you, and you find that you tell it well: the fourth official, the hands on the hips, the goalkeeper too far out.",
+        "The hamstring, the eleven minutes, the board, the eighty-eighth minute. The clearance goes up, you are under it, and you head it back, safe side, exactly as you intended.",
+        "Their goalkeeper has come out to meet it and misjudges it. From six yards you head the ball back over him, and in.",
+        "Forty-seven seconds after you cross the line, the referee ends the match. You never play professionally again: no injury, no scandal, the season ends and the phone does not ring.",
+        "But there is a clip. Two minutes and four seconds long, most of it other people’s goals, retitled several times by people who have never met you. For about nine years, at parties, somebody will eventually realise, and you will watch them decide whether to mention it.",
         "The account gives the goal one sentence. It gives the telling of it eleven."
       ],
       "aftertaste": "The same forty-seven seconds. One different bounce.",
       "neighbors": [
         {
           "targetBookId": "b0003",
-          "difference": "The header is comfortably caught."
+          "difference": "The goalkeeper is where he should be, and the header goes back to your own defender."
         },
         {
           "targetBookId": "b0016",
-          "difference": "The whistle comes one second earlier."
+          "difference": "The whistle comes one second earlier, while the ball is still in the air."
+        }
+      ]
+    },
+    {
+      "id": "b0031",
+      "rootId": "b0031",
+      "kind": "root",
+      "icon": "coat",
+      "headline": "THE SPEECH AT HOME",
+      "hook": "you win an Oscar and realise, as your name is called, that the speech you rehearsed for eleven years is inside a coat at home.",
+      "title": "The Coat at Home",
+      "passage": [
+        "You have had the speech since you were thirty-one. It is four hundred words. It thanks a teacher by name, and a sound engineer, and it has a line in the middle that you have never been able to improve and have stopped trying to.",
+        "It is folded into the inside pocket of a grey coat, on a hook in a hallway, nine thousand kilometres away.",
+        "You understand this between the second syllable of your surname and standing up.",
+        "What you say instead lasts fifty-one seconds. You thank four people, three of whom are the right ones. You do not thank the teacher.",
+        "The book prints both texts, one after the other, without saying which is better. They are not the same length and they are not about the same things."
+      ],
+      "aftertaste": "Four hundred words, on a hook, in a hallway.",
+      "neighbors": [
+        {
+          "targetBookId": "b0032",
+          "difference": "You wear the coat, and the speech is in the pocket."
         },
         {
-          "targetBookId": "b0017",
-          "difference": "You never step onto the pitch."
+          "targetBookId": "b0033",
+          "difference": "Somebody beside you lends you a pen, and you write six words."
+        }
+      ]
+    },
+    {
+      "id": "b0032",
+      "rootId": "b0031",
+      "kind": "nearby",
+      "icon": "coat",
+      "headline": "YOU WEAR THE COAT",
+      "title": "The Inside Pocket",
+      "passage": [
+        "You wear the coat, which is wrong for the occasion and which you wear anyway, for the reason people carry an umbrella on a clear morning.",
+        "Your name is called. The paper is in the inside pocket, folded along the same three creases it has had for eleven years, exactly where you left it.",
+        "Four hundred words takes two minutes and fifty seconds. The orchestra begins underneath you at two minutes and ten. You thank the teacher by name at two minutes and forty-one, over the strings.",
+        "Afterwards, three people tell you it was too long, and one person, who is not the teacher, writes to you about the line in the middle.",
+        "The book records that you were not, in the moment, happy."
+      ],
+      "aftertaste": "Eleven years, read in two minutes and fifty seconds.",
+      "neighbors": [
+        {
+          "targetBookId": "b0031",
+          "difference": "The coat stays on its hook, and you speak for fifty-one seconds."
+        },
+        {
+          "targetBookId": "b0033",
+          "difference": "The coat stays at home, and six words are written on a seating card."
+        }
+      ]
+    },
+    {
+      "id": "b0033",
+      "rootId": "b0031",
+      "kind": "nearby",
+      "icon": "coat",
+      "headline": "SIX WORDS",
+      "title": "Six Words, Borrowed Pen",
+      "passage": [
+        "The coat is on its hook nine thousand kilometres away, as before.",
+        "Between your name and the stairs there are eleven seconds and a stranger on your left, who is holding a pen for no reason either of you can account for afterwards. You take it. You write six words on the back of a seating card.",
+        "You read the six words. They are not the four hundred. They are better in one respect only: the teacher’s name is the second and third of them.",
+        "The stranger keeps the card. It is sold twice, years apart, and the book follows the card further than it follows you.",
+        "Nobody in the room learns that there was another speech."
+      ],
+      "aftertaste": "Six words, in somebody else’s pen.",
+      "neighbors": [
+        {
+          "targetBookId": "b0031",
+          "difference": "No pen is offered, and you speak for fifty-one seconds of your own."
+        },
+        {
+          "targetBookId": "b0032",
+          "difference": "You wear the coat, and read all four hundred words."
         }
       ]
     },
     {
       "id": "b0006",
-      "clusterId": "cup",
+      "rootId": "b0006",
+      "kind": "root",
       "icon": "cup",
       "headline": "ONE CENTIMETRE LEFT",
-      "hook": "your entire life is identical to this one until tomorrow morning, when you put your coffee cup down one centimetre farther left.",
-      "title": "One Centimetre",
+      "hook": "your entire life is identical until tomorrow morning, when you put your coffee cup one centimetre farther left. Nothing comes of it.",
+      "title": "An Ordinary Thursday",
       "passage": [
         "Everything up to tomorrow morning is correct. The schools, the wrong turn in 2011, the name of the dog that was not yours. You can check it for as long as you are willing to, and it holds.",
-        "At 07:42 tomorrow you put the cup down on the counter one centimetre farther to the left than you did today.",
-        "The light from the window reaches the rim at a slightly different angle. You do not notice this, because there is nothing to notice.",
-        "You drink the coffee. It is the same coffee.",
-        "The rest of the day, which the book gives eleven pages, is ordinary in the way that most days are ordinary: a delivery that comes in the afternoon window rather than the morning one, a message you mean to answer and answer four hours later, a short conversation about a boiler. Nothing is spilled. Nobody is late. No one’s life is altered.",
-        "The account continues for another four hundred pages and, as far as anything can be checked, it is your life.",
-        "The only difference between this volume and the one shelved beside it is a centimetre of laminate, at 07:42, on an ordinary Thursday."
+        "At 07:42 tomorrow you put the cup down on the counter one centimetre farther to the left than you did today. The light from the window reaches the rim at a slightly different angle. You do not notice this, because there is nothing to notice.",
+        "The rest of the day gets eleven pages: a delivery that comes in the afternoon window rather than the morning one, a message you answer four hours late, a short conversation about a boiler. Nothing is spilled. Nobody is late.",
+        "The account continues for another four hundred pages and, as far as anything can be checked, it is your life."
       ],
       "aftertaste": "One centimetre is enough for a separate volume.",
       "neighbors": [
@@ -302,73 +293,30 @@
           "difference": "Nine millimetres less, in the same direction."
         },
         {
-          "targetBookId": "b0021",
-          "difference": "The same distance, the other way."
-        },
-        {
           "targetBookId": "b0009",
-          "difference": "The cup does not move at all."
+          "difference": "The cup goes down inside yesterday’s ring, and does not move at all."
         }
       ]
     },
     {
       "id": "b0002",
-      "clusterId": "cup",
+      "rootId": "b0006",
+      "kind": "nearby",
       "icon": "cup",
       "headline": "ONE MILLIMETRE LEFT",
-      "hook": "everything is identical until 07:42 tomorrow, when the cup goes down one millimetre farther left, and nothing whatsoever comes of it.",
       "title": "One Millimetre",
       "passage": [
         "Everything up to tomorrow morning is correct, in the same exhaustive way.",
         "At 07:42 you put the cup down one millimetre farther to the left than you did today. A millimetre is roughly the width of the line a ballpoint leaves. It is not a distance you could aim for if you tried.",
-        "The light on the rim is, for practical purposes, identical.",
-        "You drink the coffee. The delivery comes in the afternoon window. You answer the message four hours late. There is the same short conversation about the boiler, in the same words, because the words were never going to be different.",
-        "This is the point at which a reader usually looks for the consequence, and there is none. The book does not withhold it. There is no page on which the millimetre returns.",
-        "It is a separate volume because the account is separate, not because the life is.",
-        "A reader once asked the obvious question, which is why the Library bothers. The Library does not bother. It is not selecting anything. Every writable version is already here, and the ones that matter are not shelved any differently from the ones that do not.",
-        "Four hundred pages, one millimetre, and a shelf that continues in both directions for as far as the light reaches."
+        "The light on the rim is, for practical purposes, identical. The delivery comes in the afternoon window. The message is answered four hours late. The boiler is discussed in the same words, because the words were never going to be different.",
+        "This is the point at which a reader looks for the consequence, and there is none. The book does not withhold it. There is no page on which the millimetre returns.",
+        "It is a separate volume because the account is separate, not because the life is."
       ],
       "aftertaste": "The Library does not require a difference to matter.",
       "neighbors": [
         {
           "targetBookId": "b0006",
           "difference": "Nine millimetres more, in the same direction."
-        },
-        {
-          "targetBookId": "b0021",
-          "difference": "One centimetre, the other way."
-        },
-        {
-          "targetBookId": "b0009",
-          "difference": "The cup does not move at all."
-        }
-      ]
-    },
-    {
-      "id": "b0021",
-      "clusterId": "cup",
-      "icon": "cup",
-      "headline": "ONE CENTIMETRE RIGHT",
-      "hook": "the only difference from your life is that tomorrow the cup is one centimetre nearer the edge of the counter. It does not fall.",
-      "title": "The Other Direction",
-      "passage": [
-        "Everything up to tomorrow morning is correct.",
-        "At 07:42 you put the cup down one centimetre farther to the right. It is now nearer the edge of the counter than it has been on any of the mornings recorded in the preceding four hundred pages, by one centimetre.",
-        "It does not fall.",
-        "The book is specific about this, in the way it is specific about everything: the counter is 62 centimetres deep, and the cup is 19 centimetres from the edge instead of 20, and at no point during the following eleven minutes does anyone go near it.",
-        "You drink the coffee. The delivery comes in the afternoon window.",
-        "At 16:20 a delivery driver puts a box down in the hall and asks you to sign with a finger on a screen, and the signature is illegible, as all of them are.",
-        "In another part of the Library there will be an account in which the cup is nearer still, and one in which someone’s elbow is in a slightly different place, and one in which both are true. This is not that account. In this one the cup is simply one centimetre to the right, and the day is ordinary, and the boiler is discussed."
-      ],
-      "aftertaste": "Nearer the edge. Still an ordinary day.",
-      "neighbors": [
-        {
-          "targetBookId": "b0006",
-          "difference": "The same distance, the other way."
-        },
-        {
-          "targetBookId": "b0002",
-          "difference": "One millimetre, the other way."
         },
         {
           "targetBookId": "b0009",
@@ -378,17 +326,17 @@
     },
     {
       "id": "b0009",
-      "clusterId": "cup",
+      "rootId": "b0006",
+      "kind": "nearby",
       "icon": "cup",
       "headline": "EXACTLY WHERE IT WAS",
-      "hook": "tomorrow you put the cup back in exactly the ring it left today, nothing changes at all, and it is still a different book.",
       "title": "Exactly Where It Was",
       "passage": [
         "Everything up to tomorrow morning is correct.",
-        "At 07:42 you put the cup down in exactly the same place as today. There is a faint ring there from yesterday that you have not wiped, and the base of the cup covers it precisely, which you do not see and would not remark on if you did.",
+        "At 07:42 you put the cup down in exactly the place it went today. There is a faint ring there from yesterday that you have not wiped, and the base of the cup covers it precisely, which you do not see and would not remark on if you did.",
         "You drink the coffee. The delivery comes in the afternoon window. The boiler is discussed.",
         "This is the volume that visitors find hardest, because nothing in it differs from the life you are already living, and it is nevertheless not that life. It is an account of it. It was written before you woke up and it will be here after the morning it describes has gone.",
-        "There is no trick in the page. The cup does not move later. No one is watching. The account simply exists alongside the one in which the cup goes a centimetre to the left, and the one in which it goes a millimetre, and the enormous number of accounts in which something else entirely happens at 07:42 and is not worth a volume of its own.",
+        "There is no trick in the page. The cup does not move later. Nobody is watching.",
         "Four hundred pages. Nothing moved."
       ],
       "aftertaste": "Even standing still is a separate volume.",
@@ -398,60 +346,129 @@
           "difference": "The cup moves one centimetre left."
         },
         {
-          "targetBookId": "b0021",
-          "difference": "The cup moves one centimetre right."
-        },
-        {
           "targetBookId": "b0002",
           "difference": "The cup moves one millimetre left."
         }
       ]
     },
     {
+      "id": "b0005",
+      "rootId": "b0005",
+      "kind": "root",
+      "icon": "river",
+      "headline": "A TUESDAY YOU CANNOT REMEMBER",
+      "hook": "every event you remember matches the book except one Tuesday afternoon you cannot remember: the book says you walked to the river.",
+      "title": "The Unremembered Afternoon",
+      "passage": [
+        "The accuracy is the unsettling part, long before the Tuesday. The book has the name of a teacher you had forgotten you had, the price of a coat in 1998, and the reason you were angry on a particular Sunday.",
+        "Then, in your thirty-first year, on a Tuesday in October, between 14:10 and 17:40, it says you walked to the river. It says you took the path behind the industrial units, that you sat on the concrete step under the footbridge, and that you did not go in.",
+        "You have no memory of that afternoon at all. Not a vague one. An absence.",
+        "Your calendar has a meeting at 14:30 that you are confident took place. The book agrees that the meeting took place, records who spoke and what was decided, and also has you at the river."
+      ],
+      "aftertaste": "The account never returns to the Tuesday. An account is not an explanation.",
+      "neighbors": [
+        {
+          "targetBookId": "b0020",
+          "difference": "You stay at the kitchen window for three and a half hours."
+        },
+        {
+          "targetBookId": "b0034",
+          "difference": "You reach the footbridge, turn back, and are home by 15:31."
+        }
+      ]
+    },
+    {
+      "id": "b0020",
+      "rootId": "b0005",
+      "kind": "nearby",
+      "icon": "window",
+      "headline": "THE KITCHEN",
+      "title": "The Kitchen",
+      "passage": [
+        "Everything is identical up to 14:10 on the Tuesday in October: the teacher’s name, the coat, the Sunday, the pause in the conversation you have never told anyone about.",
+        "Then, instead of the path behind the industrial units, this account has you standing at the kitchen window with a tea towel in your hand.",
+        "For three and a half hours.",
+        "It does not say that you were thinking, or upset, or waiting, or ill. It records that the tea towel was the striped one, that the window faces a yard, that at 15:55 a van reversed and its alarm sounded eleven times, and that you did not move.",
+        "At 17:40 you put the tea towel down. The meeting at 14:30 is in this book as well, with the same speakers and the same decision."
+      ],
+      "aftertaste": "One afternoon. Two accounts. Neither of them remembered.",
+      "neighbors": [
+        {
+          "targetBookId": "b0005",
+          "difference": "You walk to the river and sit under the footbridge until 17:40."
+        },
+        {
+          "targetBookId": "b0034",
+          "difference": "You set out for the river and turn back at the footbridge."
+        }
+      ]
+    },
+    {
+      "id": "b0034",
+      "rootId": "b0005",
+      "kind": "nearby",
+      "icon": "river",
+      "headline": "YOU TURN BACK",
+      "title": "The Footbridge",
+      "passage": [
+        "The path behind the industrial units is the same. So is the weather, and the loose gravel at the second gate, and the smell from the plant that closed in 2004 and still smells.",
+        "You reach the footbridge at 14:52. You put one hand on the rail. You do not sit down on the concrete step.",
+        "You turn round and walk home the way you came, and you are back at 15:31, which is two hours and nine minutes earlier than the other account has you.",
+        "The book does not say why you turned. It gives the return walk four lines, all of them about the gravel.",
+        "You remember none of this either. The absence is exactly the same shape, and it is a shorter absence by two hours and nine minutes."
+      ],
+      "aftertaste": "The same missing afternoon, two hours shorter.",
+      "neighbors": [
+        {
+          "targetBookId": "b0005",
+          "difference": "You do not turn back. You sit on the step until 17:40."
+        },
+        {
+          "targetBookId": "b0020",
+          "difference": "You never leave the kitchen."
+        }
+      ]
+    },
+    {
       "id": "b0008",
-      "clusterId": "letter",
+      "rootId": "b0008",
+      "kind": "root",
       "icon": "letter",
       "headline": "A LETTER AT FIFTY-NINE",
-      "hook": "at 59, you receive a letter that was written to you when you were 19. It asks you to come back on a Thursday in 1986.",
-      "title": "Forty Years in the Post",
+      "hook": "at 59, you receive a letter written to you when you were 19, asking you to come back. You sit down before opening the second page.",
+      "title": "The Second Page",
       "passage": [
-        "The envelope is the wrong colour for anything official, and the stamp on it has not been valid since 1993. Your name is on it in handwriting you recognise before you have decided that you recognise it.",
+        "The envelope is the wrong colour for anything official, and the stamp has not been valid since 1993. Your name is on it in handwriting you recognise before you have decided that you recognise it.",
         "You open it standing up, which you regret, and then you sit down before the second page.",
-        "The first page is ordinary. The weather that summer. A shared room with a window that did not shut. A complaint about someone called Michael, who you now remember was not called Michael, and whose actual name arrives in your head about a minute later, alone, the way names do at that age.",
-        "The second page asks you to come back. It gives an address, which you can picture, and a Thursday, which it names by its date.",
-        "The date is in 1986.",
-        "You sit with the two pages for some time. The book does not say how long, which is the only reticence it shows anywhere in four hundred pages. Then it resumes: you make a cup of tea, you do not drink it, you look up the address and find that the building is still there and is now three flats.",
-        "You do not write back, because there is no longer anywhere to write back to, and because you have understood by then that the letter is not asking you for anything you can still give it.",
-        "You keep it. It is in the book’s final chapter, in a drawer, still in the envelope."
+        "The first page is ordinary. The weather that summer. A shared room with a window that did not shut. A complaint about someone called Michael, who you now remember was not called Michael, and whose actual name arrives in your head a minute later, alone, the way names do at that age.",
+        "The second page asks you to come back. It gives an address, which you can picture, and a Thursday, which it names by its date. The date is in 1986.",
+        "You do not write back. You keep it: it is in the final chapter, in a drawer, still in the envelope."
       ],
-      "aftertaste": "There is a book nearby in which it arrives on time.",
+      "aftertaste": "Forty years in the post, and four minutes to read.",
       "neighbors": [
         {
           "targetBookId": "b0023",
-          "difference": "The letter arrives the week it was written."
+          "difference": "The letter arrives four days after it was written, and you go to the address."
         },
         {
-          "targetBookId": "b0029",
-          "difference": "The letter never reaches you at all."
+          "targetBookId": "b0035",
+          "difference": "The envelope contains only the first page."
         }
       ]
     },
     {
       "id": "b0023",
-      "clusterId": "letter",
+      "rootId": "b0008",
+      "kind": "nearby",
       "icon": "letter",
       "headline": "THE SAME LETTER, AT NINETEEN",
-      "hook": "the same letter arrives four days after it was posted, you go to the address on the second page, and it rains.",
       "title": "On Time",
       "passage": [
         "The envelope arrives on a Tuesday, four days after it was posted, which is what envelopes did.",
         "You read both pages in the corridor with your coat still on. The weather that summer. The window that did not shut. The complaint about the person who was not called Michael, whose name you do not have to retrieve, because you saw him yesterday.",
-        "The second page asks you to come back, and gives the address, and names the Thursday.",
-        "You go.",
-        "It rains, of course, and the bus is the slow one, and you arrive twenty minutes late and they are still there, and the afternoon that follows is good and not important. You talk for two hours about nothing of consequence. There is a moment at about the ninety-minute mark when something could be said and is not, and neither of you notices it at the time, and the book gives it a line and a half.",
-        "You see each other four more times over the next eleven years and then not again.",
-        "The life that follows this Thursday is a good life. It contains a long marriage to someone else, two serious illnesses that both end well, and a period in your forties that you would not want to repeat.",
-        "Nothing in the letter turns out to be worth forty years of postage. That is not the letter’s fault. The other account had forty years to make it mean something, and this one had four days."
+        "The second page asks you to come back, and gives the address, and names the Thursday. You go.",
+        "It rains, the bus is the slow one, and you arrive twenty minutes late and they are still there. The afternoon that follows is good and not important. At about the ninety-minute mark something could be said and is not, and the book gives that a line and a half.",
+        "You see each other four more times over the next eleven years and then not again."
       ],
       "aftertaste": "The same two pages. Forty years earlier.",
       "neighbors": [
@@ -460,196 +477,130 @@
           "difference": "The letter arrives forty years late."
         },
         {
-          "targetBookId": "b0029",
-          "difference": "The letter never reaches you at all."
+          "targetBookId": "b0035",
+          "difference": "The letter arrives forty years late, and the second page is missing."
         }
       ]
     },
     {
-      "id": "b0029",
-      "clusterId": "letter",
-      "icon": "photograph",
-      "headline": "RETURNED TO SENDER",
-      "hook": "the letter meant for you is misread by one digit, sits in a sorting office for thirty-one years, and is finally opened by the person who wrote it.",
-      "title": "Returned",
+      "id": "b0035",
+      "rootId": "b0008",
+      "kind": "nearby",
+      "icon": "letter",
+      "headline": "ONLY THE FIRST PAGE",
+      "title": "One Page",
       "passage": [
-        "The house number is wrong by one digit. That is the whole of the difference: a 7 written in the continental way, with the bar through it, read as a 2 by a sorting machine that was new that year.",
-        "The letter goes to a house where nobody knows your name, and is put back in a postbox, and goes from there to an office in another city where undeliverable post is kept for a period that the book gives as eighteen months and which is in practice much longer.",
-        "Thirty-one years later a clerk opens it, because that is the procedure for establishing a sender, and reads enough of the first page to find the return address on the back flap.",
-        "The return address is still valid. The person who wrote it has lived there, on and off, for most of their life.",
-        "So the letter is delivered, and the person who receives it is nineteen in the handwriting and fifty in the hallway, and they read both pages standing up.",
-        "They do not send it again. The book is clear that this is not a decision made out of bitterness or embarrassment. They simply read it, and put it in the drawer of the hall table, and go to work.",
-        "You are in this account too. You appear on the second page, and in a photograph taken that summer, and nowhere else. You never learn that any of this happened."
+        "The envelope is the same wrong colour. The stamp is the same invalid stamp. You open it standing up and you sit down anyway, out of an instinct you cannot afterwards account for.",
+        "The weather that summer. The window that did not shut. The complaint about the person who was not called Michael.",
+        "Then the page ends at the foot of the sheet, mid-sentence, on the word “and”.",
+        "There is nothing else in the envelope. You hold it up to the window. You check the floor, and then the hall, and then the floor again a week later.",
+        "The book does not tell you what the second page said. It knows: the second page is elsewhere in the Library, in full. This volume simply does not contain it, and neither do you."
       ],
-      "aftertaste": "The letter is identical. Only its route changes.",
+      "aftertaste": "It ends at the foot of the sheet, on the word “and”.",
       "neighbors": [
         {
           "targetBookId": "b0008",
-          "difference": "The letter reaches you at fifty-nine."
+          "difference": "The second page is in the envelope, with the address and the Thursday."
         },
         {
           "targetBookId": "b0023",
-          "difference": "The letter reaches you at nineteen."
-        }
-      ]
-    },
-    {
-      "id": "b0005",
-      "clusterId": "tuesday",
-      "icon": "river",
-      "headline": "A TUESDAY YOU CANNOT REMEMBER",
-      "hook": "every event you remember is recorded correctly except one Tuesday afternoon you cannot remember at all, on which the book says you walked to the river.",
-      "title": "The River",
-      "passage": [
-        "The accuracy is the unsettling part, long before the Tuesday.",
-        "The book has the name of a teacher you had forgotten you had. It has the price of a coat in 1998 and the reason you were angry on a particular Sunday, which you had filed under a different cause for twenty years. It is correct about a conversation you have never told anyone about, including the pause in the middle of it.",
-        "Then, in your thirty-first year, on a Tuesday in October, between 14:10 and 17:40, it says you walked to the river.",
-        "It says you took the path behind the industrial units, that you sat on the concrete step under the footbridge, and that you did not go in.",
-        "You have no memory of that afternoon at all. Not a vague one. An absence.",
-        "You check, because there is no version of a person who does not check. Your calendar has a meeting at 14:30 that you are confident took place. The book agrees that the meeting took place; it records who spoke and what was decided.",
-        "It also has you at the river.",
-        "The next morning is correct again, and so is every morning after it, for another three hundred pages. The account never returns to the Tuesday and offers no explanation, because an account is not an explanation."
-      ],
-      "aftertaste": "There is a book in which you stay in the kitchen.",
-      "neighbors": [
-        {
-          "targetBookId": "b0020",
-          "difference": "You stay in the kitchen."
-        },
-        {
-          "targetBookId": "b0011",
-          "difference": "A sentence remembered wrongly, instead of an afternoon not remembered at all."
-        }
-      ]
-    },
-    {
-      "id": "b0020",
-      "clusterId": "tuesday",
-      "icon": "window",
-      "headline": "THE KITCHEN",
-      "hook": "the same unremembered Tuesday, except that this account has you at the kitchen window with a tea towel for three and a half hours.",
-      "title": "The Kitchen",
-      "passage": [
-        "Everything is identical up to 14:10 on the Tuesday in October: the teacher’s name, the coat, the Sunday, the pause in the conversation you have never told anyone about.",
-        "Then, instead of the path behind the industrial units, this account has you standing at the kitchen window with a tea towel in your hand.",
-        "For three and a half hours.",
-        "It does not say that you were thinking. It does not say that you were upset, or waiting, or ill. It records that the tea towel was the striped one, that the window faces a yard, that at 15:55 a van reversed and its alarm sounded eleven times, and that you did not move.",
-        "At 17:40 you put the tea towel down.",
-        "You remember none of it, and you also remember no reason why you would not remember it. The meeting at 14:30 is in this book as well, with the same speakers and the same decision, and the account does not appear to notice the contradiction or to consider it one.",
-        "The next morning is correct again.",
-        "Of the two versions, readers usually find this one worse, and the Library has no opinion about why."
-      ],
-      "aftertaste": "One afternoon. Two accounts. Neither of them remembered.",
-      "neighbors": [
-        {
-          "targetBookId": "b0005",
-          "difference": "You walk to the river."
-        },
-        {
-          "targetBookId": "b0011",
-          "difference": "A sentence remembered wrongly, instead of an afternoon not remembered at all."
+          "difference": "Both pages arrive, four days after posting."
         }
       ]
     },
     {
       "id": "b0010",
-      "clusterId": "selfReference",
+      "rootId": "b0010",
+      "kind": "root",
       "icon": "screen",
       "headline": "THIS SENTENCE",
-      "hook": "you find a book describing you opening this website and reading this exact sentence.",
+      "hook": "you open a book about someone opening this website and reading this exact sentence.",
       "title": "This One",
       "passage": [
         "The book opens on a person at a screen. It does not say where, or when, or what kind of screen; it is not that sort of account.",
-        "It says they opened a website about a library. It says the site asked nothing of them, which they found unusual enough to continue.",
-        "It says they read a card, and then another, and then opened one.",
-        "The passage they open describes a person at a screen, who has opened a website about a library, and who has read a card, and then another, and has opened one. In that passage there is a further passage, and the book does not pretend that this can go on for ever; it goes three deep and then stops, the way a hall of mirrors stops when the light runs out.",
+        "It says they opened a website about a library. It says the site asked nothing of them, which they found unusual enough to continue. It says they read a card, and then another, and then opened one.",
+        "The passage they open describes a person at a screen who has opened a website about a library. It goes three deep and then stops, the way a hall of mirrors stops when the light runs out.",
         "Then it says: they read the next sentence.",
         "This one.",
-        "It is worth being exact about what has and has not happened here. The text was written before you arrived and has not changed. It does not know your name, your device, the time, or whether you are alone. It describes a reader, and you are a reader, and the overlap is not a trick and not a measurement.",
-        "The unsettling part is not that the Library knows. It is that this sentence would be on the shelf whether or not anybody ever came to read it."
+        "The text was written before you arrived and has not changed. It does not know your name, your device, or whether you are alone. It describes a reader, and you are a reader, and the overlap is not a measurement."
       ],
       "aftertaste": "Being written down is not the same as being known.",
       "neighbors": [
         {
           "targetBookId": "b0025",
-          "difference": "You close the tab after the next sentence."
+          "difference": "The book says you close the page after the next sentence, and you do."
         },
         {
           "targetBookId": "b0026",
-          "difference": "You keep reading, after the book has said that you will not."
+          "difference": "The book says you close the page, and you read the sentence a second time instead."
         }
       ]
     },
     {
       "id": "b0025",
-      "clusterId": "selfReference",
+      "rootId": "b0010",
+      "kind": "nearby",
       "icon": "screen",
-      "headline": "THE CLOSED TAB",
-      "hook": "the book says you close the tab after the next sentence, then goes on describing your life for another three hundred pages.",
+      "headline": "THE CLOSED PAGE",
       "title": "After the Next Sentence",
       "passage": [
-        "The book opens the same way: a person at a screen, a website about a library, a card, and then another, and then one opened.",
-        "It repeats the previous volume almost exactly, for eleven paragraphs, including the observation about the hall of mirrors and the light.",
-        "Then, instead of “they read the next sentence”, this account says: they close the tab after the next sentence.",
+        "The book opens the same way: a person at a screen, a website about a library, a card, and then another, and then one opened. It repeats the previous volume almost exactly for eleven paragraphs, including the hall of mirrors and the light.",
+        "Then, instead of “they read the next sentence”, this account says: they close the page after the next sentence.",
         "This one.",
-        "The volume continues for another three hundred pages, and this is the detail that readers tend to miss. The life does not stop when the tab does. There is an afternoon after it, and a job, and a long dispute with a neighbour about a hedge, and a holiday in a place with bad coffee and a good view.",
-        "The tab is one line in the middle of a chapter about an ordinary week.",
-        "Nothing here detects anything. If you have closed the tab, this sentence is not being read, and it is still written. If you have not, the account is simply about somebody else, which it always was.",
-        "The Library has both volumes and has had them the whole time. It has no preference, and no way of finding out which one you are in."
+        "The volume continues for another three hundred pages, and this is the detail readers tend to miss. The life does not stop when the page does. There is an afternoon after it, and a job, and a long dispute with a neighbour about a hedge.",
+        "Nothing here detects anything. If the page is closed, this sentence is not being read, and it is still written."
       ],
       "aftertaste": "The Library does not mind either way.",
       "neighbors": [
         {
           "targetBookId": "b0010",
-          "difference": "You read the next sentence and stay."
+          "difference": "The book says only that you read the next sentence."
         },
         {
           "targetBookId": "b0026",
-          "difference": "You keep reading anyway."
+          "difference": "You read the sentence a second time instead of closing the page."
         }
       ]
     },
     {
       "id": "b0026",
-      "clusterId": "selfReference",
+      "rootId": "b0010",
+      "kind": "nearby",
       "icon": "book",
-      "headline": "YOU KEPT READING",
-      "hook": "you have read the book in which you close the tab, you did not close it, and there is a volume for that version too.",
-      "title": "Still Here",
+      "headline": "YOU READ IT AGAIN",
+      "title": "The Same Sentence Twice",
       "passage": [
         "This account begins after the other one.",
-        "A person at a screen has found a book in which they close the tab after the next sentence. They read the sentence. They do not close the tab.",
-        "The book records what they do instead, which is nothing dramatic: they sit back slightly, they reread the line, and they go looking for the volume in which they did not stop.",
-        "That volume is this one, and they find it, because it is shelved beside the other and the Library does not hide anything.",
-        "There is no accusation here and no victory. Staying was not a defiance of anything; the other book was never a prediction. It was an account, of the same standing as this one, written in the same ink, on the same shelf, with the same claim to be true, which is to say none at all beyond being writable.",
-        "The account then does something that readers find either reassuring or much worse, depending on the reader: it carries on. It describes the rest of the evening, the following Thursday, a decision about a job made three years later for reasons that are not the ones given at the time.",
-        "You keep reading for a while longer, and then at some point you do stop, and the book has that too, in a later chapter, without comment."
+        "A person at a screen has found a book in which they close the page after the next sentence. They read the sentence.",
+        "They read it again.",
+        "The book records the second reading in the same flat type as the first, notes that it took four seconds longer, and notes that nothing was gained by it, which is not a criticism.",
+        "There is no defiance here and no victory. The other volume was never a prediction. It was an account, of the same standing as this one, written in the same ink, on the same shelf, with the same claim to be true, which is to say none at all beyond being writable.",
+        "Then this account carries on, and describes the rest of the evening."
       ],
-      "aftertaste": "There is a book for that version too.",
+      "aftertaste": "Read twice, four seconds longer, nothing gained.",
       "neighbors": [
         {
-          "targetBookId": "b0025",
-          "difference": "The book says you close the tab."
+          "targetBookId": "b0010",
+          "difference": "The book says only that you read the next sentence."
         },
         {
-          "targetBookId": "b0010",
-          "difference": "The book says only that you are reading."
+          "targetBookId": "b0025",
+          "difference": "You close the page, as the book says."
         }
       ]
     },
     {
       "id": "b0011",
-      "clusterId": "future",
+      "rootId": "b0011",
+      "kind": "root",
       "icon": "clock",
       "headline": "SEVENTEEN YEARS",
       "hook": "seventeen years from now, you return to this website looking for a sentence you remember incorrectly.",
       "title": "Seventeen Years",
       "passage": [
         "The account gives no date. It gives an interval: seventeen years after the afternoon on which you first opened this address.",
-        "It says you type the address from memory and get it slightly wrong, and then right.",
-        "It says the site is still there, which is the least likely sentence in the book and the one it states most flatly.",
-        "You are looking for a passage. You remember it well enough to be confident and not well enough to find it. In your memory it says three seconds; the page says two. In your memory there is a river in it; the page has a kitchen. You remember a phrase about light on the rim of a cup, and that phrase is real, and it is in a different volume from the one you are thinking of.",
-        "You search for the words you remember. Nothing comes back, because the Library does not contain the version in your head — or rather it does, somewhere, in a volume that is not indexed under anything you would think to type.",
+        "It says you type the address from memory and get it slightly wrong, and then right. It says the site is still there, which is the least likely sentence in the book and the one it states most flatly.",
+        "You are looking for a passage. You remember it well enough to be confident and not well enough to find it. In your memory it says three seconds; the page says two. In your memory there is a river in it; the page has a kitchen.",
         "Eventually you find something close, and you read it, and you decide it is the one.",
         "The account is careful here. It does not say you are wrong. It says you decide."
       ],
@@ -660,30 +611,24 @@
           "difference": "You come back in seventeen minutes."
         },
         {
-          "targetBookId": "b0005",
-          "difference": "An afternoon not remembered at all, instead of a sentence remembered wrongly."
-        },
-        {
-          "targetBookId": "b0010",
-          "difference": "You are reading it now, not in seventeen years."
+          "targetBookId": "b0036",
+          "difference": "You come back after the same seventeen years and remember every word but one."
         }
       ]
     },
     {
       "id": "b0027",
-      "clusterId": "future",
+      "rootId": "b0011",
+      "kind": "nearby",
       "icon": "clock",
       "headline": "SEVENTEEN MINUTES",
-      "hook": "you come back seventeen minutes after closing the tab and find that you already remember the sentence wrong.",
       "title": "Seventeen Minutes",
       "passage": [
-        "Seventeen minutes after you close the tab, you open it again.",
-        "The site is still there, which in this account is not remarkable at all. The passage is exactly where you left it. Nothing has been edited, because nothing here edits itself; the text was fixed before you arrived and will be fixed after you go.",
-        "You are looking for a sentence.",
-        "In your memory it said three seconds. It says two. In your memory the person on the platform was drinking from the cup; the page only says they were holding it. You would have sworn to both of these under oath seventeen minutes ago.",
-        "You find the passage in under a minute, because seventeen minutes is not long enough to lose anything, and you read it, and the correction is small and slightly embarrassing and entirely ordinary.",
-        "Then you notice the more interesting thing, which the account notices with you: the version you remembered is also writable. Three seconds, and the cup at their mouth. Somewhere on these shelves there is a volume in which that is what happened, and it is not a mistake there. It is simply another book.",
-        "You close the tab again. The account continues without you for three hundred pages."
+        "Seventeen minutes after you close the page, you open it again.",
+        "The site is still there, which in this account is not remarkable at all. The passage is exactly where you left it. Nothing has been edited, because nothing here edits itself.",
+        "You are looking for a sentence. In your memory it said three seconds. It says two. In your memory the person on the platform was drinking from the cup; the page only says they were holding it. You would have sworn to both of these seventeen minutes ago.",
+        "You find it in under a minute, because seventeen minutes is not long enough to lose anything, and the correction is small and slightly embarrassing and entirely ordinary.",
+        "Then you notice the more interesting thing: the version you remembered is also writable."
       ],
       "aftertaste": "Seventeen minutes was enough.",
       "neighbors": [
@@ -692,93 +637,1290 @@
           "difference": "You come back in seventeen years."
         },
         {
-          "targetBookId": "b0010",
-          "difference": "You are reading it now, and you do not leave."
+          "targetBookId": "b0036",
+          "difference": "Seventeen years, and only one word is wrong."
+        }
+      ]
+    },
+    {
+      "id": "b0036",
+      "rootId": "b0011",
+      "kind": "nearby",
+      "icon": "clock",
+      "headline": "ONE WORD WRONG",
+      "title": "Every Word but One",
+      "passage": [
+        "Seventeen years, and the address is right the first time.",
+        "You find the passage in eleven seconds, because you have been carrying it accurately: the platform, the paper cup, the two seconds, the board changing to 08:31. Every word is where you left it.",
+        "Except the bench. In your memory two slats are missing. The page says one.",
+        "You read the line four times. One slat. You would have argued for two, at length, and with a confidence you cannot now locate the source of.",
+        "The book does not say that you were wrong. It says that you notice. Then it says that you keep the bench as you remember it, because by now the remembered bench has been in your head for longer than you were ever on the platform."
+      ],
+      "aftertaste": "Seventeen years, and one slat.",
+      "neighbors": [
+        {
+          "targetBookId": "b0011",
+          "difference": "You remember the passage badly enough to have to search for it."
+        },
+        {
+          "targetBookId": "b0027",
+          "difference": "You come back in seventeen minutes."
         }
       ]
     },
     {
       "id": "b0012",
-      "clusterId": "mortality",
+      "rootId": "b0012",
+      "kind": "root",
       "icon": "telephone",
       "headline": "THE LAST ORDINARY SENTENCE",
-      "hook": "the last ordinary sentence you will ever say has already been written down. Someone answers you on the next line.",
+      "hook": "the last ordinary sentence you ever say is already written down. The person who answers expects the conversation to continue.",
       "title": "Someone Answers",
       "passage": [
         "The account gives no date for this, and no cause, and no scene. It is not that kind of book and it has never pretended to be.",
-        "What it has is a sentence.",
-        "It is six words long and it is about something small — a door, or a light, or where something has been put. It is not a summing-up. It is not addressed to anyone in particular. It has the shape of a sentence said while doing something else, which is the shape almost all sentences have.",
+        "What it has is a sentence. Six words long, about something small: a door, or a light, or where something has been put. It is not a summing-up. It has the shape of a sentence said while doing something else.",
         "Nothing on the page marks it. It is set in the same type as every other line, in the middle of a paragraph, between a remark about the weather and a description of a room.",
-        "On the next line, someone answers.",
-        "The answer is also ordinary, and also six or seven words, and it is the kind of answer that assumes there will be more conversation later.",
-        "Then the paragraph continues, and it is about the room.",
-        "Readers arrive at this volume expecting the Library to make something of it, and the Library does not. The sentence is one of perhaps four hundred thousand sentences in the book, and the account’s only observable position is that it did not know either."
+        "On the next line, someone answers. The answer is also ordinary, and six or seven words, and it is the kind of answer that assumes there will be more conversation later.",
+        "Then the paragraph continues, and it is about the room."
       ],
       "aftertaste": "The page does not mark it. Nothing does.",
       "neighbors": [
         {
           "targetBookId": "b0028",
-          "difference": "No one answers."
+          "difference": "Nobody answers."
         },
         {
-          "targetBookId": "b0030",
-          "difference": "You have said the same sentence many times before."
+          "targetBookId": "b0037",
+          "difference": "They pause, repeat your six words as a question, and wait."
         }
       ]
     },
     {
       "id": "b0028",
-      "clusterId": "mortality",
+      "rootId": "b0012",
+      "kind": "nearby",
       "icon": "telephone",
       "headline": "NO ONE ANSWERS",
-      "hook": "the same six ordinary words end your life, on the same evening, and on the next line nobody answers.",
       "title": "No One Answers",
       "passage": [
         "This volume repeats the other one exactly, for four hundred pages, up to and including the sentence.",
         "Six words. A door, or a light, or where something has been put. The same position in the same paragraph, between the weather and the room.",
         "Then, instead of an answer, the paragraph continues.",
         "That is the entire difference. There is no silence described, no one listening, no pause noted. The account does not say that nobody was there, and it does not say that anybody was. It simply has no next line of dialogue, in a book that has recorded every other exchange with the same patience.",
-        "The room is described for another half page: the position of a chair, a sound from outside that is not identified, the light, which is going.",
-        "Set the two volumes side by side and the difference is one line, in one paragraph, near the end of a very long book. You could read both and not find it without knowing where to look.",
-        "The Library holds them both, and has no way of saying which of them is the one you are in."
+        "The room is described for another half page: the position of a chair, a sound from outside that is not identified, the light, which is going."
       ],
       "aftertaste": "One line. Nothing else differs.",
       "neighbors": [
         {
           "targetBookId": "b0012",
-          "difference": "Someone answers."
+          "difference": "Someone answers, and expects the conversation to continue."
         },
         {
-          "targetBookId": "b0030",
-          "difference": "You have said the same sentence many times before."
+          "targetBookId": "b0037",
+          "difference": "They pause, repeat your six words as a question, and wait."
         }
       ]
     },
     {
-      "id": "b0030",
-      "clusterId": "mortality",
+      "id": "b0037",
+      "rootId": "b0012",
+      "kind": "nearby",
       "icon": "telephone",
-      "headline": "YOU HAVE SAID IT BEFORE",
-      "hook": "the last thing you ever say is a sentence you have already said one thousand, one hundred and forty-seven times.",
-      "title": "Said Before",
+      "headline": "THEY REPEAT IT BACK",
+      "title": "As a Question",
       "passage": [
-        "This account is identical to the others, and it comes with an index.",
-        "The index is the ordinary sort that long books have, and it includes a concordance of repeated phrases, because the account records speech exactly and a life contains a great deal of repetition.",
-        "The six words appear one thousand, one hundred and forty-eight times.",
-        "They are first recorded when you are four. They appear eleven times in a single week in your twenties, during which the book notes that you were not sleeping. They appear in a hospital corridor, twice, eighteen years apart, on unrelated occasions that both end well. They appear in an argument, where they mean something other than what they say, and the account does not explain the difference but sets both instances near each other in the index, which amounts to the same thing.",
-        "The one thousand, one hundred and forty-eighth is the last.",
-        "It is typographically identical to the other one thousand, one hundred and forty-seven. The index does not mark it. Nothing in the book marks it; the mark is something a reader adds afterwards, having read to the end and turned back.",
-        "That is the whole of this variation. The sentence was never rare. Only its position in the book is different."
+        "The same four hundred pages. The same six words, in the same paragraph, between the weather and the room.",
+        "Then a pause, which the account measures at slightly over two seconds and does not explain.",
+        "Then your six words again, in the other voice, with a question mark.",
+        "Then the account records that they wait.",
+        "The waiting is given three lines, which is more than the sentence got. They do not ask whether you are all right. They repeat what you said and they leave the space open, in case there is more, which is the most ordinary thing a person can do and is also the only thing anyone in these four hundred pages does that looks like attention.",
+        "Then the paragraph continues, and it is about the room."
       ],
-      "aftertaste": "Only its position in the book is different.",
+      "aftertaste": "Two seconds, and the space left open.",
       "neighbors": [
         {
           "targetBookId": "b0012",
-          "difference": "Someone answers."
+          "difference": "The answer comes straight back, with no pause."
         },
         {
           "targetBookId": "b0028",
-          "difference": "No one answers."
+          "difference": "Nobody answers."
+        }
+      ]
+    },
+    {
+      "id": "b0038",
+      "rootId": "b0038",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "YOUR PARENTS NEVER MEET",
+      "hook": "your parents never meet. The book follows both their lives to the end, and you appear nowhere in it.",
+      "title": "Without You",
+      "passage": [
+        "They live forty kilometres apart for nine years, and the book is scrupulous about the near misses, of which there are four. A railway station in 1978, where they are on the same platform for two minutes. A wedding neither attends. A hospital corridor, six hours apart. A shop.",
+        "Nothing comes of any of them, and the account does not treat them as significant, because in this volume they are not.",
+        "She marries a man who teaches and is careful with money, and the marriage is good for thirty years. He does not marry. He is, on the evidence of the later chapters, mostly content, and he keeps a dog for eleven years.",
+        "Both lives are followed to the end. The book is four hundred and sixty pages long. You are not in it."
+      ],
+      "aftertaste": "Four hundred and sixty pages, and nowhere to look for yourself.",
+      "neighbors": [
+        {
+          "targetBookId": "b0039",
+          "difference": "They speak once, for two minutes, on the platform in 1978."
+        },
+        {
+          "targetBookId": "b0040",
+          "difference": "They speak on the platform in 1978 and are friends for the next forty years."
+        }
+      ]
+    },
+    {
+      "id": "b0039",
+      "rootId": "b0038",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "THEY MEET ONCE",
+      "title": "Two Minutes in 1978",
+      "passage": [
+        "The near miss on the platform in 1978 is not a miss in this account.",
+        "He asks whether the 10:40 has gone. She says that it has, and that the next one is at eleven. Six words from him and, depending how you count, seven from her.",
+        "They stand four metres apart for the rest of the two minutes. Neither asks a name. There is no reason to; nothing has happened.",
+        "The book gives the exchange one line and then does not mention it again for two hundred pages, at which point it notes, in a subordinate clause, that she has entirely forgotten it and that he has not, and that he could not say why he has not.",
+        "Both lives are followed to the end. You are not in this one either."
+      ],
+      "aftertaste": "Six words, and neither of them a name.",
+      "neighbors": [
+        {
+          "targetBookId": "b0038",
+          "difference": "Neither of them speaks, and the two minutes pass."
+        },
+        {
+          "targetBookId": "b0040",
+          "difference": "The conversation does not stop when the eleven o’clock arrives."
+        }
+      ]
+    },
+    {
+      "id": "b0040",
+      "rootId": "b0038",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "FRIENDS FOR FORTY YEARS",
+      "title": "Forty Years, Not a Couple",
+      "passage": [
+        "On the platform in 1978 he asks about the 10:40, and by the time the eleven o’clock arrives they are still talking, and they get on it together.",
+        "They are close friends for forty years. Four hundred and ten letters, then eleven years of telephone calls, then a period of no contact after an argument about a third person, then more letters.",
+        "Each marries somebody else. Each is a witness at the other’s wedding. There is one evening in 1991, in a kitchen, which the book gives a page and a half and which ends with both of them going to bed in separate rooms and neither ever mentioning it again.",
+        "He dies first. She writes the notice.",
+        "You are not in this book either, and it is the longest of the three."
+      ],
+      "aftertaste": "Forty years of it, and still no page with you on it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0038",
+          "difference": "They never speak at all."
+        },
+        {
+          "targetBookId": "b0039",
+          "difference": "The conversation lasts two minutes and ends with the eleven o’clock."
+        }
+      ]
+    },
+    {
+      "id": "b0041",
+      "rootId": "b0041",
+      "kind": "root",
+      "icon": "cot",
+      "headline": "SWITCHED AT BIRTH",
+      "hook": "you were switched at birth and nobody ever discovered it. You grow up with different parents and never once believe you are living the wrong life.",
+      "title": "The Other Cot",
+      "passage": [
+        "The register records two admissions eleven minutes apart and one nurse, who is nineteen and has been on shift for fourteen hours.",
+        "Nothing in the account is dramatic. The tags are the paper kind. A cot is moved to let a trolley past and is not moved back.",
+        "You grow up in a house with a damp corner in the back bedroom and a father who mends things badly and cheerfully. You look like nobody in particular, which is true of most people. Twice in your life somebody says you must get that from your mother, and both times they are wrong, and nothing follows from it.",
+        "Nobody ever finds out. There is no scene, no record, no test. The book is four hundred pages and it never tells you either."
+      ],
+      "aftertaste": "It is not a secret. There is nobody keeping it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0042",
+          "difference": "A second nurse notices the charts at 06:20, and it is corrected."
+        },
+        {
+          "targetBookId": "b0043",
+          "difference": "A hospital ledger is found when you are sixty."
+        }
+      ]
+    },
+    {
+      "id": "b0042",
+      "rootId": "b0041",
+      "kind": "nearby",
+      "icon": "cot",
+      "headline": "FOUND IN THE WARD",
+      "title": "Before Either Family Leaves",
+      "passage": [
+        "The same nineteen-year-old nurse, the same fourteen-hour shift, the same trolley.",
+        "At 06:20 a second nurse coming on notices that the weight on one chart does not match the baby in the cot beneath it. It takes nine minutes to establish and about forty seconds to correct.",
+        "Nobody is disciplined. One of the mothers is told and the other is not, which the book records without explanation and which appears to have been a decision rather than an oversight.",
+        "You go home with the family the record says you belong to. The damp corner in the back bedroom is in a different house, in a different life, and this account does not visit it.",
+        "Nothing else in four hundred pages refers to the nine minutes."
+      ],
+      "aftertaste": "Nine minutes, and then the rest of it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0041",
+          "difference": "Nobody notices, and nobody ever does."
+        },
+        {
+          "targetBookId": "b0043",
+          "difference": "It stands for sixty years, and then a ledger is found."
+        }
+      ]
+    },
+    {
+      "id": "b0043",
+      "rootId": "b0041",
+      "kind": "nearby",
+      "icon": "cot",
+      "headline": "FOUND AT SIXTY",
+      "title": "The Ledger in the Basement",
+      "passage": [
+        "Nothing happens for sixty years. The damp corner, the father who mends things badly, the two people who say you must get that from your mother.",
+        "Then a hospital basement is cleared before a demolition, and a box of admission ledgers is photographed by a local history group, and a woman you have never met finds two entries eleven minutes apart and writes to you.",
+        "You are sixty. Both of the parents in this account are dead. So is one of the others.",
+        "The book is careful about what you feel, which is mainly that it is late. You meet the surviving one twice. The second meeting is better than the first. Neither of you is able to make the word for it mean anything.",
+        "The damp corner is still where it was."
+      ],
+      "aftertaste": "Sixty years is long enough to have been the right person.",
+      "neighbors": [
+        {
+          "targetBookId": "b0041",
+          "difference": "The ledger stays in the basement."
+        },
+        {
+          "targetBookId": "b0042",
+          "difference": "It is corrected before either family leaves the ward."
+        }
+      ]
+    },
+    {
+      "id": "b0044",
+      "rootId": "b0044",
+      "kind": "root",
+      "icon": "calendar",
+      "headline": "THE SAME 14 MARCH",
+      "hook": "the book counts eighty-two years of the same 14 March. Every morning, you remember none of the day before.",
+      "title": "14 March",
+      "passage": [
+        "The account is 29,930 entries long and each of them is dated 14 March.",
+        "It does not explain. There is no mechanism, no cause, and nobody else in the book is aware of it; everyone you meet meets you for the first time, every time, because for them it is the first time.",
+        "You wake at 07:04. It is overcast and clears at about two. A man on the corner is repairing the same section of railing, and has been for eighty-two years, and will finish it at four.",
+        "You remember none of it. Each morning is a first morning, with no accumulation, no boredom, and no skill acquired.",
+        "The final entry is the same length as the first. The book ends on a Tuesday afternoon, at the railing, with the last bracket going in."
+      ],
+      "aftertaste": "Eighty-two years, and not one of them remembered.",
+      "neighbors": [
+        {
+          "targetBookId": "b0045",
+          "difference": "One morning you wake knowing one thing from the day before."
+        },
+        {
+          "targetBookId": "b0046",
+          "difference": "A teaspoon is somewhere different every morning."
+        }
+      ]
+    },
+    {
+      "id": "b0045",
+      "rootId": "b0044",
+      "kind": "nearby",
+      "icon": "calendar",
+      "headline": "A SINGLE MEMORY",
+      "title": "One Morning, One Memory",
+      "passage": [
+        "Entry 14,602 differs from the 14,601 before it in one respect.",
+        "You wake at 07:04, overcast as always, and you know, without being able to say how, that the man on the corner will drop a bracket at 11:20 and swear.",
+        "You go and stand where you can see it. At 11:20 he drops the bracket and swears.",
+        "That is the whole of the memory. It does not extend backwards or forwards. By the following morning it is gone, along with everything else, and the account continues for another 15,328 entries without ever repeating the anomaly.",
+        "The book does not call it a memory. It says only that you knew, and that knowing it changed nothing except where you were standing at twenty past eleven."
+      ],
+      "aftertaste": "One bracket, one morning, out of 29,930.",
+      "neighbors": [
+        {
+          "targetBookId": "b0044",
+          "difference": "No morning carries anything over from the one before."
+        },
+        {
+          "targetBookId": "b0046",
+          "difference": "Nothing is remembered, and a teaspoon moves instead."
+        }
+      ]
+    },
+    {
+      "id": "b0046",
+      "rootId": "b0044",
+      "kind": "nearby",
+      "icon": "calendar",
+      "headline": "ONE TEASPOON MOVES",
+      "title": "The Teaspoon",
+      "passage": [
+        "Everything else holds: 07:04, the overcast morning, the railing, the bracket at four, the absence of any memory at all.",
+        "The teaspoon does not hold. On the first morning it is in the drawer. On the second it is on the draining board. On the third it is in a cup in the other room, and on the four hundredth it is on a windowsill in a house you have never entered, and the account records its position each morning in the same four words it uses for the weather.",
+        "You never notice, because you are never able to compare.",
+        "29,930 positions are listed. The book gives them an appendix. Nobody in the account is looking for a pattern, and the appendix does not contain one."
+      ],
+      "aftertaste": "The only thing in eighty-two years that moves.",
+      "neighbors": [
+        {
+          "targetBookId": "b0044",
+          "difference": "The teaspoon stays in the drawer."
+        },
+        {
+          "targetBookId": "b0045",
+          "difference": "The teaspoon stays put, and one morning you remember a bracket."
+        }
+      ]
+    },
+    {
+      "id": "b0047",
+      "rootId": "b0047",
+      "kind": "root",
+      "icon": "microphone",
+      "headline": "A SENTENCE YOU DO NOT REMEMBER",
+      "hook": "you become famous for a sentence you do not remember saying. Everyone else can quote it exactly.",
+      "title": "The Sentence Everyone Knows",
+      "passage": [
+        "Eleven words, said at about ten past eight in the evening, in a room with sixty people in it and no recording.",
+        "You have no memory of saying them. You have a clear memory of the evening: the room, the heat, a broken window catch, an argument about parking beforehand.",
+        "By the following spring the eleven words are on a poster. By the fourth year they are attributed to you in a dictionary of quotations, with the date, which is right, and the place, which is not.",
+        "People say them back to you for the rest of your life, usually kindly and always in the same rhythm, which is not a rhythm you recognise as yours.",
+        "You stop correcting the place in the eleventh year. You never correct anything else, because there is nothing to correct it against."
+      ],
+      "aftertaste": "Eleven words, and no memory of any of them.",
+      "neighbors": [
+        {
+          "targetBookId": "b0048",
+          "difference": "A cassette survives, and on it the seventh word is “only”."
+        },
+        {
+          "targetBookId": "b0049",
+          "difference": "The words are Ruth’s, and the transcript puts your name under them."
+        }
+      ]
+    },
+    {
+      "id": "b0048",
+      "rootId": "b0047",
+      "kind": "nearby",
+      "icon": "microphone",
+      "headline": "THE RECORDING",
+      "title": "One Word Different",
+      "passage": [
+        "There was a recording after all. It is on a cassette in a box of cassettes, and it surfaces forty-one years later.",
+        "The eleven words are there, in your voice, at ten past eight, with the broken window catch rattling underneath them.",
+        "The seventh word is “only”. In every poster, every dictionary and every retelling for forty-one years, the seventh word is “ever”.",
+        "It is a small difference and it is not a small difference: “ever” makes the sentence a claim, and “only” makes it a complaint.",
+        "The recording does not win. It is reported for a week. The posters are not reprinted. Within two years the cassette is a footnote, and the sentence everyone knows is the sentence everyone knows.",
+        "You are eighty-one, and you find this funnier than anybody expects you to."
+      ],
+      "aftertaste": "One word, and forty-one years too late to matter.",
+      "neighbors": [
+        {
+          "targetBookId": "b0047",
+          "difference": "No recording survives, and nothing can be checked."
+        },
+        {
+          "targetBookId": "b0049",
+          "difference": "The words were never yours to begin with."
+        }
+      ]
+    },
+    {
+      "id": "b0049",
+      "rootId": "b0047",
+      "kind": "nearby",
+      "icon": "microphone",
+      "headline": "SOMEBODY ELSE SAID IT",
+      "title": "The Name Underneath",
+      "passage": [
+        "The eleven words are said by the person on your left, who is called Ruth, at about ten past eight, in the room with the broken window catch.",
+        "A transcript is typed up eleven days later by somebody who was not there, from notes that attribute the speakers by seating order and get the order wrong by one.",
+        "Ruth notices within a month. She says so twice, once in a letter and once in person, and on both occasions she is believed and nothing is done, because by then there is a poster.",
+        "She is not bitter about it in any way the book can find. She and you remain friendly for thirty years, and the subject is raised perhaps four times, always by you.",
+        "Your name is under the sentence in three dictionaries. Ruth’s is in none of them."
+      ],
+      "aftertaste": "A typing error, and a seat on the wrong side.",
+      "neighbors": [
+        {
+          "targetBookId": "b0047",
+          "difference": "You say the eleven words yourself, and do not remember it."
+        },
+        {
+          "targetBookId": "b0048",
+          "difference": "You say them yourself, and a cassette surfaces with one word different."
+        }
+      ]
+    },
+    {
+      "id": "b0050",
+      "rootId": "b0050",
+      "kind": "root",
+      "icon": "rain",
+      "headline": "THE CHILD YOU NEVER HAD",
+      "hook": "the child you never had has an entire life in this book. At four, they invent their own word for rain.",
+      "title": "What They Said at Four",
+      "passage": [
+        "The book is seven hundred pages and it is not about you.",
+        "It is about a person born in the spring who, at four years old, standing at a door, invents a word for rain. The word is “plinning”. They use it for about nine months, consistently and without ever being corrected, and then they stop, and by six they deny having used it.",
+        "The book follows them to seventy-one. There is a long stretch in their thirties that is difficult and a decade afterwards that is not. They are better with strangers than with the people who know them, which you recognise, and they are careless with money, which you do not.",
+        "You appear on most pages, in the way a parent does: as weather, largely unremarked."
+      ],
+      "aftertaste": "Nine months of one invented word, and then not again.",
+      "neighbors": [
+        {
+          "targetBookId": "b0051",
+          "difference": "The word the child invents is “shussing”."
+        },
+        {
+          "targetBookId": "b0052",
+          "difference": "The same life, narrated by the other parent."
+        }
+      ]
+    },
+    {
+      "id": "b0051",
+      "rootId": "b0050",
+      "kind": "nearby",
+      "icon": "rain",
+      "headline": "A DIFFERENT WORD FOR RAIN",
+      "title": "A Different Word",
+      "passage": [
+        "The same spring, the same door, the same four-year-old with a hand flat against the glass.",
+        "The word is “shussing”. Everything else about the nine months is identical: the same consistency, the same absence of correction, the same flat denial at six.",
+        "The book runs to seven hundred pages again, and the two accounts diverge nowhere else that can be found. The difficult stretch in the thirties begins in the same month. The carelessness with money is the same carelessness.",
+        "Readers who have both volumes open tend to spend a long time on the two words and then conclude, correctly, that nothing hangs on them.",
+        "A child at a door made a sound, twice, in two books, and it was not the same sound."
+      ],
+      "aftertaste": "One word, and seven hundred identical pages.",
+      "neighbors": [
+        {
+          "targetBookId": "b0050",
+          "difference": "The word the child invents is “plinning”."
+        },
+        {
+          "targetBookId": "b0052",
+          "difference": "The same life, narrated by the other parent."
+        }
+      ]
+    },
+    {
+      "id": "b0052",
+      "rootId": "b0050",
+      "kind": "nearby",
+      "icon": "rain",
+      "headline": "THE OTHER PARENT’S BOOK",
+      "title": "From the Other Side",
+      "passage": [
+        "The same child, the same spring, the same word at the same door.",
+        "This volume is narrated from the other parent, and the difference is not in the events but in the attention. The word for rain gets four lines here instead of a page, because the other parent was in the kitchen and heard it through a doorway.",
+        "You are in this book, but intermittently: present at the hospital, absent for most of the fifth year, quoted twice in the whole of the thirties, described once, in a clause, as somebody who found it difficult to be interrupted.",
+        "The child is the same person in both books. The disagreements between the two accounts are small, and neither is a correction of the other."
+      ],
+      "aftertaste": "The same child, heard from a doorway.",
+      "neighbors": [
+        {
+          "targetBookId": "b0050",
+          "difference": "You are the narrator, and the word gets a page."
+        },
+        {
+          "targetBookId": "b0051",
+          "difference": "You are the narrator, and the word is “shussing”."
+        }
+      ]
+    },
+    {
+      "id": "b0053",
+      "rootId": "b0053",
+      "kind": "root",
+      "icon": "stones",
+      "headline": "BORN IN 1340",
+      "hook": "you are born in 1340 with the same laugh, the same temper, and completely different things to be late for.",
+      "title": "Your Laugh in 1340",
+      "passage": [
+        "The laugh is the same. The account describes it twice, and both descriptions would identify you in a room.",
+        "The temper is the same, and it arrives at the same age, over a smaller thing.",
+        "Everything else is different and almost none of it is interesting. You are late for a boundary court in a village whose name has not survived. You are impatient with an ox. You are good at a repetitive manual task and are given more of it as a reward, which you resent in precisely the way you resent it now.",
+        "You cannot read. This is not presented as a deprivation; the book does not editorialise.",
+        "You die at forty-four, of something the account describes in detail and does not name."
+      ],
+      "aftertaste": "The same laugh, six hundred and eighty years early.",
+      "neighbors": [
+        {
+          "targetBookId": "b0054",
+          "difference": "You are born forty metres east, in the household with the better drainage."
+        },
+        {
+          "targetBookId": "b0055",
+          "difference": "The temper arrives six years earlier, over a wall."
+        }
+      ]
+    },
+    {
+      "id": "b0054",
+      "rootId": "b0053",
+      "kind": "nearby",
+      "icon": "stones",
+      "headline": "THE NEXT HOUSEHOLD",
+      "title": "Forty Metres",
+      "passage": [
+        "Forty metres east, in the household with the better drainage.",
+        "The laugh is the same. The temper is the same and arrives at the same age. You are late for the same boundary court, because it is the same court and the same boundary, and in this account you are on the other side of it.",
+        "You are not impatient with an ox, because this household has no ox. You are impatient with a brother instead, and the book notes that the impatience finds a use for whatever is nearest.",
+        "You cannot read.",
+        "You die at forty-nine, five years later than the other account, of the same unnamed thing, which in this version takes longer."
+      ],
+      "aftertaste": "Forty metres, and five more years.",
+      "neighbors": [
+        {
+          "targetBookId": "b0053",
+          "difference": "You are born in the household with the ox."
+        },
+        {
+          "targetBookId": "b0055",
+          "difference": "The temper arrives at nineteen, over a disputed wall."
+        }
+      ]
+    },
+    {
+      "id": "b0055",
+      "rootId": "b0053",
+      "kind": "nearby",
+      "icon": "stones",
+      "headline": "THE TEMPER, SIX YEARS EARLY",
+      "title": "The Disputed Wall",
+      "passage": [
+        "Everything is the same until the spring when you are nineteen instead of twenty-five.",
+        "The wall runs for about sixty metres and has been moved, at some point, by somebody, by roughly the width of a cart. Two families have been polite about it for a generation.",
+        "You are not polite about it. What you say takes under a minute, and the account reproduces it in full, and it is recognisably the thing you would say now, in different words, about something else.",
+        "The wall is not moved back. You are not spoken to by one of the families for eleven years, which in a village of that size is most of a life.",
+        "The temper, arriving six years early, has nowhere else to go afterwards. The account is quieter after nineteen than the other one is."
+      ],
+      "aftertaste": "Six years early, and sixty metres of stone.",
+      "neighbors": [
+        {
+          "targetBookId": "b0053",
+          "difference": "The temper waits until you are twenty-five."
+        },
+        {
+          "targetBookId": "b0054",
+          "difference": "You are born forty metres east, and the temper waits."
+        }
+      ]
+    },
+    {
+      "id": "b0056",
+      "rootId": "b0056",
+      "kind": "root",
+      "icon": "antenna",
+      "headline": "HUMANITY DOES NOT ANSWER",
+      "hook": "humanity receives a message from outside Earth, understands it completely, and decides not to answer. The book spends the next page on your ordinary Tuesday.",
+      "title": "No Reply",
+      "passage": [
+        "The message is received on a Wednesday and understood by the following Monday, which is the part the account treats as remarkable and the part that is least discussed afterwards.",
+        "It is not a warning and not an offer. The book gives its content in nine lines, and they are, by any reasonable standard, the most important nine lines in it.",
+        "The decision takes four months and is made by fewer people than you would expect. It is not to answer. The reasoning is recorded, and it is sound, and it is not unanimous.",
+        "Then the account turns to the Tuesday after the announcement, which it gives a full page: a delivery, a boiler, a message answered four hours late. You are aware of the news. You do not discuss it."
+      ],
+      "aftertaste": "Nine lines understood, and nothing sent back.",
+      "neighbors": [
+        {
+          "targetBookId": "b0057",
+          "difference": "The decision is put off by a day, and you hear it at 06:50."
+        },
+        {
+          "targetBookId": "b0058",
+          "difference": "Three people transmit a reply before the decision is made."
+        }
+      ]
+    },
+    {
+      "id": "b0057",
+      "rootId": "b0056",
+      "kind": "nearby",
+      "icon": "antenna",
+      "headline": "YOU HEAR IT FIRST",
+      "title": "Twenty-Four Hours",
+      "passage": [
+        "The four months end in a postponement of one day, for procedural reasons the account gives in full and which are dull.",
+        "The delay is enough. It is on the radio at 06:50, while you are looking for a shoe.",
+        "You go to work. This is the detail the book is interested in. You go to work, and you tell four people, and two of them already know, and by eleven o’clock the conversation in the building has moved on to a parking arrangement.",
+        "The decision, when it comes the next day, is the same decision.",
+        "The account gives your Tuesday a full page again. It is the same Tuesday: a delivery, a boiler, a message answered four hours late. You know one thing on it that you did not know in the other volume, and nothing on the page is different."
+      ],
+      "aftertaste": "Twenty-four hours, and the same Tuesday.",
+      "neighbors": [
+        {
+          "targetBookId": "b0056",
+          "difference": "The decision comes on time, and you hear nothing beforehand."
+        },
+        {
+          "targetBookId": "b0058",
+          "difference": "A private reply goes out eleven weeks in."
+        }
+      ]
+    },
+    {
+      "id": "b0058",
+      "rootId": "b0056",
+      "kind": "nearby",
+      "icon": "antenna",
+      "headline": "SOMEBODY ANSWERS ANYWAY",
+      "title": "One Reply",
+      "passage": [
+        "Eleven weeks into the four months, a transmission goes out from a dish in a country that is not consulted, at 02:40 local time, sent by three people acting without authority.",
+        "It is four hundred and six characters long. The account reproduces it. It is not a greeting and not an apology; it is a question, and it is a good one.",
+        "It is detected within a day. Two of the three lose their positions. The third is never publicly identified, and the book does not identify them either.",
+        "The official decision, four months later, is still not to answer, and is now a decision about something that has already happened.",
+        "The account then turns to your Tuesday, and gives it a full page."
+      ],
+      "aftertaste": "Four hundred and six characters, sent by three people.",
+      "neighbors": [
+        {
+          "targetBookId": "b0056",
+          "difference": "Nothing is transmitted, and the decision stands."
+        },
+        {
+          "targetBookId": "b0057",
+          "difference": "Nothing is transmitted, and you hear the news a day early."
+        }
+      ]
+    },
+    {
+      "id": "b0059",
+      "rootId": "b0059",
+      "kind": "root",
+      "icon": "stack",
+      "headline": "FIFTY YEARS OF UNSENT LETTERS",
+      "hook": "for fifty years, someone writes letters to you and sends none of them. Some are only about the weather.",
+      "title": "Letters Without Stamps",
+      "passage": [
+        "There are one thousand, four hundred and sixty of them, in eleven boxes, and the book prints thirty-one in full.",
+        "They are addressed to you by name. The early ones are difficult and the later ones are not; by about the fifteenth year the difficulty has gone out of them entirely, and what is left is a habit.",
+        "A great many are only about the weather. One, in the twenty-second year, is four pages about a hedge.",
+        "They are not stamped and never were. Some are sealed. The envelopes are addressed correctly, including a postcode you did not have until 1996.",
+        "You never receive any of them. The account is clear that you are not withholding anything; you do not know.",
+        "The boxes are found by somebody else, and the book follows the boxes."
+      ],
+      "aftertaste": "One thousand four hundred and sixty, correctly addressed.",
+      "neighbors": [
+        {
+          "targetBookId": "b0060",
+          "difference": "One of the weather letters is posted by mistake in the thirty-second year."
+        },
+        {
+          "targetBookId": "b0061",
+          "difference": "The letters stop for eleven months and then resume."
+        }
+      ]
+    },
+    {
+      "id": "b0060",
+      "rootId": "b0059",
+      "kind": "nearby",
+      "icon": "stack",
+      "headline": "ONE GETS POSTED",
+      "title": "Posted by Mistake",
+      "passage": [
+        "In the thirty-second year a letter goes into a pile of other envelopes and out of the house, and a postbox takes it, because postboxes do not check.",
+        "It is one of the weather ones. Four hundred words about a fortnight of rain in a town you have never been to, signed with a first name, with no explanation and nothing asked for.",
+        "You read it twice. You keep it for nine years and then you do not know where it is.",
+        "The other one thousand, four hundred and fifty-nine stay in the boxes. Nothing changes at the writing end; the letters continue, at the same rate, in the same hand, for another eighteen years.",
+        "The account does not tell you whether the sender ever realised. It is not withholding it. It appears not to know."
+      ],
+      "aftertaste": "One out of one thousand four hundred and sixty, about rain.",
+      "neighbors": [
+        {
+          "targetBookId": "b0059",
+          "difference": "Nothing is ever posted."
+        },
+        {
+          "targetBookId": "b0061",
+          "difference": "Nothing is posted, and eleven months are missing."
+        }
+      ]
+    },
+    {
+      "id": "b0061",
+      "rootId": "b0059",
+      "kind": "nearby",
+      "icon": "stack",
+      "headline": "THE GAP",
+      "title": "Eleven Months",
+      "passage": [
+        "They stop in the March of the twenty-eighth year.",
+        "The last one before the gap is unremarkable: a page and a half, mostly weather, one line about a bus route being changed.",
+        "For eleven months there is nothing. The boxes record it as an absence of eleven months, and the book gives the absence two blank pages, which is the only typographic gesture it makes anywhere.",
+        "In the February they resume. The first one after the gap begins mid-subject, as though from the previous week, and mentions a bus route.",
+        "Nothing in the remaining twenty-two years refers to the eleven months. The book does not explain them. Whatever happened in them is in another volume, and this one is an account of letters."
+      ],
+      "aftertaste": "Eleven months, and two blank pages.",
+      "neighbors": [
+        {
+          "targetBookId": "b0059",
+          "difference": "There is no gap. The letters run for fifty years without one."
+        },
+        {
+          "targetBookId": "b0060",
+          "difference": "There is no gap, and one letter is posted by mistake."
+        }
+      ]
+    },
+    {
+      "id": "b0062",
+      "rootId": "b0062",
+      "kind": "root",
+      "icon": "drawer",
+      "headline": "THE INVENTION IN THE DRAWER",
+      "hook": "at 28, you invent something and put it in a drawer. Eighty years later, somebody else invents the same thing and gets the applause.",
+      "title": "The Drawer",
+      "passage": [
+        "It is not a machine. It is an arrangement: a way of ordering three operations that were already being done in the other order, and the whole of it fits on two sides of paper, with one diagram.",
+        "You are twenty-eight. You show it to nobody. The account is careful here: there is no rejection, no discouragement, no missed appointment. You simply put it in a drawer, in the way that things are put in drawers, and the drawer moves house twice.",
+        "Eighty years later somebody in another country arrives at the same arrangement, from a different direction, and it is correct and useful and named after them.",
+        "Your two sides of paper are still in the drawer at the end of the book. Nobody has looked at them since."
+      ],
+      "aftertaste": "Two sides of paper, and one diagram.",
+      "neighbors": [
+        {
+          "targetBookId": "b0063",
+          "difference": "You show it to one friend on a Sunday, who tells you it will never work."
+        },
+        {
+          "targetBookId": "b0064",
+          "difference": "The second inventor reproduces your unnecessary step, eighty years later."
+        }
+      ]
+    },
+    {
+      "id": "b0063",
+      "rootId": "b0062",
+      "kind": "nearby",
+      "icon": "drawer",
+      "headline": "YOU SHOW ONE PERSON",
+      "title": "It Will Never Work",
+      "passage": [
+        "You show it to one person, in a kitchen, on a Sunday.",
+        "They look at it for about four minutes, which is longer than two sides of paper require, and they say it will never work. They give a reason. The reason is wrong, and it is wrong in a way neither of you is equipped to see in that kitchen on that Sunday.",
+        "You put it in the drawer. The drawer moves house twice.",
+        "The account follows the friendship, which lasts another thirty-one years and is good. They never think about it again. You think about it perhaps twice a year until you are sixty, and then less.",
+        "Eighty years later somebody in another country arrives at the same arrangement."
+      ],
+      "aftertaste": "Four minutes, and a reason that was wrong.",
+      "neighbors": [
+        {
+          "targetBookId": "b0062",
+          "difference": "You show it to nobody."
+        },
+        {
+          "targetBookId": "b0064",
+          "difference": "You show it to nobody, and the flaw is copied eighty years later."
+        }
+      ]
+    },
+    {
+      "id": "b0064",
+      "rootId": "b0062",
+      "kind": "nearby",
+      "icon": "drawer",
+      "headline": "THE SAME UNNECESSARY FLAW",
+      "title": "The Same Flaw",
+      "passage": [
+        "Everything is the same until the second drawing.",
+        "In your diagram the third operation is routed through a step that does nothing. It is not a mistake exactly; it is a habit from the way you were taught, and it costs a little and harms nothing, and you never noticed it.",
+        "Eighty years later, in another country, the second drawing has the same step in the same place, for a different reason that also does not hold.",
+        "Nobody compares the two drawings, because nobody knows about the first. The unnecessary step stays in the standard for a further nineteen years and is then removed by a third person, who has seen neither.",
+        "Your two sides of paper are still in the drawer."
+      ],
+      "aftertaste": "The same step, and it never did anything.",
+      "neighbors": [
+        {
+          "targetBookId": "b0062",
+          "difference": "The second drawing does not contain the unnecessary step."
+        },
+        {
+          "targetBookId": "b0063",
+          "difference": "You show it to one friend, who tells you it will never work."
+        }
+      ]
+    },
+    {
+      "id": "b0065",
+      "rootId": "b0065",
+      "kind": "root",
+      "icon": "record",
+      "headline": "A DEAD CHILD’S NAME",
+      "hook": "a clerical error gives you a dead person’s name. Forty years later, it is the name everyone you love uses.",
+      "title": "Under Another Name",
+      "passage": [
+        "The error is on a form, in an office, in a week when two records are being copied out by hand. A child who died in 1961 and a child who did not are three lines apart in the ledger, and one line is read for the other.",
+        "You are given the name at eleven days old and it is not questioned, because there is nothing about it to question.",
+        "Forty years later it is the name on two passports, a mortgage, a gravestone that has not been cut yet, and in the mouths of everybody who loves you.",
+        "The account mentions the other child twice: once in the ledger, and once at the end, in a churchyard entry that gives the same name and a different pair of dates.",
+        "Nobody in four hundred pages ever notices."
+      ],
+      "aftertaste": "The same name, cut twice, forty years apart.",
+      "neighbors": [
+        {
+          "targetBookId": "b0066",
+          "difference": "The error is caught on the seventh day and corrected."
+        },
+        {
+          "targetBookId": "b0067",
+          "difference": "One vowel is miscopied, and the name belongs to nobody."
+        }
+      ]
+    },
+    {
+      "id": "b0066",
+      "rootId": "b0065",
+      "kind": "nearby",
+      "icon": "record",
+      "headline": "CORRECTED IN A WEEK",
+      "title": "Seven Days",
+      "passage": [
+        "It is caught on the seventh day, by the same clerk, who is checking something else.",
+        "The correction takes a line and an initial. You are eighteen days old.",
+        "Four people know that for a week you had another name: two parents, the clerk, and a grandmother who is told it as an anecdote, and who repeats it perhaps three times over the following decade, and then dies.",
+        "You learn about it at thirty-four, from a form, and find it mildly interesting for about a day.",
+        "The account is otherwise identical in every particular, which is the point of it being here. The name is different on every page and nothing else is."
+      ],
+      "aftertaste": "Seven days, and then the right name for the rest of it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0065",
+          "difference": "The error stands for forty years."
+        },
+        {
+          "targetBookId": "b0067",
+          "difference": "The error stands, with one vowel wrong."
+        }
+      ]
+    },
+    {
+      "id": "b0067",
+      "rootId": "b0065",
+      "kind": "nearby",
+      "icon": "record",
+      "headline": "A NAME NOBODY HAD",
+      "title": "One Vowel",
+      "passage": [
+        "The line is read for the other line, as before, and then miscopied: one vowel, in the second syllable.",
+        "The name that results has never belonged to anybody. It is not the dead child’s name and it is not the name you were given, and it is not, as far as three separate searches later establish, anyone’s.",
+        "You spell it aloud your whole life, about four times a week. It is misspelled on everything by everybody, including twice on your own documents, and you correct it every time without irritation, because it is the only thing you have that is only yours.",
+        "The churchyard entry, when you eventually find it, is one vowel away and forty years apart."
+      ],
+      "aftertaste": "One vowel, and it belonged to nobody.",
+      "neighbors": [
+        {
+          "targetBookId": "b0065",
+          "difference": "The name is copied exactly, and it is the dead child’s."
+        },
+        {
+          "targetBookId": "b0066",
+          "difference": "The error is caught on the seventh day."
+        }
+      ]
+    },
+    {
+      "id": "b0068",
+      "rootId": "b0068",
+      "kind": "root",
+      "icon": "speech",
+      "headline": "THE LAST SPEAKER",
+      "hook": "you are the last person alive who speaks your language. Your oldest joke is still funny, but there is nobody left to tell it to.",
+      "title": "The Last Speaker",
+      "passage": [
+        "There were four of you in 1997, two in 2011, and one after a Thursday in March.",
+        "The account does not treat this as tragic. It treats it as administrative. Two linguists visit, at intervals, and record eleven hours. You are patient with them and slightly bored, and you correct their vowels, and they are grateful in a way that is not quite the right shape.",
+        "You still think in it. The account is written in it, which is why it is shelved where it is.",
+        "The joke is four words long and depends entirely on a tense that does not exist in the language you now do your shopping in. It is still funny. You have tested it, internally, perhaps twice a month for nineteen years."
+      ],
+      "aftertaste": "Four words, and a tense that cannot be carried across.",
+      "neighbors": [
+        {
+          "targetBookId": "b0069",
+          "difference": "A fluent speaker is found alive three hundred kilometres away."
+        },
+        {
+          "targetBookId": "b0070",
+          "difference": "Your grandchild understands every word and cannot answer in it."
+        }
+      ]
+    },
+    {
+      "id": "b0069",
+      "rootId": "b0068",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "ANOTHER SPEAKER",
+      "title": "Three Hundred Kilometres",
+      "passage": [
+        "One of the linguists finds him. He is eighty-six, three hundred kilometres away, and has not used the language in twenty-two years.",
+        "The first conversation lasts four hours and is mostly repair: he has lost the vowels and you have lost two of the tenses, and you argue about which of you is wrong about a word for a kind of weather.",
+        "You speak on the telephone every Sunday for six years, and the account records that the conversations are ordinary and often dull, which is the best thing in the book.",
+        "You tell him the joke in the second month. He laughs, and then says it is not how his family said it, and offers a version you consider inferior.",
+        "He dies first."
+      ],
+      "aftertaste": "Six years of Sundays, and an argument about a word for weather.",
+      "neighbors": [
+        {
+          "targetBookId": "b0068",
+          "difference": "Nobody else is found, and there is nobody to tell the joke to."
+        },
+        {
+          "targetBookId": "b0070",
+          "difference": "Nobody else is found, and your grandchild understands but cannot answer."
+        }
+      ]
+    },
+    {
+      "id": "b0070",
+      "rootId": "b0068",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "YOUR GRANDCHILD UNDERSTANDS",
+      "title": "Understood, Not Answered",
+      "passage": [
+        "She understood it before she could read, the way children do, from a house where it was spoken over her head and never to her.",
+        "She understands everything. The account tests this repeatedly and without ceremony: you speak, she responds in the other language, correctly, on the subject, without pause.",
+        "She cannot produce a sentence. She has tried, in private, and the book knows about the trying and gives it four lines.",
+        "You tell her the joke when she is nine. She laughs in the right place, which is the second word, and then says something back in the other language that is also funny and is not the same joke.",
+        "This continues for thirty-one years, and neither of you ever calls it a loss out loud."
+      ],
+      "aftertaste": "Every word understood, and none of them returned.",
+      "neighbors": [
+        {
+          "targetBookId": "b0068",
+          "difference": "Nobody understands it, including your grandchild."
+        },
+        {
+          "targetBookId": "b0069",
+          "difference": "Another fluent speaker is found, three hundred kilometres away."
+        }
+      ]
+    },
+    {
+      "id": "b0071",
+      "rootId": "b0071",
+      "kind": "root",
+      "icon": "photograph",
+      "headline": "A STRANGER REMEMBERS YOU",
+      "hook": "a stranger remembers you as the most important person in their life. You cannot remember ever meeting them.",
+      "title": "The Stranger Who Remembers You",
+      "passage": [
+        "They write once, at sixty-two, and the letter is not strange. It is four pages, well organised, and it does not ask for anything.",
+        "They give a year, a town, a job you did have, and a conversation that lasted, by their account, most of one afternoon. They quote two things you said. Neither sounds like you and neither sounds unlike you.",
+        "They say the afternoon decided something, and that they have thought about it at intervals for thirty-eight years, and that they wanted you to know, and that no reply is necessary.",
+        "You have nothing. Not a face, not the town in that year, not a conversation of that length with anybody.",
+        "You write back. You are honest. They write once more, and are not disappointed, which the account notes with some care."
+      ],
+      "aftertaste": "Thirty-eight years, and no face to put to it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0072",
+          "difference": "You remember the afternoon itself, and nobody in it."
+        },
+        {
+          "targetBookId": "b0073",
+          "difference": "You are the one who remembers, and they have no record of it."
+        }
+      ]
+    },
+    {
+      "id": "b0072",
+      "rootId": "b0071",
+      "kind": "nearby",
+      "icon": "photograph",
+      "headline": "THE DAY, NOT THE PERSON",
+      "title": "You Remember the Day",
+      "passage": [
+        "You have the day. You have it well: the heat, a cancelled train, a shop that had run out of what you went in for, and the peculiar flat mood of the afternoon afterwards.",
+        "You have no person in it.",
+        "Their letter supplies four hours of that day in a detail you cannot dispute and cannot confirm. Where they were sitting. What you were carrying. A thing you said about your father that you would only have said to somebody.",
+        "Every detail they give fits the day you remember, and none of them retrieves the person. The account describes you reading the letter three times, and the third time is the worst.",
+        "You write back. What you say is that you remember the afternoon."
+      ],
+      "aftertaste": "The whole afternoon, and nobody in it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0071",
+          "difference": "You do not remember the day either."
+        },
+        {
+          "targetBookId": "b0073",
+          "difference": "It is the other way round, and you write the letter."
+        }
+      ]
+    },
+    {
+      "id": "b0073",
+      "rootId": "b0071",
+      "kind": "nearby",
+      "icon": "photograph",
+      "headline": "YOU ARE THE ONE WHO REMEMBERS",
+      "title": "The Other Way Round",
+      "passage": [
+        "You write the letter. It is four pages and it does not ask for anything, and you are sixty-two, and you have thought about the afternoon at intervals for thirty-eight years.",
+        "The reply is kind and takes eleven days. They do not remember the town in that year. They do not remember the job. They remember neither the conversation nor anybody it could have been with.",
+        "They are careful not to say that it did not happen. They say they have no record of it, which is a generous formulation, and which you recognise as generous.",
+        "The account then follows you for a further nineteen years. You do not stop thinking about the afternoon. It is not diminished. It is simply, from now on, only yours."
+      ],
+      "aftertaste": "Thirty-eight years, held at one end.",
+      "neighbors": [
+        {
+          "targetBookId": "b0071",
+          "difference": "They write the letter, and you cannot place them at all."
+        },
+        {
+          "targetBookId": "b0072",
+          "difference": "They write the letter, and you remember the day but not them."
+        }
+      ]
+    },
+    {
+      "id": "b0074",
+      "rootId": "b0074",
+      "kind": "root",
+      "icon": "book",
+      "headline": "THE REST OF YOUR LIFE",
+      "hook": "you read a book you believe contains the rest of your life. Then you have to live tomorrow knowing what it says.",
+      "title": "The Final Page",
+      "passage": [
+        "It is correct about everything you can check, which takes you six weeks and is the only diligence anybody could ask for.",
+        "Then it goes forward. Three hundred and eleven pages of it, ending on a Thursday, in a room the book describes in detail and that you have never been in.",
+        "The account is not about the contents. It is about the nine thousand days afterwards.",
+        "You are not able to stop using it. You are also not able to use it, exactly; nothing in it is actionable, because it is an account and not a set of instructions, and the things it records are the things you were going to do anyway.",
+        "The interesting part, which the book records without comment, is that you become slightly careless. Knowing the Thursday makes the Tuesdays cheap."
+      ],
+      "aftertaste": "Nine thousand days, all of them already written down.",
+      "neighbors": [
+        {
+          "targetBookId": "b0075",
+          "difference": "You stop three pages before the end and never read them."
+        },
+        {
+          "targetBookId": "b0076",
+          "difference": "A second volume ends on a different Thursday, in a different room."
+        }
+      ]
+    },
+    {
+      "id": "b0075",
+      "rootId": "b0074",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "YOU STOP READING",
+      "title": "Three Pages Short",
+      "passage": [
+        "You stop on page three hundred and eight, and you stop deliberately, in the middle of a paragraph, and you close it.",
+        "The three pages are not hidden. They are in the room with you for the next forty years. You move house twice and they come too.",
+        "The account is scrupulous about the number of times you nearly read them, which is a hundred and four, and about the fact that you never do.",
+        "What the last three pages cost you is not dread. It is a particular kind of attention: you check the room you are in, at intervals, for the rest of your life, against a description you have not read.",
+        "You die not having read them. The book has that on page three hundred and ten."
+      ],
+      "aftertaste": "A hundred and four times, and never once.",
+      "neighbors": [
+        {
+          "targetBookId": "b0074",
+          "difference": "You read the last three pages."
+        },
+        {
+          "targetBookId": "b0076",
+          "difference": "You read to the end, and then find a second ending."
+        }
+      ]
+    },
+    {
+      "id": "b0076",
+      "rootId": "b0074",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "A SECOND VOLUME",
+      "title": "The Other Final Page",
+      "passage": [
+        "You finish it. The Thursday, the room, the description.",
+        "Then you find the second volume, which is identical for three hundred and ten pages — the same six weeks of checking, the same nine thousand days, the same carelessness on Tuesdays — and which ends on a different Thursday, in a different room, both described in the same detail and with the same flatness.",
+        "Neither volume is marked. Neither is longer. Nothing in the paper, the type or the shelf distinguishes them, and the Library offers no apparatus for choosing.",
+        "The account then describes what you do with two endings, which is, in the end, nothing. You put them side by side. You stop checking rooms."
+      ],
+      "aftertaste": "Two endings, equally written, and no way to weigh them.",
+      "neighbors": [
+        {
+          "targetBookId": "b0074",
+          "difference": "There is only one volume, and one Thursday."
+        },
+        {
+          "targetBookId": "b0075",
+          "difference": "You stop three pages short and never see either ending."
+        }
+      ]
+    },
+    {
+      "id": "b0077",
+      "rootId": "b0077",
+      "kind": "root",
+      "icon": "table",
+      "headline": "ONE DINNER, ONE BOOK",
+      "hook": "one ordinary dinner in your life fills an entire book: every sentence spoken, and every thought nobody says aloud.",
+      "title": "Under the Tablecloth",
+      "passage": [
+        "Six people, four hours, and three hundred and forty pages.",
+        "The spoken text runs down the left of each page and is unremarkable: a road closure, an oven, somebody’s knee, a long passage about a holiday that two of the six have heard before.",
+        "The right of the page is what nobody says. It is set in the same type and given the same weight, which is the only editorial decision the volume makes, and it is a considerable one.",
+        "There is no revelation on the right-hand side. There is boredom, some of it about you. There is one person who spends most of the evening composing a sentence about a job and does not say it. There is a great deal of noticing of the food.",
+        "Nothing happens. Everybody goes home."
+      ],
+      "aftertaste": "Four hours, and nobody said the half of it.",
+      "neighbors": [
+        {
+          "targetBookId": "b0078",
+          "difference": "One guest says the thirteen words aloud over dessert."
+        },
+        {
+          "targetBookId": "b0079",
+          "difference": "Two people swap seats, and three private thoughts change."
+        }
+      ]
+    },
+    {
+      "id": "b0078",
+      "rootId": "b0077",
+      "kind": "nearby",
+      "icon": "table",
+      "headline": "ONE THING IS SAID",
+      "title": "Over Dessert",
+      "passage": [
+        "The sentence has been on the right-hand side since page nine. It is about a job and it is thirteen words long.",
+        "At page two hundred and ninety-one, over dessert, it crosses to the left.",
+        "The room takes it well, which is the part the account is interested in. Two people say the obvious encouraging thing. One says nothing and thinks something the right-hand column records. The conversation returns to the holiday within four minutes.",
+        "What changes is the rest of that person’s right-hand column, which for the remaining fifty pages is almost empty. They say things and think very little, and appear, on the evidence, to be enjoying the pudding.",
+        "Everybody goes home at the same time as in the other volume."
+      ],
+      "aftertaste": "Thirteen words, and fifty quiet pages after them.",
+      "neighbors": [
+        {
+          "targetBookId": "b0077",
+          "difference": "The thirteen words stay on the right-hand side all evening."
+        },
+        {
+          "targetBookId": "b0079",
+          "difference": "Nothing is said aloud, and two people swap seats."
+        }
+      ]
+    },
+    {
+      "id": "b0079",
+      "rootId": "b0077",
+      "kind": "nearby",
+      "icon": "table",
+      "headline": "TWO PEOPLE SWAP SEATS",
+      "title": "Two Seats",
+      "passage": [
+        "The swap happens before anybody sits down, and for no reason: a coat on a chair.",
+        "The food is the same. The road closure, the oven, the knee and the holiday are the same, in the same order, in very nearly the same words.",
+        "Three thoughts are not the same.",
+        "One person, now facing a window instead of a wall, spends forty pages on the weather and does not think about their brother at all. One, now beside the person they were opposite, stops rehearsing a reply and thinks about nothing for a long time. One, moved no more than a metre, thinks something about you at page two hundred and six that in the other volume they think about somebody else.",
+        "Nothing happens. Everybody goes home."
+      ],
+      "aftertaste": "A coat on a chair, and three different evenings.",
+      "neighbors": [
+        {
+          "targetBookId": "b0077",
+          "difference": "Everybody sits where they meant to."
+        },
+        {
+          "targetBookId": "b0078",
+          "difference": "Everybody sits where they meant to, and one guest speaks over dessert."
+        }
+      ]
+    },
+    {
+      "id": "b0080",
+      "rootId": "b0080",
+      "kind": "root",
+      "icon": "mirror",
+      "headline": "NOTHING LIKE YOUR LIFE",
+      "hook": "there is a book about someone who does not exist in your world. Nothing in their life resembles yours. You recognise yourself in every page.",
+      "title": "A Stranger in the First Person",
+      "passage": [
+        "The century is wrong. The city is not one that exists. There are two suns in the third chapter and nobody in the book finds this worth mentioning.",
+        "They have a trade you could not describe afterwards. They have four siblings, none of whom map onto anybody. Nothing they do, want, fear or eat corresponds to anything in your life.",
+        "You recognise yourself on every page.",
+        "The account is written in the first person, and the recognition is not thematic. It is smaller and worse than that: it is in the order the sentences arrive in, in the things that get half a clause and the things that get a page, in the two subjects that are approached four times and never once entered.",
+        "You are not in this book. Nothing here is about you."
+      ],
+      "aftertaste": "Two suns, and the same habits of attention.",
+      "neighbors": [
+        {
+          "targetBookId": "b0081",
+          "difference": "One line in chapter eleven matches your life exactly."
+        },
+        {
+          "targetBookId": "b0082",
+          "difference": "The same life, narrated in the third person."
+        }
+      ]
+    },
+    {
+      "id": "b0081",
+      "rootId": "b0080",
+      "kind": "nearby",
+      "icon": "mirror",
+      "headline": "ONE THING IS TRUE",
+      "title": "One Detail Matches",
+      "passage": [
+        "Everything is as before until chapter eleven, where they break a wrist falling off a low wall at the age of nine.",
+        "You broke a wrist falling off a low wall at the age of nine.",
+        "It is one line and it is exactly right, including the wall being low, which was always the embarrassing part.",
+        "And the recognition goes. The account describes this carefully, because it is counter-intuitive: up to chapter eleven you were reading yourself in a stranger, and after chapter eleven you are reading a stranger who happens to share a fact with you, and the second is a much smaller thing.",
+        "You finish the book. It is the same book. The two suns are still there. You never get it back."
+      ],
+      "aftertaste": "One true line, and the rest of it went cold.",
+      "neighbors": [
+        {
+          "targetBookId": "b0080",
+          "difference": "Nothing in the book matches anything in your life."
+        },
+        {
+          "targetBookId": "b0082",
+          "difference": "The same life, narrated in the third person."
+        }
+      ]
+    },
+    {
+      "id": "b0082",
+      "rootId": "b0080",
+      "kind": "nearby",
+      "icon": "mirror",
+      "headline": "NARRATED FROM OUTSIDE",
+      "title": "In the Third Person",
+      "passage": [
+        "Every event is identical. The city, the trade, the four siblings, the two suns in the third chapter, the two subjects approached four times and never entered.",
+        "The pronoun is different.",
+        "That is the whole of the difference, and it removes everything. From outside, the order the sentences arrive in reads as style. The half-clauses read as economy. The two unentered subjects read as something the author is doing.",
+        "It is, by any measure available, the better-written of the two volumes.",
+        "You read it and find it interesting, and put it down after ninety pages, and the account records that you do not go back to it, and that you could not say, afterwards, what it had been about."
+      ],
+      "aftertaste": "The same life, from outside, and nothing to catch on.",
+      "neighbors": [
+        {
+          "targetBookId": "b0080",
+          "difference": "The same life, narrated in the first person."
+        },
+        {
+          "targetBookId": "b0081",
+          "difference": "In the first person, with one line that matches your life exactly."
         }
       ]
     }

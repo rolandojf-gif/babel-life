@@ -1,6 +1,6 @@
 import { copy } from '../content/copy';
 import { anotherLifeAfter, findBook } from '../library/catalog';
-import { createBookCard, createCoordinateLine } from './BookCard';
+import { createCoordinateLine } from './BookCard';
 import { createIllustration } from './illustrations';
 import { createNearbyVolumes } from './NearbyVolumes';
 import { element, glyph, link, type ViewHandle } from './view';
@@ -64,5 +64,3 @@ export function createBookView(bookId: string): ViewHandle {
     },
   };
 }
-
-export { createBookCard };

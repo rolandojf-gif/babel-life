@@ -7,17 +7,16 @@ export interface NeighborEdge {
   difference: string;
 }
 
-/** One immutable book: a permanent accession number, a card, and one authored account. */
-export interface Book {
+/** What every volume carries, root or nearby alike. */
+interface BookBase {
   id: string;
-  clusterId: string;
+  /** The root life this volume belongs to. A root's rootId is its own id. */
+  rootId: string;
   /** Key into the local illustration set. */
   icon: string;
   /** Short label, used where a destination needs naming rather than describing. */
   headline: string;
-  /** The wall hook: one complete life premise, completing the card's eyebrow. */
-  hook: string;
-  /** Story headline on the book page. */
+  /** Literary title. It belongs inside the book, never on a wall card. */
   title: string;
   /** The authored narrative, one string per paragraph. */
   passage: string[];
@@ -26,13 +25,21 @@ export interface Book {
   neighbors: NeighborEdge[];
 }
 
-/** Editorial grouping of nearby lives. Names are internal and never rendered. */
-export interface Cluster {
-  id: string;
-  name: string;
+/** One of the twenty-four lives on the wall. Only a root carries a wall hook. */
+export interface RootBook extends BookBase {
+  kind: 'root';
+  /** One complete life premise, completing the card's eyebrow. */
+  hook: string;
 }
 
-/** The two curated sets of twelve the wall shows. */
+/** A counterfactual variation, reachable only from inside its root's book page. */
+export interface NearbyBook extends BookBase {
+  kind: 'nearby';
+}
+
+export type Book = RootBook | NearbyBook;
+
+/** The two curated sets of twelve root lives the wall shows. */
 export interface WallSets {
   first: string[];
   second: string[];
@@ -40,7 +47,6 @@ export interface WallSets {
 
 export interface Catalog {
   schemaVersion: number;
-  clusters: Cluster[];
   wall: WallSets;
   books: Book[];
 }
