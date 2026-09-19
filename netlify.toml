@@ -1,0 +1,14 @@
+# Continuous deployment for the Library of Lives.
+# The build runs the typecheck before Vite, so a type error fails the deploy
+# rather than shipping.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Every route in this edition is a hash, so the server is only ever asked for
+# "/" and there is nothing to rewrite. Any other path is genuinely not here and
+# should say so.
