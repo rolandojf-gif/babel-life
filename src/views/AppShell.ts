@@ -9,12 +9,12 @@ import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
 import { element, link, type ViewHandle } from './view';
 
-const SITE_TITLE = 'The Library of Babel';
+const SITE_TITLE = 'Babel Life';
 
 function formatShelf(shelf: ShelfCoordinate): string {
   return shelfFields(shelf)
     .map((field) => `${field.name} ${field.value}`)
-    .join(' \u00b7 ');
+    .join(' · ');
 }
 
 /**
@@ -42,10 +42,18 @@ export function mountAppShell(
 
   const footer = element('footer', 'footer');
   footer.append(element('p', 'attribution', copy.attribution));
+  footer.append(element('p', 'attribution', copy.copyright));
+
   const about = element('details', 'about');
   about.append(element('summary', undefined, copy.aboutHeading));
   about.append(element('p', undefined, copy.aboutBody));
   footer.append(about);
+
+  const legal = element('details', 'about');
+  legal.append(element('summary', undefined, copy.legalHeading));
+  legal.append(element('p', undefined, copy.legalBody));
+  legal.append(element('p', undefined, copy.legalOwner));
+  footer.append(legal);
 
   shell.append(grain, main, footer, status);
   root.append(shell);

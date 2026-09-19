@@ -1,9 +1,9 @@
 /** Every visitor-facing string outside the catalog. */
 export const copy = {
-  eyebrow: 'THE LIBRARY OF BABEL',
-  heading: 'Somewhere in the Library of Babel, every writable life already exists.',
+  eyebrow: 'BABEL LIFE',
+  heading: 'Somewhere in the Library, every writable life already exists.',
   lede: 'Open one.',
-  cardEyebrow: 'THERE IS ALREADY A BOOK IN WHICH\u2026',
+  cardEyebrow: 'THERE IS ALREADY A BOOK IN WHICH…',
   openThisLife: 'OPEN THIS LIFE',
   somethingStranger: 'SHOW ME SOMETHING STRANGER',
   showAll: 'SHOW ALL 24',
@@ -34,8 +34,13 @@ export const copy = {
   invalidAddress: 'This address is not in this edition.',
   invalidAddressNote: 'Every volume here has a permanent address. This is not one of them.',
   enterTheLibrary: 'Enter the Library',
-  attribution: 'After Jorge Luis Borges.',
-  aboutHeading: 'About this Library',
+  attribution: 'Inspired by Jorge Luis Borges.',
+  copyright: '© 2026 Rolando Fernández. All rights reserved.',
+  aboutHeading: 'About Babel Life',
   aboutBody:
-    'This is a curated reading experience inspired by Borges. Its passages are authored, and its coordinates belong to this edition. It cannot identify anyone’s future.',
+    'Babel Life is an independent literary project inspired by Jorge Luis Borges’ short story “The Library of Babel”. It is not affiliated with, endorsed by or published by the Borges estate or any publisher. No passage from Borges’ story is reproduced here. Its passages and coordinates belong to this edition. This is fiction: the site cannot identify, predict or estimate anyone’s future.',
+  legalHeading: 'Legal & privacy',
+  legalBody:
+    'Babel Life is currently a non-commercial personal project. It does not sell goods or services, offer user accounts, accept form submissions, serve advertising or intentionally profile visitors. The site itself does not set advertising or analytics cookies. Hosting providers may process technical request data needed to deliver, secure and operate the site.',
+  legalOwner: 'Maintained by Rolando Fernández in Spain.',
 } as const;
