@@ -47,7 +47,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   root.append(masthead, grid, count, actionsRow);
 
   function update(next: AppState): void {
-    const books = wallBooks(next.wallSelection);
+    const books = wallBooks(next.wallSelection, next.wallSeed);
     grid.replaceChildren(...books.map((book, index) => createBookCard(book, index)));
 
     const word = COUNT_WORDS[books.length] ?? String(books.length);

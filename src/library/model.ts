@@ -61,6 +61,8 @@ export type WallSelection = 'first' | 'second' | 'all';
 export interface AppState {
   view: View;
   wallSelection: WallSelection;
+  /** The order the wall is dealt in, fixed for this visit and never stored. */
+  wallSeed: bigint;
   currentBookId: string | null;
   /** The address being looked at, when the visitor came in by one. */
   address: Coordinate | null;

@@ -1,5 +1,6 @@
 import catalogData from '../content/catalog.json';
 import type { Book, Catalog, RootBook, WallSelection } from './model';
+import { shuffled } from './shuffle';
 
 const BOOK_ID = /^b\d{4}$/;
 
@@ -96,15 +97,27 @@ export const rootBooks: RootBook[] = [...catalog.wall.first, ...catalog.wall.sec
   return book;
 });
 
-/** The root lives the wall shows for a given selection, in their curated order. */
-export function wallBooks(selection: WallSelection): RootBook[] {
-  if (selection === 'all') return rootBooks;
-  const ids = selection === 'first' ? catalog.wall.first : catalog.wall.second;
+function rootsOf(ids: readonly string[]): RootBook[] {
   return ids.map((id) => {
     const book = findBook(id);
     if (!book || book.kind !== 'root') throw new Error(`The wall lists unknown root ${id}`);
     return book;
   });
+}
+
+/**
+ * The root lives the wall shows, dealt in this visit's order. The two curated
+ * sets of twelve are shuffled separately and never mixed: the editorial pacing
+ * of which twelve come first survives, and showing all twenty-four leaves the
+ * first twelve exactly where they were rather than dealing the wall again.
+ */
+export function wallBooks(selection: WallSelection, seed: bigint): RootBook[] {
+  const first = shuffled(catalog.wall.first, seed);
+  if (selection === 'first') return rootsOf(first);
+  // A separate stream, so one set's order says nothing about the other's.
+  const second = shuffled(catalog.wall.second, seed + 1n);
+  if (selection === 'second') return rootsOf(second);
+  return rootsOf([...first, ...second]);
 }
 
 export const TOTAL_BOOKS = catalog.books.length;

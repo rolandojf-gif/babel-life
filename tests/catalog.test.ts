@@ -17,6 +17,13 @@ import {
 import { MOTIF_NAMES } from '../src/views/illustrations';
 
 const books = catalog.books;
+/** One visit's deal, fixed so the assertions are about order, not luck. */
+const SEED = 20260919n;
+
+function ids(dealt: { id: string }[]): string[] {
+  return dealt.map((book) => book.id);
+}
+
 const roots = books.filter((book) => book.kind === 'root');
 const nearby = books.filter((book) => book.kind === 'nearby');
 
@@ -144,18 +151,51 @@ describe('the wall', () => {
   });
 
   it('never offers a variation as a card of its own', () => {
-    for (const book of wallBooks('all')) expect(book.kind).toBe('root');
-    expect(wallBooks('first')).toHaveLength(12);
-    expect(wallBooks('second')).toHaveLength(12);
-    expect(wallBooks('all')).toHaveLength(24);
-    expect(wallBooks('all').map((book) => book.id)).toEqual(rootBooks.map((book) => book.id));
+    for (const book of wallBooks('all', SEED)) expect(book.kind).toBe('root');
+    expect(wallBooks('first', SEED)).toHaveLength(12);
+    expect(wallBooks('second', SEED)).toHaveLength(12);
+    expect(wallBooks('all', SEED)).toHaveLength(24);
+    expect(ids(wallBooks('all', SEED)).sort()).toEqual(roots.map((book) => book.id).sort());
   });
 
-  it('keeps the curated order', () => {
+  it('keeps the curated order, whatever the wall is dealt', () => {
     expect(rootBooks.map((book) => book.id)).toEqual([
       ...catalog.wall.first,
       ...catalog.wall.second,
     ]);
+  });
+});
+
+describe('the order the wall is dealt in', () => {
+  it('is the same every time it is asked for, within a visit', () => {
+    expect(ids(wallBooks('first', SEED))).toEqual(ids(wallBooks('first', SEED)));
+    expect(ids(wallBooks('all', SEED))).toEqual(ids(wallBooks('all', SEED)));
+  });
+
+  it('never moves a card when the wall opens out to all twenty-four', () => {
+    // The one thing a shuffled wall must not do is make cards jump.
+    expect(ids(wallBooks('all', SEED))).toEqual([
+      ...ids(wallBooks('first', SEED)),
+      ...ids(wallBooks('second', SEED)),
+    ]);
+  });
+
+  it('shuffles inside each curated set and never between them', () => {
+    expect(ids(wallBooks('first', SEED)).sort()).toEqual([...catalog.wall.first].sort());
+    expect(ids(wallBooks('second', SEED)).sort()).toEqual([...catalog.wall.second].sort());
+  });
+
+  it('deals differently from one visit to the next', () => {
+    const deals = new Set<string>();
+    for (let seed = 0n; seed < 40n; seed += 1n) deals.add(ids(wallBooks('first', seed)).join());
+    expect(deals.size).toBeGreaterThan(30);
+  });
+
+  it('says nothing about the second set from the first', () => {
+    const first = ids(wallBooks('first', SEED));
+    const shifted = ids(wallBooks('first', SEED + 1n));
+    expect(ids(wallBooks('second', SEED))).not.toEqual(shifted);
+    expect(first).not.toEqual(shifted);
   });
 });
 

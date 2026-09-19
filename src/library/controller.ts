@@ -2,6 +2,7 @@ import { findBook } from './catalog';
 import { accessionAt, positionOf, shelfOf } from './coordinates';
 import type { AppState, RenderHint, WallSelection } from './model';
 import { parseRoute } from './routing';
+import { sessionSeed } from './shuffle';
 
 export interface Controller {
   readonly state: AppState;
@@ -15,12 +16,15 @@ type Render = (state: AppState, hint: RenderHint) => void;
 /**
  * One small explicit controller. Views navigate with ordinary hash links, so the
  * browser owns the history stack; the controller reads the location, keeps the
- * wall's current selection in memory, and asks the shell to render.
+ * wall's current selection and this visit's card order in memory, and asks the
+ * shell to render. The order is drawn once, so nothing on the wall moves while
+ * the visitor is reading.
  */
-export function createController(render: Render): Controller {
+export function createController(render: Render, seed: bigint = sessionSeed()): Controller {
   const state: AppState = {
     view: 'wall',
     wallSelection: 'first',
+    wallSeed: seed,
     currentBookId: null,
     address: null,
     shelf: null,

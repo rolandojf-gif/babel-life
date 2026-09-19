@@ -47,11 +47,15 @@ The site entry is the **Wall of Lives**, not a scenario selector, dropdown, or f
     *   **Coordinate Badge:** Displays `Hexagon [ID] · Volume [N]`.
     *   **Action:** `OPEN THIS LIFE →`.
 *   **Card Batching & Navigation:**
-    *   Initial load displays **12 curated cards** (`wall.first`).
+    *   Initial load displays **12 curated cards** (`wall.first`), dealt in an order drawn once per visit.
     *   Counter: `Twelve of twenty-four volumes.`
     *   Secondary Action: `SHOW ME SOMETHING STRANGER` swaps the grid to the second 12 cards (`wall.second`).
     *   Quiet Action: `SHOW ALL 24` expands the grid to display all 24 root lives simultaneously (`wall.all`).
     *   No disabled button states: controls disappear cleanly when their action is no longer applicable.
+*   **The order of the deal (`shuffle.ts`):**
+    *   The two curated sets of twelve are shuffled **separately and never mixed**, so which twelve open the wall stays an editorial decision and only their order is left to the deal. A visitor who comes back tomorrow meets the same twelve lives in a different order, not a different twelve.
+    *   One seed is drawn per visit and held in memory by the controller. Every redraw of the wall — after opening a life, after browser Back, after `SHOW ALL 24` — deals the same order, so nothing moves under the visitor's hands. `SHOW ALL 24` appends the second set below the first rather than dealing the wall again.
+    *   Nothing is stored: a reload is a new visit and deals again. The seed is an ordinary `Math.random()` draw, since card order is not a secret, and it runs through the same splitmix64 scramble (`scramble.ts`) that writes the pages at unreadable addresses.
 
 ### The Book View (`BookView.ts`)
 When a visitor opens a life, the interface presents an authored volume from the Library:
@@ -110,7 +114,7 @@ At an address holding nothing this edition can print, the visitor is not told th
     *   Support for `prefers-reduced-motion`.
 
 ### Verification (`tests/`)
-Vitest, nine files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
+Vitest, eleven files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
 *   `coordinates.test.ts` — the address space. Every expected value is derived independently of the module under test, never by calling it: the published positions of known volumes, the inverse over the whole `b0001`–`b9999` registry, field ranges, unpadded printing, one spelling per hexagon, the wrap at both ends of the space, the 384 addresses past the end, and the property the shelf copy depends on — every printed volume stands alone on its shelf, but for the shelfmarked pair, which is held to standing side by side, on one shelf, with no edge between them.
 *   `catalog.test.ts` — the shipped inventory, re-deriving the rules rather than calling the validator: 24 lives and 48 variations, accession numbers unique and never recycled, every icon present in the illustration set, word counts inside the editorial range, no repeated passage or title, edges that stay inside one life, every variation reachable from its root, and the wall as exactly the set of roots in curated order.
 *   `validator.test.ts` — the load-time refusals, one case per rejection, against catalogs built to be wrong.
@@ -118,6 +122,8 @@ Vitest, nine files, run with `npm test`; `npm run verify` runs the typecheck, th
 *   `routing.test.ts` — every route the Library answers to, the strangers it does not, and a round trip through the hash writers for all 72 volumes.
 *   `pages.test.ts` — the page at an unreadable address: the alphabet, the length, determinism across repeat readings, every symbol inside the alphabet and none of them favoured out of all recognition, a different page at every address, and two fixtures produced by a separate implementation of the same scramble rather than by calling this one.
 *   `address-view.test.ts` — the address view under jsdom: the page is offered and not opened, the control is replaced by it, focus follows, the symbols are hidden from assistive technology behind a line that describes them, and the same address reads the same twice.
+*   `shuffle.test.ts` — the deal: fixed by its seed, a permutation of exactly what it was given, the original left alone, every item first about as often as any other over 1200 seeds, and a seed of its own per visit.
+*   `wall-view.test.ts` — the wall under jsdom: twelve cards led by their premises with no title presented as one, the other twelve behind `SHOW ME SOMETHING STRANGER` with no overlap, `SHOW ALL 24` leaving both sets exactly where they were, the same deal however often the wall is redrawn, controls put away rather than disabled, and every card pointing at its own volume.
 *   `shelf-view.test.ts` — a shelf under jsdom: thirty-two spines, the readable ones named and linked as volumes, and the count line that says how many — "One of them can be read." on an ordinary shelf, "Two" on the shelfmarked one.
 *   `controller.test.ts` — the routing table as behaviour, under jsdom: a legible address opens a book, an illegible one is not an error, an address outside the space is, navigation clears what the previous view held, and the same location never renders twice.
 
@@ -310,18 +316,15 @@ EDITORIAL MAP STATUS: FROZEN FOR BLUEPRINT UPDATE
 
 These features represent planned future iterations and must **NOT** be implemented during current content or maintenance passes:
 
-1.  **Randomized Wall Order on Fresh Load:**
-    *   On a fresh visitor session, randomize the initial 12 cards shown on the Wall.
-    *   Must remain strictly stable throughout the browsing session (preserving Back/Forward coherence and preventing cards from jumping while navigating).
-2.  **Book Ratings ("RATE THIS BOOK"):**
+1.  **Book Ratings ("RATE THIS BOOK"):**
     *   A discreet, non-intrusive rating mechanism placed at the foot of an opened book passage.
     *   Enables visitors to record resonance without writing reviews or leaving comments.
-3.  **Wall Leaderboards & Curated Views:**
+2.  **Wall Leaderboards & Curated Views:**
     *   Filter/sort views for `ALL TIME` and `THIS WEEK` rankings.
-4.  **Confidence-Weighted Ranking Mathematics:**
+3.  **Confidence-Weighted Ranking Mathematics:**
     *   Rankings must **never** use a naive arithmetic average (which allows a single 5-star vote to rank above thousands of consistent ratings).
     *   Must incorporate vote volume and statistical confidence (e.g., lower bound of the Wilson score confidence interval or a Bayesian average with a fixed global prior).
-5.  **Minimal Remote Persistence:**
+4.  **Minimal Remote Persistence:**
     *   Ratings eventually require a lightweight remote datastore (e.g., serverless edge KV / edge SQL).
     *   Must be strictly limited to aggregating anonymous vote tallies; no user tracking, advertising beacons, fingerprinting, or personal profile data.
 
@@ -340,6 +343,7 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Discovered book view with `YOU FOUND THE BOOK`, full 4-field coordinates, `This book was already here.`, the consultation note, passage, aftertaste, nearby volumes and the shelf walk.
 *   **The full 72-volume canonical catalog:** 24 root lives on the Wall, 48 nearby volumes reachable only from inside a book, exactly two nearby volumes each, passages of 113–155 words. Validated at load time: ID syntax, duplicate identities, unresolved edges, edges leaving their root life, unlabelled edges, and a wall that is not exactly the set of roots.
 *   Nearby volumes navigation naming specific differences from the current passage.
+*   **A wall dealt fresh each visit:** the two curated sets of twelve shuffled separately, the order drawn once and held, so cards never move while the visitor reads. Nothing stored; a reload deals again.
 *   **One shelf with two readable volumes:** a single frozen shelfmark, implemented as a transposition of two addresses, so that one walk along a shelf finds two strangers standing together.
 *   **A page at every unreadable address:** `LOOK INSIDE` on the address view, 192 symbols of the Library's 25-symbol alphabet, fixed for that address by splitmix64 over its position, hidden from assistive technology behind a line that describes it.
 *   **Navigable address space:** `#shelf=` and `#volume=` routes, a shelf view of thirty-two spines, an address view for addresses holding nothing legible, and volume-by-volume walking in both directions.
@@ -349,8 +353,8 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Zero backend, zero AI generation, zero user tracking, zero data collection, zero persistence.
 
 ### KNOWN GAPS
-*   **Some views are untested.** Everything below them is covered, and `AddressView` and `ShelfView` have cases of their own (see section 2); `WallOfLives`, `BookView`, `NearbyVolumes` and the illustrations are exercised only by reading the page.
-*   **Only the address and shelf views have been walked in a browser.** Chromium at 320 / 390 / 1440 px: no horizontal overflow anywhere, the page opens on request and takes focus, its symbols are identical at all three widths, and the shelfmarked shelf shows both spines and opens the right volume from either. The wall and the book view, and any screen reader, remain unverified.
+*   **Two views are untested.** Everything below them is covered, and `WallOfLives`, `ShelfView` and `AddressView` have cases of their own (see section 2); `BookView`, `NearbyVolumes` and the illustrations are exercised only by reading the page.
+*   **The book view has not been walked in a browser, and no screen reader has been used at all.** Chromium at 320 / 390 / 1440 px covers the wall, the shelf and the address view: no horizontal overflow anywhere, the page at an unreadable address opens on request and takes focus, the shelfmarked shelf shows both spines, and the wall's deal survives opening a life, browser Back, `SHOW ALL 24` and repeated redraws while a reload deals again.
 *   The final-hexagon boundary condition described in section 2.
 *   No hosting or deployment. The build produces a static bundle and nothing publishes it.
 
@@ -358,7 +362,6 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Nothing pending. The 72-volume migration and the address layer are shipped; the next approved item is whatever gets promoted out of section 5, or the closing of a known gap above.
 
 ### PLANNED LATER
-*   Session-stable randomized Wall order on fresh load.
 *   `RATE THIS BOOK` interaction on book pages.
 *   `ALL TIME` and `THIS WEEK` ranked views on the Wall.
 *   Statistical confidence-weighted ranking algorithm (Wilson score / Bayesian average).
