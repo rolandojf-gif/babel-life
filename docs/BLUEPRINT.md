@@ -98,6 +98,15 @@ When a visitor opens a life, the interface presents an authored volume from the 
     *   Fluid typography, system fonts, and 44px minimum touch targets.
     *   Support for `prefers-reduced-motion`.
 
+### Verification (`tests/`)
+Vitest, six files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
+*   `coordinates.test.ts` — the address space. Every expected value is derived independently of the module under test, never by calling it: the published positions of known volumes, the inverse over the whole `b0001`–`b9999` registry, field ranges, unpadded printing, one spelling per hexagon, the wrap at both ends of the space, the 384 addresses past the end, and the property the shelf copy depends on — every printed volume stands alone on its shelf.
+*   `catalog.test.ts` — the shipped inventory, re-deriving the rules rather than calling the validator: 24 lives and 48 variations, accession numbers unique and never recycled, every icon present in the illustration set, word counts inside the editorial range, no repeated passage or title, edges that stay inside one life, every variation reachable from its root, and the wall as exactly the set of roots in curated order.
+*   `validator.test.ts` — the load-time refusals, one case per rejection, against catalogs built to be wrong.
+*   `blueprint.test.ts` — this document against the catalog: the 24 `TITLE` and `WALL HOOK` lines of the frozen map in section 4, in wall order, plus the inventory this section states. A title edited in one place and not the other fails here.
+*   `routing.test.ts` — every route the Library answers to, the strangers it does not, and a round trip through the hash writers for all 72 volumes.
+*   `controller.test.ts` — the routing table as behaviour, under jsdom: a legible address opens a book, an illegible one is not an error, an address outside the space is, navigation clears what the previous view held, and the same location never renders twice.
+
 ---
 
 ## 3. Editorial Rules
@@ -123,7 +132,7 @@ All passages and card copy must adhere strictly to these principles:
 The canonical library, shipped in `src/content/catalog.json` (`schemaVersion: 3`):
 *   **24 ROOT LIVES** displayed on the Wall of Lives.
 *   **48 NEARBY VOLUMES** (exactly 2 nearby volumes per root).
-*   **Total:** 72 volumes, `b0001`–`b0072`.
+*   **Total:** 72 volumes. Accession numbers run from `b0002` to `b0082` and are deliberately not contiguous: an ID retired during an earlier draft is never reused, so a published address never moves.
 
 The editorial map below is frozen and the shipped catalog matches it title for title. Passages run 113–155 words. Any future content pass edits this map first and the catalog second, never the reverse.
 
@@ -324,7 +333,7 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Zero backend, zero AI generation, zero user tracking, zero data collection, zero persistence.
 
 ### KNOWN GAPS
-*   **No automated tests.** There is no `tests/` directory and no test runner. The coordinate arithmetic and the catalog invariants are where a regression would be silent; both are currently protected only by the load-time validator and by hand-checking.
+*   **The views are untested.** Everything below them is covered (see section 2); `WallOfLives`, `BookView`, `ShelfView`, `AddressView`, `NearbyVolumes` and the illustrations are exercised only by reading the page.
 *   **No browser verification pass on record.** Typecheck and build pass; layout, focus order, screen-reader behaviour and reduced motion have not been formally walked at 320 / 390 / 1440 px.
 *   The final-hexagon boundary condition described in section 2.
 *   No hosting or deployment. The build produces a static bundle and nothing publishes it.

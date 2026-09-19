@@ -10,8 +10,11 @@ const NEARBY_PER_ROOT = 2;
  * Rejects an unusable catalog at load time: bad ID syntax, duplicate identities,
  * unresolved or cross-family nearby edges, a root without its two variations, or
  * a wall that is not exactly the set of root lives.
+ *
+ * Exported so the rejection paths can be exercised against hand-built catalogs;
+ * the application only ever calls it on the shipped one, below.
  */
-function validate(data: Catalog): Catalog {
+export function validate(data: Catalog): Catalog {
   if (data.schemaVersion !== 3) {
     throw new Error(`Unsupported catalog schemaVersion: ${String(data.schemaVersion)}`);
   }
