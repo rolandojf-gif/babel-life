@@ -26,6 +26,8 @@ function validate(data: Catalog): Catalog {
     if (book.passage.length === 0 || book.passage.some((p) => p.trim() === '')) {
       throw new Error(`Empty paragraph in book: ${book.id}`);
     }
+    if (book.hook.trim() === '') throw new Error(`Book ${book.id} has no wall hook`);
+    if (book.headline.trim() === '') throw new Error(`Book ${book.id} has no headline`);
     books.set(book.id, book);
   }
 

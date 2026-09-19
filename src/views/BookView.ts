@@ -46,6 +46,7 @@ export function createBookView(bookId: string): ViewHandle {
     back,
     marker,
     createCoordinateLine(book.id),
+    element('p', 'already-here', copy.alreadyHere),
     visual,
     title,
     passage,

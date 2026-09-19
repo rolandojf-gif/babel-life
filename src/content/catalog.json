@@ -70,8 +70,7 @@
       "clusterId": "train",
       "icon": "platform",
       "headline": "MISSED TRAIN",
-      "teaser": "You miss the 08:14 by two seconds.",
-      "consequence": "Thirty-one years of your life are different.",
+      "hook": "you miss the 08:14 by two seconds, start talking to the stranger beside you on the platform, and live with them for the next thirty-one years.",
       "title": "The 08:14",
       "passage": [
         "08:14:02",
@@ -102,8 +101,7 @@
       "clusterId": "train",
       "icon": "doorway",
       "headline": "08:13:59",
-      "teaser": "You reach the platform three seconds earlier.",
-      "consequence": "You board, and you never meet them.",
+      "hook": "you reach the same platform three seconds earlier, board the 08:14, and never meet the person you would have spent thirty-one years with.",
       "title": "Three Seconds Earlier",
       "passage": [
         "08:13:59",
@@ -132,8 +130,7 @@
       "clusterId": "train",
       "icon": "platform",
       "headline": "NEITHER OF YOU SPEAKS",
-      "teaser": "You miss the 08:14 by the same two seconds.",
-      "consequence": "You stand beside them and say nothing.",
+      "hook": "you miss the 08:14 by the same two seconds, stand a metre from that person for seventeen minutes, and neither of you says a word.",
       "title": "The Same Two Seconds",
       "passage": [
         "08:14:02",
@@ -162,8 +159,7 @@
       "clusterId": "football",
       "icon": "pitch",
       "headline": "FORTY-SEVEN SECONDS",
-      "teaser": "At twenty-seven, you make your professional debut.",
-      "consequence": "It lasts forty-seven seconds.",
+      "hook": "you become a professional footballer at 27, play exactly 47 seconds, touch the ball once, and never play professionally again.",
       "title": "Forty-Seven Seconds",
       "passage": [
         "You are twenty-seven. Until March you were playing on Saturdays for a side that shares its pitch with a rugby club, and working the rest of the week. A hamstring goes in the eighty-first minute and the bench is thin, and the manager looks along it twice before he looks at you.",
@@ -195,8 +191,7 @@
       "clusterId": "football",
       "icon": "pitch",
       "headline": "ONE SECOND EARLIER",
-      "teaser": "The whistle comes at forty-six seconds.",
-      "consequence": "The ball is still in the air.",
+      "hook": "the referee ends your debut one second earlier, the ball is still in the air, and your whole professional career lasts 46 seconds.",
       "title": "Forty-Six Seconds",
       "passage": [
         "Everything is the same. The hamstring in the eighty-first minute, the eleven minutes of warming up, the board with your number on it, the eighty-eighth minute.",
@@ -228,8 +223,7 @@
       "clusterId": "football",
       "icon": "pitch",
       "headline": "THE TOUCHLINE",
-      "teaser": "You stand ready for the whole of the added time.",
-      "consequence": "You never step onto the pitch.",
+      "hook": "you warm up, your number goes up on the board, and the match ends while you are still standing on the touchline.",
       "title": "The Touchline",
       "passage": [
         "You are twenty-seven, and everything runs the same way up to the board.",
@@ -258,8 +252,7 @@
       "clusterId": "football",
       "icon": "spotlight",
       "headline": "YOUR ONLY TOUCH",
-      "teaser": "You touch the ball once, in the eighty-eighth minute.",
-      "consequence": "It goes in.",
+      "hook": "your only touch of the ball in professional football is a header from thirty-one yards that goes in, and you never play again.",
       "title": "The Only Touch",
       "passage": [
         "The hamstring, the eleven minutes, the board, the eighty-eighth minute. The clearance goes up and you are under it and you head it back, safe side, exactly as you intended.",
@@ -291,8 +284,7 @@
       "clusterId": "cup",
       "icon": "cup",
       "headline": "ONE CENTIMETRE LEFT",
-      "teaser": "Until tomorrow morning, the account matches your life exactly.",
-      "consequence": "Then you put the cup down one centimetre farther left.",
+      "hook": "your entire life is identical to this one until tomorrow morning, when you put your coffee cup down one centimetre farther left.",
       "title": "One Centimetre",
       "passage": [
         "Everything up to tomorrow morning is correct. The schools, the wrong turn in 2011, the name of the dog that was not yours. You can check it for as long as you are willing to, and it holds.",
@@ -324,8 +316,7 @@
       "clusterId": "cup",
       "icon": "cup",
       "headline": "ONE MILLIMETRE LEFT",
-      "teaser": "The same morning, the same cup, the same coffee.",
-      "consequence": "One millimetre farther left.",
+      "hook": "everything is identical until 07:42 tomorrow, when the cup goes down one millimetre farther left, and nothing whatsoever comes of it.",
       "title": "One Millimetre",
       "passage": [
         "Everything up to tomorrow morning is correct, in the same exhaustive way.",
@@ -358,8 +349,7 @@
       "clusterId": "cup",
       "icon": "cup",
       "headline": "ONE CENTIMETRE RIGHT",
-      "teaser": "The same morning, the same cup.",
-      "consequence": "One centimetre the other way.",
+      "hook": "the only difference from your life is that tomorrow the cup is one centimetre nearer the edge of the counter. It does not fall.",
       "title": "The Other Direction",
       "passage": [
         "Everything up to tomorrow morning is correct.",
@@ -391,8 +381,7 @@
       "clusterId": "cup",
       "icon": "cup",
       "headline": "EXACTLY WHERE IT WAS",
-      "teaser": "Tomorrow the cup goes back into today’s ring.",
-      "consequence": "Nothing moves at all, and it is still another book.",
+      "hook": "tomorrow you put the cup back in exactly the ring it left today, nothing changes at all, and it is still a different book.",
       "title": "Exactly Where It Was",
       "passage": [
         "Everything up to tomorrow morning is correct.",
@@ -423,8 +412,7 @@
       "clusterId": "letter",
       "icon": "letter",
       "headline": "A LETTER AT FIFTY-NINE",
-      "teaser": "A letter written when you were nineteen reaches you at fifty-nine.",
-      "consequence": "It asks you to come back.",
+      "hook": "at 59, you receive a letter that was written to you when you were 19. It asks you to come back on a Thursday in 1986.",
       "title": "Forty Years in the Post",
       "passage": [
         "The envelope is the wrong colour for anything official, and the stamp on it has not been valid since 1993. Your name is on it in handwriting you recognise before you have decided that you recognise it.",
@@ -453,8 +441,7 @@
       "clusterId": "letter",
       "icon": "letter",
       "headline": "THE SAME LETTER, AT NINETEEN",
-      "teaser": "The letter arrives the week it was written.",
-      "consequence": "You read the second page at nineteen.",
+      "hook": "the same letter arrives four days after it was posted, you go to the address on the second page, and it rains.",
       "title": "On Time",
       "passage": [
         "The envelope arrives on a Tuesday, four days after it was posted, which is what envelopes did.",
@@ -483,8 +470,7 @@
       "clusterId": "letter",
       "icon": "photograph",
       "headline": "RETURNED TO SENDER",
-      "teaser": "The letter takes a different route.",
-      "consequence": "It is finally opened by the person who wrote it.",
+      "hook": "the letter meant for you is misread by one digit, sits in a sorting office for thirty-one years, and is finally opened by the person who wrote it.",
       "title": "Returned",
       "passage": [
         "The house number is wrong by one digit. That is the whole of the difference: a 7 written in the continental way, with the bar through it, read as a 2 by a sorting machine that was new that year.",
@@ -512,8 +498,7 @@
       "clusterId": "tuesday",
       "icon": "river",
       "headline": "A TUESDAY YOU CANNOT REMEMBER",
-      "teaser": "Every remembered event in the book is correct.",
-      "consequence": "Except one afternoon, when it says you walked to the river.",
+      "hook": "every event you remember is recorded correctly except one Tuesday afternoon you cannot remember at all, on which the book says you walked to the river.",
       "title": "The River",
       "passage": [
         "The accuracy is the unsettling part, long before the Tuesday.",
@@ -542,8 +527,7 @@
       "clusterId": "tuesday",
       "icon": "window",
       "headline": "THE KITCHEN",
-      "teaser": "The same Tuesday, the same missing afternoon.",
-      "consequence": "In this account you never leave the house.",
+      "hook": "the same unremembered Tuesday, except that this account has you at the kitchen window with a tea towel for three and a half hours.",
       "title": "The Kitchen",
       "passage": [
         "Everything is identical up to 14:10 on the Tuesday in October: the teacher’s name, the coat, the Sunday, the pause in the conversation you have never told anyone about.",
@@ -572,8 +556,7 @@
       "clusterId": "selfReference",
       "icon": "screen",
       "headline": "THIS SENTENCE",
-      "teaser": "Someone opens a website about a library.",
-      "consequence": "They find a book, and in it they are reading this.",
+      "hook": "you find a book describing you opening this website and reading this exact sentence.",
       "title": "This One",
       "passage": [
         "The book opens on a person at a screen. It does not say where, or when, or what kind of screen; it is not that sort of account.",
@@ -602,8 +585,7 @@
       "clusterId": "selfReference",
       "icon": "screen",
       "headline": "THE CLOSED TAB",
-      "teaser": "The same book, one sentence different.",
-      "consequence": "In this one you close the tab after the next sentence.",
+      "hook": "the book says you close the tab after the next sentence, then goes on describing your life for another three hundred pages.",
       "title": "After the Next Sentence",
       "passage": [
         "The book opens the same way: a person at a screen, a website about a library, a card, and then another, and then one opened.",
@@ -632,8 +614,7 @@
       "clusterId": "selfReference",
       "icon": "book",
       "headline": "YOU KEPT READING",
-      "teaser": "You have found the book in which you close the tab.",
-      "consequence": "This is the one in which you did not.",
+      "hook": "you have read the book in which you close the tab, you did not close it, and there is a volume for that version too.",
       "title": "Still Here",
       "passage": [
         "This account begins after the other one.",
@@ -661,8 +642,7 @@
       "clusterId": "future",
       "icon": "clock",
       "headline": "SEVENTEEN YEARS",
-      "teaser": "Exactly seventeen years from now, you return to this address.",
-      "consequence": "You are looking for a sentence you remember incorrectly.",
+      "hook": "seventeen years from now, you return to this website looking for a sentence you remember incorrectly.",
       "title": "Seventeen Years",
       "passage": [
         "The account gives no date. It gives an interval: seventeen years after the afternoon on which you first opened this address.",
@@ -694,8 +674,7 @@
       "clusterId": "future",
       "icon": "clock",
       "headline": "SEVENTEEN MINUTES",
-      "teaser": "The same return, very much sooner.",
-      "consequence": "Seventeen minutes is enough to remember it wrong.",
+      "hook": "you come back seventeen minutes after closing the tab and find that you already remember the sentence wrong.",
       "title": "Seventeen Minutes",
       "passage": [
         "Seventeen minutes after you close the tab, you open it again.",
@@ -723,8 +702,7 @@
       "clusterId": "mortality",
       "icon": "telephone",
       "headline": "THE LAST ORDINARY SENTENCE",
-      "teaser": "The book records the last sentence you ever say.",
-      "consequence": "It is ordinary. On the next line, someone answers.",
+      "hook": "the last ordinary sentence you will ever say has already been written down. Someone answers you on the next line.",
       "title": "Someone Answers",
       "passage": [
         "The account gives no date for this, and no cause, and no scene. It is not that kind of book and it has never pretended to be.",
@@ -753,8 +731,7 @@
       "clusterId": "mortality",
       "icon": "telephone",
       "headline": "NO ONE ANSWERS",
-      "teaser": "The same evening, the same six words.",
-      "consequence": "The next line is about the room.",
+      "hook": "the same six ordinary words end your life, on the same evening, and on the next line nobody answers.",
       "title": "No One Answers",
       "passage": [
         "This volume repeats the other one exactly, for four hundred pages, up to and including the sentence.",
@@ -782,8 +759,7 @@
       "clusterId": "mortality",
       "icon": "telephone",
       "headline": "YOU HAVE SAID IT BEFORE",
-      "teaser": "The last sentence is one you have said hundreds of times.",
-      "consequence": "The book has recorded every one of them.",
+      "hook": "the last thing you ever say is a sentence you have already said one thousand, one hundred and forty-seven times.",
       "title": "Said Before",
       "passage": [
         "This account is identical to the others, and it comes with an index.",

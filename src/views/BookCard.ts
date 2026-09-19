@@ -4,7 +4,11 @@ import type { Book } from '../library/model';
 import { createIllustration } from './illustrations';
 import { element, glyph, link } from './view';
 
-/** One life on the wall: an illustration, a headline, what it costs, and the way in. */
+/**
+ * One life on the wall. The eyebrow is the same on every card, on purpose: it
+ * says the volume is already shelved. The premise underneath is the whole hook,
+ * so nothing has to be opened to be understood.
+ */
 export function createBookCard(book: Book, index: number): HTMLLIElement {
   const item = element('li', 'wall__cell');
 
@@ -16,9 +20,9 @@ export function createBookCard(book: Book, index: number): HTMLLIElement {
   visual.append(createIllustration(book.icon));
 
   const body = element('span', 'card__body');
-  const headline = element('h2', 'card__headline', book.headline);
-  const teaser = element('span', 'card__teaser', book.teaser);
-  const consequence = element('span', 'card__consequence', book.consequence);
+  const eyebrow = element('span', 'card__eyebrow', copy.cardEyebrow);
+  // The hook completes the eyebrow's sentence, so both belong to the link's name.
+  const hook = element('h2', 'card__hook', book.hook);
 
   const coordinate = coordinateFor(book.id);
   const volume = element(
@@ -31,7 +35,7 @@ export function createBookCard(book: Book, index: number): HTMLLIElement {
   open.append(document.createTextNode(copy.openThisLife));
   open.append(glyph('card__arrow', '→'));
 
-  body.append(headline, teaser, consequence, volume, open);
+  body.append(eyebrow, hook, volume, open);
   card.append(visual, body);
   item.append(card);
   return item;

@@ -13,12 +13,10 @@ export interface Book {
   clusterId: string;
   /** Key into the local illustration set. */
   icon: string;
-  /** Card headline, e.g. MISSED TRAIN. */
+  /** Short label, used where a destination needs naming rather than describing. */
   headline: string;
-  /** Card teaser: the premise in one sentence. */
-  teaser: string;
-  /** Card consequence: the line that makes it worth opening. */
-  consequence: string;
+  /** The wall hook: one complete life premise, completing the card's eyebrow. */
+  hook: string;
   /** Story headline on the book page. */
   title: string;
   /** The authored narrative, one string per paragraph. */
