@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  *
- * The view for an address holding nothing legible: it offers the page, it never
- * opens it unasked, and what it shows is fixed for that address.
+ * The view for an address holding nothing legible: it shows the fixed page
+ * immediately, so opening an unreadable volume never requires a second click.
  */
 
 import { beforeEach, describe, expect, it } from 'vitest';
@@ -35,49 +35,38 @@ describe('an address with nothing legible at it', () => {
     expect(view.element.textContent).toContain(copy.noLegibleNote);
   });
 
-  it('offers the page without opening it', () => {
+  it('shows its page immediately', () => {
     const view = mount();
-    expect(view.element.querySelector('.page__symbols')).toBeNull();
-    const button = view.element.querySelector('button');
-    expect(button?.textContent).toBe(copy.lookInside);
-  });
-});
-
-describe('looking inside', () => {
-  it('shows a page of symbols and puts the control away', () => {
-    const view = mount();
-    view.element.querySelector('button')?.click();
-
     const symbols = view.element.querySelector('.page__symbols');
+
     expect(symbols).not.toBeNull();
-    expect(symbols?.textContent).toHaveLength(PAGE_LENGTH);
-    for (const symbol of symbols?.textContent ?? '') expect(SYMBOLS).toContain(symbol);
     expect(view.element.querySelector('button')).toBeNull();
     expect(view.element.textContent).toContain(copy.pageOf);
   });
+});
 
-  it('gives a screen reader the page rather than a hundred and ninety-two symbols', () => {
+describe('the unreadable page', () => {
+  it('contains only symbols from the Library alphabet', () => {
     const view = mount();
-    view.element.querySelector('button')?.click();
+    const symbols = view.element.querySelector('.page__symbols');
+
+    expect(symbols?.textContent).toHaveLength(PAGE_LENGTH);
+    for (const symbol of symbols?.textContent ?? '') expect(SYMBOLS).toContain(symbol);
+  });
+
+  it('gives a screen reader the page description rather than the raw symbols', () => {
+    const view = mount();
 
     expect(view.element.querySelector('.page__symbols')?.getAttribute('aria-hidden')).toBe('true');
     expect(view.element.querySelector('.visually-hidden')?.textContent).toBeTruthy();
     expect(view.element.textContent).toContain(copy.pageDescription);
   });
 
-  it('moves focus to the page it just opened', () => {
-    const view = mount();
-    view.element.querySelector('button')?.click();
-    expect(document.activeElement).toBe(view.element.querySelector('.page'));
-  });
-
-  it('shows the same page to anyone who opens that address again', () => {
+  it('shows the same page every time that address is opened', () => {
     const first = mount();
-    first.element.querySelector('button')?.click();
     const before = first.element.querySelector('.page__symbols')?.textContent;
 
     const second = mount();
-    second.element.querySelector('button')?.click();
     expect(second.element.querySelector('.page__symbols')?.textContent).toBe(before);
     expect(before).not.toBe('');
   });

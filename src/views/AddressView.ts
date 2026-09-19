@@ -53,19 +53,9 @@ export function createAddressView(coordinate: Coordinate): ViewHandle {
   const note = element('h1', 'address__note', copy.noLegibleNote);
   note.tabIndex = -1;
 
-  // Nothing opens on its own. The page is there for whoever asks to see it.
+  // An unreadable volume opens directly on its fixed page: no second click required.
   const reveal = element('div', 'page__reveal');
-  if (position !== undefined) {
-    const lookInside = element('button', 'action action--quiet', copy.lookInside);
-    lookInside.type = 'button';
-    lookInside.addEventListener('click', () => {
-      const page = createPage(position);
-      // No disabled placeholder: the control is replaced by what it asked for.
-      reveal.replaceChildren(page);
-      page.focus();
-    });
-    reveal.append(lookInside);
-  }
+  if (position !== undefined) reveal.append(createPage(position));
 
   const actions = element('div', 'book__actions');
   const previous = step(coordinate, -1n);
