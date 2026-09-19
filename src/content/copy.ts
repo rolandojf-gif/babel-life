@@ -1,7 +1,7 @@
 /** Every visitor-facing string outside the catalog. */
 export const copy = {
   eyebrow: 'BABEL LIFE',
-  heading: 'Somewhere in the Library, every writable life already exists.',
+  heading: 'With just 25 symbols, the Library contains more books than there are atoms in the observable universe. Somewhere among them, everything that can be written already exists — including every life you could have lived.',
   lede: 'Open one.',
   cardEyebrow: 'THERE IS ALREADY A BOOK IN WHICH…',
   openThisLife: 'OPEN THIS LIFE',
