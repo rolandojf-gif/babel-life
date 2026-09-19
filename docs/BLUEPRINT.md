@@ -59,14 +59,16 @@ When a visitor opens a life, the interface presents an authored volume from the 
 *   **Discovery Marker:** Prominently states `YOU FOUND THE BOOK`.
 *   **Permanent Address:** Full 4-field coordinate line: `Hexagon [ID] · Wall [1–4] · Shelf [1–5] · Volume [1–32]`.
 *   **Archival Assertion:** Quiet line: `This book was already here.`
+*   **Consultation Note:** Immediately beneath it, the Library's note of this reading: `Consulted at HH:MM on a <weekday>.`, taken from the visitor's own device clock and marked up as a `<time>` element. It is a reading-room record of the consultation, never a claim about the reader: no identity, no history, no inference, nothing stored, nothing transmitted. It is the only element of the page that differs between two readings of the same volume; title, passage, aftertaste and address never do.
 *   **Symbolic Artwork:** The book's matching illustration header.
-*   **Literary Title:** The book's formal title (`h1.book__title`) appears here for the first time.
+*   **Literary Title:** The book's formal title (`h1.book__title`), read in full here. The Wall withholds it entirely; a shelf shows it only as a spine.
 *   **Narrative Passage:** The authored account, split into structured paragraphs. Bare clock timestamps are styled as typographic margin stamps.
 *   **Aftertaste:** A single, restrained closing resonance beneath the passage (`book.aftertaste`).
 *   **Nearby Volumes Section (`NearbyVolumes.ts`):** 
     *   Heading: `NEARBY VOLUMES`.
-    *   An inline list of 2 to 4 adjacent books.
+    *   An inline list of exactly two adjacent volumes, enforced at load time by the catalog validator.
     *   Every link explicitly states the exact difference from the current book (`nearby__difference`), followed by the destination headline and `OPEN →`.
+*   **Shelf Walk (`shelfwalk`):** Below the nearby volumes, the shelf itself: `← PREVIOUS VOLUME`, `BROWSE THIS SHELF`, `NEXT VOLUME →`. These address the Library by position rather than by accession number, so they lead into the adjacent addresses whatever stands there. Nearby volumes are adjacency in wording; the shelf walk is adjacency on the shelf. The two are deliberately unrelated.
 *   **Continuation Actions:**
     *   `SHOW ME ANOTHER LIFE`: Deterministically advances to the next distinct thematic cluster in the wall sequence, cycling continuously without repetition.
     *   `← Wall of Lives`: Returns directly to the wall.
@@ -74,8 +76,10 @@ When a visitor opens a life, the interface presents an authored volume from the 
 ### Routing, Coordinates & Technical Invariants
 *   **Hash-Based Routing (`routing.ts`):**
     *   `#` or empty string: Wall of Lives.
-    *   `#book=bXXXX`: Discovered book view.
-    *   Any other hash: `invalidAddress` view (`This address is not in this edition.`) with a direct button to `Enter the Library`.
+    *   `#book=bXXXX`: Discovered book view, addressed by accession number.
+    *   `#shelf=<HEXAGON>-<wall>-<shelf>`: Shelf view (`ShelfView.ts`). The thirty-two addresses of one shelf in order, each showing either the spine of a legible volume or `not legible`. Header: `Thirty-two volumes stand here. N of them can be read.` Walkable with `PREVIOUS SHELF` / `NEXT SHELF`. This is the one surface outside the book view where a title appears, because a shelf is read by its spines; the Wall still shows none.
+    *   `#volume=<HEXAGON>-<wall>-<shelf>-<volume>`: One address. If the accession shelved there belongs to this edition, the book view renders for that volume; otherwise the address view (`AddressView.ts`): `NO LEGIBLE VOLUME` — `A volume stands at this address. Nothing in it can be read.` — with the walk continuing in both directions and back to the shelf.
+    *   Any other hash, and any coordinate whose fields fall outside the address space: `invalidAddress` view (`This address is not in this edition.`) with a direct button to `Enter the Library`.
     *   Native browser history (`pushState` / `popstate` / `hashchange`) supports standard Back and Forward navigation without custom state machines.
 *   **Deterministic 64-Bit Coordinates (`coordinates.ts`):**
     *   Every volume accession number (e.g., `b0003`) maps deterministically and reversibly to a 64-bit integer using BigInt arithmetic:
@@ -85,6 +89,8 @@ When a visitor opens a life, the interface presents an authored volume from the 
         *   `Wall`: Remainder $r = x \pmod{640}$; integer quotient $r / 160 + 1$ (range 1–4).
         *   `Shelf`: Remainder $r \pmod{160}$; integer quotient $(r \pmod{160}) / 32 + 1$ (range 1–5).
         *   `Volume`: Remainder $(r \pmod{32}) + 1$ (range 1–32).
+    *   **The mapping runs both ways.** The multiplier is odd and therefore invertible modulo $2^{64}$; `accessionAt()` applies the stored inverse $17428512612931826493$, so every address in the space resolves to exactly one accession number. Only `b0001`–`b0072` name a volume this edition can print. The remaining ~1.8 × 10¹⁹ addresses are perfectly valid addresses holding nothing legible, and the interface says exactly that. This asymmetry is the point: the Library is complete, the edition is not.
+    *   **Known boundary condition.** $2^{64}$ is not a multiple of 640, so the final hexagon holds only 256 of its 640 positions. `positionOf()` accepts any in-range field combination for that hexagon, so 384 addresses past the end of the space render as `NO LEGIBLE VOLUME` rather than `This address is not in this edition.` No printable volume is reachable that way (verified exhaustively over all 384). Cosmetic; revisit only if the edition ever prints a volume near the boundary.
 *   **Accessibility & Motion:**
     *   Semantic landmarks (`main`, `header`, `footer`, `section`, `ul`, `li`).
     *   Polite ARIA live region (`aria-live="polite"`) for screen-reader status announcements.
@@ -111,13 +117,15 @@ All passages and card copy must adhere strictly to these principles:
 
 ---
 
-## 4. Approved Next Content Architecture (APPROVED NEXT)
+## 4. Canonical Content Architecture (IMPLEMENTED)
 
 ### Architecture Overview
-The approved next architecture establishes a canonical **72-volume library**:
+The canonical library, shipped in `src/content/catalog.json` (`schemaVersion: 3`):
 *   **24 ROOT LIVES** displayed on the Wall of Lives.
 *   **48 NEARBY VOLUMES** (exactly 2 nearby volumes per root).
-*   **Total:** 72 conceptual volumes for the first full migration pass.
+*   **Total:** 72 volumes, `b0001`–`b0072`.
+
+The editorial map below is frozen and the shipped catalog matches it title for title. Passages run 113–155 words. Any future content pass edits this map first and the catalog second, never the reverse.
 
 **Structural Division:**
 *   **Root Lives** belong on the Wall. They provide 24 independent reasons to enter the Library.
@@ -301,24 +309,28 @@ These features represent planned future iterations and must **NOT** be implement
 This status snapshot is the absolute boundary for future agents and developers.
 
 ### IMPLEMENTED NOW
-*   Static vanilla TypeScript + Vite + modern CSS client application.
+*   Static vanilla TypeScript + Vite + modern CSS client application. `npm run typecheck` and `npm run build` pass clean.
 *   **Wall of Lives** with 12 initial cards, `SHOW ME SOMETHING STRANGER` (second 12), and `SHOW ALL 24`.
 *   Card rendering with cycling warm paper tones and local SVG symbolic illustrations.
 *   Premise-first card presentation (`THERE IS ALREADY A BOOK IN WHICH…` + hook).
-*   Literary titles displayed inside the book view (`BookView`), not on the Wall.
-*   Discovered book view with `YOU FOUND THE BOOK`, full 4-field coordinates, `This book was already here.`, passage, aftertaste, and nearby links.
+*   Literary titles displayed inside the book view (`BookView`) and on shelf spines, never on the Wall.
+*   Discovered book view with `YOU FOUND THE BOOK`, full 4-field coordinates, `This book was already here.`, the consultation note, passage, aftertaste, nearby volumes and the shelf walk.
+*   **The full 72-volume canonical catalog:** 24 root lives on the Wall, 48 nearby volumes reachable only from inside a book, exactly two nearby volumes each, passages of 113–155 words. Validated at load time: ID syntax, duplicate identities, unresolved edges, edges leaving their root life, unlabelled edges, and a wall that is not exactly the set of roots.
 *   Nearby volumes navigation naming specific differences from the current passage.
-*   Deterministic 64-bit coordinate mapping using BigInt linear congruential arithmetic.
+*   **Navigable address space:** `#shelf=` and `#volume=` routes, a shelf view of thirty-two spines, an address view for addresses holding nothing legible, and volume-by-volume walking in both directions.
+*   Deterministic 64-bit coordinate mapping using BigInt linear congruential arithmetic, invertible in both directions.
 *   Deterministic `SHOW ME ANOTHER LIFE` sequence cycling between distinct clusters.
-*   Pure hash routing (`#` and `#book=bXXXX`) with browser history integration and invalid address handling.
-*   Zero backend, zero AI generation, zero user tracking, zero data collection.
+*   Pure hash routing with browser history integration and invalid address handling.
+*   Zero backend, zero AI generation, zero user tracking, zero data collection, zero persistence.
+
+### KNOWN GAPS
+*   **No automated tests.** There is no `tests/` directory and no test runner. The coordinate arithmetic and the catalog invariants are where a regression would be silent; both are currently protected only by the load-time validator and by hand-checking.
+*   **No browser verification pass on record.** Typecheck and build pass; layout, focus order, screen-reader behaviour and reduced motion have not been formally walked at 320 / 390 / 1440 px.
+*   The final-hexagon boundary condition described in section 2.
+*   No hosting or deployment. The build produces a static bundle and nothing publishes it.
 
 ### APPROVED NEXT
-*   **72-volume canonical catalog migration:**
-    *   24 distinct Root Lives on the Wall (24 independent premises, no thematic overlaps, no variants masquerading as roots).
-    *   48 Nearby Volumes (exactly 2 counterfactual variations per root, accessible only from within the book page).
-    *   Replacement of old catalog schema and cluster structure with the Frozen Canonical Content Map in Section 4.
-    *   Narrative text expansion toward 70–140 words per passage.
+*   Nothing pending. The 72-volume migration and the address layer are shipped; the next approved item is whatever gets promoted out of section 5, or the closing of a known gap above.
 
 ### PLANNED LATER
 *   Session-stable randomized Wall order on fresh load.
