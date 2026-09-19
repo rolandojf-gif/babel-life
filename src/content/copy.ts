@@ -1,16 +1,17 @@
-/**
- * Every visitor-facing string in phase 1. Book passages live in the catalog;
- * these are the labels, invitations and disclosures around them.
- */
+/** Every visitor-facing string outside the catalog. */
 export const copy = {
-  openingLine: 'Somewhere in the Library, there is a book in which…',
-  selectorLabel: 'A possibility',
-  findTheBook: 'FIND THE BOOK',
+  eyebrow: 'THE LIBRARY OF LIVES',
+  heading: 'Somewhere in the Library, every writable life already exists.',
+  lede: 'Open one.',
+  openThisLife: 'OPEN THIS LIFE',
   somethingStranger: 'SHOW ME SOMETHING STRANGER',
-  passageLabel: 'A passage from the book.',
-  bookExists: 'This book exists.',
-  lookForAnotherBook: 'Look for another book',
+  showAll: 'SHOW ALL 24',
+  backToWall: 'Wall of Lives',
+  found: 'FOUND',
+  nearbyVolumes: 'NEARBY VOLUMES',
+  anotherLife: 'SHOW ME ANOTHER LIFE',
   invalidAddress: 'This address is not in this edition.',
+  invalidAddressNote: 'Every volume here has a permanent address. This is not one of them.',
   enterTheLibrary: 'Enter the Library',
   attribution: 'After Jorge Luis Borges.',
   aboutHeading: 'About this Library',

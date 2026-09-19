@@ -1,55 +1,67 @@
 import { copy } from '../content/copy';
-import { findBook } from '../library/catalog';
-import { coordinateFields, coordinateFor } from '../library/coordinates';
-import { element, type ViewHandle } from './view';
+import { anotherLifeAfter, findBook } from '../library/catalog';
+import { createBookCard, createCoordinateLine } from './BookCard';
+import { createIllustration } from './illustrations';
+import { createNearbyVolumes } from './NearbyVolumes';
+import { element, glyph, link, type ViewHandle } from './view';
 
-interface BookActions {
-  onLookForAnotherBook(): void;
-}
+const TIMESTAMP = /^\d{2}:\d{2}(:\d{2})?$/;
 
-/** The same view serves every book: a coordinate, one authored passage, and the way back. */
-export function createBookView(bookId: string, actions: BookActions): ViewHandle {
+/** A discovered volume: where it sits, what it says, and where it leads. */
+export function createBookView(bookId: string): ViewHandle {
   const book = findBook(bookId);
   if (!book) throw new Error(`No such book: ${bookId}`);
 
-  const root = element('div', 'book');
+  const root = element('article', 'book');
 
-  const coordinate = element('p', 'coordinate');
-  for (const [index, field] of coordinateFields(coordinateFor(book.id)).entries()) {
-    if (index > 0) coordinate.append(element('span', 'coordinate__separator', ' · '));
-    // A no-break space keeps each field whole; the line breaks at the separators.
-    coordinate.append(element('span', 'coordinate__field', `${field.name} ${field.value}`));
-  }
+  const back = link('#', 'backlink');
+  back.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
 
-  const label = element('h1', 'passage-label', copy.passageLabel);
-  label.tabIndex = -1;
+  const marker = element('p', 'found', copy.found);
+
+  const visual = element('div', 'book__visual');
+  visual.append(createIllustration(book.icon));
+
+  const title = element('h1', 'book__title', book.title);
+  title.tabIndex = -1;
 
   const passage = element('div', 'passage');
-  for (const paragraph of book.passage.split('\n\n')) {
-    passage.append(element('p', undefined, paragraph));
+  for (const paragraph of book.passage) {
+    // A bare clock time opens several accounts; it is set as a stamp, not prose.
+    const isStamp = TIMESTAMP.test(paragraph);
+    passage.append(element('p', isStamp ? 'passage__stamp' : undefined, paragraph));
   }
 
-  const exists = element('p', 'book-exists', copy.bookExists);
+  const aftertaste = element('p', 'aftertaste', book.aftertaste);
 
-  const rule = element('hr', 'rule');
+  const next = anotherLifeAfter(book.id);
+  const anotherLink = link(`#book=${next.id}`, 'action action--primary', copy.anotherLife);
+  const wallLink = link('#', 'action action--quiet');
+  wallLink.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
 
-  const anotherButton = element('button', 'action action--secondary', copy.lookForAnotherBook);
-  anotherButton.type = 'button';
-  anotherButton.addEventListener('click', () => {
-    actions.onLookForAnotherBook();
-  });
+  const actions = element('div', 'book__actions');
+  actions.append(anotherLink, wallLink);
 
-  const actionsRow = element('div', 'actions');
-  actionsRow.append(anotherButton);
-
-  root.append(coordinate, label, passage, exists, rule, actionsRow);
+  root.append(
+    back,
+    marker,
+    createCoordinateLine(book.id),
+    visual,
+    title,
+    passage,
+    aftertaste,
+    createNearbyVolumes(book),
+    actions,
+  );
 
   return {
     element: root,
-    // A book's text and coordinate never change; a different book is a different view.
+    // A book's text, coordinate and neighbours never change.
     update(): void {},
     focus(): void {
-      label.focus();
+      title.focus();
     },
   };
 }
+
+export { createBookCard };

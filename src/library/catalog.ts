@@ -1,49 +1,53 @@
 import catalogData from '../content/catalog.json';
-import type { Book, Catalog, Scenario } from './model';
+import type { Book, Catalog, Cluster, WallSelection } from './model';
 
 const BOOK_ID = /^b\d{4}$/;
-const SCENARIO_ID = /^s\d{2}$/;
 
 /**
  * Rejects an unusable catalog at load time: bad ID syntax, duplicate identities,
- * unresolved references or empty passages. The complete graph check arrives with
- * the full catalog.
+ * unresolved nearby edges, dead ends, or wall sets that do not partition the books.
  */
 function validate(data: Catalog): Catalog {
-  if (data.schemaVersion !== 1) {
+  if (data.schemaVersion !== 2) {
     throw new Error(`Unsupported catalog schemaVersion: ${String(data.schemaVersion)}`);
+  }
+
+  const clusters = new Set<string>();
+  for (const cluster of data.clusters) {
+    if (clusters.has(cluster.id)) throw new Error(`Duplicate cluster id: ${cluster.id}`);
+    clusters.add(cluster.id);
   }
 
   const books = new Map<string, Book>();
   for (const book of data.books) {
     if (!BOOK_ID.test(book.id)) throw new Error(`Invalid book id: ${book.id}`);
     if (books.has(book.id)) throw new Error(`Duplicate book id: ${book.id}`);
-    if (book.passage.trim() === '') throw new Error(`Empty passage in book: ${book.id}`);
+    if (!clusters.has(book.clusterId)) throw new Error(`Book ${book.id} has unknown cluster`);
+    if (book.passage.length === 0 || book.passage.some((p) => p.trim() === '')) {
+      throw new Error(`Empty paragraph in book: ${book.id}`);
+    }
     books.set(book.id, book);
   }
 
-  const scenarios = new Map<string, Scenario>();
-  const orders = new Set<number>();
-  for (const scenario of data.scenarios) {
-    if (!SCENARIO_ID.test(scenario.id)) throw new Error(`Invalid scenario id: ${scenario.id}`);
-    if (scenarios.has(scenario.id)) throw new Error(`Duplicate scenario id: ${scenario.id}`);
-    if (scenario.depth !== 0 && scenario.depth !== 1 && scenario.depth !== 2) {
-      throw new Error(`Invalid depth on scenario: ${scenario.id}`);
+  for (const book of data.books) {
+    if (book.neighbors.length < 2 || book.neighbors.length > 4) {
+      throw new Error(`Book ${book.id} offers ${String(book.neighbors.length)} nearby volumes`);
     }
-    if (orders.has(scenario.order)) throw new Error(`Duplicate scenario order: ${scenario.order}`);
-    orders.add(scenario.order);
-    const base = books.get(scenario.baseBookId);
-    if (!base) throw new Error(`Scenario ${scenario.id} points at unknown book ${scenario.baseBookId}`);
-    if (base.scenarioId !== scenario.id) {
-      throw new Error(`Book ${base.id} does not belong to scenario ${scenario.id}`);
+    const targets = new Set<string>();
+    for (const edge of book.neighbors) {
+      if (edge.targetBookId === book.id) throw new Error(`Book ${book.id} links to itself`);
+      if (targets.has(edge.targetBookId)) throw new Error(`Book ${book.id} repeats ${edge.targetBookId}`);
+      if (!books.has(edge.targetBookId)) throw new Error(`Book ${book.id} links to unknown ${edge.targetBookId}`);
+      if (edge.difference.trim() === '') throw new Error(`Book ${book.id} has an unlabelled edge`);
+      targets.add(edge.targetBookId);
     }
-    scenarios.set(scenario.id, scenario);
   }
 
-  for (const book of data.books) {
-    if (!scenarios.has(book.scenarioId)) {
-      throw new Error(`Book ${book.id} points at unknown scenario ${book.scenarioId}`);
-    }
+  const walled = [...data.wall.first, ...data.wall.second];
+  if (new Set(walled).size !== walled.length) throw new Error('A book appears twice on the wall');
+  if (walled.length !== books.size) throw new Error('The wall sets do not cover the catalog');
+  for (const id of walled) {
+    if (!books.has(id)) throw new Error(`The wall lists unknown book ${id}`);
   }
 
   return data;
@@ -55,22 +59,41 @@ export function findBook(id: string): Book | undefined {
   return catalog.books.find((book) => book.id === id);
 }
 
-export function findScenario(id: string): Scenario | undefined {
-  return catalog.scenarios.find((scenario) => scenario.id === id);
+export function findCluster(id: string): Cluster | undefined {
+  return catalog.clusters.find((cluster) => cluster.id === id);
 }
 
-/** Scenarios the visitor may currently choose, in the fixed editorial order. */
-export function availableScenarios(): Scenario[] {
-  return catalog.scenarios.filter((scenario) => scenario.depth === 0).sort((a, b) => a.order - b.order);
+/** The books the wall shows for a given selection, in their curated order. */
+export function wallBooks(selection: WallSelection): Book[] {
+  const ids =
+    selection === 'first'
+      ? catalog.wall.first
+      : selection === 'second'
+        ? catalog.wall.second
+        : [...catalog.wall.first, ...catalog.wall.second];
+  return ids.map((id) => {
+    const book = findBook(id);
+    if (!book) throw new Error(`The wall lists unknown book ${id}`);
+    return book;
+  });
 }
 
-/** The next authored premise after the given one, or undefined at the end. */
-export function nextScenarioAfter(id: string): Scenario | undefined {
-  const scenarios = availableScenarios();
-  const current = scenarios.find((scenario) => scenario.id === id);
-  if (!current) return undefined;
-  return scenarios.find((scenario) => scenario.order > current.order);
-}
+export const TOTAL_BOOKS = catalog.books.length;
 
-/** The scenario the site opens on: the 47-second football match. */
-export const DEFAULT_SCENARIO_ID = 's03';
+/**
+ * The next life to offer from a book: the following volume in the wall order
+ * whose cluster differs, so the visitor is never handed a near-identical page.
+ * Deterministic, and it closes into a cycle rather than ending.
+ */
+export function anotherLifeAfter(bookId: string): Book {
+  const order = wallBooks('all');
+  const from = order.findIndex((book) => book.id === bookId);
+  const current = from === -1 ? undefined : order[from];
+  for (let step = 1; step <= order.length; step += 1) {
+    const candidate = order[(Math.max(from, 0) + step) % order.length];
+    if (candidate && candidate.clusterId !== current?.clusterId) return candidate;
+  }
+  const fallback = order[0];
+  if (!fallback) throw new Error('The catalog is empty');
+  return fallback;
+}

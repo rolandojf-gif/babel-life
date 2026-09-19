@@ -1,50 +1,65 @@
 /** Logical shapes of the catalog and of the state the controller keeps in memory. */
 
-/** Editorial shelf a scenario belongs to. Phase 1 only publishes the threshold. */
-export type Depth = 0 | 1 | 2;
-
-/** An ordered destination from one book to another. Phase 1 leaves these empty. */
+/** An ordered destination from one book to a nearby life in the Library. */
 export interface NeighborEdge {
   targetBookId: string;
-  label: string;
-  differenceNote: string;
+  /** The exact thing that differs in the destination, stated from here. */
+  difference: string;
 }
 
-/** One immutable book: a permanent accession number and one authored passage. */
+/** One immutable book: a permanent accession number, a card, and one authored account. */
 export interface Book {
   id: string;
-  scenarioId: string;
-  passage: string;
+  clusterId: string;
+  /** Key into the local illustration set. */
+  icon: string;
+  /** Card headline, e.g. MISSED TRAIN. */
+  headline: string;
+  /** Card teaser: the premise in one sentence. */
+  teaser: string;
+  /** Card consequence: the line that makes it worth opening. */
+  consequence: string;
+  /** Story headline on the book page. */
+  title: string;
+  /** The authored narrative, one string per paragraph. */
+  passage: string[];
+  /** One restrained line under the narrative. */
+  aftertaste: string;
   neighbors: NeighborEdge[];
 }
 
-/** A seed the chooser can offer. `category` is editorial metadata and never rendered. */
-export interface Scenario {
+/** Editorial grouping of nearby lives. Names are internal and never rendered. */
+export interface Cluster {
   id: string;
-  selectorText: string;
-  category: string;
-  depth: Depth;
-  order: number;
-  baseBookId: string;
+  name: string;
+}
+
+/** The two curated sets of twelve the wall shows. */
+export interface WallSets {
+  first: string[];
+  second: string[];
 }
 
 export interface Catalog {
   schemaVersion: number;
-  scenarios: Scenario[];
+  clusters: Cluster[];
+  wall: WallSets;
   books: Book[];
 }
 
-/** The views phase 1 can show. `realBook` arrives with the limit shelf. */
-export type View = 'chooser' | 'book' | 'invalidAddress';
+export type View = 'wall' | 'book' | 'invalidAddress';
+
+/** Which curated selection the wall is currently showing. */
+export type WallSelection = 'first' | 'second' | 'all';
 
 export interface AppState {
   view: View;
-  selectedScenarioId: string;
+  wallSelection: WallSelection;
   currentBookId: string | null;
 }
 
 /** Where focus should land after a render, and what to announce politely. */
 export interface RenderHint {
-  focus: 'none' | 'view' | 'shortcut' | 'find';
+  focus: 'none' | 'view' | 'stranger' | 'wallGrid';
   announce?: string;
 }
