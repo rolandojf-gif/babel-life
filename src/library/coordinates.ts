@@ -13,9 +13,9 @@ const INCREMENT = 1442695040888963407n;
 const MULTIPLIER_INVERSE = 17428512612931826493n;
 
 const VOLUMES_PER_SHELF = 32n;
-const SHELVES_PER_WALL = 5n;
+export const SHELVES_PER_WALL = 5;
 const WALLS_PER_HEXAGON = 4n;
-const VOLUMES_PER_WALL = SHELVES_PER_WALL * VOLUMES_PER_SHELF; // 160
+const VOLUMES_PER_WALL = BigInt(SHELVES_PER_WALL) * VOLUMES_PER_SHELF; // 160
 const POSITIONS_PER_HEXAGON = WALLS_PER_HEXAGON * VOLUMES_PER_WALL; // 640
 
 export const SHELF_LENGTH = Number(VOLUMES_PER_SHELF);
@@ -133,7 +133,7 @@ export function positionOf(coordinate: Coordinate): bigint | undefined {
   if (hexagon === undefined || hexagon > LAST_HEXAGON) return undefined;
   const { wall, shelf, volume } = coordinate;
   if (!Number.isInteger(wall) || wall < 1 || wall > Number(WALLS_PER_HEXAGON)) return undefined;
-  if (!Number.isInteger(shelf) || shelf < 1 || shelf > Number(SHELVES_PER_WALL)) return undefined;
+  if (!Number.isInteger(shelf) || shelf < 1 || shelf > SHELVES_PER_WALL) return undefined;
   if (!Number.isInteger(volume) || volume < 1 || volume > SHELF_LENGTH) return undefined;
   return (
     hexagon * POSITIONS_PER_HEXAGON +

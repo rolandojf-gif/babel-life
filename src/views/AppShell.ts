@@ -9,7 +9,7 @@ import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
 import { element, link, type ViewHandle } from './view';
 
-const SITE_TITLE = 'The Library of Lives';
+const SITE_TITLE = 'The Library of Babel';
 
 function formatShelf(shelf: ShelfCoordinate): string {
   return shelfFields(shelf)

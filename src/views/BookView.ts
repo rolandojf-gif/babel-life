@@ -2,10 +2,16 @@ import { copy } from '../content/copy';
 import { anotherLifeAfter, findBook } from '../library/catalog';
 import { coordinateFor, shelfOf, step, type Coordinate } from '../library/coordinates';
 import { hashForAddress, hashForShelf } from '../library/routing';
-import { createCoordinateLine } from './BookCard';
+import type { Book } from '../library/model';
 import { createIllustration } from './illustrations';
+import { createIntervalDiagram } from './intervalDiagram';
 import { createNearbyVolumes } from './NearbyVolumes';
+import { createEmbeddedShelf } from './shelfListing';
+import { createShelfLocator } from './shelfLocator';
 import { element, glyph, link, type ViewHandle } from './view';
+
+/** The interval diagram is specific to this volume; the spread layout is not. */
+const THE_0814 = 'b0007';
 
 const TIMESTAMP = /^\d{2}:\d{2}(:\d{2})?$/;
 
@@ -34,38 +40,24 @@ function createConsultationLine(now: Date): HTMLParagraphElement {
   return line;
 }
 
-/** A discovered volume: where it sits, what it says, and where it leads. */
-export function createBookView(bookId: string, address: Coordinate | null): ViewHandle {
-  const book = findBook(bookId);
-  if (!book) throw new Error(`No such book: ${bookId}`);
-  const coordinate = address ?? coordinateFor(book.id);
-
-  const root = element('article', 'book');
-
-  const back = link('#', 'backlink');
-  back.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
-
-  const marker = element('p', 'found', copy.found);
-
-  const visual = element('div', 'book__visual');
-  visual.append(createIllustration(book.icon));
-
-  const title = element('h1', 'book__title', book.title);
-  title.tabIndex = -1;
-
-  const header = element('div', 'book__header');
-  header.append(title, visual);
-
+function createPassage(book: Book): HTMLDivElement {
   const passage = element('div', 'passage');
   for (const paragraph of book.passage) {
     // A bare clock time opens several accounts; it is set as a stamp, not prose.
     const isStamp = TIMESTAMP.test(paragraph);
     passage.append(element('p', isStamp ? 'passage__stamp' : undefined, paragraph));
   }
+  return passage;
+}
 
-  const aftertaste = element('p', 'aftertaste', book.aftertaste);
+function createVersoVisual(book: Book): HTMLElement | SVGSVGElement {
+  if (book.id === THE_0814) return createIntervalDiagram();
+  const visual = element('div', 'book__visual spread__visual');
+  visual.append(createIllustration(book.icon));
+  return visual;
+}
 
-  // The shelf this volume stands on, walkable in both directions.
+function createShelfWalk(coordinate: Coordinate): HTMLDivElement {
   const shelfWalk = element('div', 'shelfwalk');
   const previous = step(coordinate, -1n);
   const next = step(coordinate, 1n);
@@ -80,32 +72,73 @@ export function createBookView(bookId: string, address: Coordinate | null): View
     anchor.append(document.createTextNode(copy.nextVolume), glyph('card__arrow', '→'));
     shelfWalk.append(anchor);
   }
+  return shelfWalk;
+}
 
+function createBookActions(book: Book): HTMLDivElement {
   const nextLife = anotherLifeAfter(book.id);
   const anotherLink = link(`#book=${nextLife.id}`, 'action action--primary', copy.anotherLife);
   const wallLink = link('#', 'action action--quiet');
   wallLink.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
-
   const actions = element('div', 'book__actions');
   actions.append(anotherLink, wallLink);
+  return actions;
+}
 
-  root.append(
-    back,
-    marker,
-    createCoordinateLine(coordinate),
+function createBackLink(): HTMLAnchorElement {
+  const back = link('#', 'backlink');
+  back.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
+  return back;
+}
+
+/** A discovered volume: left leaf, narrative, and the shelf it stands on. */
+export function createBookView(bookId: string, address: Coordinate | null): ViewHandle {
+  const book = findBook(bookId);
+  if (!book) throw new Error(`No such book: ${bookId}`);
+  const coordinate = address ?? coordinateFor(book.id);
+
+  const className = book.id === THE_0814 ? 'book book--spread book--0814' : 'book book--spread';
+  const root = element('article', className);
+
+  const title = element('h1', 'book__title', book.title);
+  title.tabIndex = -1;
+
+  const visualSlot = element('div', 'spread__visual-slot');
+  visualSlot.append(createVersoVisual(book));
+
+  const verso = element('div', 'spread__verso');
+  verso.append(element('p', 'found', copy.found), createShelfLocator(coordinate), visualSlot);
+
+  const gutter = element('div', 'spread__gutter');
+  gutter.setAttribute('aria-hidden', 'true');
+
+  const recto = element('div', 'spread__recto');
+  recto.append(
+    title,
     element('p', 'already-here', copy.alreadyHere),
     createConsultationLine(new Date()),
-    header,
-    passage,
-    aftertaste,
+    createPassage(book),
+  );
+
+  const spread = element('div', 'spread');
+  spread.append(verso, gutter, recto);
+
+  const shelfGutter = element('div', 'book__shelf-gutter');
+  shelfGutter.setAttribute('aria-hidden', 'true');
+
+  root.append(
+    createBackLink(),
+    spread,
+    shelfGutter,
+    element('p', 'aftertaste', book.aftertaste),
+    createEmbeddedShelf(shelfOf(coordinate), book.id),
     createNearbyVolumes(book),
-    shelfWalk,
-    actions,
+    createShelfWalk(coordinate),
+    createBookActions(book),
   );
 
   return {
     element: root,
-    // A book's text, coordinate and neighbours never change.
     update(): void {},
     focus(): void {
       title.focus();

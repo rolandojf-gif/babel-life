@@ -1,7 +1,10 @@
 import { copy } from '../content/copy';
 import { TOTAL_ROOTS, wallBooks } from '../library/catalog';
+import { coordinateFor } from '../library/coordinates';
 import type { AppState } from '../library/model';
+import { parseRoute } from '../library/routing';
 import { createBookCard } from './BookCard';
+import { createLibraryIndex, updateLibraryIndex } from './libraryIndex';
 import { element, type ViewHandle } from './view';
 
 interface WallActions {
@@ -16,20 +19,72 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   const root = element('div', 'wall');
 
   const masthead = element('header', 'masthead');
+  const copyBlock = element('div', 'masthead__copy');
   const heading = element('h1', 'masthead__heading', copy.heading);
   heading.id = 'wall-heading';
   heading.tabIndex = -1;
-  masthead.append(
+  copyBlock.append(
     element('p', 'eyebrow', copy.eyebrow),
     heading,
     element('p', 'masthead__lede', copy.lede),
   );
+
+  const opening = wallBooks('first', state.wallSeed);
+  const firstRoot = opening[0];
+  if (!firstRoot) throw new Error('The wall has no first volume');
+  let defaultBookId = firstRoot.id;
+  const index = createLibraryIndex(coordinateFor(defaultBookId));
+  masthead.append(copyBlock, index);
 
   const preamble = element('p', 'wall__preamble', copy.cardEyebrow);
   preamble.setAttribute('aria-hidden', 'true');
 
   const grid = element('ul', 'wall__grid');
   grid.setAttribute('aria-labelledby', 'wall-heading');
+
+  let pointerBookId: string | undefined;
+  let focusBookId: string | undefined;
+
+  function bookIdFrom(node: EventTarget | null): string | undefined {
+    if (!(node instanceof Element)) return undefined;
+    const card = node.closest('a.card');
+    const href = card?.getAttribute('href');
+    if (href === null || href === undefined) return undefined;
+    const route = parseRoute(href);
+    return route.kind === 'book' ? route.bookId : undefined;
+  }
+
+  function locate(): void {
+    const id = pointerBookId ?? focusBookId ?? defaultBookId;
+    updateLibraryIndex(index, coordinateFor(id));
+  }
+
+  grid.addEventListener('pointerover', (event) => {
+    const id = bookIdFrom(event.target);
+    if (id === undefined) return;
+    pointerBookId = id;
+    locate();
+  });
+  grid.addEventListener('pointerout', (event) => {
+    if (bookIdFrom(event.target) === undefined || bookIdFrom(event.relatedTarget) !== undefined) {
+      return;
+    }
+    pointerBookId = undefined;
+    locate();
+  });
+  grid.addEventListener('focusin', (event) => {
+    const id = bookIdFrom(event.target);
+    if (id === undefined) return;
+    focusBookId = id;
+    locate();
+  });
+  grid.addEventListener('focusout', (event) => {
+    if (bookIdFrom(event.target) === undefined || bookIdFrom(event.relatedTarget) !== undefined) {
+      return;
+    }
+    focusBookId = undefined;
+    locate();
+  });
 
   const count = element('p', 'wall__count');
 
@@ -50,8 +105,14 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   root.append(masthead, preamble, grid, count, actionsRow);
 
   function update(next: AppState): void {
+    const opening = wallBooks('first', next.wallSeed)[0];
+    if (opening) defaultBookId = opening.id;
+    pointerBookId = undefined;
+    focusBookId = undefined;
+
     const books = wallBooks(next.wallSelection, next.wallSeed);
-    grid.replaceChildren(...books.map((book, index) => createBookCard(book, index)));
+    grid.replaceChildren(...books.map((book, cardIndex) => createBookCard(book, cardIndex)));
+    locate();
 
     const word = COUNT_WORDS[books.length] ?? String(books.length);
     count.textContent =

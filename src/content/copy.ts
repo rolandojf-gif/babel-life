@@ -1,7 +1,7 @@
 /** Every visitor-facing string outside the catalog. */
 export const copy = {
-  eyebrow: 'THE LIBRARY OF LIVES',
-  heading: 'Somewhere in the Library, every writable life already exists.',
+  eyebrow: 'THE LIBRARY OF BABEL',
+  heading: 'Somewhere in the Library of Babel, every writable life already exists.',
   lede: 'Open one.',
   cardEyebrow: 'THERE IS ALREADY A BOOK IN WHICH\u2026',
   openThisLife: 'OPEN THIS LIFE',
