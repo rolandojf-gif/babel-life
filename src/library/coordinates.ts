@@ -2,7 +2,8 @@
  * The Library address of a book, and the address space around it. The mapping of
  * an accession number to an address is a bijection over the full 64-bit space, so
  * it runs both ways: every address resolves to exactly one accession number, and
- * almost none of those numbers belongs to a volume this edition can print.
+ * almost none of those numbers belongs to a volume this edition can print. One
+ * pair of addresses is transposed by hand; see the shelfmark below.
  */
 
 const MASK_64 = (1n << 64n) - 1n;
@@ -55,9 +56,60 @@ function accessionNumber(bookId: string): bigint {
   return BigInt(digits);
 }
 
+/** Where the arithmetic alone puts an accession number. */
+function scatter(accession: bigint): bigint {
+  return (accession * MULTIPLIER + INCREMENT) & MASK_64;
+}
+
+/** Which accession number the arithmetic alone puts at an address. */
+function unscatter(position: bigint): bigint {
+  return ((position - INCREMENT) * MULTIPLIER_INVERSE) & MASK_64;
+}
+
+/** A volume moved to stand beside another, and the address it left behind. */
+interface Shelfmark {
+  readonly bookId: string;
+  readonly beside: string;
+  /** Places to the right of that volume; negative for the left. */
+  readonly places: bigint;
+}
+
+/**
+ * One shelf in this edition holds two volumes that can be read. The arithmetic
+ * cannot produce that: it scatters seventy-two accession numbers across 2^64
+ * addresses, and the chance of any two landing among the same thirty-two is
+ * around one in 10^14. So it was done by hand, once, and frozen.
+ *
+ * The 08:14 and The Stranger Who Remembers You: two accounts of a stranger, one
+ * met by two seconds and one never met at all, standing side by side for no
+ * reason but an archivist's decision. They share no wording and no edge, so what
+ * a visitor finds there is what the Library is like — nearby on the shelf and
+ * nearby in the text have nothing to do with each other.
+ */
+const SHELFMARKS: readonly Shelfmark[] = [{ bookId: 'b0071', beside: 'b0007', places: 1n }];
+
+/**
+ * The shelfmarks as a transposition of the address space: each moved volume's
+ * old address and its new one exchange occupants. Applied on the way in and on
+ * the way out, so the mapping stays a bijection and every address still holds
+ * exactly one volume — one of them now holding the unreadable volume that used
+ * to stand where the moved one does.
+ */
+const TRANSPOSED: ReadonlyMap<bigint, bigint> = new Map(
+  SHELFMARKS.flatMap((mark) => {
+    const home = scatter(accessionNumber(mark.bookId));
+    const shelved = (scatter(accessionNumber(mark.beside)) + mark.places) & MASK_64;
+    return [
+      [home, shelved],
+      [shelved, home],
+    ] as [bigint, bigint][];
+  }),
+);
+
 /** The flat 64-bit position an accession number occupies. */
 export function positionFor(bookId: string): bigint {
-  return (accessionNumber(bookId) * MULTIPLIER + INCREMENT) & MASK_64;
+  const home = scatter(accessionNumber(bookId));
+  return TRANSPOSED.get(home) ?? home;
 }
 
 export function coordinateAt(position: bigint): Coordinate {
@@ -96,7 +148,7 @@ export function positionOf(coordinate: Coordinate): bigint | undefined {
  * handful inside this edition's range name a volume it can print.
  */
 export function accessionAt(position: bigint): string | undefined {
-  const n = ((position - INCREMENT) * MULTIPLIER_INVERSE) & MASK_64;
+  const n = unscatter(TRANSPOSED.get(position) ?? position);
   if (n < 1n || n > 9999n) return undefined;
   return `b${n.toString().padStart(4, '0')}`;
 }

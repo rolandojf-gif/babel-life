@@ -29,9 +29,22 @@ const INCREMENT = 1442695040888963407n;
 
 const bookIds = catalog.books.map((book) => book.id);
 
+/** The edition's one shelfmark, frozen in `coordinates.ts`. */
+const MOVED = 'b0071';
+const BESIDE = 'b0007';
+
 /** The published address of a volume, worked out without touching the module. */
 function expectedPosition(accession: bigint): bigint {
   return (accession * MULTIPLIER + INCREMENT) & MASK_64;
+}
+
+/** The volumes of this edition standing on a shelf, in shelf order. */
+function legibleOn(shelf: { hexagon: string; wall: number; shelf: number }): string[] {
+  return shelfVolumes(shelf)
+    .map((address) => positionOf(address))
+    .filter((position) => position !== undefined)
+    .map((position) => accessionAt(position))
+    .filter((accession): accession is string => accession !== undefined && bookIds.includes(accession));
 }
 
 /** An address inside a given hexagon, by its offset among the 640 positions. */
@@ -51,11 +64,17 @@ describe('the accession mapping', () => {
     expect(positionFor('b0082')).toBe(13964106539913658377n);
   });
 
-  it('agrees with the formula for every volume in the edition', () => {
+  it('agrees with the formula for every volume the arithmetic places', () => {
     for (const id of bookIds) {
+      if (id === MOVED) continue;
       const accession = BigInt(id.slice(1));
       expect(positionFor(id)).toBe(expectedPosition(accession));
     }
+  });
+
+  it('puts the one shelfmarked volume where the arithmetic would not', () => {
+    expect(positionFor(MOVED)).not.toBe(expectedPosition(BigInt(MOVED.slice(1))));
+    expect(positionFor(MOVED)).toBe(expectedPosition(BigInt(BESIDE.slice(1))) + 1n);
   });
 
   it('refuses anything that is not an accession number', () => {
@@ -75,8 +94,14 @@ describe('the mapping read backwards', () => {
   it('holds across the whole registry, printed or not', () => {
     for (let accession = 1n; accession <= 9999n; accession += 1n) {
       const id = `b${accession.toString().padStart(4, '0')}`;
+      if (id === MOVED) continue;
       expect(accessionAt(expectedPosition(accession))).toBe(id);
     }
+  });
+
+  it('leaves nothing readable at the address the shelfmarked volume left', () => {
+    expect(accessionAt(expectedPosition(BigInt(MOVED.slice(1))))).toBeUndefined();
+    expect(accessionAt(positionFor(MOVED))).toBe(MOVED);
   });
 
   it('names no volume outside the registry', () => {
@@ -223,16 +248,48 @@ describe('walking the shelves', () => {
     }
   });
 
-  it('leaves every printed volume standing alone on its shelf', () => {
-    // The shelf view says "One of them can be read." This is why that is true.
+  it('leaves every printed volume standing alone on its shelf, but for the pair', () => {
+    // The shelf view says "One of them can be read." This is why that is true,
+    // and the one shelf where it says "Two" is the shelfmark.
     for (const id of bookIds) {
-      const legible = shelfVolumes(shelfOf(coordinateFor(id)))
-        .map((address) => positionOf(address))
-        .filter((position) => position !== undefined)
-        .map((position) => accessionAt(position))
-        .filter((accession) => accession !== undefined && bookIds.includes(accession));
-      expect(legible).toEqual([id]);
+      const legible = legibleOn(shelfOf(coordinateFor(id)));
+      if (id === MOVED || id === BESIDE) {
+        expect(legible).toEqual([BESIDE, MOVED]);
+      } else {
+        expect(legible).toEqual([id]);
+      }
     }
+  });
+});
+
+describe('the shelfmark', () => {
+  it('stands the two volumes side by side on one shelf', () => {
+    const beside = coordinateFor(BESIDE);
+    const moved = coordinateFor(MOVED);
+    expect(shelfOf(moved)).toEqual(shelfOf(beside));
+    expect(moved.volume).toBe(beside.volume + 1);
+  });
+
+  it('is the only shelf in the edition with two legible volumes', () => {
+    const crowded = bookIds.filter((id) => legibleOn(shelfOf(coordinateFor(id))).length > 1);
+    expect(crowded.sort()).toEqual([BESIDE, MOVED].sort());
+  });
+
+  it('moves a volume without disturbing anything else', () => {
+    // A transposition: two addresses exchange occupants and the rest stand still.
+    for (const id of bookIds) {
+      expect(accessionAt(positionFor(id))).toBe(id);
+    }
+    const printed = bookIds.map((id) => formatCoordinate(coordinateFor(id)));
+    expect(new Set(printed).size).toBe(bookIds.length);
+  });
+
+  it('is an editorial decision, not an adjacency in the text', () => {
+    const moved = catalog.books.find((book) => book.id === MOVED);
+    const beside = catalog.books.find((book) => book.id === BESIDE);
+    expect(moved?.rootId).not.toBe(beside?.rootId);
+    expect(moved?.neighbors.map((edge) => edge.targetBookId)).not.toContain(BESIDE);
+    expect(beside?.neighbors.map((edge) => edge.targetBookId)).not.toContain(MOVED);
   });
 });
 
