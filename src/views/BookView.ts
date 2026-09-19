@@ -53,6 +53,9 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   const title = element('h1', 'book__title', book.title);
   title.tabIndex = -1;
 
+  const header = element('div', 'book__header');
+  header.append(title, visual);
+
   const passage = element('div', 'passage');
   for (const paragraph of book.passage) {
     // A bare clock time opens several accounts; it is set as a stamp, not prose.
@@ -92,8 +95,7 @@ export function createBookView(bookId: string, address: Coordinate | null): View
     createCoordinateLine(coordinate),
     element('p', 'already-here', copy.alreadyHere),
     createConsultationLine(new Date()),
-    visual,
-    title,
+    header,
     passage,
     aftertaste,
     createNearbyVolumes(book),

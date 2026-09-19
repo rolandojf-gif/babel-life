@@ -25,6 +25,9 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     element('p', 'masthead__lede', copy.lede),
   );
 
+  const preamble = element('p', 'wall__preamble', copy.cardEyebrow);
+  preamble.setAttribute('aria-hidden', 'true');
+
   const grid = element('ul', 'wall__grid');
   grid.setAttribute('aria-labelledby', 'wall-heading');
 
@@ -44,7 +47,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
 
   const actionsRow = element('div', 'wall__actions');
 
-  root.append(masthead, grid, count, actionsRow);
+  root.append(masthead, preamble, grid, count, actionsRow);
 
   function update(next: AppState): void {
     const books = wallBooks(next.wallSelection, next.wallSeed);

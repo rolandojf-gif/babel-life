@@ -5,25 +5,26 @@ import type { RootBook } from '../library/model';
 import { createIllustration } from './illustrations';
 import { element, glyph, link } from './view';
 
+const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
+
 /**
- * One life on the wall. The eyebrow is the same on every card, on purpose: it
- * says the volume is already shelved. The premise underneath is the whole hook,
- * so nothing has to be opened to be understood.
+ * One life on the wall. Featured emphasis follows display position in the
+ * shuffled deal, not the identity of the book. The shared eyebrow is shown
+ * once above the grid; each card keeps it for the link's accessible name.
  */
 export function createBookCard(book: RootBook, index: number): HTMLLIElement {
-  const item = element('li', 'wall__cell');
+  const featured = FEATURED_SLOTS.has(index + 1);
+  const item = element('li', featured ? 'wall__cell wall__cell--featured' : 'wall__cell');
 
-  const card = link(`#book=${book.id}`, 'card');
-  // Three warm surfaces, cycling, so the wall reads as an assembled page.
-  card.dataset['tone'] = String(index % 3);
+  const card = link(`#book=${book.id}`, featured ? 'card card--featured' : 'card');
+
+  const body = element('span', 'card__body');
+  const eyebrow = element('span', 'card__eyebrow visually-hidden', copy.cardEyebrow);
+  // The hook completes the eyebrow's sentence, so both belong to the link's name.
+  const hook = element('h2', 'card__hook', book.hook);
 
   const visual = element('span', 'card__visual');
   visual.append(createIllustration(book.icon));
-
-  const body = element('span', 'card__body');
-  const eyebrow = element('span', 'card__eyebrow', copy.cardEyebrow);
-  // The hook completes the eyebrow's sentence, so both belong to the link's name.
-  const hook = element('h2', 'card__hook', book.hook);
 
   const coordinate = coordinateFor(book.id);
   const volume = element(
@@ -36,8 +37,8 @@ export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   open.append(document.createTextNode(copy.openThisLife));
   open.append(glyph('card__arrow', '→'));
 
-  body.append(eyebrow, hook, volume, open);
-  card.append(visual, body);
+  body.append(eyebrow, hook, visual, volume, open);
+  card.append(body);
   item.append(card);
   return item;
 }
