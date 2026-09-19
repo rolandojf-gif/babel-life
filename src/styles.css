@@ -90,7 +90,7 @@ body {
   display: flex;
   max-width: 44rem;
   flex-direction: column;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-bottom: 0;
   min-width: 0;
 }
@@ -119,11 +119,20 @@ body {
   outline-offset: 8px;
 }
 
-.masthead__lede {
+.masthead__dek {
   margin: 0.75rem 0 0;
-  color: var(--oxblood);
+  max-width: 62ch;
+  color: var(--ink-soft);
   font-family: var(--serif);
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+}
+
+.masthead__lede {
+  margin: 0 0 0.5rem;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
   font-style: italic;
 }
 
@@ -136,7 +145,7 @@ body {
   min-width: 0;
   max-width: 100%;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   overflow-x: clip;
   pointer-events: none;
 }
@@ -204,7 +213,11 @@ body {
     column-gap: 3rem;
     align-items: start;
     max-width: none;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .masthead__dek {
+    font-size: 1.1875rem;
   }
 
   .masthead__copy {

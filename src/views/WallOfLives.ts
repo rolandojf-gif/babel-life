@@ -26,7 +26,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   copyBlock.append(
     element('p', 'eyebrow', copy.eyebrow),
     heading,
-    element('p', 'masthead__lede', copy.lede),
+    element('p', 'masthead__dek', copy.dek),
   );
 
   const opening = wallBooks('first', state.wallSeed);
