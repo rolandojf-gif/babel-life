@@ -168,20 +168,31 @@ function rootsOf(ids: readonly string[]): RootBook[] {
   });
 }
 
+/** The five editorial anchors that always open the wall, in this order. */
+export const PINNED_ROOT_IDS = ['b0007', 'b0038', 'b0006', 'b0068', 'b0031'] as const;
+
 /**
- * The root lives the wall shows, dealt in this visit's order. The two curated
- * sets of twelve are shuffled separately and never mixed: the editorial pacing
- * of which twelve come first survives, and showing all twenty-four leaves the
- * first twelve exactly where they were rather than dealing the wall again.
+ * Deal one visit's wall. The five strongest editorial hooks stay fixed at the
+ * front; the other nineteen lives are shuffled as one pool. Seven join the
+ * opening wall and the remaining twelve become “something stranger”. Opening
+ * out to all twenty-four therefore never moves a card the visitor has seen.
  */
-export function wallBooks(selection: WallSelection, seed: bigint): RootBook[] {
+function wallDeal(seed: bigint): { first: string[]; second: string[] } {
   const wall = getCatalog().wall;
-  const first = shuffled(wall.first, seed);
-  if (selection === 'first') return rootsOf(first);
-  // A separate stream, so one set's order says nothing about the other's.
-  const second = shuffled(wall.second, seed + 1n);
-  if (selection === 'second') return rootsOf(second);
-  return rootsOf([...first, ...second]);
+  const all = [...wall.first, ...wall.second];
+  const pinned = new Set<string>(PINNED_ROOT_IDS);
+  const remainder = shuffled(all.filter((id) => !pinned.has(id)), seed);
+  return {
+    first: [...PINNED_ROOT_IDS, ...remainder.slice(0, 7)],
+    second: remainder.slice(7),
+  };
+}
+
+export function wallBooks(selection: WallSelection, seed: bigint): RootBook[] {
+  const deal = wallDeal(seed);
+  if (selection === 'first') return rootsOf(deal.first);
+  if (selection === 'second') return rootsOf(deal.second);
+  return rootsOf([...deal.first, ...deal.second]);
 }
 
 export const TOTAL_BOOKS = englishCatalog.books.length;
