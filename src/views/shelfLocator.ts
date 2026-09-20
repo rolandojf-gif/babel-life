@@ -8,6 +8,7 @@ import {
   type Coordinate,
 } from '../library/coordinates';
 import { BOOK_EMBEDDED_SHELF_ID } from './shelfListing';
+import { prefersReducedMotion } from './motion';
 import { element, link } from './view';
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -129,7 +130,7 @@ function scrollToEmbeddedShelf(event: Event): void {
   event.preventDefault();
   const target = document.getElementById(BOOK_EMBEDDED_SHELF_ID);
   if (!(target instanceof HTMLElement)) return;
-  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  target.scrollIntoView({ behavior: prefersReducedMotion() ? 'instant' : 'smooth', block: 'start' });
   target.focus({ preventScroll: true });
 }
 
@@ -172,7 +173,6 @@ export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
   }
   anchor.append(key);
 
-  anchor.append(element('span', 'shelf-locator__action', 'VIEW THIS SHELF →'));
 
   return anchor;
 }

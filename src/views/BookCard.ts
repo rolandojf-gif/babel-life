@@ -3,6 +3,7 @@ import { coordinateFields, coordinateFor, shelfOf, type Coordinate } from '../li
 import { hashForShelf } from '../library/routing';
 import type { RootBook } from '../library/model';
 import { createIllustration } from './illustrations';
+import { createSpineShelf } from './motifs';
 import { element, glyph, link } from './view';
 
 const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
@@ -11,10 +12,15 @@ const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
  * One life on the wall. Featured emphasis follows display position in the
  * shuffled deal, not the identity of the book. The shared eyebrow is shown
  * once above the grid; each card keeps it for the link's accessible name.
+ * Featured cards stand their motif on a small shelf board: a quiet sign that
+ * these are volumes, not tiles.
  */
 export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const featured = FEATURED_SLOTS.has(index + 1);
   const item = element('li', featured ? 'wall__cell wall__cell--featured' : 'wall__cell');
+  // Stagger index drives the entrance choreography; capping keeps delays tight
+  // when all twenty-four volumes stand on the wall.
+  item.style.setProperty('--i', String(index % 12));
 
   const card = link(`#book=${book.id}`, featured ? 'card card--featured' : 'card');
 
@@ -24,7 +30,14 @@ export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const hook = element('h2', 'card__hook', book.hook);
 
   const visual = element('span', 'card__visual');
-  visual.append(createIllustration(book.icon));
+  if (featured) {
+    visual.append(createSpineShelf());
+    const motif = element('span', 'card__motif');
+    motif.append(createIllustration(book.icon));
+    visual.append(motif);
+  } else {
+    visual.append(createIllustration(book.icon));
+  }
 
   const coordinate = coordinateFor(book.id);
   const volume = element(

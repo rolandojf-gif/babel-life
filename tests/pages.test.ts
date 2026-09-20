@@ -26,9 +26,9 @@ describe('the page at an address', () => {
     expect(pageAt(0n, 16)).toBe('laev qoq.qbbigsh');
   });
 
-  it('runs to a hundred and ninety-two symbols by default', () => {
+  it('runs to twelve hundred and eighty symbols by default', () => {
     expect(pageAt(1n)).toHaveLength(PAGE_LENGTH);
-    expect(pageAt(1n)).toHaveLength(192);
+    expect(pageAt(1n)).toHaveLength(1280);
     expect(pageAt(1n, 0)).toBe('');
   });
 

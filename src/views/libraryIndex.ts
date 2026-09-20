@@ -5,6 +5,7 @@
 
 import {
   coordinateFields,
+  formatCoordinate,
   SHELF_LENGTH,
   SHELVES_PER_WALL,
   type Coordinate,
@@ -140,11 +141,27 @@ function bracketPath(): string {
 
 function leaderPath(metrics: IndexMetrics, x: number, y: number, wall: number): string {
   const inset = 1.25;
-  const x1 = x + INDEX_MARK_WIDTH + inset;
   const runY = y - inset;
   const column = visibleColumn(metrics, wall);
+  const ww = wallWidth(metrics);
+  const wallOriginX = metrics.originX + column * (ww + metrics.wallGapX);
+  const volumeCentreX = x + INDEX_MARK_WIDTH / 2;
+  const wallCentreX = wallOriginX + ww / 2;
+
+  if (volumeCentreX > wallCentreX) {
+    // Right half of the wall: leader exits left, runs to the left gutter.
+    const x0 = x - inset;
+    const leftGutterX = column > 0
+      ? wallOriginX - metrics.wallGapX * 0.5
+      : Math.max(metrics.originX - 4, 0);
+    const gutterX = Math.max(leftGutterX, 0);
+    return `M${String(x0)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
+  }
+
+  // Left half (or centre): leader exits right, runs to the right gutter.
+  const x1 = x + INDEX_MARK_WIDTH + inset;
   const naturalGutterX =
-    metrics.originX + (column + 1) * (wallWidth(metrics) + metrics.wallGapX) - metrics.wallGapX * 0.5;
+    metrics.originX + (column + 1) * (ww + metrics.wallGapX) - metrics.wallGapX * 0.5;
   const gutterX = Math.min(naturalGutterX, metrics.width - 4);
   return `M${String(x1)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
 }
@@ -164,7 +181,11 @@ function placeLocator(
   locator.setAttribute('data-wall', String(coordinate.wall));
   locator.setAttribute('data-shelf', String(coordinate.shelf));
   locator.setAttribute('data-volume', String(coordinate.volume));
-  leader.setAttribute('d', leaderPath(metrics, x, y, coordinate.wall));
+  const path = leaderPath(metrics, x, y, coordinate.wall);
+  leader.setAttribute('d', path);
+  // Identical path commands let CSS interpolate the line with the marker. The
+  // SVG attribute remains the fallback in browsers without the CSS d property.
+  (leader as SVGElement).style.setProperty('d', `path("${path}")`);
 }
 
 function fillCoordinateReadout(line: HTMLElement, coordinate: Coordinate): void {
@@ -221,6 +242,9 @@ function createCoordinateReadout(coordinate: Coordinate): HTMLParagraphElement {
 
 /** Move the locator and printed address to a real coordinate. */
 export function updateLibraryIndex(root: HTMLElement, coordinate: Coordinate): void {
+  const address = formatCoordinate(coordinate);
+  if (root.dataset.coordinate === address) return;
+  root.dataset.coordinate = address;
   for (const svg of root.querySelectorAll('svg')) {
     const locator = svg.querySelector('.library-index__locator');
     const leader = svg.querySelector('.library-index__leader');
@@ -234,6 +258,7 @@ export function updateLibraryIndex(root: HTMLElement, coordinate: Coordinate): v
 /** Decorative index field plus the one real address it is anchored to. */
 export function createLibraryIndex(coordinate: Coordinate): HTMLDivElement {
   const root = element('div', 'library-index');
+  root.dataset.coordinate = formatCoordinate(coordinate);
 
   const field = element('div', 'library-index__field');
   field.setAttribute('aria-hidden', 'true');

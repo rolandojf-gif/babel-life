@@ -15,8 +15,12 @@ import { draws } from './scramble';
  */
 export const SYMBOLS = 'abcdefghiklmnopqrstvxy ,.';
 
-/** Symbols on the page a visitor is shown. The volume itself runs to 410 pages. */
-export const PAGE_LENGTH = 192;
+/**
+ * Symbols on the page a visitor is shown. Forty lines of thirty-two symbols,
+ * echoing the forty lines of Borges' page and the thirty-two volumes of each shelf.
+ * The volume itself runs to 410 pages.
+ */
+export const PAGE_LENGTH = 1280;
 
 /**
  * The page shelved at a position: the same symbols for that address on every

@@ -14,19 +14,22 @@ function nearbyOpen(): HTMLSpanElement {
  * naming the difference before the visitor commits to it.
  */
 export function createNearbyVolumes(book: Book): HTMLElement {
-  const section = element('section', 'nearby');
+  const section = element('section', 'nearby nearby--cinematic');
   const heading = element('h2', 'nearby__heading', copy.nearbyVolumes);
   heading.id = `nearby-${book.id}`;
   section.setAttribute('aria-labelledby', heading.id);
 
   const list = element('ul', 'nearby__list');
 
-  for (const edge of book.neighbors) {
+  for (const [edgeIndex, edge] of book.neighbors.entries()) {
     const target = findBook(edge.targetBookId);
     if (!target) continue;
 
     const item = element('li', 'nearby__item');
+    // Stagger index for the paired entrance; the two volumes arrive as one beat.
+    item.style.setProperty('--i', String(edgeIndex));
     const anchor = link(`#book=${target.id}`, 'nearby__link');
+    anchor.setAttribute('data-nearby', 'true');
     anchor.append(
       element('span', 'nearby__difference', edge.difference),
       element('span', 'nearby__headline', target.headline),

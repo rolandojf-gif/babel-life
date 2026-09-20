@@ -7,6 +7,8 @@ import { createAddressView } from './AddressView';
 import { createBookView } from './BookView';
 import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
+import { createViewTransition } from './motion';
+import { initAtmosphere, refreshReveals } from './atmosphere';
 import { element, link, type ViewHandle } from './view';
 
 const SITE_TITLE = 'Babel Life';
@@ -58,9 +60,11 @@ export function mountAppShell(
 
   shell.append(grain, main, footer, status);
   root.append(shell);
+  initAtmosphere(shell);
 
   let currentKey = '';
   let currentView: ViewHandle | null = null;
+  const transition = createViewTransition(main);
 
   function invalidAddressView(): ViewHandle {
     const view = element('div', 'invalid-address');
@@ -119,6 +123,12 @@ export function mountAppShell(
   }
 
   return function render(state: AppState, hint: RenderHint): void {
+    // The controller mutates its state in place; a transition commits asynchronously.
+    const next = { ...state };
+    transition(() => renderView(next, hint), currentView !== null);
+  };
+
+  function renderView(state: AppState, hint: RenderHint): void {
     const key = `${state.view}:${state.currentBookId ?? ''}:${
       state.address ? formatCoordinate(state.address) : ''
     }:${state.shelf ? formatShelf(state.shelf) : ''}`;
@@ -137,5 +147,6 @@ export function mountAppShell(
 
     if (hint.focus !== 'none') view.focus(hint.focus);
     if (hint.announce !== undefined) status.textContent = hint.announce;
-  };
+    refreshReveals(main);
+  }
 }

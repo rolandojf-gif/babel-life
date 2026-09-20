@@ -4,6 +4,7 @@ import { coordinateFor, shelfOf, step, type Coordinate } from '../library/coordi
 import { hashForAddress, hashForShelf } from '../library/routing';
 import type { Book } from '../library/model';
 import { createIllustration } from './illustrations';
+import { createCandleGlyph } from './motifs';
 import { createIntervalDiagram } from './intervalDiagram';
 import { createNearbyVolumes } from './NearbyVolumes';
 import { createEmbeddedShelf } from './shelfListing';
@@ -35,7 +36,12 @@ function createConsultationLine(now: Date): HTMLParagraphElement {
   const [between, after] = (rest ?? '').split('{day}');
 
   const line = element('p', 'consulted');
-  line.append(document.createTextNode(before ?? ''), stamp);
+  // The consultation is read by the same candle as the wall's preamble.
+  line.append(
+    createCandleGlyph(),
+    document.createTextNode(before ?? ''),
+    stamp,
+  );
   line.append(document.createTextNode(`${between ?? ''}${day}${after ?? ''}`));
   return line;
 }
@@ -99,6 +105,8 @@ export function createBookView(bookId: string, address: Coordinate | null): View
 
   const className = book.id === THE_0814 ? 'book book--spread book--0814' : 'book book--spread';
   const root = element('article', className);
+  // Entrance choreography: the spread rises as one cinematic beat on arrival.
+  root.setAttribute('data-book-entrance', '');
 
   const title = element('h1', 'book__title', book.title);
   title.tabIndex = -1;
