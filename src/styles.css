@@ -1606,6 +1606,25 @@ body {
   text-align: center;
 }
 
+@media (min-width: 47.5em) {
+  .page {
+    max-width: 30rem;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+    padding: 2.25rem 2rem 1.75rem;
+  }
+
+  .page__symbols {
+    font-size: 0.7rem;
+    line-height: 1.55;
+    letter-spacing: 0.045em;
+  }
+
+  .page__caption {
+    margin-top: 1.25rem;
+  }
+}
+
 .consulted {
   margin: 0.5rem 0 0;
   color: var(--ink-faint);
