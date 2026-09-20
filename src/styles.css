@@ -140,6 +140,62 @@ body {
   min-width: 0;
 }
 
+.masthead__scale {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 34rem;
+  margin-top: 1.35rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  column-gap: 1.5rem;
+}
+
+.masthead__scale-item {
+  min-width: 0;
+}
+
+.masthead__scale-label,
+.masthead__scale-value,
+.masthead__scale-meta {
+  margin: 0;
+}
+
+.masthead__scale-label {
+  color: var(--ink-faint);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.masthead__scale-value {
+  margin-top: 0.2rem;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.masthead__scale-exponent {
+  font-size: 0.68em;
+  line-height: 0;
+}
+
+.masthead__scale-meta {
+  margin-top: 0.22rem;
+  color: var(--ink-faint);
+  font-size: 0.6875rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 31rem) {
+  .masthead__scale {
+    grid-template-columns: 1fr;
+    row-gap: 0.8rem;
+  }
+}
+
 /* Library index: a structural fragment, not a widget. */
 .library-index {
   min-width: 0;
