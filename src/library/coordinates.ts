@@ -6,6 +6,8 @@
  * pair of addresses is transposed by hand; see the shelfmark below.
  */
 
+import { copy } from '../content/copy';
+
 const MASK_64 = (1n << 64n) - 1n;
 const MULTIPLIER = 11400714819323198485n;
 const INCREMENT = 1442695040888963407n;
@@ -177,19 +179,19 @@ export interface CoordinateField {
 /** The four fields in reading order, so the address can wrap at its separators. */
 export function coordinateFields(coordinate: Coordinate): CoordinateField[] {
   return [
-    { name: 'Hexagon', value: coordinate.hexagon },
-    { name: 'Wall', value: String(coordinate.wall) },
-    { name: 'Shelf', value: String(coordinate.shelf) },
-    { name: 'Volume', value: String(coordinate.volume) },
+    { name: copy.coordHexagon, value: coordinate.hexagon },
+    { name: copy.coordWall, value: String(coordinate.wall) },
+    { name: copy.coordShelf, value: String(coordinate.shelf) },
+    { name: copy.coordVolume, value: String(coordinate.volume) },
   ];
 }
 
 /** The three fields of a shelf, in reading order. */
 export function shelfFields(shelf: ShelfCoordinate): CoordinateField[] {
   return [
-    { name: 'Hexagon', value: shelf.hexagon },
-    { name: 'Wall', value: String(shelf.wall) },
-    { name: 'Shelf', value: String(shelf.shelf) },
+    { name: copy.coordHexagon, value: shelf.hexagon },
+    { name: copy.coordWall, value: String(shelf.wall) },
+    { name: copy.coordShelf, value: String(shelf.shelf) },
   ];
 }
 

@@ -1,4 +1,4 @@
-import { copy } from '../content/copy';
+import { copy, fill } from '../content/copy';
 import { coordinateFields, coordinateFor, shelfOf, type Coordinate } from '../library/coordinates';
 import { hashForShelf } from '../library/routing';
 import type { RootBook } from '../library/model';
@@ -43,7 +43,10 @@ export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const volume = element(
     'span',
     'card__volume',
-    `Hexagon ${coordinate.hexagon} · Volume ${String(coordinate.volume)}`,
+    fill(copy.cardAddress, {
+      hexagon: coordinate.hexagon,
+      volume: String(coordinate.volume),
+    }),
   );
 
   const open = element('span', 'card__open');

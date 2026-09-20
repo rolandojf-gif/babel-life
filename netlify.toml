@@ -9,6 +9,11 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# Every route in this edition is a hash, so the server is only ever asked for
-# "/" and there is nothing to rewrite. Any other path is genuinely not here and
-# should say so.
+# English lives at "/" and Spanish at "/es/", both real HTML entries from the
+# Vite build. Hash routes stay in the fragment, so there is nothing else to
+# rewrite. Canonical Spanish is the trailing-slash URL.
+
+[[redirects]]
+  from = "/es"
+  to = "/es/"
+  status = 301

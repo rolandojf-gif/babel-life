@@ -14,10 +14,6 @@ const THE_0814 = 'b0007';
 
 const TIMESTAMP = /^\d{2}:\d{2}(:\d{2})?$/;
 
-const DAYS = [
-  'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-];
-
 /**
  * The Library's note of this consultation: the clock on the reader's own device,
  * written down the way a reading room writes down that a volume was taken out.
@@ -26,7 +22,7 @@ const DAYS = [
 function createConsultationLine(now: Date): HTMLParagraphElement {
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
-  const day = DAYS[now.getDay()] ?? '';
+  const day = copy.days[now.getDay()] ?? '';
 
   const stamp = element('time', 'consulted__time', `${hours}:${minutes}`);
   stamp.dateTime = `${hours}:${minutes}`;

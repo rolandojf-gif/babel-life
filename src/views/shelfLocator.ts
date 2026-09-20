@@ -1,3 +1,4 @@
+import { copy, fill } from '../content/copy';
 import { findBook } from '../library/catalog';
 import {
   accessionAt,
@@ -145,10 +146,13 @@ export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
   anchor.addEventListener('click', scrollToEmbeddedShelf);
   anchor.setAttribute(
     'aria-label',
-    `Volume ${String(coordinate.volume)} of ${String(SHELF_LENGTH)} on this shelf. View this shelf.`,
+    fill(copy.locatorAria, {
+      n: String(coordinate.volume),
+      total: String(SHELF_LENGTH),
+    }),
   );
 
-  anchor.append(element('span', 'shelf-locator__heading', 'WHERE THIS BOOK STANDS'));
+  anchor.append(element('span', 'shelf-locator__heading', copy.locatorHeading));
 
   const diagram = element('span', 'shelf-locator__diagram');
   diagram.setAttribute('aria-hidden', 'true');
@@ -156,19 +160,23 @@ export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
   anchor.append(diagram);
 
   anchor.append(
-    element('span', 'shelf-locator__here', `VOLUME ${String(coordinate.volume)} · YOU ARE HERE`),
+    element(
+      'span',
+      'shelf-locator__here',
+      fill(copy.locatorHere, { n: String(coordinate.volume) }),
+    ),
   );
 
   const key = element('span', 'shelf-locator__key');
   if (otherLegible) {
     key.append(
       element('span', 'shelf-locator__key-mark shelf-locator__key-mark--legible'),
-      document.createTextNode(' Also legible on this shelf'),
+      document.createTextNode(copy.locatorAlsoLegible),
     );
   } else {
     key.append(
       element('span', 'shelf-locator__key-mark shelf-locator__key-mark--solo'),
-      document.createTextNode(' No other legible volume on this shelf'),
+      document.createTextNode(copy.locatorSolo),
     );
   }
   anchor.append(key);
