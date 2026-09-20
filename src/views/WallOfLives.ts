@@ -5,6 +5,7 @@ import type { AppState } from '../library/model';
 import { parseRoute } from '../library/routing';
 import { createBookCard } from './BookCard';
 import { createLibraryIndex, updateLibraryIndex } from './libraryIndex';
+import { createCandleGlyph } from './motifs';
 import { element, type ViewHandle } from './view';
 
 interface WallActions {
@@ -59,15 +60,18 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     scale,
   );
 
+  const preamble = element('p', 'wall__preamble');
+  // One quiet sign of the reading room: a candle before the premise preamble.
+  const candle = createCandleGlyph();
+  preamble.append(candle, document.createTextNode(copy.cardEyebrow));
+  preamble.setAttribute('aria-hidden', 'true');
+
   const opening = wallBooks('first', state.wallSeed);
   const firstRoot = opening[0];
   if (!firstRoot) throw new Error('The wall has no first volume');
   let defaultBookId = firstRoot.id;
   const index = createLibraryIndex(coordinateFor(defaultBookId));
   masthead.append(copyBlock, index);
-
-  const preamble = element('p', 'wall__preamble', copy.cardEyebrow);
-  preamble.setAttribute('aria-hidden', 'true');
 
   const grid = element('ul', 'wall__grid');
   grid.setAttribute('aria-labelledby', 'wall-heading');

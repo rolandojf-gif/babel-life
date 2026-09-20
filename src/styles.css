@@ -345,6 +345,9 @@ body {
 }
 
 .wall__preamble {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   margin: 0 0 1rem;
   color: var(--oxblood);
   font-size: 1.0625rem;
@@ -352,6 +355,29 @@ body {
   letter-spacing: 0.06em;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+/* The candle the premise preamble is read by. It breathes, faintly. */
+.consulted__candle {
+  flex: none;
+  width: 10px;
+  height: 16px;
+  color: var(--oxblood);
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .consulted__candle path:first-child {
+    transform-origin: 5px 5.8px;
+    animation: candle-flicker 3.4s ease-in-out infinite;
+  }
+}
+
+@keyframes candle-flicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  30% { opacity: 0.82; transform: scale(0.94) translateY(0.2px); }
+  55% { opacity: 0.95; transform: scale(1.03); }
+  80% { opacity: 0.86; transform: scale(0.97) translateY(0.1px); }
 }
 
 @media (min-width: 62em) {
@@ -521,11 +547,17 @@ body {
 .card__volume {
   flex: none;
   margin-top: 1.5rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
   color: var(--ink-soft);
   font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   overflow-wrap: break-word;
+}
+
+.js-cinematic .card--featured .card__volume {
+  border-top-color: rgba(110, 31, 39, 0.35);
 }
 
 .card__open {
@@ -1540,6 +1572,15 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* The consultation line, read by the same candle as the wall preamble. */
+.consulted .consulted__candle {
+  display: inline-block;
+  width: 9px;
+  height: 14px;
+  margin-right: 0.35rem;
+  vertical-align: -1px;
+}
+
 .shelfwalk {
   display: flex;
   flex-wrap: wrap;
@@ -1863,8 +1904,8 @@ body {
 :root {
   --lamp: radial-gradient(
     58rem 30rem at 50% -8rem,
-    rgba(255, 214, 150, 0.34),
-    rgba(255, 200, 130, 0.13) 45%,
+    rgba(255, 205, 130, 0.36),
+    rgba(248, 186, 108, 0.14) 45%,
     transparent 70%
   );
   --cinematic-ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -1886,6 +1927,22 @@ body {
   background: var(--lamp);
   mix-blend-mode: soft-light;
   animation: lamp-breathe 9s ease-in-out infinite alternate;
+}
+
+/* The whole room is one warm degree further into candlelight. */
+.js-cinematic body,
+.js-cinematic {
+  filter: none;
+}
+
+.js-cinematic #app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: rgba(126, 74, 24, 0.05);
+  mix-blend-mode: multiply;
 }
 
 .vignette {
@@ -2032,7 +2089,35 @@ body {
   filter: drop-shadow(0 6px 10px rgba(43, 26, 12, 0.18));
 }
 
-/* Entrance choreography: cards rise out of the dark in a dealt cascade. */
+/* The featured cards' second motif: the volume's own drawing standing on a
+   short run of shelved neighbours, in a quieter ink. */
+.card__neighbour-spines {
+  width: 4.5rem;
+  max-width: 100%;
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
+.card__motif {
+  display: block;
+}
+
+.js-cinematic .card--featured .card__visual .illustration {
+  width: 6rem;
+}
+
+.js-cinematic .card__neighbour-spines {
+  transition: transform var(--motion-view) var(--motion-ease);
+}
+
+.js-cinematic .card--featured:hover .card__neighbour-spines,
+.js-cinematic .card--featured:focus-visible .card__neighbour-spines {
+  transform: translateY(-2px);
+}
+
+/* Entrance choreography: cards rise out of the dark in a dealt cascade.
+   Without JS (or IntersectionObserver) nothing carries the hidden state, so
+   the wall reads as plain static paper, exactly as before this layer. */
 .js-cinematic .wall__cell {
   opacity: 0;
   transform: translateY(10px);
@@ -2116,7 +2201,8 @@ body {
 }
 
 /* Nearby volumes: the fork in the Library, arriving as one paired beat with
-   a travelling ember along the oxblood edge. */
+   a travelling ember along the oxblood edge. Without JS the hidden state is
+   absent, so the list reads as plain static paper. */
 .js-cinematic .nearby--cinematic .nearby__item {
   opacity: 0;
   transform: translateX(30px);
@@ -2176,7 +2262,8 @@ body {
   to { transform: translateY(70%); }
 }
 
-/* Shelf spines catch lamplight in sequence, left to right. */
+/* Shelf spines catch lamplight in sequence, left to right. Without JS the
+   hidden state is absent, so the shelf reads as plain static paper. */
 .js-cinematic .shelf__item {
   opacity: 0;
   transform: translateY(8px);
