@@ -30,10 +30,10 @@ export interface IndexMetrics {
   rows: number;
 }
 
-/** Several wall groups, clipped at the right and bottom. */
+/** Three complete wall groups; no partial fourth group is allowed to peek in. */
 export const WIDE_INDEX: IndexMetrics = {
   className: 'library-index__svg library-index__svg--wide',
-  width: 400,
+  width: 354,
   height: 210,
   markGap: 1,
   shelfGap: 10,
@@ -41,7 +41,7 @@ export const WIDE_INDEX: IndexMetrics = {
   wallGapY: 18,
   originX: 0,
   originY: 4,
-  columns: 4,
+  columns: 3,
   rows: 3,
 };
 
@@ -86,9 +86,22 @@ export function markPosition(
   return { x, y };
 }
 
-/** Wall 1–4 are the four visible groups; shelf and volume sit inside that group. */
+/**
+ * Keep the real address in the readout while constraining the decorative locator
+ * to the wall groups that are actually visible.
+ */
+function visibleColumn(metrics: IndexMetrics, wall: number): number {
+  return Math.min(Math.max(wall - 1, 0), metrics.columns - 1);
+}
+
 export function locatorPosition(metrics: IndexMetrics, coordinate: Coordinate): { x: number; y: number } {
-  return markPosition(metrics, coordinate.volume, coordinate.shelf, coordinate.wall - 1, 0);
+  return markPosition(
+    metrics,
+    coordinate.volume,
+    coordinate.shelf,
+    visibleColumn(metrics, coordinate.wall),
+    0,
+  );
 }
 
 function svgNode(tag: string, attrs: Record<string, string>): SVGElement {
@@ -129,9 +142,10 @@ function leaderPath(metrics: IndexMetrics, x: number, y: number, wall: number): 
   const inset = 1.25;
   const x1 = x + INDEX_MARK_WIDTH + inset;
   const runY = y - inset;
-  const column = wall - 1;
-  const gutterX =
+  const column = visibleColumn(metrics, wall);
+  const naturalGutterX =
     metrics.originX + (column + 1) * (wallWidth(metrics) + metrics.wallGapX) - metrics.wallGapX * 0.5;
+  const gutterX = Math.min(naturalGutterX, metrics.width - 4);
   return `M${String(x1)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
 }
 
