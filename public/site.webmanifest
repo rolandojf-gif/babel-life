@@ -1,0 +1,16 @@
+{
+  "name": "Babel Life",
+  "short_name": "Babel Life",
+  "description": "Every writable life already exists.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1eadd",
+  "theme_color": "#f1eadd",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

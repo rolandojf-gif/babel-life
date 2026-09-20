@@ -10,6 +10,7 @@ import { createWallOfLives } from './WallOfLives';
 import { element, link, type ViewHandle } from './view';
 
 const SITE_TITLE = 'Babel Life';
+const HOME_TITLE = 'Babel Life — Every Writable Life Already Exists';
 
 function formatShelf(shelf: ShelfCoordinate): string {
   return shelfFields(shelf)
@@ -114,7 +115,7 @@ export function mountAppShell(
     if (state.view === 'address' && state.address !== null) {
       return `${formatCoordinate(state.address)} — ${SITE_TITLE}`;
     }
-    return SITE_TITLE;
+    return state.view === 'wall' ? HOME_TITLE : SITE_TITLE;
   }
 
   return function render(state: AppState, hint: RenderHint): void {
