@@ -8,9 +8,7 @@ import {
   shelfVolumes,
   type Coordinate,
 } from '../library/coordinates';
-import { BOOK_EMBEDDED_SHELF_ID } from './shelfListing';
-import { prefersReducedMotion } from './motion';
-import { element, link } from './view';
+import { element } from './view';
 
 const NS = 'http://www.w3.org/2000/svg';
 
@@ -127,39 +125,22 @@ function createShelfDiagram(coordinate: Coordinate): SVGSVGElement {
   return svg;
 }
 
-function scrollToEmbeddedShelf(event: Event): void {
-  event.preventDefault();
-  const target = document.getElementById(BOOK_EMBEDDED_SHELF_ID);
-  if (!(target instanceof HTMLElement)) return;
-  target.scrollIntoView({ behavior: prefersReducedMotion() ? 'instant' : 'smooth', block: 'start' });
-  target.focus({ preventScroll: true });
-}
-
-/** Compact “you are here” map; jumps to the integrated shelf on this page. */
-export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
+/** Compact “you are here” map. Informational only: the shelf itself stands below. */
+export function createShelfLocator(coordinate: Coordinate): HTMLDivElement {
   const shelf = shelfOf(coordinate);
   const otherLegible = shelfVolumes(shelf).some(
     (address) => address.volume !== coordinate.volume && legibleAt(address),
   );
 
-  const anchor = link(`#${BOOK_EMBEDDED_SHELF_ID}`, 'shelf-locator');
-  anchor.addEventListener('click', scrollToEmbeddedShelf);
-  anchor.setAttribute(
-    'aria-label',
-    fill(copy.locatorAria, {
-      n: String(coordinate.volume),
-      total: String(SHELF_LENGTH),
-    }),
-  );
-
-  anchor.append(element('span', 'shelf-locator__heading', copy.locatorHeading));
+  const root = element('div', 'shelf-locator');
+  root.append(element('span', 'shelf-locator__heading', copy.locatorHeading));
 
   const diagram = element('span', 'shelf-locator__diagram');
   diagram.setAttribute('aria-hidden', 'true');
   diagram.append(createShelfDiagram(coordinate));
-  anchor.append(diagram);
+  root.append(diagram);
 
-  anchor.append(
+  root.append(
     element(
       'span',
       'shelf-locator__here',
@@ -179,8 +160,7 @@ export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
       document.createTextNode(copy.locatorSolo),
     );
   }
-  anchor.append(key);
+  root.append(key);
 
-
-  return anchor;
+  return root;
 }

@@ -903,7 +903,7 @@ body {
   font-family: var(--serif);
   font-style: italic;
   color: var(--oxblood);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   line-height: 1.45;
 }
 
@@ -1011,7 +1011,7 @@ body {
 
   .book--spread .aftertaste {
     margin: clamp(2.75rem, 5vw, 4rem) auto 2rem;
-    font-size: 1.3125rem;
+    font-size: 1.5rem;
   }
 
   .book--0814 .book__title {
@@ -1076,13 +1076,6 @@ body {
   min-height: 44px;
   padding: 0.25rem 0 0.5rem;
   color: inherit;
-  text-decoration: none;
-  transition: color var(--motion-fast) var(--motion-ease);
-}
-
-.shelf-locator:focus-visible {
-  outline: 2px solid var(--oxblood);
-  outline-offset: 4px;
 }
 
 .shelf-locator__heading {
@@ -1190,11 +1183,6 @@ body {
   text-transform: uppercase;
 }
 
-.shelf-locator:hover .shelf-locator__action,
-.shelf-locator:focus-visible .shelf-locator__action {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 
 .shelf--embedded {
   max-width: none;
@@ -1941,10 +1929,6 @@ body {
     transform: translateX(2px);
   }
 
-  .shelf-locator:focus-visible .shelf-locator__pointer {
-    transform: translateY(1px);
-  }
-
   @media (hover: hover) and (pointer: fine) {
     :is(.backlink, .action, .shelfwalk__link):hover .backlink__arrow {
       transform: translateX(-2px);
@@ -1952,10 +1936,6 @@ body {
 
     :is(.nearby__link, .shelfwalk__link):hover :is(.nearby__arrow, .card__arrow) {
       transform: translateX(2px);
-    }
-
-    .shelf-locator:hover .shelf-locator__pointer {
-      transform: translateY(1px);
     }
   }
 
