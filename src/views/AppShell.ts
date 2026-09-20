@@ -10,7 +10,7 @@ import { createWallOfLives } from './WallOfLives';
 import { element, link, type ViewHandle } from './view';
 
 const SITE_TITLE = 'Babel Life';
-const HOME_TITLE = 'Babel Life — Every Writable Life Already Exists';
+const HOME_TITLE = 'Babel Life — Possible Lives Inspired by Borges’ Library of Babel';
 
 function formatShelf(shelf: ShelfCoordinate): string {
   return shelfFields(shelf)
