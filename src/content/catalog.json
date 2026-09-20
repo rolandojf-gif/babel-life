@@ -766,23 +766,23 @@
       "rootId": "b0041",
       "kind": "root",
       "icon": "cot",
-      "headline": "HALF A SECOND LATE",
-      "hook": "your shadow arrives half a second after you do, every time you move, for your entire life.",
-      "title": "Your Shadow's Delay",
+      "headline": "YOUR EXACT LIFE",
+      "hook": "your exact life is already written from birth to the circumstances of your death.",
+      "title": "Yours",
       "passage": [
-        "You lift the mug. Your shadow lifts its mug half a second later.",
-        "At the bus stop, office and supermarket it follows every movement with the same delay. Nobody comments.",
-        "Tonight you switch off the kitchen light. The dark hand reaches the switch after your finger."
+        "There is a book containing your exact life. Its first page gives the date, time and place of your birth. Then come every home, every meal, every conversation and every day you have forgotten.",
+        "One page describes how you reach this sentence. The pages after it contain the time you will wake tomorrow, the first object you will touch and the words you will say before leaving.",
+        "The final page gives the exact date, time, place and circumstances of your death."
       ],
-      "aftertaste": "Your shadow gets there second.",
+      "aftertaste": "The final page already exists.",
       "neighbors": [
         {
           "targetBookId": "b0042",
-          "difference": "Your shadow moves half a second before you."
+          "difference": "The same life ends one second later."
         },
         {
           "targetBookId": "b0043",
-          "difference": "Your shadow is synchronous, but always two centimetres shorter."
+          "difference": "Tomorrow you take thirteen steps to the kitchen instead of twelve."
         }
       ]
     },
@@ -791,22 +791,22 @@
       "rootId": "b0041",
       "kind": "nearby",
       "icon": "cot",
-      "headline": "HALF A SECOND EARLY",
-      "title": "Before You",
+      "headline": "ONE SECOND MORE",
+      "title": "One Second More",
       "passage": [
-        "The shadow of your hand starts toward the mug half a second before your hand does.",
-        "At work it reaches toward the filing cabinet before you open it. Nobody comments.",
-        "Tonight the shadow touches the light switch first."
+        "This volume matches yours from birth until the final day. It contains the same people, the same rooms and every one of the same words.",
+        "Only the time printed on the final page changes.",
+        "Here, you die one second later."
       ],
-      "aftertaste": "The dark finger gets there first.",
+      "aftertaste": "One second needs another volume.",
       "neighbors": [
         {
           "targetBookId": "b0041",
-          "difference": "Your shadow follows by half a second."
+          "difference": "The final page ends one second earlier."
         },
         {
           "targetBookId": "b0043",
-          "difference": "Your shadow moves with you, but is two centimetres shorter."
+          "difference": "Your death does not change, but tomorrow you take one more step."
         }
       ]
     },
@@ -815,22 +815,22 @@
       "rootId": "b0041",
       "kind": "nearby",
       "icon": "cot",
-      "headline": "TWO CENTIMETRES SHORTER",
-      "title": "The Shorter Shadow",
+      "headline": "THIRTEEN STEPS",
+      "title": "Thirteen Steps",
       "passage": [
-        "Your shadow moves exactly when you do.",
-        "In every light it ends two centimetres before geometry says it should. Nobody measures it.",
-        "This evening the hallway wall is missing the same two centimetres."
+        "This volume matches yours in every detail except one tomorrow.",
+        "You take thirteen steps from the bed to the kitchen instead of twelve. Nothing else changes: not breakfast, not the years after it, not the final page.",
+        "The difference occupies a complete biography."
       ],
-      "aftertaste": "The outline ends early.",
+      "aftertaste": "Tomorrow you take thirteen steps.",
       "neighbors": [
         {
           "targetBookId": "b0041",
-          "difference": "The length is correct, but the shadow follows late."
+          "difference": "Tomorrow you take twelve steps to the kitchen."
         },
         {
           "targetBookId": "b0042",
-          "difference": "The length is correct, but the shadow moves early."
+          "difference": "The life matches, except the final page ends one second later."
         }
       ]
     },
@@ -839,23 +839,23 @@
       "rootId": "b0044",
       "kind": "root",
       "icon": "calendar",
-      "headline": "ALWAYS BLINKING",
-      "hook": "in every photograph taken of you after age thirty, your eyes are closed.",
-      "title": "Every Photograph Blinks",
+      "headline": "THE FAMILY OPPOSITE",
+      "hook": "you are born into the family across from your home, and your current family simply lives nearby.",
+      "title": "The Door Opposite",
       "passage": [
-        "Birthday, passport booth, work dinner, beach, wedding. After thirty, every photograph catches the blink.",
-        "People joke about it for a few years and then stop. The camera changes. The result does not.",
-        "Your life outside the photographs is ordinary."
+        "There is a book in which you were born into the family living opposite your home. Their parents are your parents. Their children are your siblings.",
+        "You grew up in their rooms, ate at their table and learned to speak with their words. The home where you grew up in this life belongs to another family.",
+        "Sometimes you pass them on the stairs. You greet them because they live opposite."
       ],
-      "aftertaste": "Every shutter finds the same blink.",
+      "aftertaste": "You greet them because they live opposite.",
       "neighbors": [
         {
           "targetBookId": "b0045",
-          "difference": "One specific person can photograph you with your eyes open."
+          "difference": "You are born behind every possible door on your street."
         },
         {
           "targetBookId": "b0046",
-          "difference": "Your eyes are always open, but you look two metres left of the camera."
+          "difference": "Someone else occupies your room in your current family."
         }
       ]
     },
@@ -864,22 +864,22 @@
       "rootId": "b0044",
       "kind": "nearby",
       "icon": "calendar",
-      "headline": "ONE PERSON BREAKS THE RULE",
-      "title": "One Photographer",
+      "headline": "EVERY DOOR",
+      "title": "Every Door",
       "passage": [
-        "Every photograph after thirty shows your eyes closed except those taken by one person.",
-        "Their phone, old camera, borrowed camera: your eyes are open every time.",
-        "No other condition changes."
+        "There is a volume in which you were born behind every door on your street.",
+        "In one you are an only child. In another you share a room with three siblings. In another, the person you now call your sister lives two buildings away and never learns your name.",
+        "Every door contains a complete childhood."
       ],
-      "aftertaste": "One person gets the open eyes.",
+      "aftertaste": "Every door contains a childhood.",
       "neighbors": [
         {
           "targetBookId": "b0044",
-          "difference": "No photographer breaks the blinking rule."
+          "difference": "You are born into the family living opposite your home."
         },
         {
           "targetBookId": "b0046",
-          "difference": "Your eyes stay open, but your gaze always misses the camera."
+          "difference": "Your current family remains at home, but another child takes your place."
         }
       ]
     },
@@ -888,22 +888,22 @@
       "rootId": "b0044",
       "kind": "nearby",
       "icon": "calendar",
-      "headline": "ALWAYS LOOKING LEFT",
-      "title": "Two Metres Left",
+      "headline": "YOUR ROOM WITHOUT YOU",
+      "title": "Your Room Without You",
       "passage": [
-        "Your eyes are open in every photograph.",
-        "They are also fixed on a point exactly two metres to the left of the camera, even when no such point is visible.",
-        "Nobody in the book investigates."
+        "In this book your current family lives in the same home. They keep the same jobs, the same meals and almost all the same photographs.",
+        "Another child sleeps in your room, takes your place at the table and calls your parents Mum and Dad.",
+        "You grow up somewhere else. Neither family notices an absence."
       ],
-      "aftertaste": "The camera is never where you look.",
+      "aftertaste": "Neither family notices an absence.",
       "neighbors": [
         {
           "targetBookId": "b0044",
-          "difference": "Your eyes are closed instead."
+          "difference": "You are born into the family living opposite your home."
         },
         {
           "targetBookId": "b0045",
-          "difference": "Only one photographer can produce an ordinary image."
+          "difference": "You are born behind every possible door on your street."
         }
       ]
     },
@@ -912,23 +912,23 @@
       "rootId": "b0047",
       "kind": "root",
       "icon": "paths",
-      "headline": "DIED IN 2019",
-      "hook": "the book says you died in 2019, and also says you are reading this sentence in 2026.",
-      "title": "Already Dead",
+      "headline": "EVERY POSSIBLE SEAT",
+      "hook": "you die in an aircraft accident in every possible seat, at every age and on every route.",
+      "title": "Every Seat",
       "passage": [
-        "On 4 May 2019 the book records your death at 06:18 and your funeral six days later.",
-        "The pages continue: a leaking tap in 2022, returned shoes in 2024, breakfast in 2025.",
-        "In 2026 it records you opening Babel Life and reading the sentence that says you died."
+        "There are books in which you die in an aircraft accident in every possible seat.",
+        "For each seat there are every aircraft, airline, airport, destination, route, altitude, delay and weather condition. In some you are six months old. In others seventeen, fifty-two or one hundred and ten.",
+        "Every combination needs your whole life before it."
       ],
-      "aftertaste": "The next paragraph concerns breakfast.",
+      "aftertaste": "Every combination begins with your birth.",
       "neighbors": [
         {
           "targetBookId": "b0048",
-          "difference": "The contradiction begins the morning after your recorded death."
+          "difference": "The same sequence exists for every ordinary way of dying."
         },
         {
           "targetBookId": "b0049",
-          "difference": "The funeral remains, but the death itself is never recorded."
+          "difference": "The whole life matches until the final minute."
         }
       ]
     },
@@ -937,22 +937,22 @@
       "rootId": "b0047",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "BREAKFAST AFTER DEATH",
-      "title": "The Next Morning",
+      "headline": "EVERY WAY",
+      "title": "Every Way",
       "passage": [
-        "The book records your death on 4 May 2019.",
-        "On 5 May you wake at 07:11, burn toast and leave for work. Nobody mentions the previous page.",
-        "The death remains printed where it was."
+        "Then come the books of trains, buses, cars, bicycles and ships.",
+        "And the books in which you die walking, swimming, dancing, eating, sleeping or working. For each activity, the age, place, time and people present all change.",
+        "In every volume you are born again on the first page."
       ],
-      "aftertaste": "The burnt toast comes after the death.",
+      "aftertaste": "In every volume you are born again.",
       "neighbors": [
         {
           "targetBookId": "b0047",
-          "difference": "The contradiction continues through 2026."
+          "difference": "Only the flights, seats, routes and ages change."
         },
         {
           "targetBookId": "b0049",
-          "difference": "The funeral is recorded without any death page."
+          "difference": "The lives remain identical until the final minute."
         }
       ]
     },
@@ -961,22 +961,22 @@
       "rootId": "b0047",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THE FUNERAL REMAINS",
-      "title": "No Death Page",
+      "headline": "THE SAME FINAL MINUTE",
+      "title": "Until the Final Minute",
       "passage": [
-        "The book records your funeral on 10 May 2019.",
-        "There is no earlier page recording a death. On 11 May you buy milk and answer two messages.",
-        "The funeral stays between Thursday and Saturday."
+        "These books match throughout your life.",
+        "Same family. Same body. Same meals, jobs, conversations and journeys. They arrive together at the final minute.",
+        "Then each book ends in a different way."
       ],
-      "aftertaste": "The funeral has no death before it.",
+      "aftertaste": "Each book ends differently.",
       "neighbors": [
         {
           "targetBookId": "b0047",
-          "difference": "The death is recorded six days before the funeral."
+          "difference": "Every seat, flight, age and route produces another complete life."
         },
         {
           "targetBookId": "b0048",
-          "difference": "The death is recorded and you wake the next morning."
+          "difference": "The activity, place and people present all change too."
         }
       ]
     },
@@ -985,23 +985,23 @@
       "rootId": "b0050",
       "kind": "root",
       "icon": "rain",
-      "headline": "A STRANGER'S DRAWING OF YOUR KITCHEN",
-      "hook": "someone you will never meet keeps an accurate drawing of your kitchen in a shoebox.",
-      "title": "The Accurate Drawing",
+      "headline": "LEFT FIRST",
+      "hook": "you put on your left sock first every day of your adult life, and nothing else changes.",
+      "title": "Left First",
       "passage": [
-        "In another city, a stranger has a pencil drawing of your kitchen: the toaster, the chipped tile, the mug beside the sink.",
-        "They have never seen the room. You never meet them. The drawing stays in a shoebox under winter clothes.",
-        "Nothing brings the two lives together."
+        "In this book you put on your left sock first every day of your adult life.",
+        "The order changes no conversation, job or relationship. You reach the same places at the same time. You die on the same day.",
+        "From eighteen until the end, the left goes first."
       ],
-      "aftertaste": "Your chipped tile is in someone else's shoebox.",
+      "aftertaste": "The left goes first until the end.",
       "neighbors": [
         {
           "targetBookId": "b0051",
-          "difference": "The drawing is accurate except the toaster is the wrong colour."
+          "difference": "One Tuesday, at forty-six, you put on the right sock first."
         },
         {
           "targetBookId": "b0052",
-          "difference": "You also keep an accurate drawing of the stranger's kitchen."
+          "difference": "You put on the right sock first every day of your adult life."
         }
       ]
     },
@@ -1010,22 +1010,22 @@
       "rootId": "b0050",
       "kind": "nearby",
       "icon": "rain",
-      "headline": "ONE DETAIL WRONG",
-      "title": "The Wrong Toaster",
+      "headline": "ONE TUESDAY",
+      "title": "One Tuesday",
       "passage": [
-        "The stranger's drawing still contains your kitchen.",
-        "The chipped tile, sink and mug are exact. The toaster is blue instead of black.",
-        "You never see the drawing."
+        "This volume matches the previous one throughout your life except for one morning.",
+        "One Tuesday, at forty-six, you put on your right sock first. You do not notice. Nobody sees.",
+        "The rest of the book matches again through its final word."
       ],
-      "aftertaste": "Only the toaster disagrees.",
+      "aftertaste": "One morning needs another volume.",
       "neighbors": [
         {
           "targetBookId": "b0050",
-          "difference": "The toaster colour is correct."
+          "difference": "The left sock goes first on that Tuesday too."
         },
         {
           "targetBookId": "b0052",
-          "difference": "Both of you possess accurate drawings of the other's kitchen."
+          "difference": "The right sock goes first every day, not just once."
         }
       ]
     },
@@ -1034,22 +1034,22 @@
       "rootId": "b0050",
       "kind": "nearby",
       "icon": "rain",
-      "headline": "YOU HAVE THEIR KITCHEN TOO",
-      "title": "Both Shoeboxes",
+      "headline": "RIGHT EVERY TIME",
+      "title": "Right Every Time",
       "passage": [
-        "The stranger keeps an accurate drawing of your kitchen.",
-        "In your own cupboard is a drawing of theirs: yellow kettle, narrow window, bowl on the radiator. You do not know whose room it is.",
-        "Neither of you ever meets."
+        "Here you put on your right sock first from eighteen until your death.",
+        "Everything else remains the same: the people you love, the illnesses, the homes, the sentences and the length of your life.",
+        "It takes another whole book."
       ],
-      "aftertaste": "Two kitchens. Two shoeboxes. No meeting.",
+      "aftertaste": "It takes another whole book.",
       "neighbors": [
         {
           "targetBookId": "b0050",
-          "difference": "Only the stranger has a drawing."
+          "difference": "The left sock goes first every day."
         },
         {
           "targetBookId": "b0051",
-          "difference": "Their drawing contains one wrong detail."
+          "difference": "The right goes first on only one Tuesday."
         }
       ]
     },
@@ -1204,23 +1204,23 @@
       "rootId": "b0059",
       "kind": "root",
       "icon": "cup",
-      "headline": "THE HOUSE OF SMALL LUCK",
-      "hook": "you inherit a house where dropped glasses always land upright, while bills, bad news and everything important behave normally.",
-      "title": "The Inheritance of Small Luck",
+      "headline": "EVERY POSSIBLE BODY",
+      "hook": "you are born with every body you could have had, and each one needs a complete life.",
+      "title": "Every Body",
       "passage": [
-        "The first glass slips while you unpack and lands upright. So does the second, months later. Plates wobble and settle. Keys fall where you can see them.",
-        "The roof still leaks. Bills still arrive. People still get ill.",
-        "The house is lucky only about small things."
+        "There are books in which you are born on the same day, to the same parents and in the same room, with every body you could have had.",
+        "Height, face, sex, voice, strength, mobility and health all change. Every body ages in every way available to it.",
+        "None ends with a description. They all need a complete life."
       ],
-      "aftertaste": "The glass lands upright again.",
+      "aftertaste": "Every body reaches its final page.",
       "neighbors": [
         {
           "targetBookId": "b0060",
-          "difference": "The small luck works only on objects dropped by guests."
+          "difference": "Two bodies differ by only one millimetre of adult height."
         },
         {
           "targetBookId": "b0061",
-          "difference": "The small luck works only in the kitchen."
+          "difference": "Every bodily trait combines with every other one."
         }
       ]
     },
@@ -1229,22 +1229,22 @@
       "rootId": "b0059",
       "kind": "nearby",
       "icon": "cup",
-      "headline": "ONLY FOR VISITORS",
-      "title": "Guests' Objects Only",
+      "headline": "ONE MILLIMETRE MORE",
+      "title": "One Millimetre",
       "passage": [
-        "Your own glasses fall normally.",
-        "A guest drops one and it lands upright. Their keys bounce into view. Their phone misses the hard corner of the table.",
-        "The house saves only objects that do not belong to you."
+        "Two of those books match in your family, your face, your health and every event in your life.",
+        "In one, your adult height is one millimetre greater. The difference appears as you grow and remains until your death.",
+        "A whole volume for that millimetre."
       ],
-      "aftertaste": "Your glass can still break.",
+      "aftertaste": "A whole volume for that millimetre.",
       "neighbors": [
         {
           "targetBookId": "b0059",
-          "difference": "The small luck works for everyone in the house."
+          "difference": "Height is only one of all the traits that change."
         },
         {
           "targetBookId": "b0061",
-          "difference": "The small luck depends on the room instead of the owner."
+          "difference": "The millimetre combines with every voice, face, health and family."
         }
       ]
     },
@@ -1253,22 +1253,22 @@
       "rootId": "b0059",
       "kind": "nearby",
       "icon": "doorway",
-      "headline": "LUCK STOPS AT THE DOOR",
-      "title": "Only the Kitchen",
+      "headline": "EVERY COMBINATION",
+      "title": "Every Combination",
       "passage": [
-        "Inside the kitchen, glasses land upright and dropped keys stay visible.",
-        "Carry the same objects into the hall and they fall normally.",
-        "The doorway is the entire rule."
+        "For every height there are all the voices. For every voice, all the faces. For every face, all the illnesses, injuries, abilities and ways of ageing.",
+        "Then each of those bodies lives with every family, in every city, beside every person it could meet.",
+        "In one volume you have your present body."
       ],
-      "aftertaste": "Luck ends at the kitchen door.",
+      "aftertaste": "In one volume you have this body.",
       "neighbors": [
         {
           "targetBookId": "b0059",
-          "difference": "The small luck works throughout the house."
+          "difference": "Every possible body receives a complete life."
         },
         {
           "targetBookId": "b0060",
-          "difference": "The small luck follows guests instead of a room."
+          "difference": "Two of those bodies differ by only one millimetre."
         }
       ]
     },
@@ -1277,23 +1277,23 @@
       "rootId": "b0062",
       "kind": "root",
       "icon": "photograph",
-      "headline": "THE MISSING DAY",
-      "hook": "your life is complete except that June 11 does not occur in any year — the book passes from June 10 to June 12 without comment.",
-      "title": "June 11",
+      "headline": "11 JUNE 2047",
+      "hook": "11 June 2047 is already complete: breakfast, rain, errands, a call and the final light.",
+      "title": "11 June 2047",
       "passage": [
-        "At nine, the diary page after June 10 is June 12. At twenty-three, the work calendar does the same.",
-        "Birthdays, rent, trains and summers continue normally.",
-        "Every year the book moves from June 10 to June 12."
+        "There is a book in which you reach 11 June 2047.",
+        "You wake at 07:16. You have toast and an orange for breakfast. It rains from 09:08 to 09:41. In the afternoon you buy batteries, collect a shirt and call someone you have not met yet.",
+        "At 23:52 you leave a glass on the counter and switch off the kitchen light."
       ],
-      "aftertaste": "June 12 follows June 10.",
+      "aftertaste": "At 23:52 you switch off the kitchen light.",
       "neighbors": [
         {
           "targetBookId": "b0063",
-          "difference": "June 11 exists, but the book contains no events for it."
+          "difference": "The rain begins at 09:09 instead of 09:08."
         },
         {
           "targetBookId": "b0064",
-          "difference": "June 11 exists in some years and not others."
+          "difference": "The previous twenty years change, but the day matches word for word."
         }
       ]
     },
@@ -1302,22 +1302,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "A BLANK JUNE 11",
-      "title": "The Day Without Memory",
+      "headline": "THE RAIN BEGINS AT 09:09",
+      "title": "09:09",
       "passage": [
-        "June 11 appears on every calendar.",
-        "The book prints the date and then leaves the space beneath it blank. June 10 and June 12 contain ordinary events.",
-        "This happens every year."
+        "This volume contains the same 11 June 2047.",
+        "The breakfast, purchase, shirt, call and glass are identical. Only the rain changes.",
+        "It begins at 09:09 instead of 09:08."
       ],
-      "aftertaste": "The date is there. The day is blank.",
+      "aftertaste": "One minute occupies another complete day.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "June 11 does not occur at all."
+          "difference": "The rain begins at 09:08."
         },
         {
           "targetBookId": "b0064",
-          "difference": "June 11 appears only in some years."
+          "difference": "The previous twenty years change completely."
         }
       ]
     },
@@ -1326,22 +1326,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "ONLY SOME YEARS",
-      "title": "Intermittent June",
+      "headline": "ANOTHER TWENTY YEARS, THE SAME DAY",
+      "title": "The Same Day",
       "passage": [
-        "June 11 exists when you are six, seven and ten. It is absent at eight and nine.",
-        "Later it returns, disappears again, then returns.",
-        "The book gives no pattern."
+        "In this book, the previous twenty years are completely different.",
+        "You live in other homes, do other work and know other people. Even so, 11 June 2047 matches word for word: the toast, orange, rain, batteries, shirt and call.",
+        "At 23:52 you leave the same glass on the counter."
       ],
-      "aftertaste": "Some years have one more day.",
+      "aftertaste": "At 23:52, the same glass.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "June 11 is absent every year."
+          "difference": "The previous twenty years match your present life."
         },
         {
           "targetBookId": "b0063",
-          "difference": "June 11 exists every year but contains no recorded events."
+          "difference": "The same day changes only in the minute the rain begins."
         }
       ]
     },
@@ -1569,23 +1569,24 @@
       "rootId": "b0074",
       "kind": "root",
       "icon": "speech",
-      "headline": "FORTY YEARS, NO HOUSE",
-      "hook": "for forty years you talk each evening through a wall; renovation removes it and reveals open ground where the other house should be.",
-      "title": "The Voice Through the Wall",
+      "headline": "EVERY LIVING PERSON",
+      "hook": "you share your life with every person alive today whom it would have been possible to meet.",
+      "title": "Every Living Person",
       "passage": [
-        "At seven you knock. The voice answers with knees, weather, a niece and complaints about parking.",
-        "This continues for forty years.",
-        "Builders remove the wall to fix damp. Beyond it is open ground. Records say no adjoining house ever stood there."
+        "There are books in which you share your life with every person alive today whom it would have been possible to meet.",
+        "In some you marry. In others you are friends for sixty years, raise a family, work together or stop speaking.",
+        "Many of those people will never enter your present life.",
+        "Right now they live somewhere without knowing who you are."
       ],
-      "aftertaste": "At seven, there is only open ground.",
+      "aftertaste": "Right now they do not know who you are.",
       "neighbors": [
         {
           "targetBookId": "b0075",
-          "difference": "The voice continues after the wall is removed."
+          "difference": "Every person occupies every possible role in your life."
         },
         {
           "targetBookId": "b0076",
-          "difference": "The voice never hears you; you only listen."
+          "difference": "Every possible relationship combines into complete networks."
         }
       ]
     },
@@ -1594,22 +1595,22 @@
       "rootId": "b0074",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "THE VOICE CONTINUES",
-      "title": "Voice Without Wall",
+      "headline": "EVERY ROLE",
+      "title": "Every Role",
       "passage": [
-        "The wall is gone. Open ground begins beyond the new window.",
-        "At seven you still say, good. The voice still answers with knees, weather and parking.",
-        "You face east when you talk now."
+        "For every person there are books in which they occupy every possible place in your life.",
+        "The same person can be your partner, closest friend, employer, carer, someone who harms you or someone with whom you merely share a queue.",
+        "Each role combines again with every number of years the relationship could last."
       ],
-      "aftertaste": "The wall was never required.",
+      "aftertaste": "Every role has all its years.",
       "neighbors": [
         {
           "targetBookId": "b0074",
-          "difference": "The voice stops when the wall is removed."
+          "difference": "Every possible person shares a complete life with you."
         },
         {
           "targetBookId": "b0076",
-          "difference": "The voice never hears your side of the conversation."
+          "difference": "Every role combines with every other relationship."
         }
       ]
     },
@@ -1618,22 +1619,22 @@
       "rootId": "b0074",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "IT NEVER HEARS YOU",
-      "title": "Listening Only",
+      "headline": "THE WHOLE NETWORK",
+      "title": "The Whole Network",
       "passage": [
-        "For forty years the voice comes through the wall at seven.",
-        "You answer. No sentence ever reacts to yours. The pauses fall in the right places anyway.",
-        "When the wall is removed, the voice stops."
+        "Changing one person is not enough.",
+        "For every possible partner there are all the possible friends. For every group of friends, all the colleagues, neighbours, doctors, teachers and strangers who could affect you.",
+        "Every combination forms a different life around you."
       ],
-      "aftertaste": "You had been answering alone.",
+      "aftertaste": "Every combination forms another life.",
       "neighbors": [
         {
           "targetBookId": "b0074",
-          "difference": "The voice hears and answers you."
+          "difference": "Every living person appears in every possible bond with you."
         },
         {
           "targetBookId": "b0075",
-          "difference": "The voice hears you and continues without the wall."
+          "difference": "One person occupies every possible role."
         }
       ]
     },
@@ -1715,23 +1716,23 @@
       "rootId": "b0080",
       "kind": "root",
       "icon": "speech",
-      "headline": "ONLY THE PUNCHLINE",
-      "hook": "you speak no Hungarian, except you always understand the final line of a joke and why everyone laughs.",
-      "title": "Jokes in Hungarian",
+      "headline": "ONE THING, THEN ALL OF THEM",
+      "hook": "every city combines with every job, every home and every person with whom you could share it.",
+      "title": "One Thing, Then All of Them",
       "passage": [
-        "The story begins and you understand nothing.",
-        "Then the final line arrives clear: the hat, the inspector, the missing key. You laugh before anyone translates.",
-        "This happens for years. Ordinary Hungarian remains completely closed to you."
+        "First come the books in which you live in every possible city.",
+        "For every city there are all the jobs. For every job, all the homes. For every home, all the people with whom you could share it.",
+        "No possibility replaces the one before it. Each combines with all the others."
       ],
-      "aftertaste": "Only the joke opens.",
+      "aftertaste": "Every possibility combines with the others.",
       "neighbors": [
         {
           "targetBookId": "b0081",
-          "difference": "You learn Hungarian, and the impossible punchlines disappear."
+          "difference": "Even one Tuesday contains all its possible combinations."
         },
         {
           "targetBookId": "b0082",
-          "difference": "The ability works only with written punchlines."
+          "difference": "Family, body, language and every other detail all change at once."
         }
       ]
     },
@@ -1740,22 +1741,22 @@
       "rootId": "b0080",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "LEARNING REMOVES IT",
-      "title": "Studied Away",
+      "headline": "A SINGLE TUESDAY",
+      "title": "A Single Tuesday",
       "passage": [
-        "You begin evening classes and slowly understand ordinary Hungarian.",
-        "As the language opens, the unexplained punchlines stop arriving. One night everyone laughs and you need the joke explained.",
-        "You understand more and receive less."
+        "Even if your family, body, home and job stay fixed, every possible Tuesday remains.",
+        "Every waking time. Every breakfast. Every route. Every person you could pass. Every word you could say and every word you could leave unsaid.",
+        "Then come all the combinations among those differences within a single day."
       ],
-      "aftertaste": "Fluency closes the strange part.",
+      "aftertaste": "All those differences fit inside one Tuesday.",
       "neighbors": [
         {
           "targetBookId": "b0080",
-          "difference": "You never study and keep understanding punchlines."
+          "difference": "The combination begins with cities, jobs, homes and people."
         },
         {
           "targetBookId": "b0082",
-          "difference": "The ability survives only in writing."
+          "difference": "Every category of your life changes at once."
         }
       ]
     },
@@ -1764,22 +1765,22 @@
       "rootId": "b0080",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "ONLY WRITTEN JOKES",
-      "title": "On Paper Only",
+      "headline": "YOUR VOLUME AMONG THEM",
+      "title": "Your Volume Among Them",
       "passage": [
-        "Spoken Hungarian remains completely opaque.",
-        "Later, a message arrives in the group chat. The final line of a joke is perfectly clear and funny.",
-        "You understand every written punchline and nothing around it."
+        "Now family, body, language, city, home, job, partner, children, health, habits and age at death all change at once.",
+        "Every combination divides again for every meal, journey, sentence, gesture, object and second.",
+        "Among all those books, one matches you exactly."
       ],
-      "aftertaste": "The joke opens only on paper.",
+      "aftertaste": "One matches you exactly.",
       "neighbors": [
         {
           "targetBookId": "b0080",
-          "difference": "The ability works in speech instead."
+          "difference": "The possibilities combine one category at a time."
         },
         {
           "targetBookId": "b0081",
-          "difference": "You study the language and lose the unexplained ability."
+          "difference": "The combination is limited to a single Tuesday."
         }
       ]
     }
