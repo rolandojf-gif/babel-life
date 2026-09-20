@@ -23,10 +23,40 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   const heading = element('h1', 'masthead__heading', copy.heading);
   heading.id = 'wall-heading';
   heading.tabIndex = -1;
+
+  const libraryValue = element('p', 'masthead__scale-value');
+  libraryValue.append(
+    document.createTextNode(copy.libraryScaleMantissa),
+    element('sup', 'masthead__scale-exponent', copy.libraryScaleExponent),
+    document.createTextNode(` ${copy.libraryScaleUnit}`),
+  );
+
+  const universeValue = element('p', 'masthead__scale-value');
+  universeValue.append(
+    document.createTextNode(copy.universeScaleMantissa),
+    element('sup', 'masthead__scale-exponent', copy.universeScaleExponent),
+    document.createTextNode(` ${copy.universeScaleUnit}`),
+  );
+
+  const scale = element('div', 'masthead__scale');
+  const libraryScale = element('div', 'masthead__scale-item');
+  libraryScale.append(
+    element('p', 'masthead__scale-label', copy.libraryScaleLabel),
+    libraryValue,
+    element('p', 'masthead__scale-meta', copy.libraryScaleMeta),
+  );
+  const universeScale = element('div', 'masthead__scale-item');
+  universeScale.append(
+    element('p', 'masthead__scale-label', copy.universeScaleLabel),
+    universeValue,
+  );
+  scale.append(libraryScale, universeScale);
+
   copyBlock.append(
     element('p', 'eyebrow', copy.eyebrow),
     heading,
     element('p', 'masthead__dek', copy.dek),
+    scale,
   );
 
   const opening = wallBooks('first', state.wallSeed);
