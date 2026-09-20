@@ -16,7 +16,7 @@ export const copy = {
   shelfEyebrow: 'ONE SHELF',
   openThisShelf: 'open this shelf',
   shelfHolds: 'Thirty-two volumes stand here. {legible} of them can be read.',
-  notLegible: 'not legible',
+  notLegible: 'illegible',
   volumeLabel: 'Volume',
   previousShelf: 'PREVIOUS SHELF',
   nextShelf: 'NEXT SHELF',
