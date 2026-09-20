@@ -17,9 +17,9 @@
   --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace;
   --gutter: 20px;
-  --motion-fast: 120ms;
-  --motion-view: 180ms;
-  --motion-settle: 240ms;
+  --motion-fast: 160ms;
+  --motion-view: 320ms;
+  --motion-settle: 420ms;
   --motion-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --lift: 0 1px 0 rgba(255, 253, 248, 0.7) inset, 0 1px 2px rgba(23, 21, 15, 0.06),
     0 8px 20px -14px rgba(23, 21, 15, 0.35);
@@ -247,6 +247,7 @@ body {
 .library-index__mark--current {
   fill: var(--oxblood);
   shape-rendering: crispEdges;
+  filter: drop-shadow(0 0 2px rgba(110, 31, 39, 0.45));
 }
 
 .library-index__bracket,
@@ -394,8 +395,11 @@ body {
   box-shadow: none;
   color: inherit;
   text-decoration: none;
-  transition: border-color var(--motion-fast) var(--motion-ease),
-    background-color var(--motion-fast) var(--motion-ease);
+  transition:
+    transform 220ms var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease),
+    box-shadow 220ms var(--motion-ease);
 }
 
 .card--featured {
@@ -408,8 +412,10 @@ body {
 
 .card:hover,
 .card:focus-visible {
+  transform: translateY(-4px);
   border-color: var(--rule-strong);
   background-color: var(--paper-card-a);
+  box-shadow: var(--lift-hover);
 }
 
 .card--featured:hover,
@@ -482,6 +488,13 @@ body {
 .card__visual .illustration {
   width: 6rem;
   max-width: 100%;
+  transform-origin: 80% 50%;
+  transition: transform var(--motion-view) var(--motion-ease);
+}
+
+.card:hover .card__visual .illustration,
+.card:focus-visible .card__visual .illustration {
+  transform: translateY(-3px) scale(1.045);
 }
 
 .card--featured .card__visual .illustration {
@@ -529,7 +542,7 @@ body {
 
 .card:hover .card__arrow,
 .card:focus-visible .card__arrow {
-  transform: translateX(2px);
+  transform: translateX(6px);
 }
 
 .wall__count {
@@ -1230,12 +1243,17 @@ body {
   background: var(--paper-card-a);
   color: inherit;
   text-decoration: none;
-  transition: background-color var(--motion-fast) var(--motion-ease);
+  transition:
+    transform 220ms var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease),
+    box-shadow 220ms var(--motion-ease);
 }
 
 .nearby__link:hover,
 .nearby__link:focus-visible {
+  transform: translateX(5px);
   background: var(--paper-card-b);
+  box-shadow: 0 10px 24px -20px rgba(23, 21, 15, 0.7);
 }
 
 .nearby__difference {
@@ -1666,25 +1684,46 @@ body {
 
 /* Motion: ink settling onto paper, with no changes to document geometry. */
 @keyframes paper-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(8px) scale(0.995); }
+  to { opacity: 1; transform: none; }
 }
 
 @keyframes paper-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(-4px) scale(0.997); }
 }
 
 @keyframes ink-settle {
-  from { opacity: 0.55; transform: translateY(3px); }
+  from { opacity: 0.08; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes index-reveal {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(10px); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); transform: none; }
 }
 
 /* Scope movement to readers who have not requested reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
-  .main:not([data-view-transition]) > :not(.wall),
-  .main:not([data-view-transition]) .masthead {
+  .main:not([data-view-transition]) > :not(.wall) {
     animation: paper-in var(--motion-view) var(--motion-ease) backwards;
+  }
+
+  .main:not([data-view-transition]) .masthead__copy > * {
+    animation: hero-rise 520ms var(--motion-ease) backwards;
+  }
+
+  .main:not([data-view-transition]) .masthead__copy > :nth-child(2) { animation-delay: 55ms; }
+  .main:not([data-view-transition]) .masthead__copy > :nth-child(3) { animation-delay: 110ms; }
+  .main:not([data-view-transition]) .masthead__copy > :nth-child(4) { animation-delay: 165ms; }
+
+  .main:not([data-view-transition]) .library-index {
+    animation: index-reveal 620ms var(--motion-ease) 120ms backwards;
   }
 
   .main:not([data-view-transition]) .wall__cell,
@@ -1693,21 +1732,21 @@ body {
   }
 
   .main:not([data-view-transition]) .wall__cell:nth-child(3n + 2) {
-    animation-delay: 18ms;
+    animation-delay: 55ms;
   }
 
   .main:not([data-view-transition]) .wall__cell:nth-child(3n) {
-    animation-delay: 36ms;
+    animation-delay: 110ms;
   }
 
   /* Both ends move together, or both update immediately in older browsers. */
   @supports (d: path("M0 0H1V1")) {
     .library-index__locator {
-      transition: transform var(--motion-settle) var(--motion-ease);
+      transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .library-index__leader {
-      transition: d var(--motion-settle) var(--motion-ease);
+      transition: d var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
     }
   }
 
@@ -1749,7 +1788,7 @@ body {
   }
 
   .action:active {
-    transform: translateY(1px);
+    transform: translateY(2px) scale(0.985);
   }
 }
 
@@ -1759,10 +1798,12 @@ body {
 }
 
 ::view-transition-old(root) {
-  animation: paper-out var(--motion-fast) var(--motion-ease) both;
+  transform-origin: 50% 20%;
+  animation: paper-out 220ms var(--motion-ease) both;
 }
 
 ::view-transition-new(root) {
+  transform-origin: 50% 20%;
   animation: paper-in var(--motion-view) var(--motion-ease) both;
 }
 
