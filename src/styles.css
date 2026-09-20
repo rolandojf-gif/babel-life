@@ -246,7 +246,7 @@ body {
 
 .library-index__marks {
   fill: var(--ink);
-  opacity: 0.22;
+  opacity: 0.20;
   shape-rendering: crispEdges;
 }
 
@@ -258,14 +258,19 @@ body {
 .library-index__mark--current {
   fill: var(--oxblood);
   shape-rendering: crispEdges;
-  filter: drop-shadow(0 0 2.5px rgba(110, 31, 39, 0.38));
+  filter: drop-shadow(0 0 2.5px rgba(110, 31, 39, 0.48));
 }
 
-.library-index__bracket,
+.library-index__bracket {
+  fill: none;
+  stroke: var(--oxblood);
+  stroke-width: 1.1;
+}
+
 .library-index__leader {
   fill: none;
   stroke: var(--oxblood);
-  stroke-width: 0.75;
+  stroke-width: 0.85;
 }
 
 .library-index__coordinate {
@@ -299,10 +304,10 @@ body {
   .library-index {
     grid-column: 2;
     grid-row: 1;
-    width: min(22.125rem, 100%);
-    margin-top: calc(0.6875rem * 1.5 + 1rem);
+    width: min(28.75rem, 100%);
+    margin-top: calc(0.6875rem * 1.5 + 0.5rem);
     margin-bottom: 0;
-    justify-self: end;
+    justify-self: center;
   }
 
   .library-index__field {
@@ -319,6 +324,12 @@ body {
 
   .library-index__svg--narrow {
     display: none;
+  }
+
+  .library-index__coordinate {
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: 0.8125rem;
   }
 }
 
@@ -796,58 +807,65 @@ body {
   margin-top: 0.5rem;
 }
 
-.book--spread .book__title {
+.book--spread .book__header {
   order: 3;
-  flex: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 1.25rem;
+  width: 100%;
+  max-width: 52ch;
   margin: 1.25rem 0 0;
+}
+
+.book--spread .book__title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
   font-size: 2.625rem;
   line-height: 1.05;
 }
 
-.book--spread .spread__visual-slot {
-  order: 4;
-  margin-top: 1.5rem;
-}
-
-.book--spread .spread__visual {
-  margin: 0;
+.book--spread .book__visual {
+  flex: none;
   color: var(--oxblood);
+  pointer-events: none;
 }
 
-.book--spread .spread__visual .illustration {
-  width: 3.5rem;
+.book--spread .book__visual .illustration {
+  width: 3.25rem;
   max-width: 100%;
 }
 
-.book--spread .spread__visual-slot .interval {
-  display: block;
-  width: 100%;
-  margin: 0;
-  overflow: visible;
-  color: var(--ink-soft);
-}
-
 .book--spread .already-here {
-  order: 5;
+  order: 4;
   margin-top: 0.75rem;
 }
 
 .book--spread .consulted {
-  order: 6;
+  order: 5;
 }
 
 .book--spread .passage {
-  order: 7;
+  order: 6;
   max-width: 52ch;
-  margin-top: 0;
+  margin-top: 1.5rem;
   font-size: 1.25rem;
   line-height: 1.55;
 }
 
 .book--spread .aftertaste {
-  margin-top: 2rem;
-  padding-left: 0;
+  order: 7;
+  max-width: 44ch;
+  margin: 2.5rem auto 1.5rem;
+  padding: 0;
   border-left: 0;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--oxblood);
+  font-size: 1.25rem;
+  line-height: 1.45;
 }
 
 .book--spread .nearby {
@@ -920,12 +938,22 @@ body {
 
   .book--spread .found,
   .book--spread .shelf-locator,
+  .book--spread .book__header,
   .book--spread .book__title,
-  .book--spread .spread__visual-slot,
   .book--spread .already-here,
   .book--spread .consulted,
-  .book--spread .passage {
+  .book--spread .passage,
+  .book--spread .aftertaste {
     order: 0;
+  }
+
+  .book--spread .spread__recto {
+    max-width: 52ch;
+  }
+
+  .book--spread .book__header {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .book--spread .book__title {
@@ -933,17 +961,18 @@ body {
     font-size: 3rem;
   }
 
-  .book--spread .spread__visual-slot {
-    margin-top: 1.5rem;
-  }
-
-  .book--spread .spread__visual .illustration {
-    width: 4.5rem;
+  .book--spread .book__visual .illustration {
+    width: 3.75rem;
   }
 
   .book--spread .passage {
     margin-top: 2rem;
     font-size: 1.375rem;
+  }
+
+  .book--spread .aftertaste {
+    margin: clamp(2.75rem, 5vw, 4rem) auto 2rem;
+    font-size: 1.3125rem;
   }
 
   .book--0814 .book__title {
@@ -992,11 +1021,6 @@ body {
     grid-row: 2;
     align-self: start;
     margin-top: 2rem;
-  }
-
-  .book--spread > .aftertaste {
-    grid-column: 1;
-    grid-row: 3;
   }
 }
 
@@ -2245,27 +2269,21 @@ body {
   to { opacity: 1; transform: none; filter: none; }
 }
 
-/* Aftertaste: the closing line draws its rule like a signature. */
+/* Aftertaste: the closing echo settles into view. */
 .js-cinematic .book--spread .aftertaste {
-  position: relative;
-  border-left-color: transparent;
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(1.5px);
+  transition:
+    opacity 650ms var(--cinematic-ease) 0.15s,
+    transform 650ms var(--cinematic-ease) 0.15s,
+    filter 650ms var(--cinematic-ease) 0.15s;
 }
 
-.js-cinematic .book--spread .aftertaste::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -2px;
-  width: 2px;
-  background: var(--oxblood);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 700ms var(--cinematic-ease) 0.5s;
-}
-
-.js-cinematic .book--spread .aftertaste.is-in::before {
-  transform: scaleY(1);
+.js-cinematic .book--spread .aftertaste.is-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
 }
 
 /* Nearby volumes: the fork in the Library, arriving as one paired beat with
