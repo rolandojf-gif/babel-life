@@ -169,7 +169,7 @@ function rootsOf(ids: readonly string[]): RootBook[] {
 }
 
 /** The five editorial anchors that always open the wall, in this order. */
-export const PINNED_ROOT_IDS = ['b0007', 'b0038', 'b0006', 'b0068', 'b0031'] as const;
+export const PINNED_ROOT_IDS = ['b0038', 'b0007', 'b0006', 'b0068', 'b0031'] as const;
 
 /**
  * Deal one visit's wall. The five strongest editorial hooks stay fixed at the
