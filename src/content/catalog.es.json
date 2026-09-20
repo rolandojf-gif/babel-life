@@ -1,0 +1,1787 @@
+{
+  "schemaVersion": 3,
+  "wall": {
+    "first": [
+      "b0007",
+      "b0003",
+      "b0031",
+      "b0006",
+      "b0005",
+      "b0008",
+      "b0010",
+      "b0011",
+      "b0012",
+      "b0038",
+      "b0041",
+      "b0044"
+    ],
+    "second": [
+      "b0047",
+      "b0050",
+      "b0053",
+      "b0056",
+      "b0059",
+      "b0062",
+      "b0065",
+      "b0068",
+      "b0071",
+      "b0074",
+      "b0077",
+      "b0080"
+    ]
+  },
+  "books": [
+    {
+      "id": "b0007",
+      "rootId": "b0007",
+      "kind": "root",
+      "icon": "platform",
+      "headline": "DOS SEGUNDOS TARDE",
+      "hook": "pierdes el 08:14 por dos segundos, una desconocida responde a tu queja y vivís juntos treinta y un años.",
+      "title": "El 08:14",
+      "passage": [
+        "Las puertas se cierran cuando llegas. Mascullas: «Mierda». Una mujer sentada en el banco del andén dice: «Puntualidad profesional». Faltan diecinueve minutos para el siguiente tren.",
+        "Treinta y un años después reconoces su llave en la cerradura, el bolso en el suelo, la nevera antes del hola. Ninguno de los dos coincide en el color del banco.",
+        "El libro conserva los dos segundos."
+      ],
+      "aftertaste": "Su llave gira antes del hola.",
+      "neighbors": [
+        {
+          "targetBookId": "b0022",
+          "difference": "Llegas un segundo antes y subes al tren."
+        },
+        {
+          "targetBookId": "b0019",
+          "difference": "Pierdes el tren, pero la desconocida nunca responde."
+        }
+      ]
+    },
+    {
+      "id": "b0022",
+      "rootId": "b0007",
+      "kind": "nearby",
+      "icon": "doorway",
+      "headline": "UN SEGUNDO ANTES",
+      "title": "Un segundo antes",
+      "passage": [
+        "Las puertas siguen abiertas. Subes al 08:14 y te sientas justo encima de las ruedas.",
+        "La mujer sentada en el banco del andén sigue siendo una desconocida. Pasan los años: trabajo, alquiler, otra dirección, otra persona a tu lado en el desayuno.",
+        "En la estación, a veces te paras junto al mismo banco sin saber por qué importa en otro volumen."
+      ],
+      "aftertaste": "Las puertas siguen abiertas para ti.",
+      "neighbors": [
+        {
+          "targetBookId": "b0007",
+          "difference": "Llegas un segundo después, pierdes el tren y conoces a la desconocida."
+        },
+        {
+          "targetBookId": "b0019",
+          "difference": "También pierdes el tren, pero no empieza ninguna conversación."
+        }
+      ]
+    },
+    {
+      "id": "b0019",
+      "rootId": "b0007",
+      "kind": "nearby",
+      "icon": "platform",
+      "headline": "EL MISMO ANDÉN, NINGUNA RESPUESTA",
+      "title": "Sin respuesta",
+      "passage": [
+        "Las puertas se cierran. Mascullas: «Mierda». La mujer sentada en el banco te oye y sigue leyendo.",
+        "Esperáis diecinueve minutos los dos. Os sentáis a dos metros de distancia. Llega el siguiente tren y subís a vagones distintos.",
+        "Treinta y un años después, el libro aún os conserva a los dos. No conserva ninguna llave compartida."
+      ],
+      "aftertaste": "El banco sostiene a dos desconocidos.",
+      "neighbors": [
+        {
+          "targetBookId": "b0007",
+          "difference": "La desconocida responde a tu queja."
+        },
+        {
+          "targetBookId": "b0022",
+          "difference": "Llegas a tiempo y nunca esperas a su lado."
+        }
+      ]
+    },
+    {
+      "id": "b0003",
+      "rootId": "b0003",
+      "kind": "root",
+      "icon": "pitch",
+      "headline": "CUARENTA Y SIETE SEGUNDOS",
+      "hook": "toda tu carrera en el fútbol profesional dura cuarenta y siete segundos, incluye un toque cualquiera y sigue siendo una carrera profesional.",
+      "title": "Cuarenta y siete segundos",
+      "passage": [
+        "A los veintisiete levantan tu número. Saltas al campo, recibes un pase y lo devuelves cinco metros hacia dentro.",
+        "Cuarenta y siete segundos después de entrar, suena el silbato. No vuelves a jugar como profesional.",
+        "El lunes vuelves al turno del almacén. Años después, la camiseta está doblada bajo una caja de alargadores."
+      ],
+      "aftertaste": "Cuarenta y siete segundos cuentan igual.",
+      "neighbors": [
+        {
+          "targetBookId": "b0016",
+          "difference": "Tu carrera profesional dura cuarenta y seis segundos."
+        },
+        {
+          "targetBookId": "b0018",
+          "difference": "Tu carrera profesional dura cuarenta y ocho segundos."
+        }
+      ]
+    },
+    {
+      "id": "b0016",
+      "rootId": "b0003",
+      "kind": "nearby",
+      "icon": "pitch",
+      "headline": "CUARENTA Y SEIS SEGUNDOS",
+      "title": "Cuarenta y seis segundos",
+      "passage": [
+        "Levantan tu número. Saltas al campo. El balón sale hacia ti.",
+        "El silbato suena antes de que llegue. Cuarenta y seis segundos. Ningún toque reglamentario.",
+        "El lunes vuelves al mismo turno del almacén. La misma camiseta espera en la misma caja."
+      ],
+      "aftertaste": "Un segundo elimina el toque.",
+      "neighbors": [
+        {
+          "targetBookId": "b0003",
+          "difference": "El silbato suena un segundo después y tu toque cuenta."
+        },
+        {
+          "targetBookId": "b0018",
+          "difference": "El silbato suena dos segundos más tarde que aquí."
+        }
+      ]
+    },
+    {
+      "id": "b0018",
+      "rootId": "b0003",
+      "kind": "nearby",
+      "icon": "spotlight",
+      "headline": "CUARENTA Y OCHO SEGUNDOS",
+      "title": "Cuarenta y ocho segundos",
+      "passage": [
+        "Levantan tu número. Saltas al campo, devuelves un pase cinco metros hacia dentro y sigues corriendo.",
+        "El silbato suena cuarenta y ocho segundos después de entrar. En ese segundo de más no ocurre nada.",
+        "El lunes vuelves al turno del almacén. La camiseta sigue doblada bajo los alargadores."
+      ],
+      "aftertaste": "En ese segundo de más no ocurre nada.",
+      "neighbors": [
+        {
+          "targetBookId": "b0003",
+          "difference": "Tu carrera dura un segundo menos."
+        },
+        {
+          "targetBookId": "b0016",
+          "difference": "Tu carrera dura dos segundos menos y no incluye ningún toque reglamentario."
+        }
+      ]
+    },
+    {
+      "id": "b0031",
+      "rootId": "b0031",
+      "kind": "root",
+      "icon": "record",
+      "headline": "CINCO MINUTOS DESPUÉS",
+      "hook": "cenas el martes cinco minutos más tarde que en el volumen contiguo y nada cambia en el resto de tu vida.",
+      "title": "La misma cena",
+      "passage": [
+        "El reloj del horno marca las 19:12 cuando te sientas. Pasta, queso rallado, agua en el mismo vaso.",
+        "El miércoles no cambia. Tampoco el trabajo, la revisión de la caldera, el coche que cambias seis años después ni la gente a la que llamas los domingos.",
+        "Aquel martes, la cena fue cinco minutos más tarde."
+      ],
+      "aftertaste": "A las 19:12 aclaras el mismo plato.",
+      "neighbors": [
+        {
+          "targetBookId": "b0032",
+          "difference": "La cena es tres minutos más tarde en vez de cinco."
+        },
+        {
+          "targetBookId": "b0033",
+          "difference": "La cena es a la hora original, pero usas otro tenedor."
+        }
+      ]
+    },
+    {
+      "id": "b0032",
+      "rootId": "b0031",
+      "kind": "nearby",
+      "icon": "record",
+      "headline": "TRES MINUTOS DESPUÉS",
+      "title": "Tres minutos después",
+      "passage": [
+        "El reloj del horno marca las 19:10 cuando te sientas. La misma pasta, el mismo queso rallado, el mismo vaso.",
+        "El miércoles no cambia. Tampoco los años posteriores.",
+        "Este volumen difiere en tres minutos."
+      ],
+      "aftertaste": "A las 19:10 aclaras el mismo plato.",
+      "neighbors": [
+        {
+          "targetBookId": "b0031",
+          "difference": "La cena es cinco minutos más tarde."
+        },
+        {
+          "targetBookId": "b0033",
+          "difference": "La cena es a la hora original, con otro tenedor."
+        }
+      ]
+    },
+    {
+      "id": "b0033",
+      "rootId": "b0031",
+      "kind": "nearby",
+      "icon": "record",
+      "headline": "OTRO TENEDOR",
+      "title": "El otro tenedor",
+      "passage": [
+        "Te sientas a la hora original. El tenedor que tienes en la mano es el otro del cajón, el del mango más plano.",
+        "La cena, el miércoles y cada año posterior siguen igual.",
+        "Después de fregarlo, el tenedor vuelve al cajón."
+      ],
+      "aftertaste": "El mango más plano se seca junto al fregadero.",
+      "neighbors": [
+        {
+          "targetBookId": "b0031",
+          "difference": "Usas el tenedor habitual, pero cenas cinco minutos más tarde."
+        },
+        {
+          "targetBookId": "b0032",
+          "difference": "Usas el tenedor habitual, pero cenas tres minutos más tarde."
+        }
+      ]
+    },
+    {
+      "id": "b0006",
+      "rootId": "b0006",
+      "kind": "root",
+      "icon": "cup",
+      "headline": "UN CENTÍMETRO A LA IZQUIERDA",
+      "hook": "mañana en el desayuno dejas la taza un centímetro más a la izquierda y nada más cambia en tu vida.",
+      "title": "Un jueves cualquiera",
+      "passage": [
+        "Te despiertas a las 07:42, preparas té y dejas la taza un centímetro más a la izquierda para dejar sitio al plato de las tostadas.",
+        "El paquete llega a las once. Respondes a un mensaje a las cuatro. El técnico de la caldera confirma el martes.",
+        "Pasan los años con normalidad. El centímetro nunca llega a importar."
+      ],
+      "aftertaste": "La taza quedó un centímetro a la izquierda.",
+      "neighbors": [
+        {
+          "targetBookId": "b0002",
+          "difference": "La taza se desplaza un milímetro a la izquierda."
+        },
+        {
+          "targetBookId": "b0009",
+          "difference": "La taza se queda exactamente donde estaba."
+        }
+      ]
+    },
+    {
+      "id": "b0002",
+      "rootId": "b0006",
+      "kind": "nearby",
+      "icon": "cup",
+      "headline": "UN MILÍMETRO A LA IZQUIERDA",
+      "title": "Un milímetro a la izquierda",
+      "passage": [
+        "Te despiertas a las 07:42, preparas té y dejas la taza un milímetro más a la izquierda.",
+        "El paquete, el mensaje, la llamada de la caldera y cada año posterior siguen siendo los mismos.",
+        "La Biblioteca conserva el milímetro."
+      ],
+      "aftertaste": "Un milímetro ocupa su propio volumen.",
+      "neighbors": [
+        {
+          "targetBookId": "b0006",
+          "difference": "La taza se desplaza un centímetro a la izquierda."
+        },
+        {
+          "targetBookId": "b0009",
+          "difference": "La taza no se mueve."
+        }
+      ]
+    },
+    {
+      "id": "b0009",
+      "rootId": "b0006",
+      "kind": "nearby",
+      "icon": "cup",
+      "headline": "NINGÚN MOVIMIENTO",
+      "title": "Exactamente donde estaba",
+      "passage": [
+        "Te despiertas a las 07:42, preparas té y dejas la taza exactamente donde estaba antes.",
+        "El paquete llega a las once. El mensaje espera hasta las cuatro. El martes sigue viniendo bien para la caldera.",
+        "Este es el volumen donde la taza no se mueve."
+      ],
+      "aftertaste": "Exactamente donde estaba.",
+      "neighbors": [
+        {
+          "targetBookId": "b0006",
+          "difference": "La taza se desplaza un centímetro a la izquierda."
+        },
+        {
+          "targetBookId": "b0002",
+          "difference": "La taza se desplaza un milímetro a la izquierda."
+        }
+      ]
+    },
+    {
+      "id": "b0005",
+      "rootId": "b0005",
+      "kind": "root",
+      "icon": "speech",
+      "headline": "UN TENEDOR MENOS",
+      "hook": "tienes todos los objetos que tienes ahora excepto un tenedor cualquiera y nada más en tu vida es distinto.",
+      "title": "El tenedor que no tienes",
+      "passage": [
+        "El cajón de los cubiertos contiene un tenedor menos. No queda ningún hueco donde debería estar ni existe el recuerdo de haberlo comprado.",
+        "Tomas las mismas comidas con los otros tenedores. Nadie pregunta por el que falta.",
+        "Los trabajos, las habitaciones, las personas y los años siguen igual."
+      ],
+      "aftertaste": "Un tenedor menos. Todo un volumen.",
+      "neighbors": [
+        {
+          "targetBookId": "b0020",
+          "difference": "El objeto que falta es una cucharilla."
+        },
+        {
+          "targetBookId": "b0034",
+          "difference": "El tenedor existe, pero siempre se guarda en otro cajón."
+        }
+      ]
+    },
+    {
+      "id": "b0020",
+      "rootId": "b0005",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "UNA CUCHARILLA MENOS",
+      "title": "La cucharilla que no tienes",
+      "passage": [
+        "El cajón de los cubiertos contiene cada objeto que conoces excepto una cucharilla.",
+        "El café sabe igual. Los postres se toman con las otras. Nadie nota una ausencia.",
+        "Todo lo demás en esta vida coincide con el volumen contiguo."
+      ],
+      "aftertaste": "La cucharilla sencillamente no está.",
+      "neighbors": [
+        {
+          "targetBookId": "b0005",
+          "difference": "El objeto ausente es un tenedor."
+        },
+        {
+          "targetBookId": "b0034",
+          "difference": "No falta nada, pero un tenedor vive en otro cajón."
+        }
+      ]
+    },
+    {
+      "id": "b0034",
+      "rootId": "b0005",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "EL MISMO TENEDOR, OTRO CAJÓN",
+      "title": "El otro cajón",
+      "passage": [
+        "El tenedor es tuyo. Siempre ha estado en el cajón bajo los paños de cocina en lugar de con los cubiertos.",
+        "Lo usas cuando hace falta y lo devuelves allí sin pensarlo.",
+        "Nada más en el libro es diferente."
+      ],
+      "aftertaste": "El tenedor vuelve al otro cajón.",
+      "neighbors": [
+        {
+          "targetBookId": "b0005",
+          "difference": "Ese tenedor no existe."
+        },
+        {
+          "targetBookId": "b0020",
+          "difference": "En su lugar, no existe una cucharilla."
+        }
+      ]
+    },
+    {
+      "id": "b0008",
+      "rootId": "b0008",
+      "kind": "root",
+      "icon": "letter",
+      "headline": "UNA SOLA LETRA DIFERENTE",
+      "hook": "tu letra es exactamente la tuya, salvo que siempre has trazado la g minúscula de otra manera.",
+      "title": "Tu otra letra",
+      "passage": [
+        "La inclinación es tuya. La presión es tuya. También las mayúsculas apresuradas y la forma en que la línea sube cerca del margen.",
+        "Solo la g minúscula es diferente: un bucle cerrado donde tu otro volumen usa uno abierto.",
+        "Los apuntes de la escuela, las listas de la compra y las firmas alrededor siguen siendo los mismos."
+      ],
+      "aftertaste": "Cada g pertenece a este volumen.",
+      "neighbors": [
+        {
+          "targetBookId": "b0023",
+          "difference": "La letra diferente es la t en vez de la g."
+        },
+        {
+          "targetBookId": "b0035",
+          "difference": "Todas las letras son iguales, pero sostienes el bolígrafo dos milímetros más cerca de la punta."
+        }
+      ]
+    },
+    {
+      "id": "b0023",
+      "rootId": "b0008",
+      "kind": "nearby",
+      "icon": "letter",
+      "headline": "LA T ES DIFERENTE",
+      "title": "Tu otra t",
+      "passage": [
+        "Tu letra coincide con la del volumen contiguo en todas las letras excepto en la t.",
+        "Aquí la barra horizontal queda un poco más alta. Nadie comenta. Nunca comparas las páginas.",
+        "Cada nota que has escrito contiene la diferencia cuando aparece una t."
+      ],
+      "aftertaste": "Una barra más alta tiene su propia estantería.",
+      "neighbors": [
+        {
+          "targetBookId": "b0008",
+          "difference": "La letra diferente es la g."
+        },
+        {
+          "targetBookId": "b0035",
+          "difference": "Las letras coinciden, pero sostienes el bolígrafo de otra manera."
+        }
+      ]
+    },
+    {
+      "id": "b0035",
+      "rootId": "b0008",
+      "kind": "nearby",
+      "icon": "letter",
+      "headline": "LAS MISMAS PALABRAS, OTRO AGARRE",
+      "title": "Dos milímetros más abajo",
+      "passage": [
+        "Cada palabra se ve exactamente como en el volumen contiguo.",
+        "La diferencia es tu mano. Siempre has sostenido el bolígrafo dos milímetros más cerca de la punta.",
+        "Ninguna página escrita lo delata."
+      ],
+      "aftertaste": "El texto es idéntico. La mano, no.",
+      "neighbors": [
+        {
+          "targetBookId": "b0008",
+          "difference": "La forma de sostener el bolígrafo coincide, pero la letra g es diferente."
+        },
+        {
+          "targetBookId": "b0023",
+          "difference": "La forma de sostener el bolígrafo coincide, pero la letra t es diferente."
+        }
+      ]
+    },
+    {
+      "id": "b0010",
+      "rootId": "b0010",
+      "kind": "root",
+      "icon": "screen",
+      "headline": "ESTA FRASE",
+      "hook": "este libro describe cómo abres Babel Life y lees esta frase; el libro contiguo dice que lo cierras una línea antes.",
+      "title": "Este",
+      "passage": [
+        "El libro dice que abres Babel Life, eliges este volumen y lees la frase que habla de leerla.",
+        "Dice que llegas a este párrafo. Nada en el texto lo convierte en una predicción. Es simplemente un relato que puede escribirse y ya está en la estantería.",
+        "El siguiente volumen termina una línea antes."
+      ],
+      "aftertaste": "Este incluye esta línea.",
+      "neighbors": [
+        {
+          "targetBookId": "b0025",
+          "difference": "El relato termina porque cierras el libro una línea antes."
+        },
+        {
+          "targetBookId": "b0026",
+          "difference": "El relato dice que lees la misma frase dos veces."
+        }
+      ]
+    },
+    {
+      "id": "b0025",
+      "rootId": "b0010",
+      "kind": "nearby",
+      "icon": "screen",
+      "headline": "UNA LÍNEA ANTES",
+      "title": "Cerrado una línea antes",
+      "passage": [
+        "El libro dice que abres Babel Life y eliges este volumen.",
+        "Dice que lees el primer párrafo y lo cierras antes de la frase que sigue.",
+        "Esa frase sigue existiendo en el volumen contiguo."
+      ],
+      "aftertaste": "Este relato termina antes de la siguiente línea.",
+      "neighbors": [
+        {
+          "targetBookId": "b0010",
+          "difference": "Continúas una línea más."
+        },
+        {
+          "targetBookId": "b0026",
+          "difference": "Continúas y lees una frase dos veces."
+        }
+      ]
+    },
+    {
+      "id": "b0026",
+      "rootId": "b0010",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "LA MISMA FRASE DOS VECES",
+      "title": "Leída dos veces",
+      "passage": [
+        "El libro dice que abres Babel Life y llegas a esta frase.",
+        "Luego dice que lees la misma frase otra vez.",
+        "Todo alrededor de la repetición es idéntico."
+      ],
+      "aftertaste": "La segunda lectura ocupa su propio volumen.",
+      "neighbors": [
+        {
+          "targetBookId": "b0010",
+          "difference": "Lees la frase una sola vez."
+        },
+        {
+          "targetBookId": "b0025",
+          "difference": "Cierras el libro antes de llegar a ella."
+        }
+      ]
+    },
+    {
+      "id": "b0011",
+      "rootId": "b0011",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "EL MISMO CARÁCTER, 1340",
+      "hook": "naces en 1340 con la misma risa, la misma impaciencia y cosas completamente distintas de las que quejarte.",
+      "title": "Tu firma en 1340",
+      "passage": [
+        "Tienes treinta y ocho años en 1378. Discutes por un mojón de término, leña mojada y un vecino que pide herramientas y no las devuelve.",
+        "Tu risa empieza igual que aquí. Pierdes la paciencia con la misma rapidez.",
+        "No hay coches, teléfonos ni calderas. El temperamento permanece."
+      ],
+      "aftertaste": "La queja es distinta. La impaciencia, no.",
+      "neighbors": [
+        {
+          "targetBookId": "b0027",
+          "difference": "Naces cuarenta metros más allá, en la casa vecina."
+        },
+        {
+          "targetBookId": "b0036",
+          "difference": "Naces en 1341 en lugar de 1340."
+        }
+      ]
+    },
+    {
+      "id": "b0027",
+      "rootId": "b0011",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "LA CASA VECINA",
+      "title": "A cuarenta metros",
+      "passage": [
+        "Naces en 1340 a cuarenta metros de la casa del volumen contiguo.",
+        "La misma risa aparece con otro pan. La misma impaciencia se gasta con otro mojón de término.",
+        "Tu siglo no cambia. Solo se desplaza la casa."
+      ],
+      "aftertaste": "Cuarenta metros cambian la dirección, no el carácter.",
+      "neighbors": [
+        {
+          "targetBookId": "b0011",
+          "difference": "Naces en la casa original."
+        },
+        {
+          "targetBookId": "b0036",
+          "difference": "Naces un año después."
+        }
+      ]
+    },
+    {
+      "id": "b0036",
+      "rootId": "b0011",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "UN AÑO DESPUÉS",
+      "title": "1341",
+      "passage": [
+        "Naces en el mismo lugar, con la misma risa y la misma irritación fácil, un año después.",
+        "La disputa por la tapia llega más tarde. La lluvia, no.",
+        "El libro no necesita ningún motivo para elegir 1341."
+      ],
+      "aftertaste": "Un año tiene su propia vida.",
+      "neighbors": [
+        {
+          "targetBookId": "b0011",
+          "difference": "Naces en 1340."
+        },
+        {
+          "targetBookId": "b0027",
+          "difference": "Naces en 1340, a cuarenta metros."
+        }
+      ]
+    },
+    {
+      "id": "b0012",
+      "rootId": "b0012",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "UN JUEVES DE RESPIRACIÓN",
+      "hook": "este libro registra cada respiración que das un jueves de noviembre, y nada más.",
+      "title": "El libro de la respiración",
+      "passage": [
+        "06:41:12 — inhalación. 06:41:15 — exhalación. Los registros continúan durante el desayuno, el trabajo, las escaleras, el silencio y el sueño.",
+        "No se recoge ninguna conversación. No se explica ningún pensamiento. El libro solo da la respiración y el tiempo.",
+        "A las 23:58:47 hay una exhalación. Luego termina el volumen."
+      ],
+      "aftertaste": "Todo un libro, y solo la respiración.",
+      "neighbors": [
+        {
+          "targetBookId": "b0028",
+          "difference": "La cuarta respiración tras despertar dura 0,3 segundos más."
+        },
+        {
+          "targetBookId": "b0037",
+          "difference": "El libro registra el jueves siguiente en su lugar."
+        }
+      ]
+    },
+    {
+      "id": "b0028",
+      "rootId": "b0012",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "UNA RESPIRACIÓN MÁS LARGA",
+      "title": "Tres décimas de segundo",
+      "passage": [
+        "El registro de respiración coincide con el volumen contiguo hasta la cuarta respiración tras despertar.",
+        "Aquí la inhalación dura 0,3 segundos más.",
+        "Cada marca de tiempo posterior vuelve al mismo ritmo."
+      ],
+      "aftertaste": "Tres décimas de segundo llenan otro volumen.",
+      "neighbors": [
+        {
+          "targetBookId": "b0012",
+          "difference": "La cuarta respiración tiene su duración original."
+        },
+        {
+          "targetBookId": "b0037",
+          "difference": "Todo el registro pertenece al jueves siguiente."
+        }
+      ]
+    },
+    {
+      "id": "b0037",
+      "rootId": "b0012",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "SIETE DÍAS DESPUÉS",
+      "title": "El jueves siguiente",
+      "passage": [
+        "Este libro también contiene solo respiraciones y marcas de tiempo.",
+        "Pertenecen al jueves de la semana siguiente. Catorce intervalos difieren del primer libro.",
+        "No podrías identificarlos sin colocar los volúmenes uno junto al otro."
+      ],
+      "aftertaste": "Catorce diferencias, ninguna recordada.",
+      "neighbors": [
+        {
+          "targetBookId": "b0012",
+          "difference": "El registro de respiración pertenece al jueves anterior."
+        },
+        {
+          "targetBookId": "b0028",
+          "difference": "El jueves anterior difiere solo en 0,3 segundos en una respiración."
+        }
+      ]
+    },
+    {
+      "id": "b0038",
+      "rootId": "b0038",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "NO ESTÁS EN ESTE LIBRO",
+      "hook": "las dos personas que en otra parte son tus padres nunca forman pareja, viven vidas completas y tú no existes.",
+      "title": "Sin ti",
+      "passage": [
+        "Uno de los dos se muda al norte a los veintiséis. El otro se queda. Cada cual forma un hogar con otra persona.",
+        "No hay ninguna silla vacía, ninguna fotografía que falte ni ningún duelo inexplicado. Nadie en el libro te está esperando.",
+        "La vida está completa sin que nadie note tu ausencia."
+      ],
+      "aftertaste": "Nadie en el libro te echa de menos.",
+      "neighbors": [
+        {
+          "targetBookId": "b0039",
+          "difference": "Tus padres se encuentran una vez, hablan dos minutos y no vuelven a verse."
+        },
+        {
+          "targetBookId": "b0040",
+          "difference": "Tus padres se hacen amigos, pero nunca pareja."
+        }
+      ]
+    },
+    {
+      "id": "b0039",
+      "rootId": "b0038",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "SE ENCUENTRAN UNA VEZ",
+      "title": "Dos minutos",
+      "passage": [
+        "Las dos personas que en otra parte son tus padres se encuentran una vez en una cola.",
+        "Hablan durante dos minutos sobre el retraso. Luego se marchan en direcciones opuestas.",
+        "Ambas vidas continúan. Sigues sin estar en el libro."
+      ],
+      "aftertaste": "Dos minutos no bastan para que existas.",
+      "neighbors": [
+        {
+          "targetBookId": "b0038",
+          "difference": "Nunca llegan a conocerse."
+        },
+        {
+          "targetBookId": "b0040",
+          "difference": "Se conocen y siguen siendo amigos."
+        }
+      ]
+    },
+    {
+      "id": "b0040",
+      "rootId": "b0038",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "SIGUEN SIENDO AMIGOS",
+      "title": "Solo amigos",
+      "passage": [
+        "Se conocen, se caen bien y siguen siendo amigos durante cuarenta años.",
+        "Hay cumpleaños, mensajes, cenas de vez en cuando y ningún hogar compartido.",
+        "Nunca apareces. En esa amistad no falta nadie."
+      ],
+      "aftertaste": "Se conocen. Sigues sin existir.",
+      "neighbors": [
+        {
+          "targetBookId": "b0038",
+          "difference": "Nunca se conocen."
+        },
+        {
+          "targetBookId": "b0039",
+          "difference": "Se encuentran una vez y nunca mantienen el contacto."
+        }
+      ]
+    },
+    {
+      "id": "b0041",
+      "rootId": "b0041",
+      "kind": "root",
+      "icon": "cot",
+      "headline": "MEDIO SEGUNDO TARDE",
+      "hook": "tu sombra llega medio segundo después que tú, cada vez que te mueves, durante toda tu vida.",
+      "title": "El retraso de tu sombra",
+      "passage": [
+        "Levantas la taza. Tu sombra levanta su taza medio segundo después.",
+        "En la parada del autobús, en la oficina y en el supermercado sigue cada movimiento con el mismo retraso. Nadie comenta.",
+        "Esta noche apagas la luz de la cocina. La mano oscura llega al interruptor después de tu dedo."
+      ],
+      "aftertaste": "Tu sombra llega la segunda.",
+      "neighbors": [
+        {
+          "targetBookId": "b0042",
+          "difference": "Tu sombra se mueve medio segundo antes que tú."
+        },
+        {
+          "targetBookId": "b0043",
+          "difference": "Tu sombra es sincrónica, pero siempre dos centímetros más corta."
+        }
+      ]
+    },
+    {
+      "id": "b0042",
+      "rootId": "b0041",
+      "kind": "nearby",
+      "icon": "cot",
+      "headline": "MEDIO SEGUNDO ANTES",
+      "title": "Antes que tú",
+      "passage": [
+        "La sombra de tu mano avanza hacia la taza medio segundo antes que tu mano.",
+        "En el trabajo se acerca al archivador antes de que lo abras. Nadie comenta.",
+        "Esta noche la sombra toca primero el interruptor de la luz."
+      ],
+      "aftertaste": "El dedo oscuro llega primero.",
+      "neighbors": [
+        {
+          "targetBookId": "b0041",
+          "difference": "Tu sombra te sigue con medio segundo de retraso."
+        },
+        {
+          "targetBookId": "b0043",
+          "difference": "Tu sombra se mueve contigo, pero mide dos centímetros menos."
+        }
+      ]
+    },
+    {
+      "id": "b0043",
+      "rootId": "b0041",
+      "kind": "nearby",
+      "icon": "cot",
+      "headline": "DOS CENTÍMETROS MÁS CORTA",
+      "title": "La sombra más corta",
+      "passage": [
+        "Tu sombra se mueve exactamente cuando te mueves tú.",
+        "Bajo cualquier luz termina dos centímetros antes de lo que dicta la geometría. Nadie la mide.",
+        "Esta tarde a la pared del pasillo le faltan esos mismos dos centímetros."
+      ],
+      "aftertaste": "El contorno termina antes.",
+      "neighbors": [
+        {
+          "targetBookId": "b0041",
+          "difference": "La longitud es correcta, pero la sombra te sigue con retraso."
+        },
+        {
+          "targetBookId": "b0042",
+          "difference": "La longitud es correcta, pero la sombra se mueve antes."
+        }
+      ]
+    },
+    {
+      "id": "b0044",
+      "rootId": "b0044",
+      "kind": "root",
+      "icon": "calendar",
+      "headline": "OJOS CERRADOS SIEMPRE",
+      "hook": "en todas las fotos que te hacen a partir de los treinta años, sales con los ojos cerrados.",
+      "title": "Ojos cerrados en cada foto",
+      "passage": [
+        "Cumpleaños, fotomatón para el pasaporte, cena de trabajo, playa, boda. A partir de los treinta, cada foto capta el parpadeo.",
+        "La gente bromea con eso unos años y luego lo deja. La cámara cambia. El resultado, no.",
+        "Tu vida fuera de las fotos es ordinaria."
+      ],
+      "aftertaste": "Cada obturador encuentra el mismo parpadeo.",
+      "neighbors": [
+        {
+          "targetBookId": "b0045",
+          "difference": "Una persona concreta puede fotografiarte con los ojos abiertos."
+        },
+        {
+          "targetBookId": "b0046",
+          "difference": "Siempre tienes los ojos abiertos, pero miras dos metros a la izquierda de la cámara."
+        }
+      ]
+    },
+    {
+      "id": "b0045",
+      "rootId": "b0044",
+      "kind": "nearby",
+      "icon": "calendar",
+      "headline": "UNA PERSONA ROMPE LA REGLA",
+      "title": "Una persona con la cámara",
+      "passage": [
+        "En todas las fotos a partir de los treinta sales con los ojos cerrados, salvo en las que hace una persona.",
+        "Su móvil, una cámara antigua, una cámara prestada: siempre sales con los ojos abiertos.",
+        "Ninguna otra condición cambia."
+      ],
+      "aftertaste": "Solo una persona te saca con los ojos abiertos.",
+      "neighbors": [
+        {
+          "targetBookId": "b0044",
+          "difference": "Nadie rompe la regla del parpadeo."
+        },
+        {
+          "targetBookId": "b0046",
+          "difference": "Mantienes los ojos abiertos, pero la mirada esquiva siempre la cámara."
+        }
+      ]
+    },
+    {
+      "id": "b0046",
+      "rootId": "b0044",
+      "kind": "nearby",
+      "icon": "calendar",
+      "headline": "MIRANDO SIEMPRE A LA IZQUIERDA",
+      "title": "Dos metros a la izquierda",
+      "passage": [
+        "Sales con los ojos abiertos en todas las fotos.",
+        "También están fijos en un punto exactamente dos metros a la izquierda de la cámara, incluso cuando allí no hay nada visible.",
+        "Nadie en el libro investiga."
+      ],
+      "aftertaste": "La cámara nunca está donde miras.",
+      "neighbors": [
+        {
+          "targetBookId": "b0044",
+          "difference": "Sales con los ojos cerrados."
+        },
+        {
+          "targetBookId": "b0045",
+          "difference": "Solo una persona puede tomar una foto normal."
+        }
+      ]
+    },
+    {
+      "id": "b0047",
+      "rootId": "b0047",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "MUERTE EN 2019",
+      "hook": "el libro dice que moriste en 2019 y también dice que estás leyendo esta frase en 2026.",
+      "title": "Ya muerto",
+      "passage": [
+        "El 4 de mayo de 2019 el libro registra tu muerte a las 06:18 y tu funeral seis días después.",
+        "Las páginas continúan: un grifo que gotea en 2022, unos zapatos devueltos en 2024, el desayuno en 2025.",
+        "En 2026 registra cómo abres Babel Life y lees la frase que dice que moriste."
+      ],
+      "aftertaste": "El siguiente párrafo trata del desayuno.",
+      "neighbors": [
+        {
+          "targetBookId": "b0048",
+          "difference": "La contradicción empieza la mañana siguiente a la muerte registrada."
+        },
+        {
+          "targetBookId": "b0049",
+          "difference": "El funeral permanece, pero la muerte en sí nunca se registra."
+        }
+      ]
+    },
+    {
+      "id": "b0048",
+      "rootId": "b0047",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "DESAYUNO TRAS LA MUERTE",
+      "title": "La mañana siguiente",
+      "passage": [
+        "El libro registra tu muerte el 4 de mayo de 2019.",
+        "El 5 de mayo te despiertas a las 07:11, quemas las tostadas y te vas a trabajar. Nadie menciona la página anterior.",
+        "La muerte sigue impresa donde estaba."
+      ],
+      "aftertaste": "Las tostadas quemadas vienen después de la muerte.",
+      "neighbors": [
+        {
+          "targetBookId": "b0047",
+          "difference": "La contradicción continúa hasta 2026."
+        },
+        {
+          "targetBookId": "b0049",
+          "difference": "El funeral queda registrado sin ninguna página de muerte."
+        }
+      ]
+    },
+    {
+      "id": "b0049",
+      "rootId": "b0047",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "EL FUNERAL PERMANECE",
+      "title": "Sin página de muerte",
+      "passage": [
+        "El libro registra tu funeral el 10 de mayo de 2019.",
+        "No hay ninguna página anterior que recoja una muerte. El 11 de mayo compras leche y respondes a dos mensajes.",
+        "El funeral se queda entre el jueves y el sábado."
+      ],
+      "aftertaste": "El funeral no tiene ninguna muerte antes.",
+      "neighbors": [
+        {
+          "targetBookId": "b0047",
+          "difference": "La muerte se registra seis días antes del funeral."
+        },
+        {
+          "targetBookId": "b0048",
+          "difference": "La muerte se registra y te despiertas a la mañana siguiente."
+        }
+      ]
+    },
+    {
+      "id": "b0050",
+      "rootId": "b0050",
+      "kind": "root",
+      "icon": "rain",
+      "headline": "UN DESCONOCIDO DIBUJA TU COCINA",
+      "hook": "alguien a quien nunca vas a conocer guarda en una caja de zapatos un dibujo exacto de tu cocina.",
+      "title": "El dibujo exacto",
+      "passage": [
+        "En otra ciudad, un desconocido tiene un dibujo a lápiz de tu cocina: la tostadora, el azulejo desportillado, la taza junto al fregadero.",
+        "Nunca ha visto esa habitación. Nunca llegáis a conoceros. El dibujo sigue en una caja de zapatos bajo la ropa de invierno.",
+        "Nada une las dos vidas."
+      ],
+      "aftertaste": "Tu azulejo desportillado está en la caja de zapatos de otra persona.",
+      "neighbors": [
+        {
+          "targetBookId": "b0051",
+          "difference": "El dibujo es exacto salvo que la tostadora es del color equivocado."
+        },
+        {
+          "targetBookId": "b0052",
+          "difference": "Tú también guardas un dibujo exacto de la cocina del desconocido."
+        }
+      ]
+    },
+    {
+      "id": "b0051",
+      "rootId": "b0050",
+      "kind": "nearby",
+      "icon": "rain",
+      "headline": "UN DETALLE EQUIVOCADO",
+      "title": "La tostadora equivocada",
+      "passage": [
+        "El dibujo del desconocido sigue mostrando tu cocina.",
+        "El azulejo desportillado, el fregadero y la taza son exactos. La tostadora es azul en lugar de negra.",
+        "Nunca llegas a ver el dibujo."
+      ],
+      "aftertaste": "Solo la tostadora discrepa.",
+      "neighbors": [
+        {
+          "targetBookId": "b0050",
+          "difference": "El color de la tostadora es correcto."
+        },
+        {
+          "targetBookId": "b0052",
+          "difference": "Los dos tenéis dibujos exactos de la cocina del otro."
+        }
+      ]
+    },
+    {
+      "id": "b0052",
+      "rootId": "b0050",
+      "kind": "nearby",
+      "icon": "rain",
+      "headline": "TÚ TAMBIÉN TIENES SU COCINA",
+      "title": "Las dos cajas de zapatos",
+      "passage": [
+        "El desconocido guarda un dibujo exacto de tu cocina.",
+        "En tu propio armario hay un dibujo de la suya: hervidor amarillo, ventana estrecha, cuenco sobre el radiador. No sabes de quién es esa habitación.",
+        "Ninguno de los dos llega a conocer al otro."
+      ],
+      "aftertaste": "Dos cocinas. Dos cajas de zapatos. Ningún encuentro.",
+      "neighbors": [
+        {
+          "targetBookId": "b0050",
+          "difference": "Solo el desconocido tiene un dibujo."
+        },
+        {
+          "targetBookId": "b0051",
+          "difference": "Su dibujo contiene un detalle equivocado."
+        }
+      ]
+    },
+    {
+      "id": "b0053",
+      "rootId": "b0053",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "SOLO UNO DE LOS DOS PUEDE RECORDAR",
+      "hook": "cada momento que compartís solo puede recordarlo uno de los dos; cuando uno conserva el recuerdo, el otro solo conserva los hechos.",
+      "title": "Un recuerdo entre los dos",
+      "passage": [
+        "Tu pareja recuerda la boda: la sala calurosa, el botón que faltaba, la risa durante los votos. Sabes que esas cosas pasaron y no recuerdas ninguna.",
+        "Tú recuerdas unas vacaciones lluviosas que solo conoce por las fotos.",
+        "Los años compartidos se dividen así. Ningún recuerdo pertenece a los dos."
+      ],
+      "aftertaste": "Los hechos son compartidos. Los recuerdos, no.",
+      "neighbors": [
+        {
+          "targetBookId": "b0054",
+          "difference": "El recuerdo de la boda, en cambio, es tuyo."
+        },
+        {
+          "targetBookId": "b0055",
+          "difference": "Contar un recuerdo compartido lo transfiere a quien escucha."
+        }
+      ]
+    },
+    {
+      "id": "b0054",
+      "rootId": "b0053",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "RECUERDAS LA BODA",
+      "title": "La boda es tuya",
+      "passage": [
+        "En este volumen, la boda es tuya.",
+        "Recuerdas la sala calurosa, el botón que faltaba y la risa durante los votos. Tu pareja conoce los hechos y no tiene ninguna imagen del día.",
+        "Los demás recuerdos compartidos se dividen como antes."
+      ],
+      "aftertaste": "Esta vez, la boda se queda contigo.",
+      "neighbors": [
+        {
+          "targetBookId": "b0053",
+          "difference": "El recuerdo de la boda pertenece a tu pareja."
+        },
+        {
+          "targetBookId": "b0055",
+          "difference": "Los recuerdos pueden transferirse al decirlos en voz alta."
+        }
+      ]
+    },
+    {
+      "id": "b0055",
+      "rootId": "b0053",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "DECIRLO Y PERDERLO",
+      "title": "Contado, transferido",
+      "passage": [
+        "Recuerdas las vacaciones lluviosas hasta que las describes en voz alta.",
+        "A medida que tu pareja empieza a ver el balcón mojado y la toalla roja, las imágenes te abandonan. Quedan los hechos.",
+        "A partir de entonces, cada recuerdo compartido puede transferirse al contarlo."
+      ],
+      "aftertaste": "Quien escucha conserva lo que pierde quien habla.",
+      "neighbors": [
+        {
+          "targetBookId": "b0053",
+          "difference": "Los recuerdos se dividen, pero nunca se transfieren."
+        },
+        {
+          "targetBookId": "b0054",
+          "difference": "La boda es tuya, sin transferencia."
+        }
+      ]
+    },
+    {
+      "id": "b0056",
+      "rootId": "b0056",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "UN DÍA OCURRIÓ DOS VECES",
+      "hook": "un martes cualquiera de tu vida ocurrió dos veces —lo viviste igual las dos veces— y el libro recoge los dos.",
+      "title": "El martes de más",
+      "passage": [
+        "El libro recoge dos veces el martes 8 de octubre.",
+        "En ambas ocasiones te despiertas a las 06:47, preparas té, pierdes el mismo autobús, trabajas hasta las cinco, compras detergente y ves medio documental.",
+        "El miércoles solo llega una vez. Recuerdas un solo martes."
+      ],
+      "aftertaste": "El libro conserva ambos martes.",
+      "neighbors": [
+        {
+          "targetBookId": "b0057",
+          "difference": "El segundo martes solo difiere en que el hervidor hierve treinta segundos después."
+        },
+        {
+          "targetBookId": "b0058",
+          "difference": "El mismo martes ocurre tres veces."
+        }
+      ]
+    },
+    {
+      "id": "b0057",
+      "rootId": "b0056",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "TREINTA SEGUNDOS DESPUÉS",
+      "title": "El segundo hervidor",
+      "passage": [
+        "El martes 8 de octubre aparece dos veces.",
+        "La segunda copia es idéntica, salvo que el hervidor se apaga treinta segundos más tarde. Sigues perdiendo el mismo autobús.",
+        "El miércoles solo llega una vez."
+      ],
+      "aftertaste": "Treinta segundos no aparecen en ninguna otra parte.",
+      "neighbors": [
+        {
+          "targetBookId": "b0056",
+          "difference": "Ambos martes son idénticos."
+        },
+        {
+          "targetBookId": "b0058",
+          "difference": "El martes ocurre tres veces."
+        }
+      ]
+    },
+    {
+      "id": "b0058",
+      "rootId": "b0056",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "TRES MARTES",
+      "title": "Martes, martes, martes",
+      "passage": [
+        "El libro recoge el martes 8 de octubre tres veces seguidas.",
+        "Cada copia contiene el mismo té, el mismo autobús perdido, la misma jornada laboral, el mismo detergente y el mismo medio documental.",
+        "Tras el tercero, llega el miércoles."
+      ],
+      "aftertaste": "Recuerdas un solo martes.",
+      "neighbors": [
+        {
+          "targetBookId": "b0056",
+          "difference": "El martes ocurre dos veces."
+        },
+        {
+          "targetBookId": "b0057",
+          "difference": "El martes ocurre dos veces con una diferencia de treinta segundos."
+        }
+      ]
+    },
+    {
+      "id": "b0059",
+      "rootId": "b0059",
+      "kind": "root",
+      "icon": "cup",
+      "headline": "LA CASA DE LA PEQUEÑA SUERTE",
+      "hook": "heredas una casa donde los vasos caen siempre de pie, mientras que las facturas, las malas noticias y todo lo importante siguen con normalidad.",
+      "title": "La herencia de la pequeña suerte",
+      "passage": [
+        "El primer vaso se te resbala al desembalar y cae de pie. Lo mismo pasa con el segundo, meses después. Los platos se tambalean y se asientan. Las llaves caen donde puedes verlas.",
+        "El tejado sigue teniendo goteras. Las facturas siguen llegando. La gente sigue enfermando.",
+        "La casa solo tiene suerte con las cosas pequeñas."
+      ],
+      "aftertaste": "El vaso vuelve a caer de pie.",
+      "neighbors": [
+        {
+          "targetBookId": "b0060",
+          "difference": "La pequeña suerte solo funciona con los objetos que se les caen a las visitas."
+        },
+        {
+          "targetBookId": "b0061",
+          "difference": "La pequeña suerte solo funciona en la cocina."
+        }
+      ]
+    },
+    {
+      "id": "b0060",
+      "rootId": "b0059",
+      "kind": "nearby",
+      "icon": "cup",
+      "headline": "SOLO PARA LAS VISITAS",
+      "title": "Solo los objetos de las visitas",
+      "passage": [
+        "Tus propios vasos caen de forma normal.",
+        "A una visita se le cae uno y cae de pie. Sus llaves rebotan a la vista. Su móvil esquiva la esquina dura de la mesa.",
+        "La casa solo salva los objetos que no te pertenecen."
+      ],
+      "aftertaste": "Tu vaso aún puede romperse.",
+      "neighbors": [
+        {
+          "targetBookId": "b0059",
+          "difference": "La pequeña suerte funciona para todos en la casa."
+        },
+        {
+          "targetBookId": "b0061",
+          "difference": "La pequeña suerte depende de la habitación en vez de la persona."
+        }
+      ]
+    },
+    {
+      "id": "b0061",
+      "rootId": "b0059",
+      "kind": "nearby",
+      "icon": "doorway",
+      "headline": "LA SUERTE SE DETIENE EN LA PUERTA",
+      "title": "Solo la cocina",
+      "passage": [
+        "Dentro de la cocina, los vasos caen de pie y las llaves caídas quedan a la vista.",
+        "Lleva esos mismos objetos al pasillo y caen con normalidad.",
+        "El umbral es toda la regla."
+      ],
+      "aftertaste": "La suerte termina en la puerta de la cocina.",
+      "neighbors": [
+        {
+          "targetBookId": "b0059",
+          "difference": "La pequeña suerte funciona en toda la casa."
+        },
+        {
+          "targetBookId": "b0060",
+          "difference": "La pequeña suerte sigue a las visitas en vez de a una habitación."
+        }
+      ]
+    },
+    {
+      "id": "b0062",
+      "rootId": "b0062",
+      "kind": "root",
+      "icon": "photograph",
+      "headline": "EL DÍA QUE FALTA",
+      "hook": "tu vida está completa salvo que el 11 de junio no ocurre en ningún año: el libro pasa del 10 de junio al 12 de junio sin comentarios.",
+      "title": "11 de junio",
+      "passage": [
+        "A los nueve años, la página de la agenda posterior al 10 de junio es el 12 de junio. A los veintitrés, el calendario del trabajo hace lo mismo.",
+        "Los cumpleaños, el alquiler, los trenes y los veranos continúan con normalidad.",
+        "Cada año, el libro pasa del 10 de junio al 12 de junio."
+      ],
+      "aftertaste": "El 12 de junio sigue al 10 de junio.",
+      "neighbors": [
+        {
+          "targetBookId": "b0063",
+          "difference": "El 11 de junio existe, pero el libro no contiene ningún suceso en él."
+        },
+        {
+          "targetBookId": "b0064",
+          "difference": "El 11 de junio existe en algunos años y en otros no."
+        }
+      ]
+    },
+    {
+      "id": "b0063",
+      "rootId": "b0062",
+      "kind": "nearby",
+      "icon": "photograph",
+      "headline": "UN 11 DE JUNIO EN BLANCO",
+      "title": "El día sin recuerdo",
+      "passage": [
+        "El 11 de junio aparece en todos los calendarios.",
+        "El libro imprime la fecha y luego deja en blanco el espacio de debajo. El 10 y el 12 de junio contienen sucesos ordinarios.",
+        "Ocurre todos los años."
+      ],
+      "aftertaste": "La fecha está ahí. El día está en blanco.",
+      "neighbors": [
+        {
+          "targetBookId": "b0062",
+          "difference": "El 11 de junio no ocurre en absoluto."
+        },
+        {
+          "targetBookId": "b0064",
+          "difference": "El 11 de junio solo aparece en algunos años."
+        }
+      ]
+    },
+    {
+      "id": "b0064",
+      "rootId": "b0062",
+      "kind": "nearby",
+      "icon": "photograph",
+      "headline": "SOLO ALGUNOS AÑOS",
+      "title": "Junio intermitente",
+      "passage": [
+        "El 11 de junio existe cuando tienes seis, siete y diez años. Falta a los ocho y a los nueve.",
+        "Más adelante vuelve, desaparece de nuevo y regresa otra vez.",
+        "El libro no da ninguna pauta."
+      ],
+      "aftertaste": "Algunos años tienen un día más.",
+      "neighbors": [
+        {
+          "targetBookId": "b0062",
+          "difference": "El 11 de junio falta todos los años."
+        },
+        {
+          "targetBookId": "b0063",
+          "difference": "El 11 de junio existe todos los años pero no contiene ningún suceso registrado."
+        }
+      ]
+    },
+    {
+      "id": "b0065",
+      "rootId": "b0065",
+      "kind": "root",
+      "icon": "mirror",
+      "headline": "UNA HABITACIÓN QUE NUNCA EXISTIÓ",
+      "hook": "recuerdas una habitación en la que nunca has entrado —su sillón verde, su luz amarilla y la mesa rayada— con más claridad que las habitaciones donde has vivido.",
+      "title": "La habitación que recuerdas",
+      "passage": [
+        "La habitación tiene un sillón verde junto a la ventana, luz amarilla y un rayón en diagonal que cruza la mesa.",
+        "Recuerdas dónde se atasca la puerta y el olor de la cocina al otro lado.",
+        "Ninguna casa en la que has entrado contiene esa habitación. El recuerdo permanece."
+      ],
+      "aftertaste": "Recuerdas el rayón con más claridad.",
+      "neighbors": [
+        {
+          "targetBookId": "b0066",
+          "difference": "Se recuerda la misma habitación, pero el rayón va en sentido contrario."
+        },
+        {
+          "targetBookId": "b0067",
+          "difference": "A los cuarenta entras en la habitación exactamente como la recordabas."
+        }
+      ]
+    },
+    {
+      "id": "b0066",
+      "rootId": "b0065",
+      "kind": "nearby",
+      "icon": "mirror",
+      "headline": "EL RAYÓN EN SENTIDO CONTRARIO",
+      "title": "El otro rayón",
+      "passage": [
+        "El sillón verde, la luz amarilla y la puerta que se atasca son iguales.",
+        "Solo el rayón difiere. Aquí va desde la esquina izquierda del fondo hacia ti.",
+        "La habitación sigue existiendo solo en el recuerdo."
+      ],
+      "aftertaste": "Un solo rayón separa los recuerdos.",
+      "neighbors": [
+        {
+          "targetBookId": "b0065",
+          "difference": "El rayón va en la dirección contraria."
+        },
+        {
+          "targetBookId": "b0067",
+          "difference": "Al final encuentras la habitación recordada."
+        }
+      ]
+    },
+    {
+      "id": "b0067",
+      "rootId": "b0065",
+      "kind": "nearby",
+      "icon": "mirror",
+      "headline": "LA HABITACIÓN ESTÁ AHÍ",
+      "title": "Encontrada a los cuarenta",
+      "passage": [
+        "A los cuarenta entras en un edificio desconocido y encuentras el sillón verde, la luz amarilla y la mesa rayada.",
+        "La puerta se atasca exactamente donde recordabas que lo hacía.",
+        "Nada en el libro explica por qué recordaste la habitación primero."
+      ],
+      "aftertaste": "El recuerdo llegó antes que la habitación.",
+      "neighbors": [
+        {
+          "targetBookId": "b0065",
+          "difference": "Nunca encuentras la habitación recordada."
+        },
+        {
+          "targetBookId": "b0066",
+          "difference": "El rayón recordado va en sentido contrario."
+        }
+      ]
+    },
+    {
+      "id": "b0068",
+      "rootId": "b0068",
+      "kind": "root",
+      "icon": "speech",
+      "headline": "EL LIBRO CONTIGUO DICE A LA DERECHA",
+      "hook": "este libro dice que el miércoles giraste a la izquierda; el libro contiguo dice que a la derecha; ambos dicen que llegaste al mismo escritorio a las 09:04.",
+      "title": "El desacuerdo del miércoles",
+      "passage": [
+        "A las 08:51 sales de casa. Al llegar a la esquina, este volumen dice a la izquierda.",
+        "Pasas por delante de la farmacia, cruzas en el semáforo y te sientas en el escritorio a las 09:04.",
+        "El volumen contiguo dice a la derecha. Da la misma hora de llegada."
+      ],
+      "aftertaste": "Ambos libros terminan el trayecto a las 09:04.",
+      "neighbors": [
+        {
+          "targetBookId": "b0069",
+          "difference": "Giras a la derecha y aun así llegas a las 09:04."
+        },
+        {
+          "targetBookId": "b0070",
+          "difference": "El libro dice que nunca sales de casa y aun así te sitúa en el escritorio a las 09:04."
+        }
+      ]
+    },
+    {
+      "id": "b0069",
+      "rootId": "b0068",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "A LA DERECHA, MISMA LLEGADA",
+      "title": "Girar a la derecha",
+      "passage": [
+        "A las 08:51 sales de casa. Al llegar a la esquina, este volumen dice a la derecha.",
+        "Pasas junto al buzón y la tienda estrecha. A las 09:04 te sientas en el mismo escritorio.",
+        "El otro libro insiste en que fuiste por la izquierda."
+      ],
+      "aftertaste": "Por la derecha también se llega a las 09:04.",
+      "neighbors": [
+        {
+          "targetBookId": "b0068",
+          "difference": "Giras a la izquierda."
+        },
+        {
+          "targetBookId": "b0070",
+          "difference": "Nunca sales de casa y aun así constas en el escritorio."
+        }
+      ]
+    },
+    {
+      "id": "b0070",
+      "rootId": "b0068",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "NUNCA SALISTE DE CASA",
+      "title": "En el escritorio de todos modos",
+      "passage": [
+        "El libro dice que te quedas en casa toda la mañana.",
+        "También dice que a las 09:04 te sientas en el mismo escritorio de la oficina descrito en los otros dos volúmenes.",
+        "Ningún trayecto une las dos frases."
+      ],
+      "aftertaste": "Casa y escritorio comparten las 09:04.",
+      "neighbors": [
+        {
+          "targetBookId": "b0068",
+          "difference": "El libro describe un trayecto girando a la izquierda hasta el escritorio."
+        },
+        {
+          "targetBookId": "b0069",
+          "difference": "El libro describe un trayecto girando a la derecha hasta el escritorio."
+        }
+      ]
+    },
+    {
+      "id": "b0071",
+      "rootId": "b0071",
+      "kind": "root",
+      "icon": "paths",
+      "headline": "UNA PALABRA A LOS CATORCE",
+      "hook": "a los catorce años dices «quizá» en vez de «probablemente» en una frase que nadie recuerda, y el resto de tu vida es idéntico.",
+      "title": "Dijiste quizá",
+      "passage": [
+        "Cerca de la verja de la escuela alguien pregunta si lloverá antes de llegar a casa. Dices: «Quizá».",
+        "Vuelves a casa andando, cenas lo mismo y olvidas la conversación.",
+        "Nadie recuerda la palabra. El libro sí."
+      ],
+      "aftertaste": "Este volumen contiene «quizá».",
+      "neighbors": [
+        {
+          "targetBookId": "b0072",
+          "difference": "Dices «tal vez» en su lugar."
+        },
+        {
+          "targetBookId": "b0073",
+          "difference": "Dices «probablemente»; la otra persona responde «quizá»."
+        }
+      ]
+    },
+    {
+      "id": "b0072",
+      "rootId": "b0071",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "UNA PALABRA DISTINTA",
+      "title": "Dijiste tal vez",
+      "passage": [
+        "Cerca de la verja de la escuela alguien pregunta si lloverá. Dices: «Tal vez».",
+        "Siguen la misma cena, los mismos deberes y la misma vida posterior.",
+        "Este volumen contiene «tal vez»."
+      ],
+      "aftertaste": "Una sola palabra ocupa otro libro.",
+      "neighbors": [
+        {
+          "targetBookId": "b0071",
+          "difference": "Dices «quizá» en su lugar."
+        },
+        {
+          "targetBookId": "b0073",
+          "difference": "Dices «probablemente» y oyes «quizá» como respuesta."
+        }
+      ]
+    },
+    {
+      "id": "b0073",
+      "rootId": "b0071",
+      "kind": "nearby",
+      "icon": "paths",
+      "headline": "LA PALABRA PASA AL OTRO",
+      "title": "La otra persona dijo quizá",
+      "passage": [
+        "Cerca de la verja de la escuela alguien pregunta si lloverá. Dices: «Probablemente». Responde: «Quizá».",
+        "El resto de la conversación desaparece del recuerdo.",
+        "La misma palabra existe en el libro, dicha por la otra persona."
+      ],
+      "aftertaste": "La palabra cambia de boca.",
+      "neighbors": [
+        {
+          "targetBookId": "b0071",
+          "difference": "Eres tú quien dice «quizá»."
+        },
+        {
+          "targetBookId": "b0072",
+          "difference": "Dices «tal vez» y no recibes ninguna respuesta con esa palabra."
+        }
+      ]
+    },
+    {
+      "id": "b0074",
+      "rootId": "b0074",
+      "kind": "root",
+      "icon": "speech",
+      "headline": "CUARENTA AÑOS, NINGUNA CASA",
+      "hook": "durante cuarenta años hablas cada tarde a través de la pared; una reforma la derriba y deja a la vista un descampado donde debería estar la otra casa.",
+      "title": "La voz a través de la pared",
+      "passage": [
+        "A las siete golpeas la pared. La voz responde con las rodillas, el tiempo, una sobrina y quejas por el aparcamiento.",
+        "Esto sigue así durante cuarenta años.",
+        "Los albañiles derriban la pared para arreglar las humedades. Al otro lado hay un descampado. Según los registros, allí nunca hubo una casa contigua."
+      ],
+      "aftertaste": "A las siete solo hay un descampado.",
+      "neighbors": [
+        {
+          "targetBookId": "b0075",
+          "difference": "La voz continúa después de derribar la pared."
+        },
+        {
+          "targetBookId": "b0076",
+          "difference": "La voz nunca te oye; tú solo escuchas."
+        }
+      ]
+    },
+    {
+      "id": "b0075",
+      "rootId": "b0074",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "LA VOZ CONTINÚA",
+      "title": "Voz sin pared",
+      "passage": [
+        "La pared ya no está. El descampado empieza tras la nueva ventana.",
+        "A las siete sigues diciendo: «Bien». La voz sigue respondiendo con las rodillas, el tiempo y el aparcamiento.",
+        "Ahora miras hacia el este cuando hablas."
+      ],
+      "aftertaste": "La pared nunca hizo falta.",
+      "neighbors": [
+        {
+          "targetBookId": "b0074",
+          "difference": "La voz se detiene cuando derriban la pared."
+        },
+        {
+          "targetBookId": "b0076",
+          "difference": "La voz nunca oye tu parte de la conversación."
+        }
+      ]
+    },
+    {
+      "id": "b0076",
+      "rootId": "b0074",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "NUNCA TE OYE",
+      "title": "Solo escuchar",
+      "passage": [
+        "Durante cuarenta años, la voz llega a través de la pared a las siete.",
+        "Respondes. Ninguna frase reacciona jamás a las tuyas. Las pausas caen en su sitio de todos modos.",
+        "Cuando derriban la pared, la voz se detiene."
+      ],
+      "aftertaste": "Llevabas tiempo respondiendo a solas.",
+      "neighbors": [
+        {
+          "targetBookId": "b0074",
+          "difference": "La voz te oye y te responde."
+        },
+        {
+          "targetBookId": "b0075",
+          "difference": "La voz te oye y continúa sin la pared."
+        }
+      ]
+    },
+    {
+      "id": "b0077",
+      "rootId": "b0077",
+      "kind": "root",
+      "icon": "table",
+      "headline": "UN CAJÓN, CINCUENTA AÑOS",
+      "hook": "un cajón de la cocina de la casa donde te criaste permanece cerrado durante cincuenta años, y este libro nunca te dice qué hay dentro.",
+      "title": "La puerta que nunca abriste",
+      "passage": [
+        "El cajón está debajo de los cubiertos. Todo el mundo usa la cocina. Nadie lo abre.",
+        "Cambia la pintura, cambian los electrodomésticos, la gente se marcha y regresa. El tirador acumula los mismos pequeños rasguños.",
+        "Al cabo de cincuenta años el libro termina con el cajón aún cerrado."
+      ],
+      "aftertaste": "Este volumen no lo abre.",
+      "neighbors": [
+        {
+          "targetBookId": "b0078",
+          "difference": "El cajón se abre una vez en el año treinta y siete."
+        },
+        {
+          "targetBookId": "b0079",
+          "difference": "La familia nunca lo abre; el nuevo propietario lo abre en la primera hora."
+        }
+      ]
+    },
+    {
+      "id": "b0078",
+      "rootId": "b0077",
+      "kind": "nearby",
+      "icon": "table",
+      "headline": "AÑO TREINTA Y SIETE",
+      "title": "Abierto una sola vez",
+      "passage": [
+        "Durante treinta y siete años nadie abre el cajón de la cocina.",
+        "Entonces alguien tira de él, mira dentro durante dos segundos y lo cierra. El libro no dice qué vio.",
+        "Permanece cerrado durante los trece años restantes."
+      ],
+      "aftertaste": "Dos segundos no revelan el contenido.",
+      "neighbors": [
+        {
+          "targetBookId": "b0077",
+          "difference": "El cajón nunca se abre."
+        },
+        {
+          "targetBookId": "b0079",
+          "difference": "Solo el nuevo propietario lo abre."
+        }
+      ]
+    },
+    {
+      "id": "b0079",
+      "rootId": "b0077",
+      "kind": "nearby",
+      "icon": "table",
+      "headline": "ABIERTO EN LA PRIMERA HORA",
+      "title": "El nuevo propietario",
+      "passage": [
+        "Tu familia deja el cajón cerrado durante cincuenta años.",
+        "Se vende la casa. En la primera hora, el nuevo propietario lo abre mientras busca un sitio para guardar pilas.",
+        "Este libro termina antes de decir qué hay dentro."
+      ],
+      "aftertaste": "La respuesta está en otro libro.",
+      "neighbors": [
+        {
+          "targetBookId": "b0077",
+          "difference": "Nadie abre jamás el cajón."
+        },
+        {
+          "targetBookId": "b0078",
+          "difference": "Un miembro de la familia lo abre una vez en el año treinta y siete."
+        }
+      ]
+    },
+    {
+      "id": "b0080",
+      "rootId": "b0080",
+      "kind": "root",
+      "icon": "speech",
+      "headline": "SOLO EL REMATE",
+      "hook": "no hablas húngaro, salvo que siempre entiendes la frase final de los chistes y por qué todo el mundo se ríe.",
+      "title": "Chistes en húngaro",
+      "passage": [
+        "La historia comienza y no entiendes nada.",
+        "Luego la frase final llega clara: el sombrero, el inspector, la llave que falta. Te ríes antes de que nadie traduzca.",
+        "Esto ocurre durante años. El húngaro ordinario sigue completamente cerrado para ti."
+      ],
+      "aftertaste": "Solo el chiste se abre.",
+      "neighbors": [
+        {
+          "targetBookId": "b0081",
+          "difference": "Aprendes húngaro y los remates imposibles desaparecen."
+        },
+        {
+          "targetBookId": "b0082",
+          "difference": "La capacidad solo funciona con los remates escritos."
+        }
+      ]
+    },
+    {
+      "id": "b0081",
+      "rootId": "b0080",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "APRENDER LO BORRA",
+      "title": "Perdido al estudiar",
+      "passage": [
+        "Empiezas clases nocturnas y poco a poco comprendes el húngaro ordinario.",
+        "A medida que la lengua se abre, los remates inexplicables dejan de llegar. Una noche todo el mundo se ríe y necesitas que te expliquen el chiste.",
+        "Entiendes más y recibes menos."
+      ],
+      "aftertaste": "La fluidez cierra la parte extraña.",
+      "neighbors": [
+        {
+          "targetBookId": "b0080",
+          "difference": "Nunca estudias y sigues entendiendo los remates."
+        },
+        {
+          "targetBookId": "b0082",
+          "difference": "La capacidad sobrevive solo por escrito."
+        }
+      ]
+    },
+    {
+      "id": "b0082",
+      "rootId": "b0080",
+      "kind": "nearby",
+      "icon": "speech",
+      "headline": "SOLO CHISTES ESCRITOS",
+      "title": "Solo sobre el papel",
+      "passage": [
+        "El húngaro hablado sigue siendo completamente opaco.",
+        "Más tarde llega un mensaje al chat de grupo. La última línea de un chiste es perfectamente clara y graciosa.",
+        "Entiendes cada remate escrito y nada de lo que lo rodea."
+      ],
+      "aftertaste": "El chiste solo se abre sobre el papel.",
+      "neighbors": [
+        {
+          "targetBookId": "b0080",
+          "difference": "La capacidad funciona al hablar."
+        },
+        {
+          "targetBookId": "b0081",
+          "difference": "Estudias el idioma y pierdes esa capacidad inexplicable."
+        }
+      ]
+    }
+  ]
+}
