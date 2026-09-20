@@ -24,6 +24,17 @@ function bookAtAddress(address: Coordinate): Book | undefined {
   return findBook(accession);
 }
 
+function createShelfGlyph(book: Book | undefined, current = false): HTMLSpanElement {
+  const stateClass = current
+    ? 'shelf__glyph--current'
+    : book
+      ? 'shelf__glyph--legible'
+      : 'shelf__glyph--illegible';
+  const glyph = element('span', `shelf__glyph ${stateClass}`);
+  glyph.setAttribute('aria-hidden', 'true');
+  return glyph;
+}
+
 /** How many volumes on this shelf this edition can print. */
 export function legibleCountOnShelf(shelf: ShelfCoordinate): number {
   let legible = 0;
@@ -75,7 +86,11 @@ export function createShelfList(shelf: ShelfCoordinate, mode: ShelfListingMode, 
     if (mode === 'page') {
       const anchor = link(hashForAddress(address), 'shelf__link');
       if (book) anchor.classList.add('shelf__link--legible');
-      anchor.append(element('span', 'shelf__number', numberText), element('span', 'shelf__spine', spineText));
+      anchor.append(
+        createShelfGlyph(book),
+        element('span', 'shelf__number', numberText),
+        element('span', 'shelf__spine', spineText),
+      );
       anchor.setAttribute(
         'aria-label',
         `${copy.volumeLabel} ${String(address.volume)}: ${spineText}`,
@@ -84,16 +99,28 @@ export function createShelfList(shelf: ShelfCoordinate, mode: ShelfListingMode, 
     } else if (book?.id === currentBookId) {
       const row = element('span', 'shelf__row shelf__row--current');
       row.setAttribute('aria-current', 'location');
-      row.append(element('span', 'shelf__number', numberText), element('span', 'shelf__spine', spineText));
+      row.append(
+        createShelfGlyph(book, true),
+        element('span', 'shelf__number', numberText),
+        element('span', 'shelf__spine', spineText),
+      );
       item.append(row);
     } else if (book) {
       const anchor = link(hashForBook(book.id), 'shelf__link shelf__link--legible');
-      anchor.append(element('span', 'shelf__number', numberText), element('span', 'shelf__spine', spineText));
+      anchor.append(
+        createShelfGlyph(book),
+        element('span', 'shelf__number', numberText),
+        element('span', 'shelf__spine', spineText),
+      );
       anchor.setAttribute('aria-label', `${copy.volumeLabel} ${String(address.volume)}: ${book.title}`);
       item.append(anchor);
     } else {
       const anchor = link(hashForAddress(address), 'shelf__link');
-      anchor.append(element('span', 'shelf__number', numberText), element('span', 'shelf__spine', spineText));
+      anchor.append(
+        createShelfGlyph(book),
+        element('span', 'shelf__number', numberText),
+        element('span', 'shelf__spine', spineText),
+      );
       anchor.setAttribute(
         'aria-label',
         `${copy.volumeLabel} ${String(address.volume)}: ${copy.notLegible}`,
