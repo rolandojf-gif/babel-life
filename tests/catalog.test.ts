@@ -8,6 +8,7 @@ import { describe, expect, it } from 'vitest';
 import {
   anotherLifeAfter,
   catalog,
+  PINNED_ROOT_IDS,
   findBook,
   rootBooks,
   TOTAL_BOOKS,
@@ -180,22 +181,39 @@ describe('the order the wall is dealt in', () => {
     ]);
   });
 
-  it('shuffles inside each curated set and never between them', () => {
-    expect(ids(wallBooks('first', SEED)).sort()).toEqual([...catalog.wall.first].sort());
-    expect(ids(wallBooks('second', SEED)).sort()).toEqual([...catalog.wall.second].sort());
+  it('pins the five editorial anchors at the start of every opening wall', () => {
+    for (let seed = 0n; seed < 20n; seed += 1n) {
+      expect(ids(wallBooks('first', seed)).slice(0, PINNED_ROOT_IDS.length)).toEqual([
+        ...PINNED_ROOT_IDS,
+      ]);
+    }
   });
 
-  it('deals differently from one visit to the next', () => {
+  it('shuffles the other nineteen lives and splits them without overlap', () => {
+    const first = ids(wallBooks('first', SEED));
+    const second = ids(wallBooks('second', SEED));
+    const pinned = new Set<string>(PINNED_ROOT_IDS);
+    const expectedRemainder = roots.map((book) => book.id).filter((id) => !pinned.has(id)).sort();
+
+    expect(first).toHaveLength(12);
+    expect(second).toHaveLength(12);
+    expect(first.slice(PINNED_ROOT_IDS.length).length).toBe(7);
+    expect(new Set([...first, ...second]).size).toBe(24);
+    expect([...first.slice(PINNED_ROOT_IDS.length), ...second].sort()).toEqual(expectedRemainder);
+  });
+
+  it('deals differently from one visit to the next while keeping the anchors fixed', () => {
     const deals = new Set<string>();
     for (let seed = 0n; seed < 40n; seed += 1n) deals.add(ids(wallBooks('first', seed)).join());
     expect(deals.size).toBeGreaterThan(30);
   });
 
-  it('says nothing about the second set from the first', () => {
+  it('makes the stranger wall exactly the unseen remainder of that visit', () => {
     const first = ids(wallBooks('first', SEED));
-    const shifted = ids(wallBooks('first', SEED + 1n));
-    expect(ids(wallBooks('second', SEED))).not.toEqual(shifted);
-    expect(first).not.toEqual(shifted);
+    const second = ids(wallBooks('second', SEED));
+    const all = ids(wallBooks('all', SEED));
+    expect(all).toEqual([...first, ...second]);
+    expect(second.some((id) => first.includes(id))).toBe(false);
   });
 });
 
