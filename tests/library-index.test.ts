@@ -164,6 +164,27 @@ describe('the library index', () => {
       expect(leader.getAttribute('d')).toMatch(/^M[\d.]+ [\d.]+H[\d.]+V[\d.]+$/);
     }
   });
+
+  it('mirrors the leader line direction based on volume position within its wall', () => {
+    const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
+
+    function leaderDirection(which: 'wide' | 'narrow'): 'right' | 'left' {
+      const svg = index.querySelector(`.library-index__svg--${which}`);
+      const leader = svg?.querySelector('.library-index__leader');
+      const d = leader?.getAttribute('d') ?? '';
+      const parts = /^M([\d.]+) [\d.]+H([\d.]+)V[\d.]+$/.exec(d);
+      if (!parts?.[1] || !parts[2]) throw new Error(`unexpected path: ${d}`);
+      return Number(parts[2]) > Number(parts[1]) ? 'right' : 'left';
+    }
+
+    // Volume 1 is in the left half → leader should exit rightward.
+    updateLibraryIndex(index, { hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
+    expect(leaderDirection('wide')).toBe('right');
+
+    // Volume 32 is in the right half → leader should exit leftward.
+    updateLibraryIndex(index, { hexagon: 'A', wall: 1, shelf: 1, volume: 32 });
+    expect(leaderDirection('wide')).toBe('left');
+  });
 });
 
 describe('the wall’s index', () => {

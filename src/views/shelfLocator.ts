@@ -173,7 +173,6 @@ export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
   }
   anchor.append(key);
 
-  anchor.append(element('span', 'shelf-locator__action', 'VIEW THIS SHELF →'));
 
   return anchor;
 }

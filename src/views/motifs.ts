@@ -3,6 +3,9 @@
  * as the shelf illustrations: a run of shelved spines on its board, and the
  * candle the reading room is lit by. Both are decorative only and hidden from
  * assistive technology. No external assets, no icon dependency.
+ *
+ * The spine shelf shares the 120×72 field and stroke conventions of the main
+ * illustrations so the two feel like one drawing language when composed.
  */
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -27,23 +30,29 @@ function shape(tag: string, attrs: Record<string, string>): SVGElement {
   return node;
 }
 
-/** A short run of shelved spines on its board, the last one leaning. */
+/**
+ * A short run of shelved spines on its board, drawn in the same 120×72
+ * field as the main illustrations. Varied heights, slight rounding, one
+ * volume leaning — the same hand that drew the main motifs.
+ */
 export function createSpineShelf(): SVGSVGElement {
-  const svg = svgDocument('card__neighbour-spines', '0 0 72 46');
+  const svg = svgDocument('card__neighbour-spines', '0 0 120 72');
   svg.append(
-    // The shelf board itself.
-    shape('line', { x1: '4', y1: '42', x2: '68', y2: '42' }),
-    // Three upright volumes of uneven heights.
-    shape('rect', { x: '10', y: '13', width: '6', height: '28' }),
-    shape('rect', { x: '20', y: '8', width: '7', height: '33' }),
-    shape('rect', { x: '31', y: '15', width: '6', height: '26' }),
-    // The fourth leans against its neighbours.
+    // The shelf board: a quiet line, not ruler-straight to the edge.
+    shape('line', { x1: '14', y1: '62', x2: '106', y2: '62' }),
+    // Five upright volumes of uneven heights and widths.
+    shape('rect', { x: '22', y: '24', width: '8', height: '37', rx: '1' }),
+    shape('rect', { x: '34', y: '16', width: '10', height: '45', rx: '1' }),
+    shape('rect', { x: '48', y: '28', width: '7', height: '33', rx: '1' }),
+    shape('rect', { x: '59', y: '20', width: '9', height: '41', rx: '1' }),
+    // The last one leans against its neighbours.
     shape('rect', {
-      x: '48',
-      y: '12',
-      width: '6',
-      height: '29',
-      transform: 'rotate(-16 54 41)',
+      x: '80',
+      y: '18',
+      width: '8',
+      height: '43',
+      rx: '1',
+      transform: 'rotate(-12 88 61)',
     }),
   );
   return svg;

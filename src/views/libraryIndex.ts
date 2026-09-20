@@ -141,11 +141,27 @@ function bracketPath(): string {
 
 function leaderPath(metrics: IndexMetrics, x: number, y: number, wall: number): string {
   const inset = 1.25;
-  const x1 = x + INDEX_MARK_WIDTH + inset;
   const runY = y - inset;
   const column = visibleColumn(metrics, wall);
+  const ww = wallWidth(metrics);
+  const wallOriginX = metrics.originX + column * (ww + metrics.wallGapX);
+  const volumeCentreX = x + INDEX_MARK_WIDTH / 2;
+  const wallCentreX = wallOriginX + ww / 2;
+
+  if (volumeCentreX > wallCentreX) {
+    // Right half of the wall: leader exits left, runs to the left gutter.
+    const x0 = x - inset;
+    const leftGutterX = column > 0
+      ? wallOriginX - metrics.wallGapX * 0.5
+      : Math.max(metrics.originX - 4, 0);
+    const gutterX = Math.max(leftGutterX, 0);
+    return `M${String(x0)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
+  }
+
+  // Left half (or centre): leader exits right, runs to the right gutter.
+  const x1 = x + INDEX_MARK_WIDTH + inset;
   const naturalGutterX =
-    metrics.originX + (column + 1) * (wallWidth(metrics) + metrics.wallGapX) - metrics.wallGapX * 0.5;
+    metrics.originX + (column + 1) * (ww + metrics.wallGapX) - metrics.wallGapX * 0.5;
   const gutterX = Math.min(naturalGutterX, metrics.width - 4);
   return `M${String(x1)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
 }

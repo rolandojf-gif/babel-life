@@ -96,15 +96,15 @@ export function initAtmosphere(shell: HTMLElement): void {
   shell.prepend(layer('lamp'), layer('vignette'));
 
   const dust = layer('dust');
-  for (let index = 0; index < 14; index += 1) {
+  for (let index = 0; index < 10; index += 1) {
     const mote = document.createElement('i');
     const size = 2 + Math.random() * 3;
     mote.style.left = `${(Math.random() * 100).toFixed(2)}%`;
     mote.style.top = '100%';
     mote.style.width = `${size.toFixed(1)}px`;
     mote.style.height = `${size.toFixed(1)}px`;
-    mote.style.animationDuration = `${(18 + Math.random() * 22).toFixed(1)}s`;
-    mote.style.animationDelay = `${(-Math.random() * 40).toFixed(1)}s`;
+    mote.style.animationDuration = `${(20 + Math.random() * 24).toFixed(1)}s`;
+    mote.style.animationDelay = `${(-Math.random() * 44).toFixed(1)}s`;
     dust.append(mote);
   }
   shell.prepend(dust);
