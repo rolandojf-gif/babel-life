@@ -1,56 +1,106 @@
-/** Every visitor-facing string outside the catalog. */
-export const copy = {
-  eyebrow: 'BABEL LIFE',
-  heading: 'Somewhere in the Library of Babel, every writable life already exists.',
-  dek: 'With just 25 symbols, the Library contains more books than there are atoms in the observable universe. Somewhere among them are all the lives you could have lived.',
-  libraryScaleLabel: 'THE LIBRARY',
-  libraryScaleMantissa: '≈ 1.96 × 10',
-  libraryScaleExponent: '1,834,097',
-  libraryScaleUnit: 'books',
-  libraryScaleMeta: '25 symbols · 1,312,000 positions',
-  universeScaleLabel: 'THE OBSERVABLE UNIVERSE',
-  universeScaleMantissa: '≈ 10',
-  universeScaleExponent: '80',
-  universeScaleUnit: 'atoms',
-  lede: 'Open one.',
-  cardEyebrow: 'THERE IS ALREADY A BOOK IN WHICH…',
-  openThisLife: 'OPEN THIS LIFE',
-  somethingStranger: 'SHOW ME SOMETHING STRANGER',
-  showAll: 'SHOW ALL 24',
-  backToWall: 'Wall of Lives',
-  found: 'YOU FOUND THE BOOK',
-  alreadyHere: 'This book was already here.',
-  nearbyVolumes: 'NEARBY VOLUMES',
-  // The shelf, and the addresses on it that hold nothing this edition can print.
-  shelfEyebrow: 'ONE SHELF',
-  openThisShelf: 'open this shelf',
-  shelfHolds: 'Thirty-two volumes stand here. {legible} of them can be read.',
-  notLegible: 'illegible',
-  volumeLabel: 'Volume',
-  previousShelf: 'PREVIOUS SHELF',
-  nextShelf: 'NEXT SHELF',
-  previousVolume: 'PREVIOUS VOLUME',
-  nextVolume: 'NEXT VOLUME',
-  noLegibleVolume: 'NO LEGIBLE VOLUME',
-  noLegibleNote: 'A volume stands at this address. Nothing in it can be read.',
-  browseShelf: 'BROWSE THIS SHELF',
-  // One page of a volume nobody can read. Not an account of anything.
-  lookInside: 'LOOK INSIDE',
-  pageOf: 'One page of four hundred and ten.',
-  pageDescription: 'A page of symbols that spell nothing in any language.',
-  // A record of this consultation, not a claim about the reader.
-  consulted: 'Consulted at {time} on a {day}.',
-  anotherLife: 'SHOW ME ANOTHER LIFE',
-  invalidAddress: 'This address is not in this edition.',
-  invalidAddressNote: 'Every volume here has a permanent address. This is not one of them.',
-  enterTheLibrary: 'Enter the Library',
-  attribution: 'Inspired by Jorge Luis Borges.',
-  copyright: '© 2026 Rolando Fernández. All rights reserved.',
-  aboutHeading: 'About Babel Life',
-  aboutBody:
-    'Babel Life is an independent literary project inspired by Jorge Luis Borges’ short story “The Library of Babel”. It is not affiliated with, endorsed by or published by the Borges estate or any publisher. No passage from Borges’ story is reproduced here. Its passages and coordinates belong to this edition. This is fiction: the site cannot identify, predict or estimate anyone’s future.',
-  legalHeading: 'Legal & privacy',
-  legalBody:
-    'Babel Life is currently a non-commercial personal project. It does not sell goods or services, offer user accounts, accept form submissions or serve advertising. It uses Cloudflare Web Analytics for aggregate traffic and performance metrics; this service does not use cookies or localStorage for usage metrics and does not collect or use visitors’ personal data. Hosting providers may process technical request data needed to deliver, secure and operate the site.',
-  legalOwner: 'Maintained by Rolando Fernández in Spain.',
-} as const;
+import { copy as en } from './copy.en';
+import { copy as es } from './copy.es';
+import { getLocale, type Locale } from './locale';
+
+/** Every visitor-facing string outside the catalog, in one language. */
+export type Copy = {
+  language: string;
+  siteTitle: string;
+  homeTitle: string;
+  eyebrow: string;
+  heading: string;
+  dek: string;
+  libraryScaleLabel: string;
+  libraryScaleMantissa: string;
+  libraryScaleExponent: string;
+  libraryScaleUnit: string;
+  libraryScaleMeta: string;
+  universeScaleLabel: string;
+  universeScaleMantissa: string;
+  universeScaleExponent: string;
+  universeScaleUnit: string;
+  lede: string;
+  cardEyebrow: string;
+  openThisLife: string;
+  somethingStranger: string;
+  showAll: string;
+  backToWall: string;
+  found: string;
+  alreadyHere: string;
+  nearbyVolumes: string;
+  openNearby: string;
+  shelfEyebrow: string;
+  openThisShelf: string;
+  shelfHolds: readonly [string, string, string, string, string];
+  notLegible: string;
+  volumeLabel: string;
+  previousShelf: string;
+  nextShelf: string;
+  previousVolume: string;
+  nextVolume: string;
+  noLegibleVolume: string;
+  noLegibleNote: string;
+  browseShelf: string;
+  lookInside: string;
+  pageOf: string;
+  pageDescription: string;
+  consulted: string;
+  days: readonly [string, string, string, string, string, string, string];
+  anotherLife: string;
+  invalidAddress: string;
+  invalidAddressNote: string;
+  enterTheLibrary: string;
+  attribution: string;
+  copyright: string;
+  aboutHeading: string;
+  aboutBody: string;
+  legalHeading: string;
+  legalBody: string;
+  legalOwner: string;
+  wallCountPartial: string;
+  wallCountAll: string;
+  announceStranger: string;
+  announceAll: string;
+  coordHexagon: string;
+  coordWall: string;
+  coordShelf: string;
+  coordVolume: string;
+  cardAddress: string;
+  shelfVolumesLabel: string;
+  locatorHeading: string;
+  locatorHere: string;
+  locatorAlsoLegible: string;
+  locatorSolo: string;
+  locatorAria: string;
+  intervalAria: string;
+  intervalYears: string;
+};
+
+export function copyFor(locale: Locale): Copy {
+  return locale === 'es' ? es : en;
+}
+
+export function getCopy(): Copy {
+  return copyFor(getLocale());
+}
+
+/**
+ * Live bundle for the active locale. Views keep importing `copy`; they do not
+ * choose a language themselves.
+ */
+export const copy: Copy = new Proxy(en, {
+  get(_target, property) {
+    return Reflect.get(getCopy(), property);
+  },
+}) as Copy;
+
+/** Fill `{name}` placeholders. Unknown names are left in the string. */
+export function fill(template: string, vars: Record<string, string>): string {
+  return template.replace(/\{(\w+)\}/g, (token, name: string) => vars[name] ?? token);
+}
+
+/** How many of the thirty-two volumes on a shelf this edition can print. */
+export function formatShelfHolds(legible: number): string {
+  const lines = getCopy().shelfHolds;
+  return lines[legible] ?? lines[0] ?? '';
+}

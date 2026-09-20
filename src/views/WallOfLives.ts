@@ -13,8 +13,6 @@ interface WallActions {
   onShowAll(): void;
 }
 
-const COUNT_WORDS: Record<number, string> = { 12: 'Twelve', 24: 'All twenty-four' };
-
 /** The wall of lives: the whole site, understandable by looking at it. */
 export function createWallOfLives(state: AppState, actions: WallActions): ViewHandle {
   const root = element('div', 'wall');
@@ -150,11 +148,8 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     grid.replaceChildren(...books.map((book, cardIndex) => createBookCard(book, cardIndex)));
     locate();
 
-    const word = COUNT_WORDS[books.length] ?? String(books.length);
     count.textContent =
-      books.length === TOTAL_ROOTS
-        ? `${word} volumes.`
-        : `${word} of twenty-four volumes.`;
+      books.length === TOTAL_ROOTS ? copy.wallCountAll : copy.wallCountPartial;
 
     // No disabled placeholders: an action that has nothing left to do is absent.
     const showStranger = next.wallSelection === 'first';

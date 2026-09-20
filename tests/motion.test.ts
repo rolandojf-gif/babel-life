@@ -4,7 +4,6 @@ import { createViewTransition } from '../src/views/motion';
 import { mountAppShell } from '../src/views/AppShell';
 import { createController } from '../src/library/controller';
 import { createShelfLocator } from '../src/views/shelfLocator';
-import { BOOK_EMBEDDED_SHELF_ID } from '../src/views/shelfListing';
 import type { AppState } from '../src/library/model';
 
 function preference(reduce: boolean): void {
@@ -149,17 +148,19 @@ describe('navigation motion', () => {
   });
 });
 
-describe('the in-page shelf jump', () => {
-  it.each([false, true])('respects reduced motion (%s) and focuses the shelf', (reduced) => {
-    preference(reduced);
+describe('the shelf locator', () => {
+  it('is informational and does not jump to the embedded shelf', () => {
     const shelf = document.createElement('section');
-    shelf.id = BOOK_EMBEDDED_SHELF_ID;
     shelf.tabIndex = -1;
     shelf.scrollIntoView = vi.fn();
     const locator = createShelfLocator({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
     document.body.append(locator, shelf);
+
+    expect(locator.tagName).toBe('DIV');
+    expect(locator.querySelector('a')).toBeNull();
+    expect(locator.tabIndex).toBeLessThan(0);
     locator.click();
-    expect(shelf.scrollIntoView).toHaveBeenCalledWith({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
-    expect(document.activeElement).toBe(shelf);
+    expect(shelf.scrollIntoView).not.toHaveBeenCalled();
+    expect(document.activeElement).not.toBe(shelf);
   });
 });

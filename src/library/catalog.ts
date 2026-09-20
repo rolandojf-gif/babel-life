@@ -1,4 +1,6 @@
-import catalogData from '../content/catalog.json';
+import englishData from '../content/catalog.json';
+import spanishData from '../content/catalog.es.json';
+import { getLocale, type Locale } from '../content/locale';
 import type { Book, Catalog, RootBook, WallSelection } from './model';
 import { shuffled } from './shuffle';
 
@@ -84,17 +86,78 @@ export function validate(data: Catalog): Catalog {
   return data;
 }
 
-export const catalog: Catalog = validate(catalogData as Catalog);
+const englishCatalog = validate(englishData as Catalog);
+const spanishCatalog = validate(spanishData as Catalog);
+
+function assertAligned(english: Catalog, spanish: Catalog): void {
+  if (english.books.length !== spanish.books.length) {
+    throw new Error('English and Spanish catalogs differ in length');
+  }
+  for (let index = 0; index < english.books.length; index += 1) {
+    const left = english.books[index];
+    const right = spanish.books[index];
+    if (left === undefined || right === undefined || left.id !== right.id) {
+      throw new Error(`Catalog identity mismatch at index ${String(index)}`);
+    }
+  }
+}
+
+assertAligned(englishCatalog, spanishCatalog);
+
+const CATALOGS: Record<Locale, Catalog> = {
+  en: englishCatalog,
+  es: spanishCatalog,
+};
+
+export function catalogFor(locale: Locale): Catalog {
+  return CATALOGS[locale];
+}
+
+export function getCatalog(): Catalog {
+  return catalogFor(getLocale());
+}
+
+/** The catalog of the active locale. Views keep importing `catalog`. */
+export const catalog: Catalog = {
+  get schemaVersion() {
+    return getCatalog().schemaVersion;
+  },
+  get wall() {
+    return getCatalog().wall;
+  },
+  get books() {
+    return getCatalog().books;
+  },
+};
 
 export function findBook(id: string): Book | undefined {
-  return catalog.books.find((book) => book.id === id);
+  return getCatalog().books.find((book) => book.id === id);
+}
+
+function rootBooksOf(data: Catalog): RootBook[] {
+  return [...data.wall.first, ...data.wall.second].map((id) => {
+    const book = data.books.find((entry) => entry.id === id);
+    if (!book || book.kind !== 'root') throw new Error(`The wall lists unknown root ${id}`);
+    return book;
+  });
+}
+
+const ROOT_BOOKS: Record<Locale, RootBook[]> = {
+  en: rootBooksOf(englishCatalog),
+  es: rootBooksOf(spanishCatalog),
+};
+
+export function getRootBooks(): RootBook[] {
+  return ROOT_BOOKS[getLocale()];
 }
 
 /** The root lives, in the canonical editorial order of the wall. */
-export const rootBooks: RootBook[] = [...catalog.wall.first, ...catalog.wall.second].map((id) => {
-  const book = findBook(id);
-  if (!book || book.kind !== 'root') throw new Error(`The wall lists unknown root ${id}`);
-  return book;
+export const rootBooks: RootBook[] = new Proxy([] as RootBook[], {
+  get(_target, property) {
+    const books = getRootBooks();
+    const value = Reflect.get(books, property, books);
+    return typeof value === 'function' ? value.bind(books) : value;
+  },
 });
 
 function rootsOf(ids: readonly string[]): RootBook[] {
@@ -112,16 +175,17 @@ function rootsOf(ids: readonly string[]): RootBook[] {
  * first twelve exactly where they were rather than dealing the wall again.
  */
 export function wallBooks(selection: WallSelection, seed: bigint): RootBook[] {
-  const first = shuffled(catalog.wall.first, seed);
+  const wall = getCatalog().wall;
+  const first = shuffled(wall.first, seed);
   if (selection === 'first') return rootsOf(first);
   // A separate stream, so one set's order says nothing about the other's.
-  const second = shuffled(catalog.wall.second, seed + 1n);
+  const second = shuffled(wall.second, seed + 1n);
   if (selection === 'second') return rootsOf(second);
   return rootsOf([...first, ...second]);
 }
 
-export const TOTAL_BOOKS = catalog.books.length;
-export const TOTAL_ROOTS = rootBooks.length;
+export const TOTAL_BOOKS = englishCatalog.books.length;
+export const TOTAL_ROOTS = ROOT_BOOKS.en.length;
 
 /**
  * The next life to offer from a book: the root life following this one's own in
@@ -130,8 +194,9 @@ export const TOTAL_ROOTS = rootBooks.length;
  */
 export function anotherLifeAfter(bookId: string): RootBook {
   const book = findBook(bookId);
-  const from = book ? rootBooks.findIndex((root) => root.id === book.rootId) : -1;
-  const next = rootBooks[(Math.max(from, 0) + 1) % rootBooks.length];
+  const roots = getRootBooks();
+  const from = book ? roots.findIndex((root) => root.id === book.rootId) : -1;
+  const next = roots[(Math.max(from, 0) + 1) % roots.length];
   if (!next) throw new Error('The catalog has no root lives');
   return next;
 }

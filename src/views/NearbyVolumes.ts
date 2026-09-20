@@ -4,7 +4,7 @@ import type { Book } from '../library/model';
 import { element, glyph, link } from './view';
 
 function nearbyOpen(): HTMLSpanElement {
-  const span = element('span', 'nearby__open', 'OPEN');
+  const span = element('span', 'nearby__open', copy.openNearby);
   span.append(glyph('nearby__arrow', '→'));
   return span;
 }

@@ -1,3 +1,4 @@
+import { copy, fill } from '../content/copy';
 import { findBook } from '../library/catalog';
 import {
   accessionAt,
@@ -7,9 +8,7 @@ import {
   shelfVolumes,
   type Coordinate,
 } from '../library/coordinates';
-import { BOOK_EMBEDDED_SHELF_ID } from './shelfListing';
-import { prefersReducedMotion } from './motion';
-import { element, link } from './view';
+import { element } from './view';
 
 const NS = 'http://www.w3.org/2000/svg';
 
@@ -126,53 +125,42 @@ function createShelfDiagram(coordinate: Coordinate): SVGSVGElement {
   return svg;
 }
 
-function scrollToEmbeddedShelf(event: Event): void {
-  event.preventDefault();
-  const target = document.getElementById(BOOK_EMBEDDED_SHELF_ID);
-  if (!(target instanceof HTMLElement)) return;
-  target.scrollIntoView({ behavior: prefersReducedMotion() ? 'instant' : 'smooth', block: 'start' });
-  target.focus({ preventScroll: true });
-}
-
-/** Compact “you are here” map; jumps to the integrated shelf on this page. */
-export function createShelfLocator(coordinate: Coordinate): HTMLAnchorElement {
+/** Compact “you are here” map. Informational only: the shelf itself stands below. */
+export function createShelfLocator(coordinate: Coordinate): HTMLDivElement {
   const shelf = shelfOf(coordinate);
   const otherLegible = shelfVolumes(shelf).some(
     (address) => address.volume !== coordinate.volume && legibleAt(address),
   );
 
-  const anchor = link(`#${BOOK_EMBEDDED_SHELF_ID}`, 'shelf-locator');
-  anchor.addEventListener('click', scrollToEmbeddedShelf);
-  anchor.setAttribute(
-    'aria-label',
-    `Volume ${String(coordinate.volume)} of ${String(SHELF_LENGTH)} on this shelf. View this shelf.`,
-  );
-
-  anchor.append(element('span', 'shelf-locator__heading', 'WHERE THIS BOOK STANDS'));
+  const root = element('div', 'shelf-locator');
+  root.append(element('span', 'shelf-locator__heading', copy.locatorHeading));
 
   const diagram = element('span', 'shelf-locator__diagram');
   diagram.setAttribute('aria-hidden', 'true');
   diagram.append(createShelfDiagram(coordinate));
-  anchor.append(diagram);
+  root.append(diagram);
 
-  anchor.append(
-    element('span', 'shelf-locator__here', `VOLUME ${String(coordinate.volume)} · YOU ARE HERE`),
+  root.append(
+    element(
+      'span',
+      'shelf-locator__here',
+      fill(copy.locatorHere, { n: String(coordinate.volume) }),
+    ),
   );
 
   const key = element('span', 'shelf-locator__key');
   if (otherLegible) {
     key.append(
       element('span', 'shelf-locator__key-mark shelf-locator__key-mark--legible'),
-      document.createTextNode(' Also legible on this shelf'),
+      document.createTextNode(copy.locatorAlsoLegible),
     );
   } else {
     key.append(
       element('span', 'shelf-locator__key-mark shelf-locator__key-mark--solo'),
-      document.createTextNode(' No other legible volume on this shelf'),
+      document.createTextNode(copy.locatorSolo),
     );
   }
-  anchor.append(key);
+  root.append(key);
 
-
-  return anchor;
+  return root;
 }

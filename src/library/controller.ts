@@ -1,3 +1,4 @@
+import { copy } from '../content/copy';
 import { findBook } from './catalog';
 import { accessionAt, positionOf, shelfOf } from './coordinates';
 import type { AppState, RenderHint, WallSelection } from './model';
@@ -95,11 +96,11 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
     },
 
     showSomethingStranger(): void {
-      setWall('second', { focus: 'wallGrid', announce: 'Twelve other lives.' });
+      setWall('second', { focus: 'wallGrid', announce: copy.announceStranger });
     },
 
     showAll(): void {
-      setWall('all', { focus: 'wallGrid', announce: 'All twenty-four lives.' });
+      setWall('all', { focus: 'wallGrid', announce: copy.announceAll });
     },
   };
 }

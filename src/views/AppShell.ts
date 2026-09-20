@@ -1,18 +1,17 @@
 import { copy } from '../content/copy';
+import { getLocale } from '../content/locale';
 import { findBook } from '../library/catalog';
 import { formatCoordinate, shelfFields, type ShelfCoordinate } from '../library/coordinates';
 import type { Controller } from '../library/controller';
 import type { AppState, RenderHint } from '../library/model';
 import { createAddressView } from './AddressView';
 import { createBookView } from './BookView';
+import { createLanguageSwitcher } from './LanguageSwitcher';
 import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
 import { createViewTransition } from './motion';
 import { initAtmosphere, refreshReveals } from './atmosphere';
 import { element, link, type ViewHandle } from './view';
-
-const SITE_TITLE = 'Babel Life';
-const HOME_TITLE = 'Babel Life — Possible Lives Inspired by Borges’ Library of Babel';
 
 function formatShelf(shelf: ShelfCoordinate): string {
   return shelfFields(shelf)
@@ -30,6 +29,7 @@ export function mountAppShell(
   controller: Controller,
 ): (state: AppState, hint: RenderHint) => void {
   root.textContent = '';
+  document.documentElement.lang = getLocale();
 
   const shell = element('div', 'shell');
 
@@ -58,7 +58,7 @@ export function mountAppShell(
   legal.append(element('p', undefined, copy.legalOwner));
   footer.append(legal);
 
-  shell.append(grain, main, footer, status);
+  shell.append(grain, createLanguageSwitcher(), main, footer, status);
   root.append(shell);
   initAtmosphere(shell);
 
@@ -111,15 +111,15 @@ export function mountAppShell(
   function documentTitle(state: AppState): string {
     if (state.view === 'book' && state.currentBookId !== null) {
       const book = findBook(state.currentBookId);
-      if (book) return `${book.title} — ${SITE_TITLE}`;
+      if (book) return `${book.title} — ${copy.siteTitle}`;
     }
     if (state.view === 'shelf' && state.shelf !== null) {
-      return `${formatShelf(state.shelf)} — ${SITE_TITLE}`;
+      return `${formatShelf(state.shelf)} — ${copy.siteTitle}`;
     }
     if (state.view === 'address' && state.address !== null) {
-      return `${formatCoordinate(state.address)} — ${SITE_TITLE}`;
+      return `${formatCoordinate(state.address)} — ${copy.siteTitle}`;
     }
-    return state.view === 'wall' ? HOME_TITLE : SITE_TITLE;
+    return state.view === 'wall' ? copy.homeTitle : copy.siteTitle;
   }
 
   return function render(state: AppState, hint: RenderHint): void {

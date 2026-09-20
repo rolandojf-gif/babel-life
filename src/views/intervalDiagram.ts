@@ -3,6 +3,8 @@
  * and thirty-one years. Deterministic, not a picture of a train.
  */
 
+import { copy } from '../content/copy';
+
 const NS = 'http://www.w3.org/2000/svg';
 
 const WIDTH = 280;
@@ -27,10 +29,7 @@ export function createIntervalDiagram(): SVGSVGElement {
   svg.setAttribute('focusable', 'false');
   svg.setAttribute('overflow', 'visible');
   svg.setAttribute('fill', 'none');
-  svg.setAttribute(
-    'aria-label',
-    'Two seconds, from 08:14:00 to 08:14:02, set against thirty-one years. The two scales are separate.',
-  );
+  svg.setAttribute('aria-label', copy.intervalAria);
 
   const upperY = 40;
   svg.append(node('line', { class: 'interval__line', x1: String(LEFT), y1: String(upperY), x2: String(RIGHT), y2: String(upperY) }));
@@ -71,7 +70,7 @@ export function createIntervalDiagram(): SVGSVGElement {
     node(
       'text',
       { class: 'interval__caption', x: String(LEFT), y: '120', 'text-anchor': 'start', 'font-size': '8' },
-      'thirty-one years',
+      copy.intervalYears,
     ),
   );
 

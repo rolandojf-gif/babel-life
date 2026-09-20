@@ -1,4 +1,4 @@
-import { copy } from '../content/copy';
+import { copy, formatShelfHolds } from '../content/copy';
 import { findBook } from '../library/catalog';
 import {
   accessionAt,
@@ -11,8 +11,6 @@ import {
 import { hashForAddress, hashForBook } from '../library/routing';
 import type { Book } from '../library/model';
 import { element, link } from './view';
-
-const COUNT_WORDS = ['None', 'One', 'Two', 'Three', 'Four'];
 
 export type ShelfListingMode = 'page' | 'embedded';
 
@@ -64,18 +62,14 @@ export function appendShelfIntro(parent: HTMLElement, shelf: ShelfCoordinate, he
   parent.append(createShelfAddressHeading(shelf, headingTag, tabIndex));
   const legible = legibleCountOnShelf(shelf);
   parent.append(
-    element(
-      'p',
-      'shelf__count',
-      copy.shelfHolds.replace('{legible}', COUNT_WORDS[legible] ?? String(legible)),
-    ),
+    element('p', 'shelf__count', formatShelfHolds(legible)),
   );
 }
 
 /** Thirty-two shelf positions; page mode links every row to its address. */
 export function createShelfList(shelf: ShelfCoordinate, mode: ShelfListingMode, currentBookId?: string): HTMLOListElement {
   const list = element('ol', 'shelf__list');
-  list.setAttribute('aria-label', 'Volumes on this shelf');
+  list.setAttribute('aria-label', copy.shelfVolumesLabel);
 
   for (const address of shelfVolumes(shelf)) {
     const book = bookAtAddress(address);
