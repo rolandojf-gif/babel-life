@@ -99,6 +99,8 @@ export function createBookView(bookId: string, address: Coordinate | null): View
 
   const className = book.id === THE_0814 ? 'book book--spread book--0814' : 'book book--spread';
   const root = element('article', className);
+  // Entrance choreography: the spread rises as one cinematic beat on arrival.
+  root.setAttribute('data-book-entrance', '');
 
   const title = element('h1', 'book__title', book.title);
   title.tabIndex = -1;

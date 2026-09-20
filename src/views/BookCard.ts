@@ -15,6 +15,9 @@ const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
 export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const featured = FEATURED_SLOTS.has(index + 1);
   const item = element('li', featured ? 'wall__cell wall__cell--featured' : 'wall__cell');
+  // Stagger index drives the entrance choreography; capping keeps delays tight
+  // when all twenty-four volumes stand on the wall.
+  item.style.setProperty('--i', String(index % 12));
 
   const card = link(`#book=${book.id}`, featured ? 'card card--featured' : 'card');
 
