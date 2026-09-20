@@ -187,24 +187,23 @@
       "rootId": "b0031",
       "kind": "root",
       "icon": "record",
-      "headline": "€18 MILLION AT THIRTY",
-      "hook": "at thirty your own ticket wins €18 million, and you stay at your desk for three more weeks to hand over properly.",
-      "title": "Eighteen Million at Thirty",
+      "headline": "FIVE MINUTES LATER",
+      "hook": "you eat Tuesday's dinner five minutes later than in the adjacent volume, and nothing in the rest of your life changes.",
+      "title": "The Same Dinner",
       "passage": [
-        "You check the numbers on your phone in the kitchen at 11:48 p.m. You check them again on the laptop. The ticket is in your jacket pocket, bought on a Thursday after work. You sleep four hours.",
-        "At work you tell your manager on Monday and offer a handover. You make lists. You show Priya where the client files live. Your first work-free Monday arrives grey and unscheduled. You wash the sheets, queue at the bank, eat lunch standing up.",
-        "You buy a three-bedroom house near the park because the second bedroom fits a desk and the garden fits a table. You keep the old car for a year. You give your sister money for a deposit and your parents money for the roof. You set a monthly amount for yourself and keep checking it.",
-        "Your friends still work shifts and school runs. On Wednesdays you meet Jon at the café at noon because he does nights. He talks about rotas. You talk about the boiler service. At the family gathering a year later you tell everyone at once, after dessert, with the numbers printed out."
+        "The oven clock reads 19:12 when you sit down on Tuesday. Pasta, grated cheese, water in the same glass. You read the same message before the second mouthful and answer it at 19:26.",
+        "Wednesday arrives at the usual time. Work is unchanged. The boiler is serviced in November. You replace the car six years later, call your sister on Sundays, stop buying the same cereal when the shop stops stocking it.",
+        "Years pass with the same addresses, the same people, the same illnesses, the same arguments and repairs. On that Tuesday, dinner was five minutes later."
       ],
-      "aftertaste": "Wednesdays at noon, you order for two.",
+      "aftertaste": "At 19:12, you rinse the same plate.",
       "neighbors": [
         {
           "targetBookId": "b0032",
-          "difference": "The winning ticket belongs to your workplace syndicate."
+          "difference": "Tuesday's dinner is three minutes later instead of five."
         },
         {
           "targetBookId": "b0033",
-          "difference": "You tell your wider family immediately."
+          "difference": "Dinner is at the original time, but you use a different fork."
         }
       ]
     },
@@ -213,23 +212,22 @@
       "rootId": "b0031",
       "kind": "nearby",
       "icon": "record",
-      "headline": "WORKPLACE SYNDICATE",
-      "title": "The Syndicate Numbers",
+      "headline": "THREE MINUTES LATER",
+      "title": "Three Minutes Later",
       "passage": [
-        "The ticket lives in the office drawer, bought with pooled cash every Friday. You are thirty. You hold one share of €18 million. After tax and division, your portion lands quietly in your account on a Tuesday.",
-        "At work the kitchen goes strange. Priya leaves immediately. Jon asks for three months part-time. Your manager cries at the leaving lunch and then stays. You stay too, four days a week, because the client files still need someone who knows them.",
-        "Your first work-free Monday is only a Monday off. You sleep late, run errands, meet your mother for lunch. The house you buy is smaller, closer to your sister, with a garden you can manage. At the family gathering you explain the syndicate with a diagram your father keeps folding wrong.",
-        "On Wednesdays you still meet Jon, who also still works. You compare payslips and laugh too loudly."
+        "The oven clock reads 19:10 when you sit down on Tuesday. Pasta, grated cheese, water in the same glass. You read the same message before the second mouthful and answer it at 19:26.",
+        "Wednesday arrives at the usual time. Work is unchanged. The boiler is serviced in November. You replace the car six years later, call your sister on Sundays, stop buying the same cereal when the shop stops stocking it.",
+        "Years pass with the same addresses, the same people, the same illnesses, the same arguments and repairs. On that Tuesday, dinner was three minutes later."
       ],
-      "aftertaste": "Five envelopes, five different Mondays, same café.",
+      "aftertaste": "At 19:10, you rinse the same plate.",
       "neighbors": [
         {
           "targetBookId": "b0031",
-          "difference": "The winning ticket is yours alone."
+          "difference": "Tuesday's dinner is five minutes later instead."
         },
         {
           "targetBookId": "b0033",
-          "difference": "The ticket is yours alone, and you tell your family immediately."
+          "difference": "Dinner is at the original time, but you use a different fork."
         }
       ]
     },
@@ -238,23 +236,22 @@
       "rootId": "b0031",
       "kind": "nearby",
       "icon": "record",
-      "headline": "TOLD AT ONCE",
-      "title": "Told at Once",
+      "headline": "A DIFFERENT FORK",
+      "title": "The Other Fork",
       "passage": [
-        "You are thirty. The ticket is in your jacket pocket. You call your parents on Sunday and ask everyone to come over. You print the numbers. You say it plainly in the living room while the kettle boils.",
-        "The advice arrives before the money clears. Your uncle knows a solicitor. Your cousin knows property. Your mother worries about security and keeps lowering her voice. You have not yet chosen a house or set a monthly amount. You have not yet had a work-free Monday to test.",
-        "You complete the handover at work and leave. You rent for six months while relatives send links. You give your sister money for a deposit early, then field three more requests you had not anticipated. You buy near the park because you liked the table in the garden.",
-        "On Wednesdays you meet Jon at noon. He asks how the family took it."
+        "You sit down at the original time on Tuesday. Pasta, grated cheese, water in the same glass. The fork in your hand is the other one from the drawer, the one with the flatter handle.",
+        "You read the same message before the second mouthful and answer it at 19:26. Wednesday arrives at the usual time. Work is unchanged. The boiler is serviced in November.",
+        "Years pass with the same addresses, the same people, the same illnesses, the same arguments and repairs. The fork goes back into the drawer after washing."
       ],
-      "aftertaste": "You still bring the printed numbers, creased.",
+      "aftertaste": "The flatter handle dries beside the sink.",
       "neighbors": [
         {
           "targetBookId": "b0031",
-          "difference": "You wait one year before telling your wider family."
+          "difference": "You use the usual fork, but dinner is five minutes later."
         },
         {
           "targetBookId": "b0032",
-          "difference": "The winning ticket belongs to your workplace syndicate."
+          "difference": "You use the usual fork, but dinner is three minutes later."
         }
       ]
     },
@@ -775,23 +772,23 @@
       "rootId": "b0041",
       "kind": "root",
       "icon": "cot",
-      "headline": "SWITCHED AT BIRTH",
-      "hook": "born minutes apart, you go home with the other family. No one notices. You grow up entirely theirs.",
-      "title": "The Other Cot",
+      "headline": "HALF A SECOND LATE",
+      "hook": "your shadow arrives half a second after you do, every time you move, for your entire life.",
+      "title": "Your Shadow's Delay",
       "passage": [
-        "You are born at 04:12, tagged, logged in the ward register, taken to the cot by the window. Discharge happens on a wet morning. You go home to number 14, to the room above the shop, to parents who teach you to fold pastry with cold hands.",
-        "Casual remarks follow you. You have your father’s ears. You walk like your aunt. You learn the till, the delivery days, the route to school past the launderette. You work in kitchens, marry at twenty-nine, keep two friends from the estate.",
-        "At fifty you lift your mother’s shopping twice a week and check her tablets into the blue box. You do it automatically now, the way she taught you to stack tins labels out."
+        "At breakfast you lift the mug. Your shadow lifts its mug half a second later. You put your hand down. The dark hand follows.",
+        "At the bus stop it trails each shift of your weight. At work it reaches the filing cabinet after you have already opened it. In the supermarket it turns the corner behind you. Nobody comments.",
+        "Years pass normally. You change jobs once, move twice, lose a tooth, replace a washing machine. Tonight you switch off the kitchen light. Your shadow reaches the switch after your finger."
       ],
-      "aftertaste": "You stack tins labels out.",
+      "aftertaste": "Your shadow reaches the switch after you do.",
       "neighbors": [
         {
           "targetBookId": "b0042",
-          "difference": "A nurse detects the mismatch before discharge."
+          "difference": "Your shadow moves half a second before you do."
         },
         {
           "targetBookId": "b0043",
-          "difference": "An old hospital record reveals the swap at sixty."
+          "difference": "Your shadow is synchronous, but always two centimetres shorter."
         }
       ]
     },
@@ -800,22 +797,22 @@
       "rootId": "b0041",
       "kind": "nearby",
       "icon": "cot",
-      "headline": "CHECKED BEFORE DISCHARGE",
-      "title": "Checked Before Discharge",
+      "headline": "HALF A SECOND EARLY",
+      "title": "Before You",
       "passage": [
-        "You are born at 04:12, tagged, logged, laid in the cot by the window. Before discharge a nurse checks the ward register twice, frowns at the cot tags, and carries you to the other mother. You go home to number 22, to a flat with a balcony, to parents who teach you to mend plugs and keep receipts.",
-        "No one mentions pastry. You hear you have your father’s chin. You learn bus numbers, the library queue, the walk past the garages. You drive vans, stay single longer, marry at thirty-six.",
-        "At fifty you call your father on Sundays and test his smoke alarm when you visit."
+        "At breakfast the shadow of your hand starts toward the mug half a second before your hand does. Then you lift it. The two movements finish together.",
+        "At the bus stop the dark outline shifts before you change feet. At work it reaches toward the filing cabinet before you open it. Nobody comments.",
+        "Years pass normally. Tonight, just before you raise your hand, the shadow touches the light switch."
       ],
-      "aftertaste": "You test his alarm every visit.",
+      "aftertaste": "The dark finger gets there first.",
       "neighbors": [
         {
           "targetBookId": "b0041",
-          "difference": "The mismatch goes unnoticed and is never discovered."
+          "difference": "Your shadow follows every movement by half a second."
         },
         {
           "targetBookId": "b0043",
-          "difference": "The mismatch is not corrected before discharge and is found at sixty."
+          "difference": "Your shadow moves with you, but is always two centimetres shorter."
         }
       ]
     },
@@ -824,21 +821,22 @@
       "rootId": "b0041",
       "kind": "nearby",
       "icon": "cot",
-      "headline": "RECORD AT SIXTY",
-      "title": "Record at Sixty",
+      "headline": "TWO CENTIMETRES SHORTER",
+      "title": "The Shorter Shadow",
       "passage": [
-        "You grow to sixty at number 14, pastry with cold hands, till and delivery days, kitchens and marriage, remarks about your father’s ears. At sixty a letter about archived ward registers brings the birth interval, the cot tags, the discharge sheet with two names transposed.",
-        "You meet the other family three times in a year. Polite, careful. You exchange photographs of wards and weddings. No replacement childhood arrives. You continue lifting your mother’s shopping, checking her tablets into the blue box, stacking tins labels out."
+        "Your shadow moves exactly when you do. In morning light, office light, street light, it is always two centimetres shorter than the geometry should allow.",
+        "You queue, cook, carry shopping, stand for photographs. The missing two centimetres move with you. Nobody measures them.",
+        "Years pass normally. This evening you stand in the hallway while the lamp throws your outline along the wall. It ends two centimetres early."
       ],
-      "aftertaste": "You keep stacking tins labels out.",
+      "aftertaste": "The outline ends two centimetres early.",
       "neighbors": [
         {
           "targetBookId": "b0041",
-          "difference": "The old hospital record is never found."
+          "difference": "Your shadow has the correct length, but follows by half a second."
         },
         {
           "targetBookId": "b0042",
-          "difference": "The mismatch is corrected before discharge."
+          "difference": "Your shadow has the correct length, but moves half a second before you."
         }
       ]
     },
@@ -918,23 +916,23 @@
       "rootId": "b0047",
       "kind": "root",
       "icon": "paths",
-      "headline": "MOGADISHU, 1993",
-      "hook": "at twenty-seven you fly a Black Hawk over Mogadishu in October 1993, and twenty-five years later you teach your daughter to park.",
-      "title": "The Pilot You Became",
+      "headline": "DIED IN 2019",
+      "hook": "the book says you died in 2019, and also says you are reading this sentence in 2026.",
+      "title": "Already Dead",
       "passage": [
-        "Training taught you checklists, weight, weather, radio discipline. That afternoon required all of it. You remember the heat through the airframe and the particular tiredness afterwards, eating standing up.",
-        "Service continues. You move bases, marry, miss birthdays by days and make them up with phone calls from places with bad connections. Family calls arrive at odd hours and you learn to sound awake quickly. Later you take civilian maintenance work, keep the same short haircut for years, coach softball without much success.",
-        "Your daughter is sixteen and furious about parallel parking. You sit in the passenger seat with your hand near, but not on, the door handle. She says you are over-explaining. You say you are explaining exactly enough. She clips the cone and laughs despite herself. On the drive home she drives and you give only two instructions."
+        "On 4 May 2019 the book records your death at 06:18. It records the call, the certificate, the funeral six days later, the coat somebody forgets in the hall.",
+        "The pages continue. In 2020 you replace a phone. In 2022 you complain about a leaking tap. In 2024 you buy shoes and return them because the left one rubs.",
+        "In 2026 the book records you opening Babel Life and reading the sentence that says you died in 2019. The next paragraph concerns breakfast."
       ],
-      "aftertaste": "She parks clean on the third try.",
+      "aftertaste": "The next paragraph concerns breakfast.",
       "neighbors": [
         {
           "targetBookId": "b0048",
-          "difference": "You occupy the other pilot's assigned role on the same flight."
+          "difference": "The contradiction begins the morning after your recorded death."
         },
         {
           "targetBookId": "b0049",
-          "difference": "You leave military service at the next eligible point."
+          "difference": "The funeral remains in the book, but the death itself is never recorded."
         }
       ]
     },
@@ -943,22 +941,22 @@
       "rootId": "b0047",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THE OTHER PILOT'S ROLE",
-      "title": "Left Seat, Right Seat",
+      "headline": "BREAKFAST AFTER DEATH",
+      "title": "The Next Morning",
       "passage": [
-        "You are twenty-seven, same aircraft, same crew, same training behind you. The afternoon over Mogadishu asks for your attention in a different place. You monitor what he flies. He monitors what you monitor. Afterwards the same tiredness, eating standing up.",
-        "The rest holds. Bases, marriage, family calls at odd hours where you learn to sound awake. Civilian maintenance work later, same haircut, same softball coaching. Your daughter remembers none of this when she is learning to drive.",
-        "She is sixteen and furious about parallel parking. You sit with your hand near the door handle. She says you are over-explaining. You count to three before answering, a habit from crew discipline. She clips the cone. On the drive home she drives and you stay quiet longer than you expected to."
+        "On 4 May 2019 the book records your death at 06:18. The certificate is signed that afternoon.",
+        "The next entry is 5 May. You wake at 07:11, make toast, scrape the burnt edge into the sink and leave for work. Nobody mentions the previous page.",
+        "The life continues from there: bills, birthdays, repairs, ordinary Tuesdays. The death remains where it was printed."
       ],
-      "aftertaste": "You keep your hands folded, learning.",
+      "aftertaste": "The burnt edge falls into the sink.",
       "neighbors": [
         {
           "targetBookId": "b0047",
-          "difference": "You occupy the original pilot role and continue serving."
+          "difference": "The book carries the contradiction forward until you read it in 2026."
         },
         {
           "targetBookId": "b0049",
-          "difference": "You return to the original role, then leave at the next eligible point."
+          "difference": "The funeral is recorded, but no death page appears before it."
         }
       ]
     },
@@ -967,22 +965,22 @@
       "rootId": "b0047",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "LEAVE THE SERVICE",
-      "title": "After the Next Eligible Point",
+      "headline": "THE FUNERAL REMAINS",
+      "title": "No Death Page",
       "passage": [
-        "You are twenty-seven over Mogadishu in a Black Hawk. The heat, the checklists, the tiredness afterwards. When the papers allow, you sign out. No more moves ordered from above.",
-        "You train as an electrician, settle near your wife’s sister, take school runs and boiler repairs. Family calls become regular evening calls, not odd-hour calls from bad connections. Work is local, availability is higher, patience is still limited.",
-        "Your daughter learns to drive at sixteen in the same estate roads. She is furious about parallel parking. You over-explain. She says so. You argue about mirror order, then reset. She clips the cone and laughs despite herself. You walk in together for tea and she tells her mother your version was long."
+        "The book reaches 10 May 2019 and records your funeral. People arrive early. Someone brings the wrong flowers. A coat is forgotten in the hall.",
+        "There is no earlier page recording your death. On 11 May you buy milk, answer two messages and put the forgotten coat over a chair.",
+        "Nothing in the book marks the contradiction. The funeral remains between Thursday and Saturday."
       ],
-      "aftertaste": "Tea cools while she re-parks in words.",
+      "aftertaste": "The forgotten coat hangs over the chair.",
       "neighbors": [
         {
           "targetBookId": "b0047",
-          "difference": "You continue military service after the 1993 flight."
+          "difference": "Your death is recorded six days before the funeral, and the life still continues."
         },
         {
           "targetBookId": "b0048",
-          "difference": "You occupy the other pilot's role and continue serving."
+          "difference": "Your death is recorded, and the contradiction begins the next morning."
         }
       ]
     },
@@ -1135,23 +1133,23 @@
       "rootId": "b0056",
       "kind": "root",
       "icon": "paths",
-      "headline": "SIX WEEKS",
-      "hook": "at thirty-two you take your brother’s two children for an expected six weeks while he enters residential treatment.",
-      "title": "Your Brother’s Children",
+      "headline": "ONE DAY HAPPENED TWICE",
+      "hook": "one ordinary Tuesday in your life occurred twice — you lived it identically both times — and the book records both.",
+      "title": "The Extra Tuesday",
       "passage": [
-        "You are thirty-two. The request comes on a Sunday. Six weeks, your brother says. You clear the box room and the study, buy a bunk bed, tape the school timetable to the fridge. You shift to early shifts and learn the school journey with its two crossings.",
-        "Contact with their father is Sundays at first, then fortnights, then a missed month. You attend parents’ evenings, sign forms, keep house keys cut small. Legal responsibility accumulates in envelopes you file without reading twice.",
-        "They grow. Now one calls you Mum in shops without noticing and corrects it later. The other says you became their parent at fourteen, or at nineteen, depending on the week. Last Sunday the eldest let herself in with her own key and put the kettle on."
+        "The book gives Tuesday 8 October twice. In the first entry you wake at 06:47, make tea, miss the first bus, work until five, buy washing powder and watch half a documentary.",
+        "The next page is Tuesday 8 October again. You wake at 06:47, make tea, miss the first bus, work until five, buy the same washing powder and watch the same half of the documentary.",
+        "Wednesday follows once. You do not mention either Tuesday. The book keeps both."
       ],
-      "aftertaste": "She lets herself in, puts the kettle on.",
+      "aftertaste": "Wednesday follows once.",
       "neighbors": [
         {
           "targetBookId": "b0057",
-          "difference": "Your brother moves into your household after treatment."
+          "difference": "The second Tuesday differs only because the kettle boils thirty seconds later."
         },
         {
           "targetBookId": "b0058",
-          "difference": "You move into the children’s home instead of moving them into yours."
+          "difference": "The same Tuesday occurs three times instead of two."
         }
       ]
     },
@@ -1160,22 +1158,22 @@
       "rootId": "b0056",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THREE ADULTS",
-      "title": "Three Adults",
+      "headline": "THIRTY SECONDS LATER",
+      "title": "The Second Kettle",
       "passage": [
-        "You are thirty-two. Six weeks, two children, bunk bed, school timetable taped to the fridge. You shift to early shifts and learn the school journey. Then treatment ends and your brother asks to stay, to be near them.",
-        "You clear the study again. House keys multiply. Bedtime moves earlier for one, later for the other, and you and your brother disagree in the hallway in lowered voices. School forms need two signatures now. Contact becomes presence, variable: helpful on Thursdays, absent on Saturdays.",
-        "The children grow. One calls you Mum in shops. The other dates your parental role differently each year. Last Sunday the eldest let herself in and found you both at the table."
+        "Tuesday 8 October appears twice. The first entry begins at 06:47. Tea, missed bus, work until five, washing powder, half a documentary.",
+        "The second entry begins the same way, except the kettle clicks off thirty seconds later. You still miss the same bus. Every later event occurs at the same time as before.",
+        "Wednesday follows once. The thirty seconds appear nowhere else."
       ],
-      "aftertaste": "Two chairs already pulled out.",
+      "aftertaste": "The thirty seconds appear nowhere else.",
       "neighbors": [
         {
           "targetBookId": "b0056",
-          "difference": "Your brother does not move into the household after treatment."
+          "difference": "Both copies of Tuesday are identical."
         },
         {
           "targetBookId": "b0058",
-          "difference": "You provide the same care in the children’s existing home."
+          "difference": "Tuesday occurs three times instead of twice."
         }
       ]
     },
@@ -1184,22 +1182,22 @@
       "rootId": "b0056",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THEIR HOUSE",
-      "title": "Their House",
+      "headline": "THREE TUESDAYS",
+      "title": "Tuesday, Tuesday, Tuesday",
       "passage": [
-        "You are thirty-two. Six weeks, your brother says. You pack a bag and move into the children’s existing home, sleeping in his room, keeping their posters straight. The school timetable stays where it was. The school journey stays the same.",
-        "Your flat goes to a subletter, then goes altogether. You change surgeries, change shifts, learn the boiler. Contact with their father runs on the same pattern of Sundays and missed months, only now you host it at his table.",
-        "They grow around undisturbed walls. One calls you Mum in shops. The other argues about dates. Last Sunday the eldest let herself in with her own key and found you already home."
+        "The book gives Tuesday 8 October three times in succession. Each entry begins at 06:47.",
+        "Each time you make tea, miss the first bus, work until five, buy washing powder and watch half a documentary. The wording is the same.",
+        "After the third Tuesday, Wednesday follows. You remember one Tuesday."
       ],
-      "aftertaste": "Their posters never came down.",
+      "aftertaste": "You remember one Tuesday.",
       "neighbors": [
         {
           "targetBookId": "b0056",
-          "difference": "The children move into your home instead."
+          "difference": "Tuesday occurs twice instead of three times."
         },
         {
           "targetBookId": "b0057",
-          "difference": "Your brother later moves into the shared household."
+          "difference": "Tuesday occurs twice, with one thirty-second difference."
         }
       ]
     },
@@ -1281,23 +1279,23 @@
       "rootId": "b0062",
       "kind": "root",
       "icon": "photograph",
-      "headline": "THE PHOTOGRAPH ON THE ENVELOPE",
-      "hook": "at twenty-four you pull a passenger from a burning bus, and the next morning your face is on every front page.",
-      "title": "The Photograph on the Envelope",
+      "headline": "THE MISSING DAY",
+      "hook": "your life is complete except that June 11 does not occur in any year — the book passes from June 10 to June 12 without comment.",
+      "title": "June 11",
       "passage": [
-        "You are twenty-four, riding the late bus home from the warehouse, when smoke fills the stairwell. You lift the window lever, help the passenger beside you through, then follow. A photographer across the road catches you with soot on your shirt, holding their arm.",
-        "The photograph identifies you by name. The passenger is not named. You return to the warehouse on Monday. Envelopes begin arriving: requests for money, for school visits, for help with claims you cannot assess. You answer some. You file most.",
-        "Your partner screens calls for a year, then stops. At work new staff recognise the outdated photograph before they learn your rota. Last week another envelope came, handwritten, asking you to open a fundraiser. You placed it on the counter to decide tomorrow."
+        "When you are nine, the diary page after June 10 is June 12. At twenty-three, the work calendar does the same. At forty-six, a hospital appointment is booked for June 12 because June 11 is not a date in the book.",
+        "Summers arrive normally. Birthdays keep their dates. Rent is due, trains run, children finish school, tomatoes ripen on balconies. Nobody waits for the missing day.",
+        "Every year the book moves from June 10 to June 12. It never explains the gap."
       ],
-      "aftertaste": "You left it on the counter.",
+      "aftertaste": "Every year, June 12 follows June 10.",
       "neighbors": [
         {
           "targetBookId": "b0063",
-          "difference": "Your name is omitted from publication."
+          "difference": "June 11 exists, but the book contains no memory of anything that happens during it."
         },
         {
           "targetBookId": "b0064",
-          "difference": "The rescued passenger is publicly identified alongside you."
+          "difference": "June 11 exists in some years and is absent in others."
         }
       ]
     },
@@ -1306,22 +1304,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "UNNAMED IN PRINT",
-      "title": "Unnamed in Print",
+      "headline": "A BLANK JUNE 11",
+      "title": "The Day Without Memory",
       "passage": [
-        "You are twenty-four on the late bus from the warehouse. Smoke, window lever, the passenger beside you lifted through, your shirt soot-marked. The photographer across the road catches it. The papers print the image with bus number and time, without your name.",
-        "You return to the warehouse Monday. The image remains public. Strangers cannot readily locate you. Two envelopes arrive via the warehouse, forwarded vaguely to the young man in the photograph. You answer one.",
-        "Your partner never screens calls. New staff sometimes say you look familiar and leave it there. Last week you saw the photograph again in a retrospective, captioned only with the date. You clipped it and placed it in the drawer."
+        "June 11 exists on every calendar. You wake, eat, travel, speak and return home. The book gives the date and no events.",
+        "June 10 contains a dentist appointment. June 12 contains rain and a late train. Between them is the heading 11 June and a blank space.",
+        "This happens every year. You do not describe the blank days as missing."
       ],
-      "aftertaste": "You filed it without your name.",
+      "aftertaste": "The date is printed above empty space.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Your name is printed with the photograph."
+          "difference": "June 11 does not occur at all."
         },
         {
           "targetBookId": "b0064",
-          "difference": "Both you and the passenger are publicly identified."
+          "difference": "June 11 appears only in some years."
         }
       ]
     },
@@ -1330,22 +1328,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "BOTH NAMED",
-      "title": "Both Named",
+      "headline": "ONLY SOME YEARS",
+      "title": "Intermittent June",
       "passage": [
-        "You are twenty-four on the late bus. Smoke, window lever, the passenger lifted through. The photograph shows you holding their arm, soot on your shirt. This time the caption names you both.",
-        "You return to the warehouse. Envelopes arrive for you both, sometimes paired. You meet the passenger twice for press requests, then yearly by card. They take a different view of answering. You compare notes once about a shared request for a school visit.",
-        "Your partner screens calls. Their spouse does the same. Last week another envelope came asking you to open a fundraiser jointly. You placed it on the counter and wrote to ask what they thought."
+        "June 11 appears when you are six, seven and ten. It is absent at eight and nine. Later it returns for four years, disappears for one, then returns again.",
+        "Nothing marks the pattern. Work rotas, school terms, rent dates and family photographs simply use the calendars available in each year.",
+        "You never predict whether June 11 will come next. The book never gives a rule."
       ],
-      "aftertaste": "You ask what they think before answering.",
+      "aftertaste": "Some years have one more day.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Only you are publicly identified."
+          "difference": "June 11 is absent in every year."
         },
         {
           "targetBookId": "b0063",
-          "difference": "Neither participant is publicly identified by name."
+          "difference": "June 11 exists every year, but its events are blank."
         }
       ]
     },
@@ -1498,23 +1496,23 @@
       "rootId": "b0071",
       "kind": "root",
       "icon": "paths",
-      "headline": "FORTY-THREE YEARS",
-      "hook": "at twenty-six your shared lease ends, you sign again instead of leaving, and stay forty-three years.",
-      "title": "The Person You Stayed With",
+      "headline": "ONE WORD AT FOURTEEN",
+      "hook": "at fourteen you say \"perhaps\" instead of \"probably\" in a sentence nobody remembers, and the rest of your life is identical.",
+      "title": "Said Perhaps",
       "passage": [
-        "You are twenty-six, sitting on the floor with the renewal form, pen running out. You sign. Your partner signs below, slanting. You keep the same keys cut longer by use.",
-        "Disagreements recur with changed clothing. At thirty it is dishes left soaking. At fifty it is the thermostat and the volume of the radio. Work and friends stay partly separate: your Thursday pool, their Saturday calls to a sister. You buy the flat, then replace the roof, disagreeing about the mortgage and every quote.",
-        "Affection runs alongside, not underneath. Later routines baffle others: you queue for the bathroom in fixed order, pass tablets without asking, sleep with separate blankets. Last night you adjusted their blanket without comment while they turned the radio down for you."
+        "You are fourteen, standing near the school gate. Someone asks whether it will rain before you get home. You say, perhaps. The other person says nothing about the word.",
+        "You walk home, eat the same dinner, do the same homework and forget the exchange. Years later you take the same jobs, know the same people, move through the same rooms and make the same mistakes.",
+        "Nobody remembers the sentence. The book does."
       ],
-      "aftertaste": "Separate blankets, radio lowered.",
+      "aftertaste": "Nobody remembers the sentence. The book does.",
       "neighbors": [
         {
           "targetBookId": "b0072",
-          "difference": "You continue the relationship in separate homes."
+          "difference": "At fourteen you say \"maybe\" instead of \"perhaps\"."
         },
         {
           "targetBookId": "b0073",
-          "difference": "Your partner takes a one-year overseas posting during the renewed lease."
+          "difference": "You say \"probably\"; the other person says \"perhaps\" in reply."
         }
       ]
     },
@@ -1523,22 +1521,22 @@
       "rootId": "b0071",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "TWO ADDRESSES",
-      "title": "Two Addresses",
+      "headline": "SAID MAYBE",
+      "title": "Said Maybe",
       "passage": [
-        "You are twenty-six with the renewal form on the floor. You do not sign. You find a studio four bus stops away. Your partner keeps the old flat. You exchange keys within a month.",
-        "Visits set the rhythm. Your Thursday pool, their Saturday sister calls, now joined by Wednesday overnights and Sunday shopping with two lists merged in the aisle. Money stays divided except the holiday pot. The recurring disagreement about dishes becomes about whose sink holds them.",
-        "Later routines baffle others: whenever you sleep under one roof, you still use the bathroom in the same fixed order; tablets get passed between sofas in different rooms. Last night you left their flat late, blanket adjusted, radio lowered for the morning."
+        "You are fourteen, standing near the school gate. Someone asks whether it will rain before you get home. You say, maybe. The other person says nothing about the word.",
+        "You walk home, eat the same dinner, do the same homework and forget the exchange. Years later the same jobs, people, rooms and mistakes follow.",
+        "Nobody remembers the sentence. This volume contains maybe."
       ],
-      "aftertaste": "Two sinks, one merged shopping list.",
+      "aftertaste": "This volume contains maybe.",
       "neighbors": [
         {
           "targetBookId": "b0071",
-          "difference": "You renew the shared lease and continue cohabiting."
+          "difference": "You say \"perhaps\" instead of \"maybe\"."
         },
         {
           "targetBookId": "b0073",
-          "difference": "You renew the shared lease, then spend a year apart for the posting."
+          "difference": "You say \"probably\"; the other person says \"perhaps\" in reply."
         }
       ]
     },
@@ -1547,22 +1545,22 @@
       "rootId": "b0071",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THE YEAR APART",
-      "title": "The Year Apart",
+      "headline": "THEIR WORD",
+      "title": "They Said Perhaps",
       "passage": [
-        "You are twenty-six. You both sign the renewal, slanting signatures. Keys cut longer by use. Three months later your partner accepts a one-year posting. You stay with the flat, the first roof quote, the radio.",
-        "Contact becomes scheduled: Sunday calls with delay, letters with numbered pages, visits at months four and nine. You learn to cook for one and to fix the fuse alone. They learn the new city’s buses. The dishes disagreement pauses, then resumes by phone about a sink neither can see.",
-        "Later routines carry the year inside them. Fixed bathroom order, tablets passed without asking, separate blankets. Last night you adjusted their blanket while they turned the radio down, both gestures learned apart."
+        "You are fourteen, standing near the school gate. Someone asks whether it will rain before you get home. You say, probably. They answer, perhaps.",
+        "You walk home, eat the same dinner, do the same homework and forget the exchange. Years later the same jobs, people, rooms and mistakes follow.",
+        "Nobody remembers who used which word. The book keeps both positions."
       ],
-      "aftertaste": "Both gestures were learned apart.",
+      "aftertaste": "The book keeps both positions.",
       "neighbors": [
         {
           "targetBookId": "b0071",
-          "difference": "Your partner does not take the overseas posting."
+          "difference": "You say \"perhaps\" and receive no reply about the wording."
         },
         {
           "targetBookId": "b0072",
-          "difference": "You establish separate homes instead of renewing the shared household."
+          "difference": "You say \"maybe\" and receive no reply about the wording."
         }
       ]
     },
