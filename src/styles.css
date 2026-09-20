@@ -284,7 +284,7 @@ body {
   .library-index {
     grid-column: 2;
     grid-row: 1;
-    width: min(25rem, 100%);
+    width: min(22.125rem, 100%);
     margin-top: calc(0.6875rem * 1.5 + 1rem);
     margin-bottom: 0;
     justify-self: end;
@@ -293,7 +293,7 @@ body {
   .library-index__field {
     width: 100%;
     height: auto;
-    aspect-ratio: 400 / 210;
+    aspect-ratio: 354 / 210;
   }
 
   .library-index__svg--wide {
