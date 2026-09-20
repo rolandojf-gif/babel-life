@@ -17,6 +17,10 @@
   --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace;
   --gutter: 20px;
+  --motion-fast: 120ms;
+  --motion-view: 180ms;
+  --motion-settle: 240ms;
+  --motion-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --lift: 0 1px 0 rgba(255, 253, 248, 0.7) inset, 0 1px 2px rgba(23, 21, 15, 0.06),
     0 8px 20px -14px rgba(23, 21, 15, 0.35);
   --lift-hover: 0 1px 0 rgba(255, 253, 248, 0.8) inset, 0 2px 4px rgba(23, 21, 15, 0.08),
@@ -238,7 +242,6 @@ body {
 .library-index__locator {
   transform-box: view-box;
   transform-origin: 0 0;
-  transition: transform 220ms ease-out;
 }
 
 .library-index__mark--current {
@@ -391,7 +394,8 @@ body {
   box-shadow: none;
   color: inherit;
   text-decoration: none;
-  transition: border-color 160ms ease-out;
+  transition: border-color var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease);
 }
 
 .card--featured {
@@ -405,6 +409,7 @@ body {
 .card:hover,
 .card:focus-visible {
   border-color: var(--rule-strong);
+  background-color: var(--paper-card-a);
 }
 
 .card--featured:hover,
@@ -519,12 +524,12 @@ body {
 .card__arrow {
   display: inline-block;
   margin-left: 0.55em;
-  transition: transform 160ms ease-out;
+  transition: transform var(--motion-fast) var(--motion-ease);
 }
 
 .card:hover .card__arrow,
 .card:focus-visible .card__arrow {
-  transform: translateX(3px);
+  transform: translateX(2px);
 }
 
 .wall__count {
@@ -548,16 +553,6 @@ body {
 .book {
   max-width: 40rem;
   margin: 0 auto;
-  animation: volume-in 160ms ease-out;
-}
-
-@keyframes volume-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .backlink {
@@ -957,7 +952,7 @@ body {
   padding: 0.25rem 0 0.5rem;
   color: inherit;
   text-decoration: none;
-  transition: color 160ms ease-out;
+  transition: color var(--motion-fast) var(--motion-ease);
 }
 
 .shelf-locator:focus-visible {
@@ -1235,7 +1230,7 @@ body {
   background: var(--paper-card-a);
   color: inherit;
   text-decoration: none;
-  transition: background-color 160ms ease-out;
+  transition: background-color var(--motion-fast) var(--motion-ease);
 }
 
 .nearby__link:hover,
@@ -1326,7 +1321,7 @@ body {
   padding: 0.7rem 0;
   color: var(--ink-faint);
   text-decoration: none;
-  transition: color 160ms ease-out;
+  transition: color var(--motion-fast) var(--motion-ease);
 }
 
 .coordinate--link:hover,
@@ -1392,7 +1387,7 @@ body {
   padding: 0.7rem 0.25rem;
   color: var(--ink-faint);
   text-decoration: none;
-  transition: color 160ms ease-out, background-color 160ms ease-out;
+  transition: color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease);
 }
 
 .shelf__link:hover {
@@ -1534,7 +1529,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-decoration: none;
-  transition: color 160ms ease-out;
+  transition: color var(--motion-fast) var(--motion-ease);
 }
 
 .shelfwalk__link:hover {
@@ -1563,9 +1558,9 @@ body {
   letter-spacing: 0.12em;
   text-decoration: none;
   transition:
-    background-color 160ms ease-out,
-    color 160ms ease-out,
-    border-color 160ms ease-out;
+    background-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease);
 }
 
 .action--primary {
@@ -1669,18 +1664,150 @@ body {
   white-space: nowrap;
 }
 
+/* Motion: ink settling onto paper, with no changes to document geometry. */
+@keyframes paper-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes paper-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes ink-settle {
+  from { opacity: 0.55; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Scope movement to readers who have not requested reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .main:not([data-view-transition]) > :not(.wall),
+  .main:not([data-view-transition]) .masthead {
+    animation: paper-in var(--motion-view) var(--motion-ease) backwards;
+  }
+
+  .main:not([data-view-transition]) .wall__cell,
+  .main:not([data-view-transition]) .book--spread .passage {
+    animation: ink-settle var(--motion-settle) var(--motion-ease) backwards;
+  }
+
+  .main:not([data-view-transition]) .wall__cell:nth-child(3n + 2) {
+    animation-delay: 18ms;
+  }
+
+  .main:not([data-view-transition]) .wall__cell:nth-child(3n) {
+    animation-delay: 36ms;
+  }
+
+  /* Both ends move together, or both update immediately in older browsers. */
+  @supports (d: path("M0 0H1V1")) {
+    .library-index__locator {
+      transition: transform var(--motion-settle) var(--motion-ease);
+    }
+
+    .library-index__leader {
+      transition: d var(--motion-settle) var(--motion-ease);
+    }
+  }
+
+  :is(.backlink__arrow, .nearby__arrow, .shelf-locator__pointer) {
+    transition: transform var(--motion-fast) var(--motion-ease);
+  }
+
+  :is(.backlink, .action, .shelfwalk__link):focus-visible .backlink__arrow {
+    transform: translateX(-2px);
+  }
+
+  :is(.nearby__link, .shelfwalk__link):focus-visible :is(.nearby__arrow, .card__arrow) {
+    transform: translateX(2px);
+  }
+
+  .shelf-locator:focus-visible .shelf-locator__pointer {
+    transform: translateY(1px);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    :is(.backlink, .action, .shelfwalk__link):hover .backlink__arrow {
+      transform: translateX(-2px);
+    }
+
+    :is(.nearby__link, .shelfwalk__link):hover :is(.nearby__arrow, .card__arrow) {
+      transform: translateX(2px);
+    }
+
+    .shelf-locator:hover .shelf-locator__pointer {
+      transform: translateY(1px);
+    }
+  }
+
+  .action {
+    transition: background-color var(--motion-fast) var(--motion-ease),
+      color var(--motion-fast) var(--motion-ease),
+      border-color var(--motion-fast) var(--motion-ease),
+      transform var(--motion-fast) var(--motion-ease);
+  }
+
+  .action:active {
+    transform: translateY(1px);
+  }
+}
+
+/* Dissolve only: never interpolate page heights or slide whole passages. */
+::view-transition-group(root) {
+  animation: none;
+}
+
+::view-transition-old(root) {
+  animation: paper-out var(--motion-fast) var(--motion-ease) both;
+}
+
+::view-transition-new(root) {
+  animation: paper-in var(--motion-view) var(--motion-ease) both;
+}
+
+/* Allow a second navigation immediately, including during the dissolve. */
+::view-transition {
+  pointer-events: none;
+}
+
+:is(.backlink, .about summary) {
+  transition: color var(--motion-fast) var(--motion-ease);
+}
+
+:is(.backlink, .shelfwalk__link, .about summary):is(:hover, :focus-visible) {
+  color: var(--oxblood);
+}
+
+.shelf__link:focus-visible {
+  background: rgba(110, 31, 39, 0.05);
+  color: var(--oxblood);
+}
+
+.action--primary:focus-visible {
+  border-color: var(--oxblood-deep);
+  background: var(--oxblood-deep);
+}
+
+.action--stranger:focus-visible {
+  background: rgba(110, 31, 39, 0.07);
+}
+
+.action--quiet:focus-visible {
+  color: var(--oxblood);
+}
+
+.card:active {
+  background-color: var(--paper-card-c);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
-
-  .card:hover,
-  .card:focus-visible {
-    transform: none;
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 
   .card:hover .card__arrow,
@@ -1688,7 +1815,9 @@ body {
     transform: none;
   }
 
-  .library-index__locator {
-    transition: none;
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }

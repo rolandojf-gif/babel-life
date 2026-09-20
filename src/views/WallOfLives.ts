@@ -90,6 +90,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   }
 
   grid.addEventListener('pointerover', (event) => {
+    if (event.pointerType === 'touch') return;
     const id = bookIdFrom(event.target);
     if (id === undefined) return;
     pointerBookId = id;
@@ -105,6 +106,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   grid.addEventListener('focusin', (event) => {
     const id = bookIdFrom(event.target);
     if (id === undefined) return;
+    pointerBookId = undefined;
     focusBookId = id;
     locate();
   });

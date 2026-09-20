@@ -5,6 +5,7 @@
 
 import {
   coordinateFields,
+  formatCoordinate,
   SHELF_LENGTH,
   SHELVES_PER_WALL,
   type Coordinate,
@@ -164,7 +165,11 @@ function placeLocator(
   locator.setAttribute('data-wall', String(coordinate.wall));
   locator.setAttribute('data-shelf', String(coordinate.shelf));
   locator.setAttribute('data-volume', String(coordinate.volume));
-  leader.setAttribute('d', leaderPath(metrics, x, y, coordinate.wall));
+  const path = leaderPath(metrics, x, y, coordinate.wall);
+  leader.setAttribute('d', path);
+  // Identical path commands let CSS interpolate the line with the marker. The
+  // SVG attribute remains the fallback in browsers without the CSS d property.
+  (leader as SVGElement).style.setProperty('d', `path("${path}")`);
 }
 
 function fillCoordinateReadout(line: HTMLElement, coordinate: Coordinate): void {
@@ -221,6 +226,9 @@ function createCoordinateReadout(coordinate: Coordinate): HTMLParagraphElement {
 
 /** Move the locator and printed address to a real coordinate. */
 export function updateLibraryIndex(root: HTMLElement, coordinate: Coordinate): void {
+  const address = formatCoordinate(coordinate);
+  if (root.dataset.coordinate === address) return;
+  root.dataset.coordinate = address;
   for (const svg of root.querySelectorAll('svg')) {
     const locator = svg.querySelector('.library-index__locator');
     const leader = svg.querySelector('.library-index__leader');
@@ -234,6 +242,7 @@ export function updateLibraryIndex(root: HTMLElement, coordinate: Coordinate): v
 /** Decorative index field plus the one real address it is anchored to. */
 export function createLibraryIndex(coordinate: Coordinate): HTMLDivElement {
   const root = element('div', 'library-index');
+  root.dataset.coordinate = formatCoordinate(coordinate);
 
   const field = element('div', 'library-index__field');
   field.setAttribute('aria-hidden', 'true');

@@ -109,7 +109,7 @@ describe('the library index', () => {
     expect(mobile).toEqual({ ...onShelf, wall: known.wall, shelf: known.shelf, volume: known.volume });
   });
 
-  it('places each wall in its own visible group', () => {
+  it('keeps the marker inside the three visible groups without changing the real address', () => {
     const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
     const xs = [1, 2, 3, 4].map((wall) => {
       const coordinate = { hexagon: 'A', wall, shelf: 1, volume: 1 };
@@ -121,7 +121,8 @@ describe('the library index', () => {
     });
     expect(xs[0]).toBeLessThan(xs[1] ?? Infinity);
     expect(xs[1]).toBeLessThan(xs[2] ?? Infinity);
-    expect(xs[2]).toBeLessThan(xs[3] ?? Infinity);
+    expect(xs[2]).toBe(xs[3]);
+    expect(printed(index.querySelector('.coordinate'))).toContain('Wall 4');
   });
 
   it('moves the locator to another real coordinate without inventing one', () => {
@@ -146,9 +147,22 @@ describe('the library index', () => {
     expect(WIDE_INDEX.rows).toBeGreaterThan(1);
     expect(NARROW_INDEX.columns).toBeGreaterThan(1);
     expect(NARROW_INDEX.rows).toBe(1);
-    expect(WIDE_INDEX.width).toBe(400);
+    expect(WIDE_INDEX.columns).toBe(3);
+    expect(WIDE_INDEX.width).toBe(354);
     expect(WIDE_INDEX.height).toBe(210);
     expect(NARROW_INDEX.height).toBe(112);
+  });
+
+  it('keeps an SVG fallback for the animated leader and avoids rebuilding an unchanged address', () => {
+    const index = createLibraryIndex(known);
+    const readout = index.querySelector('.coordinate')?.firstChild;
+    updateLibraryIndex(index, known);
+    expect(index.querySelector('.coordinate')?.firstChild).toBe(readout);
+    updateLibraryIndex(index, { ...known, wall: 1, shelf: 5, volume: 32 });
+    for (const leader of index.querySelectorAll<SVGElement>('.library-index__leader')) {
+      expect(leader.style.getPropertyValue('d')).toBe(`path("${leader.getAttribute('d')}")`);
+      expect(leader.getAttribute('d')).toMatch(/^M[\d.]+ [\d.]+H[\d.]+V[\d.]+$/);
+    }
   });
 });
 
@@ -238,5 +252,20 @@ describe('the wall’s index', () => {
     expect(printed(first.element.querySelector('.library-index .coordinate'))).not.toBe(
       printed(second.element.querySelector('.library-index .coordinate')),
     );
+  });
+
+  it('gives keyboard focus precedence over a resting pointer and ignores touch hover', () => {
+    const view = createWallOfLives(wallState(SEED), {
+      onSomethingStranger() {}, onShowAll() {},
+    });
+    document.body.replaceChildren(view.element);
+    const cards = view.element.querySelectorAll<HTMLAnchorElement>('a.card');
+    const readout = () => printed(view.element.querySelector('.library-index .coordinate'));
+    const opening = readout();
+    cards[1]!.dispatchEvent(new PointerEvent('pointerover', { bubbles: true, pointerType: 'touch' }));
+    expect(readout()).toBe(opening);
+    cards[1]!.dispatchEvent(new PointerEvent('pointerover', { bubbles: true, pointerType: 'mouse' }));
+    cards[2]!.focus();
+    expect(readout()).toBe(formatCoordinate(coordinateFor(wallBooks('first', SEED)[2]!.id)));
   });
 });
