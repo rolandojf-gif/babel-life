@@ -1088,19 +1088,29 @@ body {
   .book--spread .shelf--embedded .shelf__row {
     min-width: 0;
     min-height: 1.875rem;
-    gap: 0.25rem;
+    gap: 0.15rem;
     padding: 0.3rem 0;
   }
 
+  .book--spread .shelf--embedded .shelf__glyph {
+    width: 0.28rem;
+    height: 1rem;
+  }
+
   .book--spread .shelf--embedded .shelf__number {
-    width: 1.15rem;
-    font-size: 0.625rem;
+    width: 0.9rem;
+    font-size: 0.5625rem;
+    letter-spacing: 0.04em;
   }
 
   .book--spread .shelf--embedded .shelf__spine {
     min-width: 0;
-    font-size: 0.6875rem;
-    line-height: 1.25;
+    font-size: 0.625rem;
+    line-height: 1.2;
+  }
+
+  .book--spread .shelf--embedded .shelf__link:not(.shelf__link--legible) .shelf__spine {
+    white-space: nowrap;
   }
 }
 
@@ -1337,6 +1347,32 @@ body {
 .shelf__link:focus-visible {
   outline: 2px solid var(--oxblood);
   outline-offset: -2px;
+}
+
+.shelf__glyph {
+  flex: none;
+  align-self: center;
+  width: 0.4rem;
+  height: 1.35rem;
+  border: 1px solid var(--ink-faint);
+  border-radius: 1px;
+}
+
+.shelf__glyph--illegible {
+  background: transparent;
+  opacity: 0.55;
+}
+
+.shelf__glyph--legible {
+  border-color: var(--ink-soft);
+  background: var(--ink-soft);
+  opacity: 0.9;
+}
+
+.shelf__glyph--current {
+  border-color: var(--oxblood);
+  background: var(--oxblood);
+  opacity: 1;
 }
 
 .shelf__number {
