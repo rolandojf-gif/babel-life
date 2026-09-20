@@ -5,13 +5,11 @@ import { hashForAddress, hashForShelf } from '../library/routing';
 import type { Book } from '../library/model';
 import { createIllustration } from './illustrations';
 import { createCandleGlyph } from './motifs';
-import { createIntervalDiagram } from './intervalDiagram';
 import { createNearbyVolumes } from './NearbyVolumes';
 import { createEmbeddedShelf } from './shelfListing';
 import { createShelfLocator } from './shelfLocator';
 import { element, glyph, link, type ViewHandle } from './view';
 
-/** The interval diagram is specific to this volume; the spread layout is not. */
 const THE_0814 = 'b0007';
 
 const TIMESTAMP = /^\d{2}:\d{2}(:\d{2})?$/;
@@ -56,9 +54,9 @@ function createPassage(book: Book): HTMLDivElement {
   return passage;
 }
 
-function createVersoVisual(book: Book): HTMLElement | SVGSVGElement {
-  if (book.id === THE_0814) return createIntervalDiagram();
-  const visual = element('div', 'book__visual spread__visual');
+function createBookVisual(book: Book): HTMLDivElement {
+  const visual = element('div', 'book__visual');
+  visual.setAttribute('aria-hidden', 'true');
   visual.append(createIllustration(book.icon));
   return visual;
 }
@@ -111,21 +109,22 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   const title = element('h1', 'book__title', book.title);
   title.tabIndex = -1;
 
-  const visualSlot = element('div', 'spread__visual-slot');
-  visualSlot.append(createVersoVisual(book));
+  const header = element('div', 'book__header');
+  header.append(title, createBookVisual(book));
 
   const verso = element('div', 'spread__verso');
-  verso.append(element('p', 'found', copy.found), createShelfLocator(coordinate), visualSlot);
+  verso.append(element('p', 'found', copy.found), createShelfLocator(coordinate));
 
   const gutter = element('div', 'spread__gutter');
   gutter.setAttribute('aria-hidden', 'true');
 
   const recto = element('div', 'spread__recto');
   recto.append(
-    title,
+    header,
     element('p', 'already-here', copy.alreadyHere),
     createConsultationLine(new Date()),
     createPassage(book),
+    element('p', 'aftertaste', book.aftertaste),
   );
 
   const spread = element('div', 'spread');
@@ -138,7 +137,6 @@ export function createBookView(bookId: string, address: Coordinate | null): View
     createBackLink(),
     spread,
     shelfGutter,
-    element('p', 'aftertaste', book.aftertaste),
     createEmbeddedShelf(shelfOf(coordinate), book.id),
     createNearbyVolumes(book),
     createShelfWalk(coordinate),
