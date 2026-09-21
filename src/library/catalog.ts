@@ -173,9 +173,9 @@ export const PINNED_ROOT_IDS = ['b0047', 'b0041', 'b0074', 'b0038', 'b0010'] as 
 
 /**
  * Deal one visit's wall. The five strongest editorial hooks stay fixed at the
- * front; the other nineteen lives are shuffled as one pool. Seven join the
- * opening wall and the remaining twelve become “something stranger”. Opening
- * out to all twenty-four therefore never moves a card the visitor has seen.
+ * front; the other twenty lives are shuffled as one pool. Seven join the
+ * opening wall and the remaining thirteen become “something stranger”. Opening
+ * out to all twenty-five therefore never moves a card the visitor has seen.
  */
 function wallDeal(seed: bigint): { first: string[]; second: string[] } {
   const wall = getCatalog().wall;

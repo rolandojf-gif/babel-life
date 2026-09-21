@@ -34,11 +34,11 @@ function wordCount(passage: string[]): number {
 }
 
 describe('the inventory', () => {
-  it('is seventy-two volumes: twenty-four lives and forty-eight variations', () => {
-    expect(TOTAL_BOOKS).toBe(72);
-    expect(TOTAL_ROOTS).toBe(24);
-    expect(roots).toHaveLength(24);
-    expect(nearby).toHaveLength(48);
+  it('is seventy-five volumes: twenty-five lives and fifty variations', () => {
+    expect(TOTAL_BOOKS).toBe(75);
+    expect(TOTAL_ROOTS).toBe(25);
+    expect(roots).toHaveLength(25);
+    expect(nearby).toHaveLength(50);
   });
 
   it('uses each accession number once, and never reuses a retired one', () => {
@@ -139,11 +139,11 @@ describe('the nearby edges', () => {
 });
 
 describe('the wall', () => {
-  it('shows two curated sets of twelve, and nothing twice', () => {
+  it('shows a curated opening twelve and a stranger remainder, and nothing twice', () => {
     expect(catalog.wall.first).toHaveLength(12);
-    expect(catalog.wall.second).toHaveLength(12);
+    expect(catalog.wall.second).toHaveLength(13);
     const walled = [...catalog.wall.first, ...catalog.wall.second];
-    expect(new Set(walled).size).toBe(24);
+    expect(new Set(walled).size).toBe(25);
   });
 
   it('is exactly the set of root lives', () => {
@@ -154,8 +154,8 @@ describe('the wall', () => {
   it('never offers a variation as a card of its own', () => {
     for (const book of wallBooks('all', SEED)) expect(book.kind).toBe('root');
     expect(wallBooks('first', SEED)).toHaveLength(12);
-    expect(wallBooks('second', SEED)).toHaveLength(12);
-    expect(wallBooks('all', SEED)).toHaveLength(24);
+    expect(wallBooks('second', SEED)).toHaveLength(13);
+    expect(wallBooks('all', SEED)).toHaveLength(25);
     expect(ids(wallBooks('all', SEED)).sort()).toEqual(roots.map((book) => book.id).sort());
   });
 
@@ -173,7 +173,7 @@ describe('the order the wall is dealt in', () => {
     expect(ids(wallBooks('all', SEED))).toEqual(ids(wallBooks('all', SEED)));
   });
 
-  it('never moves a card when the wall opens out to all twenty-four', () => {
+  it('never moves a card when the wall opens out to all twenty-five', () => {
     // The one thing a shuffled wall must not do is make cards jump.
     expect(ids(wallBooks('all', SEED))).toEqual([
       ...ids(wallBooks('first', SEED)),
@@ -189,16 +189,16 @@ describe('the order the wall is dealt in', () => {
     }
   });
 
-  it('shuffles the other nineteen lives and splits them without overlap', () => {
+  it('shuffles the other twenty lives and splits them without overlap', () => {
     const first = ids(wallBooks('first', SEED));
     const second = ids(wallBooks('second', SEED));
     const pinned = new Set<string>(PINNED_ROOT_IDS);
     const expectedRemainder = roots.map((book) => book.id).filter((id) => !pinned.has(id)).sort();
 
     expect(first).toHaveLength(12);
-    expect(second).toHaveLength(12);
+    expect(second).toHaveLength(13);
     expect(first.slice(PINNED_ROOT_IDS.length).length).toBe(7);
-    expect(new Set([...first, ...second]).size).toBe(24);
+    expect(new Set([...first, ...second]).size).toBe(25);
     expect([...first.slice(PINNED_ROOT_IDS.length), ...second].sort()).toEqual(expectedRemainder);
   });
 
@@ -229,12 +229,12 @@ describe('another life', () => {
     expect(start).toBeDefined();
     const visited: string[] = [];
     let current = start?.id ?? '';
-    for (let step = 0; step < 24; step += 1) {
+    for (let step = 0; step < 25; step += 1) {
       current = anotherLifeAfter(current).id;
       visited.push(current);
     }
-    expect(new Set(visited).size).toBe(24);
-    expect(visited[23]).toBe(start?.id);
+    expect(new Set(visited).size).toBe(25);
+    expect(visited[24]).toBe(start?.id);
   });
 
   it('reaches the same next life from a variation as from its root', () => {

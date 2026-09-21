@@ -53,10 +53,10 @@ describe('the locale', () => {
 });
 
 describe('the two catalogs', () => {
-  it('contain the same seventy-two IDs in the same order', () => {
+  it('contain the same seventy-five IDs in the same order', () => {
     expect(english.books.map((book) => book.id)).toEqual(spanish.books.map((book) => book.id));
-    expect(english.books).toHaveLength(72);
-    expect(spanish.books).toHaveLength(72);
+    expect(english.books).toHaveLength(75);
+    expect(spanish.books).toHaveLength(75);
   });
 
   it('keep structural fields identical across languages', () => {

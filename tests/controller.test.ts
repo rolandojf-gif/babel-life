@@ -129,17 +129,17 @@ describe('moving between views', () => {
 });
 
 describe('the wall selection', () => {
-  it('swaps to the second twelve, then to all of them', () => {
+  it('swaps to the stranger remainder, then to all of them', () => {
     const { controller, render, renders } = mount('');
     controller.showSomethingStranger();
     expect(controller.state.wallSelection).toBe('second');
-    expect(renders.at(-1)?.hint).toEqual({ focus: 'wallGrid', announce: 'Twelve other lives.' });
+    expect(renders.at(-1)?.hint).toEqual({ focus: 'wallGrid', announce: 'Thirteen other lives.' });
 
     controller.showAll();
     expect(controller.state.wallSelection).toBe('all');
     expect(renders.at(-1)?.hint).toEqual({
       focus: 'wallGrid',
-      announce: 'All twenty-four lives.',
+      announce: 'All twenty-five lives.',
     });
     expect(render).toHaveBeenCalledTimes(3);
   });

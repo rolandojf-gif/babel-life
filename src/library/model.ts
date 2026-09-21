@@ -27,7 +27,7 @@ interface BookBase {
   neighbors: NeighborEdge[];
 }
 
-/** One of the twenty-four lives on the wall. Only a root carries a wall hook. */
+/** One of the twenty-five lives on the wall. Only a root carries a wall hook. */
 export interface RootBook extends BookBase {
   kind: 'root';
   /** One complete life premise, completing the card's eyebrow. */
@@ -41,7 +41,7 @@ export interface NearbyBook extends BookBase {
 
 export type Book = RootBook | NearbyBook;
 
-/** The two curated sets of twelve root lives the wall shows. */
+/** The two curated sets of root lives the wall shows. */
 export interface WallSets {
   first: string[];
   second: string[];
