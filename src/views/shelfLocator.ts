@@ -152,12 +152,12 @@ export function createShelfLocator(coordinate: Coordinate): HTMLDivElement {
   if (otherLegible) {
     key.append(
       element('span', 'shelf-locator__key-mark shelf-locator__key-mark--legible'),
-      document.createTextNode(copy.locatorAlsoLegible),
+      element('span', 'shelf-locator__key-label', copy.locatorAlsoLegible),
     );
   } else {
     key.append(
       element('span', 'shelf-locator__key-mark shelf-locator__key-mark--solo'),
-      document.createTextNode(copy.locatorSolo),
+      element('span', 'shelf-locator__key-label', copy.locatorSolo),
     );
   }
   root.append(key);
