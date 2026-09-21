@@ -57,7 +57,7 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
       if (position === undefined) {
         state.view = 'invalidAddress';
       } else {
-        // Every address holds a volume; this edition can print seventy-two of them.
+        // Every address holds a volume; this edition can print seventy-five of them.
         const bookId = accessionAt(position);
         const book = bookId === undefined ? undefined : findBook(bookId);
         state.address = route.coordinate;
@@ -100,7 +100,7 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
     },
 
     showAll(): void {
-      setWall('all', { focus: 'wallGrid', announce: copy.announceAll });
+      setWall('all', { focus: 'wallAppended', announce: copy.announceAll });
     },
   };
 }

@@ -72,6 +72,6 @@ export interface AppState {
 
 /** Where focus should land after a render, and what to announce politely. */
 export interface RenderHint {
-  focus: 'none' | 'view' | 'stranger' | 'wallGrid';
+  focus: 'none' | 'view' | 'stranger' | 'wallGrid' | 'wallAppended';
   announce?: string;
 }

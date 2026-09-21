@@ -138,7 +138,7 @@ describe('the wall selection', () => {
     controller.showAll();
     expect(controller.state.wallSelection).toBe('all');
     expect(renders.at(-1)?.hint).toEqual({
-      focus: 'wallGrid',
+      focus: 'wallAppended',
       announce: 'All twenty-five lives.',
     });
     expect(render).toHaveBeenCalledTimes(3);

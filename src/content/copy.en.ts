@@ -16,6 +16,7 @@ export const copy: Copy = {
   universeScaleMantissa: '≈ 10',
   universeScaleExponent: '80',
   universeScaleUnit: 'atoms',
+  scalePower: '{mantissa} to the power of {exponent} {unit}',
   lede: 'Open one.',
   cardEyebrow: 'THERE IS ALREADY A BOOK IN WHICH…',
   openThisLife: 'OPEN THIS LIFE',
@@ -75,5 +76,4 @@ export const copy: Copy = {
   locatorHere: 'VOLUME {n} · YOU ARE HERE',
   locatorAlsoLegible: ' Also legible on this shelf',
   locatorSolo: ' No other legible volume on this shelf',
-  locatorAria: 'Volume {n} of {total} on this shelf. View this shelf.',
 };

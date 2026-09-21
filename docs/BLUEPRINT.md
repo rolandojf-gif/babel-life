@@ -142,7 +142,7 @@ At an address holding nothing this edition can print, the visitor is not told th
 *   **Analytics: Cloudflare Web Analytics**, loaded from `static.cloudflareinsights.com` in both entry documents. It is the only third-party request the site makes. It sets no cookie and uses no `localStorage` for usage metrics, collects no personal data, and the footer's *Legal & privacy* disclosure says so in both languages. There is no other tracking of any kind, and no telemetry the application itself emits.
 
 ### Verification (`tests/`)
-Vitest, fifteen files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the view and controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
+Vitest, sixteen files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the view and controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
 
 Note that `npm run build`, which is what Netlify runs, does **not** run the tests. Keeping `npm test` green is a discipline of the repository, not a gate the deploy enforces.
 

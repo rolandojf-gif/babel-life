@@ -1,4 +1,4 @@
-import { copy } from '../content/copy';
+import { copy, fill } from '../content/copy';
 import { TOTAL_ROOTS, wallBooks } from '../library/catalog';
 import { coordinateFor } from '../library/coordinates';
 import type { AppState } from '../library/model';
@@ -13,6 +13,30 @@ interface WallActions {
   onShowAll(): void;
 }
 
+/** Cards in the opening deal. Show-all appends after these and does not reorder them. */
+const OPENING_WALL = 12;
+
+function createScaleValue(mantissa: string, exponent: string, unit: string): HTMLParagraphElement {
+  const value = element('p', 'masthead__scale-value');
+  value.append(
+    element(
+      'span',
+      'visually-hidden',
+      fill(copy.scalePower, { mantissa, exponent, unit }),
+    ),
+  );
+
+  const visual = element('span');
+  visual.setAttribute('aria-hidden', 'true');
+  visual.append(
+    document.createTextNode(mantissa),
+    element('sup', 'masthead__scale-exponent', exponent),
+    document.createTextNode(` ${unit}`),
+  );
+  value.append(visual);
+  return value;
+}
+
 /** The wall of lives: the whole site, understandable by looking at it. */
 export function createWallOfLives(state: AppState, actions: WallActions): ViewHandle {
   const root = element('div', 'wall');
@@ -23,18 +47,15 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   heading.id = 'wall-heading';
   heading.tabIndex = -1;
 
-  const libraryValue = element('p', 'masthead__scale-value');
-  libraryValue.append(
-    document.createTextNode(copy.libraryScaleMantissa),
-    element('sup', 'masthead__scale-exponent', copy.libraryScaleExponent),
-    document.createTextNode(` ${copy.libraryScaleUnit}`),
+  const libraryValue = createScaleValue(
+    copy.libraryScaleMantissa,
+    copy.libraryScaleExponent,
+    copy.libraryScaleUnit,
   );
-
-  const universeValue = element('p', 'masthead__scale-value');
-  universeValue.append(
-    document.createTextNode(copy.universeScaleMantissa),
-    element('sup', 'masthead__scale-exponent', copy.universeScaleExponent),
-    document.createTextNode(` ${copy.universeScaleUnit}`),
+  const universeValue = createScaleValue(
+    copy.universeScaleMantissa,
+    copy.universeScaleExponent,
+    copy.universeScaleUnit,
   );
 
   const scale = element('div', 'masthead__scale');
@@ -174,6 +195,13 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
         const first = grid.querySelector<HTMLAnchorElement>('a.card');
         if (first) {
           first.focus();
+          return;
+        }
+      }
+      if (target === 'wallAppended') {
+        const revealed = grid.querySelectorAll<HTMLAnchorElement>('a.card').item(OPENING_WALL);
+        if (revealed) {
+          revealed.focus();
           return;
         }
       }

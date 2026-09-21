@@ -5,13 +5,18 @@
  * them — with nothing moving under their hands while they look.
  */
 
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { createWallOfLives } from '../src/views/WallOfLives';
 import { copy } from '../src/content/copy';
 import { catalog, wallBooks } from '../src/library/catalog';
 import type { AppState } from '../src/library/model';
+import * as locale from '../src/content/locale';
 
 const SEED = 20260919n;
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 function state(selection: AppState['wallSelection']): AppState {
   return {
@@ -112,5 +117,55 @@ describe('the wall', () => {
     for (const href of hrefs) expect(href).toMatch(/^#book=b\d{4}$/);
     const roots = catalog.books.filter((book) => book.kind === 'root').map((book) => book.id);
     expect(hrefs.map((href) => href.replace('#book=', '')).sort()).toEqual([...roots].sort());
+  });
+
+  it('focuses the first newly revealed card when the wall opens out', () => {
+    const view = mount();
+    const openingCount = dealt(view).length;
+    view.update(state('all'));
+    const cards = [...view.element.querySelectorAll('a.card')];
+
+    view.focus('wallAppended');
+
+    expect(document.activeElement).toBe(cards[openingCount]);
+    expect(document.activeElement).not.toBe(cards[0]);
+  });
+
+  it('still focuses the first card when the stranger grid replaces the wall', () => {
+    const view = mount();
+    view.update(state('second'));
+    view.focus('wallGrid');
+    expect(document.activeElement).toBe(view.element.querySelector('a.card'));
+  });
+
+  it('speaks each scale figure as a power and hides the visual superscript from that reading', () => {
+    const view = mount();
+    const figures = [...view.element.querySelectorAll('.masthead__scale-value')];
+    expect(figures).toHaveLength(2);
+
+    const spoken = figures.map((figure) => figure.querySelector('.visually-hidden')?.textContent);
+    expect(spoken).toEqual([
+      '≈ 1.96 × 10 to the power of 1,834,097 books',
+      '≈ 10 to the power of 80 atoms',
+    ]);
+
+    for (const figure of figures) {
+      const visual = figure.querySelector('[aria-hidden="true"]');
+      expect(visual?.querySelector('sup.masthead__scale-exponent')?.textContent).toMatch(/\d/);
+      expect(figure.querySelector('.visually-hidden sup')).toBeNull();
+      expect(visual?.textContent).not.toContain('to the power of');
+    }
+  });
+
+  it('speaks the Spanish scale figures as elevated powers', () => {
+    vi.spyOn(locale, 'getLocale').mockReturnValue('es');
+    const view = mount();
+    const spoken = [...view.element.querySelectorAll('.masthead__scale-value')].map(
+      (figure) => figure.querySelector('.visually-hidden')?.textContent,
+    );
+    expect(spoken).toEqual([
+      '≈ 1,96 × 10 elevado a 1.834.097 libros',
+      '≈ 10 elevado a 80 átomos',
+    ]);
   });
 });

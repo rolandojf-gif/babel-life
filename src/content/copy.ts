@@ -19,6 +19,8 @@ export type Copy = {
   universeScaleMantissa: string;
   universeScaleExponent: string;
   universeScaleUnit: string;
+  /** Spoken form of a scale figure. `{mantissa}` already ends in the base 10. */
+  scalePower: string;
   lede: string;
   cardEyebrow: string;
   openThisLife: string;
@@ -70,7 +72,6 @@ export type Copy = {
   locatorHere: string;
   locatorAlsoLegible: string;
   locatorSolo: string;
-  locatorAria: string;
 };
 
 export function copyFor(locale: Locale): Copy {

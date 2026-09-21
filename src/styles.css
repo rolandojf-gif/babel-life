@@ -1102,7 +1102,7 @@ body {
 }
 
 .shelf-locator__end-label {
-  fill: var(--ink-faint);
+  fill: var(--ink-muted);
   font-family: var(--sans);
   font-size: 9px;
   letter-spacing: 0.06em;

@@ -4,7 +4,7 @@ import type { AppState } from '../library/model';
 export interface ViewHandle {
   element: HTMLElement;
   update(state: AppState): void;
-  focus(target: 'view' | 'stranger' | 'wallGrid'): void;
+  focus(target: 'view' | 'stranger' | 'wallGrid' | 'wallAppended'): void;
 }
 
 export function element<K extends keyof HTMLElementTagNameMap>(
