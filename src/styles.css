@@ -847,8 +847,13 @@ body {
   margin-top: 0.5rem;
 }
 
-.book--spread .book__header {
+.book--spread .consulted {
   order: 3;
+  margin-top: 0.75rem;
+}
+
+.book--spread .book__header {
+  order: 4;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -878,12 +883,8 @@ body {
 }
 
 .book--spread .already-here {
-  order: 4;
-  margin-top: 0.75rem;
-}
-
-.book--spread .consulted {
   order: 5;
+  margin-top: 0.75rem;
 }
 
 .book--spread .passage {
@@ -923,6 +924,10 @@ body {
     display: flex;
     min-width: 0;
     flex-direction: column;
+  }
+
+  .book--spread .spread__verso .consulted {
+    margin-top: 1.25rem;
   }
 
   .book--spread .spread__gutter {

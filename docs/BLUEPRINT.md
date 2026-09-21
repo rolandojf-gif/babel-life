@@ -72,7 +72,7 @@ The site entry is the **Wall of Lives**, not a scenario selector, dropdown, or f
     *   Nothing is stored: a reload is a new visit and deals again. The seed is an ordinary `Math.random()` draw, since card order is not a secret, and it runs through the same splitmix64 scramble (`scramble.ts`) that writes the pages at unreadable addresses.
 
 ### The Book View (`BookView.ts`)
-A discovered volume is presented as a **spread**: a left leaf carrying the discovery marker and the shelf locator, the narrative in the centre, and the shelf itself along the right.
+A discovered volume is presented as a **spread**: a left leaf carrying the discovery marker, the shelf locator, and the consultation note; the narrative in the centre; and the shelf itself along the right.
 *   **Navigation:** top backlink `← Wall of Lives`.
 *   **Discovery Marker:** `YOU FOUND THE BOOK`.
 *   **Shelf Locator (`shelfLocator.ts`):** the thirty-two positions of this shelf drawn as upright marks with the current volume picked out, `VOLUME [N] · YOU ARE HERE` beneath it, and a line naming the other legible volume on the shelf or saying there is none.

@@ -106,7 +106,11 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   header.append(title, createBookVisual(book));
 
   const verso = element('div', 'spread__verso');
-  verso.append(element('p', 'found', copy.found), createShelfLocator(coordinate));
+  verso.append(
+    element('p', 'found', copy.found),
+    createShelfLocator(coordinate),
+    createConsultationLine(new Date()),
+  );
 
   const gutter = element('div', 'spread__gutter');
   gutter.setAttribute('aria-hidden', 'true');
@@ -115,7 +119,6 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   recto.append(
     header,
     element('p', 'already-here', copy.alreadyHere),
-    createConsultationLine(new Date()),
     createPassage(book),
     element('p', 'aftertaste', book.aftertaste),
   );

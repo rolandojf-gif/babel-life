@@ -24,4 +24,20 @@ describe('BookView', () => {
       expect(view.element.classList.contains('book--0814')).toBe(false);
     }
   });
+
+  it('structures the spread with verso carrying discovery marker, shelf locator, and consultation note', () => {
+    const view = createBookView('b0007', null);
+    const verso = view.element.querySelector('.spread__verso');
+    expect(verso).not.toBeNull();
+    expect(verso?.querySelector('.found')).not.toBeNull();
+    expect(verso?.querySelector('.shelf-locator')).not.toBeNull();
+    expect(verso?.querySelector('.consulted')).not.toBeNull();
+
+    const recto = view.element.querySelector('.spread__recto');
+    expect(recto).not.toBeNull();
+    expect(recto?.querySelector('.book__header')).not.toBeNull();
+    expect(recto?.querySelector('.passage')).not.toBeNull();
+    expect(recto?.querySelector('.aftertaste')).not.toBeNull();
+    expect(recto?.querySelector('.consulted')).toBeNull();
+  });
 });
