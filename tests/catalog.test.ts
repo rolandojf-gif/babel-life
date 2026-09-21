@@ -8,6 +8,7 @@ import { describe, expect, it } from 'vitest';
 import {
   anotherLifeAfter,
   catalog,
+  catalogFor,
   PINNED_ROOT_IDS,
   findBook,
   rootBooks,
@@ -15,11 +16,25 @@ import {
   TOTAL_ROOTS,
   wallBooks,
 } from '../src/library/catalog';
+import { LOCALES } from '../src/content/locale';
 import { MOTIF_NAMES } from '../src/views/illustrations';
 
 const books = catalog.books;
 /** One visit's deal, fixed so the assertions are about order, not luck. */
 const SEED = 20260919n;
+
+/**
+ * The short form, as editorial limits rather than as today's measurements.
+ * Floor: a passage shorter than this is a stub, not a short passage. Ceiling:
+ * 110 is below 113, the shortest passage of the long-form era, so a pass that
+ * drifts back toward it fails rather than passing in silence.
+ *
+ * Each edition is held to these independently. There is deliberately no rule
+ * about one edition's length relative to the other: English and Spanish are
+ * native literary editions, not translations trimmed toward a matching count.
+ */
+const PASSAGE_FLOOR = 30;
+const PASSAGE_CEILING = 110;
 
 function ids(dealt: { id: string }[]): string[] {
   return dealt.map((book) => book.id);
@@ -81,11 +96,19 @@ describe('the passages', () => {
     }
   });
 
-  it('stay inside the editorial word count', () => {
-    for (const book of books) {
-      const words = wordCount(book.passage);
-      expect(words).toBeGreaterThanOrEqual(70);
-      expect(words).toBeLessThanOrEqual(160);
+  /**
+   * The short-form guardrail of the blueprint, section 3, rule 10. These are
+   * editorial limits with declared headroom, not a record of today's extremes:
+   * the floor only catches a stub, and the ceiling sits below the minimum of the
+   * long-form era this edition left, so drifting back toward it fails here.
+   */
+  it('keeps every passage inside the short form, in both editions', () => {
+    for (const locale of LOCALES) {
+      for (const book of catalogFor(locale).books) {
+        const words = wordCount(book.passage);
+        expect(words, `${locale} ${book.id}`).toBeGreaterThanOrEqual(PASSAGE_FLOOR);
+        expect(words, `${locale} ${book.id}`).toBeLessThanOrEqual(PASSAGE_CEILING);
+      }
     }
   });
 

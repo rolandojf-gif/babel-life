@@ -7,7 +7,7 @@
 
 import { describe, expect, it } from 'vitest';
 import { copy } from '../src/content/copy';
-import { wallBooks } from '../src/library/catalog';
+import { PINNED_ROOT_IDS, wallBooks } from '../src/library/catalog';
 import {
   coordinateFor,
   formatCoordinate,
@@ -258,20 +258,42 @@ describe('the wall’s index', () => {
     expect(dealtHrefs(view)).toEqual(books.map((book) => `#book=${book.id}`));
   });
 
-  it('follows a different deal on another visit', () => {
-    const first = createWallOfLives(wallState(SEED), {
+  it('rests on the opening volume the anchors pin there, whatever the deal', () => {
+    // The five pinned anchors open every wall, so the resting address is the
+    // same on every visit by design. What the index must not do is invent an
+    // address of its own: it prints the first card of this visit's deal.
+    for (const seed of [SEED, OTHER_SEED, 0n]) {
+      const view = createWallOfLives(wallState(seed), {
+        onSomethingStranger() {},
+        onShowAll() {},
+      });
+      const opening = wallBooks('first', seed)[0];
+      if (!opening) throw new Error('expected a dealt wall');
+      expect(opening.id).toBe(PINNED_ROOT_IDS[0]);
+      expect(printed(view.element.querySelector('.library-index .coordinate'))).toBe(
+        formatCoordinate(coordinateFor(opening.id)),
+      );
+    }
+  });
+
+  it('follows a different deal past the anchors on another visit', () => {
+    const slot = PINNED_ROOT_IDS.length;
+    const here = wallBooks('first', SEED)[slot];
+    const there = wallBooks('first', OTHER_SEED)[slot];
+    if (!here || !there) throw new Error('expected a dealt wall');
+    // The first unpinned slot is what the shuffle actually decides.
+    expect(here.id).not.toBe(there.id);
+
+    const view = createWallOfLives(wallState(SEED), {
       onSomethingStranger() {},
       onShowAll() {},
     });
-    const second = createWallOfLives(wallState(OTHER_SEED), {
-      onSomethingStranger() {},
-      onShowAll() {},
-    });
-    const firstId = wallBooks('first', SEED)[0]?.id;
-    const otherId = wallBooks('first', OTHER_SEED)[0]?.id;
-    expect(firstId).not.toBe(otherId);
-    expect(printed(first.element.querySelector('.library-index .coordinate'))).not.toBe(
-      printed(second.element.querySelector('.library-index .coordinate')),
+    document.body.replaceChildren(view.element);
+    const card = view.element.querySelectorAll<HTMLAnchorElement>('a.card')[slot];
+    if (!card) throw new Error('expected a card');
+    card.focus();
+    expect(printed(view.element.querySelector('.library-index .coordinate'))).toBe(
+      formatCoordinate(coordinateFor(here.id)),
     );
   });
 
