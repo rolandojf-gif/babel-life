@@ -312,7 +312,7 @@
       "hook": "cada habitación, casa, ciudad y secuencia de mudanzas posibles exige otro libro.",
       "title": "Donde duermes",
       "passage": [
-        "Existe un libro para la vida en la que duermes esta noche en tu habitación exacta. Registra la distancia entre la cama y la pared, lo que ves desde la ventana y los objetos que alcanzas sin levantarte. Esa habitación aparece durante un tramo de tu libro y luego desaparece. Sin embargo, haber dormido allí modifica la lista completa de lugares a los que has llamado casa. El libro conserva todos, incluso los que ya no podrías recorrer de memoria."
+        "Existe un libro para la vida en la que duermes esta noche en tu habitación exacta. Registra la distancia entre la cama y la pared, lo que ves desde la ventana y los objetos que alcanzas sin levantarte. Esa habitación forma parte de un tramo de tu vida y luego desaparece. Sin embargo, haber dormido allí modifica la lista completa de lugares a los que has llamado casa. El libro conserva todos, incluso los que ya no podrías recorrer de memoria."
       ],
       "aftertaste": "La habitación también forma parte del libro.",
       "neighbors": [
@@ -334,7 +334,7 @@
       "headline": "LA HABITACIÓN CONTIGUA",
       "title": "La habitación contigua",
       "passage": [
-        "El libro de al lado cambia únicamente el cuarto donde duermes durante una noche. Está en el mismo edificio, bajo el mismo techo, a pocos metros del tuyo. Duermes las mismas horas y despiertas sin recordar nada distinto. El resto de tu vida coincide palabra por palabra. Aun así, un libro dice que tu cuerpo pasó aquella noche a un lado del pasillo y la otra dice que pasó al otro. No pueden ocupar el mismo libro."
+        "El libro de al lado cambia únicamente el cuarto donde duermes durante una noche. Está en el mismo edificio, bajo el mismo techo, a pocos metros del tuyo. Duermes las mismas horas y despiertas sin recordar nada distinto. El resto de tu vida coincide palabra por palabra. Aun así, un libro dice que tu cuerpo pasó aquella noche a un lado del pasillo y el otro dice que pasó al otro. No pueden ocupar el mismo libro."
       ],
       "aftertaste": "Una noche al otro lado del pasillo.",
       "neighbors": [
@@ -423,7 +423,7 @@
       "headline": "LA POBLACIÓN AUSENTE",
       "title": "La población ausente",
       "passage": [
-        "Una sección de la Biblioteca contiene todos los hijos que podrías tener con cada persona, en cada fecha, en cada orden y cantidad. Algunos comparten casi todo; otros no podrían reconocerse. Sus vidas se combinan con sus amistades, parejas, trabajos y descendientes. Ninguno es un borrador de otro. Cada cual ocupa un libro donde resulta tan real y cotidiano como tú en esta. La mayoría de esas personas completas no aparecerá ni una vez en tu libro exacto."
+        "Una sección de la Biblioteca contiene todos los hijos que podrías tener con cada persona, en cada fecha, en cada orden y cantidad. Algunos comparten casi todo; otros no podrían reconocerse. Sus vidas se combinan con sus amistades, parejas, trabajos y descendientes. Ninguno es un borrador de otro. Cada cual ocupa un libro donde resulta tan real y cotidiano como tú en este libro. La mayoría de esas personas completas no aparecerá ni una vez en tu libro exacto."
       ],
       "aftertaste": "La mayoría no aparece en tu libro.",
       "neighbors": [
@@ -1735,7 +1735,7 @@
         "En otro libro está un carácter más adelante. En otro, uno más atrás. Para colocar esa única coma en cada posición posible, hace falta un libro distinto cada vez.",
         "Y todavía no hemos escrito una sola palabra."
       ],
-      "aftertaste": "Una coma distinta. Otro libro completo.",
+      "aftertaste": "Una posición distinta. Otro libro completo.",
       "neighbors": [
         {
           "targetBookId": "b0084",

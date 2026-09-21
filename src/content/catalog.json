@@ -312,7 +312,7 @@
       "hook": "every room, home, city and possible sequence of moves demands another book.",
       "title": "Where You Sleep",
       "passage": [
-        "There is a book for the life in which you sleep tonight in your exact room. It records the distance between the bed and the wall, what you see from the window and the objects you can reach without getting up. That room appears during one stretch of your book and then disappears. Yet sleeping there changes the complete list of places you have called home. The book preserves them all, even those you could no longer walk through from memory."
+        "There is a book for the life in which you sleep tonight in your exact room. It records the distance between the bed and the wall, what you see from the window and the objects you can reach without getting up. That room belongs to one stretch of your life and then disappears. Yet sleeping there changes the complete list of places you have called home. The book preserves them all, even those you could no longer walk through from memory."
       ],
       "aftertaste": "The room is also part of the book.",
       "neighbors": [
@@ -1735,7 +1735,7 @@
         "In another book it stands one character later. In another, one earlier. To place that single comma in every possible position, a different book is needed each time.",
         "And we have still not written a single word."
       ],
-      "aftertaste": "A different comma. Another complete book.",
+      "aftertaste": "A different position. Another complete book.",
       "neighbors": [
         {
           "targetBookId": "b0084",

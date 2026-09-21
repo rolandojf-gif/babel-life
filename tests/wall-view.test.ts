@@ -43,7 +43,7 @@ describe('the wall', () => {
   it('opens on twelve of the twenty-five lives', () => {
     const view = mount();
     expect(dealt(view)).toHaveLength(12);
-    expect(view.element.textContent).toContain('Twelve of twenty-five volumes.');
+    expect(view.element.textContent).toContain('Twelve of twenty-five books.');
   });
 
   it('leads with the premise of each life, and never with a title', () => {
@@ -80,7 +80,7 @@ describe('the wall', () => {
     expect(everything).toHaveLength(25);
     expect(everything.slice(0, 12)).toEqual(opening);
     expect(everything.slice(12)).toEqual(stranger);
-    expect(view.element.textContent).toContain('All twenty-five volumes.');
+    expect(view.element.textContent).toContain('All twenty-five books.');
   });
 
   it('deals the same wall for a visit, however often it is redrawn', () => {

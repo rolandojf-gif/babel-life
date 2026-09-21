@@ -102,7 +102,7 @@ describe('Spanish UI copy', () => {
     expect(es.language).toBe('Idioma');
     expect(es.openThisLife).toBe('ABRIR ESTA VIDA');
     expect(es.backToWall).toBe('Pared de vidas');
-    expect(es.nearbyVolumes).toBe('VOLÚMENES CERCANOS');
+    expect(es.nearbyVolumes).toBe('LIBROS CERCANOS');
     expect(es.coordHexagon).toBe('Hexágono');
     expect(es.coordWall).toBe('Pared');
     expect(es.coordShelf).toBe('Estantería');
