@@ -41,7 +41,6 @@ export type Copy = {
   noLegibleVolume: string;
   noLegibleNote: string;
   browseShelf: string;
-  lookInside: string;
   pageOf: string;
   pageDescription: string;
   consulted: string;
@@ -72,8 +71,6 @@ export type Copy = {
   locatorAlsoLegible: string;
   locatorSolo: string;
   locatorAria: string;
-  intervalAria: string;
-  intervalYears: string;
 };
 
 export function copyFor(locale: Locale): Copy {

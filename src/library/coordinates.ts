@@ -78,15 +78,14 @@ interface Shelfmark {
 
 /**
  * One shelf in this edition holds two volumes that can be read. The arithmetic
- * cannot produce that: it scatters seventy-two accession numbers across 2^64
+ * cannot produce that: it scatters seventy-five accession numbers across 2^64
  * addresses, and the chance of any two landing among the same thirty-two is
  * around one in 10^14. So it was done by hand, once, and frozen.
  *
- * The 08:14 and The Stranger Who Remembers You: two accounts of a stranger, one
- * met by two seconds and one never met at all, standing side by side for no
- * reason but an archivist's decision. They share no wording and no edge, so what
- * a visitor finds there is what the Library is like — nearby on the shelf and
- * nearby in the text have nothing to do with each other.
+ * Two volumes (b0071 and b0007) stand side by side for no reason but an
+ * archivist's decision. They share no wording and no edge, so what a visitor
+ * finds there is what the Library is like — nearby on the shelf and nearby in
+ * the text have nothing to do with each other.
  */
 const SHELFMARKS: readonly Shelfmark[] = [{ bookId: 'b0071', beside: 'b0007', places: 1n }];
 

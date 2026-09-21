@@ -10,8 +10,6 @@ import { createEmbeddedShelf } from './shelfListing';
 import { createShelfLocator } from './shelfLocator';
 import { element, glyph, link, type ViewHandle } from './view';
 
-const THE_0814 = 'b0007';
-
 const TIMESTAMP = /^\d{2}:\d{2}(:\d{2})?$/;
 
 /**
@@ -97,8 +95,7 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   if (!book) throw new Error(`No such book: ${bookId}`);
   const coordinate = address ?? coordinateFor(book.id);
 
-  const className = book.id === THE_0814 ? 'book book--spread book--0814' : 'book book--spread';
-  const root = element('article', className);
+  const root = element('article', 'book book--spread');
   // Entrance choreography: the spread rises as one cinematic beat on arrival.
   root.setAttribute('data-book-entrance', '');
 

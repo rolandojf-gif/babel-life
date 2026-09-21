@@ -44,7 +44,6 @@ export const copy: Copy = {
   noLegibleVolume: 'NO LEGIBLE VOLUME',
   noLegibleNote: 'A volume stands at this address. Nothing in it can be read.',
   browseShelf: 'BROWSE THIS SHELF',
-  lookInside: 'LOOK INSIDE',
   pageOf: 'One page of four hundred and ten.',
   pageDescription: 'A page of symbols that spell nothing in any language.',
   consulted: 'Consulted at {time} on a {day}.',
@@ -77,7 +76,4 @@ export const copy: Copy = {
   locatorAlsoLegible: ' Also legible on this shelf',
   locatorSolo: ' No other legible volume on this shelf',
   locatorAria: 'Volume {n} of {total} on this shelf. View this shelf.',
-  intervalAria:
-    'Two seconds, from 08:14:00 to 08:14:02, set against thirty-one years. The two scales are separate.',
-  intervalYears: 'thirty-one years',
 };

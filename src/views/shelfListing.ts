@@ -128,7 +128,7 @@ export function createShelfList(shelf: ShelfCoordinate, mode: ShelfListingMode, 
   return list;
 }
 
-/** In-page target for the compact shelf locator on The 08:14. */
+/** In-page target for the compact shelf locator on book views. */
 export const BOOK_EMBEDDED_SHELF_ID = 'book-shelf';
 
 /** Full shelf context beside a book: address, count, and thirty-two positions. */

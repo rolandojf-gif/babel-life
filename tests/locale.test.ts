@@ -114,6 +114,10 @@ describe('Spanish UI copy', () => {
     expect(es.openThisLife).not.toBe(en.openThisLife);
     expect(es.found).not.toBe(en.found);
     expect(es.locatorHeading).not.toBe(en.locatorHeading);
+    expect(Object.keys(es).sort()).toEqual(Object.keys(en).sort());
+    expect('intervalAria' in en).toBe(false);
+    expect('intervalYears' in en).toBe(false);
+    expect('lookInside' in en).toBe(false);
   });
 });
 

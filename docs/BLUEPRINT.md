@@ -423,7 +423,6 @@ This status snapshot is the absolute boundary for future agents and developers.
     *   `--ink-faint` (#8a8173 on #f1eadd) gives 3.21:1, below the 4.5:1 AA threshold for normal text, and is used on the wall counter, the coordinate lines, the consultation note, the footer, the illegible spine labels and the shelf-walk links.
     *   15 of the 27 motifs in `illustrations.ts` carry all 25 root books; `paths` appears on seven of them and `speech` on four.
     *   The masthead states 1,312,000 positions per volume (410 × 40 × 80, Borges' figure) while `pages.ts` prints `PAGE_LENGTH = 1280` under a caption of "one page of four hundred and ten". The two numbers do not describe the same volume.
-    *   The 08:14, the edition's founding life, is no longer in the catalog, but `BookView.ts`'s `THE_0814` special case, `intervalDiagram.ts` (exported, imported nowhere), the `intervalAria` / `intervalYears` copy keys, the `.book--0814` CSS and the `<noscript>` premise in both entry documents still refer to it. `src/content/catalog.es.pilot.json` is unreferenced.
 
 ### APPROVED NEXT
 *   Nothing pending. The next approved item is whatever gets promoted out of section 5, or the closing of a known gap above.

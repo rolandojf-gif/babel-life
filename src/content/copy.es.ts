@@ -44,7 +44,6 @@ export const copy: Copy = {
   noLegibleVolume: 'NINGÚN VOLUMEN LEGIBLE',
   noLegibleNote: 'En esta dirección hay un volumen. Nada de lo que contiene se puede leer.',
   browseShelf: 'RECORRER ESTA ESTANTERÍA',
-  lookInside: 'MIRAR DENTRO',
   pageOf: 'Una página de cuatrocientas diez.',
   pageDescription: 'Una página de símbolos que no dicen nada en ninguna lengua.',
   consulted: 'Consultado a las {time} de un {day}.',
@@ -77,7 +76,4 @@ export const copy: Copy = {
   locatorAlsoLegible: ' También legible en esta estantería',
   locatorSolo: ' Ningún otro volumen legible en esta estantería',
   locatorAria: 'Volumen {n} de {total} en esta estantería. Ver esta estantería.',
-  intervalAria:
-    'Dos segundos, de 08:14:00 a 08:14:02, frente a treinta y un años. Las dos escalas están separadas.',
-  intervalYears: 'treinta y un años',
 };
