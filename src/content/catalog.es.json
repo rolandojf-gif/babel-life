@@ -43,9 +43,9 @@
         "El libro registra tu llegada con una precisión absurda: el segundo exacto, la duración del embarazo, la temperatura de la sala, la luz sobre cada superficie, las personas presentes y la posición de sus cuerpos.",
         "Conserva cómo estabas colocado, qué parte de ti apareció primero, cuánto tardaste en respirar y el volumen de ese primer aire.",
         "Cambiar un grado, un gesto o una fracción de segundo produce otro nacimiento.",
-        "Y para ese nacimiento casi idéntico, la Biblioteca necesita otra biografía completa."
+        "Y para ese nacimiento casi idéntico, la Biblioteca necesita otro libro completo."
       ],
-      "aftertaste": "Otro nacimiento. Otra biografía completa.",
+      "aftertaste": "Otro nacimiento. Otro libro completo.",
       "neighbors": [
         {
           "targetBookId": "b0022",
@@ -65,9 +65,9 @@
       "headline": "CUATRO SEGUNDOS",
       "title": "Cuatro segundos",
       "passage": [
-        "El libro contiguo es idéntico al tuyo salvo por cuatro segundos. Naces cuatro segundos después. Nadie lo advierte. El médico no cambia de postura. Tu madre respira igual. Fuera, los mismos coches avanzan bajo la misma lluvia. Durante toda tu vida ocurre exactamente lo mismo, pero cada edad comienza cuatro segundos más tarde. Incluso tu muerte conserva la misma fecha y el mismo lugar. La Biblioteca necesita otro volumen completo para guardar ese retraso inútil."
+        "El libro contiguo es idéntico al tuyo salvo por cuatro segundos. Naces cuatro segundos después. Nadie lo advierte. El médico no cambia de postura. Tu madre respira igual. Fuera, los mismos coches avanzan bajo la misma lluvia. Durante toda tu vida ocurre exactamente lo mismo, pero cada edad comienza cuatro segundos más tarde. Incluso tu muerte conserva la misma fecha y el mismo lugar. La Biblioteca necesita otro libro completo para guardar ese retraso inútil."
       ],
-      "aftertaste": "Cuatro segundos necesitan otro volumen.",
+      "aftertaste": "Cuatro segundos necesitan otro libro.",
       "neighbors": [
         {
           "targetBookId": "b0007",
@@ -110,7 +110,7 @@
       "hook": "cada dormitorio, escuela, juego y miedo de tu infancia queda registrado para poder escribirte sin omitir nada.",
       "title": "La casa que recuerdas",
       "passage": [
-        "Un volumen contiene tu infancia exacta: cada dormitorio, cada trayecto a la escuela, cada juego abandonado, cada miedo que nunca contaste. Conserva las mañanas repetidas que ahora confundes entre sí y las palabras de adultos que entonces no entendiste. También conserva todo lo que vino después. La persona que lee esta frase empezó allí, entre días que parecían intercambiables y que la Biblioteca tuvo que registrar uno por uno para poder escribirte sin omitir nada."
+        "Un libro contiene tu infancia exacta: cada dormitorio, cada trayecto a la escuela, cada juego abandonado, cada miedo que nunca contaste. Conserva las mañanas repetidas que ahora confundes entre sí y las palabras de adultos que entonces no entendiste. También conserva todo lo que vino después. La persona que lee esta frase empezó allí, entre días que parecían intercambiables y que la Biblioteca tuvo que registrar uno por uno para poder escribirte sin omitir nada."
       ],
       "aftertaste": "La Biblioteca registró cada día intercambiable.",
       "neighbors": [
@@ -221,7 +221,7 @@
       "headline": "TODO LO QUE PODRÍAS ENTENDER",
       "title": "Todo lo que podrías entender",
       "passage": [
-        "Una estantería contiene las vidas en que hablas una lengua; la siguiente, dos; después vienen todas las combinaciones posibles. En unos volúmenes discutes con tu familia en un idioma y trabajas en otro. En otros piensas, cuentas, insultas, amas y mueres usando palabras diferentes. Cada lengua se combina con cada país, educación, profesión y relación. No existe una traducción de tu vida. Existen biografías completas para cada forma en que podrías nombrarla."
+        "Una estantería contiene las vidas en que hablas una lengua; la siguiente, dos; después vienen todas las combinaciones posibles. En unos libros discutes con tu familia en un idioma y trabajas en otro. En otros piensas, cuentas, insultas, amas y mueres usando palabras diferentes. Cada lengua se combina con cada país, educación, profesión y relación. No existe una traducción de tu vida. Existen biografías completas para cada forma en que podrías nombrarla."
       ],
       "aftertaste": "No existe una traducción de tu vida.",
       "neighbors": [
@@ -266,7 +266,7 @@
       "headline": "A LAS OCHO Y CUARTO",
       "title": "A las ocho y cuarto",
       "passage": [
-        "En un libro trabajas toda la vida en un hospital. En otro cambias veinte veces de oficio. En otro pasas años sin empleo; en otro trabajas de noche en una fábrica, en un barco o en una tarea que todavía no tiene nombre. Todos esos volúmenes contienen una tarde en que llegas a casa a las ocho y cuarto, dejas las llaves y bebes un vaso de agua. Las carreras no se parecen. Ese minuto sí."
+        "En un libro trabajas toda la vida en un hospital. En otro cambias veinte veces de oficio. En otro pasas años sin empleo; en otro trabajas de noche en una fábrica, en un barco o en una tarea que todavía no tiene nombre. Todos esos libros contienen una tarde en que llegas a casa a las ocho y cuarto, dejas las llaves y bebes un vaso de agua. Las carreras no se parecen. Ese minuto sí."
       ],
       "aftertaste": "A las ocho y cuarto, las carreras convergen.",
       "neighbors": [
@@ -333,7 +333,7 @@
       "headline": "LA HABITACIÓN CONTIGUA",
       "title": "La habitación contigua",
       "passage": [
-        "El volumen de al lado cambia únicamente el cuarto donde duermes durante una noche. Está en el mismo edificio, bajo el mismo techo, a pocos metros del tuyo. Duermes las mismas horas y despiertas sin recordar nada distinto. El resto de tu vida coincide palabra por palabra. Aun así, una biografía dice que tu cuerpo pasó aquella noche a un lado del pasillo y la otra dice que pasó al otro. No pueden ocupar el mismo libro."
+        "El libro de al lado cambia únicamente el cuarto donde duermes durante una noche. Está en el mismo edificio, bajo el mismo techo, a pocos metros del tuyo. Duermes las mismas horas y despiertas sin recordar nada distinto. El resto de tu vida coincide palabra por palabra. Aun así, una biografía dice que tu cuerpo pasó aquella noche a un lado del pasillo y la otra dice que pasó al otro. No pueden ocupar el mismo libro."
       ],
       "aftertaste": "Una noche al otro lado del pasillo.",
       "neighbors": [
@@ -378,7 +378,7 @@
       "hook": "aparecen todos los hijos que podrías tener y todas las personas completas que aquí nunca comienzan.",
       "title": "Quienes aparecen",
       "passage": [
-        "Este volumen registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades, palabras y vidas después de que la tuya termine. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años. Lo que en una página puede expresarse con un número determina centenares de personas conocidas, habitaciones ocupadas, comidas preparadas y fechas recordadas. El libro no trata esa cifra como un detalle."
+        "Este libro registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades, palabras y vidas después de que la tuya termine. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años. Lo que en una página puede expresarse con un número determina centenares de personas conocidas, habitaciones ocupadas, comidas preparadas y fechas recordadas. El libro no trata esa cifra como un detalle."
       ],
       "aftertaste": "Una cifra cambia todas esas páginas.",
       "neighbors": [
@@ -400,7 +400,7 @@
       "headline": "UN INSTANTE ANTES",
       "title": "Un instante antes",
       "passage": [
-        "En el libro contiguo, la concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo. La persona que aparece allí tendrá una voz, una cara y una vida completas. En tu libro no muere ni desaparece: simplemente nunca comienza. En torno a ambos volúmenes hay incontables variaciones de ese instante, y cada una introduce a alguien distinto que vivirá durante páginas que aquí no existen."
+        "En el libro contiguo, la concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo. La persona que aparece allí tendrá una voz, una cara y una vida completas. En tu libro no muere ni desaparece: simplemente nunca comienza. En torno a ambos libros hay incontables variaciones de ese instante, y cada una introduce a alguien distinto que vivirá durante páginas que aquí no existen."
       ],
       "aftertaste": "Otra persona comienza en ese instante.",
       "neighbors": [
@@ -467,7 +467,7 @@
       "headline": "LOS MISMOS PADRES",
       "title": "Los mismos padres",
       "passage": [
-        "Hay libros donde tus padres son las mismas personas, pero viven de otra manera. Conservan sus cuerpos y nombres; cambian de trabajo, casa, creencias, amistades o país. A veces sigues naciendo en la misma fecha. A veces llegas años después. En ciertos volúmenes alcanzas una vida casi idéntica a la actual por caminos familiares completamente distintos. La Biblioteca guarda por separado cada versión de ellos porque ninguna produce exactamente las mismas páginas tuyas."
+        "Hay libros donde tus padres son las mismas personas, pero viven de otra manera. Conservan sus cuerpos y nombres; cambian de trabajo, casa, creencias, amistades o país. A veces sigues naciendo en la misma fecha. A veces llegas años después. En ciertos libros alcanzas una vida casi idéntica a la actual por caminos familiares completamente distintos. La Biblioteca guarda por separado cada versión de ellos porque ninguna produce exactamente las mismas páginas tuyas."
       ],
       "aftertaste": "Los mismos padres. Otras páginas tuyas.",
       "neighbors": [
@@ -534,7 +534,7 @@
       "headline": "LA TARDE RESTANTE",
       "title": "La tarde restante",
       "passage": [
-        "En un volumen llegas a la vejez recordando una sola tarde de tu infancia. No fue decisiva: una mesa, una bebida, luz en una pared. Todo lo demás ocurrió igual que en tu vida, pero ha dejado de estar disponible para ti. Aun así, continúas usando habilidades cuyo aprendizaje olvidaste y reconociendo lugares sin saber por qué. El libro contiene las décadas completas. Tú, dentro de él, conservas apenas unos minutos."
+        "En un libro llegas a la vejez recordando una sola tarde de tu infancia. No fue decisiva: una mesa, una bebida, luz en una pared. Todo lo demás ocurrió igual que en tu vida, pero ha dejado de estar disponible para ti. Aun así, continúas usando habilidades cuyo aprendizaje olvidaste y reconociendo lugares sin saber por qué. El libro contiene las décadas completas. Tú, dentro de él, conservas apenas unos minutos."
       ],
       "aftertaste": "El libro guarda décadas. Tú, unos minutos.",
       "neighbors": [
@@ -668,7 +668,7 @@
       "headline": "VEINTE CENTÍMETROS",
       "title": "Veinte centímetros",
       "passage": [
-        "El volumen siguiente coloca uno de tus pasos veinte centímetros a la izquierda. No tropiezas. No encuentras a nadie. Tu destino, tu hora de llegada y el resto de tu vida permanecen iguales. Solo la planta de tu pie toca otro fragmento de suelo durante menos de un segundo. El cambio desaparece de inmediato, pero no puede borrarse del registro. La Biblioteca vuelve a escribir cada página para una vida que únicamente se desvió el ancho de una mano."
+        "El libro siguiente coloca uno de tus pasos veinte centímetros a la izquierda. No tropiezas. No encuentras a nadie. Tu destino, tu hora de llegada y el resto de tu vida permanecen iguales. Solo la planta de tu pie toca otro fragmento de suelo durante menos de un segundo. El cambio desaparece de inmediato, pero no puede borrarse del registro. La Biblioteca vuelve a escribir cada página para una vida que únicamente se desvió el ancho de una mano."
       ],
       "aftertaste": "El ancho de una mano reescribe cada página.",
       "neighbors": [
@@ -714,7 +714,7 @@
       "title": "El tuyo",
       "passage": [
         "Existe un libro que contiene tu vida exacta. La primera página da la fecha, la hora y el lugar de tu nacimiento. Después aparecen cada casa, cada comida, cada conversación y cada día que has olvidado.",
-        "Una página describe cómo llegas hasta esta frase. Las siguientes contienen la hora a la que despertarás mañana, el primer objeto que tocarás y las palabras que dirás antes de salir.",
+        "Una página describe cómo has llegado a leer estas palabras. Las siguientes contienen la hora a la que despertarás mañana, el primer objeto que tocarás y las palabras que dirás antes de salir.",
         "La última página da la fecha, la hora, el lugar y las circunstancias exactas de tu muerte."
       ],
       "aftertaste": "La última página ya existe.",
@@ -737,11 +737,11 @@
       "headline": "UN SEGUNDO MÁS",
       "title": "Un segundo más",
       "passage": [
-        "Este volumen coincide con el tuyo desde el nacimiento hasta el último día. Contiene las mismas personas, las mismas habitaciones y todas las mismas palabras.",
+        "Este libro coincide con el tuyo desde el nacimiento hasta el último día. Contiene las mismas personas, las mismas habitaciones y todas las mismas palabras.",
         "Solo cambia la hora impresa en la última página.",
         "Aquí mueres un segundo después."
       ],
-      "aftertaste": "Un segundo necesita otro volumen.",
+      "aftertaste": "Un segundo necesita otro libro.",
       "neighbors": [
         {
           "targetBookId": "b0041",
@@ -761,7 +761,7 @@
       "headline": "TRECE PASOS",
       "title": "Trece pasos",
       "passage": [
-        "Este volumen coincide con el tuyo en todo salvo en un detalle de mañana.",
+        "Este libro coincide con el tuyo en todo salvo en un detalle de mañana.",
         "Desde la cama hasta la cocina das trece pasos en lugar de doce. Nada más cambia: ni el desayuno, ni los años posteriores, ni la última página.",
         "La diferencia ocupa una biografía completa."
       ],
@@ -810,7 +810,7 @@
       "headline": "CADA PUERTA",
       "title": "Cada puerta",
       "passage": [
-        "Hay un volumen en el que naciste detrás de cada puerta de tu calle.",
+        "Hay un libro en el que naciste detrás de cada puerta de tu calle.",
         "En uno eres hijo único. En otro compartes habitación con tres hermanos. En otro, la persona a quien ahora llamas hermana vive dos edificios más lejos y nunca aprende tu nombre.",
         "Cada puerta contiene una infancia completa."
       ],
@@ -856,10 +856,10 @@
       "kind": "root",
       "icon": "paths",
       "headline": "CADA ASIENTO POSIBLE",
-      "hook": "mueres en un accidente aéreo ocupando cada asiento posible, a cada edad y en cada ruta.",
+      "hook": "mueres en un accidente aéreo. Hay un libro distinto para cada asiento, cada edad y cada ruta posibles.",
       "title": "Cada asiento",
       "passage": [
-        "Hay libros donde mueres en un accidente aéreo ocupando cada asiento posible.",
+        "Hay un libro en el que mueres en un accidente aéreo sentado en el 1A. Otro en el 1B. Otro en el 1C. Y así, un libro distinto por cada asiento posible.",
         "Para cada asiento existen todos los aviones, compañías, aeropuertos, destinos, rutas, alturas, retrasos y condiciones meteorológicas. En unos tienes seis meses. En otros diecisiete, cincuenta y dos o ciento diez años.",
         "Cada combinación necesita toda tu vida anterior."
       ],
@@ -885,9 +885,9 @@
       "passage": [
         "Después están los libros de los trenes, autobuses, coches, bicicletas y barcos.",
         "Y los libros donde mueres caminando, nadando, bailando, comiendo, durmiendo o trabajando. Para cada actividad cambian la edad, el lugar, la hora y las personas presentes.",
-        "En cada volumen vuelves a nacer en la primera página."
+        "En cada libro vuelves a nacer en la primera página."
       ],
-      "aftertaste": "En cada volumen vuelves a nacer.",
+      "aftertaste": "En cada libro vuelves a nacer.",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -909,9 +909,9 @@
       "passage": [
         "Estos libros coinciden durante toda tu vida.",
         "Misma familia. Mismo cuerpo. Mismas comidas, trabajos, conversaciones y viajes. Llegan juntos hasta el último minuto.",
-        "Después, cada libro termina de una manera distinta."
+        "Después cambia únicamente tu muerte: en uno es una enfermedad, en otro un accidente, en otro decides terminarla tú."
       ],
-      "aftertaste": "Cada libro termina de otra manera.",
+      "aftertaste": "En cada libro, mueres de otra manera.",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -956,11 +956,11 @@
       "headline": "UN MARTES",
       "title": "Un martes",
       "passage": [
-        "Este volumen coincide con el anterior durante toda tu vida salvo una mañana.",
+        "Este libro coincide con el anterior durante toda tu vida salvo una mañana.",
         "Un martes, a los cuarenta y seis años, te pones primero el calcetín derecho. No te das cuenta. Nadie lo ve.",
         "El resto del libro vuelve a coincidir hasta la última palabra."
       ],
-      "aftertaste": "Una mañana requiere otro volumen.",
+      "aftertaste": "Una mañana requiere otro libro.",
       "neighbors": [
         {
           "targetBookId": "b0050",
@@ -1072,7 +1072,7 @@
       "hook": "cada noche posible cambia de cama, postura, despertar, sueño o compañía.",
       "title": "Tus noches",
       "passage": [
-        "Existe un volumen que contiene todas las noches de tu vida. Indica cuándo te acostaste, de qué lado dormiste, cuántas veces despertaste y quién respiraba cerca. Registra los sueños recordados y aquellos que desaparecieron antes de abrir los ojos. Durante años, sus páginas nocturnas parecen repetirse: la misma cama, la misma oscuridad, el mismo cuerpo inmóvil. Pero ninguna noche ocupa exactamente las mismas horas ni te devuelve al día con idéntico cansancio."
+        "Existe un libro que contiene todas las noches de tu vida. Indica cuándo te acostaste, de qué lado dormiste, cuántas veces despertaste y quién respiraba cerca. Registra los sueños recordados y aquellos que desaparecieron antes de abrir los ojos. Durante años, sus páginas nocturnas parecen repetirse: la misma cama, la misma oscuridad, el mismo cuerpo inmóvil. Pero ninguna noche ocupa exactamente las mismas horas ni te devuelve al día con idéntico cansancio."
       ],
       "aftertaste": "Ninguna noche ocupa las mismas horas.",
       "neighbors": [
@@ -1165,9 +1165,9 @@
       "passage": [
         "Dos de esos libros coinciden en tu familia, tu rostro, tu salud y cada acontecimiento de tu vida.",
         "En uno alcanzas una estatura adulta un milímetro mayor. La diferencia aparece durante el crecimiento y permanece hasta la muerte.",
-        "Todo un volumen para ese milímetro."
+        "Todo un libro para ese milímetro."
       ],
-      "aftertaste": "Todo un volumen para ese milímetro.",
+      "aftertaste": "Todo un libro para ese milímetro.",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1189,9 +1189,9 @@
       "passage": [
         "Para cada estatura existen todas las voces. Para cada voz, todos los rostros. Para cada rostro, todas las enfermedades, lesiones, capacidades y maneras de envejecer.",
         "Después, cada uno de esos cuerpos vive con cada familia, en cada ciudad, junto a cada persona que podría conocer.",
-        "En algún volumen tienes tu cuerpo actual."
+        "En algún libro tienes tu cuerpo actual."
       ],
-      "aftertaste": "En algún volumen tienes este cuerpo.",
+      "aftertaste": "En algún libro tienes este cuerpo.",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1236,10 +1236,10 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "EN EL VOLUMEN CONTIGUO...",
+      "headline": "EN EL LIBRO CONTIGUO...",
       "title": "Todas las bicicletas",
       "passage": [
-        "En el volumen contiguo haces lo mismo en bicicleta.",
+        "En el libro contiguo haces lo mismo en bicicleta.",
         "Cruzas los mismos países más despacio. Algunas carreteras desaparecen y aparecen caminos que el coche no podía recorrer.",
         "Duermes donde termina cada jornada. Te despiertas y vuelves a pedalear.",
         "Tu cuerpo envejece sobre la bicicleta. Cambian tus piernas, tu velocidad y la distancia que puedes recorrer en un día.",
@@ -1338,7 +1338,7 @@
       "headline": "UN DÍA MÁS",
       "title": "Un día más",
       "passage": [
-        "Dos volúmenes describen la misma vida hasta tu última noche. En uno, termina. En otro, despiertas y vives un día adicional sin nada excepcional: te levantas, comes, hablas, esperas. Un tercer libro añade otro día. Después aparecen semanas, años y décadas, cada una con todos sus posibles contenidos. No existe una única continuación. Desde cualquier edad, la Biblioteca guarda cada cantidad de tiempo restante y cada vida que puede caber dentro de ella."
+        "Dos libros describen la misma vida hasta tu última noche. En uno, termina. En otro, despiertas y vives un día adicional sin nada excepcional: te levantas, comes, hablas, esperas. Un tercer libro añade otro día. Después aparecen semanas, años y décadas, cada una con todos sus posibles contenidos. No existe una única continuación. Desde cualquier edad, la Biblioteca guarda cada cantidad de tiempo restante y cada vida que puede caber dentro de ella."
       ],
       "aftertaste": "Otro día. Después todos los demás.",
       "neighbors": [
@@ -1361,7 +1361,7 @@
       "hook": "conservas tu nombre mientras cambian el cuerpo, la familia, la lengua, los recuerdos y todo lo demás.",
       "title": "Tu nombre completo",
       "passage": [
-        "Este libro conserva tu nombre y todo lo que actualmente lo acompaña: cuerpo, familia, país, lengua, recuerdos, hábitos y relaciones. Cada vez que alguien lo pronuncia, se refiere a la acumulación exacta de esas páginas. Sin embargo, el nombre ocupa muy poco espacio. Podría copiarse sin dificultad en la portada de otro volumen. La Biblioteca lo hace. Al abrir ese otro libro, encuentras el mismo nombre y ninguna de las circunstancias con las que aprendiste a reconocerlo."
+        "Este libro conserva tu nombre y todo lo que actualmente lo acompaña: cuerpo, familia, país, lengua, recuerdos, hábitos y relaciones. Cada vez que alguien lo pronuncia, se refiere a la acumulación exacta de esas páginas. Sin embargo, el nombre ocupa muy poco espacio. Podría copiarse sin dificultad en la portada de otro libro. La Biblioteca lo hace. Al abrir ese otro libro, encuentras el mismo nombre y ninguna de las circunstancias con las que aprendiste a reconocerlo."
       ],
       "aftertaste": "El mismo nombre cabe en otra portada.",
       "neighbors": [
@@ -1405,7 +1405,7 @@
       "headline": "TODOS BAJO TU NOMBRE",
       "title": "Todos bajo tu nombre",
       "passage": [
-        "Una sección entera repite tu nombre en los lomos. Dentro, cambian los cuerpos, edades, padres, idiomas, profesiones, hábitos y muertes. Algunos volúmenes conservan un solo rasgo reconocible. Otros no conservan ninguno. Hay libros donde personas completamente distintas responden cuando alguien pronuncia esas mismas sílabas. La Biblioteca no señala el punto en que dejas de ser tú. Solo alinea los volúmenes y permite que tu nombre permanezca fijo mientras reemplaza todo lo que alguna vez significó."
+        "Una sección entera repite tu nombre en los lomos. Dentro, cambian los cuerpos, edades, padres, idiomas, profesiones, hábitos y muertes. Algunos libros conservan un solo rasgo reconocible. Otros no conservan ninguno. Hay libros donde personas completamente distintas responden cuando alguien pronuncia esas mismas sílabas. La Biblioteca no señala el punto en que dejas de ser tú. Solo alinea los libros y permite que tu nombre permanezca fijo mientras reemplaza todo lo que alguna vez significó."
       ],
       "aftertaste": "Tu nombre permanece. Todo lo demás cambia.",
       "neighbors": [
@@ -1472,7 +1472,7 @@
       "headline": "LA ÚLTIMA PALABRA",
       "title": "La última palabra",
       "passage": [
-        "Hay libros donde todo cambia salvo tu última palabra. Llegas a ella con otra voz, después de una vida que no reconoces, rodeado de personas que nunca conocerás aquí. En algunos volúmenes la dices en otro idioma, pero el sonido final coincide. En otros significa algo diferente. Cuerpos, familias, países y décadas enteras se reemplazan para conducir a la misma breve emisión. Lo constante ya no parece una base. Parece el detalle imposible de quitar."
+        "Hay libros donde todo cambia salvo tu última palabra. Llegas a ella con otra voz, después de una vida que no reconoces, rodeado de personas que nunca conocerás aquí. En algunos libros la dices en otro idioma, pero el sonido final coincide. En otros significa algo diferente. Cuerpos, familias, países y décadas enteras se reemplazan para conducir a la misma breve emisión. Lo constante ya no parece una base. Parece el detalle imposible de quitar."
       ],
       "aftertaste": "La última palabra permanece.",
       "neighbors": [
@@ -1500,7 +1500,7 @@
         "Muchas de esas personas nunca entrarán en tu vida actual.",
         "Ahora mismo viven en algún lugar sin saber quién eres."
       ],
-      "aftertaste": "Ahora mismo no saben quién eres.",
+      "aftertaste": "Pero en algún libro, su vida está unida a la tuya.",
       "neighbors": [
         {
           "targetBookId": "b0075",
@@ -1517,14 +1517,14 @@
       "rootId": "b0074",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "TODOS LOS PAPELES",
-      "title": "Todos los papeles",
+      "headline": "TODAS LAS RELACIONES",
+      "title": "Todas las relaciones",
       "passage": [
-        "Para cada persona existen libros donde ocupa cada lugar posible en tu vida.",
-        "La misma persona puede ser tu pareja, tu mejor amistad, quien te contrata, quien te cuida, quien te perjudica o alguien con quien solo compartes una cola.",
-        "Cada papel vuelve a combinarse con todos los años que la relación podría durar."
+        "Para cada persona que ha existido o existe en el mundo hay libros en los que vuestras vidas llegan a coincidir y mantenéis cada relación posible.",
+        "La misma persona puede ser tu pareja, tu amistad más cercana, quien te contrata, quien te cuida, quien te perjudica o alguien con quien solo compartes una cola.",
+        "Después, cada una de esas relaciones vuelve a existir con todas las duraciones posibles: unos minutos, varios años o una vida entera."
       ],
-      "aftertaste": "Cada papel tiene todos sus años.",
+      "aftertaste": "Con la misma persona, puede existir cualquier relación.",
       "neighbors": [
         {
           "targetBookId": "b0074",
@@ -1597,7 +1597,7 @@
       "passage": [
         "Mientras levantas un vaso, aparece en tu mente una frase breve.",
         "No la dices. No modifica tu expresión, el movimiento de tu mano ni lo que haces después. Tres segundos más tarde la has olvidado.",
-        "En el volumen contiguo, esa frase no llega a formarse.",
+        "En el libro contiguo, esa frase no llega a formarse.",
         "Todo lo visible coincide, y también cada pensamiento anterior y posterior hasta tu muerte.",
         "Durante tres segundos, una vida contiene algo que la otra no.",
         "Para guardar esa diferencia inaccesible, la Biblioteca vuelve a escribirlas enteras."
@@ -1694,8 +1694,8 @@
       "rootId": "b0080",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "TU VOLUMEN ENTRE TODOS",
-      "title": "Tu volumen entre todos",
+      "headline": "TU LIBRO ENTRE TODOS",
+      "title": "Tu libro entre todos",
       "passage": [
         "Ahora cambian a la vez la familia, el cuerpo, la lengua, la ciudad, la casa, el trabajo, la pareja, los hijos, la salud, los hábitos y la edad de la muerte.",
         "Cada combinación vuelve a dividirse por cada comida, viaje, frase, gesto, objeto y segundo.",
