@@ -1208,23 +1208,26 @@
       "rootId": "b0062",
       "kind": "root",
       "icon": "photograph",
-      "headline": "11 JUNE 2047",
-      "hook": "11 June 2047 is already complete: breakfast, rain, errands, a call and the final light.",
-      "title": "11 June 2047",
+      "headline": "THERE IS ALREADY A BOOK IN WHICH...",
+      "hook": "you spend your whole life travelling the world by car.",
+      "title": "Every Road",
       "passage": [
-        "There is a book in which you reach 11 June 2047.",
-        "You wake at 07:16. You have toast and an orange for breakfast. It rains from 09:08 to 09:41. In the afternoon you buy batteries, collect a shirt and call someone you have not met yet.",
-        "At 23:52 you leave a glass on the counter and switch off the kitchen light."
+        "There is a book in which you spend your whole life travelling by car.",
+        "Each morning you wake in a different place. You drive for hours, through cities, back roads, mountain passes, deserts, coastlines and villages you will never see again.",
+        "At nightfall you park, eat, sleep and the following day you drive once more.",
+        "You never reach a final destination.",
+        "You travel every place a road can take you.",
+        "And you are happy."
       ],
-      "aftertaste": "At 23:52 you switch off the kitchen light.",
+      "aftertaste": "Every possible road can hold an entire life.",
       "neighbors": [
         {
           "targetBookId": "b0063",
-          "difference": "The rain begins at 09:09 instead of 09:08."
+          "difference": "The same life in motion, but on two wheels."
         },
         {
           "targetBookId": "b0064",
-          "difference": "The previous twenty years change, but the day matches word for word."
+          "difference": "The same need to keep moving, but through the sky."
         }
       ]
     },
@@ -1233,22 +1236,25 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "THE RAIN BEGINS AT 09:09",
-      "title": "09:09",
+      "headline": "IN THE ADJACENT VOLUME...",
+      "title": "Every Bicycle",
       "passage": [
-        "This volume contains the same 11 June 2047.",
-        "The breakfast, purchase, shirt, call and glass are identical. Only the rain changes.",
-        "It begins at 09:09 instead of 09:08."
+        "In the adjacent volume you do the same thing by bicycle.",
+        "You cross the same countries more slowly. Some roads vanish and paths appear that the car could never follow.",
+        "You sleep wherever the day ends. You wake and pedal again.",
+        "Your body ages on the bicycle. Your legs change, your speed changes and the distance you can cover in a day grows shorter.",
+        "But you never stop moving forward.",
+        "Here, too, you are happy."
       ],
-      "aftertaste": "One minute occupies another complete day.",
+      "aftertaste": "The world changes when the speed of your life changes.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "The rain begins at 09:08."
+          "difference": "Here you swap the bicycle for a car and travel every road again."
         },
         {
           "targetBookId": "b0064",
-          "difference": "The previous twenty years change completely."
+          "difference": "Here you leave the ground and continue the journey by air."
         }
       ]
     },
@@ -1257,22 +1263,25 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "ANOTHER TWENTY YEARS, THE SAME DAY",
-      "title": "The Same Day",
+      "headline": "IN ANOTHER BOOK...",
+      "title": "Every Sky",
       "passage": [
-        "In this book, the previous twenty years are completely different.",
-        "You live in other homes, do other work and know other people. Even so, 11 June 2047 matches word for word: the toast, orange, rain, batteries, shirt and call.",
-        "At 23:52 you leave the same glass on the counter."
+        "In another book you spend your life travelling by aeroplane.",
+        "Each day you fly somewhere new. The airports change, the airlines, the seats, the routes, the layovers and the people sitting beside you.",
+        "You land, sleep for a few hours and take off again.",
+        "Over a complete lifetime you see from above the cities that in other books you cross by car or bicycle.",
+        "You never decide to stay.",
+        "And you never need to."
       ],
-      "aftertaste": "At 23:52, the same glass.",
+      "aftertaste": "A life can have no final place and still be complete.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "The previous twenty years match your present life."
+          "difference": "Here you return to the ground and travel the world by road."
         },
         {
           "targetBookId": "b0063",
-          "difference": "The same day changes only in the minute the rain begins."
+          "difference": "Here you cross the same world far more slowly, by bicycle."
         }
       ]
     },

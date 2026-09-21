@@ -1208,23 +1208,26 @@
       "rootId": "b0062",
       "kind": "root",
       "icon": "photograph",
-      "headline": "11 DE JUNIO DE 2047",
-      "hook": "el 11 de junio de 2047 ya está completo: desayuno, lluvia, compras, una llamada y la última luz.",
-      "title": "11 de junio de 2047",
+      "headline": "YA HAY UN LIBRO EN EL QUE...",
+      "hook": "pasas toda tu vida recorriendo el mundo en coche.",
+      "title": "Todas las carreteras",
       "passage": [
-        "Existe un libro en el que llegas al 11 de junio de 2047.",
-        "Te despiertas a las 07:16. Desayunas pan tostado y una naranja. Llueve entre las 09:08 y las 09:41. Por la tarde compras pilas, recoges una camisa y llamas a una persona que todavía no conoces.",
-        "A las 23:52 dejas un vaso en la encimera y apagas la cocina."
+        "Existe un libro en el que pasas toda tu vida viajando en coche.",
+        "Cada mañana despiertas en un lugar distinto. Conduces durante horas, atraviesas ciudades, carreteras secundarias, puertos de montaña, desiertos, costas y pueblos que nunca volverás a ver.",
+        "Al anochecer aparcas, comes, duermes y al día siguiente vuelves a conducir.",
+        "No llegas a ningún destino definitivo.",
+        "Recorres todos los lugares a los que una carretera puede llevarte.",
+        "Y eres feliz."
       ],
-      "aftertaste": "A las 23:52 apagas la cocina.",
+      "aftertaste": "Cada carretera posible puede contener una vida entera.",
       "neighbors": [
         {
           "targetBookId": "b0063",
-          "difference": "La lluvia empieza a las 09:09 en lugar de las 09:08."
+          "difference": "La misma vida en movimiento, pero sobre dos ruedas."
         },
         {
           "targetBookId": "b0064",
-          "difference": "Los veinte años anteriores cambian, pero el día coincide palabra por palabra."
+          "difference": "La misma necesidad de avanzar, pero por el cielo."
         }
       ]
     },
@@ -1233,22 +1236,25 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "LA LLUVIA EMPIEZA A LAS 09:09",
-      "title": "Las 09:09",
+      "headline": "EN EL VOLUMEN CONTIGUO...",
+      "title": "Todas las bicicletas",
       "passage": [
-        "Este volumen contiene el mismo 11 de junio de 2047.",
-        "El desayuno, la compra, la camisa, la llamada y el vaso son idénticos. Solo cambia la lluvia.",
-        "Empieza a las 09:09 en lugar de las 09:08."
+        "En el volumen contiguo haces lo mismo en bicicleta.",
+        "Cruzas los mismos países más despacio. Algunas carreteras desaparecen y aparecen caminos que el coche no podía recorrer.",
+        "Duermes donde termina cada jornada. Te despiertas y vuelves a pedalear.",
+        "Tu cuerpo envejece sobre la bicicleta. Cambian tus piernas, tu velocidad y la distancia que puedes recorrer en un día.",
+        "Pero nunca dejas de avanzar.",
+        "También aquí eres feliz."
       ],
-      "aftertaste": "Un minuto ocupa otro día completo.",
+      "aftertaste": "El mundo cambia cuando la velocidad de tu vida cambia.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "La lluvia empieza a las 09:08."
+          "difference": "Aquí cambias la bicicleta por un coche y vuelves a recorrer todas las carreteras."
         },
         {
           "targetBookId": "b0064",
-          "difference": "Los veinte años anteriores cambian por completo."
+          "difference": "Aquí abandonas la tierra y continúas el viaje por el aire."
         }
       ]
     },
@@ -1257,22 +1263,25 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "photograph",
-      "headline": "OTROS VEINTE AÑOS, EL MISMO DÍA",
-      "title": "El mismo día",
+      "headline": "EN OTRO LIBRO...",
+      "title": "Todos los cielos",
       "passage": [
-        "En este libro, los veinte años anteriores son completamente distintos.",
-        "Vives en otras casas, realizas otros trabajos y conoces a otras personas. Aun así, el 11 de junio de 2047 coincide palabra por palabra: el pan, la naranja, la lluvia, las pilas, la camisa y la llamada.",
-        "A las 23:52 dejas el mismo vaso en la encimera."
+        "En otro libro pasas tu vida viajando en avión.",
+        "Cada día vuelas a otro lugar. Cambian los aeropuertos, las compañías, los asientos, las rutas, las escalas y las personas que se sientan a tu lado.",
+        "Aterrizas, duermes unas horas y vuelves a despegar.",
+        "Durante una vida completa ves desde arriba ciudades que en otros libros recorres en coche o en bicicleta.",
+        "Nunca decides quedarte.",
+        "Y tampoco necesitas hacerlo."
       ],
-      "aftertaste": "A las 23:52, el mismo vaso.",
+      "aftertaste": "Una vida puede no tener un lugar definitivo y seguir estando completa.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Los veinte años anteriores coinciden con tu vida actual."
+          "difference": "Aquí vuelves al suelo y recorres el mundo por carretera."
         },
         {
           "targetBookId": "b0063",
-          "difference": "El mismo día cambia solo en el minuto en que empieza a llover."
+          "difference": "Aquí recorres el mismo mundo mucho más despacio, en bicicleta."
         }
       ]
     },
