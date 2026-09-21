@@ -5,7 +5,7 @@ export const copy: Copy = {
   siteTitle: 'Babel Life',
   homeTitle: 'Babel Life — Vidas posibles inspiradas en la Biblioteca de Babel de Borges',
   eyebrow: 'BABEL LIFE',
-  heading: 'En algún lugar de la Biblioteca de Babel ya existe cada vida que se puede escribir.',
+  heading: 'En algún lugar de la Biblioteca de Babel, toda vida posible ya está escrita.',
   dek: 'Con solo 25 símbolos, la Biblioteca contiene más libros que átomos hay en el universo observable. En algún lugar entre ellos están todas las vidas que podrías haber vivido.',
   libraryScaleLabel: 'LA BIBLIOTECA',
   libraryScaleMantissa: '≈ 1,96 × 10',
