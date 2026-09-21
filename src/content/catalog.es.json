@@ -37,7 +37,7 @@
       "kind": "root",
       "icon": "platform",
       "headline": "LA HORA EXACTA",
-      "hook": "naces en un segundo, una sala y unas condiciones físicas exactas que exigen una biografía completa.",
+      "hook": "naces en un segundo, una sala y unas condiciones físicas exactas que exigen un libro completo.",
       "title": "La hora exacta",
       "passage": [
         "El libro registra tu llegada con una precisión absurda: el segundo exacto, la duración del embarazo, la temperatura de la sala, la luz sobre cada superficie, las personas presentes y la posición de sus cuerpos.",
@@ -1504,7 +1504,7 @@
       "neighbors": [
         {
           "targetBookId": "b0075",
-          "difference": "Cada persona ocupa cada papel posible en tu vida."
+          "difference": "Con cada persona existe cada relación posible."
         },
         {
           "targetBookId": "b0076",
@@ -1532,7 +1532,7 @@
         },
         {
           "targetBookId": "b0076",
-          "difference": "Todos los papeles se combinan con todas las demás relaciones."
+          "difference": "Cada relación se combina con todas las demás relaciones."
         }
       ]
     },

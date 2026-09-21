@@ -37,7 +37,7 @@
       "kind": "root",
       "icon": "platform",
       "headline": "THE EXACT TIME",
-      "hook": "you are born in one exact second, room and set of physical circumstances that demand a complete biography.",
+      "hook": "you are born in one exact second, room and set of physical circumstances that demand a complete book.",
       "title": "The Exact Time",
       "passage": [
         "The book records your arrival with absurd precision: the exact second, the length of the pregnancy, the temperature in the room, the light across every surface, the people present and the positions of their bodies.",
@@ -1504,7 +1504,7 @@
       "neighbors": [
         {
           "targetBookId": "b0075",
-          "difference": "Every person occupies every possible role in your life."
+          "difference": "Every possible relationship exists with each person."
         },
         {
           "targetBookId": "b0076",
@@ -1532,7 +1532,7 @@
         },
         {
           "targetBookId": "b0076",
-          "difference": "Every role combines with every other relationship."
+          "difference": "Every relationship combines with every other relationship."
         }
       ]
     },
