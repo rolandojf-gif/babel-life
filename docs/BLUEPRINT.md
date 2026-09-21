@@ -95,9 +95,11 @@ A discovered volume is presented as a **spread**: a left leaf carrying the disco
 A reading-room atmosphere is layered over the page and is **entirely decorative**: a fixed lamp glow and vignette, ten drifting motes of dust, scroll-driven reveals, and a slow pointer tilt with a travelling sheen on the wall cards. Every one of them is skipped under `prefers-reduced-motion`, and the tilt is skipped on touch pointers. Content is fully legible with or without any of it.
 
 ### The Unreadable Volumes (`pages.ts`, `AddressView.ts`)
-At an address holding nothing this edition can print, the visitor is not told the shelf is empty. **The volume opens directly on its page**; there is no control to press and nothing to ask for.
+At an address holding nothing this edition can print, the visitor is not told the shelf is empty. **The volume opens directly on an excerpt of its page**; there is no control to press and nothing to ask for.
 *   **Twenty-five orthographic symbols**, as the story has them: twenty-two letters, the space, the comma and the period. The twenty-two are the classical Latin alphabet without J, U, W or Z. The story names none of them; this is an editorial choice of this edition, frozen like the coordinate display.
-*   **Fixed for its address.** `PAGE_LENGTH` symbols drawn by splitmix64 seeded with the address's own 64-bit position: the same page on every device, in every session, for as long as the address exists. No clock, no randomness, no storage, and nothing about the reader anywhere in it.
+*   **Canonical book mathematics.** A physical volume in the Library consists of 410 pages, 40 lines per page, and 80 symbol positions per line, totaling 3,200 positions per page and 1,312,000 positions per volume. Across the 25-symbol alphabet, this defines the Library scale of $25^{1,312,000} \approx 1.96 \times 10^{1,834,097}$ possible books.
+*   **Visible excerpt.** The application renders a deterministic 1,280-symbol excerpt (`VISIBLE_EXCERPT_LENGTH`, styled as 40 lines of 32 symbols echoing shelf geometry) of the page rather than all 3,200 symbols. This presentation choice avoids excessive vertical bulk on screen while preserving the visual density and rhythm of an unreadable page; it is a display window and does not alter the canonical physical page size.
+*   **Fixed for its address.** Excerpt symbols are drawn by splitmix64 seeded with the address's own 64-bit position: the same excerpt on every device, in every session, for as long as the address exists. No clock, no randomness, no storage, and nothing about the reader anywhere in it.
 *   **One page of four hundred and ten**, said plainly beneath it. The volume is not offered in full.
 *   **Read by eye alone.** The symbols carry `aria-hidden`; a line above them says what the page is, so a screen reader is told about the page instead of being made to spell out a page of nothing.
 *   **It asserts nothing.** Noise cannot claim that any account is true, which is why it is safe here and why it belongs here: it is the one place the edition lets a visitor see what the Library is almost entirely made of.
@@ -422,7 +424,6 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   **Open defects recorded but not fixed**, carried here so they are not rediscovered as news:
     *   `--ink-faint` (#8a8173 on #f1eadd) gives 3.21:1, below the 4.5:1 AA threshold for normal text, and is used on the wall counter, the coordinate lines, the consultation note, the footer, the illegible spine labels and the shelf-walk links.
     *   15 of the 27 motifs in `illustrations.ts` carry all 25 root books; `paths` appears on seven of them and `speech` on four.
-    *   The masthead states 1,312,000 positions per volume (410 × 40 × 80, Borges' figure) while `pages.ts` prints `PAGE_LENGTH = 1280` under a caption of "one page of four hundred and ten". The two numbers do not describe the same volume.
 
 ### APPROVED NEXT
 *   Nothing pending. The next approved item is whatever gets promoted out of section 5, or the closing of a known gap above.

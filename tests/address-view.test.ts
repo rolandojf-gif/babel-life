@@ -9,7 +9,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { createAddressView } from '../src/views/AddressView';
 import { copy } from '../src/content/copy';
 import { coordinateFor } from '../src/library/coordinates';
-import { PAGE_LENGTH, SYMBOLS } from '../src/library/pages';
+import { SYMBOLS, VISIBLE_EXCERPT_LENGTH } from '../src/library/pages';
 import { catalog } from '../src/library/catalog';
 
 const known = catalog.books[0]!;
@@ -50,7 +50,7 @@ describe('the unreadable page', () => {
     const view = mount();
     const symbols = view.element.querySelector('.page__symbols');
 
-    expect(symbols?.textContent).toHaveLength(PAGE_LENGTH);
+    expect(symbols?.textContent).toHaveLength(VISIBLE_EXCERPT_LENGTH);
     for (const symbol of symbols?.textContent ?? '') expect(SYMBOLS).toContain(symbol);
   });
 

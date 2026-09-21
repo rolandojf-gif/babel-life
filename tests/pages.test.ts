@@ -5,9 +5,58 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { PAGE_LENGTH, pageAt, SYMBOLS } from '../src/library/pages';
+import { copyFor } from '../src/content/copy';
+import {
+  calculateScaleExponent,
+  LINES_PER_PAGE,
+  pageAt,
+  PAGES_PER_BOOK,
+  POSITIONS_PER_BOOK,
+  POSITIONS_PER_PAGE,
+  SYMBOLS,
+  SYMBOLS_PER_LINE,
+  VISIBLE_EXCERPT_LENGTH,
+} from '../src/library/pages';
 
 const MASK_64 = (1n << 64n) - 1n;
+
+describe('the canonical book model and scale', () => {
+  it('defines the canonical 1,312,000-position physical book geometry', () => {
+    expect(PAGES_PER_BOOK).toBe(410);
+    expect(LINES_PER_PAGE).toBe(40);
+    expect(SYMBOLS_PER_LINE).toBe(80);
+    expect(POSITIONS_PER_PAGE).toBe(3200);
+    expect(POSITIONS_PER_PAGE).toBe(LINES_PER_PAGE * SYMBOLS_PER_LINE);
+    expect(POSITIONS_PER_BOOK).toBe(1312000);
+    expect(POSITIONS_PER_BOOK).toBe(PAGES_PER_BOOK * POSITIONS_PER_PAGE);
+  });
+
+  it('calculates the 10^1,834,097 order of magnitude for 25 symbols', () => {
+    expect(SYMBOLS).toHaveLength(25);
+    const exponent = calculateScaleExponent(SYMBOLS.length, POSITIONS_PER_BOOK);
+    expect(exponent).toBe(1834097);
+
+    // Verify the mantissa rounding convention (floor of log10, mantissa from remainder):
+    const exact = POSITIONS_PER_BOOK * Math.log10(SYMBOLS.length);
+    const mantissa = Math.pow(10, exact - exponent);
+    expect(mantissa.toFixed(2)).toBe('1.96');
+  });
+
+  it('keeps public scale copy consistent with canonical model constants', () => {
+    const en = copyFor('en');
+    const es = copyFor('es');
+
+    expect(en.libraryScaleMeta).toContain(String(SYMBOLS.length));
+    expect(en.libraryScaleMeta).toContain('1,312,000');
+    expect(en.libraryScaleExponent).toBe('1,834,097');
+    expect(en.libraryScaleMantissa).toContain('1.96');
+
+    expect(es.libraryScaleMeta).toContain(String(SYMBOLS.length));
+    expect(es.libraryScaleMeta).toContain('1.312.000');
+    expect(es.libraryScaleExponent).toBe('1.834.097');
+    expect(es.libraryScaleMantissa).toContain('1,96');
+  });
+});
 
 describe('the alphabet', () => {
   it('is the twenty-five orthographic symbols of the story', () => {
@@ -20,14 +69,15 @@ describe('the alphabet', () => {
   });
 });
 
-describe('the page at an address', () => {
-  it('is the page an independent scramble produces', () => {
+describe('the visible excerpt at an address', () => {
+  it('is the excerpt an independent scramble produces', () => {
     expect(pageAt(1n, 32)).toBe('qvqlm,xixanxk rpfrpsyvlbtkkmgem ');
     expect(pageAt(0n, 16)).toBe('laev qoq.qbbigsh');
   });
 
-  it('runs to twelve hundred and eighty symbols by default', () => {
-    expect(pageAt(1n)).toHaveLength(PAGE_LENGTH);
+  it('runs to twelve hundred and eighty symbols by default for the reading room window', () => {
+    expect(VISIBLE_EXCERPT_LENGTH).toBe(1280);
+    expect(pageAt(1n)).toHaveLength(VISIBLE_EXCERPT_LENGTH);
     expect(pageAt(1n)).toHaveLength(1280);
     expect(pageAt(1n, 0)).toBe('');
   });

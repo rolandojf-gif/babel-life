@@ -11,9 +11,9 @@ import { hashForAddress, hashForShelf } from '../library/routing';
 import { element, glyph, link, type ViewHandle } from './view';
 
 /**
- * One page of the volume standing here, the same page every time anyone looks.
- * The symbols are read by eye and by eye alone: a screen reader is told what the
- * page is instead of being made to spell out hundreds of them.
+ * A visible excerpt from one page of the volume standing here, the same symbols
+ * every time anyone looks. The symbols are read by eye and by eye alone: a screen
+ * reader is told what the page is instead of being made to spell out hundreds of them.
  */
 function createPage(position: bigint): HTMLDivElement {
   const page = element('div', 'page');
