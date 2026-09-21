@@ -73,13 +73,13 @@ describe('the two catalogs', () => {
   it('selects the Spanish catalog in Spanish mode', () => {
     vi.spyOn(locale, 'getLocale').mockReturnValue('es');
     expect(getCatalog()).toBe(spanish);
-    expect(findBook('b0007')?.title).toBe('El 08:14');
+    expect(findBook('b0007')?.title).toBe('La hora exacta');
   });
 
   it('keeps the English catalog selected in English mode', () => {
     expect(getCatalog()).toBe(english);
-    expect(findBook('b0007')?.title).toBe('The 08:14');
-    expect(catalogFor('en').books.find((book) => book.id === 'b0007')?.title).toBe('The 08:14');
+    expect(findBook('b0007')?.title).toBe('The Exact Time');
+    expect(catalogFor('en').books.find((book) => book.id === 'b0007')?.title).toBe('The Exact Time');
   });
 });
 

@@ -132,8 +132,8 @@ describe('navigation motion', () => {
     render(state, { focus: 'view' });
     state.currentBookId = 'b0003'; // The queued view must not observe this later mutation.
     callbacks[0]!();
-    expect(root.querySelector('h1')?.textContent).toBe('The 08:14');
-    expect(document.title).toBe('The 08:14 — Babel Life');
+    expect(root.querySelector('h1')?.textContent).toBe('The Exact Time');
+    expect(document.title).toBe('The Exact Time — Babel Life');
     expect(document.activeElement).toBe(root.querySelector('h1'));
     state.view = 'wall';
     state.currentBookId = null;
