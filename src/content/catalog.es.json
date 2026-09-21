@@ -36,23 +36,24 @@
       "rootId": "b0007",
       "kind": "root",
       "icon": "platform",
-      "headline": "DOS SEGUNDOS TARDE",
-      "hook": "pierdes el 08:14 por dos segundos, una desconocida responde a tu queja y vivís juntos treinta y un años.",
-      "title": "El 08:14",
+      "headline": "LA HORA EXACTA",
+      "hook": "naces en un segundo, una sala y unas condiciones físicas exactas que exigen una biografía completa.",
+      "title": "La hora exacta",
       "passage": [
-        "Las puertas se cierran cuando llegas. Mascullas: «Mierda». Una mujer sentada en el banco del andén dice: «Puntualidad profesional». Faltan diecinueve minutos para el siguiente tren.",
-        "Treinta y un años después reconoces su llave en la cerradura, el bolso en el suelo, la nevera antes del hola. Ninguno de los dos coincide en el color del banco.",
-        "El libro conserva los dos segundos."
+        "El libro registra tu llegada con una precisión absurda: el segundo exacto, la duración del embarazo, la temperatura de la sala, la luz sobre cada superficie, las personas presentes y la posición de sus cuerpos.",
+        "Conserva cómo estabas colocado, qué parte de ti apareció primero, cuánto tardaste en respirar y el volumen de ese primer aire.",
+        "Cambiar un grado, un gesto o una fracción de segundo produce otro nacimiento.",
+        "Y para ese nacimiento casi idéntico, la Biblioteca necesita otra biografía completa."
       ],
-      "aftertaste": "Su llave gira antes del hola.",
+      "aftertaste": "Otro nacimiento. Otra biografía completa.",
       "neighbors": [
         {
           "targetBookId": "b0022",
-          "difference": "Llegas un segundo antes y subes al tren."
+          "difference": "Naces cuatro segundos después y nada más cambia."
         },
         {
           "targetBookId": "b0019",
-          "difference": "Pierdes el tren, pero la desconocida nunca responde."
+          "difference": "Cambian el lugar, la fecha y las demás circunstancias posibles del nacimiento."
         }
       ]
     },
@@ -61,22 +62,20 @@
       "rootId": "b0007",
       "kind": "nearby",
       "icon": "doorway",
-      "headline": "UN SEGUNDO ANTES",
-      "title": "Un segundo antes",
+      "headline": "CUATRO SEGUNDOS",
+      "title": "Cuatro segundos",
       "passage": [
-        "Las puertas siguen abiertas. Subes al 08:14 y te sientas justo encima de las ruedas.",
-        "La mujer sentada en el banco del andén sigue siendo una desconocida. Pasan los años: trabajo, alquiler, otra dirección, otra persona a tu lado en el desayuno.",
-        "En la estación, a veces te paras junto al mismo banco sin saber por qué importa en otro volumen."
+        "El libro contiguo es idéntico al tuyo salvo por cuatro segundos. Naces cuatro segundos después. Nadie lo advierte. El médico no cambia de postura. Tu madre respira igual. Fuera, los mismos coches avanzan bajo la misma lluvia. Durante toda tu vida ocurre exactamente lo mismo, pero cada edad comienza cuatro segundos más tarde. Incluso tu muerte conserva la misma fecha y el mismo lugar. La Biblioteca necesita otro volumen completo para guardar ese retraso inútil."
       ],
-      "aftertaste": "Las puertas siguen abiertas para ti.",
+      "aftertaste": "Cuatro segundos necesitan otro volumen.",
       "neighbors": [
         {
           "targetBookId": "b0007",
-          "difference": "Llegas un segundo después, pierdes el tren y conoces a la desconocida."
+          "difference": "El nacimiento ocurre en tus circunstancias exactas."
         },
         {
           "targetBookId": "b0019",
-          "difference": "También pierdes el tren, pero no empieza ninguna conversación."
+          "difference": "Cambian el lugar, la fecha y las demás circunstancias posibles del nacimiento."
         }
       ]
     },
@@ -85,22 +84,20 @@
       "rootId": "b0007",
       "kind": "nearby",
       "icon": "platform",
-      "headline": "EL MISMO ANDÉN, NINGUNA RESPUESTA",
-      "title": "Sin respuesta",
+      "headline": "TODAS LAS SALAS",
+      "title": "Todas las salas",
       "passage": [
-        "Las puertas se cierran. Mascullas: «Mierda». La mujer sentada en el banco te oye y sigue leyendo.",
-        "Esperáis diecinueve minutos los dos. Os sentáis a dos metros de distancia. Llega el siguiente tren y subís a vagones distintos.",
-        "Treinta y un años después, el libro aún os conserva a los dos. No conserva ninguna llave compartida."
+        "Hay libros donde naces en cada hospital, casa, vehículo, refugio y espacio abierto en que tu nacimiento habría sido posible. Otros cambian el país, el clima o las personas presentes. Después aparecen todas las fechas, todas las duraciones del embarazo y todos los cuerpos que podrías haber recibido. Cada nacimiento exige una vida posterior completa. No hay una estantería para tus comienzos. Hay corredores enteros, y en cada libro vuelves a nacer una sola vez."
       ],
-      "aftertaste": "El banco sostiene a dos desconocidos.",
+      "aftertaste": "En cada libro naces una sola vez.",
       "neighbors": [
         {
           "targetBookId": "b0007",
-          "difference": "La desconocida responde a tu queja."
+          "difference": "El nacimiento ocurre en tus circunstancias exactas."
         },
         {
           "targetBookId": "b0022",
-          "difference": "Llegas a tiempo y nunca esperas a su lado."
+          "difference": "Naces cuatro segundos después y nada más cambia."
         }
       ]
     },
@@ -109,23 +106,21 @@
       "rootId": "b0003",
       "kind": "root",
       "icon": "pitch",
-      "headline": "CUARENTA Y SIETE SEGUNDOS",
-      "hook": "toda tu carrera en el fútbol profesional dura cuarenta y siete segundos, incluye un toque cualquiera y sigue siendo una carrera profesional.",
-      "title": "Cuarenta y siete segundos",
+      "headline": "LA CASA QUE RECUERDAS",
+      "hook": "cada dormitorio, escuela, juego y miedo de tu infancia queda registrado para poder escribirte sin omitir nada.",
+      "title": "La casa que recuerdas",
       "passage": [
-        "A los veintisiete levantan tu número. Saltas al campo, recibes un pase y lo devuelves cinco metros hacia dentro.",
-        "Cuarenta y siete segundos después de entrar, suena el silbato. No vuelves a jugar como profesional.",
-        "El lunes vuelves al turno del almacén. Años después, la camiseta está doblada bajo una caja de alargadores."
+        "Un volumen contiene tu infancia exacta: cada dormitorio, cada trayecto a la escuela, cada juego abandonado, cada miedo que nunca contaste. Conserva las mañanas repetidas que ahora confundes entre sí y las palabras de adultos que entonces no entendiste. También conserva todo lo que vino después. La persona que lee esta frase empezó allí, entre días que parecían intercambiables y que la Biblioteca tuvo que registrar uno por uno para poder escribirte sin omitir nada."
       ],
-      "aftertaste": "Cuarenta y siete segundos cuentan igual.",
+      "aftertaste": "La Biblioteca registró cada día intercambiable.",
       "neighbors": [
         {
           "targetBookId": "b0016",
-          "difference": "Tu carrera profesional dura cuarenta y seis segundos."
+          "difference": "Otra infancia converge en esta misma tarde."
         },
         {
           "targetBookId": "b0018",
-          "difference": "Tu carrera profesional dura cuarenta y ocho segundos."
+          "difference": "Un pupitre distinto conduce a una persona irreconocible."
         }
       ]
     },
@@ -134,22 +129,20 @@
       "rootId": "b0003",
       "kind": "nearby",
       "icon": "pitch",
-      "headline": "CUARENTA Y SEIS SEGUNDOS",
-      "title": "Cuarenta y seis segundos",
+      "headline": "OTRA INFANCIA, ESTA MISMA TARDE",
+      "title": "Otra infancia, esta misma tarde",
       "passage": [
-        "Levantan tu número. Saltas al campo. El balón sale hacia ti.",
-        "El silbato suena antes de que llegue. Cuarenta y seis segundos. Ningún toque reglamentario.",
-        "El lunes vuelves al mismo turno del almacén. La misma camiseta espera en la misma caja."
+        "En otro libro creces en otra casa, aprendes en otras aulas y llamas amigos a personas que aquí nunca conociste. Tu familia tiene rutinas distintas. Temes otras cosas. Sin embargo, décadas después, llegas a esta misma tarde con el mismo trabajo, la misma ropa y la misma frase a punto de ser pronunciada. Dos infancias incompatibles han producido este minuto casi idéntico. Los libros no se reúnen aquí. Continúan separados hasta sus últimas páginas."
       ],
-      "aftertaste": "Un segundo elimina el toque.",
+      "aftertaste": "Las dos infancias no se reúnen.",
       "neighbors": [
         {
           "targetBookId": "b0003",
-          "difference": "El silbato suena un segundo después y tu toque cuenta."
+          "difference": "La infancia coincide exactamente con la que recuerdas."
         },
         {
           "targetBookId": "b0018",
-          "difference": "El silbato suena dos segundos más tarde que aquí."
+          "difference": "Un pupitre distinto conduce a una persona irreconocible."
         }
       ]
     },
@@ -158,22 +151,20 @@
       "rootId": "b0003",
       "kind": "nearby",
       "icon": "spotlight",
-      "headline": "CUARENTA Y OCHO SEGUNDOS",
-      "title": "Cuarenta y ocho segundos",
+      "headline": "EL PUPITRE SIGUIENTE",
+      "title": "El pupitre siguiente",
       "passage": [
-        "Levantan tu número. Saltas al campo, devuelves un pase cinco metros hacia dentro y sigues corriendo.",
-        "El silbato suena cuarenta y ocho segundos después de entrar. En ese segundo de más no ocurre nada.",
-        "El lunes vuelves al turno del almacén. La camiseta sigue doblada bajo los alargadores."
+        "Dos libros coinciden durante tus primeros años. La misma familia, el mismo dormitorio, las mismas calles. En uno te asignan el pupitre junto a la ventana; en otro, el de la fila siguiente. Nada importante ocurre ese día. Después cambian lentamente tus amistades, tus costumbres, tus estudios, las ciudades donde vivirás y las personas que reconocerán tu voz. Antes de llegar a la mitad, el segundo libro describe a alguien que no sabrías identificar como tú."
       ],
-      "aftertaste": "En ese segundo de más no ocurre nada.",
+      "aftertaste": "El segundo libro ya no se parece a ti.",
       "neighbors": [
         {
           "targetBookId": "b0003",
-          "difference": "Tu carrera dura un segundo menos."
+          "difference": "La infancia coincide exactamente con la que recuerdas."
         },
         {
           "targetBookId": "b0016",
-          "difference": "Tu carrera dura dos segundos menos y no incluye ningún toque reglamentario."
+          "difference": "Otra infancia converge en esta misma tarde."
         }
       ]
     },
@@ -182,23 +173,21 @@
       "rootId": "b0031",
       "kind": "root",
       "icon": "record",
-      "headline": "CINCO MINUTOS DESPUÉS",
-      "hook": "cenas el martes cinco minutos más tarde que en el volumen contiguo y nada cambia en el resto de tu vida.",
-      "title": "La misma cena",
+      "headline": "LA PRIMERA LENGUA",
+      "hook": "cada palabra que dices pertenece a una de todas las lenguas que podrías haber aprendido.",
+      "title": "La primera lengua",
       "passage": [
-        "El reloj del horno marca las 19:12 cuando te sientas. Pasta, queso rallado, agua en el mismo vaso.",
-        "El miércoles no cambia. Tampoco el trabajo, la revisión de la caldera, el coche que cambias seis años después ni la gente a la que llamas los domingos.",
-        "Aquel martes, la cena fue cinco minutos más tarde."
+        "Existe un libro con todas las palabras que has dicho en la lengua en que aprendiste a pedir agua, negar, bromear y llamar a las personas de tu familia. Registra tus errores antes que tus frases correctas. Guarda expresiones que repetiste durante años y una última oración que todavía desconoces. Esa lengua no ocupa solo tus conversaciones: decide qué sonidos distingues, qué nombres das a las cosas y qué palabras llegarán a faltarte cuando más las necesites."
       ],
-      "aftertaste": "A las 19:12 aclaras el mismo plato.",
+      "aftertaste": "Tu última oración también pertenece a esa lengua.",
       "neighbors": [
         {
           "targetBookId": "b0032",
-          "difference": "La cena es tres minutos más tarde en vez de cinco."
+          "difference": "La misma declaración se pronuncia en otra lengua."
         },
         {
           "targetBookId": "b0033",
-          "difference": "La cena es a la hora original, pero usas otro tenedor."
+          "difference": "Se combinan todas las lenguas que podrías entender."
         }
       ]
     },
@@ -207,22 +196,20 @@
       "rootId": "b0031",
       "kind": "nearby",
       "icon": "record",
-      "headline": "TRES MINUTOS DESPUÉS",
-      "title": "Tres minutos después",
+      "headline": "LA MISMA FRASE",
+      "title": "La misma frase",
       "passage": [
-        "El reloj del horno marca las 19:10 cuando te sientas. La misma pasta, el mismo queso rallado, el mismo vaso.",
-        "El miércoles no cambia. Tampoco los años posteriores.",
-        "Este volumen difiere en tres minutos."
+        "Hay libros donde pronuncias una misma declaración en cada lengua que podrías haber aprendido. Cambian la infancia necesaria para dominarla, el país, la escuela, las conversaciones anteriores y la persona capaz de entenderte. A veces la frase conserva su efecto. A veces resulta torpe, formal, ambigua o imposible de traducir sin añadir algo. Para que digas esas pocas palabras de otra manera, la Biblioteca reemplaza miles de páginas de tu vida."
       ],
-      "aftertaste": "A las 19:10 aclaras el mismo plato.",
+      "aftertaste": "Unas pocas palabras reemplazan miles de páginas.",
       "neighbors": [
         {
           "targetBookId": "b0031",
-          "difference": "La cena es cinco minutos más tarde."
+          "difference": "La vida transcurre en tu primera lengua."
         },
         {
           "targetBookId": "b0033",
-          "difference": "La cena es a la hora original, con otro tenedor."
+          "difference": "Se combinan todas las lenguas que podrías entender."
         }
       ]
     },
@@ -231,22 +218,20 @@
       "rootId": "b0031",
       "kind": "nearby",
       "icon": "record",
-      "headline": "OTRO TENEDOR",
-      "title": "El otro tenedor",
+      "headline": "TODO LO QUE PODRÍAS ENTENDER",
+      "title": "Todo lo que podrías entender",
       "passage": [
-        "Te sientas a la hora original. El tenedor que tienes en la mano es el otro del cajón, el del mango más plano.",
-        "La cena, el miércoles y cada año posterior siguen igual.",
-        "Después de fregarlo, el tenedor vuelve al cajón."
+        "Una estantería contiene las vidas en que hablas una lengua; la siguiente, dos; después vienen todas las combinaciones posibles. En unos volúmenes discutes con tu familia en un idioma y trabajas en otro. En otros piensas, cuentas, insultas, amas y mueres usando palabras diferentes. Cada lengua se combina con cada país, educación, profesión y relación. No existe una traducción de tu vida. Existen biografías completas para cada forma en que podrías nombrarla."
       ],
-      "aftertaste": "El mango más plano se seca junto al fregadero.",
+      "aftertaste": "No existe una traducción de tu vida.",
       "neighbors": [
         {
           "targetBookId": "b0031",
-          "difference": "Usas el tenedor habitual, pero cenas cinco minutos más tarde."
+          "difference": "La vida transcurre en tu primera lengua."
         },
         {
           "targetBookId": "b0032",
-          "difference": "Usas el tenedor habitual, pero cenas tres minutos más tarde."
+          "difference": "La misma declaración se pronuncia en otra lengua."
         }
       ]
     },
@@ -255,23 +240,21 @@
       "rootId": "b0006",
       "kind": "root",
       "icon": "cup",
-      "headline": "UN CENTÍMETRO A LA IZQUIERDA",
-      "hook": "mañana en el desayuno dejas la taza un centímetro más a la izquierda y nada más cambia en tu vida.",
-      "title": "Un jueves cualquiera",
+      "headline": "TU JORNADA",
+      "hook": "cada jornada, empleo y secuencia de trabajos posibles ocupa una vida completa.",
+      "title": "Tu jornada",
       "passage": [
-        "Te despiertas a las 07:42, preparas té y dejas la taza un centímetro más a la izquierda para dejar sitio al plato de las tostadas.",
-        "El paquete llega a las once. Respondes a un mensaje a las cuatro. El técnico de la caldera confirma el martes.",
-        "Pasan los años con normalidad. El centímetro nunca llega a importar."
+        "Este libro contiene todos tus días de trabajo: la primera tarea que aprendiste, las horas perdidas, los errores sin consecuencia, los trayectos, los descansos y la última vez que cerrarás una puerta al terminar. También registra los empleos que duraron poco y los que determinaron décadas. Tu profesión cabe en una respuesta breve. La vida necesaria para sostener esa respuesta ocupa miles de páginas de horarios, cuerpos cansados, conversaciones repetidas y mañanas en las que volviste a empezar."
       ],
-      "aftertaste": "La taza quedó un centímetro a la izquierda.",
+      "aftertaste": "Tu profesión ocupa miles de páginas.",
       "neighbors": [
         {
           "targetBookId": "b0002",
-          "difference": "La taza se desplaza un milímetro a la izquierda."
+          "difference": "Carreras completamente distintas convergen a las ocho y cuarto."
         },
         {
           "targetBookId": "b0009",
-          "difference": "La taza se queda exactamente donde estaba."
+          "difference": "Cambian todos los trabajos y el orden en que los realizas."
         }
       ]
     },
@@ -280,22 +263,20 @@
       "rootId": "b0006",
       "kind": "nearby",
       "icon": "cup",
-      "headline": "UN MILÍMETRO A LA IZQUIERDA",
-      "title": "Un milímetro a la izquierda",
+      "headline": "A LAS OCHO Y CUARTO",
+      "title": "A las ocho y cuarto",
       "passage": [
-        "Te despiertas a las 07:42, preparas té y dejas la taza un milímetro más a la izquierda.",
-        "El paquete, el mensaje, la llamada de la caldera y cada año posterior siguen siendo los mismos.",
-        "La Biblioteca conserva el milímetro."
+        "En un libro trabajas toda la vida en un hospital. En otro cambias veinte veces de oficio. En otro pasas años sin empleo; en otro trabajas de noche en una fábrica, en un barco o en una tarea que todavía no tiene nombre. Todos esos volúmenes contienen una tarde en que llegas a casa a las ocho y cuarto, dejas las llaves y bebes un vaso de agua. Las carreras no se parecen. Ese minuto sí."
       ],
-      "aftertaste": "Un milímetro ocupa su propio volumen.",
+      "aftertaste": "A las ocho y cuarto, las carreras convergen.",
       "neighbors": [
         {
           "targetBookId": "b0006",
-          "difference": "La taza se desplaza un centímetro a la izquierda."
+          "difference": "El libro conserva la secuencia exacta de tus jornadas de trabajo."
         },
         {
           "targetBookId": "b0009",
-          "difference": "La taza no se mueve."
+          "difference": "Cambian todos los trabajos y el orden en que los realizas."
         }
       ]
     },
@@ -304,22 +285,20 @@
       "rootId": "b0006",
       "kind": "nearby",
       "icon": "cup",
-      "headline": "NINGÚN MOVIMIENTO",
-      "title": "Exactamente donde estaba",
+      "headline": "TODOS TUS OFICIOS",
+      "title": "Todos tus oficios",
       "passage": [
-        "Te despiertas a las 07:42, preparas té y dejas la taza exactamente donde estaba antes.",
-        "El paquete llega a las once. El mensaje espera hasta las cuatro. El martes sigue viniendo bien para la caldera.",
-        "Este es el volumen donde la taza no se mueve."
+        "Hay una biografía para cada trabajo que podrías realizar y otra para cada orden posible de trabajos: campo antes que oficina, laboratorio después que almacén, jubilación seguida de un regreso, una sola profesión durante sesenta años. Algunas tareas modifican tu cuerpo. Otras cambian únicamente cómo empleas ocho horas diarias. La Biblioteca no separa vocaciones de empleos olvidables. Cada jornada cuenta, y cada secuencia requiere escribir de nuevo tu vida entera."
       ],
-      "aftertaste": "Exactamente donde estaba.",
+      "aftertaste": "Cada secuencia vuelve a escribir tu vida.",
       "neighbors": [
         {
           "targetBookId": "b0006",
-          "difference": "La taza se desplaza un centímetro a la izquierda."
+          "difference": "El libro conserva la secuencia exacta de tus jornadas de trabajo."
         },
         {
           "targetBookId": "b0002",
-          "difference": "La taza se desplaza un milímetro a la izquierda."
+          "difference": "Carreras completamente distintas convergen a las ocho y cuarto."
         }
       ]
     },
@@ -328,23 +307,21 @@
       "rootId": "b0005",
       "kind": "root",
       "icon": "speech",
-      "headline": "UN TENEDOR MENOS",
-      "hook": "tienes todos los objetos que tienes ahora excepto un tenedor cualquiera y nada más en tu vida es distinto.",
-      "title": "El tenedor que no tienes",
+      "headline": "DONDE DUERMES",
+      "hook": "cada habitación, casa, ciudad y secuencia de mudanzas posibles exige otra biografía.",
+      "title": "Donde duermes",
       "passage": [
-        "El cajón de los cubiertos contiene un tenedor menos. No queda ningún hueco donde debería estar ni existe el recuerdo de haberlo comprado.",
-        "Tomas las mismas comidas con los otros tenedores. Nadie pregunta por el que falta.",
-        "Los trabajos, las habitaciones, las personas y los años siguen igual."
+        "Existe un libro para la vida en la que duermes esta noche en tu habitación exacta. Registra la distancia entre la cama y la pared, lo que ves desde la ventana y los objetos que alcanzas sin levantarte. Esa habitación aparece durante un tramo de tu biografía y luego desaparece. Sin embargo, haber dormido allí modifica la lista completa de lugares a los que has llamado casa. El libro conserva todos, incluso los que ya no podrías recorrer de memoria."
       ],
-      "aftertaste": "Un tenedor menos. Todo un volumen.",
+      "aftertaste": "La habitación también forma parte de la biografía.",
       "neighbors": [
         {
           "targetBookId": "b0020",
-          "difference": "El objeto que falta es una cucharilla."
+          "difference": "Solo cambia la habitación de una noche."
         },
         {
           "targetBookId": "b0034",
-          "difference": "El tenedor existe, pero siempre se guarda en otro cajón."
+          "difference": "Cambian todas las casas y secuencias de direcciones posibles."
         }
       ]
     },
@@ -353,22 +330,20 @@
       "rootId": "b0005",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "UNA CUCHARILLA MENOS",
-      "title": "La cucharilla que no tienes",
+      "headline": "LA HABITACIÓN CONTIGUA",
+      "title": "La habitación contigua",
       "passage": [
-        "El cajón de los cubiertos contiene cada objeto que conoces excepto una cucharilla.",
-        "El café sabe igual. Los postres se toman con las otras. Nadie nota una ausencia.",
-        "Todo lo demás en esta vida coincide con el volumen contiguo."
+        "El volumen de al lado cambia únicamente el cuarto donde duermes durante una noche. Está en el mismo edificio, bajo el mismo techo, a pocos metros del tuyo. Duermes las mismas horas y despiertas sin recordar nada distinto. El resto de tu vida coincide palabra por palabra. Aun así, una biografía dice que tu cuerpo pasó aquella noche a un lado del pasillo y la otra dice que pasó al otro. No pueden ocupar el mismo libro."
       ],
-      "aftertaste": "La cucharilla sencillamente no está.",
+      "aftertaste": "Una noche al otro lado del pasillo.",
       "neighbors": [
         {
           "targetBookId": "b0005",
-          "difference": "El objeto ausente es un tenedor."
+          "difference": "Duermes en la secuencia exacta de habitaciones que conoces."
         },
         {
           "targetBookId": "b0034",
-          "difference": "No falta nada, pero un tenedor vive en otro cajón."
+          "difference": "Cambian todas las casas y secuencias de direcciones posibles."
         }
       ]
     },
@@ -377,22 +352,20 @@
       "rootId": "b0005",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "EL MISMO TENEDOR, OTRO CAJÓN",
-      "title": "El otro cajón",
+      "headline": "TODAS TUS DIRECCIONES",
+      "title": "Todas tus direcciones",
       "passage": [
-        "El tenedor es tuyo. Siempre ha estado en el cajón bajo los paños de cocina en lugar de con los cubiertos.",
-        "Lo usas cuando hace falta y lo devuelves allí sin pensarlo.",
-        "Nada más en el libro es diferente."
+        "Hay libros para cada piso, casa, habitación, ciudad y vista que podrías tener. Después vienen las secuencias: tres mudanzas, ninguna, cuarenta; una infancia en un lugar y una vejez en otro; décadas frente a la misma ventana. Cambiar una dirección altera los comercios cercanos, las escaleras usadas y los rostros encontrados al salir. La Biblioteca contiene cada itinerario doméstico completo, incluido aquel en que nunca habitas ninguno de los lugares que ahora recuerdas."
       ],
-      "aftertaste": "El tenedor vuelve al otro cajón.",
+      "aftertaste": "Cada dirección contiene una vida completa.",
       "neighbors": [
         {
           "targetBookId": "b0005",
-          "difference": "Ese tenedor no existe."
+          "difference": "Duermes en la secuencia exacta de habitaciones que conoces."
         },
         {
           "targetBookId": "b0020",
-          "difference": "En su lugar, no existe una cucharilla."
+          "difference": "Solo cambia la habitación de una noche."
         }
       ]
     },
@@ -401,23 +374,21 @@
       "rootId": "b0008",
       "kind": "root",
       "icon": "letter",
-      "headline": "UNA SOLA LETRA DIFERENTE",
-      "hook": "tu letra es exactamente la tuya, salvo que siempre has trazado la g minúscula de otra manera.",
-      "title": "Tu otra letra",
+      "headline": "QUIENES APARECEN",
+      "hook": "aparecen todos los hijos que podrías tener y todas las personas completas que aquí nunca comienzan.",
+      "title": "Quienes aparecen",
       "passage": [
-        "La inclinación es tuya. La presión es tuya. También las mayúsculas apresuradas y la forma en que la línea sube cerca del margen.",
-        "Solo la g minúscula es diferente: un bucle cerrado donde tu otro volumen usa uno abierto.",
-        "Los apuntes de la escuela, las listas de la compra y las firmas alrededor siguen siendo los mismos."
+        "Este volumen registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades, palabras y vidas después de que la tuya termine. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años. Lo que en una página puede expresarse con un número determina centenares de personas conocidas, habitaciones ocupadas, comidas preparadas y fechas recordadas. El libro no trata esa cifra como un detalle."
       ],
-      "aftertaste": "Cada g pertenece a este volumen.",
+      "aftertaste": "Una cifra cambia todas esas páginas.",
       "neighbors": [
         {
           "targetBookId": "b0023",
-          "difference": "La letra diferente es la t en vez de la g."
+          "difference": "La concepción ocurre un instante antes y aparece otra persona."
         },
         {
           "targetBookId": "b0035",
-          "difference": "Todas las letras son iguales, pero sostienes el bolígrafo dos milímetros más cerca de la punta."
+          "difference": "Aparecen todos los hijos posibles en cada orden y cantidad."
         }
       ]
     },
@@ -426,22 +397,20 @@
       "rootId": "b0008",
       "kind": "nearby",
       "icon": "letter",
-      "headline": "LA T ES DIFERENTE",
-      "title": "Tu otra t",
+      "headline": "UN INSTANTE ANTES",
+      "title": "Un instante antes",
       "passage": [
-        "Tu letra coincide con la del volumen contiguo en todas las letras excepto en la t.",
-        "Aquí la barra horizontal queda un poco más alta. Nadie comenta. Nunca comparas las páginas.",
-        "Cada nota que has escrito contiene la diferencia cuando aparece una t."
+        "En el libro contiguo, la concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo. La persona que aparece allí tendrá una voz, una cara y una vida completas. En tu libro no muere ni desaparece: simplemente nunca comienza. En torno a ambos volúmenes hay incontables variaciones de ese instante, y cada una introduce a alguien distinto que vivirá durante páginas que aquí no existen."
       ],
-      "aftertaste": "Una barra más alta tiene su propia estantería.",
+      "aftertaste": "Otra persona comienza en ese instante.",
       "neighbors": [
         {
           "targetBookId": "b0008",
-          "difference": "La letra diferente es la g."
+          "difference": "Aparece la configuración exacta de hijos de esta vida."
         },
         {
           "targetBookId": "b0035",
-          "difference": "Las letras coinciden, pero sostienes el bolígrafo de otra manera."
+          "difference": "Aparecen todos los hijos posibles en cada orden y cantidad."
         }
       ]
     },
@@ -450,22 +419,20 @@
       "rootId": "b0008",
       "kind": "nearby",
       "icon": "letter",
-      "headline": "LAS MISMAS PALABRAS, OTRO AGARRE",
-      "title": "Dos milímetros más abajo",
+      "headline": "LA POBLACIÓN AUSENTE",
+      "title": "La población ausente",
       "passage": [
-        "Cada palabra se ve exactamente como en el volumen contiguo.",
-        "La diferencia es tu mano. Siempre has sostenido el bolígrafo dos milímetros más cerca de la punta.",
-        "Ninguna página escrita lo delata."
+        "Una sección de la Biblioteca contiene todos los hijos que podrías tener con cada persona, en cada fecha, en cada orden y cantidad. Algunos comparten casi todo; otros no podrían reconocerse. Sus vidas se combinan con sus amistades, parejas, trabajos y descendientes. Ninguno es un borrador de otro. Cada cual ocupa una biografía donde resulta tan real y cotidiano como tú en esta. La mayoría de esas personas completas no aparecerá ni una vez en tu libro exacto."
       ],
-      "aftertaste": "El texto es idéntico. La mano, no.",
+      "aftertaste": "La mayoría no aparece en tu libro.",
       "neighbors": [
         {
           "targetBookId": "b0008",
-          "difference": "La forma de sostener el bolígrafo coincide, pero la letra g es diferente."
+          "difference": "Aparece la configuración exacta de hijos de esta vida."
         },
         {
           "targetBookId": "b0023",
-          "difference": "La forma de sostener el bolígrafo coincide, pero la letra t es diferente."
+          "difference": "La concepción ocurre un instante antes y aparece otra persona."
         }
       ]
     },
@@ -474,23 +441,21 @@
       "rootId": "b0010",
       "kind": "root",
       "icon": "screen",
-      "headline": "ESTA FRASE",
-      "hook": "este libro describe cómo abres Babel Life y lees esta frase; el libro contiguo dice que lo cierras una línea antes.",
-      "title": "Este",
+      "headline": "ANTES DE TI",
+      "hook": "las vidas posibles de tus padres cambian una y otra vez las condiciones de la tuya.",
+      "title": "Antes de ti",
       "passage": [
-        "El libro dice que abres Babel Life, eliges este volumen y lees la frase que habla de leerla.",
-        "Dice que llegas a este párrafo. Nada en el texto lo convierte en una predicción. Es simplemente un relato que puede escribirse y ya está en la estantería.",
-        "El siguiente volumen termina una línea antes."
+        "Tu libro comienza antes de que puedas recordar. Contiene las decisiones, trabajos, enfermedades y desplazamientos de tus padres que hicieron posible tu nacimiento exacto. Registra cómo eran antes de recibir ese nombre y cómo siguieron siendo otras personas mientras tú crecías. Cada cambio en sus vidas altera las condiciones de la tuya: una ciudad, un horario, una conversación, el día en que coincidieron. Para describirte por completo, el libro necesita páginas en las que todavía no existes."
       ],
-      "aftertaste": "Este incluye esta línea.",
+      "aftertaste": "Tu libro necesita páginas anteriores a ti.",
       "neighbors": [
         {
           "targetBookId": "b0025",
-          "difference": "El relato termina porque cierras el libro una línea antes."
+          "difference": "Los mismos padres viven de otra manera."
         },
         {
           "targetBookId": "b0026",
-          "difference": "El relato dice que lees la misma frase dos veces."
+          "difference": "Una o ambas personas que son tus padres cambian."
         }
       ]
     },
@@ -499,22 +464,20 @@
       "rootId": "b0010",
       "kind": "nearby",
       "icon": "screen",
-      "headline": "UNA LÍNEA ANTES",
-      "title": "Cerrado una línea antes",
+      "headline": "LOS MISMOS PADRES",
+      "title": "Los mismos padres",
       "passage": [
-        "El libro dice que abres Babel Life y eliges este volumen.",
-        "Dice que lees el primer párrafo y lo cierras antes de la frase que sigue.",
-        "Esa frase sigue existiendo en el volumen contiguo."
+        "Hay libros donde tus padres son las mismas personas, pero viven de otra manera. Conservan sus cuerpos y nombres; cambian de trabajo, casa, creencias, amistades o país. A veces sigues naciendo en la misma fecha. A veces llegas años después. En ciertos volúmenes alcanzas una vida casi idéntica a la actual por caminos familiares completamente distintos. La Biblioteca guarda por separado cada versión de ellos porque ninguna produce exactamente las mismas páginas tuyas."
       ],
-      "aftertaste": "Este relato termina antes de la siguiente línea.",
+      "aftertaste": "Los mismos padres. Otras páginas tuyas.",
       "neighbors": [
         {
           "targetBookId": "b0010",
-          "difference": "Continúas una línea más."
+          "difference": "El libro conserva las vidas exactas de tus padres antes de ti."
         },
         {
           "targetBookId": "b0026",
-          "difference": "Continúas y lees una frase dos veces."
+          "difference": "Una o ambas personas que son tus padres cambian."
         }
       ]
     },
@@ -523,22 +486,20 @@
       "rootId": "b0010",
       "kind": "nearby",
       "icon": "book",
-      "headline": "LA MISMA FRASE DOS VECES",
-      "title": "Leída dos veces",
+      "headline": "OTROS NOMBRES ANTES DEL TUYO",
+      "title": "Otros nombres antes del tuyo",
       "passage": [
-        "El libro dice que abres Babel Life y llegas a esta frase.",
-        "Luego dice que lees la misma frase otra vez.",
-        "Todo alrededor de la repetición es idéntico."
+        "Más lejos están los libros donde cambia uno de tus padres, después ambos. Personas que hoy no conoces ocupan las primeras páginas de tu vida. De cada nueva pareja nacen distintas infancias, cuerpos y familias; de cada una salen nuevas combinaciones. Tu nombre puede permanecer o desaparecer. Tu fecha puede repetirse mientras todo lo demás cambia. Los corredores dedicados a tus posibles padres no terminan en tu nacimiento. Desde cada pareja vuelve a desplegarse toda tu biografía."
       ],
-      "aftertaste": "La segunda lectura ocupa su propio volumen.",
+      "aftertaste": "Desde cada pareja vuelve a desplegarse tu biografía.",
       "neighbors": [
         {
           "targetBookId": "b0010",
-          "difference": "Lees la frase una sola vez."
+          "difference": "El libro conserva las vidas exactas de tus padres antes de ti."
         },
         {
           "targetBookId": "b0025",
-          "difference": "Cierras el libro antes de llegar a ella."
+          "difference": "Los mismos padres viven de otra manera."
         }
       ]
     },
@@ -547,23 +508,21 @@
       "rootId": "b0011",
       "kind": "root",
       "icon": "paths",
-      "headline": "EL MISMO CARÁCTER, 1340",
-      "hook": "naces en 1340 con la misma risa, la misma impaciencia y cosas completamente distintas de las que quejarte.",
-      "title": "Tu firma en 1340",
+      "headline": "LO QUE CONSERVAS",
+      "hook": "los mismos hechos producen cada combinación posible de recuerdos conservados, deformados y perdidos.",
+      "title": "Lo que conservas",
       "passage": [
-        "Tienes treinta y ocho años en 1378. Discutes por una piedra que marca el lindero, la leña mojada y un vecino que pide herramientas y no las devuelve.",
-        "Tu risa empieza igual que aquí. Pierdes la paciencia con la misma rapidez.",
-        "No hay coches, teléfonos ni calderas. El temperamento permanece."
+        "Existe un libro con los hechos exactos de tu vida y con la parte que todavía recuerdas. Distingue ambas cosas. Registra tardes que ocurrieron y ya no puedes recuperar, rostros cuyo nombre perdiste y frases que crees recordar de manera incorrecta. También guarda recuerdos insignificantes que sobrevivieron sin razón visible. Tu pasado ocupa el libro una vez como acontecimiento y otra como memoria. Las dos versiones empiezan a separarse mucho antes de que adviertas la diferencia."
       ],
-      "aftertaste": "La queja es distinta. La impaciencia, no.",
+      "aftertaste": "El pasado ocurrió una vez y lo recuerdas de otra.",
       "neighbors": [
         {
           "targetBookId": "b0027",
-          "difference": "Naces cuarenta metros más allá, en la casa vecina."
+          "difference": "De la infancia solo permanece el recuerdo de una tarde."
         },
         {
           "targetBookId": "b0036",
-          "difference": "Naces en 1341 en lugar de 1340."
+          "difference": "Cambian todas las combinaciones de recuerdos y olvidos."
         }
       ]
     },
@@ -572,22 +531,20 @@
       "rootId": "b0011",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "LA CASA VECINA",
-      "title": "A cuarenta metros",
+      "headline": "LA TARDE RESTANTE",
+      "title": "La tarde restante",
       "passage": [
-        "Naces en 1340 a cuarenta metros de la casa del volumen contiguo.",
-        "La misma risa aparece con otro pan. La misma impaciencia se gasta con otro mojón de término.",
-        "Tu siglo no cambia. Solo se desplaza la casa."
+        "En un volumen llegas a la vejez recordando una sola tarde de tu infancia. No fue decisiva: una mesa, una bebida, luz en una pared. Todo lo demás ocurrió igual que en tu vida, pero ha dejado de estar disponible para ti. Aun así, continúas usando habilidades cuyo aprendizaje olvidaste y reconociendo lugares sin saber por qué. El libro contiene las décadas completas. Tú, dentro de él, conservas apenas unos minutos."
       ],
-      "aftertaste": "Cuarenta metros cambian la dirección, no el carácter.",
+      "aftertaste": "El libro guarda décadas. Tú, unos minutos.",
       "neighbors": [
         {
           "targetBookId": "b0011",
-          "difference": "Naces en la casa original."
+          "difference": "Los hechos y los recuerdos coinciden con los de esta vida."
         },
         {
           "targetBookId": "b0036",
-          "difference": "Naces un año después."
+          "difference": "Cambian todas las combinaciones de recuerdos y olvidos."
         }
       ]
     },
@@ -596,22 +553,20 @@
       "rootId": "b0011",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "UN AÑO DESPUÉS",
-      "title": "1341",
+      "headline": "CADA FORMA DE OLVIDAR",
+      "title": "Cada forma de olvidar",
       "passage": [
-        "Naces en el mismo lugar, con la misma risa y la misma irritación fácil, un año después.",
-        "La disputa por la tapia llega más tarde. La lluvia, no.",
-        "El libro no necesita ningún motivo para elegir 1341."
+        "Hay libros con los mismos acontecimientos y memorias distintas. En uno recuerdas cada habitación; en otro, ninguna. Un rostro permanece, una fecha se desplaza, una conversación pierde una palabra. Después aparecen todas las combinaciones: lo exacto, lo incompleto, lo deformado y lo perdido. Nada sobrenatural ocurre. El tiempo, la atención, la edad y el cuerpo hacen su trabajo ordinario. Para cada manera posible de recordar la misma vida, la Biblioteca necesita escribir otro libro entero."
       ],
-      "aftertaste": "Un año tiene su propia vida.",
+      "aftertaste": "La misma vida necesita otro recuerdo.",
       "neighbors": [
         {
           "targetBookId": "b0011",
-          "difference": "Naces en 1340."
+          "difference": "Los hechos y los recuerdos coinciden con los de esta vida."
         },
         {
           "targetBookId": "b0027",
-          "difference": "Naces en 1340, a cuarenta metros."
+          "difference": "De la infancia solo permanece el recuerdo de una tarde."
         }
       ]
     },
@@ -620,23 +575,21 @@
       "rootId": "b0012",
       "kind": "root",
       "icon": "paths",
-      "headline": "UN JUEVES DE RESPIRACIÓN",
-      "hook": "este libro registra cada respiración que das un jueves de noviembre, y nada más.",
-      "title": "El libro de la respiración",
+      "headline": "INVENTARIO",
+      "hook": "cada objeto que podrías poseer, aunque fuera durante unos minutos, exige otra vida completa.",
+      "title": "Inventario",
       "passage": [
-        "06:41:12 — inhalación. 06:41:15 — exhalación. Los registros continúan durante el desayuno, el trabajo, las escaleras, el silencio y el sueño.",
-        "No se recoge ninguna conversación. No se explica ningún pensamiento. El libro solo da la respiración y el tiempo.",
-        "A las 23:58:47 hay una exhalación. Luego termina el volumen."
+        "Tu biografía incluye cada objeto que llegó a pertenecerte: llaves, zapatos, teléfonos, muebles, fotografías, recibos y libros. Registra cuánto tiempo estuvo contigo, dónde lo dejaste y si aún existe. Algunos objetos ocupan décadas; otros, una tarde. Casi ninguno merece una escena. Juntos forman una secuencia irrepetible de cosas tocadas, guardadas, prestadas, rotas y desechadas. Para copiar tu vida con exactitud, la Biblioteca no puede omitir ni el objeto que olvidaste el mismo día."
       ],
-      "aftertaste": "Todo un libro, y solo la respiración.",
+      "aftertaste": "La Biblioteca no omite ningún objeto.",
       "neighbors": [
         {
           "targetBookId": "b0028",
-          "difference": "La cuarta respiración tras despertar dura 0,3 segundos más."
+          "difference": "Un clip azul te pertenece durante diecisiete minutos."
         },
         {
           "targetBookId": "b0037",
-          "difference": "El libro registra el jueves siguiente en su lugar."
+          "difference": "Cambian todos los objetos y sus secuencias de adquisición y pérdida."
         }
       ]
     },
@@ -645,22 +598,20 @@
       "rootId": "b0012",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "UNA RESPIRACIÓN MÁS LARGA",
-      "title": "Tres décimas de segundo",
+      "headline": "EL CLIP AZUL",
+      "title": "El clip azul",
       "passage": [
-        "El registro de respiración coincide con el volumen contiguo hasta la cuarta respiración tras despertar.",
-        "Aquí la inhalación dura 0,3 segundos más.",
-        "Cada marca de tiempo posterior vuelve al mismo ritmo."
+        "El libro contiguo difiere en un clip azul. Lo encuentras en una mesa, lo guardas en un bolsillo y lo tiras diecisiete minutos después. No sirve para nada. Nadie lo ve. No modifica una decisión, una conversación ni un recuerdo. Todas las demás páginas coinciden con tu vida exacta. Sin embargo, durante diecisiete minutos posees algo que aquí nunca fue tuyo. Esa diferencia insignificante exige repetir desde el nacimiento hasta la muerte."
       ],
-      "aftertaste": "Tres décimas de segundo llenan otro volumen.",
+      "aftertaste": "Diecisiete minutos exigen una biografía completa.",
       "neighbors": [
         {
           "targetBookId": "b0012",
-          "difference": "La cuarta respiración tiene su duración original."
+          "difference": "Posees la secuencia exacta de objetos de esta vida."
         },
         {
           "targetBookId": "b0037",
-          "difference": "Todo el registro pertenece al jueves siguiente."
+          "difference": "Cambian todos los objetos y sus secuencias de adquisición y pérdida."
         }
       ]
     },
@@ -669,22 +620,20 @@
       "rootId": "b0012",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "SIETE DÍAS DESPUÉS",
-      "title": "El jueves siguiente",
+      "headline": "TODAS TUS COSAS",
+      "title": "Todas tus cosas",
       "passage": [
-        "Este libro también contiene solo respiraciones y marcas de tiempo.",
-        "Pertenecen al jueves de la semana siguiente. Catorce intervalos difieren del primer libro.",
-        "No podrías identificarlos sin colocar los volúmenes uno junto al otro."
+        "Una estantería cambia un objeto cada vez. Las siguientes cambian dos, cien, todos. Hay vidas con habitaciones llenas y vidas en las que casi nada lleva tu nombre. Cada coche se combina con cada llave; cada fotografía, con cada casa; cada prenda, con cada día en que podrías usarla. Después se ordenan todas las secuencias de adquisición y pérdida. La Biblioteca contiene inventarios imposibles de terminar porque cada inventario está incrustado en una vida completa."
       ],
-      "aftertaste": "Catorce diferencias, ninguna recordada.",
+      "aftertaste": "Cada inventario está dentro de una vida.",
       "neighbors": [
         {
           "targetBookId": "b0012",
-          "difference": "El registro de respiración pertenece al jueves anterior."
+          "difference": "Posees la secuencia exacta de objetos de esta vida."
         },
         {
           "targetBookId": "b0028",
-          "difference": "El jueves anterior difiere solo en 0,3 segundos en una respiración."
+          "difference": "Un clip azul te pertenece durante diecisiete minutos."
         }
       ]
     },
@@ -693,23 +642,21 @@
       "rootId": "b0038",
       "kind": "root",
       "icon": "paths",
-      "headline": "NO ESTÁS EN ESTE LIBRO",
-      "hook": "las dos personas que en otra parte son tus padres nunca forman pareja, viven vidas completas y tú no existes.",
-      "title": "Sin ti",
+      "headline": "POR DONDE PASASTE",
+      "hook": "cada paso, trayecto y encuentro posible queda situado con precisión dentro de tu vida.",
+      "title": "Por donde pasaste",
       "passage": [
-        "Uno de los dos se muda al norte a los veintiséis. El otro se queda. Cada cual forma un hogar con otra persona.",
-        "No hay ninguna silla vacía, ninguna fotografía que falte ni ningún duelo inexplicado. Nadie en el libro te está esperando.",
-        "La vida está completa sin que nadie note tu ausencia."
+        "Existe un libro que conserva todos tus movimientos por el espacio. Cada acera, escalera, carretera, pasillo, vuelo y puerta aparece en el orden exacto en que los recorriste. Incluye los trayectos repetidos hasta dejar de mirarlos y el último paso que diste antes de leer esta frase. Tu vida no solo conecta lugares importantes. Está hecha de millones de posiciones intermedias que nunca nombraste y que el libro debe precisar para situarte donde realmente estuviste."
       ],
-      "aftertaste": "Nadie en el libro te echa de menos.",
+      "aftertaste": "El libro precisa dónde estuviste.",
       "neighbors": [
         {
           "targetBookId": "b0039",
-          "difference": "Tus padres se encuentran una vez, hablan dos minutos y no vuelven a verse."
+          "difference": "Un solo paso cae veinte centímetros a la izquierda."
         },
         {
           "targetBookId": "b0040",
-          "difference": "Tus padres se hacen amigos, pero nunca pareja."
+          "difference": "Cambian todas las rutas y las personas encontradas en ellas."
         }
       ]
     },
@@ -718,22 +665,20 @@
       "rootId": "b0038",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "SE ENCUENTRAN UNA VEZ",
-      "title": "Dos minutos",
+      "headline": "VEINTE CENTÍMETROS",
+      "title": "Veinte centímetros",
       "passage": [
-        "Las dos personas que en otra parte son tus padres se encuentran una vez en una cola.",
-        "Hablan durante dos minutos sobre el retraso. Luego se marchan en direcciones opuestas.",
-        "Ambas vidas continúan. Sigues sin estar en el libro."
+        "El volumen siguiente coloca uno de tus pasos veinte centímetros a la izquierda. No tropiezas. No encuentras a nadie. Tu destino, tu hora de llegada y el resto de tu vida permanecen iguales. Solo la planta de tu pie toca otro fragmento de suelo durante menos de un segundo. El cambio desaparece de inmediato, pero no puede borrarse del registro. La Biblioteca vuelve a escribir cada página para una vida que únicamente se desvió el ancho de una mano."
       ],
-      "aftertaste": "Dos minutos no bastan para que existas.",
+      "aftertaste": "El ancho de una mano reescribe cada página.",
       "neighbors": [
         {
           "targetBookId": "b0038",
-          "difference": "Nunca llegan a conocerse."
+          "difference": "Cada movimiento sigue la ruta exacta de esta vida."
         },
         {
           "targetBookId": "b0040",
-          "difference": "Se conocen y siguen siendo amigos."
+          "difference": "Cambian todas las rutas y las personas encontradas en ellas."
         }
       ]
     },
@@ -742,22 +687,20 @@
       "rootId": "b0038",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "SIGUEN SIENDO AMIGOS",
-      "title": "Solo amigos",
+      "headline": "TODOS LOS CRUCES",
+      "title": "Todos los cruces",
       "passage": [
-        "Se conocen, se caen bien y siguen siendo amigos durante cuarenta años.",
-        "Hay cumpleaños, mensajes, cenas de vez en cuando y ningún hogar compartido.",
-        "Nunca apareces. En esa amistad no falta nadie."
+        "Hay libros para cada ruta entre los lugares de tu vida y para cada orden posible de lugares. Luego cada ruta se combina con las personas que podrían recorrerla al mismo tiempo. Una esquina contiene encuentros que duran décadas y roces que ninguno recuerda. Un pasillo puede cruzarse vacío o con cualquiera que haya podido llegar hasta él. Cada paso abre no una alternativa, sino corredores de biografías donde cambian simultáneamente el camino, la hora y todos los cuerpos presentes."
       ],
-      "aftertaste": "Se conocen. Sigues sin existir.",
+      "aftertaste": "Cada paso abre corredores enteros.",
       "neighbors": [
         {
           "targetBookId": "b0038",
-          "difference": "Nunca se conocen."
+          "difference": "Cada movimiento sigue la ruta exacta de esta vida."
         },
         {
           "targetBookId": "b0039",
-          "difference": "Se encuentran una vez y nunca mantienen el contacto."
+          "difference": "Un solo paso cae veinte centímetros a la izquierda."
         }
       ]
     },
@@ -1058,23 +1001,21 @@
       "rootId": "b0053",
       "kind": "root",
       "icon": "paths",
-      "headline": "SOLO UNO DE LOS DOS PUEDE RECORDAR",
-      "hook": "cada momento que compartís solo puede recordarlo uno de los dos; cuando uno conserva el recuerdo, el otro solo conserva los hechos.",
-      "title": "Un recuerdo entre los dos",
+      "headline": "LO DICHO",
+      "hook": "cada palabra, pausa y silencio posible ocupa su propia biografía completa.",
+      "title": "Lo dicho",
       "passage": [
-        "Tu pareja recuerda la boda: la sala calurosa, el botón que faltaba, la risa durante los votos. Sabes que esas cosas pasaron y no recuerdas ninguna.",
-        "Tú recuerdas unas vacaciones lluviosas que solo conoce por las fotos.",
-        "Los años compartidos se dividen así. Ningún recuerdo pertenece a los dos."
+        "Tu libro registra cada sonido que has pronunciado: las primeras sílabas, las preguntas repetidas, las respuestas automáticas, los nombres, las discusiones y las palabras que dijiste sin que nadie escuchara. También contiene todos tus silencios, con su duración exacta. Algunas frases cambiaron una relación. La mayoría no cambió nada. La Biblioteca escribe ambas con el mismo cuidado porque una vida exacta no puede sustituir una palabra olvidable por otra, ni un segundo callado por un segundo de voz."
       ],
-      "aftertaste": "Los hechos son compartidos. Los recuerdos, no.",
+      "aftertaste": "Un segundo callado no equivale a uno de voz.",
       "neighbors": [
         {
           "targetBookId": "b0054",
-          "difference": "El recuerdo de la boda, en cambio, es tuyo."
+          "difference": "Una pausa dura un segundo más y nada más cambia."
         },
         {
           "targetBookId": "b0055",
-          "difference": "Contar un recuerdo compartido lo transfiere a quien escucha."
+          "difference": "Cambian todas las palabras, pausas y conversaciones posibles."
         }
       ]
     },
@@ -1083,22 +1024,20 @@
       "rootId": "b0053",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "RECUERDAS LA BODA",
-      "title": "La boda es tuya",
+      "headline": "UNA PAUSA MÁS LARGA",
+      "title": "Una pausa más larga",
       "passage": [
-        "En este volumen, la boda es tuya.",
-        "Recuerdas la sala calurosa, el botón que faltaba y la risa durante los votos. Tu pareja conoce los hechos y no tiene ninguna imagen del día.",
-        "Los demás recuerdos compartidos se dividen como antes."
+        "En el libro de al lado tardas un segundo adicional en responder una pregunta. Después dices exactamente lo mismo. La otra persona espera. Nada se altera: ni su interpretación, ni la conversación siguiente, ni el día. Décadas más tarde, ambos libros llegan al mismo final. Solo difieren en aquel silencio ligeramente más largo. Uno contiene una vida con esa pausa. El otro, una vida sin ella. La Biblioteca no decide que son equivalentes."
       ],
-      "aftertaste": "Esta vez, la boda se queda contigo.",
+      "aftertaste": "La Biblioteca conserva esa pausa.",
       "neighbors": [
         {
           "targetBookId": "b0053",
-          "difference": "El recuerdo de la boda pertenece a tu pareja."
+          "difference": "Coinciden exactamente todas las palabras y todos los silencios."
         },
         {
           "targetBookId": "b0055",
-          "difference": "Los recuerdos pueden transferirse al decirlos en voz alta."
+          "difference": "Cambian todas las palabras, pausas y conversaciones posibles."
         }
       ]
     },
@@ -1107,22 +1046,20 @@
       "rootId": "b0053",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "DECIRLO Y PERDERLO",
-      "title": "Contado, transferido",
+      "headline": "TODO LO PRONUNCIABLE",
+      "title": "Todo lo pronunciable",
       "passage": [
-        "Recuerdas las vacaciones lluviosas hasta que las describes en voz alta.",
-        "A medida que tu pareja empieza a ver el balcón mojado y la toalla roja, las imágenes te abandonan. Quedan los hechos.",
-        "A partir de entonces, cada recuerdo compartido puede transferirse al contarlo."
+        "Una palabra cambia; luego una sílaba; luego el orden de dos frases. Hay libros para cada conversación que podrías mantener y para cada frase que nunca dirías. Cada versión se combina con todas las voces, pausas y silencios de los demás. La mayor parte se pierde sin consecuencias. Algunas palabras cambian trabajos, familias o países. Los libros no están ordenados por importancia. Junto a una vida transformada por una frase hay millones diferenciadas por sonidos que nadie recordó."
       ],
-      "aftertaste": "Quien escucha conserva lo que pierde quien habla.",
+      "aftertaste": "Los libros no se ordenan por importancia.",
       "neighbors": [
         {
           "targetBookId": "b0053",
-          "difference": "Los recuerdos se dividen, pero nunca se transfieren."
+          "difference": "Coinciden exactamente todas las palabras y todos los silencios."
         },
         {
           "targetBookId": "b0054",
-          "difference": "La boda es tuya, sin transferencia."
+          "difference": "Una pausa dura un segundo más y nada más cambia."
         }
       ]
     },
@@ -1131,23 +1068,21 @@
       "rootId": "b0056",
       "kind": "root",
       "icon": "paths",
-      "headline": "UN DÍA OCURRIÓ DOS VECES",
-      "hook": "un martes cualquiera de tu vida ocurrió dos veces —lo viviste igual las dos veces— y el libro recoge los dos.",
-      "title": "El martes de más",
+      "headline": "TUS NOCHES",
+      "hook": "cada noche posible cambia de cama, postura, despertar, sueño o compañía.",
+      "title": "Tus noches",
       "passage": [
-        "El libro recoge dos veces el martes 8 de octubre.",
-        "En ambas ocasiones te despiertas a las 06:47, preparas té, pierdes el mismo autobús, trabajas hasta las cinco, compras detergente y ves medio documental.",
-        "El miércoles solo llega una vez. Recuerdas un solo martes."
+        "Existe un volumen que contiene todas las noches de tu vida. Indica cuándo te acostaste, de qué lado dormiste, cuántas veces despertaste y quién respiraba cerca. Registra los sueños recordados y aquellos que desaparecieron antes de abrir los ojos. Durante años, sus páginas nocturnas parecen repetirse: la misma cama, la misma oscuridad, el mismo cuerpo inmóvil. Pero ninguna noche ocupa exactamente las mismas horas ni te devuelve al día con idéntico cansancio."
       ],
-      "aftertaste": "El libro conserva ambos martes.",
+      "aftertaste": "Ninguna noche ocupa las mismas horas.",
       "neighbors": [
         {
           "targetBookId": "b0057",
-          "difference": "El segundo martes solo difiere en que el hervidor hierve treinta segundos después."
+          "difference": "Durante una noche duermes mirando hacia el otro lado."
         },
         {
           "targetBookId": "b0058",
-          "difference": "El mismo martes ocurre tres veces."
+          "difference": "Cambian todas las camas, posturas, interrupciones y compañías."
         }
       ]
     },
@@ -1156,22 +1091,20 @@
       "rootId": "b0056",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "TREINTA SEGUNDOS DESPUÉS",
-      "title": "El segundo hervidor",
+      "headline": "DEL OTRO LADO",
+      "title": "Del otro lado",
       "passage": [
-        "El martes 8 de octubre aparece dos veces.",
-        "La segunda copia es idéntica, salvo que el hervidor se apaga treinta segundos más tarde. Sigues perdiendo el mismo autobús.",
-        "El miércoles solo llega una vez."
+        "El libro contiguo conserva toda tu vida despierta. Las mismas decisiones, palabras, viajes y relaciones. Solo cambia tu postura durante una noche: duermes mirando hacia la pared en lugar de hacia la habitación. No lo recuerdas por la mañana. No afecta a tu cuerpo ni al día siguiente. La diferencia existe únicamente mientras no eres consciente de ella. Para guardarla, la Biblioteca duplica también cada página en la que estás despierto."
       ],
-      "aftertaste": "Treinta segundos no aparecen en ninguna otra parte.",
+      "aftertaste": "La diferencia existe mientras no la conoces.",
       "neighbors": [
         {
           "targetBookId": "b0056",
-          "difference": "Ambos martes son idénticos."
+          "difference": "Cada noche coincide con la de esta vida."
         },
         {
           "targetBookId": "b0058",
-          "difference": "El martes ocurre tres veces."
+          "difference": "Cambian todas las camas, posturas, interrupciones y compañías."
         }
       ]
     },
@@ -1180,22 +1113,20 @@
       "rootId": "b0056",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "TRES MARTES",
-      "title": "Martes, martes, martes",
+      "headline": "TODAS LAS CAMAS",
+      "title": "Todas las camas",
       "passage": [
-        "El libro recoge el martes 8 de octubre tres veces seguidas.",
-        "Cada copia contiene el mismo té, el mismo autobús perdido, la misma jornada laboral, el mismo detergente y el mismo medio documental.",
-        "Tras el tercero, llega el miércoles."
+        "Hay libros donde cada una de tus noches ocurre en otra habitación, otro país, junto a otra persona o en una cama vacía. Hay vidas con décadas de sueño interrumpido y otras en que despiertas siempre a la misma hora. Después vienen todas las combinaciones de posiciones, despertares, sueños y olvidos. Algunas cambian tus días. Otras permanecen encerradas en la noche. Incluso las diferencias que nunca llegas a conocer ocupan biografías completas con tu nombre."
       ],
-      "aftertaste": "Recuerdas un solo martes.",
+      "aftertaste": "Cada noche ocupa otra biografía.",
       "neighbors": [
         {
           "targetBookId": "b0056",
-          "difference": "El martes ocurre dos veces."
+          "difference": "Cada noche coincide con la de esta vida."
         },
         {
           "targetBookId": "b0057",
-          "difference": "El martes ocurre dos veces con una diferencia de treinta segundos."
+          "difference": "Durante una noche duermes mirando hacia el otro lado."
         }
       ]
     },
@@ -1350,23 +1281,21 @@
       "rootId": "b0065",
       "kind": "root",
       "icon": "mirror",
-      "headline": "UNA HABITACIÓN QUE NUNCA EXISTIÓ",
-      "hook": "recuerdas una habitación en la que nunca has entrado —su sillón verde, su luz amarilla y la mesa rayada— con más claridad que las habitaciones donde has vivido.",
-      "title": "La habitación que recuerdas",
+      "headline": "LA ÚLTIMA EDAD",
+      "hook": "alcanzas cada edad posible después de cada vida capaz de caber antes de ella.",
+      "title": "La última edad",
       "passage": [
-        "La habitación tiene un sillón verde junto a la ventana, luz amarilla y un rayón en diagonal que cruza la mesa.",
-        "Recuerdas dónde se atasca la puerta y el olor de la cocina al otro lado.",
-        "Ninguna casa en la que has entrado contiene esa habitación. El recuerdo permanece."
+        "Tu libro tiene una cantidad exacta de páginas. En alguna aparece tu última edad, expresada en años, meses, días y segundos. Antes están todas las edades que sí alcanzaste: cada cuerpo sucesivo, cada cumpleaños, cada mañana en que no pensaste cuánto faltaba. El final puede ocupar una línea sencilla. Lo inmenso es la vida precisa que tuvo que ocurrir antes para que llegaras a ese segundo con esa cara, en ese lugar y habiendo vivido exactamente lo anterior."
       ],
-      "aftertaste": "Recuerdas el rayón con más claridad.",
+      "aftertaste": "Tu última edad tiene un segundo exacto.",
       "neighbors": [
         {
           "targetBookId": "b0066",
-          "difference": "Se recuerda la misma habitación, pero el rayón va en sentido contrario."
+          "difference": "La vida termina a cada edad y después de cada último día posible."
         },
         {
           "targetBookId": "b0067",
-          "difference": "A los cuarenta entras en la habitación exactamente como la recordabas."
+          "difference": "Después de la última noche vives un día más."
         }
       ]
     },
@@ -1375,22 +1304,20 @@
       "rootId": "b0065",
       "kind": "nearby",
       "icon": "mirror",
-      "headline": "EL RAYÓN EN SENTIDO CONTRARIO",
-      "title": "El otro rayón",
+      "headline": "CADA DURACIÓN",
+      "title": "Cada duración",
       "passage": [
-        "El sillón verde, la luz amarilla y la puerta que se atasca son iguales.",
-        "Solo el rayón difiere. Aquí va desde la esquina izquierda del fondo hacia ti.",
-        "La habitación sigue existiendo solo en el recuerdo."
+        "Hay libros que terminan a los pocos minutos y libros que atraviesan una infancia, una vida adulta o una vejez extrema. Para cada duración existen todos los últimos días posibles: comunes, ocupados, silenciosos, compartidos, inadvertidos. La Biblioteca no reserva el final para una escena extraordinaria. Puede llegar después de lavarte las manos, mirar una calle o dejar una taza sobre una mesa. Cada edad alcanzada contiene incontables vidas completas capaces de terminar allí."
       ],
-      "aftertaste": "Un solo rayón separa los recuerdos.",
+      "aftertaste": "Cada edad contiene incontables vidas.",
       "neighbors": [
         {
           "targetBookId": "b0065",
-          "difference": "El rayón va en la dirección contraria."
+          "difference": "La vida termina a tu edad exacta."
         },
         {
           "targetBookId": "b0067",
-          "difference": "Al final encuentras la habitación recordada."
+          "difference": "Después de la última noche vives un día más."
         }
       ]
     },
@@ -1399,22 +1326,20 @@
       "rootId": "b0065",
       "kind": "nearby",
       "icon": "mirror",
-      "headline": "LA HABITACIÓN ESTÁ AHÍ",
-      "title": "Encontrada a los cuarenta",
+      "headline": "UN DÍA MÁS",
+      "title": "Un día más",
       "passage": [
-        "A los cuarenta entras en un edificio desconocido y encuentras el sillón verde, la luz amarilla y la mesa rayada.",
-        "La puerta se atasca exactamente donde recordabas que lo hacía.",
-        "Nada en el libro explica por qué recordaste la habitación primero."
+        "Dos volúmenes describen la misma vida hasta tu última noche. En uno, termina. En otro, despiertas y vives un día adicional sin nada excepcional: te levantas, comes, hablas, esperas. Un tercer libro añade otro día. Después aparecen semanas, años y décadas, cada una con todos sus posibles contenidos. No existe una única continuación. Desde cualquier edad, la Biblioteca guarda cada cantidad de tiempo restante y cada vida que puede caber dentro de ella."
       ],
-      "aftertaste": "El recuerdo llegó antes que la habitación.",
+      "aftertaste": "Otro día. Después todos los demás.",
       "neighbors": [
         {
           "targetBookId": "b0065",
-          "difference": "Nunca encuentras la habitación recordada."
+          "difference": "La vida termina a tu edad exacta."
         },
         {
           "targetBookId": "b0066",
-          "difference": "El rayón recordado va en sentido contrario."
+          "difference": "La vida termina a cada edad y después de cada último día posible."
         }
       ]
     },
@@ -1423,23 +1348,21 @@
       "rootId": "b0068",
       "kind": "root",
       "icon": "speech",
-      "headline": "EL LIBRO CONTIGUO DICE A LA DERECHA",
-      "hook": "este libro dice que el miércoles giraste a la izquierda; el libro contiguo dice que a la derecha; ambos dicen que llegaste al mismo escritorio a las 09:04.",
-      "title": "El desacuerdo del miércoles",
+      "headline": "TU NOMBRE COMPLETO",
+      "hook": "conservas tu nombre mientras cambian el cuerpo, la familia, la lengua, los recuerdos y todo lo demás.",
+      "title": "Tu nombre completo",
       "passage": [
-        "A las 08:51 sales de casa. Al llegar a la esquina, este volumen dice a la izquierda.",
-        "Pasas por delante de la farmacia, cruzas en el semáforo y te sientas en el escritorio a las 09:04.",
-        "El volumen contiguo dice a la derecha. Da la misma hora de llegada."
+        "Este libro conserva tu nombre y todo lo que actualmente lo acompaña: cuerpo, familia, país, lengua, recuerdos, hábitos y relaciones. Cada vez que alguien lo pronuncia, se refiere a la acumulación exacta de esas páginas. Sin embargo, el nombre ocupa muy poco espacio. Podría copiarse sin dificultad en la portada de otro volumen. La Biblioteca lo hace. Al abrir ese otro libro, encuentras el mismo nombre y ninguna de las circunstancias con las que aprendiste a reconocerlo."
       ],
-      "aftertaste": "Ambos libros terminan el trayecto a las 09:04.",
+      "aftertaste": "El mismo nombre cabe en otra portada.",
       "neighbors": [
         {
           "targetBookId": "b0069",
-          "difference": "Giras a la derecha y aun así llegas a las 09:04."
+          "difference": "La misma firma pertenece a una vida completamente distinta."
         },
         {
           "targetBookId": "b0070",
-          "difference": "El libro dice que nunca sales de casa y aun así te sitúa en el escritorio a las 09:04."
+          "difference": "Personas completamente distintas responden a tu mismo nombre."
         }
       ]
     },
@@ -1448,22 +1371,20 @@
       "rootId": "b0068",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "A LA DERECHA, MISMA LLEGADA",
-      "title": "Girar a la derecha",
+      "headline": "LA MISMA FIRMA",
+      "title": "La misma firma",
       "passage": [
-        "A las 08:51 sales de casa. Al llegar a la esquina, este volumen dice a la derecha.",
-        "Pasas junto al buzón y la tienda estrecha. A las 09:04 te sientas en el mismo escritorio.",
-        "El otro libro insiste en que fuiste por la izquierda."
+        "Hay un libro donde firmas igual que aquí, pero tu mano tiene otra forma. Naciste en otro país, hablas otra lengua y perteneces a otra familia. Tu educación, trabajo, creencias y recuerdos no coinciden. Nunca has visto los lugares que ahora llamas tuyos. Aun así, la firma al pie de ciertos documentos reproduce exactamente el mismo nombre. Todo lo que eres ha cambiado alrededor de esas letras, y las letras continúan reclamando que el libro trata de ti."
       ],
-      "aftertaste": "Por la derecha también se llega a las 09:04.",
+      "aftertaste": "Las letras siguen diciendo que eres tú.",
       "neighbors": [
         {
           "targetBookId": "b0068",
-          "difference": "Giras a la izquierda."
+          "difference": "Tu nombre conserva todo lo que actualmente significa."
         },
         {
           "targetBookId": "b0070",
-          "difference": "Nunca sales de casa y aun así constas en el escritorio."
+          "difference": "Personas completamente distintas responden a tu mismo nombre."
         }
       ]
     },
@@ -1472,22 +1393,20 @@
       "rootId": "b0068",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "NUNCA SALISTE DE CASA",
-      "title": "En el escritorio de todos modos",
+      "headline": "TODOS BAJO TU NOMBRE",
+      "title": "Todos bajo tu nombre",
       "passage": [
-        "El libro dice que te quedas en casa toda la mañana.",
-        "También dice que a las 09:04 te sientas en el mismo escritorio de la oficina descrito en los otros dos volúmenes.",
-        "Ningún trayecto une las dos frases."
+        "Una sección entera repite tu nombre en los lomos. Dentro, cambian los cuerpos, edades, padres, idiomas, profesiones, hábitos y muertes. Algunos volúmenes conservan un solo rasgo reconocible. Otros no conservan ninguno. Hay libros donde personas completamente distintas responden cuando alguien pronuncia esas mismas sílabas. La Biblioteca no señala el punto en que dejas de ser tú. Solo alinea los volúmenes y permite que tu nombre permanezca fijo mientras reemplaza todo lo que alguna vez significó."
       ],
-      "aftertaste": "Casa y escritorio comparten las 09:04.",
+      "aftertaste": "Tu nombre permanece. Todo lo demás cambia.",
       "neighbors": [
         {
           "targetBookId": "b0068",
-          "difference": "El libro describe un trayecto girando a la izquierda hasta el escritorio."
+          "difference": "Tu nombre conserva todo lo que actualmente significa."
         },
         {
           "targetBookId": "b0069",
-          "difference": "El libro describe un trayecto girando a la derecha hasta el escritorio."
+          "difference": "La misma firma pertenece a una vida completamente distinta."
         }
       ]
     },
@@ -1496,23 +1415,21 @@
       "rootId": "b0071",
       "kind": "root",
       "icon": "paths",
-      "headline": "UNA PALABRA A LOS CATORCE",
-      "hook": "a los catorce años dices «quizá» en vez de «probablemente» en una frase que nadie recuerda, y el resto de tu vida es idéntico.",
-      "title": "Dijiste quizá",
+      "headline": "SOLO QUEDA EL GESTO",
+      "hook": "todo cambia salvo un gesto, una comida o una palabra que permanece exactamente igual.",
+      "title": "Solo queda el gesto",
       "passage": [
-        "Cerca de la verja de la escuela alguien pregunta si lloverá antes de llegar a casa. Dices: «Quizá».",
-        "Vuelves a casa andando, cenas lo mismo y olvidas la conversación.",
-        "Nadie recuerda la palabra. El libro sí."
+        "Existe un libro donde casi nada de tu vida actual permanece. Otro cuerpo, otra familia, otro país, otra lengua, otro trabajo y otra muerte. No conoces a ninguna de las personas que aquí forman tus días. Sin embargo, a la misma edad haces exactamente un gesto que hiciste en esta vida: apartas una silla con la mano antes de sentarte. La postura de los dedos, la fuerza y la duración coinciden. Todo el libro parece ajeno salvo ese segundo preciso."
       ],
-      "aftertaste": "Este volumen contiene «quizá».",
+      "aftertaste": "Solo ese segundo sigue siendo tuyo.",
       "neighbors": [
         {
           "targetBookId": "b0072",
-          "difference": "Dices «tal vez» en su lugar."
+          "difference": "Dos vidas distintas comparten un desayuno exacto."
         },
         {
           "targetBookId": "b0073",
-          "difference": "Dices «probablemente»; la otra persona responde «quizá»."
+          "difference": "Todo cambia salvo la última palabra."
         }
       ]
     },
@@ -1521,22 +1438,20 @@
       "rootId": "b0071",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "UNA PALABRA DISTINTA",
-      "title": "Dijiste tal vez",
+      "headline": "EL MISMO DESAYUNO",
+      "title": "El mismo desayuno",
       "passage": [
-        "Cerca de la verja de la escuela alguien pregunta si lloverá. Dices: «Tal vez».",
-        "Siguen la misma cena, los mismos deberes y la misma vida posterior.",
-        "Este volumen contiene «tal vez»."
+        "Dos vidas no comparten nacimiento, rostro, educación, ciudad, creencias ni relaciones. Sus páginas no vuelven a aproximarse. Pero en una fecha determinada comes el mismo desayuno, en el mismo orden, con las mismas cantidades y durante el mismo número de minutos. Después los libros se separan otra vez hasta dos muertes distintas. Entre miles de diferencias, esa comida idéntica resulta más difícil de ignorar que cualquier cambio. La Biblioteca la conserva sin destacarla."
       ],
-      "aftertaste": "Una sola palabra ocupa otro libro.",
+      "aftertaste": "La Biblioteca no destaca el desayuno.",
       "neighbors": [
         {
           "targetBookId": "b0071",
-          "difference": "Dices «quizá» en su lugar."
+          "difference": "Todo cambia salvo un gesto exacto."
         },
         {
           "targetBookId": "b0073",
-          "difference": "Dices «probablemente» y oyes «quizá» como respuesta."
+          "difference": "Todo cambia salvo la última palabra."
         }
       ]
     },
@@ -1545,22 +1460,20 @@
       "rootId": "b0071",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "LA PALABRA PASA AL OTRO",
-      "title": "La otra persona dijo quizá",
+      "headline": "LA ÚLTIMA PALABRA",
+      "title": "La última palabra",
       "passage": [
-        "Cerca de la verja de la escuela alguien pregunta si lloverá. Dices: «Probablemente». Responde: «Quizá».",
-        "El resto de la conversación desaparece del recuerdo.",
-        "La misma palabra existe en el libro, dicha por la otra persona."
+        "Hay libros donde todo cambia salvo tu última palabra. Llegas a ella con otra voz, después de una vida que no reconoces, rodeado de personas que nunca conocerás aquí. En algunos volúmenes la dices en otro idioma, pero el sonido final coincide. En otros significa algo diferente. Cuerpos, familias, países y décadas enteras se reemplazan para conducir a la misma breve emisión. Lo constante ya no parece una base. Parece el detalle imposible de quitar."
       ],
-      "aftertaste": "La palabra cambia de boca.",
+      "aftertaste": "La última palabra permanece.",
       "neighbors": [
         {
           "targetBookId": "b0071",
-          "difference": "Eres tú quien dice «quizá»."
+          "difference": "Todo cambia salvo un gesto exacto."
         },
         {
           "targetBookId": "b0072",
-          "difference": "Dices «tal vez» y no recibes ninguna respuesta con esa palabra."
+          "difference": "Dos vidas distintas comparten un desayuno exacto."
         }
       ]
     },
@@ -1643,23 +1556,25 @@
       "rootId": "b0077",
       "kind": "root",
       "icon": "table",
-      "headline": "UN CAJÓN, CINCUENTA AÑOS",
-      "hook": "un cajón de la cocina de la casa donde te criaste permanece cerrado durante cincuenta años, y este libro nunca te dice qué hay dentro.",
-      "title": "La puerta que nunca abriste",
+      "headline": "LO QUE NADIE VIO",
+      "hook": "tu vida visible permanece idéntica mientras cambian los pensamientos, deseos e interpretaciones que contiene.",
+      "title": "Lo que nadie vio",
       "passage": [
-        "El cajón está debajo de los cubiertos. Todo el mundo usa la cocina. Nadie lo abre.",
-        "Cambia la pintura, cambian los electrodomésticos, la gente se marcha y regresa. El tirador acumula los mismos pequeños rasguños.",
-        "Al cabo de cincuenta años el libro termina con el cajón aún cerrado."
+        "Este libro reproduce tu vida observable sin cambiar nada.",
+        "Naces en el mismo segundo, habitas las mismas casas, dices las mismas palabras y haces los mismos gestos. Conservas el trabajo, las relaciones, los viajes, las enfermedades y la muerte.",
+        "Dos personas que contemplaran ambas vidas desde fuera no encontrarían una sola diferencia.",
+        "Pero mientras realizas cada acción, piensas otras cosas, deseas otras consecuencias e interpretas de otra manera lo que sucede.",
+        "La Biblioteca necesita dos libros completos porque por dentro no viviste la misma vida."
       ],
-      "aftertaste": "Este volumen no lo abre.",
+      "aftertaste": "Por dentro, no viviste la misma vida.",
       "neighbors": [
         {
           "targetBookId": "b0078",
-          "difference": "El cajón se abre una vez en el año treinta y siete."
+          "difference": "Un pensamiento aparece durante tres segundos y no cambia nada."
         },
         {
           "targetBookId": "b0079",
-          "difference": "La familia nunca lo abre; el nuevo propietario lo abre en la primera hora."
+          "difference": "Cambian todas las interpretaciones, intenciones y combinaciones interiores."
         }
       ]
     },
@@ -1668,22 +1583,25 @@
       "rootId": "b0077",
       "kind": "nearby",
       "icon": "table",
-      "headline": "AÑO TREINTA Y SIETE",
-      "title": "Abierto una sola vez",
+      "headline": "UN PENSAMIENTO DE MENOS",
+      "title": "Un pensamiento de menos",
       "passage": [
-        "Durante treinta y siete años nadie abre el cajón de la cocina.",
-        "Entonces alguien tira de él, mira dentro durante dos segundos y lo cierra. El libro no dice qué vio.",
-        "Permanece cerrado durante los trece años restantes."
+        "Mientras levantas un vaso, aparece en tu mente una frase breve.",
+        "No la dices. No modifica tu expresión, el movimiento de tu mano ni lo que haces después. Tres segundos más tarde la has olvidado.",
+        "En el volumen contiguo, esa frase no llega a formarse.",
+        "Todo lo visible coincide, y también cada pensamiento anterior y posterior hasta tu muerte.",
+        "Durante tres segundos, una vida contiene algo que la otra no.",
+        "Para guardar esa diferencia inaccesible, la Biblioteca vuelve a escribirlas enteras."
       ],
-      "aftertaste": "Dos segundos no revelan el contenido.",
+      "aftertaste": "Tres segundos necesitan dos libros.",
       "neighbors": [
         {
           "targetBookId": "b0077",
-          "difference": "El cajón nunca se abre."
+          "difference": "La vida visible coincide, pero la experiencia interior cambia."
         },
         {
           "targetBookId": "b0079",
-          "difference": "Solo el nuevo propietario lo abre."
+          "difference": "Cambian todas las interpretaciones, intenciones y combinaciones interiores."
         }
       ]
     },
@@ -1692,22 +1610,24 @@
       "rootId": "b0077",
       "kind": "nearby",
       "icon": "table",
-      "headline": "ABIERTO EN LA PRIMERA HORA",
-      "title": "El nuevo propietario",
+      "headline": "TODAS LAS VIDAS INTERIORES",
+      "title": "Todas las vidas interiores",
       "passage": [
-        "Tu familia deja el cajón cerrado durante cincuenta años.",
-        "Se vende la casa. En la primera hora, el nuevo propietario lo abre mientras busca un sitio para guardar pilas.",
-        "Este libro termina antes de decir qué hay dentro."
+        "Hay libros para cada pensamiento que podrías tener al oír la misma frase, cada recuerdo provocado por el mismo olor y cada miedo que nunca expresas.",
+        "En unos actúas por afecto; en otros, por costumbre, cálculo, vergüenza o cansancio. El gesto permanece idéntico.",
+        "Después vienen todas las combinaciones: lo que deseas, lo que sospechas, lo que atiendes, lo que ignoras y cada oración que formas sin pronunciarla.",
+        "Desde fuera, tu biografía no cambia.",
+        "Por dentro, la Biblioteca no termina."
       ],
-      "aftertaste": "La respuesta está en otro libro.",
+      "aftertaste": "Por dentro, la Biblioteca no termina.",
       "neighbors": [
         {
           "targetBookId": "b0077",
-          "difference": "Nadie abre jamás el cajón."
+          "difference": "La vida visible coincide, pero la experiencia interior cambia."
         },
         {
           "targetBookId": "b0078",
-          "difference": "Un miembro de la familia lo abre una vez en el año treinta y siete."
+          "difference": "Un pensamiento aparece durante tres segundos y no cambia nada."
         }
       ]
     },

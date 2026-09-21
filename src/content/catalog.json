@@ -36,23 +36,24 @@
       "rootId": "b0007",
       "kind": "root",
       "icon": "platform",
-      "headline": "TWO SECONDS LATE",
-      "hook": "you miss the 08:14 by two seconds, a stranger answers your complaint, and you live together for thirty-one years.",
-      "title": "The 08:14",
+      "headline": "THE EXACT TIME",
+      "hook": "you are born in one exact second, room and set of physical circumstances that demand a complete biography.",
+      "title": "The Exact Time",
       "passage": [
-        "The doors close as you reach them. You mutter, shit. A woman on the platform bench says, professional timing. The next train is nineteen minutes away.",
-        "Thirty-one years later you know her key in the lock, the bag on the floor, the fridge before hello. Neither of you agrees on the colour of the bench.",
-        "The book keeps the two seconds."
+        "The book records your arrival with absurd precision: the exact second, the length of the pregnancy, the temperature in the room, the light across every surface, the people present and the positions of their bodies.",
+        "It preserves how you were positioned, which part of you appeared first, how long you took to breathe and the volume of that first breath.",
+        "Change one degree, one gesture or a fraction of a second and another birth occurs.",
+        "And for that nearly identical birth, the Library needs another complete biography."
       ],
-      "aftertaste": "Her key turns before hello.",
+      "aftertaste": "Another birth. Another complete biography.",
       "neighbors": [
         {
           "targetBookId": "b0022",
-          "difference": "You arrive one second earlier and board the train."
+          "difference": "You are born four seconds later and nothing else changes."
         },
         {
           "targetBookId": "b0019",
-          "difference": "You miss the train, but the stranger never answers."
+          "difference": "The place, date and every other possible circumstance of birth change."
         }
       ]
     },
@@ -61,22 +62,20 @@
       "rootId": "b0007",
       "kind": "nearby",
       "icon": "doorway",
-      "headline": "ONE SECOND EARLIER",
-      "title": "One Second Earlier",
+      "headline": "FOUR SECONDS",
+      "title": "Four Seconds",
       "passage": [
-        "The doors are still open. You step onto the 08:14 and take a seat over the wheels.",
-        "The woman on the platform bench remains a stranger. Years pass: work, rent, another address, another person beside you at breakfast.",
-        "At the station, you sometimes stand near the same bench without knowing why it matters in another volume."
+        "The adjacent book is identical to yours except for four seconds. You are born four seconds later. No one notices. The doctor does not change position. Your mother breathes the same way. Outside, the same cars move through the same rain. Throughout your life, everything happens in exactly the same way, but every age begins four seconds later. Even your death keeps the same date and place. The Library needs another complete volume to preserve that useless delay."
       ],
-      "aftertaste": "The doors stay open for you.",
+      "aftertaste": "Four seconds need another volume.",
       "neighbors": [
         {
           "targetBookId": "b0007",
-          "difference": "You arrive one second later, miss the train, and meet the stranger."
+          "difference": "The birth occurs in your exact circumstances."
         },
         {
           "targetBookId": "b0019",
-          "difference": "You miss the train too, but no conversation begins."
+          "difference": "The place, date and every other possible circumstance of birth change."
         }
       ]
     },
@@ -85,22 +84,20 @@
       "rootId": "b0007",
       "kind": "nearby",
       "icon": "platform",
-      "headline": "SAME PLATFORM, NO REPLY",
-      "title": "No Reply",
+      "headline": "EVERY ROOM",
+      "title": "Every Room",
       "passage": [
-        "The doors close. You mutter, shit. The woman on the bench hears you and keeps reading.",
-        "You both wait nineteen minutes. You sit six feet apart. The next train arrives and you board different carriages.",
-        "Thirty-one years later the book still contains both of you. It contains no shared key."
+        "There are books in which you are born in every hospital, house, vehicle, shelter and open space where your birth could have taken place. Others change the country, the weather or the people present. Then come every date, every length of pregnancy and every body you could have received. Each birth demands a complete life afterwards. There is no single shelf for your beginnings. There are entire corridors, and in each book you are born only once."
       ],
-      "aftertaste": "The bench holds two strangers.",
+      "aftertaste": "In each book, you are born only once.",
       "neighbors": [
         {
           "targetBookId": "b0007",
-          "difference": "The stranger answers your complaint."
+          "difference": "The birth occurs in your exact circumstances."
         },
         {
           "targetBookId": "b0022",
-          "difference": "You arrive in time and never wait beside her."
+          "difference": "You are born four seconds later and nothing else changes."
         }
       ]
     },
@@ -109,23 +106,21 @@
       "rootId": "b0003",
       "kind": "root",
       "icon": "pitch",
-      "headline": "FORTY-SEVEN SECONDS",
-      "hook": "your entire professional football career lasts forty-seven seconds, includes one ordinary touch, and is still a professional career.",
-      "title": "Forty-Seven Seconds",
+      "headline": "THE HOUSE YOU REMEMBER",
+      "hook": "every bedroom, school, game and fear from your childhood is recorded so that you can be written without omission.",
+      "title": "The House You Remember",
       "passage": [
-        "At twenty-seven your number goes up. You run on, receive one pass and return it five yards inside.",
-        "Forty-seven seconds after you enter, the whistle goes. You never play professionally again.",
-        "On Monday you are back on the warehouse rota. Years later the shirt is folded under a box of extension leads."
+        "One volume contains your exact childhood: every bedroom, every journey to school, every abandoned game, every fear you never shared. It preserves the repeated mornings that now blur together and the words adults spoke that you did not understand then. It also preserves everything that came afterwards. The person reading this sentence began there, among days that seemed interchangeable and that the Library had to record one by one in order to write you without leaving anything out."
       ],
-      "aftertaste": "Forty-seven seconds still count.",
+      "aftertaste": "The Library recorded every interchangeable day.",
       "neighbors": [
         {
           "targetBookId": "b0016",
-          "difference": "Your professional career lasts forty-six seconds."
+          "difference": "Another childhood converges on this same afternoon."
         },
         {
           "targetBookId": "b0018",
-          "difference": "Your professional career lasts forty-eight seconds."
+          "difference": "A different desk leads to an unrecognisable person."
         }
       ]
     },
@@ -134,22 +129,20 @@
       "rootId": "b0003",
       "kind": "nearby",
       "icon": "pitch",
-      "headline": "FORTY-SIX SECONDS",
-      "title": "Forty-Six Seconds",
+      "headline": "ANOTHER CHILDHOOD, THIS SAME AFTERNOON",
+      "title": "Another Childhood, This Same Afternoon",
       "passage": [
-        "Your number goes up. You run on. The ball starts toward you.",
-        "The whistle sounds before it arrives. Forty-six seconds. No legal touch.",
-        "On Monday you are back on the same warehouse rota. The same shirt waits in the same box."
+        "In another book, you grow up in another house, learn in other classrooms and call people friends whom you never met here. Your family follows different routines. You fear other things. Yet decades later, you arrive at this same afternoon with the same job, the same clothes and the same sentence about to be spoken. Two incompatible childhoods have produced this almost identical minute. The books do not meet here. They remain separate until their final pages."
       ],
-      "aftertaste": "One second removes the touch.",
+      "aftertaste": "The two childhoods do not meet.",
       "neighbors": [
         {
           "targetBookId": "b0003",
-          "difference": "The whistle comes one second later and your touch counts."
+          "difference": "The childhood matches the one you remember exactly."
         },
         {
           "targetBookId": "b0018",
-          "difference": "The whistle comes two seconds later than here."
+          "difference": "A different desk leads to an unrecognisable person."
         }
       ]
     },
@@ -158,22 +151,20 @@
       "rootId": "b0003",
       "kind": "nearby",
       "icon": "spotlight",
-      "headline": "FORTY-EIGHT SECONDS",
-      "title": "Forty-Eight Seconds",
+      "headline": "THE NEXT DESK",
+      "title": "The Next Desk",
       "passage": [
-        "Your number goes up. You run on, return one pass five yards inside, and keep moving.",
-        "The whistle goes forty-eight seconds after you enter. Nothing else happens in the extra second.",
-        "On Monday you are back on the warehouse rota. The shirt is still folded under extension leads."
+        "Two books match throughout your early years. The same family, the same bedroom, the same streets. In one, you are assigned the desk beside the window; in the other, the desk in the next row. Nothing important happens that day. Afterwards, your friendships, habits, studies, the cities where you will live and the people who will recognise your voice slowly change. Before reaching the halfway point, the second book describes someone you would not know how to identify as yourself."
       ],
-      "aftertaste": "The extra second contains nothing.",
+      "aftertaste": "The second book no longer resembles you.",
       "neighbors": [
         {
           "targetBookId": "b0003",
-          "difference": "Your career is one second shorter."
+          "difference": "The childhood matches the one you remember exactly."
         },
         {
           "targetBookId": "b0016",
-          "difference": "Your career is two seconds shorter and contains no legal touch."
+          "difference": "Another childhood converges on this same afternoon."
         }
       ]
     },
@@ -182,23 +173,21 @@
       "rootId": "b0031",
       "kind": "root",
       "icon": "record",
-      "headline": "FIVE MINUTES LATER",
-      "hook": "you eat Tuesday's dinner five minutes later than in the adjacent volume, and nothing in the rest of your life changes.",
-      "title": "The Same Dinner",
+      "headline": "THE FIRST LANGUAGE",
+      "hook": "every word you say belongs to one of the languages you could have learned.",
+      "title": "The First Language",
       "passage": [
-        "The oven clock reads 19:12 when you sit down. Pasta, grated cheese, water in the same glass.",
-        "Wednesday is unchanged. So are the job, the boiler service, the car you replace six years later and the people you call on Sundays.",
-        "On that Tuesday, dinner was five minutes later."
+        "There is a book containing every word you have said in the language in which you learned to ask for water, refuse, joke and call the people in your family. It records your mistakes before your correct sentences. It preserves expressions you repeated for years and a final sentence you do not yet know. That language does not occupy only your conversations: it determines which sounds you distinguish, what names you give things and which words will fail you when you need them most."
       ],
-      "aftertaste": "At 19:12, you rinse the same plate.",
+      "aftertaste": "Your final sentence also belongs to that language.",
       "neighbors": [
         {
           "targetBookId": "b0032",
-          "difference": "Dinner is three minutes later instead of five."
+          "difference": "The same declaration is spoken in another language."
         },
         {
           "targetBookId": "b0033",
-          "difference": "Dinner is at the original time, but you use a different fork."
+          "difference": "All the languages you could understand are combined."
         }
       ]
     },
@@ -207,22 +196,20 @@
       "rootId": "b0031",
       "kind": "nearby",
       "icon": "record",
-      "headline": "THREE MINUTES LATER",
-      "title": "Three Minutes Later",
+      "headline": "THE SAME SENTENCE",
+      "title": "The Same Sentence",
       "passage": [
-        "The oven clock reads 19:10 when you sit down. Same pasta, same grated cheese, same glass.",
-        "Wednesday is unchanged. So are the years after it.",
-        "This volume differs by three minutes."
+        "There are books in which you make the same declaration in every language you could have learned. The childhood needed to master it changes, along with the country, the school, the earlier conversations and the person able to understand you. Sometimes the sentence keeps its effect. Sometimes it becomes awkward, formal, ambiguous or impossible to translate without adding something. For you to say those few words differently, the Library replaces thousands of pages of your life."
       ],
-      "aftertaste": "At 19:10, you rinse the same plate.",
+      "aftertaste": "A few words replace thousands of pages.",
       "neighbors": [
         {
           "targetBookId": "b0031",
-          "difference": "Dinner is five minutes later instead."
+          "difference": "The life unfolds in your first language."
         },
         {
           "targetBookId": "b0033",
-          "difference": "Dinner is at the original time, with a different fork."
+          "difference": "All the languages you could understand are combined."
         }
       ]
     },
@@ -231,22 +218,20 @@
       "rootId": "b0031",
       "kind": "nearby",
       "icon": "record",
-      "headline": "A DIFFERENT FORK",
-      "title": "The Other Fork",
+      "headline": "EVERYTHING YOU COULD UNDERSTAND",
+      "title": "Everything You Could Understand",
       "passage": [
-        "You sit down at the original time. The fork in your hand is the other one from the drawer, with the flatter handle.",
-        "The dinner, Wednesday and every later year are unchanged.",
-        "After washing, the fork goes back into the drawer."
+        "One shelf contains the lives in which you speak one language; the next, two; then come all the possible combinations. In some volumes, you argue with your family in one language and work in another. In others, you think, count, insult, love and die using different words. Every language combines with every country, education, profession and relationship. There is no translation of your life. There are complete biographies for every way you could name it."
       ],
-      "aftertaste": "The flatter handle dries beside the sink.",
+      "aftertaste": "There is no translation of your life.",
       "neighbors": [
         {
           "targetBookId": "b0031",
-          "difference": "You use the usual fork, but eat five minutes later."
+          "difference": "The life unfolds in your first language."
         },
         {
           "targetBookId": "b0032",
-          "difference": "You use the usual fork, but eat three minutes later."
+          "difference": "The same declaration is spoken in another language."
         }
       ]
     },
@@ -255,23 +240,21 @@
       "rootId": "b0006",
       "kind": "root",
       "icon": "cup",
-      "headline": "ONE CENTIMETRE LEFT",
-      "hook": "tomorrow at breakfast you set the cup one centimetre farther left, and nothing else in your life changes.",
-      "title": "An Ordinary Thursday",
+      "headline": "YOUR WORKING DAY",
+      "hook": "every working day, job and possible sequence of jobs occupies a complete life.",
+      "title": "Your Working Day",
       "passage": [
-        "You wake at 07:42, make tea and set the cup one centimetre farther left to clear the toast plate.",
-        "The delivery arrives at eleven. You answer a message at four. The boiler engineer confirms Tuesday.",
-        "Years pass normally. The centimetre never becomes important."
+        "This book contains every day you spend working: the first task you learned, the wasted hours, the mistakes without consequence, the journeys, the breaks and the last time you will close a door when you finish. It also records the jobs that lasted briefly and those that determined decades. Your profession fits into a short answer. The life needed to support that answer fills thousands of pages with schedules, tired bodies, repeated conversations and mornings when you began again."
       ],
-      "aftertaste": "The cup was one centimetre left.",
+      "aftertaste": "Your profession occupies thousands of pages.",
       "neighbors": [
         {
           "targetBookId": "b0002",
-          "difference": "The cup moves one millimetre left instead."
+          "difference": "Completely different careers converge at eight fifteen."
         },
         {
           "targetBookId": "b0009",
-          "difference": "The cup stays exactly where it was."
+          "difference": "Every job and the order in which you do them change."
         }
       ]
     },
@@ -280,22 +263,20 @@
       "rootId": "b0006",
       "kind": "nearby",
       "icon": "cup",
-      "headline": "ONE MILLIMETRE LEFT",
-      "title": "One Millimetre Left",
+      "headline": "AT EIGHT FIFTEEN",
+      "title": "At Eight Fifteen",
       "passage": [
-        "You wake at 07:42, make tea and set the cup one millimetre farther left.",
-        "The delivery, the message, the boiler call and every later year remain the same.",
-        "The Library keeps the millimetre."
+        "In one book, you work in a hospital your whole life. In another, you change occupations twenty times. In another, you spend years unemployed; in another, you work nights in a factory, on a ship or at a job that does not yet have a name. All those volumes contain an evening when you arrive home at eight fifteen, put down your keys and drink a glass of water. The careers are nothing alike. That minute is."
       ],
-      "aftertaste": "One millimetre has its own volume.",
+      "aftertaste": "At eight fifteen, the careers converge.",
       "neighbors": [
         {
           "targetBookId": "b0006",
-          "difference": "The cup moves one centimetre left."
+          "difference": "The book preserves the exact sequence of your working days."
         },
         {
           "targetBookId": "b0009",
-          "difference": "The cup does not move."
+          "difference": "Every job and the order in which you do them change."
         }
       ]
     },
@@ -304,22 +285,20 @@
       "rootId": "b0006",
       "kind": "nearby",
       "icon": "cup",
-      "headline": "NO MOVEMENT",
-      "title": "Exactly Where It Was",
+      "headline": "ALL YOUR JOBS",
+      "title": "All Your Jobs",
       "passage": [
-        "You wake at 07:42, make tea and set the cup exactly where it stood before.",
-        "The delivery arrives at eleven. The message waits until four. Tuesday remains fine for the boiler.",
-        "This is the volume where the cup does not move."
+        "There is a biography for every job you could do and another for every possible order of jobs: farm before office, laboratory after warehouse, retirement followed by a return, a single profession for sixty years. Some tasks change your body. Others change only how you spend eight hours a day. The Library does not separate vocations from forgettable jobs. Every working day counts, and every sequence requires your entire life to be written again."
       ],
-      "aftertaste": "Exactly where it was.",
+      "aftertaste": "Each sequence writes your life again.",
       "neighbors": [
         {
           "targetBookId": "b0006",
-          "difference": "The cup moves one centimetre left."
+          "difference": "The book preserves the exact sequence of your working days."
         },
         {
           "targetBookId": "b0002",
-          "difference": "The cup moves one millimetre left."
+          "difference": "Completely different careers converge at eight fifteen."
         }
       ]
     },
@@ -328,23 +307,21 @@
       "rootId": "b0005",
       "kind": "root",
       "icon": "speech",
-      "headline": "MINUS ONE FORK",
-      "hook": "you own every object you own now except one ordinary fork, and nothing else in your life is different.",
-      "title": "The Fork You Don't Own",
+      "headline": "WHERE YOU SLEEP",
+      "hook": "every room, home, city and possible sequence of moves demands another biography.",
+      "title": "Where You Sleep",
       "passage": [
-        "The cutlery drawer contains one fewer fork. There is no gap where it should be and no memory of buying it.",
-        "You eat the same meals with the other forks. Nobody asks about the missing one.",
-        "The jobs, rooms, people and years remain unchanged."
+        "There is a book for the life in which you sleep tonight in your exact room. It records the distance between the bed and the wall, what you see from the window and the objects you can reach without getting up. That room appears during one stretch of your biography and then disappears. Yet sleeping there changes the complete list of places you have called home. The book preserves them all, even those you could no longer walk through from memory."
       ],
-      "aftertaste": "One fork less. A whole volume.",
+      "aftertaste": "The room is also part of the biography.",
       "neighbors": [
         {
           "targetBookId": "b0020",
-          "difference": "The missing object is a teaspoon instead."
+          "difference": "Only the room for one night changes."
         },
         {
           "targetBookId": "b0034",
-          "difference": "The fork exists, but is always kept in a different drawer."
+          "difference": "All possible homes and sequences of addresses change."
         }
       ]
     },
@@ -353,22 +330,20 @@
       "rootId": "b0005",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "MINUS ONE TEASPOON",
-      "title": "The Teaspoon You Don't Own",
+      "headline": "THE NEXT ROOM",
+      "title": "The Next Room",
       "passage": [
-        "The cutlery drawer contains every object you know except one teaspoon.",
-        "Coffee tastes the same. Desserts are eaten with the others. No one notices an absence.",
-        "Everything else in the life matches the adjacent volume."
+        "The volume beside it changes only the room where you sleep for one night. It is in the same building, beneath the same roof, a few metres from yours. You sleep for the same hours and wake remembering nothing different. The rest of your life matches word for word. Even so, one biography says your body spent that night on one side of the corridor and the other says it spent it on the other. They cannot occupy the same book."
       ],
-      "aftertaste": "The teaspoon is simply not there.",
+      "aftertaste": "One night on the other side of the corridor.",
       "neighbors": [
         {
           "targetBookId": "b0005",
-          "difference": "The absent object is a fork."
+          "difference": "You sleep in the exact sequence of rooms you know."
         },
         {
           "targetBookId": "b0034",
-          "difference": "Nothing is absent, but one fork lives in another drawer."
+          "difference": "Every possible home and sequence of addresses changes."
         }
       ]
     },
@@ -377,22 +352,20 @@
       "rootId": "b0005",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "SAME FORK, OTHER DRAWER",
-      "title": "The Other Drawer",
+      "headline": "ALL YOUR ADDRESSES",
+      "title": "All Your Addresses",
       "passage": [
-        "You own the fork. It has always been in the drawer beneath the tea towels instead of with the cutlery.",
-        "You use it when needed and put it back there without thought.",
-        "Nothing else in the book differs."
+        "There are books for every flat, house, room, city and view you could have. Then come the sequences: three moves, none, forty; a childhood in one place and old age in another; decades facing the same window. Changing an address alters the nearby shops, the stairs you use and the faces you meet when you leave. The Library contains every complete domestic itinerary, including the one in which you never inhabit any of the places you now remember."
       ],
-      "aftertaste": "The fork returns to the other drawer.",
+      "aftertaste": "Every address contains a complete life.",
       "neighbors": [
         {
           "targetBookId": "b0005",
-          "difference": "That fork does not exist."
+          "difference": "You sleep in the exact sequence of rooms you know."
         },
         {
           "targetBookId": "b0020",
-          "difference": "A teaspoon does not exist instead."
+          "difference": "Only the room for one night changes."
         }
       ]
     },
@@ -401,23 +374,21 @@
       "rootId": "b0008",
       "kind": "root",
       "icon": "letter",
-      "headline": "ONE LETTER DIFFERENT",
-      "hook": "your handwriting is exactly yours, except you have always formed the lowercase g differently.",
-      "title": "Your Other Handwriting",
+      "headline": "THOSE WHO APPEAR",
+      "hook": "all the children you could have appear, along with every complete person who never begins here.",
+      "title": "Those Who Appear",
       "passage": [
-        "The slant is yours. The pressure is yours. So are the hurried capitals and the way the line rises near the margin.",
-        "Only the lowercase g is different: a closed loop where your other volume uses an open one.",
-        "School notes, shopping lists and signatures around it remain the same."
+        "This volume records whether you have children, how many, with whom and in what order they arrive. It describes their bodies, temperaments, illnesses, words and lives after yours ends. If you have none, it also records that absence throughout all your years. What can be expressed on one page as a number determines hundreds of people known, rooms occupied, meals prepared and dates remembered. The book does not treat that number as a detail."
       ],
-      "aftertaste": "Every g belongs to this volume.",
+      "aftertaste": "One number changes all those pages.",
       "neighbors": [
         {
           "targetBookId": "b0023",
-          "difference": "The different letter is t instead of g."
+          "difference": "Conception occurs an instant earlier and another person appears."
         },
         {
           "targetBookId": "b0035",
-          "difference": "Every letter is the same, but you hold the pen two millimetres closer to the nib."
+          "difference": "Every possible child appears in every order and number."
         }
       ]
     },
@@ -426,22 +397,20 @@
       "rootId": "b0008",
       "kind": "nearby",
       "icon": "letter",
-      "headline": "THE T IS DIFFERENT",
-      "title": "Your Other T",
+      "headline": "AN INSTANT EARLIER",
+      "title": "An Instant Earlier",
       "passage": [
-        "Your handwriting matches the adjacent volume in every letter except t.",
-        "Here the crossbar sits slightly higher. Nobody comments. You never compare the pages.",
-        "Every note you have ever written contains the difference when a t appears."
+        "In the adjacent book, conception occurs an instant earlier. Everything seems the same: the place, the two people, the day. Yet another body is born. The person who appears there will have a complete voice, face and life. In your book, they do not die or disappear: they simply never begin. Around both volumes are countless variations of that instant, and each introduces someone different who will live through pages that do not exist here."
       ],
-      "aftertaste": "A higher crossbar has its own shelf.",
+      "aftertaste": "Another person begins in that instant.",
       "neighbors": [
         {
           "targetBookId": "b0008",
-          "difference": "The different letter is g."
+          "difference": "The exact configuration of children in this life appears."
         },
         {
           "targetBookId": "b0035",
-          "difference": "The letters match, but your pen grip is shifted."
+          "difference": "Every possible child appears in every order and number."
         }
       ]
     },
@@ -450,22 +419,20 @@
       "rootId": "b0008",
       "kind": "nearby",
       "icon": "letter",
-      "headline": "THE SAME WORDS, DIFFERENT GRIP",
-      "title": "Two Millimetres Lower",
+      "headline": "THE ABSENT POPULATION",
+      "title": "The Absent Population",
       "passage": [
-        "Every word looks exactly as it does in the adjacent volume.",
-        "The difference is your hand. You have always held the pen two millimetres closer to the nib.",
-        "No written page reveals it."
+        "One section of the Library contains all the children you could have with every person, on every date, in every order and number. Some share almost everything; others could not recognise one another. Their lives combine with their friendships, partners, jobs and descendants. None is a draft of another. Each occupies a biography where they are as real and ordinary as you are in this one. Most of those complete people will not appear once in your exact book."
       ],
-      "aftertaste": "The text is identical. The hand is not.",
+      "aftertaste": "Most of them do not appear in your book.",
       "neighbors": [
         {
           "targetBookId": "b0008",
-          "difference": "Your pen grip matches, but the letter g is different."
+          "difference": "The exact configuration of children in this life appears."
         },
         {
           "targetBookId": "b0023",
-          "difference": "Your pen grip matches, but the letter t is different."
+          "difference": "Conception occurs an instant earlier and another person appears."
         }
       ]
     },
@@ -474,23 +441,21 @@
       "rootId": "b0010",
       "kind": "root",
       "icon": "screen",
-      "headline": "THIS SENTENCE",
-      "hook": "this book describes you opening Babel Life and reading this sentence; the adjacent book says you close it one line earlier.",
-      "title": "This One",
+      "headline": "BEFORE YOU",
+      "hook": "the possible lives of your parents change the conditions of yours again and again.",
+      "title": "Before You",
       "passage": [
-        "The book says you open Babel Life, choose this volume and read the sentence about reading it.",
-        "It says you reach this paragraph. Nothing in the text makes that a prediction. It is simply a writable account already on the shelf.",
-        "The next volume stops one line sooner."
+        "Your book begins before you can remember. It contains the decisions, jobs, illnesses and movements of your parents that made your exact birth possible. It records who they were before receiving that name and how they remained other people while you grew up. Every change in their lives alters the conditions of yours: a city, a schedule, a conversation, the day they met. To describe you completely, the book needs pages in which you do not yet exist."
       ],
-      "aftertaste": "This one includes this line.",
+      "aftertaste": "Your book needs pages from before you.",
       "neighbors": [
         {
           "targetBookId": "b0025",
-          "difference": "The account ends because you close the book one line earlier."
+          "difference": "The same parents live differently."
         },
         {
           "targetBookId": "b0026",
-          "difference": "The account says you read the same sentence twice."
+          "difference": "One or both of the people who are your parents change."
         }
       ]
     },
@@ -499,22 +464,20 @@
       "rootId": "b0010",
       "kind": "nearby",
       "icon": "screen",
-      "headline": "ONE LINE EARLIER",
-      "title": "Closed One Line Earlier",
+      "headline": "THE SAME PARENTS",
+      "title": "The Same Parents",
       "passage": [
-        "The book says you open Babel Life and choose this volume.",
-        "It says you read the first paragraph and close it before the sentence that follows.",
-        "That sentence still exists in the adjacent volume."
+        "There are books in which your parents are the same people but live differently. They keep their bodies and names; they change jobs, homes, beliefs, friendships or countries. Sometimes you are still born on the same date. Sometimes you arrive years later. In certain volumes, you reach a life almost identical to this one by completely different family paths. The Library keeps each version of them separate because none produces exactly the same pages of your life."
       ],
-      "aftertaste": "This account stops before the next line.",
+      "aftertaste": "The same parents. Different pages of your life.",
       "neighbors": [
         {
           "targetBookId": "b0010",
-          "difference": "You continue one line farther."
+          "difference": "The book preserves the exact lives of your parents before you."
         },
         {
           "targetBookId": "b0026",
-          "difference": "You continue and read one sentence twice."
+          "difference": "One or both of the people who are your parents change."
         }
       ]
     },
@@ -523,22 +486,20 @@
       "rootId": "b0010",
       "kind": "nearby",
       "icon": "book",
-      "headline": "THE SAME SENTENCE TWICE",
-      "title": "Read Twice",
+      "headline": "OTHER NAMES BEFORE YOURS",
+      "title": "Other Names Before Yours",
       "passage": [
-        "The book says you open Babel Life and reach this sentence.",
-        "Then it says you read the same sentence again.",
-        "Everything around the repetition is identical."
+        "Farther away are the books in which one of your parents changes, then both. People you do not know today occupy the first pages of your life. Each new pair produces different childhoods, bodies and families; each sends out new combinations. Your name may remain or disappear. Your date may recur while everything else changes. The corridors devoted to your possible parents do not end at your birth. From every pair, your whole biography unfolds again."
       ],
-      "aftertaste": "The second reading has its own volume.",
+      "aftertaste": "From every pair, your biography unfolds again.",
       "neighbors": [
         {
           "targetBookId": "b0010",
-          "difference": "You read the sentence once."
+          "difference": "The book preserves the exact lives of your parents before you."
         },
         {
           "targetBookId": "b0025",
-          "difference": "You close the book before reaching it."
+          "difference": "The same parents live differently."
         }
       ]
     },
@@ -547,23 +508,21 @@
       "rootId": "b0011",
       "kind": "root",
       "icon": "paths",
-      "headline": "THE SAME TEMPER, 1340",
-      "hook": "you are born in 1340 with the same laugh, the same impatience and completely different things to complain about.",
-      "title": "Your Signature in 1340",
+      "headline": "WHAT YOU KEEP",
+      "hook": "the same events produce every possible combination of memories kept, distorted and lost.",
+      "title": "What You Keep",
       "passage": [
-        "You are thirty-eight in 1378. You argue about a boundary stone, wet firewood and a neighbour who borrows tools without returning them.",
-        "Your laugh starts the same way it does here. You lose patience at the same speed.",
-        "There are no cars, phones or boilers. The temperament remains."
+        "There is a book containing the exact events of your life and the part you still remember. It distinguishes between them. It records afternoons that happened and that you can no longer recover, faces whose names you lost and sentences you believe you remember incorrectly. It also keeps insignificant memories that survived for no visible reason. Your past occupies the book once as event and again as memory. The two versions begin to separate long before you notice the difference."
       ],
-      "aftertaste": "The complaint is different. The impatience is not.",
+      "aftertaste": "The past happened once and you remember it another way.",
       "neighbors": [
         {
           "targetBookId": "b0027",
-          "difference": "You are born forty metres away in the neighbouring household."
+          "difference": "Only the memory of one childhood afternoon remains."
         },
         {
           "targetBookId": "b0036",
-          "difference": "You are born in 1341 instead of 1340."
+          "difference": "Every combination of memory and forgetting changes."
         }
       ]
     },
@@ -572,22 +531,20 @@
       "rootId": "b0011",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THE NEXT HOUSEHOLD",
-      "title": "Forty Metres Away",
+      "headline": "THE REMAINING AFTERNOON",
+      "title": "The Remaining Afternoon",
       "passage": [
-        "You are born in 1340 forty metres from the house in the adjacent volume.",
-        "The same laugh appears over different bread. The same impatience is spent on a different boundary stone.",
-        "Your century is unchanged. Only the household moves."
+        "In one volume, you reach old age remembering a single afternoon from your childhood. It was not decisive: a table, a drink, light on a wall. Everything else happened just as it did in your life, but it is no longer available to you. Even so, you continue using skills whose learning you have forgotten and recognising places without knowing why. The book contains the complete decades. You, inside it, retain only a few minutes."
       ],
-      "aftertaste": "Forty metres rewrites the address, not the temper.",
+      "aftertaste": "The book keeps decades. You keep a few minutes.",
       "neighbors": [
         {
           "targetBookId": "b0011",
-          "difference": "You are born in the original household."
+          "difference": "The events and memories match those of this life."
         },
         {
           "targetBookId": "b0036",
-          "difference": "You are born one year later."
+          "difference": "Every combination of memory and forgetting changes."
         }
       ]
     },
@@ -596,22 +553,20 @@
       "rootId": "b0011",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "ONE YEAR LATER",
-      "title": "1341",
+      "headline": "EVERY WAY TO FORGET",
+      "title": "Every Way to Forget",
       "passage": [
-        "You are born in the same place with the same laugh and the same quick irritation, one year later.",
-        "The wall dispute comes later. The rain does not.",
-        "The book needs no reason for choosing 1341."
+        "There are books with the same events and different memories. In one, you remember every room; in another, none. A face remains, a date shifts, a conversation loses a word. Then come all the combinations: the exact, the incomplete, the distorted and the lost. Nothing supernatural occurs. Time, attention, age and the body do their ordinary work. For every possible way of remembering the same life, the Library needs to write another complete book."
       ],
-      "aftertaste": "One year has its own life.",
+      "aftertaste": "The same life needs another memory.",
       "neighbors": [
         {
           "targetBookId": "b0011",
-          "difference": "You are born in 1340."
+          "difference": "The events and memories match those of this life."
         },
         {
           "targetBookId": "b0027",
-          "difference": "You are born in 1340, forty metres away."
+          "difference": "Only the memory of one childhood afternoon remains."
         }
       ]
     },
@@ -620,23 +575,21 @@
       "rootId": "b0012",
       "kind": "root",
       "icon": "paths",
-      "headline": "ONE THURSDAY OF BREATHING",
-      "hook": "this book records every breath you take on one Thursday in November, and nothing else.",
-      "title": "The Breathing Book",
+      "headline": "INVENTORY",
+      "hook": "every object you could own, even for a few minutes, demands another complete life.",
+      "title": "Inventory",
       "passage": [
-        "06:41:12 — inhale. 06:41:15 — exhale. The entries continue through breakfast, work, stairs, silence and sleep.",
-        "No conversation is recorded. No thought is explained. The book gives only breathing and time.",
-        "At 23:58:47 there is an exhale. Then the volume ends."
+        "Your biography includes every object that ever belonged to you: keys, shoes, phones, furniture, photographs, receipts and books. It records how long each stayed with you, where you left it and whether it still exists. Some objects occupy decades; others, an afternoon. Almost none deserves a scene. Together they form an unrepeatable sequence of things touched, kept, lent, broken and discarded. To copy your life exactly, the Library cannot omit even the object you forgot that same day."
       ],
-      "aftertaste": "A whole book, and only breathing.",
+      "aftertaste": "The Library omits no object.",
       "neighbors": [
         {
           "targetBookId": "b0028",
-          "difference": "The fourth breath after waking lasts 0.3 seconds longer."
+          "difference": "A blue paper clip belongs to you for seventeen minutes."
         },
         {
           "targetBookId": "b0037",
-          "difference": "The book records the following Thursday instead."
+          "difference": "Every object and every sequence of acquisition and loss changes."
         }
       ]
     },
@@ -645,22 +598,20 @@
       "rootId": "b0012",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "ONE BREATH LONGER",
-      "title": "Point Three Seconds",
+      "headline": "THE BLUE PAPER CLIP",
+      "title": "The Blue Paper Clip",
       "passage": [
-        "The breathing log matches the adjacent volume until the fourth breath after waking.",
-        "Here the inhale lasts 0.3 seconds longer.",
-        "Every later timestamp returns to the same rhythm."
+        "The adjacent book differs by one blue paper clip. You find it on a table, put it in a pocket and throw it away seventeen minutes later. It serves no purpose. No one sees it. It changes no decision, conversation or memory. Every other page matches your exact life. Yet for seventeen minutes you own something that was never yours here. That insignificant difference requires everything from birth to death to be repeated."
       ],
-      "aftertaste": "Three tenths of a second fill another volume.",
+      "aftertaste": "Seventeen minutes demand a complete biography.",
       "neighbors": [
         {
           "targetBookId": "b0012",
-          "difference": "The fourth breath has its original duration."
+          "difference": "You own the exact sequence of objects from this life."
         },
         {
           "targetBookId": "b0037",
-          "difference": "The entire log belongs to the following Thursday."
+          "difference": "Every object and every sequence of acquisition and loss changes."
         }
       ]
     },
@@ -669,22 +620,20 @@
       "rootId": "b0012",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "SEVEN DAYS LATER",
-      "title": "The Following Thursday",
+      "headline": "ALL YOUR THINGS",
+      "title": "All Your Things",
       "passage": [
-        "This book also contains only breaths and timestamps.",
-        "They belong to the Thursday one week later. Fourteen intervals differ from the first book.",
-        "You could not identify them without placing the volumes side by side."
+        "One shelf changes one object at a time. The next shelves change two, a hundred, all of them. There are lives with crowded rooms and lives in which almost nothing bears your name. Every car combines with every key; every photograph, with every home; every garment, with every day when you could wear it. Then every sequence of acquisition and loss is arranged. The Library contains inventories that cannot be finished because each inventory is embedded in a complete life."
       ],
-      "aftertaste": "Fourteen differences, none remembered.",
+      "aftertaste": "Every inventory is inside a life.",
       "neighbors": [
         {
           "targetBookId": "b0012",
-          "difference": "The breathing log belongs to the previous Thursday."
+          "difference": "You own the exact sequence of objects from this life."
         },
         {
           "targetBookId": "b0028",
-          "difference": "The previous Thursday differs by only 0.3 seconds in one breath."
+          "difference": "A blue paper clip belongs to you for seventeen minutes."
         }
       ]
     },
@@ -693,23 +642,21 @@
       "rootId": "b0038",
       "kind": "root",
       "icon": "paths",
-      "headline": "YOU ARE NOT IN THIS BOOK",
-      "hook": "the two people who are your parents elsewhere never become a couple, live complete lives, and you do not exist.",
-      "title": "Without You",
+      "headline": "WHERE YOU WENT",
+      "hook": "every possible step, journey and encounter is placed precisely within your life.",
+      "title": "Where You Went",
       "passage": [
-        "One moves north at twenty-six. The other stays. Each builds a household with someone else.",
-        "There is no empty chair, missing photograph or unexplained grief. Nobody in the book is waiting for you.",
-        "The life is complete without your absence being noticed."
+        "There is a book that preserves all your movements through space. Every pavement, staircase, road, corridor, flight and doorway appears in the exact order in which you travelled them. It includes the journeys you repeated until you stopped looking at them and the last step you took before reading this sentence. Your life does not merely connect important places. It is made of millions of intermediate positions you never named and that the book must specify in order to place you where you actually were."
       ],
-      "aftertaste": "No one in the book misses you.",
+      "aftertaste": "The book specifies where you were.",
       "neighbors": [
         {
           "targetBookId": "b0039",
-          "difference": "Your parents meet once, speak for two minutes, and never meet again."
+          "difference": "A single step lands twenty centimetres to the left."
         },
         {
           "targetBookId": "b0040",
-          "difference": "Your parents become friends, but never partners."
+          "difference": "Every route and the people encountered along it change."
         }
       ]
     },
@@ -718,22 +665,20 @@
       "rootId": "b0038",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THEY MEET ONCE",
-      "title": "Two Minutes",
+      "headline": "TWENTY CENTIMETRES",
+      "title": "Twenty Centimetres",
       "passage": [
-        "The two people who are your parents elsewhere meet once in a queue.",
-        "They speak for two minutes about the delay. Then they leave in opposite directions.",
-        "Both lives continue. You are still not in the book."
+        "The next volume places one of your steps twenty centimetres to the left. You do not stumble. You meet no one. Your destination, your arrival time and the rest of your life remain the same. Only the sole of your foot touches another piece of ground for less than a second. The change vanishes immediately, but it cannot be erased from the record. The Library rewrites every page for a life that strayed only the width of a hand."
       ],
-      "aftertaste": "Two minutes are not enough for you to exist.",
+      "aftertaste": "The width of a hand rewrites every page.",
       "neighbors": [
         {
           "targetBookId": "b0038",
-          "difference": "They never meet at all."
+          "difference": "Every movement follows the exact route of this life."
         },
         {
           "targetBookId": "b0040",
-          "difference": "They meet and remain friends."
+          "difference": "Every route and the people encountered along it change."
         }
       ]
     },
@@ -742,22 +687,20 @@
       "rootId": "b0038",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THEY STAY FRIENDS",
-      "title": "Friends Only",
+      "headline": "EVERY CROSSING",
+      "title": "Every Crossing",
       "passage": [
-        "They meet, like each other and remain friends for forty years.",
-        "There are birthdays, messages, occasional dinners and no shared household.",
-        "You never appear. The friendship has no missing person inside it."
+        "There are books for every route between the places in your life and for every possible order of places. Then each route combines with the people who could travel it at the same time. One corner contains encounters that last for decades and brushes neither person remembers. A corridor may be crossed empty or with anyone who could have reached it. Every step opens not one alternative but corridors of biographies in which the path, the time and every body present change together."
       ],
-      "aftertaste": "They know each other. You still do not exist.",
+      "aftertaste": "Every step opens entire corridors.",
       "neighbors": [
         {
           "targetBookId": "b0038",
-          "difference": "They never meet."
+          "difference": "Every movement follows the exact route of this life."
         },
         {
           "targetBookId": "b0039",
-          "difference": "They meet once and never stay in contact."
+          "difference": "A single step lands twenty centimetres to the left."
         }
       ]
     },
@@ -1058,23 +1001,21 @@
       "rootId": "b0053",
       "kind": "root",
       "icon": "paths",
-      "headline": "ONLY ONE OF YOU CAN REMEMBER",
-      "hook": "every event you share can be remembered by only one of you; when one keeps the memory, the other keeps only the facts.",
-      "title": "One Memory Between Us",
+      "headline": "WHAT WAS SAID",
+      "hook": "every possible word, pause and silence occupies its own complete biography.",
+      "title": "What Was Said",
       "passage": [
-        "Your partner remembers the wedding: the warm room, the missing button, the laugh during the vows. You know those things happened and remember none of them.",
-        "You remember a rainy holiday they know only from photographs.",
-        "Shared years divide themselves this way. No memory belongs to both."
+        "Your book records every sound you have uttered: the first syllables, repeated questions, automatic answers, names, arguments and words you said when no one was listening. It also contains all your silences, with their exact duration. Some sentences changed a relationship. Most changed nothing. The Library writes both with the same care because an exact life cannot replace one forgettable word with another, or one second of silence with one second of speech."
       ],
-      "aftertaste": "The facts are shared. The memories are not.",
+      "aftertaste": "One silent second is not equal to one second of speech.",
       "neighbors": [
         {
           "targetBookId": "b0054",
-          "difference": "The wedding memory belongs to you instead."
+          "difference": "One pause lasts a second longer and nothing else changes."
         },
         {
           "targetBookId": "b0055",
-          "difference": "Telling a shared memory transfers it to the listener."
+          "difference": "Every possible word, pause and conversation changes."
         }
       ]
     },
@@ -1083,22 +1024,20 @@
       "rootId": "b0053",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "YOU REMEMBER THE WEDDING",
-      "title": "Your Wedding to Keep",
+      "headline": "A LONGER PAUSE",
+      "title": "A Longer Pause",
       "passage": [
-        "In this volume, the wedding belongs to you.",
-        "You remember the warm room, missing button and laugh during the vows. Your partner knows the facts and has no image of the day.",
-        "The other shared memories divide as before."
+        "In the book beside it, you take one additional second to answer a question. Then you say exactly the same thing. The other person waits. Nothing changes: not their interpretation, not the conversation that follows, not the day. Decades later, both books reach the same ending. They differ only in that slightly longer silence. One contains a life with that pause. The other, a life without it. The Library does not decide that they are equivalent."
       ],
-      "aftertaste": "This time, the wedding stays with you.",
+      "aftertaste": "The Library preserves that pause.",
       "neighbors": [
         {
           "targetBookId": "b0053",
-          "difference": "The wedding memory belongs to your partner."
+          "difference": "Every word and every silence match exactly."
         },
         {
           "targetBookId": "b0055",
-          "difference": "Memories can move when spoken aloud."
+          "difference": "Every possible word, pause and conversation changes."
         }
       ]
     },
@@ -1107,22 +1046,20 @@
       "rootId": "b0053",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "SAY IT AND LOSE IT",
-      "title": "Told, Transferred",
+      "headline": "EVERYTHING YOU COULD SAY",
+      "title": "Everything You Could Say",
       "passage": [
-        "You remember the rainy holiday until you describe it aloud.",
-        "As your partner begins to see the wet balcony and red towel, the images leave you. The facts remain.",
-        "From then on, every shared memory can be moved by telling."
+        "One word changes; then a syllable; then the order of two sentences. There are books for every conversation you could have and for every sentence you would never say. Each version combines with every voice, pause and silence of everyone else. Most disappear without consequence. Some words change jobs, families or countries. The books are not ordered by importance. Beside a life transformed by one sentence are millions differentiated by sounds that no one remembered."
       ],
-      "aftertaste": "The listener keeps what the speaker loses.",
+      "aftertaste": "The books are not ordered by importance.",
       "neighbors": [
         {
           "targetBookId": "b0053",
-          "difference": "Memories divide but never transfer."
+          "difference": "Every word and every silence match exactly."
         },
         {
           "targetBookId": "b0054",
-          "difference": "The wedding belongs to you, without transfer."
+          "difference": "One pause lasts a second longer and nothing else changes."
         }
       ]
     },
@@ -1131,23 +1068,21 @@
       "rootId": "b0056",
       "kind": "root",
       "icon": "paths",
-      "headline": "ONE DAY HAPPENED TWICE",
-      "hook": "one ordinary Tuesday in your life occurred twice — you lived it identically both times — and the book records both.",
-      "title": "The Extra Tuesday",
+      "headline": "YOUR NIGHTS",
+      "hook": "every possible night changes its bed, position, awakening, dream or companion.",
+      "title": "Your Nights",
       "passage": [
-        "The book gives Tuesday 8 October twice.",
-        "Both times you wake at 06:47, make tea, miss the same bus, work until five, buy washing powder and watch half a documentary.",
-        "Wednesday follows once. You remember one Tuesday."
+        "There is a volume containing every night of your life. It states when you went to bed, which side you slept on, how many times you woke and who was breathing nearby. It records the dreams you remembered and those that vanished before you opened your eyes. For years, its nighttime pages seem to repeat: the same bed, the same darkness, the same motionless body. But no night occupies exactly the same hours or returns you to the day with identical tiredness."
       ],
-      "aftertaste": "The book keeps both Tuesdays.",
+      "aftertaste": "No night occupies the same hours.",
       "neighbors": [
         {
           "targetBookId": "b0057",
-          "difference": "The second Tuesday differs only because the kettle boils thirty seconds later."
+          "difference": "For one night, you sleep facing the other way."
         },
         {
           "targetBookId": "b0058",
-          "difference": "The same Tuesday occurs three times."
+          "difference": "Every bed, position, interruption and companion changes."
         }
       ]
     },
@@ -1156,22 +1091,20 @@
       "rootId": "b0056",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THIRTY SECONDS LATER",
-      "title": "The Second Kettle",
+      "headline": "FACING THE OTHER WAY",
+      "title": "Facing the Other Way",
       "passage": [
-        "Tuesday 8 October appears twice.",
-        "The second copy is identical except the kettle clicks off thirty seconds later. You still miss the same bus.",
-        "Wednesday follows once."
+        "The adjacent book preserves your entire waking life. The same decisions, words, journeys and relationships. Only your position during one night changes: you sleep facing the wall instead of the room. You do not remember it in the morning. It affects neither your body nor the following day. The difference exists only while you are unaware of it. To preserve it, the Library also duplicates every page on which you are awake."
       ],
-      "aftertaste": "Thirty seconds appear nowhere else.",
+      "aftertaste": "The difference exists while you do not know it.",
       "neighbors": [
         {
           "targetBookId": "b0056",
-          "difference": "Both Tuesdays are identical."
+          "difference": "Every night matches the one in this life."
         },
         {
           "targetBookId": "b0058",
-          "difference": "Tuesday occurs three times."
+          "difference": "Every bed, position, interruption and companion changes."
         }
       ]
     },
@@ -1180,22 +1113,20 @@
       "rootId": "b0056",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THREE TUESDAYS",
-      "title": "Tuesday, Tuesday, Tuesday",
+      "headline": "EVERY BED",
+      "title": "Every Bed",
       "passage": [
-        "The book gives Tuesday 8 October three times in succession.",
-        "Each copy contains the same tea, missed bus, workday, washing powder and half documentary.",
-        "After the third, Wednesday follows."
+        "There are books in which every one of your nights takes place in another room, another country, beside another person or in an empty bed. There are lives with decades of interrupted sleep and others in which you always wake at the same time. Then come all the combinations of positions, awakenings, dreams and forgetting. Some change your days. Others remain sealed inside the night. Even differences you never come to know occupy complete biographies bearing your name."
       ],
-      "aftertaste": "You remember one Tuesday.",
+      "aftertaste": "Every night occupies another biography.",
       "neighbors": [
         {
           "targetBookId": "b0056",
-          "difference": "Tuesday occurs twice."
+          "difference": "Every night matches the one in this life."
         },
         {
           "targetBookId": "b0057",
-          "difference": "Tuesday occurs twice with one thirty-second difference."
+          "difference": "For one night, you sleep facing the other way."
         }
       ]
     },
@@ -1350,23 +1281,21 @@
       "rootId": "b0065",
       "kind": "root",
       "icon": "mirror",
-      "headline": "A ROOM THAT NEVER EXISTED",
-      "hook": "you remember a room you have never entered — its green chair, yellow light and scratched table — more clearly than rooms you lived in.",
-      "title": "The Room You Remember",
+      "headline": "THE LAST AGE",
+      "hook": "you reach every possible age after every life capable of fitting before it.",
+      "title": "The Last Age",
       "passage": [
-        "The room has a green chair by the window, yellow light and a diagonal scratch across the table.",
-        "You can remember where the door sticks and the smell from the kitchen beyond it.",
-        "No house you have entered contains this room. The memory stays."
+        "Your book has an exact number of pages. Somewhere in it appears your final age, expressed in years, months, days and seconds. Before it are all the ages you did reach: each successive body, every birthday, every morning when you did not think about how much remained. The ending may occupy a simple line. What is immense is the precise life that had to occur before you reached that second with that face, in that place, having lived exactly what came before."
       ],
-      "aftertaste": "You remember the scratch most clearly.",
+      "aftertaste": "Your final age has an exact second.",
       "neighbors": [
         {
           "targetBookId": "b0066",
-          "difference": "The same room is remembered, but the scratch runs the other way."
+          "difference": "The life ends at every age and after every possible final day."
         },
         {
           "targetBookId": "b0067",
-          "difference": "At forty, you walk into the room exactly as remembered."
+          "difference": "After the final night, you live one more day."
         }
       ]
     },
@@ -1375,22 +1304,20 @@
       "rootId": "b0065",
       "kind": "nearby",
       "icon": "mirror",
-      "headline": "THE SCRATCH RUNS THE OTHER WAY",
-      "title": "The Other Scratch",
+      "headline": "EVERY DURATION",
+      "title": "Every Duration",
       "passage": [
-        "The green chair, yellow light and sticking door are the same.",
-        "Only the scratch differs. Here it runs from the far left corner toward you.",
-        "The room still exists only in memory."
+        "There are books that end after a few minutes and books that pass through a childhood, an adult life or extreme old age. For every duration, there are all possible final days: ordinary, busy, quiet, shared, unnoticed. The Library does not reserve the ending for an extraordinary scene. It may arrive after you wash your hands, look at a street or set a cup on a table. Every age reached contains countless complete lives capable of ending there."
       ],
-      "aftertaste": "One scratch separates the memories.",
+      "aftertaste": "Every age contains countless lives.",
       "neighbors": [
         {
           "targetBookId": "b0065",
-          "difference": "The scratch runs in the opposite direction."
+          "difference": "The life ends at your exact age."
         },
         {
           "targetBookId": "b0067",
-          "difference": "The remembered room is eventually found."
+          "difference": "After the final night, you live one more day."
         }
       ]
     },
@@ -1399,22 +1326,20 @@
       "rootId": "b0065",
       "kind": "nearby",
       "icon": "mirror",
-      "headline": "THE ROOM IS THERE",
-      "title": "Found at Forty",
+      "headline": "ONE MORE DAY",
+      "title": "One More Day",
       "passage": [
-        "At forty you enter an unfamiliar building and find the green chair, yellow light and scratched table.",
-        "The door sticks exactly where you remember it sticking.",
-        "Nothing in the book explains why you remembered the room first."
+        "Two volumes describe the same life until your final night. In one, it ends. In another, you wake and live one additional day with nothing exceptional in it: you get up, eat, speak, wait. A third book adds another day. Then come weeks, years and decades, each with all its possible contents. There is no single continuation. From any age, the Library preserves every amount of time remaining and every life that can fit inside it."
       ],
-      "aftertaste": "The memory arrived before the room.",
+      "aftertaste": "Another day. Then all the others.",
       "neighbors": [
         {
           "targetBookId": "b0065",
-          "difference": "You never find the remembered room."
+          "difference": "The life ends at your exact age."
         },
         {
           "targetBookId": "b0066",
-          "difference": "The remembered scratch runs the other way."
+          "difference": "The life ends at every age and after every possible final day."
         }
       ]
     },
@@ -1423,23 +1348,21 @@
       "rootId": "b0068",
       "kind": "root",
       "icon": "speech",
-      "headline": "THE ADJACENT BOOK SAYS RIGHT",
-      "hook": "this book says you turned left on Wednesday; the adjacent book says right; both say you reached the same desk at 09:04.",
-      "title": "The Wednesday Disagreement",
+      "headline": "YOUR FULL NAME",
+      "hook": "you keep your name while your body, family, language, memories and everything else change.",
+      "title": "Your Full Name",
       "passage": [
-        "At 08:51 you leave home. At the corner, this volume says left.",
-        "You pass the pharmacy, cross at the lights and sit at your desk at 09:04.",
-        "The adjacent volume says right. It gives the same arrival time."
+        "This book preserves your name and everything that currently accompanies it: body, family, country, language, memories, habits and relationships. Whenever someone says it, they refer to the exact accumulation of those pages. Yet the name takes up very little space. It could easily be copied onto the cover of another volume. The Library does so. When you open that other book, you find the same name and none of the circumstances through which you learned to recognise it."
       ],
-      "aftertaste": "Both books end the walk at 09:04.",
+      "aftertaste": "The same name fits on another cover.",
       "neighbors": [
         {
           "targetBookId": "b0069",
-          "difference": "You turn right and still arrive at 09:04."
+          "difference": "The same signature belongs to a completely different life."
         },
         {
           "targetBookId": "b0070",
-          "difference": "The book says you never leave home and still records you at the desk at 09:04."
+          "difference": "Completely different people answer to your same name."
         }
       ]
     },
@@ -1448,22 +1371,20 @@
       "rootId": "b0068",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "RIGHT, SAME ARRIVAL",
-      "title": "Turn Right",
+      "headline": "THE SAME SIGNATURE",
+      "title": "The Same Signature",
       "passage": [
-        "At 08:51 you leave home. At the corner, this volume says right.",
-        "You pass the post box and the narrow shop. At 09:04 you sit at the same desk.",
-        "The other book insists you went left."
+        "There is a book in which you sign exactly as you do here, but your hand has another shape. You were born in another country, speak another language and belong to another family. Your education, work, beliefs and memories do not match. You have never seen the places you now call yours. Even so, the signature at the bottom of certain documents reproduces exactly the same name. Everything you are has changed around those letters, and the letters continue to claim the book is about you."
       ],
-      "aftertaste": "Right also arrives at 09:04.",
+      "aftertaste": "The letters keep saying that you are you.",
       "neighbors": [
         {
           "targetBookId": "b0068",
-          "difference": "You turn left instead."
+          "difference": "Your name keeps everything it currently means."
         },
         {
           "targetBookId": "b0070",
-          "difference": "You never leave home and are still recorded at the desk."
+          "difference": "Completely different people answer to your same name."
         }
       ]
     },
@@ -1472,22 +1393,20 @@
       "rootId": "b0068",
       "kind": "nearby",
       "icon": "speech",
-      "headline": "YOU NEVER LEFT HOME",
-      "title": "Still at the Desk",
+      "headline": "EVERYONE UNDER YOUR NAME",
+      "title": "Everyone Under Your Name",
       "passage": [
-        "The book says you remain at home all morning.",
-        "It also says that at 09:04 you sit at the same office desk described in the other two volumes.",
-        "No journey connects the sentences."
+        "An entire section repeats your name on its spines. Inside, the bodies, ages, parents, languages, professions, habits and deaths change. Some volumes retain a single recognisable trait. Others retain none. There are books in which completely different people respond when someone says those same syllables. The Library does not mark the point at which you cease to be you. It simply aligns the volumes and lets your name remain fixed while replacing everything it ever meant."
       ],
-      "aftertaste": "Home and desk share 09:04.",
+      "aftertaste": "Your name remains. Everything else changes.",
       "neighbors": [
         {
           "targetBookId": "b0068",
-          "difference": "The book gives a left-turn journey to the desk."
+          "difference": "Your name keeps everything it currently means."
         },
         {
           "targetBookId": "b0069",
-          "difference": "The book gives a right-turn journey to the desk."
+          "difference": "The same signature belongs to a completely different life."
         }
       ]
     },
@@ -1496,23 +1415,21 @@
       "rootId": "b0071",
       "kind": "root",
       "icon": "paths",
-      "headline": "ONE WORD AT FOURTEEN",
-      "hook": "at fourteen you say \"perhaps\" instead of \"probably\" in a sentence nobody remembers, and the rest of your life is identical.",
-      "title": "Said Perhaps",
+      "headline": "ONLY THE GESTURE REMAINS",
+      "hook": "everything changes except one gesture, meal or word that remains exactly the same.",
+      "title": "Only the Gesture Remains",
       "passage": [
-        "Near the school gate someone asks if it will rain before you get home. You say, perhaps.",
-        "You walk home, eat the same dinner and forget the exchange.",
-        "Nobody remembers the word. The book does."
+        "There is a book in which almost nothing from your present life remains. Another body, another family, another country, another language, another job and another death. You know none of the people who make up your days here. Yet at the same age, you make exactly one gesture that you made in this life: you move a chair aside with your hand before sitting down. The position of your fingers, the force and the duration match. The whole book seems foreign except for that precise second."
       ],
-      "aftertaste": "This volume contains perhaps.",
+      "aftertaste": "Only that second is still yours.",
       "neighbors": [
         {
           "targetBookId": "b0072",
-          "difference": "You say \"maybe\" instead."
+          "difference": "Two different lives share one exact breakfast."
         },
         {
           "targetBookId": "b0073",
-          "difference": "You say \"probably\"; the other person says \"perhaps\" in reply."
+          "difference": "Everything changes except the final word."
         }
       ]
     },
@@ -1521,22 +1438,20 @@
       "rootId": "b0071",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "ONE DIFFERENT WORD",
-      "title": "Said Maybe",
+      "headline": "THE SAME BREAKFAST",
+      "title": "The Same Breakfast",
       "passage": [
-        "Near the school gate someone asks if it will rain. You say, maybe.",
-        "The same dinner, homework and later life follow.",
-        "This volume contains maybe."
+        "Two lives have different births, faces, educations, cities, beliefs and relationships. Their pages never draw close again. But on a particular date, you eat the same breakfast, in the same order, in the same quantities and for the same number of minutes. Afterwards, the books separate again until two different deaths. Among thousands of differences, that identical meal is harder to ignore than any change. The Library preserves it without drawing attention to it."
       ],
-      "aftertaste": "One word gets another book.",
+      "aftertaste": "The Library does not single out the breakfast.",
       "neighbors": [
         {
           "targetBookId": "b0071",
-          "difference": "You say \"perhaps\" instead."
+          "difference": "Everything changes except one exact gesture."
         },
         {
           "targetBookId": "b0073",
-          "difference": "You say \"probably\" and hear \"perhaps\" in reply."
+          "difference": "Everything changes except the final word."
         }
       ]
     },
@@ -1545,22 +1460,20 @@
       "rootId": "b0071",
       "kind": "nearby",
       "icon": "paths",
-      "headline": "THE WORD MOVES TO THEM",
-      "title": "They Said Perhaps",
+      "headline": "THE LAST WORD",
+      "title": "The Last Word",
       "passage": [
-        "Near the school gate someone asks if it will rain. You say, probably. They answer, perhaps.",
-        "The rest of the exchange disappears from memory.",
-        "The same word exists in the book, spoken by the other person."
+        "There are books in which everything changes except your final word. You reach it with another voice, after a life you do not recognise, surrounded by people you will never know here. In some volumes, you say it in another language, but the final sound matches. In others, it means something different. Bodies, families, countries and entire decades are replaced to lead to the same brief utterance. What remains constant no longer seems like a foundation. It seems like the detail that cannot be removed."
       ],
-      "aftertaste": "The word changes mouths.",
+      "aftertaste": "The final word remains.",
       "neighbors": [
         {
           "targetBookId": "b0071",
-          "difference": "You are the one who says \"perhaps\"."
+          "difference": "Everything changes except one exact gesture."
         },
         {
           "targetBookId": "b0072",
-          "difference": "You say \"maybe\" and receive no reply about the word."
+          "difference": "Two different lives share one exact breakfast."
         }
       ]
     },
@@ -1643,23 +1556,25 @@
       "rootId": "b0077",
       "kind": "root",
       "icon": "table",
-      "headline": "ONE DRAWER, FIFTY YEARS",
-      "hook": "one kitchen drawer in the house you grew up in stays closed for fifty years, and this book never tells you what is inside.",
-      "title": "The Door You Never Opened",
+      "headline": "WHAT NO ONE SAW",
+      "hook": "your visible life remains identical while the thoughts, desires and interpretations it contains change.",
+      "title": "What No One Saw",
       "passage": [
-        "The drawer is under the cutlery. Everyone uses the kitchen. Nobody opens it.",
-        "Paint changes, appliances change, people leave and return. The handle gathers the same small scratches.",
-        "After fifty years the book ends with the drawer still closed."
+        "This book reproduces your observable life without changing anything.",
+        "You are born in the same second, inhabit the same homes, say the same words and make the same gestures. Your job, relationships, journeys, illnesses and death remain the same.",
+        "Two people watching both lives from outside would not find a single difference.",
+        "But as you perform each action, you think other things, desire other outcomes and interpret what happens differently.",
+        "The Library needs two complete books because inwardly you did not live the same life."
       ],
-      "aftertaste": "This volume does not open it.",
+      "aftertaste": "Inwardly, you did not live the same life.",
       "neighbors": [
         {
           "targetBookId": "b0078",
-          "difference": "The drawer is opened once in year thirty-seven."
+          "difference": "One thought appears for three seconds and changes nothing."
         },
         {
           "targetBookId": "b0079",
-          "difference": "The family never opens it; the new owner does in the first hour."
+          "difference": "Every inner interpretation, intention and combination changes."
         }
       ]
     },
@@ -1668,22 +1583,25 @@
       "rootId": "b0077",
       "kind": "nearby",
       "icon": "table",
-      "headline": "YEAR THIRTY-SEVEN",
-      "title": "Opened Once",
+      "headline": "ONE THOUGHT LESS",
+      "title": "One Thought Less",
       "passage": [
-        "For thirty-seven years nobody opens the kitchen drawer.",
-        "Then someone pulls it out, looks inside for two seconds and closes it. The book does not say what they saw.",
-        "It stays closed for the remaining thirteen years."
+        "As you lift a glass, a brief sentence appears in your mind.",
+        "You do not say it. It changes neither your expression, the movement of your hand nor what you do next. Three seconds later, you have forgotten it.",
+        "In the adjacent volume, that sentence never forms.",
+        "Everything visible matches, as does every earlier and later thought until your death.",
+        "For three seconds, one life contains something the other does not.",
+        "To preserve that inaccessible difference, the Library writes both of them again in full."
       ],
-      "aftertaste": "Two seconds do not reveal the contents.",
+      "aftertaste": "Three seconds need two books.",
       "neighbors": [
         {
           "targetBookId": "b0077",
-          "difference": "The drawer is never opened."
+          "difference": "The visible life matches, but the inner experience changes."
         },
         {
           "targetBookId": "b0079",
-          "difference": "Only the next owner opens it."
+          "difference": "Every inner interpretation, intention and combination changes."
         }
       ]
     },
@@ -1692,22 +1610,24 @@
       "rootId": "b0077",
       "kind": "nearby",
       "icon": "table",
-      "headline": "OPENED IN THE FIRST HOUR",
-      "title": "The New Owner",
+      "headline": "ALL THE LIVES INSIDE YOU",
+      "title": "All the Lives Inside You",
       "passage": [
-        "Your family leaves the drawer closed for fifty years.",
-        "The house is sold. In the first hour, the new owner opens it while looking for a place to put batteries.",
-        "This book ends before saying what is inside."
+        "There are books for every thought you could have while hearing the same sentence, every memory prompted by the same smell and every fear you never express.",
+        "In some, you act from affection; in others, from habit, calculation, shame or exhaustion. The gesture remains identical.",
+        "Then come all the combinations: what you desire, what you suspect, what you notice, what you ignore and every sentence you form without speaking it.",
+        "From outside, your biography does not change.",
+        "Inside, the Library does not end."
       ],
-      "aftertaste": "Another book contains the answer.",
+      "aftertaste": "Inside, the Library does not end.",
       "neighbors": [
         {
           "targetBookId": "b0077",
-          "difference": "Nobody ever opens the drawer."
+          "difference": "The visible life matches, but the inner experience changes."
         },
         {
           "targetBookId": "b0078",
-          "difference": "A family member opens it once in year thirty-seven."
+          "difference": "One thought appears for three seconds and changes nothing."
         }
       ]
     },
