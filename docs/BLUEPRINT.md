@@ -422,7 +422,7 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   The final-hexagon boundary condition described in section 2.
 *   **`npm test` is not a deploy gate.** Netlify runs `npm run build`, which typechecks and builds but does not run the suite.
 *   **Open defects recorded but not fixed**, carried here so they are not rediscovered as news:
-    *   `--ink-faint` (#8a8173 on #f1eadd) gives 3.21:1, below the 4.5:1 AA threshold for normal text, and is used on the wall counter, the coordinate lines, the consultation note, the footer, the illegible spine labels and the shelf-walk links.
+    *   ~~`--ink-faint` contrast~~ — **Resolved.** Functional and readable text migrated to `--ink-muted` (#6a6153, ≥ 4.56:1 AA on every background surface). `--ink-faint` (#8a8173) retained only for decorative SVG strokes, end labels and spine glyphs.
     *   15 of the 27 motifs in `illustrations.ts` carry all 25 root books; `paths` appears on seven of them and `speech` on four.
 
 ### APPROVED NEXT

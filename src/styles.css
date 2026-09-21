@@ -9,6 +9,7 @@
   --ink: #17150f;
   --ink-soft: #57503f;
   --ink-faint: #8a8173;
+  --ink-muted: #6a6153;
   --oxblood: #6e1f27;
   --oxblood-deep: #52161c;
   --rule: rgba(23, 21, 15, 0.14);
@@ -78,7 +79,7 @@ body {
   align-items: center;
   height: clamp(2.25rem, 6vw, 4.25rem);
   margin: 0;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-family: var(--serif);
   font-size: 0.6875rem;
   font-weight: 500;
@@ -215,7 +216,7 @@ body {
 }
 
 .masthead__scale-label {
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -238,7 +239,7 @@ body {
 
 .masthead__scale-meta {
   margin-top: 0.22rem;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.6875rem;
   line-height: 1.35;
 }
@@ -646,7 +647,7 @@ body {
 
 .wall__count {
   margin: clamp(1.75rem, 3vw, 2.5rem) 0 0;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -717,7 +718,7 @@ body {
 
 .coordinate {
   margin: 0;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.75rem;
   letter-spacing: 0.04em;
 }
@@ -1104,7 +1105,7 @@ body {
   align-items: center;
   height: 1.375rem;
   margin-top: 0.5rem;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.6875rem;
   line-height: 1;
   letter-spacing: 0.04em;
@@ -1162,7 +1163,7 @@ body {
 
 .book--spread .shelf--embedded .shelf__count {
   margin: 0.65rem 0 1rem;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.875rem;
   line-height: 1.45;
 }
@@ -1257,7 +1258,7 @@ body {
 }
 
 .shelf__row--unreadable {
-  color: var(--ink-faint);
+  color: var(--ink-muted);
 }
 
 .shelf__row--unreadable .shelf__spine {
@@ -1394,7 +1395,7 @@ body {
   min-height: 44px;
   box-sizing: border-box;
   padding: 0.7rem 0;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   text-decoration: none;
   transition: color var(--motion-fast) var(--motion-ease);
 }
@@ -1412,7 +1413,7 @@ body {
 }
 
 .found--absent {
-  color: var(--ink-faint);
+  color: var(--ink-muted);
 }
 
 .shelf {
@@ -1460,7 +1461,7 @@ body {
   align-items: baseline;
   gap: 1rem;
   padding: 0.7rem 0.25rem;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   text-decoration: none;
   transition: color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease);
 }
@@ -1606,7 +1607,7 @@ body {
 .page__caption {
   flex: none;
   margin: 2rem 0 0;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-family: var(--serif);
   font-size: 0.8125rem;
   font-style: italic;
@@ -1635,7 +1636,7 @@ body {
 
 .consulted {
   margin: 0.5rem 0 0;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.75rem;
   letter-spacing: 0.04em;
 }
@@ -1666,7 +1667,7 @@ body {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -1754,7 +1755,7 @@ body {
   margin-top: clamp(3rem, 8vw, 5rem);
   padding-top: 1.5rem;
   border-top: 1px solid var(--rule);
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   font-size: 0.8125rem;
 }
 
