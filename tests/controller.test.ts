@@ -133,13 +133,13 @@ describe('the wall selection', () => {
     const { controller, render, renders } = mount('');
     controller.showSomethingStranger();
     expect(controller.state.wallSelection).toBe('second');
-    expect(renders.at(-1)?.hint).toEqual({ focus: 'wallGrid', announce: 'Thirteen other lives.' });
+    expect(renders.at(-1)?.hint).toEqual({ focus: 'wallGrid', announce: 'Fifteen other lives.' });
 
     controller.showAll();
     expect(controller.state.wallSelection).toBe('all');
     expect(renders.at(-1)?.hint).toEqual({
       focus: 'wallAppended',
-      announce: 'All twenty-five lives.',
+      announce: 'All twenty-seven lives.',
     });
     expect(render).toHaveBeenCalledTimes(3);
   });

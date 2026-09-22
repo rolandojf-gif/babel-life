@@ -169,13 +169,13 @@ function rootsOf(ids: readonly string[]): RootBook[] {
 }
 
 /** The five editorial anchors that always open the wall, in this order. */
-export const PINNED_ROOT_IDS = ['b0047', 'b0041', 'b0074', 'b0038', 'b0010'] as const;
+export const PINNED_ROOT_IDS = ['b0086', 'b0041', 'b0074', 'b0038', 'b0010'] as const;
 
 /**
  * Deal one visit's wall. The five strongest editorial hooks stay fixed at the
- * front; the other twenty lives are shuffled as one pool. Seven join the
- * opening wall and the remaining thirteen become “something stranger”. Opening
- * out to all twenty-five therefore never moves a card the visitor has seen.
+ * front; the other twenty-two lives are shuffled as one pool. Seven join the
+ * opening wall and the remaining fifteen become “something stranger”. Opening
+ * out to all twenty-seven therefore never moves a card the visitor has seen.
  */
 function wallDeal(seed: bigint): { first: string[]; second: string[] } {
   const wall = getCatalog().wall;

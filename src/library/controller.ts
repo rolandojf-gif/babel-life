@@ -57,7 +57,7 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
       if (position === undefined) {
         state.view = 'invalidAddress';
       } else {
-        // Every address holds a volume; this edition can print seventy-five of them.
+        // Every address holds a volume; this edition can print eighty-one of them.
         const bookId = accessionAt(position);
         const book = bookId === undefined ? undefined : findBook(bookId);
         state.address = route.coordinate;

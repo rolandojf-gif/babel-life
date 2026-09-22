@@ -28,7 +28,9 @@
       "b0074",
       "b0077",
       "b0080",
-      "b0083"
+      "b0083",
+      "b0086",
+      "b0089"
     ]
   },
   "books": [
@@ -1794,6 +1796,149 @@
         {
           "targetBookId": "b0084",
           "difference": "Todos los caracteres vuelven a ser el mismo símbolo."
+        }
+      ]
+    },
+    {
+      "id": "b0086",
+      "rootId": "b0086",
+      "kind": "root",
+      "icon": "window",
+      "headline": "ESCRITO DOS VECES",
+      "hook": "tu vida aparece a trozos en libros de personas que nunca conociste.",
+      "title": "Escrito dos veces",
+      "passage": [
+        "Tu libro contiene tu vida entera, minuto a minuto. Ninguna de tus páginas aparece solo allí. Los veintiséis años en que encendiste la lámpara al anochecer están también en el libro de la mujer que vivía enfrente, escritos desde la otra ventana. Las mañanas de autobús están también en el libro del conductor. Los cuatro segundos de una puerta cruzada están en el libro de un hombre que no sabrías reconocer. Solo tu libro los contiene seguidos. Los demás te guardan a ratos, entre sus propios años."
+      ],
+      "aftertaste": "Ningún minuto tuyo está escrito una sola vez.",
+      "neighbors": [
+        {
+          "targetBookId": "b0087",
+          "difference": "Las mismas tardes de tu vida están escritas desde la otra ventana, y el lomo lleva su nombre."
+        },
+        {
+          "targetBookId": "b0088",
+          "difference": "Los cuatro segundos en que os cruzáis aparecen en ambos libros, cada uno dentro de la vida completa del otro."
+        }
+      ]
+    },
+    {
+      "id": "b0087",
+      "rootId": "b0086",
+      "kind": "nearby",
+      "icon": "window",
+      "headline": "LA OTRA VENTANA",
+      "title": "La otra ventana",
+      "passage": [
+        "Existe el libro de la mujer que vivía enfrente. Contiene su vida completa: el trabajo, las siete mudanzas, la hermana con la que dejó de hablar, los años largos del final. Y cada tarde, una línea sobre la casa de enfrente: la lámpara se encendió a las siete y diez. Veintiséis años de líneas casi iguales. Lo que en tu libro está escrito desde dentro, en el suyo está escrito desde aquí, y ninguno de los dos libros se equivoca."
+      ],
+      "aftertaste": "Nunca cruzasteis una palabra y compartís veintiséis años.",
+      "neighbors": [
+        {
+          "targetBookId": "b0086",
+          "difference": "Tu libro contiene tu vida entera, escrita desde dentro."
+        },
+        {
+          "targetBookId": "b0088",
+          "difference": "Los cuatro segundos en que os cruzáis aparecen en ambos libros, cada uno dentro de la vida completa del otro."
+        }
+      ]
+    },
+    {
+      "id": "b0088",
+      "rootId": "b0086",
+      "kind": "nearby",
+      "icon": "doorway",
+      "headline": "EN SENTIDOS OPUESTOS",
+      "title": "En sentidos opuestos",
+      "passage": [
+        "Existe el libro del hombre que en 1996 cruzó contigo una puerta en sentidos opuestos. Contiene su infancia junto al mar, los turnos de noche, la hija a la que llamaba cada domingo. Y una tarde de 1996, en un vestíbulo, un desconocido salía mientras él entraba. Ese desconocido eres tú, y no llevas nombre. Todo lo que su libro contiene de ti cabe en cuatro segundos. Todo lo que el tuyo contiene de él también."
+      ],
+      "aftertaste": "Cada uno ocupa cuatro segundos en el libro del otro.",
+      "neighbors": [
+        {
+          "targetBookId": "b0086",
+          "difference": "Tu libro contiene tu vida entera, escrita desde dentro."
+        },
+        {
+          "targetBookId": "b0087",
+          "difference": "Las mismas tardes de tu vida están escritas desde la otra ventana, y el lomo lleva su nombre."
+        }
+      ]
+    },
+    {
+      "id": "b0089",
+      "rootId": "b0089",
+      "kind": "root",
+      "icon": "book",
+      "headline": "EL NIÑO DEL CUADERNO",
+      "hook": "la persona que inventaste en tres páginas tiene una vida entera que nunca escribiste.",
+      "title": "El niño del cuaderno",
+      "passage": [
+        "A los nueve años inventas a un niño. Le das un nombre, una cara y una cicatriz que esconde debajo del pelo. Escribes que tiene miedo del agua y que miente cuando le preguntan por qué.",
+        "Llenas tres páginas.",
+        "Después sigues con tu vida. El cuaderno se pierde en una mudanza. Trabajas, conoces a otras personas, envejeces. Al morir ya no recuerdas aquel nombre.",
+        "Tu libro conserva aquellas tres páginas. El suyo conserva todo lo demás."
+      ],
+      "aftertaste": "Tres páginas tuyas. Una vida entera suya.",
+      "neighbors": [
+        {
+          "targetBookId": "b0090",
+          "difference": "El libro contiene la vida completa de la persona que coincide con el niño de aquellas tres páginas."
+        },
+        {
+          "targetBookId": "b0091",
+          "difference": "Otra persona escribe durante su infancia tres páginas sobre alguien que coincide exactamente contigo."
+        }
+      ]
+    },
+    {
+      "id": "b0090",
+      "rootId": "b0089",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "LO QUE NO ESCRIBISTE",
+      "title": "Lo que no escribiste",
+      "passage": [
+        "Su libro comienza años antes de tus tres páginas y continúa mucho después. Coinciden el nombre, la cara, la cicatriz y la mentira sobre el agua.",
+        "Luego vienen cosas que nunca escribiste. Aprende un oficio. Se muda. Pierde el pelo y deja de esconder la cicatriz. Cuida a alguien y años después necesita que lo cuiden.",
+        "Nunca oye tu nombre.",
+        "Cuando tú dejas de imaginarlo, en su libro no ocurre nada."
+      ],
+      "aftertaste": "Dejaste de pensar en él. Su libro continuó.",
+      "neighbors": [
+        {
+          "targetBookId": "b0089",
+          "difference": "El libro contiene la vida de la persona que inventó aquellas tres páginas."
+        },
+        {
+          "targetBookId": "b0091",
+          "difference": "Otra persona escribe durante su infancia tres páginas sobre alguien que coincide exactamente contigo."
+        }
+      ]
+    },
+    {
+      "id": "b0091",
+      "rootId": "b0089",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "CUANDO TE OLVIDARON",
+      "title": "Cuando te olvidaron",
+      "passage": [
+        "En este libro nace alguien que nunca conocerás. A los nueve años llena tres páginas de un cuaderno. La persona que inventa tiene tu nombre y tu rostro. Escribe un recuerdo que nunca has contado y una tarde en la que lees estas mismas palabras.",
+        "Después cierra el cuaderno.",
+        "Estudia, trabaja, conoce a otras personas y envejece. El cuaderno desaparece durante una mudanza. Durante sus últimos treinta años no vuelve a pensar en aquella persona.",
+        "Tú sigues viviendo."
+      ],
+      "aftertaste": "Sus tres páginas terminaron. Tú no.",
+      "neighbors": [
+        {
+          "targetBookId": "b0089",
+          "difference": "El libro contiene la vida de la persona que inventó aquellas tres páginas."
+        },
+        {
+          "targetBookId": "b0090",
+          "difference": "El libro contiene la vida completa de la persona que coincide con el niño de aquellas tres páginas."
         }
       ]
     }

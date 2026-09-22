@@ -78,7 +78,7 @@ interface Shelfmark {
 
 /**
  * One shelf in this edition holds two volumes that can be read. The arithmetic
- * cannot produce that: it scatters seventy-five accession numbers across 2^64
+ * cannot produce that: it scatters eighty-one accession numbers across 2^64
  * addresses, and the chance of any two landing among the same thirty-two is
  * around one in 10^14. So it was done by hand, once, and frozen.
  *

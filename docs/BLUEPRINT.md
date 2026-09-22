@@ -61,14 +61,14 @@ The site entry is the **Wall of Lives**, not a scenario selector, dropdown, or f
     *   **Action:** `OPEN THIS LIFE →`.
     *   **Featured slots.** Display positions 1, 6, 11, 16 and 21 are set larger and stand their motif on a small shelf board. Emphasis follows position in the deal, never the identity of the book.
 *   **Card Batching & Navigation:**
-    *   Initial load displays **12 cards**. Counter: `Twelve of twenty-five books.`
-    *   Secondary Action: `SHOW ME SOMETHING STRANGER` swaps the grid to the remaining 13 cards.
-    *   Quiet Action: `SHOW ALL 25` appends them below the opening twelve.
+    *   Initial load displays **12 cards**. Counter: `Twelve of twenty-seven books.`
+    *   Secondary Action: `SHOW ME SOMETHING STRANGER` swaps the grid to the remaining 15 cards.
+    *   Quiet Action: `SHOW ALL 27` appends them below the opening twelve.
     *   No disabled button states: controls disappear cleanly when their action is no longer applicable.
 *   **The order of the deal (`catalog.ts` `wallDeal`, `shuffle.ts`):**
     *   **Five editorial anchors are pinned** (`PINNED_ROOT_IDS`) and always open the wall, in that order. They are the five strongest hooks, and which books open the Library is an editorial decision rather than a shuffle's.
-    *   The other twenty root books are shuffled as **one pool**. Seven of them complete the opening twelve; the remaining thirteen become `SHOW ME SOMETHING STRANGER`. Opening out to all twenty-five therefore never moves a card the visitor has already seen.
-    *   One seed is drawn per visit and held in memory by the controller. Every redraw of the wall — after opening a life, after browser Back, after `SHOW ALL 25` — deals the same order, so nothing moves under the visitor's hands.
+    *   The other twenty-two root books are shuffled as **one pool**. Seven of them complete the opening twelve; the remaining fifteen become `SHOW ME SOMETHING STRANGER`. Opening out to all twenty-seven therefore never moves a card the visitor has already seen.
+    *   One seed is drawn per visit and held in memory by the controller. Every redraw of the wall — after opening a life, after browser Back, after `SHOW ALL 27` — deals the same order, so nothing moves under the visitor's hands.
     *   Nothing is stored: a reload is a new visit and deals again. The seed is an ordinary `Math.random()` draw, since card order is not a secret, and it runs through the same splitmix64 scramble (`scramble.ts`) that writes the pages at unreadable addresses.
 
 ### The Book View (`BookView.ts`)
@@ -147,7 +147,7 @@ Vitest, sixteen files, run with `npm test`; `npm run verify` runs the typecheck,
 Note that `npm run build`, which is what Netlify runs, does **not** run the tests. Keeping `npm test` green is a discipline of the repository, not a gate the deploy enforces.
 
 *   `coordinates.test.ts` — the address space. Every expected value is derived independently of the module under test, never by calling it: the published positions of known volumes, the inverse over the whole `b0001`–`b9999` registry, field ranges, unpadded printing, one spelling per hexagon, the wrap at both ends of the space, the 384 addresses past the end, and the property the shelf copy depends on — every printed volume stands alone on its shelf, but for the shelfmarked pair, which is held to standing side by side, on one shelf, with no edge between them.
-*   `catalog.test.ts` — the shipped inventory, re-deriving the rules rather than calling the validator: 25 root books and 50 nearby books, accession numbers unique and never recycled, every icon present in the illustration set, passages inside the editorial word count of section 3, no repeated passage or title, edges that stay inside one narrative family, every nearby book reachable from its root, the wall as exactly the set of roots in curated order, and the deal — anchors pinned, the remainder shuffled and split without overlap, and no card moving when the wall opens out.
+*   `catalog.test.ts` — the shipped inventory, re-deriving the rules rather than calling the validator: 27 root books and 54 nearby books, accession numbers unique and never recycled, every icon present in the illustration set, passages inside the editorial word count of section 3, no repeated passage or title, edges that stay inside one narrative family, every nearby book reachable from its root, the wall as exactly the set of roots in curated order, and the deal — anchors pinned, the remainder shuffled and split without overlap, and no card moving when the wall opens out.
 *   `validator.test.ts` — the load-time refusals, one case per rejection, against catalogs built to be wrong.
 *   `blueprint.test.ts` — this document against the catalog: the `TITLE`, `WALL HOOK` and `NEARBY A`/`NEARBY B` lines of the map in section 4, in wall order, plus the inventory section 4 states. A title, premise or difference edited in one place and not the other fails here.
 *   `locale.test.ts`, `language-switcher.test.ts` — the two editions: the locale read from the pathname and never from the browser, the switcher's hash-preserving links, and the copy bundles held to one shape.
@@ -155,7 +155,7 @@ Note that `npm run build`, which is what Netlify runs, does **not** run the test
 *   `pages.test.ts` — the page at an unreadable address: the alphabet, the length, determinism across repeat readings, every symbol inside the alphabet and none of them favoured out of all recognition, a different page at every address, and fixtures produced by a separate implementation of the same scramble rather than by calling this one.
 *   `address-view.test.ts` — the address view under jsdom: the page stands open on arrival, the symbols are hidden from assistive technology behind a line that describes them, and the same address reads the same twice.
 *   `shuffle.test.ts` — the deal: fixed by its seed, a permutation of exactly what it was given, the original left alone, every item first about as often as any other over 1200 seeds, and a seed of its own per visit.
-*   `wall-view.test.ts` — the wall under jsdom: the opening twelve led by their premises with no title presented as one, the rest behind `SHOW ME SOMETHING STRANGER` with no overlap, `SHOW ALL 25` leaving both sets exactly where they were, the same deal however often the wall is redrawn, controls put away rather than disabled, and every card pointing at its own volume.
+*   `wall-view.test.ts` — the wall under jsdom: the opening twelve led by their premises with no title presented as one, the rest behind `SHOW ME SOMETHING STRANGER` with no overlap, `SHOW ALL 27` leaving both sets exactly where they were, the same deal however often the wall is redrawn, controls put away rather than disabled, and every card pointing at its own volume.
 *   `library-index.test.ts` — the index beside the masthead: the field's geometry, the locator's placement on a real address, the readout following hover and keyboard focus and returning, and the index tracking the deal while the pinned anchors keep the opening volume fixed.
 *   `shelf-view.test.ts` — a shelf under jsdom: thirty-two spines, the readable ones named and linked as volumes, and the count line that says how many — "One of them can be read." on an ordinary shelf, "Two" on the shelfmarked one.
 *   `controller.test.ts` — the routing table as behaviour, under jsdom: a legible address opens a book, an illegible one is not an error, an address outside the space is, navigation clears what the previous view held, and the same location never renders twice.
@@ -185,7 +185,7 @@ All passages and card copy must adhere strictly to these principles:
     *   A **book** is one complete life. This holds for every book in the catalog: a root book contains one complete life, and so does each of its nearby books. A variation, once it stands in the Library, is not an annotation on a life — it is another life, written out in full.
     *   A **narrative family** is a root book and its two nearby books: three complete lives that differ in one specified factor each. It is a unit of authorship and navigation. It is never called a life.
     *   A **volume** is the physical object at an address: what stands on a shelf, what the shelf walk steps through, what is counted as thirty-two per shelf, and what the unreadable addresses hold. Use it where the Library is being described as a place.
-    *   The inventory therefore reads: 25 narrative families, 25 root books on the Wall, 50 nearby books, 75 books and 75 complete lives in total.
+    *   The inventory therefore reads: 27 narrative families, 27 root books on the Wall, 54 nearby books, 81 books and 81 complete lives in total.
     *   Both editions follow the same distinction (`libro`, `vida`, `volumen`). `SHOW ME ANOTHER LIFE` is consistent with it: it hands the visitor another complete life, which is another book.
 
 ---
@@ -194,16 +194,16 @@ All passages and card copy must adhere strictly to these principles:
 
 ### Architecture Overview
 The canonical library, shipped in `src/content/catalog.json` and `src/content/catalog.es.json` (`schemaVersion: 3`):
-*   **25 NARRATIVE FAMILIES**, one per root book.
-*   **25 ROOT BOOKS** displayed on the Wall of Lives.
-*   **50 NEARBY BOOKS** (exactly 2 per root book).
-*   **Total:** 75 books. Accession numbers run from `b0002` to `b0085` and are deliberately not contiguous: an ID retired during an earlier draft is never reused, so a published address never moves. Nine numbers in that range are retired: `b0004`, `b0013`, `b0014`, `b0015`, `b0017`, `b0021`, `b0024`, `b0029`, `b0030`.
-*   Both editions carry the same 75 accessions in the same order, checked at load time.
+*   **27 NARRATIVE FAMILIES**, one per root book.
+*   **27 ROOT BOOKS** displayed on the Wall of Lives.
+*   **54 NEARBY BOOKS** (exactly 2 per root book).
+*   **Total:** 81 books. Accession numbers run from `b0002` to `b0091` and are deliberately not contiguous: an ID retired during an earlier draft is never reused, so a published address never moves. Nine numbers in that range are retired: `b0004`, `b0013`, `b0014`, `b0015`, `b0017`, `b0021`, `b0024`, `b0029`, `b0030`.
+*   Both editions carry the same 81 accessions in the same order, checked at load time.
 
 The editorial map below is frozen and the shipped English catalog matches it line for line: `tests/blueprint.test.ts` asserts the title, the wall hook and both nearby differences of every root book, in wall order. Passages follow the short-form guardrail of section 3, rule 10. Any future content pass edits this map first and the catalog second, never the reverse.
 
 **Structural Division:**
-*   **Root Books** belong on the Wall. They provide 25 independent reasons to enter the Library.
+*   **Root Books** belong on the Wall. They provide 27 independent reasons to enter the Library.
 *   **Nearby Books** do NOT appear on the Wall. They are discovered exclusively from within an open book, at the address next to it in the wording.
 *   A root book and its two nearby books form one **narrative family**. The family is a unit of authorship and of navigation; it is not a life. Each of its three books is a complete life of its own.
 
@@ -211,7 +211,7 @@ The editorial map below is frozen and the shipped English catalog matches it lin
 
 **The map is written in English.** The Spanish edition is held to the same map by identity and order, not by line: `catalog.es.json` is authored Spanish, not a translation of these lines, and is checked against the English edition for alignment rather than for wording.
 
-**The order below is the canonical wall order** (`wall.first` then `wall.second` in the catalog), which is the editorial order of the map. It is not the order a visitor meets: the five pinned anchors open every wall and the other twenty are shuffled per visit (section 2).
+**The order below is the canonical wall order** (`wall.first` then `wall.second` in the catalog), which is the editorial order of the map. It is not the order a visitor meets: the five pinned anchors open every wall and the other twenty-two are shuffled per visit (section 2).
 
 ### Final Canonical Content Map (Frozen Editorial Map)
 
@@ -365,6 +365,18 @@ TITLE: A Single Comma
 WALL HOOK: there are no words, only a comma in one exact position.
 NEARBY A: Every character is the same letter.
 NEARBY B: The combinations eventually form a complete life.
+
+26
+TITLE: Written Twice
+WALL HOOK: your life appears in fragments in the books of people you never met.
+NEARBY A: The same evenings of your life are written from the other window, and the spine carries her name.
+NEARBY B: The four seconds in which you cross paths appear in both books, each inside the complete life of the other.
+
+27
+TITLE: The Child in the Notebook
+WALL HOOK: the person you invented in three pages has an entire life you never wrote.
+NEARBY A: The book contains the complete life of the person who matches the child in those three pages.
+NEARBY B: Another person writes three pages in their childhood about someone who matches you exactly.
 ```
 
 EDITORIAL MAP STATUS: FROZEN. ASSERTED BY `tests/blueprint.test.ts`.
@@ -396,13 +408,13 @@ This status snapshot is the absolute boundary for future agents and developers.
 ### IMPLEMENTED NOW
 *   Static vanilla TypeScript + Vite + modern CSS client application. `npm run typecheck`, `npm test` and `npm run build` pass clean.
 *   **A bilingual edition**: English at `/`, Spanish at `/es/`, two real HTML entry documents, two authored catalogs aligned accession by accession, one typed copy bundle per language, and a language switcher that keeps the visitor's place.
-*   **Wall of Lives** with 12 opening cards, `SHOW ME SOMETHING STRANGER` (the remaining 13), and `SHOW ALL 25`.
-*   **A wall with five pinned editorial anchors** and the other twenty root books shuffled as one pool per visit, split seven into the opening wall and thirteen behind the stranger control, so opening out never moves a card. Nothing stored; a reload deals again.
+*   **Wall of Lives** with 12 opening cards, `SHOW ME SOMETHING STRANGER` (the remaining 15), and `SHOW ALL 27`.
+*   **A wall with five pinned editorial anchors** and the other twenty-two root books shuffled as one pool per visit, split seven into the opening wall and fifteen behind the stranger control, so opening out never moves a card. Nothing stored; a reload deals again.
 *   **The library index** beside the masthead: a decorative field of shelving with a locator on one real printed address, following hover and keyboard focus.
 *   Premise-first card presentation, the shared eyebrow shown once above the grid and carried on each card for its accessible name.
 *   Literary titles displayed inside the book view and on shelf spines, never on the Wall.
 *   **The book as a spread**: shelf locator, drop-capped passage, aftertaste, the whole shelf embedded beside it, nearby books and the shelf walk.
-*   **The full 75-book canonical catalog in both languages:** 25 root books on the Wall, 50 nearby books reachable only from inside a book, exactly two per root, passages inside the short-form guardrail. Validated at load time: ID syntax, duplicate identities, unresolved edges, edges leaving their narrative family, unlabelled edges, a wall that is not exactly the set of roots, and the two editions falling out of alignment.
+*   **The full 81-book canonical catalog in both languages:** 27 root books on the Wall, 54 nearby books reachable only from inside a book, exactly two per root, passages inside the short-form guardrail. Validated at load time: ID syntax, duplicate identities, unresolved edges, edges leaving their narrative family, unlabelled edges, a wall that is not exactly the set of roots, and the two editions falling out of alignment.
 *   Nearby books navigation naming specific differences from the current passage.
 *   **One shelf with two readable volumes:** a single frozen shelfmark, implemented as a transposition of two addresses, so that one walk along a shelf finds two strangers standing together.
 *   **A page at every unreadable address:** the address view opens the volume's page directly, in the Library's 25-symbol alphabet, fixed for that address by splitmix64 over its position, hidden from assistive technology behind a line that describes it.
@@ -418,12 +430,12 @@ This status snapshot is the absolute boundary for future agents and developers.
 ### KNOWN GAPS
 *   **Untested views.** `BookView`, `NearbyVolumes`, `shelfLocator`, `shelfListing`, `atmosphere` and the illustrations have no cases of their own and are exercised only by reading the page.
 *   **The Spanish catalog's prose is checked for shape, not for craft.** Accession alignment with the English edition and the word count are asserted; nothing reads it.
-*   **No screen reader has been used at all.** Chromium at 320 / 390 / 1440 px covers the wall, the book spread, the shelf and the address view in both languages: no horizontal overflow anywhere, the language switcher keeps the open volume, and the wall's deal survives opening a life, browser Back, `SHOW ALL 25` and repeated redraws while a reload deals again.
+*   **No screen reader has been used at all.** Chromium at 320 / 390 / 1440 px covers the wall, the book spread, the shelf and the address view in both languages: no horizontal overflow anywhere, the language switcher keeps the open volume, and the wall's deal survives opening a life, browser Back, `SHOW ALL 27` and repeated redraws while a reload deals again.
 *   The final-hexagon boundary condition described in section 2.
 *   **`npm test` is not a deploy gate.** Netlify runs `npm run build`, which typechecks and builds but does not run the suite.
 *   **Open defects recorded but not fixed**, carried here so they are not rediscovered as news:
     *   ~~`--ink-faint` contrast~~ — **Resolved.** Functional and readable text migrated to `--ink-muted` (#6a6153, ≥ 4.56:1 AA on every background surface). `--ink-faint` (#8a8173) retained only for decorative SVG strokes, end labels and spine glyphs.
-    *   15 of the 27 motifs in `illustrations.ts` carry all 25 root books; `paths` appears on seven of them and `speech` on four.
+    *   15 of the 27 motifs in `illustrations.ts` carry all 27 root books; `paths` appears on seven of them and `speech` on four.
 
 ### APPROVED NEXT
 *   Nothing pending. The next approved item is whatever gets promoted out of section 5, or the closing of a known gap above.

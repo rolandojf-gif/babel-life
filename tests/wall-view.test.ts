@@ -1,7 +1,7 @@
 /**
  * @vitest-environment jsdom
  *
- * The wall as a visitor meets it: twelve lives, the other thirteen, then all of
+ * The wall as a visitor meets it: twelve lives, the other fifteen, then all of
  * them — with nothing moving under their hands while they look.
  */
 
@@ -45,10 +45,10 @@ function dealt(view: { element: HTMLElement }): string[] {
 }
 
 describe('the wall', () => {
-  it('opens on twelve of the twenty-five lives', () => {
+  it('opens on twelve of the twenty-seven lives', () => {
     const view = mount();
     expect(dealt(view)).toHaveLength(12);
-    expect(view.element.textContent).toContain('Twelve of twenty-five books.');
+    expect(view.element.textContent).toContain('Twelve of twenty-seven books.');
   });
 
   it('leads with the premise of each life, and never with a title', () => {
@@ -64,17 +64,17 @@ describe('the wall', () => {
     }
   });
 
-  it('shows the other thirteen when asked for something stranger', () => {
+  it('shows the other fifteen when asked for something stranger', () => {
     const view = mount();
     const opening = dealt(view);
     view.update(state('second'));
     const stranger = dealt(view);
 
-    expect(stranger).toHaveLength(13);
+    expect(stranger).toHaveLength(15);
     expect(stranger.some((href) => opening.includes(href))).toBe(false);
   });
 
-  it('opens out to all twenty-five without moving a card', () => {
+  it('opens out to all twenty-seven without moving a card', () => {
     const view = mount();
     const opening = dealt(view);
     view.update(state('second'));
@@ -82,10 +82,10 @@ describe('the wall', () => {
 
     view.update(state('all'));
     const everything = dealt(view);
-    expect(everything).toHaveLength(25);
+    expect(everything).toHaveLength(27);
     expect(everything.slice(0, 12)).toEqual(opening);
     expect(everything.slice(12)).toEqual(stranger);
-    expect(view.element.textContent).toContain('All twenty-five books.');
+    expect(view.element.textContent).toContain('All twenty-seven books.');
   });
 
   it('deals the same wall for a visit, however often it is redrawn', () => {
@@ -113,7 +113,7 @@ describe('the wall', () => {
     const view = mount();
     view.update(state('all'));
     const hrefs = dealt(view);
-    expect(new Set(hrefs).size).toBe(25);
+    expect(new Set(hrefs).size).toBe(27);
     for (const href of hrefs) expect(href).toMatch(/^#book=b\d{4}$/);
     const roots = catalog.books.filter((book) => book.kind === 'root').map((book) => book.id);
     expect(hrefs.map((href) => href.replace('#book=', '')).sort()).toEqual([...roots].sort());

@@ -138,11 +138,11 @@ describe('navigation motion', () => {
     state.view = 'wall';
     state.currentBookId = null;
     state.wallSelection = 'all';
-    render(state, { focus: 'wallGrid', announce: 'All twenty-five lives.' });
+    render(state, { focus: 'wallGrid', announce: 'All twenty-seven lives.' });
     callbacks[1]!();
-    expect(root.querySelectorAll('a.card')).toHaveLength(25);
+    expect(root.querySelectorAll('a.card')).toHaveLength(27);
     expect(document.activeElement).toBe(root.querySelector('a.card'));
-    expect(root.querySelector('[role="status"]')?.textContent).toBe('All twenty-five lives.');
+    expect(root.querySelector('[role="status"]')?.textContent).toBe('All twenty-seven lives.');
     transitions.forEach((transition) => transition.finish());
     await Promise.resolve();
   });

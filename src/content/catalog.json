@@ -28,7 +28,9 @@
       "b0074",
       "b0077",
       "b0080",
-      "b0083"
+      "b0083",
+      "b0086",
+      "b0089"
     ]
   },
   "books": [
@@ -1794,6 +1796,149 @@
         {
           "targetBookId": "b0084",
           "difference": "Every character is again the same symbol."
+        }
+      ]
+    },
+    {
+      "id": "b0086",
+      "rootId": "b0086",
+      "kind": "root",
+      "icon": "window",
+      "headline": "WRITTEN TWICE",
+      "hook": "your life appears in fragments in the books of people you never met.",
+      "title": "Written Twice",
+      "passage": [
+        "Your book contains your entire life, minute by minute. None of your pages appears only there. The twenty-six years in which you turned on the lamp at dusk are also in the book of the woman who lived opposite, written from the other window. The mornings on the bus are also in the driver’s book. The four seconds of passing through a doorway are in the book of a man you would not recognise. Only your book holds them in sequence. The others keep you in pieces, among their own years."
+      ],
+      "aftertaste": "No minute of yours is written only once.",
+      "neighbors": [
+        {
+          "targetBookId": "b0087",
+          "difference": "The same evenings of your life are written from the other window, and the spine carries her name."
+        },
+        {
+          "targetBookId": "b0088",
+          "difference": "The four seconds in which you cross paths appear in both books, each inside the complete life of the other."
+        }
+      ]
+    },
+    {
+      "id": "b0087",
+      "rootId": "b0086",
+      "kind": "nearby",
+      "icon": "window",
+      "headline": "THE OTHER WINDOW",
+      "title": "The Other Window",
+      "passage": [
+        "There is the book of the woman who lived opposite. It contains her complete life: the job, the seven moves, the sister she stopped speaking to, the long years at the end. And every evening, a line about the house opposite: the lamp was turned on at ten past seven. Twenty-six years of nearly identical lines. What in your book is written from within, in hers is written from here, and neither book is mistaken."
+      ],
+      "aftertaste": "You never exchanged a word and you share twenty-six years.",
+      "neighbors": [
+        {
+          "targetBookId": "b0086",
+          "difference": "Your book contains your entire life, written from within."
+        },
+        {
+          "targetBookId": "b0088",
+          "difference": "The four seconds in which you cross paths appear in both books, each inside the complete life of the other."
+        }
+      ]
+    },
+    {
+      "id": "b0088",
+      "rootId": "b0086",
+      "kind": "nearby",
+      "icon": "doorway",
+      "headline": "IN OPPOSITE DIRECTIONS",
+      "title": "In Opposite Directions",
+      "passage": [
+        "There is the book of the man who in 1996 passed through a doorway with you in opposite directions. It contains his childhood by the sea, the night shifts, the daughter he called every Sunday. And one afternoon in 1996, in a lobby, a stranger was leaving as he walked in. That stranger is you, and you bear no name. Everything his book contains of you fits into four seconds. Everything yours contains of him does too."
+      ],
+      "aftertaste": "Each of you occupies four seconds in the other’s book.",
+      "neighbors": [
+        {
+          "targetBookId": "b0086",
+          "difference": "Your book contains your entire life, written from within."
+        },
+        {
+          "targetBookId": "b0087",
+          "difference": "The same evenings of your life are written from the other window, and the spine carries her name."
+        }
+      ]
+    },
+    {
+      "id": "b0089",
+      "rootId": "b0089",
+      "kind": "root",
+      "icon": "book",
+      "headline": "THE CHILD IN THE NOTEBOOK",
+      "hook": "the person you invented in three pages has an entire life you never wrote.",
+      "title": "The Child in the Notebook",
+      "passage": [
+        "At nine, you invent a child. You give him a name, a face and a scar he hides under his hair. You write that he is afraid of water and that he lies when asked why.",
+        "You fill three pages.",
+        "Afterwards, you go on with your life. The notebook is lost during a move. You work, meet other people, grow old. By the time you die, you no longer remember that name.",
+        "Your book preserves those three pages. His preserves all the rest."
+      ],
+      "aftertaste": "Three pages of yours. An entire life of his.",
+      "neighbors": [
+        {
+          "targetBookId": "b0090",
+          "difference": "The book contains the complete life of the person who matches the child in those three pages."
+        },
+        {
+          "targetBookId": "b0091",
+          "difference": "Another person writes three pages in their childhood about someone who matches you exactly."
+        }
+      ]
+    },
+    {
+      "id": "b0090",
+      "rootId": "b0089",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "WHAT YOU DID NOT WRITE",
+      "title": "What You Did Not Write",
+      "passage": [
+        "His book begins years before your three pages and continues long after them. The name, the face, the scar and the lie about the water all match.",
+        "Then come things you never wrote. He learns a trade. He moves. He loses his hair and stops hiding the scar. He cares for someone, and years later needs care himself.",
+        "He never hears your name.",
+        "When you stop imagining him, nothing happens in his book."
+      ],
+      "aftertaste": "You stopped thinking of him. His book went on.",
+      "neighbors": [
+        {
+          "targetBookId": "b0089",
+          "difference": "The book contains the life of the person who invented those three pages."
+        },
+        {
+          "targetBookId": "b0091",
+          "difference": "Another person writes three pages in their childhood about someone who matches you exactly."
+        }
+      ]
+    },
+    {
+      "id": "b0091",
+      "rootId": "b0089",
+      "kind": "nearby",
+      "icon": "book",
+      "headline": "WHEN YOU WERE FORGOTTEN",
+      "title": "When You Were Forgotten",
+      "passage": [
+        "In this book someone is born whom you will never meet. At nine, they fill three pages of a notebook. The person they invent has your name and your face. They write a memory you have never told anyone, and an afternoon on which you read these very words.",
+        "Then they close the notebook.",
+        "They study, work, meet other people and grow old. The notebook disappears during a move. For their final thirty years, they never think of that person again.",
+        "You go on living."
+      ],
+      "aftertaste": "Their three pages ended. You did not.",
+      "neighbors": [
+        {
+          "targetBookId": "b0089",
+          "difference": "The book contains the life of the person who invented those three pages."
+        },
+        {
+          "targetBookId": "b0090",
+          "difference": "The book contains the complete life of the person who matches the child in those three pages."
         }
       ]
     }
