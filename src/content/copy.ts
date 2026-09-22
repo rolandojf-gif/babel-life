@@ -58,8 +58,12 @@ export type Copy = {
   legalHeading: string;
   legalBody: string;
   legalOwner: string;
-  /** `{count}` is the number of cards on the wall, spelled from `countWords`. */
+  /**
+   * `{count}` is the number of cards on the wall and `{total}` the number of
+   * roots in the catalogue, both spelled from `countWords`.
+   */
   wallCountPartial: string;
+  /** `{total}` is the number of roots in the catalogue, spelled from `countWords`. */
   wallCountAll: string;
   /** Sentence-initial number words, indexed by the number they spell. */
   countWords: readonly string[];

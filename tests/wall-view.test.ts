@@ -8,7 +8,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { createWallOfLives } from '../src/views/WallOfLives';
 import { copy } from '../src/content/copy';
-import { catalog, PINNED_ROOT_IDS, wallBooks } from '../src/library/catalog';
+import { catalog, PINNED_ROOT_IDS, TOTAL_ROOTS, wallBooks } from '../src/library/catalog';
 import type { AppState } from '../src/library/model';
 import * as locale from '../src/content/locale';
 
@@ -241,8 +241,19 @@ describe('the wall’s deal and its count', () => {
   it('has a spelled number for every count the wall can show, in both editions', () => {
     for (const edition of ['en', 'es'] as const) {
       vi.spyOn(locale, 'getLocale').mockReturnValue(edition);
-      expect(copy.countWords).toHaveLength(28);
+      expect(copy.countWords).toHaveLength(TOTAL_ROOTS + 1);
       expect(copy.wallCountPartial).toContain('{count}');
+    }
+  });
+
+  it('takes the total from the catalogue, not from the copy, in both editions', () => {
+    for (const edition of ['en', 'es'] as const) {
+      vi.spyOn(locale, 'getLocale').mockReturnValue(edition);
+      expect(copy.wallCountPartial).toContain('{total}');
+      expect(copy.wallCountAll).toContain('{total}');
+      for (const template of [copy.wallCountPartial, copy.wallCountAll]) {
+        expect(template).not.toMatch(/\d|twenty|veinti/i);
+      }
     }
   });
 });

@@ -62,8 +62,8 @@ export const copy: Copy = {
   legalBody:
     'Babel Life es, por ahora, un proyecto personal no comercial. No vende productos ni servicios, no ofrece cuentas de usuario, no acepta formularios ni muestra publicidad. Utiliza Cloudflare Web Analytics para métricas agregadas de tráfico y rendimiento; este servicio no usa cookies ni localStorage para las métricas de uso y no recoge ni utiliza datos personales de los visitantes. Los proveedores de alojamiento pueden tratar los datos técnicos de las peticiones necesarios para servir, proteger y operar el sitio.',
   legalOwner: 'Mantenido por Rolando Fernández en España.',
-  wallCountPartial: '{count} de veintisiete libros.',
-  wallCountAll: 'Los veintisiete libros.',
+  wallCountPartial: '{count} de {total} libros.',
+  wallCountAll: 'Los {total} libros.',
   countWords: [
     'Cero', 'Uno', 'Dos', 'Tres', 'Cuatro', 'Cinco', 'Seis', 'Siete', 'Ocho', 'Nueve',
     'Diez', 'Once', 'Doce', 'Trece', 'Catorce', 'Quince', 'Dieciséis', 'Diecisiete',

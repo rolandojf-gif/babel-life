@@ -175,12 +175,15 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     grid.replaceChildren(...books.map((book, cardIndex) => createBookCard(book, cardIndex)));
     locate();
 
-    // Spelled from the cards actually dealt, so the line cannot drift from the wall.
+    // Spelled from the cards actually dealt and the roots in the catalogue, so
+    // the line cannot drift from the wall.
+    const total = (copy.countWords[TOTAL_ROOTS] ?? String(TOTAL_ROOTS)).toLowerCase();
     count.textContent =
       books.length === TOTAL_ROOTS
-        ? copy.wallCountAll
+        ? fill(copy.wallCountAll, { total })
         : fill(copy.wallCountPartial, {
             count: copy.countWords[books.length] ?? String(books.length),
+            total,
           });
 
     // No disabled placeholders: an action that has nothing left to do is absent.
