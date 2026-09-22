@@ -64,7 +64,7 @@
       "id": "b0022",
       "rootId": "b0007",
       "kind": "nearby",
-      "icon": "doorway",
+      "icon": "cot",
       "headline": "CUATRO SEGUNDOS",
       "title": "Cuatro segundos",
       "passage": [
@@ -86,7 +86,7 @@
       "id": "b0019",
       "rootId": "b0007",
       "kind": "nearby",
-      "icon": "platform",
+      "icon": "plan",
       "headline": "TODAS LAS SALAS",
       "title": "Todas las salas",
       "passage": [
@@ -131,7 +131,7 @@
       "id": "b0016",
       "rootId": "b0003",
       "kind": "nearby",
-      "icon": "pitch",
+      "icon": "paths",
       "headline": "OTRA INFANCIA, ESTA MISMA TARDE",
       "title": "Otra infancia, esta misma tarde",
       "passage": [
@@ -153,7 +153,7 @@
       "id": "b0018",
       "rootId": "b0003",
       "kind": "nearby",
-      "icon": "spotlight",
+      "icon": "desks",
       "headline": "EL PUPITRE SIGUIENTE",
       "title": "El pupitre siguiente",
       "passage": [
@@ -399,7 +399,7 @@
       "id": "b0023",
       "rootId": "b0008",
       "kind": "nearby",
-      "icon": "letter",
+      "icon": "lineage",
       "headline": "UN INSTANTE ANTES",
       "title": "Un instante antes",
       "passage": [
@@ -421,7 +421,7 @@
       "id": "b0035",
       "rootId": "b0008",
       "kind": "nearby",
-      "icon": "letter",
+      "icon": "crowd",
       "headline": "LA POBLACIÓN AUSENTE",
       "title": "La población ausente",
       "passage": [
@@ -466,7 +466,7 @@
       "id": "b0025",
       "rootId": "b0010",
       "kind": "nearby",
-      "icon": "screen",
+      "icon": "lineage",
       "headline": "LOS MISMOS PADRES",
       "title": "Los mismos padres",
       "passage": [
@@ -490,7 +490,7 @@
       "id": "b0026",
       "rootId": "b0010",
       "kind": "nearby",
-      "icon": "book",
+      "icon": "lineage",
       "headline": "OTROS NOMBRES ANTES DEL TUYO",
       "title": "Otros nombres antes del tuyo",
       "passage": [
@@ -537,7 +537,7 @@
       "id": "b0027",
       "rootId": "b0011",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "photograph",
       "headline": "LA TARDE RESTANTE",
       "title": "La tarde restante",
       "passage": [
@@ -559,7 +559,7 @@
       "id": "b0036",
       "rootId": "b0011",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "photograph",
       "headline": "CADA FORMA DE OLVIDAR",
       "title": "Cada forma de olvidar",
       "passage": [
@@ -740,7 +740,7 @@
       "id": "b0042",
       "rootId": "b0041",
       "kind": "nearby",
-      "icon": "cot",
+      "icon": "clock",
       "headline": "UN SEGUNDO MÁS",
       "title": "Un segundo más",
       "passage": [
@@ -764,7 +764,7 @@
       "id": "b0043",
       "rootId": "b0041",
       "kind": "nearby",
-      "icon": "cot",
+      "icon": "steps",
       "headline": "TRECE PASOS",
       "title": "Trece pasos",
       "passage": [
@@ -886,7 +886,7 @@
       "id": "b0048",
       "rootId": "b0047",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "platform",
       "headline": "DE TODAS LAS MANERAS",
       "title": "De todas las maneras",
       "passage": [
@@ -910,7 +910,7 @@
       "id": "b0049",
       "rootId": "b0047",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "clock",
       "headline": "EL MISMO ÚLTIMO MINUTO",
       "title": "Hasta el último minuto",
       "passage": [
@@ -959,7 +959,7 @@
       "id": "b0051",
       "rootId": "b0050",
       "kind": "nearby",
-      "icon": "rain",
+      "icon": "calendar",
       "headline": "UN MARTES",
       "title": "Un martes",
       "passage": [
@@ -983,7 +983,7 @@
       "id": "b0052",
       "rootId": "b0050",
       "kind": "nearby",
-      "icon": "rain",
+      "icon": "socksRight",
       "headline": "SIEMPRE EL DERECHO",
       "title": "Siempre el derecho",
       "passage": [
@@ -1097,7 +1097,7 @@
       "id": "b0057",
       "rootId": "b0056",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "night",
       "headline": "DEL OTRO LADO",
       "title": "Del otro lado",
       "passage": [
@@ -1119,7 +1119,7 @@
       "id": "b0058",
       "rootId": "b0056",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "night",
       "headline": "TODAS LAS CAMAS",
       "title": "Todas las camas",
       "passage": [
@@ -1242,7 +1242,7 @@
       "id": "b0063",
       "rootId": "b0062",
       "kind": "nearby",
-      "icon": "photograph",
+      "icon": "bicycle",
       "headline": "EN EL LIBRO CONTIGUO...",
       "title": "Todas las bicicletas",
       "passage": [
@@ -1269,7 +1269,7 @@
       "id": "b0064",
       "rootId": "b0062",
       "kind": "nearby",
-      "icon": "photograph",
+      "icon": "flight",
       "headline": "EN OTRO LIBRO...",
       "title": "Todos los cielos",
       "passage": [
@@ -1389,7 +1389,7 @@
       "id": "b0069",
       "rootId": "b0068",
       "kind": "nearby",
-      "icon": "speech",
+      "icon": "signature",
       "headline": "LA MISMA FIRMA",
       "title": "La misma firma",
       "passage": [
@@ -1411,7 +1411,7 @@
       "id": "b0070",
       "rootId": "b0068",
       "kind": "nearby",
-      "icon": "speech",
+      "icon": "covers",
       "headline": "TODOS BAJO TU NOMBRE",
       "title": "Todos bajo tu nombre",
       "passage": [
@@ -1456,7 +1456,7 @@
       "id": "b0072",
       "rootId": "b0071",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "cup",
       "headline": "EL MISMO DESAYUNO",
       "title": "El mismo desayuno",
       "passage": [
@@ -1478,7 +1478,7 @@
       "id": "b0073",
       "rootId": "b0071",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "speech",
       "headline": "LA ÚLTIMA PALABRA",
       "title": "La última palabra",
       "passage": [
@@ -1526,7 +1526,7 @@
       "id": "b0075",
       "rootId": "b0074",
       "kind": "nearby",
-      "icon": "speech",
+      "icon": "paths",
       "headline": "TODAS LAS RELACIONES",
       "title": "Todas las relaciones",
       "passage": [
@@ -1550,7 +1550,7 @@
       "id": "b0076",
       "rootId": "b0074",
       "kind": "nearby",
-      "icon": "speech",
+      "icon": "crowd",
       "headline": "LA RED COMPLETA",
       "title": "La red completa",
       "passage": [
@@ -1601,7 +1601,7 @@
       "id": "b0078",
       "rootId": "b0077",
       "kind": "nearby",
-      "icon": "table",
+      "icon": "interior",
       "headline": "UN PENSAMIENTO DE MENOS",
       "title": "Un pensamiento de menos",
       "passage": [
@@ -1628,7 +1628,7 @@
       "id": "b0079",
       "rootId": "b0077",
       "kind": "nearby",
-      "icon": "table",
+      "icon": "interior",
       "headline": "TODAS LAS VIDAS INTERIORES",
       "title": "Todas las vidas interiores",
       "passage": [
@@ -1679,7 +1679,7 @@
       "id": "b0081",
       "rootId": "b0080",
       "kind": "nearby",
-      "icon": "speech",
+      "icon": "calendar",
       "headline": "UN SOLO MARTES",
       "title": "Un solo martes",
       "passage": [
@@ -1703,7 +1703,7 @@
       "id": "b0082",
       "rootId": "b0080",
       "kind": "nearby",
-      "icon": "speech",
+      "icon": "branching",
       "headline": "TU LIBRO ENTRE TODOS",
       "title": "Tu libro entre todos",
       "passage": [
@@ -1753,7 +1753,7 @@
       "id": "b0084",
       "rootId": "b0083",
       "kind": "nearby",
-      "icon": "book",
+      "icon": "comma",
       "headline": "SOLO AES",
       "title": "Solo aes",
       "passage": [
@@ -1826,7 +1826,7 @@
       "id": "b0087",
       "rootId": "b0086",
       "kind": "nearby",
-      "icon": "window",
+      "icon": "facing",
       "headline": "LA OTRA VENTANA",
       "title": "La otra ventana",
       "passage": [
@@ -1848,7 +1848,7 @@
       "id": "b0088",
       "rootId": "b0086",
       "kind": "nearby",
-      "icon": "doorway",
+      "icon": "paths",
       "headline": "EN SENTIDOS OPUESTOS",
       "title": "En sentidos opuestos",
       "passage": [
@@ -1896,7 +1896,7 @@
       "id": "b0090",
       "rootId": "b0089",
       "kind": "nearby",
-      "icon": "book",
+      "icon": "notebook",
       "headline": "LO QUE NO ESCRIBISTE",
       "title": "Lo que no escribiste",
       "passage": [
@@ -1921,7 +1921,7 @@
       "id": "b0091",
       "rootId": "b0089",
       "kind": "nearby",
-      "icon": "book",
+      "icon": "notebook",
       "headline": "CUANDO TE OLVIDARON",
       "title": "Cuando te olvidaron",
       "passage": [
