@@ -9,7 +9,7 @@ import { createBookView } from './BookView';
 import { createLanguageSwitcher } from './LanguageSwitcher';
 import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
-import { createViewTransition } from './motion';
+import { createViewTransition, initMobileHeroIndexDrift } from './motion';
 import { initAtmosphere, refreshReveals } from './atmosphere';
 import { element, link, type ViewHandle } from './view';
 
@@ -61,6 +61,7 @@ export function mountAppShell(
   shell.append(grain, createLanguageSwitcher(), main, footer, status);
   root.append(shell);
   initAtmosphere(shell);
+  initMobileHeroIndexDrift();
 
   let currentKey = '';
   let currentView: ViewHandle | null = null;

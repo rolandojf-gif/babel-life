@@ -1,6 +1,12 @@
 /** @vitest-environment jsdom */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createViewTransition } from '../src/views/motion';
+import {
+  createViewTransition,
+  mobileHeroIndexDrift,
+  MOBILE_HERO_DRIFT_SPAN,
+  MOBILE_HERO_DRIFT_START,
+  syncMobileHeroIndexDrift,
+} from '../src/views/motion';
 import { mountAppShell } from '../src/views/AppShell';
 import { createController } from '../src/library/controller';
 import { createShelfLocator } from '../src/views/shelfLocator';
@@ -162,5 +168,74 @@ describe('the shelf locator', () => {
     locator.click();
     expect(shelf.scrollIntoView).not.toHaveBeenCalled();
     expect(document.activeElement).not.toBe(shelf);
+  });
+});
+
+describe('the mobile hero index', () => {
+  const heroBottom = MOBILE_HERO_DRIFT_START + MOBILE_HERO_DRIFT_SPAN + 200;
+
+  it('stays put until scrolling has begun, then settles and holds', () => {
+    expect(mobileHeroIndexDrift(0, heroBottom, true)).toBe(0);
+    expect(mobileHeroIndexDrift(MOBILE_HERO_DRIFT_START, heroBottom, true)).toBe(0);
+    expect(mobileHeroIndexDrift(MOBILE_HERO_DRIFT_START + MOBILE_HERO_DRIFT_SPAN / 2, heroBottom, true)).toBe(0.5);
+    expect(mobileHeroIndexDrift(MOBILE_HERO_DRIFT_START + MOBILE_HERO_DRIFT_SPAN, heroBottom, true)).toBe(1);
+    expect(mobileHeroIndexDrift(heroBottom + 400, heroBottom, true)).toBe(1);
+  });
+
+  it('does not travel once the hero is too short to leave, or when motion is off', () => {
+    expect(mobileHeroIndexDrift(200, MOBILE_HERO_DRIFT_START, true)).toBe(0);
+    expect(mobileHeroIndexDrift(400, heroBottom, false)).toBe(0);
+  });
+
+  it('writes the drift only on a phone that has not asked for reduced motion', () => {
+    const queries = { mobile: true, reduce: false };
+    vi.stubGlobal('matchMedia', (query: string) => ({
+      matches: query.includes('max-width') ? queries.mobile : queries.reduce,
+      addEventListener() {},
+    }));
+
+    const hero = document.createElement('header');
+    hero.className = 'masthead';
+    const index = document.createElement('div');
+    index.className = 'library-index';
+    hero.append(index);
+    document.body.append(hero);
+
+    let scroll = 0;
+    vi.spyOn(window, 'scrollY', 'get').mockImplementation(() => scroll);
+    hero.getBoundingClientRect = () => ({
+      top: 80 - scroll,
+      height: 520,
+      bottom: 80 - scroll + 520,
+      left: 0,
+      right: 0,
+      width: 0,
+      x: 0,
+      y: 80 - scroll,
+      toJSON() {
+        return {};
+      },
+    });
+
+    scroll = 0;
+    syncMobileHeroIndexDrift();
+    expect(index.style.getPropertyValue('--index-drift')).toBe('');
+
+    scroll = MOBILE_HERO_DRIFT_START + MOBILE_HERO_DRIFT_SPAN / 2;
+    syncMobileHeroIndexDrift();
+    expect(index.style.getPropertyValue('--index-drift')).toBe('0.5000');
+
+    scroll = heroBottom;
+    syncMobileHeroIndexDrift();
+    expect(index.style.getPropertyValue('--index-drift')).toBe('1.0000');
+
+    queries.reduce = true;
+    syncMobileHeroIndexDrift();
+    expect(index.style.getPropertyValue('--index-drift')).toBe('');
+
+    queries.reduce = false;
+    queries.mobile = false;
+    syncMobileHeroIndexDrift();
+    expect(index.style.getPropertyValue('--index-drift')).toBe('');
   });
 });

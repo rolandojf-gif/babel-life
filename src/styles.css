@@ -322,6 +322,20 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* Phone only: the index drifts a short way down the masthead once scrolling
+   starts, then holds. The padding is the whole of that travel, so the marks
+   and the address never cover the line beneath. Reduced motion stays still. */
+@media (max-width: 39.999em) and (prefers-reduced-motion: no-preference) {
+  .library-index {
+    padding-bottom: 1.75rem;
+  }
+
+  .library-index__field,
+  .library-index__coordinate {
+    translate: 0 calc(var(--index-drift, 0) * 1.75rem);
+  }
+}
+
 @media (min-width: 62em) {
   .masthead {
     display: grid;
@@ -1546,6 +1560,34 @@ body {
   font-size: 1rem;
   font-style: italic;
   overflow-wrap: break-word;
+}
+
+/* Phones only. At 40em and up the shelf page stays one column, and the book
+   shelf keeps the columns it already uses from 47.5em. The tighter row gap
+   is only so a spine still fits beside its number. */
+@media (max-width: 39.999em) {
+  .shelf__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.75rem;
+  }
+
+  .shelf__item,
+  .shelf__link,
+  .shelf__row,
+  .shelf__spine {
+    min-width: 0;
+  }
+
+  .shelf__link,
+  .shelf__row {
+    gap: 0.45rem;
+  }
+
+  .shelf__number {
+    width: 1.6rem;
+    letter-spacing: 0.04em;
+  }
 }
 
 /* The one volume on the shelf this edition can print. */
