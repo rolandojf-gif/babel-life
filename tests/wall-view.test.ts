@@ -157,6 +157,21 @@ describe('the wall', () => {
     }
   });
 
+  it('marks each scale figure with a silent motif and leaves the labels as plain text', () => {
+    const view = mount();
+    const labels = [...view.element.querySelectorAll('.masthead__scale-label')];
+    expect(labels.map((label) => label.textContent)).toEqual([
+      copy.libraryScaleLabel,
+      copy.universeScaleLabel,
+    ]);
+    for (const label of labels) {
+      const motif = label.querySelector('svg.masthead__motif');
+      expect(motif?.getAttribute('aria-hidden')).toBe('true');
+      expect(motif?.getAttribute('focusable')).toBe('false');
+    }
+    expect(view.element.querySelector('.masthead__scale [tabindex], .masthead__scale a, .masthead__scale button')).toBeNull();
+  });
+
   it('speaks the Spanish scale figures as elevated powers', () => {
     vi.spyOn(locale, 'getLocale').mockReturnValue('es');
     const view = mount();

@@ -139,7 +139,18 @@ function bracketPath(): string {
   ].join('');
 }
 
-function leaderPath(metrics: IndexMetrics, x: number, y: number, wall: number): string {
+/**
+ * Where the reader's line leaves the volume: the height it runs at, the aisle
+ * it drops down, and which way it travels to get there (+1 right, -1 left).
+ */
+interface Aisle {
+  runY: number;
+  startX: number;
+  gutterX: number;
+  side: 1 | -1;
+}
+
+function aisleFor(metrics: IndexMetrics, x: number, y: number, wall: number): Aisle {
   const inset = 1.25;
   const runY = y - inset;
   const column = visibleColumn(metrics, wall);
@@ -148,22 +159,75 @@ function leaderPath(metrics: IndexMetrics, x: number, y: number, wall: number): 
   const volumeCentreX = x + INDEX_MARK_WIDTH / 2;
   const wallCentreX = wallOriginX + ww / 2;
 
-  if (volumeCentreX > wallCentreX) {
-    // Right half of the wall: leader exits left, runs to the left gutter.
-    const x0 = x - inset;
-    const leftGutterX = column > 0
-      ? wallOriginX - metrics.wallGapX * 0.5
-      : Math.max(metrics.originX - 4, 0);
-    const gutterX = Math.max(leftGutterX, 0);
-    return `M${String(x0)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
+  // Right half of the wall: leader exits left, runs to the left gutter. The
+  // first wall has no aisle on its left, only the field's edge, where the
+  // ladder would stand out of frame; its volumes use the aisle on the right.
+  if (volumeCentreX > wallCentreX && column > 0) {
+    const leftGutterX = wallOriginX - metrics.wallGapX * 0.5;
+    return { runY, startX: x - inset, gutterX: Math.max(leftGutterX, 0), side: -1 };
   }
 
   // Left half (or centre): leader exits right, runs to the right gutter.
-  const x1 = x + INDEX_MARK_WIDTH + inset;
   const naturalGutterX =
     metrics.originX + (column + 1) * (ww + metrics.wallGapX) - metrics.wallGapX * 0.5;
-  const gutterX = Math.min(naturalGutterX, metrics.width - 4);
-  return `M${String(x1)} ${String(runY)}H${String(gutterX)}V${String(metrics.height)}`;
+  return {
+    runY,
+    startX: x + INDEX_MARK_WIDTH + inset,
+    gutterX: Math.min(naturalGutterX, metrics.width - 4),
+    side: 1,
+  };
+}
+
+function leaderPath(metrics: IndexMetrics, aisle: Aisle): string {
+  return `M${String(aisle.startX)} ${String(aisle.runY)}H${String(aisle.gutterX)}V${String(metrics.height)}`;
+}
+
+/** Spacing of the ladder: rail to rail, rung to rung. */
+export const LADDER_WIDTH = 3;
+const LADDER_RUNG = 3.5;
+
+/**
+ * A library ladder standing in the aisle. The leader's drop is its near rail;
+ * this draws the far rail, the rungs, and one small reader at the top reaching
+ * back along the leader toward the volume. Drawn in local units with the near
+ * rail at x = 0, the leader's height at y = 0, and the far rail at +x. The
+ * rails run past the floor and are clipped there, so moving the ladder is a
+ * single transform whatever the shelf.
+ */
+function createLadder(metrics: IndexMetrics): SVGGElement {
+  const ladder = document.createElementNS(NS, 'g');
+  ladder.setAttribute('class', 'library-index__ladder');
+
+  const floor = metrics.height + LADDER_RUNG * 2;
+  const rungs: string[] = [];
+  for (let y = 2; y < floor; y += LADDER_RUNG) {
+    rungs.push(`M0 ${String(y)}H${String(LADDER_WIDTH)}`);
+  }
+  ladder.append(
+    svgNode('path', {
+      class: 'library-index__ladder-frame',
+      d: `M${String(LADDER_WIDTH)} -1.5V${String(floor)}${rungs.join('')}`,
+    }),
+    // The reader, as old plates add a figure for scale: a small robed
+    // silhouette on the top rungs, one arm out past the near rail to meet the
+    // leader where it leaves the volume.
+    svgNode('path', {
+      class: 'library-index__reader',
+      d: 'M0.85 -0.75H2.15L2.75 4.7H0.25Z',
+    }),
+    svgNode('circle', { class: 'library-index__reader', cx: '1.5', cy: '-1.85', r: '0.95' }),
+    svgNode('path', {
+      class: 'library-index__reader-limb',
+      d: 'M1.2 -0.35L-1.3 0M1.05 4.7V5.5M1.95 4.7V5.5',
+    }),
+  );
+  return ladder;
+}
+
+function placeLadder(ladder: Element, aisle: Aisle): void {
+  // The reader faces the volume, so the ladder mirrors with the leader.
+  (ladder as SVGGElement).style.transform =
+    `translate(${String(aisle.gutterX)}px, ${String(aisle.runY)}px) scaleX(${String(aisle.side)})`;
 }
 
 function metricsFor(svg: Element): IndexMetrics {
@@ -173,6 +237,7 @@ function metricsFor(svg: Element): IndexMetrics {
 function placeLocator(
   locator: Element,
   leader: Element,
+  ladder: Element | null,
   metrics: IndexMetrics,
   coordinate: Coordinate,
 ): void {
@@ -181,8 +246,10 @@ function placeLocator(
   locator.setAttribute('data-wall', String(coordinate.wall));
   locator.setAttribute('data-shelf', String(coordinate.shelf));
   locator.setAttribute('data-volume', String(coordinate.volume));
-  const path = leaderPath(metrics, x, y, coordinate.wall);
+  const aisle = aisleFor(metrics, x, y, coordinate.wall);
+  const path = leaderPath(metrics, aisle);
   leader.setAttribute('d', path);
+  if (ladder) placeLadder(ladder, aisle);
   // Identical path commands let CSS interpolate the line with the marker. The
   // SVG attribute remains the fallback in browsers without the CSS d property.
   (leader as SVGElement).style.setProperty('d', `path("${path}")`);
@@ -220,7 +287,8 @@ function createField(metrics: IndexMetrics, current: Coordinate): SVGSVGElement 
   );
 
   const leader = svgNode('path', { class: 'library-index__leader' });
-  placeLocator(locator, leader, metrics, current);
+  const ladder = createLadder(metrics);
+  placeLocator(locator, leader, ladder, metrics, current);
 
   svg.append(
     svgNode('path', {
@@ -228,6 +296,7 @@ function createField(metrics: IndexMetrics, current: Coordinate): SVGSVGElement 
       d: ordinaryMarksPath(metrics),
     }),
     locator,
+    ladder,
     leader,
   );
 
@@ -249,7 +318,7 @@ export function updateLibraryIndex(root: HTMLElement, coordinate: Coordinate): v
     const locator = svg.querySelector('.library-index__locator');
     const leader = svg.querySelector('.library-index__leader');
     if (!locator || !leader) continue;
-    placeLocator(locator, leader, metricsFor(svg), coordinate);
+    placeLocator(locator, leader, svg.querySelector('.library-index__ladder'), metricsFor(svg), coordinate);
   }
   const readout = root.querySelector('.library-index__coordinate');
   if (readout instanceof HTMLElement) fillCoordinateReadout(readout, coordinate);

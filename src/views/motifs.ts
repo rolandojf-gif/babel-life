@@ -71,3 +71,49 @@ export function createCandleGlyph(): SVGSVGElement {
   );
   return svg;
 }
+
+/**
+ * The Library's mark beside its scale figure: three spines on a board, the
+ * middle one free to be drawn a hair out of the row.
+ */
+export function createSpinesMark(): SVGSVGElement {
+  const svg = svgDocument('masthead__motif masthead__motif--library', '0 0 16 12');
+  svg.append(
+    shape('line', { x1: '1.5', y1: '11.2', x2: '14.5', y2: '11.2' }),
+    shape('rect', { x: '3', y: '3.6', width: '2.4', height: '7.6', rx: '0.4' }),
+    shape('rect', {
+      class: 'masthead__motif-spine',
+      x: '6.6',
+      y: '1.6',
+      width: '2.8',
+      height: '9.6',
+      rx: '0.4',
+    }),
+    shape('rect', {
+      x: '11',
+      y: '4.2',
+      width: '2.2',
+      height: '7',
+      rx: '0.4',
+      transform: 'rotate(-10 13.2 11.2)',
+    }),
+  );
+  return svg;
+}
+
+/**
+ * The observable universe's mark: a ringed planet as an old astronomical
+ * plate draws it. The back of the ring passes behind the globe, the front
+ * across it; the ring alone is free to turn.
+ */
+export function createPlanetMark(): SVGSVGElement {
+  const svg = svgDocument('masthead__motif masthead__motif--universe', '0 0 16 12');
+  const ring = document.createElementNS(NS, 'g');
+  ring.setAttribute('class', 'masthead__motif-ring');
+  ring.append(
+    shape('path', { d: 'M1 6A7 2.1 0 0 1 5.47 4.04M10.53 4.04A7 2.1 0 0 1 15 6' }),
+    shape('path', { d: 'M15 6A7 2.1 0 0 1 8 8.1A7 2.1 0 0 1 1 6' }),
+  );
+  svg.append(shape('circle', { cx: '8', cy: '6', r: '3.2' }), ring);
+  return svg;
+}

@@ -5,7 +5,7 @@ import type { AppState } from '../library/model';
 import { parseRoute } from '../library/routing';
 import { createBookCard } from './BookCard';
 import { createLibraryIndex, updateLibraryIndex } from './libraryIndex';
-import { createCandleGlyph } from './motifs';
+import { createCandleGlyph, createPlanetMark, createSpinesMark } from './motifs';
 import { element, type ViewHandle } from './view';
 
 interface WallActions {
@@ -15,6 +15,12 @@ interface WallActions {
 
 /** Cards in the opening deal. Show-all appends after these and does not reorder them. */
 const OPENING_WALL = 12;
+
+function createScaleLabel(text: string, motif: SVGSVGElement): HTMLParagraphElement {
+  const label = element('p', 'masthead__scale-label');
+  label.append(motif, document.createTextNode(text));
+  return label;
+}
 
 function createScaleValue(mantissa: string, exponent: string, unit: string): HTMLParagraphElement {
   const value = element('p', 'masthead__scale-value');
@@ -61,13 +67,13 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   const scale = element('div', 'masthead__scale');
   const libraryScale = element('div', 'masthead__scale-item');
   libraryScale.append(
-    element('p', 'masthead__scale-label', copy.libraryScaleLabel),
+    createScaleLabel(copy.libraryScaleLabel, createSpinesMark()),
     libraryValue,
     element('p', 'masthead__scale-meta', copy.libraryScaleMeta),
   );
   const universeScale = element('div', 'masthead__scale-item');
   universeScale.append(
-    element('p', 'masthead__scale-label', copy.universeScaleLabel),
+    createScaleLabel(copy.universeScaleLabel, createPlanetMark()),
     universeValue,
   );
   scale.append(libraryScale, universeScale);

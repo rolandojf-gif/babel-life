@@ -205,8 +205,50 @@ body {
   column-gap: 1.5rem;
 }
 
+/* Each figure is a slip of paper lying flush with the page. Its padding is
+   paid back by an equal negative margin, so at rest the text sits exactly
+   where it did; only the plate behind it (::before) can surface. */
 .masthead__scale-item {
+  position: relative;
+  isolation: isolate;
+  align-self: start;
+  justify-self: start;
   min-width: 0;
+  margin: -0.55rem -0.7rem -0.6rem;
+  padding: 0.55rem 0.7rem 0.6rem;
+}
+
+.masthead__scale-item::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-top: 1px solid rgba(110, 31, 39, 0.32);
+  border-radius: 1px;
+  background: linear-gradient(180deg, var(--paper-card-a), var(--paper-card-b));
+  box-shadow: var(--lift);
+  opacity: 0;
+  content: '';
+  pointer-events: none;
+}
+
+.masthead__motif {
+  flex: none;
+  width: 16px;
+  height: 12px;
+  margin-right: 0.45rem;
+  color: var(--ink-faint);
+  stroke-width: 1.15;
+  overflow: visible;
+}
+
+.masthead__motif-spine,
+.masthead__motif-ring {
+  transform-box: view-box;
+}
+
+.masthead__motif-ring {
+  transform-origin: 8px 6px;
+  rotate: -16deg;
 }
 
 .masthead__scale-label,
@@ -216,6 +258,8 @@ body {
 }
 
 .masthead__scale-label {
+  display: flex;
+  align-items: center;
   color: var(--ink-muted);
   font-size: 0.625rem;
   font-weight: 600;
@@ -226,7 +270,7 @@ body {
   margin-top: 0.2rem;
   color: var(--ink-soft);
   font-family: var(--serif);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.25;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -248,6 +292,35 @@ body {
   .masthead__scale {
     grid-template-columns: 1fr;
     row-gap: 0.8rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .masthead__scale-value {
+    font-size: 1.0625rem;
+  }
+}
+
+/* The figure surfaces under a fine pointer: the plate lifts out of the page,
+   the value darkens to full ink, the exponent (the whole comparison) takes
+   the accent, and the mark makes its one small gesture. Touch screens keep
+   the resting state, which is complete on its own; there is nothing here to
+   press, so the figures take no tab stop either. */
+@media (hover: hover) and (pointer: fine) {
+  .masthead__scale-item:hover::before {
+    opacity: 1;
+  }
+
+  .masthead__scale-item:hover .masthead__scale-value {
+    color: var(--ink);
+  }
+
+  .masthead__scale-item:hover .masthead__scale-exponent {
+    color: var(--oxblood);
+  }
+
+  .masthead__scale-item:hover .masthead__motif {
+    color: var(--oxblood);
   }
 }
 
@@ -311,6 +384,31 @@ body {
   fill: none;
   stroke: var(--oxblood);
   stroke-width: 0.85;
+}
+
+/* The ladder in the aisle and its one reader: etched a shade lighter than the
+   leader, so the locator still reads first and the figure second. */
+.library-index__ladder {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.library-index__ladder-frame {
+  fill: none;
+  stroke: var(--oxblood);
+  stroke-width: 0.6;
+  opacity: 0.42;
+}
+
+.library-index__reader {
+  fill: var(--oxblood);
+}
+
+.library-index__reader-limb {
+  fill: none;
+  stroke: var(--oxblood);
+  stroke-width: 0.6;
+  stroke-linecap: round;
 }
 
 .library-index__coordinate {
@@ -1901,6 +1999,16 @@ body {
   to { opacity: 1; transform: none; }
 }
 
+@keyframes spine-draw {
+  0%, 100% { translate: 0 0; }
+  40%, 55% { translate: 0 -1.4px; }
+}
+
+@keyframes ring-turn {
+  0%, 100% { rotate: -16deg; }
+  45%, 55% { rotate: -8deg; }
+}
+
 @keyframes index-reveal {
   from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(10px); }
   to { opacity: 1; clip-path: inset(0 0 0 0); transform: none; }
@@ -1946,10 +2054,56 @@ body {
     .library-index__leader {
       transition: d var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
     }
+
+    .library-index__ladder {
+      transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+    }
   }
 
   :is(.backlink__arrow, .nearby__arrow, .shelf-locator__pointer) {
     transition: transform var(--motion-fast) var(--motion-ease);
+  }
+
+  .masthead__scale-item {
+    transition: translate var(--motion-view) var(--motion-ease);
+  }
+
+  .masthead__scale-item::before {
+    transition: opacity var(--motion-view) var(--motion-ease);
+  }
+
+  :is(.masthead__scale-value, .masthead__scale-exponent, .masthead__motif) {
+    transition: color var(--motion-view) var(--motion-ease);
+  }
+
+  :is(.masthead__motif-spine, .masthead__motif-ring) {
+    transition: translate var(--motion-settle) var(--motion-ease),
+      rotate var(--motion-settle) var(--motion-ease);
+  }
+
+  /* Once, as the figures first settle: the spine is drawn a hair out and
+     returned, the ring turns a few degrees and back. Touch readers see the
+     marks move this once; nothing loops. */
+  .masthead__scale-item.is-in .masthead__motif-spine {
+    animation: spine-draw 1100ms var(--motion-ease) 900ms both;
+  }
+
+  .masthead__scale-item.is-in .masthead__motif-ring {
+    animation: ring-turn 1400ms var(--motion-ease) 1000ms both;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .masthead__scale-item:hover {
+      translate: 0 -3px;
+    }
+
+    .masthead__scale-item:hover .masthead__motif-spine {
+      translate: 0 -1.4px;
+    }
+
+    .masthead__scale-item:hover .masthead__motif-ring {
+      rotate: -8deg;
+    }
   }
 
   :is(.backlink, .action, .shelfwalk__link):focus-visible .backlink__arrow {

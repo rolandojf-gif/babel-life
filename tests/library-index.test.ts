@@ -165,6 +165,38 @@ describe('the library index', () => {
     }
   });
 
+  it('stands a ladder in the leader’s aisle, facing the volume, and moves it with the leader', () => {
+    const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
+
+    function ladderAgainstLeader(which: 'wide' | 'narrow'): { aligned: boolean; facing: number } {
+      const svg = index.querySelector(`.library-index__svg--${which}`);
+      const ladder = svg?.querySelector<SVGGElement>('.library-index__ladder');
+      const d = svg?.querySelector('.library-index__leader')?.getAttribute('d') ?? '';
+      const leader = /^M[\d.]+ ([\d.]+)H([\d.]+)V[\d.]+$/.exec(d);
+      const placed = /^translate\(([-\d.]+)px, ([-\d.]+)px\) scaleX\((-?1)\)$/.exec(
+        ladder?.style.transform ?? '',
+      );
+      if (!leader?.[1] || !leader[2] || !placed?.[1] || !placed[2] || !placed[3]) {
+        throw new Error(`unexpected ladder or leader: ${ladder?.style.transform ?? ''} / ${d}`);
+      }
+      return {
+        aligned: Number(placed[1]) === Number(leader[2]) && Number(placed[2]) === Number(leader[1]),
+        facing: Number(placed[3]),
+      };
+    }
+
+    // The far rail stands away from the volume: right of a leader that ran right.
+    expect(ladderAgainstLeader('wide')).toEqual({ aligned: true, facing: 1 });
+    expect(ladderAgainstLeader('narrow')).toEqual({ aligned: true, facing: 1 });
+
+    updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 4, volume: 32 });
+    expect(ladderAgainstLeader('wide')).toEqual({ aligned: true, facing: -1 });
+    expect(ladderAgainstLeader('narrow')).toEqual({ aligned: true, facing: -1 });
+
+    expect(index.querySelectorAll('.library-index__ladder')).toHaveLength(2);
+    expect(index.querySelector('.library-index__ladder')?.closest('[aria-hidden="true"]')).not.toBeNull();
+  });
+
   it('mirrors the leader line direction based on volume position within its wall', () => {
     const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
 
@@ -178,12 +210,18 @@ describe('the library index', () => {
     }
 
     // Volume 1 is in the left half → leader should exit rightward.
-    updateLibraryIndex(index, { hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
+    updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 1, volume: 1 });
     expect(leaderDirection('wide')).toBe('right');
 
     // Volume 32 is in the right half → leader should exit leftward.
-    updateLibraryIndex(index, { hexagon: 'A', wall: 1, shelf: 1, volume: 32 });
+    updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 1, volume: 32 });
     expect(leaderDirection('wide')).toBe('left');
+
+    // The first wall has only the field's edge on its left, so even its right
+    // half uses the aisle on the right, where the ladder has room to stand.
+    updateLibraryIndex(index, { hexagon: 'A', wall: 1, shelf: 1, volume: 32 });
+    expect(leaderDirection('wide')).toBe('right');
+    expect(leaderDirection('narrow')).toBe('right');
   });
 });
 
