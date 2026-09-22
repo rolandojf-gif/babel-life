@@ -63,6 +63,7 @@ export type Copy = {
   wallCountAll: string;
   /** Sentence-initial number words, indexed by the number they spell. */
   countWords: readonly string[];
+  /** `{count}` is the number of lives the stranger control adds, from `countWords`. */
   announceStranger: string;
   announceAll: string;
   coordHexagon: string;

@@ -1,5 +1,5 @@
-import { copy } from '../content/copy';
-import { findBook } from './catalog';
+import { copy, fill } from '../content/copy';
+import { findBook, wallBooks } from './catalog';
 import { accessionAt, positionOf, shelfOf } from './coordinates';
 import type { AppState, RenderHint, WallSelection } from './model';
 import { parseRoute } from './routing';
@@ -96,7 +96,12 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
     },
 
     showSomethingStranger(): void {
-      setWall('second', { focus: 'wallGrid', announce: copy.announceStranger });
+      // Spoken from the lives this deal actually adds, like the wall's own count.
+      const shown = wallBooks('second', state.wallSeed).length;
+      const announce = fill(copy.announceStranger, {
+        count: copy.countWords[shown] ?? String(shown),
+      });
+      setWall('second', { focus: 'wallGrid', announce });
     },
 
     showAll(): void {

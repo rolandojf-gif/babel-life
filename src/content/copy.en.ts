@@ -70,7 +70,7 @@ export const copy: Copy = {
     'Seventeen', 'Eighteen', 'Nineteen', 'Twenty', 'Twenty-one', 'Twenty-two',
     'Twenty-three', 'Twenty-four', 'Twenty-five', 'Twenty-six', 'Twenty-seven',
   ],
-  announceStranger: 'Fifteen other lives.',
+  announceStranger: '{count} other lives.',
   announceAll: 'All twenty-seven lives.',
   coordHexagon: 'Hexagon',
   coordWall: 'Wall',

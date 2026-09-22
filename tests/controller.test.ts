@@ -10,7 +10,8 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createController } from '../src/library/controller';
 import { accessionAt, coordinateFor, positionOf, shelfOf } from '../src/library/coordinates';
-import { catalog, findBook } from '../src/library/catalog';
+import { catalog, findBook, wallBooks } from '../src/library/catalog';
+import * as locale from '../src/content/locale';
 import { hashForAddress, hashForShelf } from '../src/library/routing';
 import type { AppState, RenderHint } from '../src/library/model';
 
@@ -142,6 +143,22 @@ describe('the wall selection', () => {
       announce: 'All twenty-seven lives.',
     });
     expect(render).toHaveBeenCalledTimes(3);
+  });
+
+  it('announces the number of lives the stranger control actually adds', () => {
+    const { controller, renders } = mount('');
+    controller.showSomethingStranger();
+    const shown = wallBooks('second', controller.state.wallSeed);
+    expect(shown).toHaveLength(15);
+    expect(renders.at(-1)?.hint.announce).toBe('Fifteen other lives.');
+  });
+
+  it('announces the same count in the Spanish edition', () => {
+    vi.spyOn(locale, 'getLocale').mockReturnValue('es');
+    const { controller, renders } = mount('');
+    controller.showSomethingStranger();
+    expect(renders.at(-1)?.hint.announce).toBe('Quince vidas más.');
+    vi.restoreAllMocks();
   });
 
   it('is left alone when it is already what was asked for', () => {
