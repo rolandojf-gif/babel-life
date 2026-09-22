@@ -92,6 +92,9 @@ export function markPosition(
  * to the wall groups that are actually visible.
  */
 function visibleColumn(metrics: IndexMetrics, wall: number): number {
+  // The single-row field is only sure to show its first, anchored wall (a
+  // phone shows little more), so on it the locator always stands there.
+  if (metrics.rows === 1) return 0;
   return Math.min(Math.max(wall - 1, 0), metrics.columns - 1);
 }
 

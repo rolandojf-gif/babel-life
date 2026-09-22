@@ -191,7 +191,8 @@ describe('the library index', () => {
 
     updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 4, volume: 32 });
     expect(ladderAgainstLeader('wide')).toEqual({ aligned: true, facing: -1 });
-    expect(ladderAgainstLeader('narrow')).toEqual({ aligned: true, facing: -1 });
+    // The narrow field keeps its locator on the anchored wall, the first.
+    expect(ladderAgainstLeader('narrow')).toEqual({ aligned: true, facing: 1 });
 
     expect(index.querySelectorAll('.library-index__ladder')).toHaveLength(2);
     expect(index.querySelector('.library-index__ladder')?.closest('[aria-hidden="true"]')).not.toBeNull();
