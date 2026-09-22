@@ -8,7 +8,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { createWallOfLives } from '../src/views/WallOfLives';
 import { copy } from '../src/content/copy';
-import { catalog, wallBooks } from '../src/library/catalog';
+import { catalog, PINNED_ROOT_IDS, wallBooks } from '../src/library/catalog';
 import type { AppState } from '../src/library/model';
 import * as locale from '../src/content/locale';
 
@@ -182,5 +182,67 @@ describe('the wall', () => {
       '≈ 1,96 × 10 elevado a 1.834.097 libros',
       '≈ 10 elevado a 80 átomos',
     ]);
+  });
+});
+
+describe('the wall’s deal and its count', () => {
+  function ids(view: { element: HTMLElement }): string[] {
+    return dealt(view).map((href) => href.replace('#book=', ''));
+  }
+
+  function countLine(view: { element: HTMLElement }): string {
+    return view.element.querySelector('.wall__count')?.textContent ?? '';
+  }
+
+  it('deals five pinned roots and seven more, then the other fifteen, then all twenty-seven', () => {
+    const view = mount();
+    const opening = ids(view);
+    expect(opening).toHaveLength(12);
+    expect(opening.slice(0, 5)).toEqual(['b0086', 'b0041', 'b0074', 'b0038', 'b0010']);
+    expect(opening.slice(0, 5)).toEqual([...PINNED_ROOT_IDS]);
+
+    view.update(state('second'));
+    const stranger = ids(view);
+    expect(stranger).toHaveLength(15);
+    expect(stranger.filter((id) => opening.includes(id))).toEqual([]);
+    const roots = catalog.books.filter((book) => book.kind === 'root').map((book) => book.id);
+    expect([...opening, ...stranger].sort()).toEqual([...roots].sort());
+
+    view.update(state('all'));
+    const all = ids(view);
+    expect(all).toHaveLength(27);
+    expect([...all].sort()).toEqual([...roots].sort());
+  });
+
+  it('prints the number of cards actually on the wall', () => {
+    const view = mount();
+    expect(countLine(view)).toBe('Twelve of twenty-seven books.');
+    expect(dealt(view)).toHaveLength(12);
+
+    view.update(state('second'));
+    expect(countLine(view)).toBe('Fifteen of twenty-seven books.');
+    expect(dealt(view)).toHaveLength(15);
+
+    view.update(state('all'));
+    expect(countLine(view)).toBe('All twenty-seven books.');
+    expect(dealt(view)).toHaveLength(27);
+  });
+
+  it('prints the same counts in the Spanish edition', () => {
+    vi.spyOn(locale, 'getLocale').mockReturnValue('es');
+    const view = mount();
+    expect(countLine(view)).toBe('Doce de veintisiete libros.');
+    view.update(state('second'));
+    expect(countLine(view)).toBe('Quince de veintisiete libros.');
+    view.update(state('all'));
+    expect(countLine(view)).toBe('Los veintisiete libros.');
+  });
+
+  it('has a spelled number for every count the wall can show, in both editions', () => {
+    for (const edition of ['en', 'es'] as const) {
+      vi.spyOn(locale, 'getLocale').mockReturnValue(edition);
+      expect(copy.countWords).toHaveLength(28);
+      expect(copy.wallCountPartial).toContain('{count}');
+    }
   });
 });

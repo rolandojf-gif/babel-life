@@ -175,8 +175,13 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     grid.replaceChildren(...books.map((book, cardIndex) => createBookCard(book, cardIndex)));
     locate();
 
+    // Spelled from the cards actually dealt, so the line cannot drift from the wall.
     count.textContent =
-      books.length === TOTAL_ROOTS ? copy.wallCountAll : copy.wallCountPartial;
+      books.length === TOTAL_ROOTS
+        ? copy.wallCountAll
+        : fill(copy.wallCountPartial, {
+            count: copy.countWords[books.length] ?? String(books.length),
+          });
 
     // No disabled placeholders: an action that has nothing left to do is absent.
     const showStranger = next.wallSelection === 'first';

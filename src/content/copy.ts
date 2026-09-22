@@ -58,8 +58,11 @@ export type Copy = {
   legalHeading: string;
   legalBody: string;
   legalOwner: string;
+  /** `{count}` is the number of cards on the wall, spelled from `countWords`. */
   wallCountPartial: string;
   wallCountAll: string;
+  /** Sentence-initial number words, indexed by the number they spell. */
+  countWords: readonly string[];
   announceStranger: string;
   announceAll: string;
   coordHexagon: string;
