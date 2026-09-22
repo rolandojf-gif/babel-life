@@ -702,15 +702,8 @@ body {
 
 @media (min-width: 62em) {
   .card--featured .card__visual .illustration {
-    width: 9rem;
+    width: 8.5rem;
   }
-}
-
-/* The motif wrapper positions the illustration overlapping the shelf. */
-.card__motif {
-  display: block;
-  position: relative;
-  z-index: 1;
 }
 
 .card__volume {
@@ -2381,34 +2374,6 @@ body {
 
 .js-cinematic .card__visual .illustration {
   filter: drop-shadow(0 6px 10px rgba(43, 26, 12, 0.18));
-}
-
-/* The featured cards' second motif: the volume's own drawing standing on a
-   short run of shelved neighbours. The shelf sits behind and below; the
-   illustration steps forward with overlap, as a volume pulled from its shelf. */
-.card__neighbour-spines {
-  width: 7rem;
-  max-width: 100%;
-  color: var(--ink-faint);
-  opacity: 0.45;
-}
-
-.card__motif {
-  display: block;
-  margin-top: -1.5rem;
-}
-
-.js-cinematic .card--featured .card__visual .illustration {
-  width: 6rem;
-}
-
-.js-cinematic .card__neighbour-spines {
-  transition: transform var(--motion-view) var(--motion-ease);
-}
-
-.js-cinematic .card--featured:hover .card__neighbour-spines,
-.js-cinematic .card--featured:focus-visible .card__neighbour-spines {
-  transform: translateY(-2px);
 }
 
 /* Entrance choreography: cards rise out of the dark in a dealt cascade.

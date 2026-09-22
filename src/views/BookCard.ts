@@ -2,7 +2,6 @@ import { copy, fill } from '../content/copy';
 import { coordinateFor } from '../library/coordinates';
 import type { RootBook } from '../library/model';
 import { createIllustration } from './illustrations';
-import { createSpineShelf } from './motifs';
 import { element, glyph, link } from './view';
 
 const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
@@ -11,8 +10,6 @@ const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
  * One life on the wall. Featured emphasis follows display position in the
  * shuffled deal, not the identity of the book. The shared eyebrow is shown
  * once above the grid; each card keeps it for the link's accessible name.
- * Featured cards stand their motif on a small shelf board: a quiet sign that
- * these are volumes, not tiles.
  */
 export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const featured = FEATURED_SLOTS.has(index + 1);
@@ -29,14 +26,7 @@ export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const hook = element('h2', 'card__hook', book.hook);
 
   const visual = element('span', 'card__visual');
-  if (featured) {
-    visual.append(createSpineShelf());
-    const motif = element('span', 'card__motif');
-    motif.append(createIllustration(book.icon));
-    visual.append(motif);
-  } else {
-    visual.append(createIllustration(book.icon));
-  }
+  visual.append(createIllustration(book.icon));
 
   const coordinate = coordinateFor(book.id);
   const volume = element(

@@ -21,7 +21,7 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'path', attrs: { d: 'M88 54 v-22 h26 v22' } },
     { tag: 'line', attrs: { x1: '95', y1: '38', x2: '95', y2: '48' } },
   ],
-  // Train doors, closing.
+  // Two doors facing each other across a landing.
   doorway: [
     { tag: 'path', attrs: { d: 'M22 60 v-46 h34 v46' } },
     { tag: 'path', attrs: { d: 'M64 60 v-46 h34 v46' } },
@@ -127,7 +127,7 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'circle', attrs: { cx: '8', cy: '16', r: '1.8' } },
     { tag: 'circle', attrs: { cx: '8', cy: '64', r: '1.8' } },
   ],
-  // Two cots, and only one of them written down.
+  // Two cots, a moment apart: the birth written down, and the nearly identical one.
   cot: [
     { tag: 'line', attrs: { x1: '16', y1: '24', x2: '16', y2: '58' } },
     { tag: 'line', attrs: { x1: '52', y1: '24', x2: '52', y2: '58' } },
@@ -224,14 +224,15 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'line', attrs: { x1: '34', y1: '36', x2: '58', y2: '36' } },
     { tag: 'path', attrs: { d: 'M88 30 h12 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-12', 'stroke-dasharray': '3 3' } },
   ],
-  // A laid table, under its cloth.
+  // A table laid for a family, two of its places for people who may never come.
   table: [
     { tag: 'path', attrs: { d: 'M12 36 h96 v6 l-10 10 h-76 l-10 -10 z' } },
     { tag: 'line', attrs: { x1: '26', y1: '52', x2: '26', y2: '64' } },
     { tag: 'line', attrs: { x1: '94', y1: '52', x2: '94', y2: '64' } },
-    { tag: 'circle', attrs: { cx: '38', cy: '29', r: '5' } },
-    { tag: 'circle', attrs: { cx: '60', cy: '29', r: '5' } },
-    { tag: 'circle', attrs: { cx: '82', cy: '29', r: '5' } },
+    { tag: 'circle', attrs: { cx: '30', cy: '29', r: '5' } },
+    { tag: 'circle', attrs: { cx: '50', cy: '29', r: '5' } },
+    { tag: 'circle', attrs: { cx: '70', cy: '29', r: '5', 'stroke-dasharray': '3 3' } },
+    { tag: 'circle', attrs: { cx: '90', cy: '29', r: '5', 'stroke-dasharray': '3 3' } },
   ],
   // A mirror, and something in it that is not quite you.
   mirror: [
@@ -242,12 +243,139 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'circle', attrs: { cx: '75', cy: '28', r: '6', 'stroke-dasharray': '3 3' } },
     { tag: 'path', attrs: { d: 'M66 52 a9 12 0 0 1 18 0', 'stroke-dasharray': '3 3' } },
   ],
-  // An open book.
+  // An open book, its ribbon keeping the page being read now.
   book: [
     { tag: 'path', attrs: { d: 'M60 22 q-14 -7 -32 -5 v36 q18 -2 32 5 z' } },
     { tag: 'path', attrs: { d: 'M60 22 q14 -7 32 -5 v36 q-18 -2 -32 5 z' } },
     { tag: 'line', attrs: { x1: '60', y1: '22', x2: '60', y2: '58' } },
+    { tag: 'path', attrs: { d: 'M72 18 V40 l3 -3 l3 3 V17.4' } },
     { tag: 'line', attrs: { x1: '20', y1: '64', x2: '100', y2: '64', 'stroke-dasharray': '3 5' } },
+  ],
+  // The house of a childhood: its door, and a lit window for each remembered room.
+  house: [
+    { tag: 'path', attrs: { d: 'M34 62 V32 L60 14 L86 32 V62' } },
+    { tag: 'path', attrs: { d: 'M54 62 V46 h12 v16' } },
+    { tag: 'rect', attrs: { x: '40', y: '36', width: '10', height: '8' } },
+    { tag: 'rect', attrs: { x: '70', y: '36', width: '10', height: '8' } },
+    { tag: 'line', attrs: { x1: '16', y1: '62', x2: '104', y2: '62' } },
+  ],
+  // A pedigree: two parents joined above a child who is not there yet.
+  lineage: [
+    { tag: 'rect', attrs: { x: '22', y: '12', width: '28', height: '12', rx: '1' } },
+    { tag: 'rect', attrs: { x: '70', y: '12', width: '28', height: '12', rx: '1' } },
+    { tag: 'path', attrs: { d: 'M36 24 V34 H84 V24' } },
+    { tag: 'line', attrs: { x1: '60', y1: '34', x2: '60', y2: '46' } },
+    { tag: 'rect', attrs: { x: '46', y: '46', width: '28', height: '12', rx: '1', 'stroke-dasharray': '3 3' } },
+  ],
+  // A cabin seat map, and one seat marked.
+  seats: [
+    { tag: 'path', attrs: { d: 'M18 64 V28 Q18 10 60 10 Q102 10 102 28 V64' } },
+    ...[26, 38, 50].flatMap((y) =>
+      [26, 37, 48, 63, 74, 85].map((x): Shape => ({
+        tag: 'rect',
+        attrs: { x: String(x), y: String(y), width: '9', height: '8', rx: '1.5' },
+      })),
+    ),
+    { tag: 'circle', attrs: { cx: '30.5', cy: '30', r: '1.2' } },
+  ],
+  // A pair of socks: the left one first, the right one not yet.
+  socks: [
+    { tag: 'path', attrs: { d: 'M52 12 H40 V40 H30 A6 6 0 0 0 30 52 H46 A6 6 0 0 0 52 46 Z' } },
+    { tag: 'line', attrs: { x1: '40', y1: '18', x2: '52', y2: '18' } },
+    { tag: 'path', attrs: { d: 'M68 12 H80 V40 H90 A6 6 0 0 1 90 52 H74 A6 6 0 0 1 68 46 Z', 'stroke-dasharray': '3 3' } },
+    { tag: 'line', attrs: { x1: '68', y1: '18', x2: '80', y2: '18', 'stroke-dasharray': '3 3' } },
+    { tag: 'line', attrs: { x1: '18', y1: '60', x2: '102', y2: '60' } },
+  ],
+  // A bed with someone asleep in it, and the moon.
+  night: [
+    { tag: 'path', attrs: { d: 'M20 62 V32 M20 46 H100 M100 62 V42 M20 56 H100' } },
+    { tag: 'path', attrs: { d: 'M25 46 q0 -6 7 -6 h8 q4 0 4 6' } },
+    { tag: 'path', attrs: { d: 'M46 46 C56 36 80 37 98 46' } },
+    { tag: 'path', attrs: { d: 'M86 10 a9 9 0 1 0 9 14 a7 7 0 1 1 -9 -14 z' } },
+  ],
+  // A road running to the horizon, through the passes.
+  road: [
+    { tag: 'line', attrs: { x1: '10', y1: '28', x2: '110', y2: '28' } },
+    { tag: 'path', attrs: { d: 'M28 64 L56 28 M92 64 L64 28' } },
+    { tag: 'line', attrs: { x1: '60', y1: '62', x2: '60', y2: '31', 'stroke-dasharray': '4 5' } },
+    { tag: 'path', attrs: { d: 'M72 28 L84 18 L92 23 L101 15 L110 22' } },
+  ],
+  // Two covers carrying the same name; only the first is your book.
+  covers: [
+    { tag: 'rect', attrs: { x: '22', y: '12', width: '32', height: '46', rx: '1' } },
+    { tag: 'rect', attrs: { x: '28', y: '22', width: '20', height: '8' } },
+    { tag: 'line', attrs: { x1: '32', y1: '26', x2: '44', y2: '26' } },
+    { tag: 'rect', attrs: { x: '66', y: '12', width: '32', height: '46', rx: '1', 'stroke-dasharray': '3 3' } },
+    { tag: 'rect', attrs: { x: '72', y: '22', width: '20', height: '8' } },
+    { tag: 'line', attrs: { x1: '76', y1: '26', x2: '88', y2: '26' } },
+    { tag: 'line', attrs: { x1: '16', y1: '62', x2: '104', y2: '62' } },
+  ],
+  // A chair moved aside before sitting, and where it stood.
+  chair: [
+    { tag: 'path', attrs: { d: 'M32 38 V14 H52 V38 M42 16 V36 M28 38 H56 M31 38 V62 M53 38 V62', 'stroke-dasharray': '3 3' } },
+    { tag: 'path', attrs: { d: 'M68 38 V14 H88 V38 M78 16 V36 M64 38 H92 M67 38 V62 M89 38 V62' } },
+    { tag: 'line', attrs: { x1: '18', y1: '62', x2: '102', y2: '62' } },
+  ],
+  // Everyone alive: one life joined to one other, and loosely to a few more.
+  crowd: [
+    ...[
+      [18, 20], [34, 12], [54, 20], [72, 12], [90, 20], [106, 12],
+      [24, 40], [42, 34], [60, 42], [80, 32], [98, 40],
+      [16, 58], [36, 56], [56, 62], [76, 54], [94, 60], [108, 50],
+    ].map(([cx, cy]): Shape => ({
+      tag: 'circle',
+      attrs: { cx: String(cx), cy: String(cy), r: '1.8' },
+    })),
+    { tag: 'line', attrs: { x1: '42', y1: '34', x2: '60', y2: '42' } },
+    { tag: 'path', attrs: { d: 'M42 34 L24 40 M42 34 L54 20 M42 34 L36 56', 'stroke-dasharray': '2 3' } },
+  ],
+  // Two figures no one could tell apart, thinking different things.
+  interior: [
+    { tag: 'circle', attrs: { cx: '40', cy: '28', r: '12' } },
+    { tag: 'path', attrs: { d: 'M22 62 a18 16 0 0 1 36 0' } },
+    { tag: 'circle', attrs: { cx: '40', cy: '28', r: '3' } },
+    { tag: 'circle', attrs: { cx: '80', cy: '28', r: '12' } },
+    { tag: 'path', attrs: { d: 'M62 62 a18 16 0 0 1 36 0' } },
+    { tag: 'path', attrs: { d: 'M75 29 q2.5 -4 5 0 t5 0' } },
+  ],
+  // One choice, each branch multiplied by all the next.
+  branching: [
+    { tag: 'circle', attrs: { cx: '16', cy: '38', r: '2.2' } },
+    ...[16, 38, 60].flatMap((y): Shape[] => [
+      { tag: 'line', attrs: { x1: '18', y1: '38', x2: '50', y2: String(y) } },
+      { tag: 'circle', attrs: { cx: '52', cy: String(y), r: '2' } },
+      ...[-7, 0, 7].flatMap((dy): Shape[] => [
+        { tag: 'line', attrs: { x1: '54', y1: String(y), x2: '92', y2: String(y + dy) } },
+        { tag: 'circle', attrs: { cx: '94', cy: String(y + dy), r: '1.6' } },
+      ]),
+    ]),
+  ],
+  // A page of empty positions, and one comma.
+  comma: [
+    { tag: 'rect', attrs: { x: '30', y: '10', width: '60', height: '54', rx: '1' } },
+    { tag: 'path', attrs: { d: 'M38 20 H82 M38 28 H82 M38 36 H56 M72 36 H82 M38 44 H82 M38 52 H82', 'stroke-dasharray': '0.1 4' } },
+    { tag: 'circle', attrs: { cx: '64', cy: '36', r: '1.6', fill: 'currentColor' } },
+    { tag: 'path', attrs: { d: 'M65.5 36.6 q0.3 3.4 -3 5.6' } },
+  ],
+  // Two windows across a street: a lamp lit in one, and someone at the other.
+  facing: [
+    { tag: 'rect', attrs: { x: '16', y: '14', width: '28', height: '36' } },
+    { tag: 'path', attrs: { d: 'M26 40 h8 l-2 -6 h-4 z M30 40 V46' } },
+    { tag: 'rect', attrs: { x: '76', y: '14', width: '28', height: '36' } },
+    { tag: 'path', attrs: { d: 'M90 14 V50 M76 32 H104' } },
+    { tag: 'line', attrs: { x1: '72', y1: '32', x2: '48', y2: '32', 'stroke-dasharray': '2 4' } },
+    { tag: 'path', attrs: { d: 'M12 50 H48 M72 50 H108' } },
+  ],
+  // A school notebook: three pages written, and the rest of his life left blank.
+  notebook: [
+    { tag: 'rect', attrs: { x: '22', y: '14', width: '38', height: '46', rx: '1' } },
+    { tag: 'rect', attrs: { x: '60', y: '14', width: '38', height: '46', rx: '1' } },
+    ...[20, 28, 36, 44, 52].map((cy): Shape => ({
+      tag: 'circle',
+      attrs: { cx: '60', cy: String(cy), r: '1.8' },
+    })),
+    { tag: 'path', attrs: { d: 'M28 24 H54 M28 30 H54 M28 36 H48' } },
+    { tag: 'path', attrs: { d: 'M66 24 H92 M66 30 H92 M66 36 H92 M66 42 H92 M66 48 H92', 'stroke-dasharray': '2 3' } },
   ],
 };
 
