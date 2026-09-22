@@ -1808,7 +1808,7 @@
       "hook": "your life appears in fragments in the books of people you never met.",
       "title": "Written Twice",
       "passage": [
-        "Your book contains your entire life, minute by minute. None of your pages appears only there. The twenty-six years in which you turned on the lamp at dusk are also in the book of the woman who lived opposite, written from the other window. The mornings on the bus are also in the driver's book. The four seconds of passing through a doorway are in the book of a man you would not recognise. Only your book holds them in sequence. The others keep you in fragments, among their own years."
+        "Your book contains your entire life, minute by minute. None of those pages exists only there. The twenty-six years in which you turned on the lamp at dusk are also in the book of the woman who lived opposite, written from the other window. Your mornings on the bus are also in the driver's book. The four seconds in which you crossed a doorway are in the book of a man you would not recognise. Only your book contains them one after another. The others keep you only in fragments, among the years of their own lives."
       ],
       "aftertaste": "No minute of yours is written only once.",
       "neighbors": [
@@ -1830,9 +1830,9 @@
       "headline": "THE OTHER WINDOW",
       "title": "The Other Window",
       "passage": [
-        "There is the book of the woman who lived opposite. It contains her complete life: the job, the seven moves, the sister she stopped speaking to, the long years at the end. And every evening, a line about the house opposite: the lamp was turned on at ten past seven. Twenty-six years of nearly identical lines. What in your book is written from within, in hers is written from here, and neither book is mistaken."
+        "There is a book belonging to the woman who lived opposite. It contains her complete life: the job, the seven moves, the sister she stopped speaking to, her long final years. And every evening, a line about the house opposite: the lamp came on at ten past seven. Twenty-six years of nearly identical lines. What is written from the inside in your book is written from here in hers, and neither book is wrong."
       ],
-      "aftertaste": "You never exchanged a word and you share twenty-six years.",
+      "aftertaste": "You never exchanged a word, yet you share twenty-six years.",
       "neighbors": [
         {
           "targetBookId": "b0086",
@@ -1852,7 +1852,7 @@
       "headline": "IN OPPOSITE DIRECTIONS",
       "title": "In Opposite Directions",
       "passage": [
-        "There is the book of the man who in 1996 passed through a doorway with you in opposite directions. It contains his childhood by the sea, the night shifts, the daughter he called every Sunday. And one afternoon in 1996, in a lobby, a stranger was leaving as he walked in. That stranger is you, and you bear no name. Everything his book contains of you fits into four seconds. Everything yours contains of him does too."
+        "There is a book belonging to the man who crossed a doorway with you in opposite directions in 1996. It contains his childhood by the sea, the night shifts, the daughter he called every Sunday. And one afternoon in 1996, in a lobby, a stranger was leaving as he came in. That stranger is you, and you have no name. Everything his book contains about you fits into four seconds. Everything your book contains about him does too."
       ],
       "aftertaste": "Each of you occupies four seconds in the other's book.",
       "neighbors": [
@@ -1875,10 +1875,10 @@
       "hook": "the person you invented in three pages has an entire life you never wrote.",
       "title": "The Child in the Notebook",
       "passage": [
-        "At nine, you invent a child. You give him a name, a face and a scar he hides under his hair. You write that he is afraid of water and that he lies when asked why.",
+        "At nine, you invent a child. You give him a name, a face and a scar he hides beneath his hair. You write that he is afraid of water and that he lies when asked why.",
         "You fill three pages.",
-        "Afterwards, you go on with your life. The notebook is lost during a move. You work, meet other people, grow old. By the time you die, you no longer remember that name.",
-        "Your book preserves those three pages. His preserves all the rest."
+        "Afterwards, you go on with your life. The notebook is lost in a move. You work, meet other people, grow old. When you die, you no longer remember that name.",
+        "Your book preserves those three pages. His preserves everything else."
       ],
       "aftertaste": "Three pages of yours. An entire life of his.",
       "neighbors": [
@@ -1901,11 +1901,11 @@
       "title": "What You Did Not Write",
       "passage": [
         "His book begins years before your three pages and continues long after them. The name, the face, the scar and the lie about the water all match.",
-        "Then come things you never wrote. He learns a trade. He moves. He loses his hair and stops hiding the scar. He cares for someone, and years later needs care himself.",
+        "Then come things you never wrote. He learns a trade. He moves house. He loses his hair and stops hiding the scar. He cares for someone, and years later he needs to be cared for.",
         "He never hears your name.",
         "When you stop imagining him, nothing happens in his book."
       ],
-      "aftertaste": "You stopped thinking of him. His book went on.",
+      "aftertaste": "You stopped thinking of him. His book continued.",
       "neighbors": [
         {
           "targetBookId": "b0089",
@@ -1925,9 +1925,9 @@
       "headline": "WHEN YOU WERE FORGOTTEN",
       "title": "When You Were Forgotten",
       "passage": [
-        "In this book someone is born whom you will never meet. At nine, they fill three pages of a notebook. The person they invent has your name and your face. They write a memory you have never told anyone, and an afternoon on which you read these very words.",
+        "In this book someone is born whom you will never meet. At nine, they fill three pages of a notebook. The person they invent has your name and your face. They write down a memory you have never told anyone, and an afternoon on which you read these same words.",
         "Then they close the notebook.",
-        "They study, work, meet other people and grow old. The notebook disappears during a move. For their final thirty years, they never think of that person again.",
+        "They study, work, meet other people and grow old. The notebook disappears during a move. For their last thirty years, they never think of that person again.",
         "You go on living."
       ],
       "aftertaste": "Their three pages ended. You did not.",
