@@ -212,6 +212,19 @@ describe('the order the wall is dealt in', () => {
     }
   });
 
+  it('returns Written Twice to the shuffled pool', () => {
+    let openedWith = 0;
+    for (let seed = 0n; seed < 40n; seed += 1n) {
+      const first = ids(wallBooks('first', seed));
+      const second = ids(wallBooks('second', seed));
+      expect(first.slice(0, PINNED_ROOT_IDS.length)).not.toContain('b0086');
+      expect([...first, ...second]).toContain('b0086');
+      if (first.includes('b0086')) openedWith += 1;
+    }
+    expect(openedWith).toBeGreaterThan(0);
+    expect(openedWith).toBeLessThan(40);
+  });
+
   it('shuffles the other twenty-two lives and splits them without overlap', () => {
     const first = ids(wallBooks('first', SEED));
     const second = ids(wallBooks('second', SEED));

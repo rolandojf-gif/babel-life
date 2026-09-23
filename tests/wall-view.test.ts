@@ -198,7 +198,7 @@ describe('the wall’s deal and its count', () => {
     const view = mount();
     const opening = ids(view);
     expect(opening).toHaveLength(12);
-    expect(opening.slice(0, 5)).toEqual(['b0086', 'b0041', 'b0074', 'b0038', 'b0010']);
+    expect(opening.slice(0, 5)).toEqual(['b0047', 'b0041', 'b0074', 'b0038', 'b0010']);
     expect(opening.slice(0, 5)).toEqual([...PINNED_ROOT_IDS]);
 
     view.update(state('second'));
