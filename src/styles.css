@@ -13,6 +13,7 @@
   --oxblood: #6e1f27;
   --oxblood-deep: #52161c;
   --charcoal: #2a221d;
+  --sanguine: #a4412a;
   --rule: rgba(23, 21, 15, 0.14);
   --rule-strong: rgba(23, 21, 15, 0.28);
   --serif: Iowan Old Style, Palatino Linotype, Palatino, Georgia, Times New Roman, serif;
@@ -656,6 +657,12 @@ body {
 /* Every motif is drawn by the same charcoal hand (see createCharcoalDefs). */
 .illustration__stroke {
   filter: url(#charcoal-hand);
+}
+
+/* Sanguine draws only what a nearby book changes from its root. */
+.illustration__stroke--sanguine {
+  color: var(--sanguine);
+  stroke: var(--sanguine);
 }
 
 .charcoal-defs {

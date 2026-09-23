@@ -6,7 +6,7 @@
 
 const NS = 'http://www.w3.org/2000/svg';
 
-interface Shape {
+export interface Shape {
   tag: 'line' | 'path' | 'circle' | 'ellipse' | 'rect' | 'polyline';
   attrs: Record<string, string>;
 }
@@ -338,8 +338,101 @@ const MOTIFS: Record<string, Shape[]> = {
   ],
 };
 
+/**
+ * Sanguine marks, for nearby books only: the stroke that draws what differs
+ * from the root, and nothing else. `tint` names strokes of the motif by
+ * position, `drop` removes strokes the difference moves, `base` adds charcoal
+ * strokes a moved element needs, and `add` draws new strokes in sanguine.
+ * Where the difference is everything, or the drawing shows what stays the
+ * same, the book has no entry and its motif stays wholly in charcoal.
+ */
+export interface Accent {
+  tint?: number[];
+  drop?: number[];
+  base?: Shape[];
+  add?: Shape[];
+}
+
+export const ACCENTS: Record<string, Accent> = {
+  // The second cot, the nearly identical birth.
+  b0022: { tint: [7, 8, 9, 10, 11, 12, 13] },
+  // The one room among all of them.
+  b0019: { tint: [2] },
+  // The other childhood converging on this afternoon.
+  b0016: { tint: [1, 4] },
+  // The desk in the next row.
+  b0018: { tint: [3] },
+  // The line read for another: the same sentence in another language.
+  b0032: { tint: [7] },
+  // The pane of the room next door.
+  b0020: { tint: [4] },
+  // The other person the earlier conception brings.
+  b0023: { tint: [4] },
+  // The same parents, living otherwise.
+  b0025: { tint: [0, 1] },
+  // One parent changed.
+  b0026: { tint: [1] },
+  // The one afternoon that remains.
+  b0027: { tint: [0, 1, 2, 3] },
+  // A paper clip in the open drawer, for seventeen minutes.
+  b0028: { add: [{ tag: 'path', attrs: { d: 'M76 57 H87 a2 2 0 0 0 0 -4 H78.5 a1.3 1.3 0 0 0 0 2.6 H85.5' } }] },
+  // The step, twenty centimetres to the left.
+  b0039: {
+    drop: [2],
+    add: [{ tag: 'line', attrs: { x1: '53', y1: '37', x2: '53', y2: '45', 'stroke-dasharray': '2 2' } }],
+  },
+  // One second more: the second hand.
+  b0042: { add: [{ tag: 'path', attrs: { d: 'M62.5 32.5 L50 55' } }] },
+  // The thirteenth step.
+  b0043: { tint: [6] },
+  // Someone else behind your door.
+  b0046: { tint: [1, 4] },
+  // Up to the last minute: the minute hand.
+  b0049: { tint: [1] },
+  // The one Tuesday: the front page.
+  b0051: { tint: [0, 2, 5, 6] },
+  // The right sock, first.
+  b0052: { tint: [0, 1] },
+  // One pause a second longer.
+  b0054: {
+    drop: [1],
+    base: [{ tag: 'path', attrs: { d: 'M34 28 H46 M60 28 H68' } }],
+    add: [{ tag: 'line', attrs: { x1: '49', y1: '28', x2: '57', y2: '28', 'stroke-dasharray': '0.1 3.5', 'stroke-width': '2.2' } }],
+  },
+  // The sleeper, turned the other way.
+  b0057: { drop: [2], add: [{ tag: 'path', attrs: { d: 'M46 46 C64 37 88 36 98 46' } }] },
+  // The reflection a millimetre apart.
+  b0060: { tint: [4, 5] },
+  // The same life on two wheels.
+  b0063: { tint: [0, 1, 2, 3] },
+  // The same life through the sky.
+  b0064: { tint: [2] },
+  // One day more: the hour hand.
+  b0067: { tint: [2] },
+  // The other covers under your name.
+  b0070: { tint: [3, 4, 5] },
+  // The thought that lasts three seconds.
+  b0078: { tint: [5] },
+  // The other window.
+  b0087: { tint: [2, 3] },
+  // The other life the crossing sits inside.
+  b0088: { tint: [1, 4] },
+  // The rest of his life, the pages he did not write.
+  b0090: { tint: [8] },
+  // The three pages someone else wrote.
+  b0091: { tint: [7] },
+};
+
+function appendShape(parent: SVGElement, shape: Shape): void {
+  const node = document.createElementNS(NS, shape.tag);
+  for (const [name, value] of Object.entries(shape.attrs)) {
+    node.setAttribute(name, value);
+  }
+  parent.append(node);
+}
+
 /** A decorative line drawing for a book, hidden from assistive technology. */
-export function createIllustration(motif: string): SVGSVGElement {
+export function createIllustration(motif: string, accent?: Accent): SVGSVGElement {
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('viewBox', '0 0 120 72');
   svg.setAttribute('class', 'illustration');
@@ -354,16 +447,27 @@ export function createIllustration(motif: string): SVGSVGElement {
   // The strokes sit in one group so the charcoal hand can be laid over them.
   const stroke = document.createElementNS(NS, 'g');
   stroke.setAttribute('class', 'illustration__stroke');
-  for (const shape of MOTIFS[motif] ?? MOTIFS['book'] ?? []) {
-    const node = document.createElementNS(NS, shape.tag);
-    for (const [name, value] of Object.entries(shape.attrs)) {
-      node.setAttribute(name, value);
-    }
-    stroke.append(node);
-  }
+  const sanguine = document.createElementNS(NS, 'g');
+  sanguine.setAttribute('class', 'illustration__stroke illustration__stroke--sanguine');
+
+  const tint = new Set(accent?.tint ?? []);
+  const drop = new Set(accent?.drop ?? []);
+  (MOTIFS[motif] ?? MOTIFS['book'] ?? []).forEach((shape, index) => {
+    if (drop.has(index)) return;
+    appendShape(tint.has(index) ? sanguine : stroke, shape);
+  });
+  for (const shape of accent?.base ?? []) appendShape(stroke, shape);
+  for (const shape of accent?.add ?? []) appendShape(sanguine, shape);
+
   svg.append(stroke);
+  if (sanguine.childElementCount > 0) svg.append(sanguine);
 
   return svg;
+}
+
+/** How many strokes a motif is drawn with, for checking accents against it. */
+export function motifStrokeCount(motif: string): number {
+  return MOTIFS[motif]?.length ?? 0;
 }
 
 export const CHARCOAL_FILTER_ID = 'charcoal-hand';

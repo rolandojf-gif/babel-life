@@ -3,7 +3,7 @@ import { anotherLifeAfter, findBook } from '../library/catalog';
 import { coordinateFor, shelfOf, step, type Coordinate } from '../library/coordinates';
 import { hashForAddress, hashForShelf } from '../library/routing';
 import type { Book } from '../library/model';
-import { createIllustration } from './illustrations';
+import { ACCENTS, createIllustration } from './illustrations';
 import { createCandleGlyph } from './motifs';
 import { createNearbyVolumes } from './NearbyVolumes';
 import { createEmbeddedShelf } from './shelfListing';
@@ -51,7 +51,7 @@ function createPassage(book: Book): HTMLDivElement {
 function createBookVisual(book: Book): HTMLDivElement {
   const visual = element('div', 'book__visual');
   visual.setAttribute('aria-hidden', 'true');
-  visual.append(createIllustration(book.icon));
+  visual.append(createIllustration(book.icon, ACCENTS[book.id]));
   return visual;
 }
 
