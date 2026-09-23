@@ -1009,14 +1009,19 @@ body {
 }
 
 .book--spread .book__visual {
+  order: 3;
   flex: none;
+  margin-top: 1.75rem;
   color: var(--charcoal);
   pointer-events: none;
 }
 
+/* The plate is drawn larger than a card's motif, so its line is set finer to
+   keep the same weight on the page. */
 .book--spread .book__visual .illustration {
-  width: 3.25rem;
+  width: 9rem;
   max-width: 100%;
+  stroke-width: 1.1;
 }
 
 .book--spread .already-here {
@@ -1094,6 +1099,7 @@ body {
   .book--spread .book__title,
   .book--spread .already-here,
   .book--spread .consulted,
+  .book--spread .book__visual,
   .book--spread .passage,
   .book--spread .aftertaste {
     order: 0;
@@ -1113,8 +1119,12 @@ body {
     font-size: 3rem;
   }
 
+  .book--spread .book__visual {
+    margin-top: clamp(2.25rem, 4vw, 3.5rem);
+  }
+
   .book--spread .book__visual .illustration {
-    width: 3.75rem;
+    width: 15rem;
   }
 
   .book--spread .passage {
