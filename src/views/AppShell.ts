@@ -6,6 +6,7 @@ import type { Controller } from '../library/controller';
 import type { AppState, RenderHint } from '../library/model';
 import { createAddressView } from './AddressView';
 import { createBookView } from './BookView';
+import { createCharcoalDefs } from './illustrations';
 import { createLanguageSwitcher } from './LanguageSwitcher';
 import { createShelfView } from './ShelfView';
 import { createWallOfLives } from './WallOfLives';
@@ -58,7 +59,7 @@ export function mountAppShell(
   legal.append(element('p', undefined, copy.legalOwner));
   footer.append(legal);
 
-  shell.append(grain, createLanguageSwitcher(), main, footer, status);
+  shell.append(grain, createCharcoalDefs(), createLanguageSwitcher(), main, footer, status);
   root.append(shell);
   initAtmosphere(shell);
   initMobileHeroIndexDrift();

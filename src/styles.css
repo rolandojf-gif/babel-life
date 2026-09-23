@@ -12,6 +12,7 @@
   --ink-muted: #6a6153;
   --oxblood: #6e1f27;
   --oxblood-deep: #52161c;
+  --charcoal: #2a221d;
   --rule: rgba(23, 21, 15, 0.14);
   --rule-strong: rgba(23, 21, 15, 0.28);
   --serif: Iowan Old Style, Palatino Linotype, Palatino, Georgia, Times New Roman, serif;
@@ -652,6 +653,18 @@ body {
   aspect-ratio: 120 / 72;
 }
 
+/* Every motif is drawn by the same charcoal hand (see createCharcoalDefs). */
+.illustration__stroke {
+  filter: url(#charcoal-hand);
+}
+
+.charcoal-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .card__body {
   display: flex;
   flex: 1;
@@ -697,7 +710,7 @@ body {
 
 .card--featured .card__visual {
   position: relative;
-  color: var(--oxblood);
+  color: var(--charcoal);
 }
 
 .card__visual .illustration {
@@ -864,7 +877,7 @@ body {
 
 .book__visual {
   flex: none;
-  color: var(--oxblood);
+  color: var(--charcoal);
 }
 
 .book__visual .illustration {
@@ -997,7 +1010,7 @@ body {
 
 .book--spread .book__visual {
   flex: none;
-  color: var(--oxblood);
+  color: var(--charcoal);
   pointer-events: none;
 }
 
@@ -2403,10 +2416,6 @@ body {
     -1px 0 0 rgba(23, 21, 15, 0.06) inset,
     0 24px 44px -24px rgba(82, 22, 28, 0.5),
     0 10px 22px -16px rgba(43, 26, 12, 0.4);
-}
-
-.js-cinematic .card__visual .illustration {
-  filter: drop-shadow(0 6px 10px rgba(43, 26, 12, 0.18));
 }
 
 /* Entrance choreography: cards rise out of the dark in a dealt cascade.
