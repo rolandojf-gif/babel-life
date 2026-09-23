@@ -1,20 +1,26 @@
 /**
  * @vitest-environment jsdom
  *
- * Sanguine accents: only nearby books carry them, each one names strokes that
- * exist in that book's own motif, and a book without an entry is drawn wholly
- * in charcoal.
+ * Sanguine accents: every root carries its point of contingency, nearby books
+ * carry what they change, each accent names strokes that exist in that book's
+ * own motif, and a book without an entry is drawn wholly in charcoal.
  */
 
 import { describe, expect, it } from 'vitest';
-import { catalog, findBook } from '../src/library/catalog';
+import { catalog, findBook, rootBooks } from '../src/library/catalog';
 import { ACCENTS, createIllustration, motifStrokeCount } from '../src/views/illustrations';
 import { createBookView } from '../src/views/BookView';
 
 describe('sanguine accents', () => {
-  it('belong to nearby books only', () => {
+  it('belong to books in the catalogue', () => {
     for (const id of Object.keys(ACCENTS)) {
-      expect(findBook(id)?.kind).toBe('nearby');
+      expect(findBook(id)).toBeDefined();
+    }
+  });
+
+  it('mark a point of contingency on every root', () => {
+    for (const root of rootBooks) {
+      expect(ACCENTS[root.id]).toBeDefined();
     }
   });
 
@@ -42,7 +48,7 @@ describe('sanguine accents', () => {
   it('reach the book’s plate', () => {
     const view = createBookView('b0039', null);
     expect(view.element.querySelector('.book__visual .illustration__stroke--sanguine')).not.toBeNull();
-    const root = createBookView('b0038', null);
-    expect(root.element.querySelector('.illustration__stroke--sanguine')).toBeNull();
+    const plain = createBookView('b0040', null);
+    expect(plain.element.querySelector('.illustration__stroke--sanguine')).toBeNull();
   });
 });
