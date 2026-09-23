@@ -131,7 +131,7 @@ describe('navigation motion', () => {
     document.body.append(root);
     const render = mountAppShell(root, createController(() => {}, 1n));
     const state: AppState = { view: 'wall', wallSelection: 'first', wallSeed: 1n,
-      currentBookId: null, address: null, shelf: null };
+      currentBookId: null, lastBookId: null, address: null, shelf: null };
     render(state, { focus: 'none' });
     state.view = 'book';
     state.currentBookId = 'b0007';

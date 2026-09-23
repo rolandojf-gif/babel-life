@@ -120,6 +120,18 @@ describe('moving between views', () => {
     expect(controller.state.currentBookId).toBeNull();
   });
 
+  it('remembers the book the visitor last closed, nearby books included', () => {
+    const nearby = catalog.books.find((book) => book.kind === 'nearby')!;
+    const { controller } = mount(`#book=${known.id}`);
+    expect(controller.state.lastBookId).toBeNull();
+    navigate(`#book=${nearby.id}`);
+    expect(controller.state.lastBookId).toBe(known.id);
+    navigate('');
+    expect(controller.state.view).toBe('wall');
+    expect(controller.state.currentBookId).toBeNull();
+    expect(controller.state.lastBookId).toBe(nearby.id);
+  });
+
   it('does not render again for the location it is already showing', () => {
     const { render } = mount(`#book=${known.id}`);
     expect(render).toHaveBeenCalledTimes(1);

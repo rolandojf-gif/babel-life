@@ -65,6 +65,12 @@ export type Copy = {
   wallCountPartial: string;
   /** `{total}` is the number of roots in the catalogue, spelled from `countWords`. */
   wallCountAll: string;
+  /** The edition's case beside the masthead: its label, then what it holds. */
+  editionLabel: string;
+  /** `{count}` is every readable book in this edition. */
+  editionBooks: string;
+  /** `{count}` is the root books the wall can show. */
+  editionOnWall: string;
   /** Sentence-initial number words, indexed by the number they spell. */
   countWords: readonly string[];
   /** `{count}` is the number of lives the stranger control adds, from `countWords`. */

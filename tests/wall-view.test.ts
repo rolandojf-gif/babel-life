@@ -24,6 +24,7 @@ function state(selection: AppState['wallSelection']): AppState {
     wallSelection: selection,
     wallSeed: SEED,
     currentBookId: null,
+    lastBookId: null,
     address: null,
     shelf: null,
   };

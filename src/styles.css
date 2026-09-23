@@ -324,7 +324,7 @@ body {
   }
 }
 
-/* Library index: a structural fragment, not a widget. */
+/* Library index: the case of this edition, not a widget. */
 .library-index {
   min-width: 0;
   max-width: 100%;
@@ -334,33 +334,59 @@ body {
   pointer-events: none;
 }
 
+.library-index__edition {
+  margin: 0 0 0.5rem;
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.library-index__edition-label {
+  color: var(--oxblood);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
 .library-index__field {
-  overflow: hidden;
   width: 100%;
-  max-width: 100%;
-  height: 7rem;
+  max-width: 20rem;
   min-width: 0;
 }
 
 .library-index__svg {
   display: block;
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 
-.library-index__svg--wide {
-  display: none;
+.library-index__boards {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 0.9;
+  opacity: 0.2;
 }
 
-.library-index__svg--narrow {
-  width: 66.25rem;
-  max-width: none;
-  height: 7rem;
-}
-
-.library-index__marks {
+/* Every book is a book: roots stand a little taller, wider and darker than
+   the two nearby books beside them, which stay plainly volumes too. */
+.library-index__spine {
   fill: var(--ink);
-  opacity: 0.20;
-  shape-rendering: crispEdges;
+}
+
+.library-index__spine--root {
+  opacity: 0.44;
+}
+
+.library-index__spine--nearby {
+  opacity: 0.22;
+}
+
+/* The rest of the current book's family answers in the locator's colour. */
+.library-index__spine--kin {
+  fill: var(--oxblood);
+  opacity: 0.38;
 }
 
 .library-index__locator {
@@ -370,7 +396,6 @@ body {
 
 .library-index__mark--current {
   fill: var(--oxblood);
-  shape-rendering: crispEdges;
   filter: drop-shadow(0 0 2.5px rgba(110, 31, 39, 0.48));
 }
 
@@ -462,20 +487,13 @@ body {
     justify-self: center;
   }
 
+  .library-index__edition {
+    text-align: center;
+  }
+
   .library-index__field {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 354 / 210;
-  }
-
-  .library-index__svg--wide {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .library-index__svg--narrow {
-    display: none;
+    max-width: 24rem;
+    margin-inline: auto;
   }
 
   .library-index__coordinate {
@@ -2051,6 +2069,10 @@ body {
     .library-index__ladder {
       transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
     }
+  }
+
+  .library-index__spine {
+    transition: fill var(--motion-settle) var(--motion-ease), opacity var(--motion-settle) var(--motion-ease);
   }
 
   :is(.backlink__arrow, .nearby__arrow, .shelf-locator__pointer) {

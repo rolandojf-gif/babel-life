@@ -27,6 +27,7 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
     wallSelection: 'first',
     wallSeed: seed,
     currentBookId: null,
+    lastBookId: null,
     address: null,
     shelf: null,
   };
@@ -36,6 +37,8 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
 
   function applyLocation(hint: RenderHint): void {
     const route = parseRoute(window.location.hash);
+    // The wall's index stands on the book the visitor has just closed.
+    if (state.currentBookId !== null) state.lastBookId = state.currentBookId;
     state.currentBookId = null;
     state.address = null;
     state.shelf = null;

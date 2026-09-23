@@ -1,28 +1,32 @@
 /**
  * @vitest-environment jsdom
  *
- * The homepage index is a structural fragment: thirty-two volumes, five
- * shelves, a wall, and one real address. It does not invent the rest.
+ * The homepage index is the case of this edition: every readable book, root
+ * and nearby, standing by family, with a locator on one of them and that
+ * book's real Library address printed beneath. It counts from the catalogue
+ * and does not pretend the books are neighbours in the Library.
  */
 
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { copy } from '../src/content/copy';
-import { PINNED_ROOT_IDS, wallBooks } from '../src/library/catalog';
+import * as locale from '../src/content/locale';
 import {
-  coordinateFor,
-  formatCoordinate,
-  SHELF_LENGTH,
-  SHELVES_PER_WALL,
-} from '../src/library/coordinates';
+  catalog,
+  EDITION_FAMILIES,
+  PINNED_ROOT_IDS,
+  TOTAL_BOOKS,
+  TOTAL_ROOTS,
+  wallBooks,
+} from '../src/library/catalog';
+import { coordinateFor, formatCoordinate } from '../src/library/coordinates';
 import {
+  aisleFor,
   createLibraryIndex,
-  INDEX_MARK_HEIGHT,
-  INDEX_MARK_WIDTH,
-  locatorPosition,
-  NARROW_INDEX,
+  editionCase,
+  FAMILIES_PER_SHELF,
+  NEARBY_SPINE_WIDTH,
+  ROOT_SPINE_WIDTH,
   updateLibraryIndex,
-  wallWidth,
-  WIDE_INDEX,
 } from '../src/views/libraryIndex';
 import { createWallOfLives } from '../src/views/WallOfLives';
 import type { AppState } from '../src/library/model';
@@ -30,199 +34,195 @@ import type { AppState } from '../src/library/model';
 const SEED = 20260919n;
 const OTHER_SEED = 7n;
 
-const known = {
-  hexagon: 'A',
-  wall: 2,
-  shelf: 3,
-  volume: 8,
-};
+const firstFamily = EDITION_FAMILIES[0]!;
+const aRoot = firstFamily.rootId;
+const aNearby = firstFamily.nearbyIds[1]!;
 
-function locator(index: HTMLElement, which: 'wide' | 'narrow'): SVGGElement {
-  const group = index.querySelector(`.library-index__svg--${which} .library-index__locator`);
-  if (!(group instanceof SVGGElement)) throw new Error(`missing ${which} locator`);
-  return group;
-}
-
-function locatorPlacement(
-  index: HTMLElement,
-  which: 'wide' | 'narrow',
-): { x: number; y: number; wall: number; shelf: number; volume: number } {
-  const group = locator(index, which);
-  const match = /^translate\(([-\d.]+)px,\s*([-\d.]+)px\)$/.exec(group.style.transform);
-  if (!match?.[1] || !match[2]) throw new Error(`unexpected transform: ${group.style.transform}`);
-  return {
-    x: Number(match[1]),
-    y: Number(match[2]),
-    wall: Number(group.getAttribute('data-wall')),
-    shelf: Number(group.getAttribute('data-shelf')),
-    volume: Number(group.getAttribute('data-volume')),
-  };
+function locatedBook(index: Element): string | null {
+  return index.querySelector('.library-index__locator')?.getAttribute('data-book') ?? null;
 }
 
 function printed(node: Element | null): string {
   return (node?.textContent ?? '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+function address(bookId: string): string {
+  return formatCoordinate(coordinateFor(bookId));
+}
+
 function dealtHrefs(view: { element: HTMLElement }): string[] {
   return [...view.element.querySelectorAll('a.card')].map((card) => card.getAttribute('href') ?? '');
 }
 
-function wallState(seed: bigint, selection: AppState['wallSelection'] = 'first'): AppState {
+function wallState(
+  seed: bigint,
+  selection: AppState['wallSelection'] = 'first',
+  lastBookId: string | null = null,
+): AppState {
   return {
     view: 'wall',
     wallSelection: selection,
     wallSeed: seed,
     currentBookId: null,
+    lastBookId,
     address: null,
     shelf: null,
   };
 }
 
-describe('the library index', () => {
-  it('is not a control', () => {
-    const index = createLibraryIndex(known);
-    expect(index.querySelector('a, button, [href], [tabindex]')).toBeNull();
-    expect(index.querySelector('.library-index__field')?.getAttribute('aria-hidden')).toBe('true');
-    expect(index.querySelectorAll('svg[aria-hidden="true"]')).toHaveLength(2);
+describe('the edition’s families', () => {
+  it('are the root books in wall order, each with its own nearby books', () => {
+    const roots = catalog.books.filter((book) => book.kind === 'root');
+    expect(EDITION_FAMILIES).toHaveLength(roots.length);
+    expect(EDITION_FAMILIES.map((family) => family.rootId)).toEqual([
+      ...catalog.wall.first,
+      ...catalog.wall.second,
+    ]);
+    const counted = EDITION_FAMILIES.flatMap((family) => [family.rootId, ...family.nearbyIds]);
+    expect(counted).toHaveLength(catalog.books.length);
+    expect(new Set(counted).size).toBe(catalog.books.length);
+    for (const family of EDITION_FAMILIES) {
+      for (const id of family.nearbyIds) {
+        const book = catalog.books.find((entry) => entry.id === id);
+        expect(book?.kind).toBe('nearby');
+        expect(book?.rootId).toBe(family.rootId);
+      }
+    }
+  });
+});
+
+describe('the edition’s case', () => {
+  it('stands one spine for every readable book, derived from the catalogue', () => {
+    const edition = editionCase();
+    expect(edition.spines).toHaveLength(TOTAL_BOOKS);
+    expect(edition.spines.filter((spine) => spine.kind === 'root')).toHaveLength(TOTAL_ROOTS);
+    expect(edition.spines.filter((spine) => spine.kind === 'nearby')).toHaveLength(
+      TOTAL_BOOKS - TOTAL_ROOTS,
+    );
+    expect(edition.shelves).toBe(Math.ceil(TOTAL_ROOTS / FAMILIES_PER_SHELF));
+
+    const index = createLibraryIndex(aRoot);
+    expect(index.querySelectorAll('.library-index__spine')).toHaveLength(TOTAL_BOOKS);
+    expect(index.querySelectorAll('.library-index__spine--root')).toHaveLength(TOTAL_ROOTS);
   });
 
-  it('prints only the one real coordinate', () => {
-    const index = createLibraryIndex(known);
-    expect(printed(index.querySelector('.coordinate'))).toBe(formatCoordinate(known));
+  it('grows with the catalogue instead of holding a fixed count', () => {
+    const more = [...EDITION_FAMILIES, { rootId: 'b9001', nearbyIds: ['b9002', 'b9003'] }];
+    const edition = editionCase(more);
+    expect(edition.spines).toHaveLength(TOTAL_BOOKS + 3);
+    expect(edition.shelves).toBe(Math.ceil(more.length / FAMILIES_PER_SHELF));
+  });
+
+  it('keeps each family together, its root between its two nearby books', () => {
+    const edition = editionCase();
+    for (const family of EDITION_FAMILIES) {
+      const spines = edition.spines.filter((spine) => spine.rootId === family.rootId);
+      expect(spines.map((spine) => spine.id)).toEqual([
+        family.nearbyIds[0],
+        family.rootId,
+        ...family.nearbyIds.slice(1),
+      ]);
+      expect(new Set(spines.map((spine) => spine.baseline)).size).toBe(1);
+      const start = edition.spines.indexOf(spines[0]!);
+      expect(edition.spines.slice(start, start + spines.length)).toEqual(spines);
+    }
+  });
+
+  it('gives roots more presence without making nearby books marks', () => {
+    for (const spine of editionCase().spines) {
+      expect(spine.width).toBe(spine.kind === 'root' ? ROOT_SPINE_WIDTH : NEARBY_SPINE_WIDTH);
+      expect(spine.height).toBeGreaterThan(spine.width * 3);
+    }
+    expect(ROOT_SPINE_WIDTH).toBeGreaterThan(NEARBY_SPINE_WIDTH);
+  });
+
+  it('labels itself as this edition, counting from the catalogue in both editions', () => {
+    expect(printed(createLibraryIndex(aRoot).querySelector('.library-index__edition'))).toBe(
+      `THIS EDITION · ${String(TOTAL_BOOKS)} books · ${String(TOTAL_ROOTS)} on the wall`,
+    );
+    vi.spyOn(locale, 'getLocale').mockReturnValue('es');
+    expect(printed(createLibraryIndex(aRoot).querySelector('.library-index__edition'))).toBe(
+      `ESTA EDICIÓN · ${String(TOTAL_BOOKS)} libros · ${String(TOTAL_ROOTS)} en el muro`,
+    );
+    vi.restoreAllMocks();
+    for (const template of [copy.editionBooks, copy.editionOnWall]) {
+      expect(template).toContain('{count}');
+      expect(template).not.toMatch(/\d/);
+    }
+  });
+});
+
+describe('the library index', () => {
+  it('is not a control', () => {
+    const index = createLibraryIndex(aRoot);
+    expect(index.querySelector('a, button, [href], [tabindex]')).toBeNull();
+    expect(index.querySelector('.library-index__field')?.getAttribute('aria-hidden')).toBe('true');
+    expect(index.querySelectorAll('svg[aria-hidden="true"]')).toHaveLength(1);
+  });
+
+  it('prints the real address of the book it stands on, and only that', () => {
+    const index = createLibraryIndex(aRoot);
+    expect(printed(index.querySelector('.library-index__coordinate'))).toBe(address(aRoot));
     expect(index.textContent).not.toContain(copy.lede);
   });
 
-  it('marks the current volume on its shelf, and nowhere else', () => {
-    const index = createLibraryIndex(known);
-    const currents = [...index.querySelectorAll('.library-index__mark--current')];
-    expect(currents).toHaveLength(2);
-    expect(currents[0]?.getAttribute('width')).toBe(String(INDEX_MARK_WIDTH));
-    expect(currents[0]?.getAttribute('height')).toBe(String(INDEX_MARK_HEIGHT));
-
-    const wide = locatorPlacement(index, 'wide');
-    const expected = locatorPosition(WIDE_INDEX, known);
-    expect(wide).toEqual({ ...expected, wall: known.wall, shelf: known.shelf, volume: known.volume });
-    expect(wide.x).toBeGreaterThan(locatorPosition(WIDE_INDEX, { ...known, wall: 1 }).x);
-
-    const mobile = locatorPlacement(index, 'narrow');
-    const onShelf = locatorPosition(NARROW_INDEX, known);
-    expect(mobile).toEqual({ ...onShelf, wall: known.wall, shelf: known.shelf, volume: known.volume });
+  it('stands the locator on a nearby book as readily as on a root', () => {
+    const index = createLibraryIndex(aRoot);
+    const spine = editionCase().spines.find((entry) => entry.id === aNearby)!;
+    updateLibraryIndex(index, aNearby);
+    const group = index.querySelector<SVGGElement>('.library-index__locator')!;
+    expect(locatedBook(index)).toBe(aNearby);
+    expect(group.getAttribute('data-kind')).toBe('nearby');
+    expect(group.style.transform).toBe(`translate(${String(spine.x)}px, ${String(spine.y)}px)`);
+    const mark = group.querySelector('.library-index__mark--current');
+    expect(mark?.getAttribute('width')).toBe(String(spine.width));
+    expect(mark?.getAttribute('height')).toBe(String(spine.height));
+    expect(printed(index.querySelector('.library-index__coordinate'))).toBe(address(aNearby));
   });
 
-  it('keeps the marker inside the three visible groups without changing the real address', () => {
-    const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
-    const xs = [1, 2, 3, 4].map((wall) => {
-      const coordinate = { hexagon: 'A', wall, shelf: 1, volume: 1 };
-      updateLibraryIndex(index, coordinate);
-      const placed = locatorPlacement(index, 'wide');
-      expect(placed.wall).toBe(wall);
-      expect(placed).toMatchObject(locatorPosition(WIDE_INDEX, coordinate));
-      return placed.x;
-    });
-    expect(xs[0]).toBeLessThan(xs[1] ?? Infinity);
-    expect(xs[1]).toBeLessThan(xs[2] ?? Infinity);
-    expect(xs[2]).toBe(xs[3]);
-    expect(printed(index.querySelector('.coordinate'))).toContain('Wall 4');
+  it('lets the rest of the current book’s family answer, and no other book', () => {
+    const index = createLibraryIndex(aRoot);
+    const kin = () =>
+      [...index.querySelectorAll('.library-index__spine--kin')].map((node) => node.getAttribute('data-book'));
+    expect(kin().sort()).toEqual([...firstFamily.nearbyIds].sort());
+    updateLibraryIndex(index, aNearby);
+    expect(kin().sort()).toEqual([aRoot, firstFamily.nearbyIds[0]].sort());
+    const other = EDITION_FAMILIES[5]!;
+    updateLibraryIndex(index, other.rootId);
+    expect(kin().sort()).toEqual([...other.nearbyIds].sort());
   });
 
-  it('moves the locator to another real coordinate without inventing one', () => {
-    const index = createLibraryIndex(known);
-    const next = { hexagon: 'Z', wall: 4, shelf: 5, volume: 32 };
-    updateLibraryIndex(index, next);
-    expect(printed(index.querySelector('.coordinate'))).toBe(formatCoordinate(next));
-    expect(locatorPlacement(index, 'wide')).toEqual({
-      ...locatorPosition(WIDE_INDEX, next),
-      wall: next.wall,
-      shelf: next.shelf,
-      volume: next.volume,
-    });
-    expect(index.querySelector('a, button, [tabindex]')).toBeNull();
-  });
-
-  it('is built from thirty-two volumes and five shelves', () => {
-    expect(SHELF_LENGTH).toBe(32);
-    expect(SHELVES_PER_WALL).toBe(5);
-    expect(wallWidth(WIDE_INDEX)).toBe(32 * INDEX_MARK_WIDTH + 31 * WIDE_INDEX.markGap);
-    expect(WIDE_INDEX.columns).toBeGreaterThan(1);
-    expect(WIDE_INDEX.rows).toBeGreaterThan(1);
-    expect(NARROW_INDEX.columns).toBeGreaterThan(1);
-    expect(NARROW_INDEX.rows).toBe(1);
-    expect(WIDE_INDEX.columns).toBe(3);
-    expect(WIDE_INDEX.width).toBe(354);
-    expect(WIDE_INDEX.height).toBe(210);
-    expect(NARROW_INDEX.height).toBe(112);
-  });
-
-  it('keeps an SVG fallback for the animated leader and avoids rebuilding an unchanged address', () => {
-    const index = createLibraryIndex(known);
-    const readout = index.querySelector('.coordinate')?.firstChild;
-    updateLibraryIndex(index, known);
-    expect(index.querySelector('.coordinate')?.firstChild).toBe(readout);
-    updateLibraryIndex(index, { ...known, wall: 1, shelf: 5, volume: 32 });
-    for (const leader of index.querySelectorAll<SVGElement>('.library-index__leader')) {
-      expect(leader.style.getPropertyValue('d')).toBe(`path("${leader.getAttribute('d')}")`);
-      expect(leader.getAttribute('d')).toMatch(/^M[\d.]+ [\d.]+H[\d.]+V[\d.]+$/);
-    }
-  });
-
-  it('stands a ladder in the leader’s aisle, facing the volume, and moves it with the leader', () => {
-    const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
-
-    function ladderAgainstLeader(which: 'wide' | 'narrow'): { aligned: boolean; facing: number } {
-      const svg = index.querySelector(`.library-index__svg--${which}`);
-      const ladder = svg?.querySelector<SVGGElement>('.library-index__ladder');
-      const d = svg?.querySelector('.library-index__leader')?.getAttribute('d') ?? '';
-      const leader = /^M[\d.]+ ([\d.]+)H([\d.]+)V[\d.]+$/.exec(d);
-      const placed = /^translate\(([-\d.]+)px, ([-\d.]+)px\) scaleX\((-?1)\)$/.exec(
-        ladder?.style.transform ?? '',
+  it('runs the leader up, along to the nearer aisle and down, and stands the ladder there', () => {
+    const edition = editionCase();
+    const index = createLibraryIndex(aRoot);
+    for (const spine of [edition.spines[0]!, edition.spines.at(-1)!, edition.spines[40]!]) {
+      updateLibraryIndex(index, spine.id);
+      const aisle = aisleFor(spine);
+      const leader = index.querySelector<SVGElement>('.library-index__leader')!;
+      const d = leader.getAttribute('d') ?? '';
+      expect(d).toMatch(/^M[\d.]+ [\d.]+V[\d.]+H[\d.]+V[\d.]+$/);
+      expect(leader.style.getPropertyValue('d')).toBe(`path("${d}")`);
+      // The run clears every book on the shelf and stays below the board above.
+      const tallest = Math.max(
+        ...edition.spines.filter((entry) => entry.baseline === spine.baseline).map((entry) => entry.height),
       );
-      if (!leader?.[1] || !leader[2] || !placed?.[1] || !placed[2] || !placed[3]) {
-        throw new Error(`unexpected ladder or leader: ${ladder?.style.transform ?? ''} / ${d}`);
-      }
-      return {
-        aligned: Number(placed[1]) === Number(leader[2]) && Number(placed[2]) === Number(leader[1]),
-        facing: Number(placed[3]),
-      };
+      expect(aisle.runY).toBeLessThan(spine.baseline - tallest);
+      expect(aisle.runY).toBeGreaterThan(spine.baseline - 34);
+      expect(aisle.gutterX < edition.caseLeft || aisle.gutterX > edition.caseRight).toBe(true);
+      const ladder = index.querySelector<SVGGElement>('.library-index__ladder')!;
+      expect(ladder.style.transform).toBe(
+        `translate(${String(aisle.gutterX)}px, ${String(aisle.runY)}px) scaleX(${String(aisle.side)})`,
+      );
     }
-
-    // The far rail stands away from the volume: right of a leader that ran right.
-    expect(ladderAgainstLeader('wide')).toEqual({ aligned: true, facing: 1 });
-    expect(ladderAgainstLeader('narrow')).toEqual({ aligned: true, facing: 1 });
-
-    updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 4, volume: 32 });
-    expect(ladderAgainstLeader('wide')).toEqual({ aligned: true, facing: -1 });
-    // The narrow field keeps its locator on the anchored wall, the first.
-    expect(ladderAgainstLeader('narrow')).toEqual({ aligned: true, facing: 1 });
-
-    expect(index.querySelectorAll('.library-index__ladder')).toHaveLength(2);
-    expect(index.querySelector('.library-index__ladder')?.closest('[aria-hidden="true"]')).not.toBeNull();
+    expect(aisleFor(edition.spines[0]!).side).toBe(-1);
+    expect(aisleFor(edition.spines.at(-1)!).side).toBe(1);
   });
 
-  it('mirrors the leader line direction based on volume position within its wall', () => {
-    const index = createLibraryIndex({ hexagon: 'A', wall: 1, shelf: 1, volume: 1 });
-
-    function leaderDirection(which: 'wide' | 'narrow'): 'right' | 'left' {
-      const svg = index.querySelector(`.library-index__svg--${which}`);
-      const leader = svg?.querySelector('.library-index__leader');
-      const d = leader?.getAttribute('d') ?? '';
-      const parts = /^M([\d.]+) [\d.]+H([\d.]+)V[\d.]+$/.exec(d);
-      if (!parts?.[1] || !parts[2]) throw new Error(`unexpected path: ${d}`);
-      return Number(parts[2]) > Number(parts[1]) ? 'right' : 'left';
-    }
-
-    // Volume 1 is in the left half → leader should exit rightward.
-    updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 1, volume: 1 });
-    expect(leaderDirection('wide')).toBe('right');
-
-    // Volume 32 is in the right half → leader should exit leftward.
-    updateLibraryIndex(index, { hexagon: 'A', wall: 2, shelf: 1, volume: 32 });
-    expect(leaderDirection('wide')).toBe('left');
-
-    // The first wall has only the field's edge on its left, so even its right
-    // half uses the aisle on the right, where the ladder has room to stand.
-    updateLibraryIndex(index, { hexagon: 'A', wall: 1, shelf: 1, volume: 32 });
-    expect(leaderDirection('wide')).toBe('right');
-    expect(leaderDirection('narrow')).toBe('right');
+  it('avoids rebuilding an unchanged book', () => {
+    const index = createLibraryIndex(aRoot);
+    const readout = index.querySelector('.library-index__coordinate')?.firstChild;
+    updateLibraryIndex(index, aRoot);
+    expect(index.querySelector('.library-index__coordinate')?.firstChild).toBe(readout);
   });
 });
 
@@ -234,11 +234,10 @@ describe('the wall’s index', () => {
     });
     const first = wallBooks('first', SEED)[0];
     if (!first) throw new Error('expected a first root');
-    const address = coordinateFor(first.id);
 
     expect(view.element.querySelector('a.card')?.getAttribute('href')).toBe(`#book=${first.id}`);
     expect(printed(view.element.querySelector('.library-index .coordinate'))).toBe(
-      formatCoordinate(address),
+      address(first.id),
     );
   });
 
@@ -277,12 +276,7 @@ describe('the wall’s index', () => {
     otherCard.dispatchEvent(new PointerEvent('pointerover', { bubbles: true }));
     const hovered = coordinateFor(other.id);
     expect(printed(index.querySelector('.coordinate'))).toBe(formatCoordinate(hovered));
-    expect(locatorPlacement(index, 'wide')).toMatchObject({
-      wall: hovered.wall,
-      shelf: hovered.shelf,
-      volume: hovered.volume,
-      ...locatorPosition(WIDE_INDEX, hovered),
-    });
+    expect(locatedBook(index)).toBe(other.id);
 
     otherCard.dispatchEvent(
       new PointerEvent('pointerout', { bubbles: true, relatedTarget: document.body }),
@@ -295,6 +289,25 @@ describe('the wall’s index', () => {
     expect(printed(index.querySelector('.coordinate'))).toBe(formatCoordinate(coordinateFor(first.id)));
 
     expect(dealtHrefs(view)).toEqual(books.map((book) => `#book=${book.id}`));
+  });
+
+  it('rests on the book the visitor last closed, a nearby one included', () => {
+    const view = createWallOfLives(wallState(SEED, 'first', aNearby), {
+      onSomethingStranger() {},
+      onShowAll() {},
+    });
+    document.body.replaceChildren(view.element);
+    const index = view.element.querySelector('.library-index')!;
+    expect(locatedBook(index)).toBe(aNearby);
+    expect(printed(index.querySelector('.coordinate'))).toBe(address(aNearby));
+
+    const card = view.element.querySelectorAll<HTMLAnchorElement>('a.card')[2]!;
+    card.focus();
+    expect(locatedBook(index)).toBe(wallBooks('first', SEED)[2]!.id);
+    card.blur();
+    expect(locatedBook(index)).toBe(aNearby);
+    // The wall itself is untouched: still only root cards.
+    expect(dealtHrefs(view)).toEqual(wallBooks('first', SEED).map((book) => `#book=${book.id}`));
   });
 
   it('rests on the opening volume the anchors pin there, whatever the deal', () => {

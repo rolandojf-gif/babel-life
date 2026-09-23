@@ -198,6 +198,29 @@ export function wallBooks(selection: WallSelection, seed: bigint): RootBook[] {
 export const TOTAL_BOOKS = englishCatalog.books.length;
 export const TOTAL_ROOTS = ROOT_BOOKS.en.length;
 
+/** One narrative family: a root book and the nearby books that hang off it. */
+export interface EditionFamily {
+  rootId: string;
+  /** In the order the root's own page offers them. */
+  nearbyIds: readonly string[];
+}
+
+function familiesOf(data: Catalog): EditionFamily[] {
+  return rootBooksOf(data).map((root) => ({
+    rootId: root.id,
+    nearbyIds: root.neighbors
+      .map((edge) => data.books.find((book) => book.id === edge.targetBookId))
+      .filter((book): book is Book => book?.kind === 'nearby' && book.rootId === root.id)
+      .map((book) => book.id),
+  }));
+}
+
+/**
+ * Every readable book in this edition, grouped by family in the wall's
+ * canonical order. Identity is aligned across editions, so one list serves both.
+ */
+export const EDITION_FAMILIES: readonly EditionFamily[] = familiesOf(englishCatalog);
+
 /**
  * The next life to offer from a book: the root life following this one's own in
  * the wall order, so the visitor is never handed a variation of the same page.

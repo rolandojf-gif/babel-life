@@ -64,6 +64,9 @@ export const copy: Copy = {
   legalOwner: 'Maintained by Rolando Fernández in Spain.',
   wallCountPartial: '{count} of {total} books.',
   wallCountAll: 'All {total} books.',
+  editionLabel: 'THIS EDITION',
+  editionBooks: '{count} books',
+  editionOnWall: '{count} on the wall',
   countWords: [
     'Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
     'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen',

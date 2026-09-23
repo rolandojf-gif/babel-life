@@ -1,6 +1,5 @@
 import { copy, fill } from '../content/copy';
 import { TOTAL_ROOTS, wallBooks } from '../library/catalog';
-import { coordinateFor } from '../library/coordinates';
 import type { AppState } from '../library/model';
 import { parseRoute } from '../library/routing';
 import { createBookCard } from './BookCard';
@@ -91,11 +90,17 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   preamble.append(candle, document.createTextNode(copy.cardEyebrow));
   preamble.setAttribute('aria-hidden', 'true');
 
-  const opening = wallBooks('first', state.wallSeed);
-  const firstRoot = opening[0];
-  if (!firstRoot) throw new Error('The wall has no first volume');
-  let defaultBookId = firstRoot.id;
-  const index = createLibraryIndex(coordinateFor(defaultBookId));
+  // At rest the index stands on the book the visitor last closed, root or
+  // nearby, or else on the first card of this visit's deal.
+  function restingBookId(next: AppState): string {
+    if (next.lastBookId !== null) return next.lastBookId;
+    const opening = wallBooks('first', next.wallSeed)[0];
+    if (!opening) throw new Error('The wall has no first volume');
+    return opening.id;
+  }
+
+  let defaultBookId = restingBookId(state);
+  const index = createLibraryIndex(defaultBookId);
   masthead.append(copyBlock, index);
 
   const grid = element('ul', 'wall__grid');
@@ -115,7 +120,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
 
   function locate(): void {
     const id = pointerBookId ?? focusBookId ?? defaultBookId;
-    updateLibraryIndex(index, coordinateFor(id));
+    updateLibraryIndex(index, id);
   }
 
   grid.addEventListener('pointerover', (event) => {
@@ -166,8 +171,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   root.append(masthead, preamble, grid, count, actionsRow);
 
   function update(next: AppState): void {
-    const opening = wallBooks('first', next.wallSeed)[0];
-    if (opening) defaultBookId = opening.id;
+    defaultBookId = restingBookId(next);
     pointerBookId = undefined;
     focusBookId = undefined;
 
