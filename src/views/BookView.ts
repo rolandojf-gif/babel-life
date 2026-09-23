@@ -103,13 +103,15 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   title.tabIndex = -1;
 
   const header = element('div', 'book__header');
-  header.append(title, createBookVisual(book));
+  header.append(title);
 
+  // The motif stands on the verso as the book's plate, under the reading note.
   const verso = element('div', 'spread__verso');
   verso.append(
     element('p', 'found', copy.found),
     createShelfLocator(coordinate),
     createConsultationLine(new Date()),
+    createBookVisual(book),
   );
 
   const gutter = element('div', 'spread__gutter');

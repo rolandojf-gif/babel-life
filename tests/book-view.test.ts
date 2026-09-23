@@ -32,6 +32,7 @@ describe('BookView', () => {
     expect(verso?.querySelector('.found')).not.toBeNull();
     expect(verso?.querySelector('.shelf-locator')).not.toBeNull();
     expect(verso?.querySelector('.consulted')).not.toBeNull();
+    expect(verso?.querySelector('.book__visual .illustration')).not.toBeNull();
 
     const recto = view.element.querySelector('.spread__recto');
     expect(recto).not.toBeNull();
@@ -39,5 +40,6 @@ describe('BookView', () => {
     expect(recto?.querySelector('.passage')).not.toBeNull();
     expect(recto?.querySelector('.aftertaste')).not.toBeNull();
     expect(recto?.querySelector('.consulted')).toBeNull();
+    expect(recto?.querySelector('.book__visual')).toBeNull();
   });
 });
