@@ -56,7 +56,7 @@ Usar de forma consistente las siguientes soluciones preferentes:
 | *legible* | **legible** | Para un volumen cuyo contenido puede leerse en esta edición. |
 | *illegible* | **ilegible** | Para una dirección presente cuyo contenido no puede leerse. |
 | *nearby volumes* | **volúmenes cercanos** | Etiqueta editorial y navegación. |
-| *Wall of Lives* | **Pared de vidas** | Nombre de la pared principal y de la navegación de retorno. |
+| *Wall of Lives* | **Muro de vidas** | Nombre del muro principal y de la navegación de retorno. Es nombre propio: no confundir con *pared*, que sigue siendo la superficie física de estanterías. |
 | *edition* | **edición** | Esta versión concreta de la Biblioteca y de sus textos imprimibles. |
 
 No traducir *Babel Life* como **Vida de Babel**: es el nombre propio del proyecto. *Library of Babel* sí se traduce como **Biblioteca de Babel**, incluso cuando aparezca dentro de una frase. No conservar términos ingleses por prestigio o por comodidad. Solo debe permanecer en inglés **Babel Life**, por ser la marca y título del proyecto; los nombres de claves técnicas, identificadores, rutas y valores de código no forman parte de la prosa editorial y no se traducen aquí.

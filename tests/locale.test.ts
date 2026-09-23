@@ -101,7 +101,7 @@ describe('Spanish UI copy', () => {
     const en = copyFor('en');
     expect(es.language).toBe('Idioma');
     expect(es.openThisLife).toBe('ABRIR ESTA VIDA');
-    expect(es.backToWall).toBe('Pared de vidas');
+    expect(es.backToWall).toBe('Muro de vidas');
     expect(es.nearbyVolumes).toBe('LIBROS CERCANOS');
     expect(es.coordHexagon).toBe('Hexágono');
     expect(es.coordWall).toBe('Pared');

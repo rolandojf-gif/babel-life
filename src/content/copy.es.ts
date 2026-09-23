@@ -22,7 +22,7 @@ export const copy: Copy = {
   openThisLife: 'ABRIR ESTA VIDA',
   somethingStranger: 'MOSTRARME ALGO MÁS EXTRAÑO',
   showAll: 'MOSTRAR LAS 27',
-  backToWall: 'Pared de vidas',
+  backToWall: 'Muro de vidas',
   found: 'HAS ENCONTRADO EL LIBRO',
   alreadyHere: 'Este libro ya estaba aquí.',
   nearbyVolumes: 'LIBROS CERCANOS',
