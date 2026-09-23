@@ -351,14 +351,74 @@ export function createIllustration(motif: string): SVGSVGElement {
   svg.setAttribute('stroke-linecap', 'round');
   svg.setAttribute('stroke-linejoin', 'round');
 
+  // The strokes sit in one group so the charcoal hand can be laid over them.
+  const stroke = document.createElementNS(NS, 'g');
+  stroke.setAttribute('class', 'illustration__stroke');
   for (const shape of MOTIFS[motif] ?? MOTIFS['book'] ?? []) {
     const node = document.createElementNS(NS, shape.tag);
     for (const [name, value] of Object.entries(shape.attrs)) {
       node.setAttribute(name, value);
     }
-    svg.append(node);
+    stroke.append(node);
+  }
+  svg.append(stroke);
+
+  return svg;
+}
+
+export const CHARCOAL_FILTER_ID = 'charcoal-hand';
+
+/**
+ * The hand every motif is drawn with: a slight tremor along the line, the
+ * tooth of the paper breaking it, a second lighter pass beside it, and a soft
+ * smudge underneath. Defined once for the document; the region is fixed to
+ * the motifs' shared 120x72 field so a lone horizontal stroke still renders.
+ */
+export function createCharcoalDefs(): SVGSVGElement {
+  const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('class', 'charcoal-defs');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('focusable', 'false');
+  svg.setAttribute('width', '0');
+  svg.setAttribute('height', '0');
+
+  const filter = document.createElementNS(NS, 'filter');
+  filter.id = CHARCOAL_FILTER_ID;
+  for (const [name, value] of Object.entries({
+    filterUnits: 'userSpaceOnUse',
+    x: '-10',
+    y: '-10',
+    width: '140',
+    height: '92',
+    'color-interpolation-filters': 'sRGB',
+  })) {
+    filter.setAttribute(name, value);
   }
 
+  const primitives: Array<[string, Record<string, string>, Array<[string, Record<string, string>]>?]> = [
+    ['feTurbulence', { type: 'fractalNoise', baseFrequency: '0.03', numOctaves: '2', seed: '4', result: 'tremor' }],
+    ['feDisplacementMap', { in: 'SourceGraphic', in2: 'tremor', scale: '3', xChannelSelector: 'R', yChannelSelector: 'G', result: 'line' }],
+    ['feTurbulence', { type: 'fractalNoise', baseFrequency: '0.9', numOctaves: '2', seed: '9', result: 'tooth' }],
+    ['feColorMatrix', { in: 'tooth', type: 'matrix', values: '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.1 1.45', result: 'toothAlpha' }],
+    ['feComposite', { in: 'line', in2: 'toothAlpha', operator: 'in', result: 'broken' }],
+    ['feDisplacementMap', { in: 'SourceGraphic', in2: 'tremor', scale: '7', xChannelSelector: 'G', yChannelSelector: 'R', result: 'secondPass' }],
+    ['feComponentTransfer', { in: 'secondPass', result: 'second' }, [['feFuncA', { type: 'linear', slope: '0.28' }]]],
+    ['feGaussianBlur', { in: 'line', stdDeviation: '2.4', result: 'blur' }],
+    ['feComponentTransfer', { in: 'blur', result: 'smudge' }, [['feFuncA', { type: 'linear', slope: '0.22' }]]],
+    ['feMerge', {}, [['feMergeNode', { in: 'smudge' }], ['feMergeNode', { in: 'second' }], ['feMergeNode', { in: 'broken' }]]],
+  ];
+  for (const [tag, attrs, children] of primitives) {
+    const node = document.createElementNS(NS, tag);
+    for (const [name, value] of Object.entries(attrs)) node.setAttribute(name, value);
+    for (const [childTag, childAttrs] of children ?? []) {
+      const child = document.createElementNS(NS, childTag);
+      for (const [name, value] of Object.entries(childAttrs)) child.setAttribute(name, value);
+      node.append(child);
+    }
+    filter.append(node);
+  }
+
+  svg.append(filter);
   return svg;
 }
 
