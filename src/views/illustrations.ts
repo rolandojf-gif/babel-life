@@ -339,12 +339,14 @@ const MOTIFS: Record<string, Shape[]> = {
 };
 
 /**
- * Sanguine marks, for nearby books only: the stroke that draws what differs
+ * Sanguine marks one thing in a book's motif. On a root it marks the point of
+ * contingency: the detail on which the life could have been otherwise, the
+ * one its nearby books go on to move. On a nearby book it marks what differs
  * from the root, and nothing else. `tint` names strokes of the motif by
  * position, `drop` removes strokes the difference moves, `base` adds charcoal
  * strokes a moved element needs, and `add` draws new strokes in sanguine.
- * Where the difference is everything, or the drawing shows what stays the
- * same, the book has no entry and its motif stays wholly in charcoal.
+ * A nearby book whose difference is everything, or whose drawing shows what
+ * stays the same, has no entry and its motif stays wholly in charcoal.
  */
 export interface Accent {
   tint?: number[];
@@ -354,6 +356,63 @@ export interface Accent {
 }
 
 export const ACCENTS: Record<string, Accent> = {
+  // Roots: the point of contingency.
+  // This birth, at its exact second.
+  b0007: { tint: [0, 1, 2, 3, 4, 5, 6] },
+  // One lit window, one remembered room.
+  b0003: { tint: [2] },
+  // The sentence, in the language you learnt first.
+  b0031: { tint: [5] },
+  // The ring the day leaves.
+  b0006: { tint: [3] },
+  // The window of the room you sleep in.
+  b0005: { tint: [0] },
+  // The places laid for people who may never come.
+  b0008: { tint: [5, 6] },
+  // You, hanging on their two lives.
+  b0010: { tint: [4] },
+  // The one detail kept.
+  b0011: { tint: [2] },
+  // The open drawer.
+  b0012: { tint: [2] },
+  // Where the two lives cross.
+  b0038: { tint: [2] },
+  // The ribbon at the page being read now.
+  b0041: { tint: [3] },
+  // The landing between your door and the one opposite.
+  b0044: { tint: [2] },
+  // The marked seat.
+  b0047: { tint: [1, 19] },
+  // The left sock, first.
+  b0050: { tint: [0, 1] },
+  // The silence nothing answers.
+  b0053: { tint: [3] },
+  // The night itself.
+  b0056: { tint: [3] },
+  // This body.
+  b0059: { tint: [2, 3] },
+  // The road ahead.
+  b0062: { tint: [2] },
+  // The hand that fixes the exact age.
+  b0065: { tint: [1] },
+  // The name on the cover.
+  b0068: { tint: [1, 2] },
+  // The gesture: the chair moved aside.
+  b0071: { tint: [1] },
+  // One life joined to one other.
+  b0074: { tint: [7, 8, 17] },
+  // A thought no one saw.
+  b0077: { tint: [2] },
+  // The one choice everything branches from.
+  b0080: { tint: [0] },
+  // The one comma.
+  b0083: { tint: [2, 3] },
+  // The lamp lit across the street.
+  b0086: { tint: [1] },
+  // The page you wrote.
+  b0089: { tint: [0] },
+
+  // Nearby books: what differs from the root.
   // The second cot, the nearly identical birth.
   b0022: { tint: [7, 8, 9, 10, 11, 12, 13] },
   // The one room among all of them.

@@ -1,7 +1,7 @@
 import { copy, fill } from '../content/copy';
 import { coordinateFor } from '../library/coordinates';
 import type { RootBook } from '../library/model';
-import { createIllustration } from './illustrations';
+import { ACCENTS, createIllustration } from './illustrations';
 import { element, glyph, link } from './view';
 
 const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
@@ -26,7 +26,7 @@ export function createBookCard(book: RootBook, index: number): HTMLLIElement {
   const hook = element('h2', 'card__hook', book.hook);
 
   const visual = element('span', 'card__visual');
-  visual.append(createIllustration(book.icon));
+  visual.append(createIllustration(book.icon, ACCENTS[book.id]));
 
   const coordinate = coordinateFor(book.id);
   const volume = element(
