@@ -43,6 +43,7 @@ Babel Life ships in **English and Spanish**, as two editions of the same Library
 *   **The URL is the only source of truth for language.** `/` is English, `/es/` is Spanish; the browser's own language setting is never consulted (`localeFromPathname`).
 *   **Two real HTML entry documents**, `index.html` and `es/index.html`, both Vite build inputs. Each carries its own `<title>`, description, canonical URL, Open Graph and Twitter cards, JSON-LD and `<noscript>` fallback.
 *   **Two catalogs.** `catalog.json` and `catalog.es.json` are separate editions, aligned accession by accession and checked at load time (`assertAligned`): same length, same IDs, same order. A hash route therefore means the same volume in both languages.
+*   **The Wall has a name in each edition:** *Wall of Lives* in English, *Muro de vidas* in Spanish. *Wall* / *Pared* is kept for the physical wall of an address (1–4).
 *   **Every visitor-facing string outside the catalog** lives in `copy.en.ts` / `copy.es.ts` behind one `Copy` type, so a string added to one edition and not the other is a type error.
 *   **The language switcher (`LanguageSwitcher.ts`) keeps the hash**, so switching language on an open book opens the same volume in the other edition rather than returning to the wall.
 
@@ -52,27 +53,28 @@ The site entry is the **Wall of Lives**, not a scenario selector, dropdown, or f
     *   Eyebrow: `BABEL LIFE`
     *   Heading: `Somewhere in the Library of Babel, every writable life already exists.`
     *   Dek: the premise in two sentences, followed by the scale figures.
-*   **The scale figures (`masthead__scale`):** the Library set against the observable universe — `≈ 1.96 × 10^1,834,097 books` beside `≈ 10^80 atoms`, with `25 symbols · 1,312,000 positions` beneath. These are Borges' own figures for one volume of the Library.
+*   **The scale figures (`masthead__scale`):** the Library set against the observable universe — `≈ 1.96 × 10^1,834,097 books` beside `≈ 10^80 atoms`, with `25 symbols · 1,312,000 positions` beneath. These are Borges' own figures for one volume of the Library. Each figure carries a small etched mark and may surface under a fine pointer, but the figures are not controls: they take no tab stop, and hovering reveals nothing that is not already printed.
 *   **The edition index (`libraryIndex.ts`):** the case of this edition beside the masthead, labelled as such, with one spine for every readable book, root and nearby alike. The Wall still shows only root books; the index is where the whole edition is visible at once. Its books and its counts are derived from the catalogue, never written in as literals, so a new family appears in it without further edits. Families stand together, and roots stay distinguishable from their nearby books, which remain books. The grouping is editorial: it never implies that these books are neighbours in the Library, and the one coordinate printed beneath is the real Library address of the book the locator stands on. The locator may stand on a root or a nearby book. It rests on the book the visitor last closed, or else on the first card of this visit's deal, and follows a hovered or keyboard-focused card. The drawing is `aria-hidden`; the label and the coordinate are text.
 *   **Card Grid (`BookCard.ts`):**
     *   **Premise-First Presentation:** the shared eyebrow `THERE IS ALREADY A BOOK IN WHICH…` is shown once above the grid; each card carries it as visually hidden text so the link's accessible name is a complete sentence. The card itself shows the hook that completes it.
     *   **Titles Excluded from Wall:** poetic and literary titles belong inside the book, never on the Wall card. The visitor enters through the curiosity of the premise alone.
-    *   Every card carries a symbolic vector illustration (`illustrations.ts`) and a short address line, `HEXAGON [ID] · VOLUME [N]`.
+    *   Every card carries its book's motif (see *Motifs* below) and a short address line, `HEXAGON [ID] · VOLUME [N]`.
     *   **Action:** `OPEN THIS LIFE →`.
-    *   **Featured slots.** Display positions 1, 6, 11, 16 and 21 are set larger and stand their motif on a small shelf board. Emphasis follows position in the deal, never the identity of the book.
+    *   **Featured slots.** Display positions 1, 6, 11, 16 and 21 are set larger, with a larger motif. Emphasis follows position in the deal, never the identity of the book.
 *   **Card Batching & Navigation:**
     *   Initial load displays **12 cards**. Counter: `Twelve of twenty-seven books.`
     *   Secondary Action: `SHOW ME SOMETHING STRANGER` swaps the grid to the remaining 15 cards.
     *   Quiet Action: `SHOW ALL 27` appends them below the opening twelve.
     *   No disabled button states: controls disappear cleanly when their action is no longer applicable.
+    *   **Counts are derived, never written in.** The visible count, its total and the announcement of `SHOW ME SOMETHING STRANGER` are spelled from the deal and the catalogue (`TOTAL_ROOTS`, each edition's `countWords`); no template carries a number. The rule covers the wall's counters only. The label `SHOW ALL 27`, its announcement and the presentation in the two entry documents are narrative copy and are edited by hand if the number of roots changes.
 *   **The order of the deal (`catalog.ts` `wallDeal`, `shuffle.ts`):**
-    *   **Five editorial anchors are pinned** (`PINNED_ROOT_IDS`) and always open the wall, in that order. They are the five strongest hooks, and which books open the Library is an editorial decision rather than a shuffle's.
+    *   **Five editorial anchors are pinned** (`PINNED_ROOT_IDS`) and always open the wall, in that order. They are chosen and ordered as a progressive entry: the visitor's own exact life, then the lives of those before them, then every living person with whom a life might have been shared, then the darkest permutation, and last the smallest spatial differences of an ordinary day. Which books open the Library, and in what order, is an editorial decision rather than a shuffle's, and changes only as one.
     *   The other twenty-two root books are shuffled as **one pool**. Seven of them complete the opening twelve; the remaining fifteen become `SHOW ME SOMETHING STRANGER`. Opening out to all twenty-seven therefore never moves a card the visitor has already seen.
     *   One seed is drawn per visit and held in memory by the controller. Every redraw of the wall — after opening a life, after browser Back, after `SHOW ALL 27` — deals the same order, so nothing moves under the visitor's hands.
     *   Nothing is stored: a reload is a new visit and deals again. The seed is an ordinary `Math.random()` draw, since card order is not a secret, and it runs through the same splitmix64 scramble (`scramble.ts`) that writes the pages at unreadable addresses.
 
 ### The Book View (`BookView.ts`)
-A discovered volume is presented as a **spread**: a left leaf carrying the discovery marker, the shelf locator, and the consultation note; the narrative in the centre; and the shelf itself along the right.
+A discovered volume is presented as a **spread**: a left leaf carrying the discovery marker, the shelf locator, the consultation note and, beneath it, the book's motif as a plate; the narrative in the centre; and the shelf itself along the right.
 *   **Navigation:** top backlink `← Wall of Lives`.
 *   **Discovery Marker:** `YOU FOUND THE BOOK`.
 *   **Shelf Locator (`shelfLocator.ts`):** the thirty-two positions of this shelf drawn as upright marks with the current volume picked out, `VOLUME [N] · YOU ARE HERE` beneath it, and a line naming the other legible volume on the shelf or saying there is none.
@@ -91,6 +93,14 @@ A discovered volume is presented as a **spread**: a left leaf carrying the disco
     *   `SHOW ME ANOTHER LIFE`: deterministically advances to the next root book in the canonical wall order, cycling continuously without repetition and never landing inside the narrative family just read.
     *   `← Wall of Lives`: returns directly to the wall.
 
+### Motifs (`illustrations.ts`, `motifs.ts`)
+Every book, root and nearby alike, carries a drawn motif: on its Wall card if it is a root, and as the plate on the book's left leaf. Motifs are decorative and hidden from assistive technology.
+*   **A motif says something about its own story.** Every root has a motif of its own. A nearby book's motif also comes from its own story, and may be its root's when the story keeps the same object. A generic symbol repeated without meaning does not earn its place; a motif is replaced only when it is generic, inherited from an older story or unrelated to the premise, and always in the same visual language.
+*   **One motif per book across editions.** The catalogue's `icon` field is the same in English and Spanish.
+*   **One hand.** Every motif is drawn through the same charcoal filter, in charcoal ink.
+*   **Sanguine carries meaning, never decoration.** On a root it marks the point of contingency: the detail on which the life could have gone otherwise, the one its nearby books move. On a nearby book it marks what changed from its root. A root never repeats the stroke of one of its nearby books. A nearby book whose change cannot be drawn, or whose drawing shows what stays, is left wholly in charcoal. Motifs are not tinted for effect.
+*   The accent of each book lives beside the drawings (`ACCENTS`), not in the catalogues.
+
 ### Atmosphere (`atmosphere.ts`, `motion.ts`)
 A reading-room atmosphere is layered over the page and is **entirely decorative**: a fixed lamp glow and vignette, ten drifting motes of dust, scroll-driven reveals, and a slow pointer tilt with a travelling sheen on the wall cards. Every one of them is skipped under `prefers-reduced-motion`, and the tilt is skipped on touch pointers. Content is fully legible with or without any of it.
 
@@ -100,6 +110,7 @@ At an address holding nothing this edition can print, the visitor is not told th
 *   **Canonical book mathematics.** A physical volume in the Library consists of 410 pages, 40 lines per page, and 80 symbol positions per line, totaling 3,200 positions per page and 1,312,000 positions per volume. Across the 25-symbol alphabet, this defines the Library scale of $25^{1,312,000} \approx 1.96 \times 10^{1,834,097}$ possible books.
 *   **Visible excerpt.** The application renders a deterministic 1,280-symbol excerpt (`VISIBLE_EXCERPT_LENGTH`, styled as 40 lines of 32 symbols echoing shelf geometry) of the page rather than all 3,200 symbols. This presentation choice avoids excessive vertical bulk on screen while preserving the visual density and rhythm of an unreadable page; it is a display window and does not alter the canonical physical page size.
 *   **Fixed for its address.** Excerpt symbols are drawn by splitmix64 seeded with the address's own 64-bit position: the same excerpt on every device, in every session, for as long as the address exists. No clock, no randomness, no storage, and nothing about the reader anywhere in it.
+*   **The excerpt is not a layout variable.** Its length is never changed to fit a screen. On a narrow screen the sheet keeps its proportions and shows what fits, fading its last lines: no internal scroll, no "show more", no smaller type. The whole excerpt stays in the document.
 *   **One page of four hundred and ten**, said plainly beneath it. The volume is not offered in full.
 *   **Read by eye alone.** The symbols carry `aria-hidden`; a line above them says what the page is, so a screen reader is told about the page instead of being made to spell out a page of nothing.
 *   **It asserts nothing.** Noise cannot claim that any account is true, which is why it is safe here and why it belongs here: it is the one place the edition lets a visitor see what the Library is almost entirely made of.
@@ -142,7 +153,7 @@ At an address holding nothing this edition can print, the visitor is not told th
 *   **Analytics: Cloudflare Web Analytics**, loaded from `static.cloudflareinsights.com` in both entry documents. It is the only third-party request the site makes. It sets no cookie and uses no `localStorage` for usage metrics, collects no personal data, and the footer's *Legal & privacy* disclosure says so in both languages. There is no other tracking of any kind, and no telemetry the application itself emits.
 
 ### Verification (`tests/`)
-Vitest, sixteen files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the view and controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
+Vitest, seventeen files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the view and controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
 
 Note that `npm run build`, which is what Netlify runs, does **not** run the tests. Keeping `npm test` green is a discipline of the repository, not a gate the deploy enforces.
 
@@ -155,10 +166,11 @@ Note that `npm run build`, which is what Netlify runs, does **not** run the test
 *   `pages.test.ts` — the page at an unreadable address: the alphabet, the length, determinism across repeat readings, every symbol inside the alphabet and none of them favoured out of all recognition, a different page at every address, and fixtures produced by a separate implementation of the same scramble rather than by calling this one.
 *   `address-view.test.ts` — the address view under jsdom: the page stands open on arrival, the symbols are hidden from assistive technology behind a line that describes them, and the same address reads the same twice.
 *   `shuffle.test.ts` — the deal: fixed by its seed, a permutation of exactly what it was given, the original left alone, every item first about as often as any other over 1200 seeds, and a seed of its own per visit.
-*   `wall-view.test.ts` — the wall under jsdom: the opening twelve led by their premises with no title presented as one, the rest behind `SHOW ME SOMETHING STRANGER` with no overlap, `SHOW ALL 27` leaving both sets exactly where they were, the same deal however often the wall is redrawn, controls put away rather than disabled, and every card pointing at its own volume.
+*   `wall-view.test.ts` — the wall under jsdom: the opening twelve led by their premises with no title presented as one, the rest behind `SHOW ME SOMETHING STRANGER` with no overlap, `SHOW ALL 27` leaving both sets exactly where they were, the same deal however often the wall is redrawn, controls put away rather than disabled, every card pointing at its own volume, and counts spelled from the catalogue with no number in any template, in both editions.
 *   `library-index.test.ts` — the edition index: one spine per readable book and its counts derived from the catalogue, families kept together, the locator on root and nearby books alike with that book's real address, the readout following hover and keyboard focus and returning, and the resting book.
 *   `shelf-view.test.ts` — a shelf under jsdom: thirty-two spines, the readable ones named and linked as volumes, and the count line that says how many — "One of them can be read." on an ordinary shelf, "Two" on the shelfmarked one.
 *   `controller.test.ts` — the routing table as behaviour, under jsdom: a legible address opens a book, an illegible one is not an error, an address outside the space is, navigation clears what the previous view held, and the same location never renders twice.
+*   `accents.test.ts` — the sanguine accents: every root carries one, each names strokes that exist in the book's own motif, a book without an entry is drawn wholly in charcoal, and the accent reaches the book's plate.
 *   `motion.test.ts` — the reduced-motion path.
 
 ---
@@ -413,7 +425,8 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   **The edition index** beside the masthead: every readable book of this edition by family, with a locator on one of them and its real printed address, following hover and keyboard focus.
 *   Premise-first card presentation, the shared eyebrow shown once above the grid and carried on each card for its accessible name.
 *   Literary titles displayed inside the book view and on shelf spines, never on the Wall.
-*   **The book as a spread**: shelf locator, drop-capped passage, aftertaste, the whole shelf embedded beside it, nearby books and the shelf walk.
+*   **The book as a spread**: shelf locator, the book's motif as a plate, drop-capped passage, aftertaste, the whole shelf embedded beside it, nearby books and the shelf walk.
+*   **A motif for every book**, drawn from its own story, every root with one of its own, in one charcoal hand, with sanguine only where it marks a root's point of contingency or what a nearby book changed.
 *   **The full 81-book canonical catalog in both languages:** 27 root books on the Wall, 54 nearby books reachable only from inside a book, exactly two per root, passages inside the short-form guardrail. Validated at load time: ID syntax, duplicate identities, unresolved edges, edges leaving their narrative family, unlabelled edges, a wall that is not exactly the set of roots, and the two editions falling out of alignment.
 *   Nearby books navigation naming specific differences from the current passage.
 *   **One shelf with two readable volumes:** a single frozen shelfmark, implemented as a transposition of two addresses, so that one walk along a shelf finds two strangers standing together.
@@ -428,14 +441,14 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Zero backend, zero AI generation, zero user accounts, zero form submissions, zero persistence of anything about a reader.
 
 ### KNOWN GAPS
-*   **Untested views.** `BookView`, `NearbyVolumes`, `shelfLocator`, `shelfListing`, `atmosphere` and the illustrations have no cases of their own and are exercised only by reading the page.
+*   **Untested views.** `BookView`, `NearbyVolumes`, `shelfLocator`, `shelfListing`, `atmosphere` and the drawings themselves have no cases of their own (their sanguine accents do) and are exercised only by reading the page.
 *   **The Spanish catalog's prose is checked for shape, not for craft.** Accession alignment with the English edition and the word count are asserted; nothing reads it.
 *   **No screen reader has been used at all.** Chromium at 320 / 390 / 1440 px covers the wall, the book spread, the shelf and the address view in both languages: no horizontal overflow anywhere, the language switcher keeps the open volume, and the wall's deal survives opening a life, browser Back, `SHOW ALL 27` and repeated redraws while a reload deals again.
 *   The final-hexagon boundary condition described in section 2.
 *   **`npm test` is not a deploy gate.** Netlify runs `npm run build`, which typechecks and builds but does not run the suite.
 *   **Open defects recorded but not fixed**, carried here so they are not rediscovered as news:
     *   ~~`--ink-faint` contrast~~ — **Resolved.** Functional and readable text migrated to `--ink-muted` (#6a6153, ≥ 4.56:1 AA on every background surface). `--ink-faint` (#8a8173) retained only for decorative SVG strokes, end labels and spine glyphs.
-    *   15 of the 27 motifs in `illustrations.ts` carry all 27 root books; `paths` appears on seven of them and `speech` on four.
+    *   ~~Shared motifs on the wall~~ — **Resolved.** Every root book has a motif of its own, drawn from its premise.
 
 ### APPROVED NEXT
 *   Nothing pending. The next approved item is whatever gets promoted out of section 5, or the closing of a known gap above.
