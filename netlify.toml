@@ -3,7 +3,7 @@
 # rather than shipping.
 
 [build]
-  command = "npm run build"
+  command = "npm run verify"
   publish = "dist"
 
 [build.environment]
