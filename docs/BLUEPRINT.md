@@ -60,7 +60,7 @@ The site entry is the **Wall of Lives**, not a scenario selector, dropdown, or f
     *   **Titles Excluded from Wall:** poetic and literary titles belong inside the book, never on the Wall card. The visitor enters through the curiosity of the premise alone.
     *   Every card carries its book's motif (see *Motifs* below) and a short address line, `HEXAGON [ID] · VOLUME [N]`.
     *   **Action:** `OPEN THIS LIFE →`.
-    *   **Featured slots.** Display positions 1, 6, 11, 16 and 21 are set larger, with a larger motif. Emphasis follows position in the deal, never the identity of the book.
+    *   **Featured slots.** Display positions 1, 4, 11, 16 and 21 are set larger, with a larger motif. Emphasis follows position in the deal, never the identity of the book.
 *   **Card Batching & Navigation:**
     *   Initial load displays **12 cards**. Counter: `Twelve of twenty-seven books.`
     *   Secondary Action: `SHOW ME SOMETHING STRANGER` swaps the grid to the remaining 15 cards.
