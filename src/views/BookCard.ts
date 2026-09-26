@@ -4,7 +4,7 @@ import type { RootBook } from '../library/model';
 import { ACCENTS, createIllustration } from './illustrations';
 import { element, glyph, link } from './view';
 
-const FEATURED_SLOTS = new Set([1, 6, 11, 16, 21]);
+const FEATURED_SLOTS = new Set([1, 4, 11, 16, 21]);
 
 /**
  * One life on the wall. Featured emphasis follows display position in the
