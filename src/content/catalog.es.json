@@ -40,7 +40,7 @@
       "kind": "root",
       "icon": "cot",
       "headline": "LA HORA EXACTA",
-      "hook": "naces en un segundo, una sala y unas condiciones físicas exactas que exigen un libro completo.",
+      "hook": "tu nacimiento está recogido al segundo: la temperatura de la sala, la luz, quién estaba presente.",
       "title": "La hora exacta",
       "passage": [
         "El libro registra tu llegada con una precisión absurda: el segundo exacto, la duración del embarazo, la temperatura de la sala, la luz sobre cada superficie, las personas presentes y la posición de sus cuerpos.",
@@ -177,7 +177,7 @@
       "kind": "root",
       "icon": "record",
       "headline": "LA PRIMERA LENGUA",
-      "hook": "cada palabra que dices pertenece a una de todas las lenguas que podrías haber aprendido.",
+      "hook": "la lengua que aprendiste primero decide qué palabras te faltarán cuando más las necesites.",
       "title": "La primera lengua",
       "passage": [
         "Existe un libro con todas las palabras que has dicho en la lengua en que aprendiste a pedir agua, negar, bromear y llamar a las personas de tu familia. Registra tus errores antes que tus frases correctas. Guarda expresiones que repetiste durante años y una última oración que todavía desconoces. Esa lengua no ocupa solo tus conversaciones: decide qué sonidos distingues, qué nombres das a las cosas y qué palabras llegarán a faltarte cuando más las necesites."
@@ -244,7 +244,7 @@
       "kind": "root",
       "icon": "cup",
       "headline": "TU JORNADA",
-      "hook": "cada jornada, empleo y secuencia de trabajos posibles ocupa una vida completa.",
+      "hook": "constan todos tus días de trabajo, hasta la última vez que cerrarás una puerta al terminar la jornada.",
       "title": "Tu jornada",
       "passage": [
         "Este libro contiene todos tus días de trabajo: la primera tarea que aprendiste, las horas perdidas, los errores sin consecuencia, los trayectos, los descansos y la última vez que cerrarás una puerta al terminar. También registra los empleos que duraron poco y los que determinaron décadas. Tu profesión cabe en una respuesta breve. La vida necesaria para sostener esa respuesta ocupa miles de páginas de horarios, cuerpos cansados, conversaciones repetidas y mañanas en las que volviste a empezar."
@@ -311,7 +311,7 @@
       "kind": "root",
       "icon": "window",
       "headline": "DONDE DUERMES",
-      "hook": "cada habitación, casa, ciudad y secuencia de mudanzas posibles exige otro libro.",
+      "hook": "duermes esta noche en tu habitación exacta y consta la distancia entre la cama y la pared.",
       "title": "Donde duermes",
       "passage": [
         "Existe un libro para la vida en la que duermes esta noche en tu habitación exacta. Registra la distancia entre la cama y la pared, lo que ves desde la ventana y los objetos que alcanzas sin levantarte. Esa habitación forma parte de un tramo de tu vida y luego desaparece. Sin embargo, haber dormido allí modifica la lista completa de lugares a los que has llamado casa. El libro conserva todos, incluso los que ya no podrías recorrer de memoria."
@@ -378,7 +378,7 @@
       "kind": "root",
       "icon": "table",
       "headline": "QUIENES APARECEN",
-      "hook": "aparecen todos los hijos que podrías tener y todas las personas completas que aquí nunca comienzan.",
+      "hook": "tus hijos, si los tienes, están escritos enteros, también los años que vivan después de ti.",
       "title": "Quienes aparecen",
       "passage": [
         "Este libro registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades, palabras y vidas después de que la tuya termine. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años. Lo que en una página puede expresarse con un número determina centenares de personas conocidas, habitaciones ocupadas, comidas preparadas y fechas recordadas. El libro no trata esa cifra como un detalle."
@@ -516,7 +516,7 @@
       "kind": "root",
       "icon": "photograph",
       "headline": "LO QUE CONSERVAS",
-      "hook": "los mismos hechos producen cada combinación posible de recuerdos conservados, deformados y perdidos.",
+      "hook": "tu pasado aparece una vez como ocurrió y otra como lo recuerdas.",
       "title": "Lo que conservas",
       "passage": [
         "Existe un libro con los hechos exactos de tu vida y con la parte que todavía recuerdas. Distingue ambas cosas. Registra tardes que ocurrieron y ya no puedes recuperar, rostros cuyo nombre perdiste y frases que crees recordar de manera incorrecta. También guarda recuerdos insignificantes que sobrevivieron sin razón visible. Tu pasado ocupa el libro una vez como acontecimiento y otra como memoria. Las dos versiones empiezan a separarse mucho antes de que adviertas la diferencia."
@@ -583,7 +583,7 @@
       "kind": "root",
       "icon": "drawer",
       "headline": "INVENTARIO",
-      "hook": "cada objeto que podrías poseer, aunque fuera durante unos minutos, exige otra vida completa.",
+      "hook": "figura cada objeto que has tenido, hasta el que olvidaste el mismo día.",
       "title": "Inventario",
       "passage": [
         "Tu libro incluye cada objeto que llegó a pertenecerte: llaves, zapatos, teléfonos, muebles, fotografías, recibos y libros. Registra cuánto tiempo estuvo contigo, dónde lo dejaste y si aún existe. Algunos objetos ocupan décadas; otros, una tarde. Casi ninguno merece una escena. Juntos forman una secuencia irrepetible de cosas tocadas, guardadas, prestadas, rotas y desechadas. Para copiar tu vida con exactitud, la Biblioteca no puede omitir ni el objeto que olvidaste el mismo día."
@@ -650,7 +650,7 @@
       "kind": "root",
       "icon": "paths",
       "headline": "POR DONDE PASASTE",
-      "hook": "cada paso, trayecto y encuentro posible queda situado con precisión dentro de tu vida.",
+      "hook": "están en orden todos los pasos que has dado, hasta el último antes de leer esto.",
       "title": "Por donde pasaste",
       "passage": [
         "Existe un libro que conserva todos tus movimientos por el espacio. Cada acera, escalera, carretera, pasillo, vuelo y puerta aparece en el orden exacto en que los recorriste. Incluye los trayectos repetidos hasta dejar de mirarlos y el último paso que diste antes de leer esta frase. Tu vida no solo conecta lugares importantes. Está hecha de millones de posiciones intermedias que nunca nombraste y que el libro debe precisar para situarte donde realmente estuviste."
@@ -717,7 +717,7 @@
       "kind": "root",
       "icon": "book",
       "headline": "TU VIDA EXACTA",
-      "hook": "tu vida exacta ya está escrita desde el nacimiento hasta las circunstancias de tu muerte.",
+      "hook": "tu vida exacta está escrita desde el nacimiento hasta las circunstancias de tu muerte.",
       "title": "El tuyo",
       "passage": [
         "Existe un libro que contiene tu vida exacta. La primera página da la fecha, la hora y el lugar de tu nacimiento. Después aparecen cada casa, cada comida, cada conversación y cada día que has olvidado.",
@@ -863,7 +863,7 @@
       "kind": "root",
       "icon": "seats",
       "headline": "CADA ASIENTO POSIBLE",
-      "hook": "mueres en un accidente aéreo. Hay un libro distinto para cada asiento, cada edad y cada ruta posibles.",
+      "hook": "mueres en un accidente aéreo en el asiento 1A.",
       "title": "Cada asiento",
       "passage": [
         "Hay un libro en el que mueres en un accidente aéreo sentado en el 1A. Otro en el 1B. Otro en el 1C. Y así, un libro distinto por cada asiento posible.",
@@ -1009,7 +1009,7 @@
       "kind": "root",
       "icon": "speech",
       "headline": "LO DICHO",
-      "hook": "cada palabra, pausa y silencio posible ocupa su propio libro completo.",
+      "hook": "constan todas las palabras que has dicho y cada silencio con su duración exacta.",
       "title": "Lo dicho",
       "passage": [
         "Tu libro registra cada sonido que has pronunciado: las primeras sílabas, las preguntas repetidas, las respuestas automáticas, los nombres, las discusiones y las palabras que dijiste sin que nadie escuchara. También contiene todos tus silencios, con su duración exacta. Algunas frases cambiaron una relación. La mayoría no cambió nada. La Biblioteca escribe ambas con el mismo cuidado porque una vida exacta no puede sustituir una palabra olvidable por otra, ni un segundo callado por un segundo de voz."
@@ -1076,7 +1076,7 @@
       "kind": "root",
       "icon": "night",
       "headline": "TUS NOCHES",
-      "hook": "cada noche posible cambia de cama, postura, despertar, sueño o compañía.",
+      "hook": "constan todas tus noches: de qué lado dormiste, cuántas veces despertaste, quién respiraba cerca.",
       "title": "Tus noches",
       "passage": [
         "Existe un libro que contiene todas las noches de tu vida. Indica cuándo te acostaste, de qué lado dormiste, cuántas veces despertaste y quién respiraba cerca. Registra los sueños recordados y aquellos que desaparecieron antes de abrir los ojos. Durante años, sus páginas nocturnas parecen repetirse: la misma cama, la misma oscuridad, el mismo cuerpo inmóvil. Pero ninguna noche ocupa exactamente las mismas horas ni te devuelve al día con idéntico cansancio."
@@ -1143,7 +1143,7 @@
       "kind": "root",
       "icon": "mirror",
       "headline": "CADA CUERPO POSIBLE",
-      "hook": "naces con cada cuerpo que podrías haber tenido y cada uno necesita una vida completa.",
+      "hook": "naces el mismo día, de los mismos padres y en la misma habitación, con otro cuerpo.",
       "title": "Cada cuerpo",
       "passage": [
         "Hay libros donde naces el mismo día, de los mismos padres y en la misma habitación, con cada cuerpo que podrías haber tenido.",
@@ -1298,7 +1298,7 @@
       "kind": "root",
       "icon": "clock",
       "headline": "LA EDAD EXACTA",
-      "hook": "existe un libro distinto para cada edad exacta en que podrías morir.",
+      "hook": "mueres a los 86 años, 3 meses, 11 días, 7 horas, 14 minutos y 8 segundos.",
       "title": "La edad exacta",
       "passage": [
         "Hay un libro en el que mueres a los 52 años, 3 meses, 11 días, 7 horas, 14 minutos y 8 segundos.",
@@ -1502,7 +1502,7 @@
       "kind": "root",
       "icon": "crowd",
       "headline": "CADA PERSONA VIVA",
-      "hook": "compartes tu vida con cada persona que hoy está viva y a quien habría sido posible conocer.",
+      "hook": "pasas la vida con alguien que ahora mismo está vivo y no sabe quién eres.",
       "title": "Cada persona viva",
       "passage": [
         "Hay libros donde compartes tu vida con cada persona que hoy está viva y a quien habría sido posible conocer.",
@@ -1656,7 +1656,7 @@
       "kind": "root",
       "icon": "branching",
       "headline": "UNA COSA, DESPUÉS TODAS",
-      "hook": "cada ciudad se combina con cada trabajo, cada casa y cada persona con quien podrías compartirla.",
+      "hook": "vives en otra ciudad, con otro trabajo, en otra casa y con otra persona.",
       "title": "Una cosa, después todas",
       "passage": [
         "Primero están los libros donde vives en cada ciudad posible.",
@@ -1805,7 +1805,7 @@
       "kind": "root",
       "icon": "facing",
       "headline": "ESCRITO DOS VECES",
-      "hook": "tu vida aparece a trozos en libros de personas que nunca conociste.",
+      "hook": "tu vida está escrita minuto a minuto, y cada una de sus páginas aparece también en el libro de otra persona.",
       "title": "Escrito dos veces",
       "passage": [
         "Tu libro contiene tu vida entera, minuto a minuto. Ninguna de tus páginas aparece solo allí. Los veintiséis años en que encendiste la lámpara al anochecer están también en el libro de la mujer que vivía enfrente, escritos desde la otra ventana. Las mañanas de autobús están también en el libro del conductor. Los cuatro segundos de una puerta cruzada están en el libro de un hombre que no sabrías reconocer. Solo tu libro los contiene seguidos. Los demás te guardan a ratos, entre sus propios años."

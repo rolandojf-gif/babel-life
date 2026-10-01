@@ -40,7 +40,7 @@
       "kind": "root",
       "icon": "cot",
       "headline": "THE EXACT TIME",
-      "hook": "you are born in one exact second, room and set of physical circumstances that demand a complete book.",
+      "hook": "your birth is recorded to the second: the temperature of the room, the light, who was present.",
       "title": "The Exact Time",
       "passage": [
         "The book records your arrival with absurd precision: the exact second, the length of the pregnancy, the temperature in the room, the light across every surface, the people present and the positions of their bodies.",
@@ -177,7 +177,7 @@
       "kind": "root",
       "icon": "record",
       "headline": "THE FIRST LANGUAGE",
-      "hook": "every word you say belongs to one of the languages you could have learned.",
+      "hook": "the language you learned first decides which words will fail you when you need them most.",
       "title": "The First Language",
       "passage": [
         "There is a book containing every word you have spoken in the language in which you learned to ask for water, say no, joke and call your family by name. It records your mistakes before anything you said correctly. It preserves expressions you repeated for years and a final sentence you do not yet know. That language does more than fill your conversations: it determines which sounds you distinguish, what you call things and which words will fail you when you need them most."
@@ -244,7 +244,7 @@
       "kind": "root",
       "icon": "cup",
       "headline": "YOUR WORKING DAY",
-      "hook": "every working day, job and possible sequence of jobs occupies a complete life.",
+      "hook": "every day you have worked is recorded, up to the last time you will close a door at the end of a shift.",
       "title": "Your Working Day",
       "passage": [
         "This book contains every day you spend working: the first task you learned, the wasted hours, the mistakes without consequence, the journeys, the breaks and the last time you will close a door at the end of a shift. It also records the jobs that lasted briefly and those that shaped decades. Your profession fits into a short answer. The life behind that answer fills thousands of pages with schedules, tired bodies, repeated conversations and mornings when you began again."
@@ -311,7 +311,7 @@
       "kind": "root",
       "icon": "window",
       "headline": "WHERE YOU SLEEP",
-      "hook": "every room, home, city and possible sequence of moves demands another book.",
+      "hook": "you sleep tonight in your exact room, and the distance from the bed to the wall is recorded.",
       "title": "Where You Sleep",
       "passage": [
         "There is a book for the life in which you sleep tonight in your exact room. It records the distance between the bed and the wall, what you see from the window and the objects you can reach without getting up. That room belongs to one stretch of your life and then disappears. Yet sleeping there changes the complete list of places you have called home. The book preserves them all, even those you could no longer walk through from memory."
@@ -378,7 +378,7 @@
       "kind": "root",
       "icon": "table",
       "headline": "THOSE WHO APPEAR",
-      "hook": "all the children you could have appear, along with every complete person who never begins here.",
+      "hook": "your children, if you have any, are written in full, including the years after you die.",
       "title": "Those Who Appear",
       "passage": [
         "This book records whether you have children, how many, with whom and in what order they arrive. It describes their bodies, temperaments, illnesses, words and lives after yours ends. If you have none, it also records that absence throughout all your years. One number on one page determines hundreds of people you know, rooms occupied, meals prepared and dates remembered. The book does not treat that number as a detail."
@@ -516,7 +516,7 @@
       "kind": "root",
       "icon": "photograph",
       "headline": "WHAT YOU KEEP",
-      "hook": "the same events produce every possible combination of memories kept, distorted and lost.",
+      "hook": "your past appears once as it happened and again as you remember it.",
       "title": "What You Keep",
       "passage": [
         "There is a book containing the exact events of your life and the part you still remember. It distinguishes between them. It records afternoons that happened and that you can no longer recover, faces whose names you lost and sentences you believe you remember incorrectly. It also keeps insignificant memories that survived for no visible reason. Your past occupies the book once as event and again as memory. The two versions begin to separate long before you notice the difference."
@@ -583,7 +583,7 @@
       "kind": "root",
       "icon": "drawer",
       "headline": "INVENTORY",
-      "hook": "every object you could own, even for a few minutes, demands another complete life.",
+      "hook": "every object you have ever owned is listed, down to the one you forgot the same day.",
       "title": "Inventory",
       "passage": [
         "Your book includes every object that ever belonged to you: keys, shoes, phones, furniture, photographs, receipts and books. It records how long each stayed with you, where you left it and whether it still exists. Some objects occupy decades; others, an afternoon. Almost none deserves a scene. Together they form an unrepeatable sequence of things touched, kept, lent, broken and discarded. To copy your life exactly, the Library cannot omit even the object you forgot that same day."
@@ -650,7 +650,7 @@
       "kind": "root",
       "icon": "paths",
       "headline": "WHERE YOU WENT",
-      "hook": "every possible step, journey and encounter is placed precisely within your life.",
+      "hook": "every step you have taken stands in order, up to the last one before you read this.",
       "title": "Where You Went",
       "passage": [
         "There is a book that preserves all your movements through space. Every pavement, staircase, road, corridor, flight and doorway appears in the exact order in which you encountered it. It includes the journeys you repeated until you stopped noticing them and the last step you took before reading this sentence. Your life does not merely connect important places. It is made of millions of positions in between that you never named and that the book must specify in order to place you where you actually were."
@@ -717,7 +717,7 @@
       "kind": "root",
       "icon": "book",
       "headline": "YOUR EXACT LIFE",
-      "hook": "your exact life is already written from birth to the circumstances of your death.",
+      "hook": "your exact life is written from birth to the circumstances of your death.",
       "title": "Your Book",
       "passage": [
         "There is a book containing your exact life. Its first page gives the date, time and place of your birth. Then come every home, every meal, every conversation and every day you have forgotten.",
@@ -863,7 +863,7 @@
       "kind": "root",
       "icon": "seats",
       "headline": "EVERY POSSIBLE SEAT",
-      "hook": "you die in an aircraft accident. There is a different book for every possible seat, every age and every route.",
+      "hook": "you die in an aircraft accident, in seat 1A.",
       "title": "Every Seat",
       "passage": [
         "There is a book in which you die in an aircraft accident sitting in 1A. Another in 1B. Another in 1C. And so on: a different book for every possible seat.",
@@ -1009,7 +1009,7 @@
       "kind": "root",
       "icon": "speech",
       "headline": "WHAT WAS SAID",
-      "hook": "every possible word, pause and silence occupies its own complete book.",
+      "hook": "every word you have said is recorded, and every silence with its exact length.",
       "title": "What Was Said",
       "passage": [
         "Your book records every sound you have uttered: the first syllables, repeated questions, automatic answers, names, arguments and words you said when no one was listening. It also contains all your silences, with their exact duration. Some sentences changed a relationship. Most changed nothing. The Library writes both with the same care because an exact life cannot replace one forgettable word with another, or one second of silence with one second of speech."
@@ -1076,7 +1076,7 @@
       "kind": "root",
       "icon": "night",
       "headline": "YOUR NIGHTS",
-      "hook": "every possible night changes its bed, position, awakening, dream or companion.",
+      "hook": "every night of your life is recorded: which side you slept on, how often you woke, who breathed nearby.",
       "title": "Your Nights",
       "passage": [
         "There is a book containing every night of your life. It records when you went to bed, which side you slept on, how many times you woke and who breathed nearby. It preserves the dreams you remembered and those that vanished before you opened your eyes. For years, its nighttime pages seem to repeat: the same bed, the same darkness, the same motionless body. But no two nights occupy exactly the same hours or leave you equally tired the next day."
@@ -1143,7 +1143,7 @@
       "kind": "root",
       "icon": "mirror",
       "headline": "EVERY POSSIBLE BODY",
-      "hook": "you are born with every body you could have had, and each one needs a complete life.",
+      "hook": "you are born on the same day, to the same parents, in the same room, with another body.",
       "title": "Every Body",
       "passage": [
         "There are books in which you are born on the same day, to the same parents and in the same room, with every body you could have had.",
@@ -1298,7 +1298,7 @@
       "kind": "root",
       "icon": "clock",
       "headline": "THE EXACT AGE",
-      "hook": "there is a different book for every exact age at which you could die.",
+      "hook": "you die at 86 years, 3 months, 11 days, 7 hours, 14 minutes and 8 seconds.",
       "title": "The Exact Age",
       "passage": [
         "There is a book in which you die at 52 years, 3 months, 11 days, 7 hours, 14 minutes and 8 seconds.",
@@ -1502,7 +1502,7 @@
       "kind": "root",
       "icon": "crowd",
       "headline": "EVERY LIVING PERSON",
-      "hook": "you share your life with every person alive today whom it would have been possible to meet.",
+      "hook": "you spend your life with someone alive right now who does not know who you are.",
       "title": "Every Living Person",
       "passage": [
         "There are books in which you share your life with every person alive today you could possibly have met.",
@@ -1656,7 +1656,7 @@
       "kind": "root",
       "icon": "branching",
       "headline": "ONE THING, THEN ALL OF THEM",
-      "hook": "every city combines with every job, every home and every person with whom you could share it.",
+      "hook": "you live in another city, with another job, in another home, with another person.",
       "title": "One Thing, Then All of Them",
       "passage": [
         "First come the books in which you live in every possible city.",
@@ -1805,7 +1805,7 @@
       "kind": "root",
       "icon": "facing",
       "headline": "WRITTEN TWICE",
-      "hook": "your life appears in fragments in the books of people you never met.",
+      "hook": "your life is written minute by minute, and every page of it also appears in someone else's book.",
       "title": "Written Twice",
       "passage": [
         "Your book contains your entire life, minute by minute. None of those pages exists only there. The twenty-six years in which you turned on the lamp at dusk are also in the book of the woman who lived opposite, written from the other window. Your mornings on the bus are also in the driver's book. The four seconds in which you crossed a doorway are in the book of a man you would not recognise. Only your book contains them one after another. The others keep you only in fragments, among the years of their own lives."
