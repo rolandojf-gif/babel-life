@@ -105,7 +105,7 @@ describe('Spanish UI copy', () => {
     expect(es.nearbyVolumes).toBe('LIBROS CERCANOS');
     expect(es.coordHexagon).toBe('Hexágono');
     expect(es.coordWall).toBe('Pared');
-    expect(es.coordShelf).toBe('Estantería');
+    expect(es.coordShelf).toBe('Anaquel');
     expect(es.coordVolume).toBe('Volumen');
     expect(es.days[0]).toBe('domingo');
     expect(es.consulted).toContain('Consultado');
@@ -143,7 +143,7 @@ describe('coordinates across locales', () => {
       '15',
     ]);
     expect(formatCoordinate(address)).toBe(
-      'Hexágono 7CLC5G73UUZ · Pared 4 · Estantería 2 · Volumen 15',
+      'Hexágono 7CLC5G73UUZ · Pared 4 · Anaquel 2 · Volumen 15',
     );
   });
 });
