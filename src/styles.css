@@ -2528,7 +2528,7 @@ body {
    absent, so the list reads as plain static paper. */
 .js-cinematic .nearby--cinematic .nearby__item {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateY(10px);
   filter: blur(2px);
   transition:
     opacity 560ms var(--cinematic-ease),
