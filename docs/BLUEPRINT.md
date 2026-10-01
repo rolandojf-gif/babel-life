@@ -230,7 +230,7 @@ The editorial map below is frozen and the shipped English catalog matches it lin
 ```
 1
 TITLE: The Exact Time
-WALL HOOK: you are born in one exact second, room and set of physical circumstances that demand a complete book.
+WALL HOOK: your birth is recorded to the second: the temperature of the room, the light, who was present.
 NEARBY A: You are born four seconds later and nothing else changes.
 NEARBY B: The place, date and every other possible circumstance of birth change.
 
@@ -242,25 +242,25 @@ NEARBY B: A different desk leads to an unrecognisable person.
 
 3
 TITLE: The First Language
-WALL HOOK: every word you say belongs to one of the languages you could have learned.
+WALL HOOK: the language you learned first decides which words will fail you when you need them most.
 NEARBY A: The same declaration is spoken in another language.
 NEARBY B: All the languages you could understand are combined.
 
 4
 TITLE: Your Working Day
-WALL HOOK: every working day, job and possible sequence of jobs occupies a complete life.
+WALL HOOK: every day you have worked is recorded, up to the last time you will close a door at the end of a shift.
 NEARBY A: Completely different careers converge at eight fifteen.
 NEARBY B: Every job and the order in which you do them change.
 
 5
 TITLE: Where You Sleep
-WALL HOOK: every room, home, city and possible sequence of moves demands another book.
+WALL HOOK: you sleep tonight in your exact room, and the distance from the bed to the wall is recorded.
 NEARBY A: Only the room for one night changes.
 NEARBY B: All possible homes and sequences of addresses change.
 
 6
 TITLE: Those Who Appear
-WALL HOOK: all the children you could have appear, along with every complete person who never begins here.
+WALL HOOK: your children, if you have any, are written in full, including the years after you die.
 NEARBY A: Conception occurs an instant earlier and another person appears.
 NEARBY B: Every possible child appears in every order and number.
 
@@ -272,25 +272,25 @@ NEARBY B: One or both of the people who are your parents change.
 
 8
 TITLE: What You Keep
-WALL HOOK: the same events produce every possible combination of memories kept, distorted and lost.
+WALL HOOK: your past appears once as it happened and again as you remember it.
 NEARBY A: Only the memory of one childhood afternoon remains.
 NEARBY B: Every combination of memory and forgetting changes.
 
 9
 TITLE: Inventory
-WALL HOOK: every object you could own, even for a few minutes, demands another complete life.
+WALL HOOK: every object you have ever owned is listed, down to the one you forgot the same day.
 NEARBY A: A blue paper clip belongs to you for seventeen minutes.
 NEARBY B: Every object and every sequence of acquisition and loss changes.
 
 10
 TITLE: Where You Went
-WALL HOOK: every possible step, journey and encounter is placed precisely within your life.
+WALL HOOK: every step you have taken stands in order, up to the last one before you read this.
 NEARBY A: A single step lands twenty centimetres to the left.
 NEARBY B: Every route and the people encountered along it change.
 
 11
 TITLE: Your Book
-WALL HOOK: your exact life is already written from birth to the circumstances of your death.
+WALL HOOK: your exact life is written from birth to the circumstances of your death.
 NEARBY A: The same life ends one second later.
 NEARBY B: Tomorrow you take thirteen steps to the kitchen instead of twelve.
 
@@ -302,7 +302,7 @@ NEARBY B: Someone else occupies your room in your current family.
 
 13
 TITLE: Every Seat
-WALL HOOK: you die in an aircraft accident. There is a different book for every possible seat, every age and every route.
+WALL HOOK: you die in an aircraft accident, in seat 1A.
 NEARBY A: The same sequence exists for every ordinary way of dying.
 NEARBY B: The whole life matches until the final minute.
 
@@ -314,19 +314,19 @@ NEARBY B: You put on the right sock first every day of your adult life.
 
 15
 TITLE: What Was Said
-WALL HOOK: every possible word, pause and silence occupies its own complete book.
+WALL HOOK: every word you have said is recorded, and every silence with its exact length.
 NEARBY A: One pause lasts a second longer and nothing else changes.
 NEARBY B: Every possible word, pause and conversation changes.
 
 16
 TITLE: Your Nights
-WALL HOOK: every possible night changes its bed, position, awakening, dream or companion.
+WALL HOOK: every night of your life is recorded: which side you slept on, how often you woke, who breathed nearby.
 NEARBY A: For one night, you sleep facing the other way.
 NEARBY B: Every bed, position, interruption and companion changes.
 
 17
 TITLE: Every Body
-WALL HOOK: you are born with every body you could have had, and each one needs a complete life.
+WALL HOOK: you are born on the same day, to the same parents, in the same room, with another body.
 NEARBY A: Two bodies differ by only one millimetre of adult height.
 NEARBY B: Every bodily trait combines with every other one.
 
@@ -338,7 +338,7 @@ NEARBY B: The same need to keep moving, but through the sky.
 
 19
 TITLE: The Exact Age
-WALL HOOK: there is a different book for every exact age at which you could die.
+WALL HOOK: you die at 86 years, 3 months, 11 days, 7 hours, 14 minutes and 8 seconds.
 NEARBY A: The life ends at every age and after every possible final day.
 NEARBY B: After the final night, you live one more day.
 
@@ -356,7 +356,7 @@ NEARBY B: Everything changes except the final word.
 
 22
 TITLE: Every Living Person
-WALL HOOK: you share your life with every person alive today whom it would have been possible to meet.
+WALL HOOK: you spend your life with someone alive right now who does not know who you are.
 NEARBY A: Every possible relationship exists with each person.
 NEARBY B: Every possible relationship combines into complete networks.
 
@@ -368,7 +368,7 @@ NEARBY B: Every inner interpretation, intention and combination changes.
 
 24
 TITLE: One Thing, Then All of Them
-WALL HOOK: every city combines with every job, every home and every person with whom you could share it.
+WALL HOOK: you live in another city, with another job, in another home, with another person.
 NEARBY A: Even one Tuesday contains all its possible combinations.
 NEARBY B: Family, body, language and every other detail all change at once.
 
@@ -380,7 +380,7 @@ NEARBY B: The combinations eventually form a complete life.
 
 26
 TITLE: Written Twice
-WALL HOOK: your life appears in fragments in the books of people you never met.
+WALL HOOK: your life is written minute by minute, and every page of it also appears in someone else's book.
 NEARBY A: The same evenings of your life are written from the other window, and the spine carries her name.
 NEARBY B: The four seconds in which you cross paths appear in both books, each inside the complete life of the other.
 
