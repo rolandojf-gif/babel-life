@@ -24,6 +24,9 @@
   --motion-view: 320ms;
   --motion-settle: 420ms;
   --motion-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  /* The hero locator walks the shelves: an unhurried start and arrival. */
+  --motion-locate: 800ms;
+  --motion-locate-ease: cubic-bezier(0.42, 0, 0.58, 1);
   --lift: 0 1px 0 rgba(255, 253, 248, 0.7) inset, 0 1px 2px rgba(23, 21, 15, 0.06),
     0 8px 20px -14px rgba(23, 21, 15, 0.35);
   --lift-hover: 0 1px 0 rgba(255, 253, 248, 0.8) inset, 0 2px 4px rgba(23, 21, 15, 0.08),
@@ -2109,20 +2112,21 @@ body {
   /* Both ends move together, or both update immediately in older browsers. */
   @supports (d: path("M0 0H1V1")) {
     .library-index__locator {
-      transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform var(--motion-locate) var(--motion-locate-ease);
     }
 
     .library-index__leader {
-      transition: d var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+      transition: d var(--motion-locate) var(--motion-locate-ease);
     }
 
     .library-index__ladder {
-      transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform var(--motion-locate) var(--motion-locate-ease);
     }
   }
 
+  /* The book's family lights up at the locator's pace, as it arrives. */
   .library-index__spine {
-    transition: fill var(--motion-settle) var(--motion-ease), opacity var(--motion-settle) var(--motion-ease);
+    transition: fill var(--motion-locate) var(--motion-locate-ease), opacity var(--motion-locate) var(--motion-locate-ease);
   }
 
   :is(.backlink__arrow, .nearby__arrow, .shelf-locator__pointer) {
