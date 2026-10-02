@@ -153,7 +153,7 @@ At an address holding nothing this edition can print, the visitor is not told th
 *   **Analytics: Cloudflare Web Analytics**, loaded from `static.cloudflareinsights.com` in both entry documents. It is the only third-party request the site makes. It sets no cookie and uses no `localStorage` for usage metrics, collects no personal data, and the footer's *Legal & privacy* disclosure says so in both languages. There is no other tracking of any kind, and no telemetry the application itself emits.
 
 ### Verification (`tests/`)
-Vitest, seventeen files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the view and controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
+Vitest, eighteen files, run with `npm test`; `npm run verify` runs the typecheck, the tests and the production build in one pass. `jsdom` is a dev dependency used by the view and controller cases alone — no browser automation, and nothing here reaches the shipped bundle.
 
 Note that `npm run build`, which is what Netlify runs, does **not** run the tests. Keeping `npm test` green is a discipline of the repository, not a gate the deploy enforces.
 
@@ -169,6 +169,7 @@ Note that `npm run build`, which is what Netlify runs, does **not** run the test
 *   `wall-view.test.ts` — the wall under jsdom: the opening twelve led by their premises with no title presented as one, the rest behind `SHOW ME SOMETHING STRANGER` with no overlap, `SHOW ALL 27` leaving both sets exactly where they were, the same deal however often the wall is redrawn, controls put away rather than disabled, every card pointing at its own volume, and counts spelled from the catalogue with no number in any template, in both editions.
 *   `library-index.test.ts` — the edition index: one spine per readable book and its counts derived from the catalogue, families kept together, the locator on root and nearby books alike with that book's real address, the readout following hover and keyboard focus and returning, and the resting book.
 *   `shelf-view.test.ts` — a shelf under jsdom: thirty-two spines, the readable ones named and linked as volumes, and the count line that says how many — "One of them can be read." on an ordinary shelf, "Two" on the shelfmarked one.
+*   `footer.test.ts` — the footer under jsdom in both editions: the homage line as written, Spanish angle quotes, its place at the head of the footer before the copyright, its presence on every view, and the no-JavaScript entry documents held to the same text.
 *   `controller.test.ts` — the routing table as behaviour, under jsdom: a legible address opens a book, an illegible one is not an error, an address outside the space is, navigation clears what the previous view held, and the same location never renders twice.
 *   `accents.test.ts` — the sanguine accents: every root carries one, each names strokes that exist in the book's own motif, a book without an entry is drawn wholly in charcoal, and the accent reaches the book's plate.
 *   `motion.test.ts` — the reduced-motion path.

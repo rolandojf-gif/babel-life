@@ -262,3 +262,45 @@ describe('the wall’s deal and its count', () => {
     }
   });
 });
+
+describe('the dedication', () => {
+  const DEDICATIONS = {
+    en: 'For Jorge Luis Borges, who imagined the Library first.',
+    es: 'A Jorge Luis Borges, que imaginó la Biblioteca.',
+  } as const;
+
+  it('closes the wall in every deal, in both editions', () => {
+    for (const edition of ['en', 'es'] as const) {
+      vi.spyOn(locale, 'getLocale').mockReturnValue(edition);
+      const view = mount();
+      for (const selection of ['first', 'second', 'all'] as const) {
+        view.update(state(selection));
+        const last = view.element.lastElementChild;
+        expect(last?.className).toBe('wall__dedication');
+        expect(last?.textContent).toBe(DEDICATIONS[edition]);
+      }
+    }
+  });
+
+  it('follows the count line directly once every book is on the wall', () => {
+    for (const edition of ['en', 'es'] as const) {
+      vi.spyOn(locale, 'getLocale').mockReturnValue(edition);
+      const view = mount();
+      view.update(state('all'));
+      const count = view.element.querySelector('.wall__count');
+      const actions = view.element.querySelector('.wall__actions');
+      expect(count?.textContent).toBe(edition === 'en' ? 'All twenty-seven books.' : 'Los veintisiete libros.');
+      // Nothing left to press, so nothing stands between the count and the dedication.
+      expect(actions?.childElementCount).toBe(0);
+      expect(actions?.previousElementSibling).toBe(count);
+      expect(actions?.nextElementSibling?.className).toBe('wall__dedication');
+    }
+  });
+
+  it('is a line to read, not a control', () => {
+    const view = mount();
+    const dedication = view.element.querySelector('.wall__dedication');
+    expect(dedication?.tagName).toBe('P');
+    expect(dedication?.querySelector('a, button')).toBeNull();
+  });
+});
