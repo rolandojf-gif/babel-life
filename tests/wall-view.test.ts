@@ -146,9 +146,13 @@ describe('the wall', () => {
 
     const spoken = figures.map((figure) => figure.querySelector('.visually-hidden')?.textContent);
     expect(spoken).toEqual([
-      '≈ 1.96 × 10 to the power of 1,834,097 books',
+      'approximately 1.96 times ten to the power of 1,834,097 books',
       '≈ 10 to the power of 80 atoms',
     ]);
+
+    expect(figures[0]?.querySelector('[aria-hidden="true"]')?.textContent).toBe(
+      '≈ 1.96 × 101,834,097 books',
+    );
 
     for (const figure of figures) {
       const visual = figure.querySelector('[aria-hidden="true"]');
@@ -180,7 +184,7 @@ describe('the wall', () => {
       (figure) => figure.querySelector('.visually-hidden')?.textContent,
     );
     expect(spoken).toEqual([
-      '≈ 1,96 × 10 elevado a 1.834.097 libros',
+      'aproximadamente 1,96 por diez elevado a 1.834.097 libros',
       '≈ 10 elevado a 80 átomos',
     ]);
   });

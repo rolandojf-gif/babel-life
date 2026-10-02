@@ -9,6 +9,7 @@ export const copy: Copy = {
   dek: 'Con solo 25 símbolos, la Biblioteca contiene más libros que átomos hay en el universo observable. En algún lugar entre ellos están todas las vidas que podrías haber vivido.',
   libraryScaleLabel: 'LA BIBLIOTECA',
   libraryScaleMantissa: '≈ 1,96 × 10',
+  libraryScaleSpokenMantissa: 'aproximadamente 1,96 por diez',
   libraryScaleExponent: '1.834.097',
   libraryScaleUnit: 'libros',
   libraryScaleMeta: '25 símbolos · 1.312.000 posiciones',

@@ -9,6 +9,7 @@ export const copy: Copy = {
   dek: 'With just 25 symbols, the Library contains more books than there are atoms in the observable universe. Somewhere among them are all the lives you could have lived.',
   libraryScaleLabel: 'THE LIBRARY',
   libraryScaleMantissa: '≈ 1.96 × 10',
+  libraryScaleSpokenMantissa: 'approximately 1.96 times ten',
   libraryScaleExponent: '1,834,097',
   libraryScaleUnit: 'books',
   libraryScaleMeta: '25 symbols · 1,312,000 positions',

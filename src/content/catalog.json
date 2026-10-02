@@ -244,7 +244,7 @@
       "kind": "root",
       "icon": "cup",
       "headline": "YOUR WORKING DAY",
-      "hook": "every day you have worked is recorded, up to the last time you will close a door at the end of a shift.",
+      "hook": "every working day of your life is recorded, up to the last time you will close a door at the end of a shift.",
       "title": "Your Working Day",
       "passage": [
         "This book contains every day you spend working: the first task you learned, the wasted hours, the mistakes without consequence, the journeys, the breaks and the last time you will close a door at the end of a shift. It also records the jobs that lasted briefly and those that shaped decades. Your profession fits into a short answer. The life behind that answer fills thousands of pages with schedules, tired bodies, repeated conversations and mornings when you began again."
@@ -445,7 +445,7 @@
       "kind": "root",
       "icon": "lineage",
       "headline": "BEFORE YOU",
-      "hook": "the possible lives of your parents change the conditions of yours again and again.",
+      "hook": "your parents’ lives fill pages before the page on which you are born.",
       "title": "Before You",
       "passage": [
         "Your book begins before you can remember. It contains the decisions, jobs, illnesses and movements of your parents that made your exact birth possible. It records who they were before they became your parents and how they continued to have lives of their own as you grew up. Every change in their lives alters the conditions of yours: a city, a schedule, a conversation, the day they crossed paths. To describe you completely, the book needs pages in which you do not yet exist."
@@ -756,7 +756,7 @@
         },
         {
           "targetBookId": "b0043",
-          "difference": "Your death does not change, but tomorrow you take one more step."
+          "difference": "The final page ends one second earlier, and tomorrow you take one more step to the kitchen."
         }
       ]
     },
@@ -780,7 +780,7 @@
         },
         {
           "targetBookId": "b0042",
-          "difference": "The life matches, except the final page ends one second later."
+          "difference": "Tomorrow you take twelve steps again, and the final page ends one second later."
         }
       ]
     },
@@ -817,7 +817,7 @@
       "headline": "EVERY DOOR",
       "title": "Every Door",
       "passage": [
-        "There is a book in which you were born behind every door on your street.",
+        "For every door on your street, there is a book in which you were born behind that door.",
         "In one you are an only child. In another you share a room with three siblings. In another, the person you now call your sister lives two buildings away and never learns your name.",
         "Every door contains a complete childhood."
       ],
@@ -1368,7 +1368,7 @@
       "kind": "root",
       "icon": "covers",
       "headline": "YOUR FULL NAME",
-      "hook": "you keep your name while your body, family, language, memories and everything else change.",
+      "hook": "your full name belongs to the exact life you know, with everything that currently gives it meaning.",
       "title": "Your Full Name",
       "passage": [
         "This book preserves your name and everything that currently goes with it: body, family, country, language, memories, habits and relationships. Whenever someone says it, they are referring to the exact accumulation of those pages. Yet the name takes up very little space. It could easily be copied onto the cover of another book. The Library does so. Open that other book, and you find the same name and none of the circumstances that taught you to recognise it."

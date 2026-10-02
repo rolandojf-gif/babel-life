@@ -12,6 +12,7 @@ export type Copy = {
   dek: string;
   libraryScaleLabel: string;
   libraryScaleMantissa: string;
+  libraryScaleSpokenMantissa: string;
   libraryScaleExponent: string;
   libraryScaleUnit: string;
   libraryScaleMeta: string;
@@ -19,7 +20,7 @@ export type Copy = {
   universeScaleMantissa: string;
   universeScaleExponent: string;
   universeScaleUnit: string;
-  /** Spoken form of a scale figure. `{mantissa}` already ends in the base 10. */
+  /** Spoken form of a scale figure. `{mantissa}` already ends in the base ten. */
   scalePower: string;
   lede: string;
   cardEyebrow: string;

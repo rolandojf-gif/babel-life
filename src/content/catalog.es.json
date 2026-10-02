@@ -244,7 +244,7 @@
       "kind": "root",
       "icon": "cup",
       "headline": "TU JORNADA",
-      "hook": "constan todos tus días de trabajo, hasta la última vez que cerrarás una puerta al terminar la jornada.",
+      "hook": "cada jornada de tu vida laboral queda registrada, hasta la última vez que cerrarás una puerta al terminar un turno.",
       "title": "Tu jornada",
       "passage": [
         "Este libro contiene todos tus días de trabajo: la primera tarea que aprendiste, las horas perdidas, los errores sin consecuencia, los trayectos, los descansos y la última vez que cerrarás una puerta al terminar. También registra los empleos que duraron poco y los que determinaron décadas. Tu profesión cabe en una respuesta breve. La vida necesaria para sostener esa respuesta ocupa miles de páginas de horarios, cuerpos cansados, conversaciones repetidas y mañanas en las que volviste a empezar."
@@ -445,7 +445,7 @@
       "kind": "root",
       "icon": "lineage",
       "headline": "ANTES DE TI",
-      "hook": "las vidas posibles de tus padres cambian una y otra vez las condiciones de la tuya.",
+      "hook": "las vidas de tus padres llenan páginas anteriores a aquella en la que naces.",
       "title": "Antes de ti",
       "passage": [
         "Tu libro comienza antes de que puedas recordar. Contiene las decisiones, trabajos, enfermedades y desplazamientos de tus padres que hicieron posible tu nacimiento exacto. Registra cómo eran antes de recibir ese nombre y cómo siguieron siendo otras personas mientras tú crecías. Cada cambio en sus vidas altera las condiciones de la tuya: una ciudad, un horario, una conversación, el día en que coincidieron. Para describirte por completo, el libro necesita páginas en las que todavía no existes."
@@ -756,7 +756,7 @@
         },
         {
           "targetBookId": "b0043",
-          "difference": "La muerte no cambia, pero mañana das un paso más."
+          "difference": "La última página termina un segundo antes y mañana das un paso más hasta la cocina."
         }
       ]
     },
@@ -780,7 +780,7 @@
         },
         {
           "targetBookId": "b0042",
-          "difference": "La vida coincide, salvo que la última página termina un segundo después."
+          "difference": "Mañana vuelves a dar doce pasos y la última página termina un segundo después."
         }
       ]
     },
@@ -817,7 +817,7 @@
       "headline": "CADA PUERTA",
       "title": "Cada puerta",
       "passage": [
-        "Hay un libro en el que naciste detrás de cada puerta de tu calle.",
+        "Por cada puerta de tu calle, hay un libro en el que naciste detrás de esa puerta.",
         "En uno eres hijo único. En otro compartes habitación con tres hermanos. En otro, la persona a quien ahora llamas hermana vive dos edificios más lejos y nunca aprende tu nombre.",
         "Cada puerta contiene una infancia completa."
       ],
@@ -1368,7 +1368,7 @@
       "kind": "root",
       "icon": "covers",
       "headline": "TU NOMBRE COMPLETO",
-      "hook": "conservas tu nombre mientras cambian el cuerpo, la familia, la lengua, los recuerdos y todo lo demás.",
+      "hook": "tu nombre completo pertenece a la vida exacta que conoces, con todo lo que actualmente le da significado.",
       "title": "Tu nombre completo",
       "passage": [
         "Este libro conserva tu nombre y todo lo que actualmente lo acompaña: cuerpo, familia, país, lengua, recuerdos, hábitos y relaciones. Cada vez que alguien lo pronuncia, se refiere a la acumulación exacta de esas páginas. Sin embargo, el nombre ocupa muy poco espacio. Podría copiarse sin dificultad en la portada de otro libro. La Biblioteca lo hace. Al abrir ese otro libro, encuentras el mismo nombre y ninguna de las circunstancias con las que aprendiste a reconocerlo."

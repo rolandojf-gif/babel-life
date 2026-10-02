@@ -248,7 +248,7 @@ NEARBY B: All the languages you could understand are combined.
 
 4
 TITLE: Your Working Day
-WALL HOOK: every day you have worked is recorded, up to the last time you will close a door at the end of a shift.
+WALL HOOK: every working day of your life is recorded, up to the last time you will close a door at the end of a shift.
 NEARBY A: Completely different careers converge at eight fifteen.
 NEARBY B: Every job and the order in which you do them change.
 
@@ -266,7 +266,7 @@ NEARBY B: Every possible child appears in every order and number.
 
 7
 TITLE: Before You
-WALL HOOK: the possible lives of your parents change the conditions of yours again and again.
+WALL HOOK: your parents’ lives fill pages before the page on which you are born.
 NEARBY A: The same parents live differently.
 NEARBY B: One or both of the people who are your parents change.
 
@@ -344,7 +344,7 @@ NEARBY B: After the final night, you live one more day.
 
 20
 TITLE: Your Full Name
-WALL HOOK: you keep your name while your body, family, language, memories and everything else change.
+WALL HOOK: your full name belongs to the exact life you know, with everything that currently gives it meaning.
 NEARBY A: The same signature belongs to a completely different life.
 NEARBY B: Completely different people answer to your same name.
 

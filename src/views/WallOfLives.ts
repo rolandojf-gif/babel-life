@@ -21,13 +21,13 @@ function createScaleLabel(text: string, motif: SVGSVGElement): HTMLParagraphElem
   return label;
 }
 
-function createScaleValue(mantissa: string, exponent: string, unit: string): HTMLParagraphElement {
+function createScaleValue(mantissa: string, exponent: string, unit: string, spokenMantissa = mantissa): HTMLParagraphElement {
   const value = element('p', 'masthead__scale-value');
   value.append(
     element(
       'span',
       'visually-hidden',
-      fill(copy.scalePower, { mantissa, exponent, unit }),
+      fill(copy.scalePower, { mantissa: spokenMantissa, exponent, unit }),
     ),
   );
 
@@ -56,6 +56,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     copy.libraryScaleMantissa,
     copy.libraryScaleExponent,
     copy.libraryScaleUnit,
+    copy.libraryScaleSpokenMantissa,
   );
   const universeValue = createScaleValue(
     copy.universeScaleMantissa,
