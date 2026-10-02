@@ -442,7 +442,7 @@ This status snapshot is the absolute boundary for future agents and developers.
 *   Zero backend, zero AI generation, zero user accounts, zero form submissions, zero persistence of anything about a reader.
 
 ### KNOWN GAPS
-*   **Untested views.** `BookView`, `NearbyVolumes`, `shelfLocator`, `shelfListing`, `atmosphere` and the drawings themselves have no cases of their own (their sanguine accents do) and are exercised only by reading the page.
+*   **Untested views.** `NearbyVolumes`, `shelfLocator`, `shelfListing`, `atmosphere` and the drawings themselves have no cases of their own (their sanguine accents do) and are exercised only by reading the page.
 *   **The Spanish catalog's prose is checked for shape, not for craft.** Accession alignment with the English edition and the word count are asserted; nothing reads it.
 *   **No screen reader has been used at all.** Chromium at 320 / 390 / 1440 px covers the wall, the book spread, the shelf and the address view in both languages: no horizontal overflow anywhere, the language switcher keeps the open volume, and the wall's deal survives opening a life, browser Back, `SHOW ALL 27` and repeated redraws while a reload deals again.
 *   The final-hexagon boundary condition described in section 2.
