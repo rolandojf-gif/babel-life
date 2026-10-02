@@ -805,6 +805,35 @@ body {
   text-transform: uppercase;
 }
 
+/* Set exactly like a book's closing line (`.book--spread .aftertaste`). */
+.wall__dedication {
+  max-width: 34ch;
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  color: var(--oxblood);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.45;
+  text-align: center;
+  /* Two even lines, so no word is left stranded on the second. */
+  text-wrap: balance;
+}
+
+.wall__dedication::before {
+  display: block;
+  width: 2.25rem;
+  height: 1px;
+  margin: 0 auto 1rem;
+  background: var(--rule-strong);
+  content: '';
+}
+
+@media (min-width: 47.5em) {
+  .wall__dedication {
+    font-size: 1.25rem;
+  }
+}
+
 .wall__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1993,6 +2022,14 @@ body {
 
 .attribution {
   margin: 0;
+}
+
+.homage {
+  max-width: 44rem;
+  margin: 0 0 0.75rem;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
 .about summary {

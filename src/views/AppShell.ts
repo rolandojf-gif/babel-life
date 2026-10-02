@@ -45,7 +45,7 @@ export function mountAppShell(
   status.setAttribute('aria-live', 'polite');
 
   const footer = element('footer', 'footer');
-  footer.append(element('p', 'attribution', copy.attribution));
+  footer.append(element('p', 'homage', copy.homage));
   footer.append(element('p', 'attribution', copy.copyright));
 
   const about = element('details', 'about');

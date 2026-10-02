@@ -54,8 +54,10 @@ export const copy: Copy = {
   invalidAddress: 'Esta dirección no está en esta edición.',
   invalidAddressNote: 'Cada volumen tiene aquí una dirección permanente. Esta no es una de ellas.',
   enterTheLibrary: 'Entrar en la Biblioteca',
-  attribution: 'Inspirado en Jorge Luis Borges.',
+  homage:
+    'Babel Life es un humilde homenaje a «La biblioteca de Babel» (1941), de Jorge Luis Borges. Proyecto independiente: no reproduce el cuento ni está vinculado a sus herederos ni a sus editores.',
   copyright: '© 2026 Rolando Fernández. Todos los derechos reservados.',
+  dedication: 'A Jorge Luis Borges, que imaginó la Biblioteca.',
   aboutHeading: 'Sobre Babel Life',
   aboutBody:
     'Babel Life es un proyecto literario independiente inspirado en el cuento «La biblioteca de Babel», de Jorge Luis Borges. No está afiliado, avalado ni publicado por los herederos de Borges ni por ninguna editorial. Aquí no se reproduce ningún pasaje del cuento. Los pasajes y las coordenadas pertenecen a esta edición. Esto es ficción: el sitio no puede identificar, predecir ni estimar el futuro de nadie.',
