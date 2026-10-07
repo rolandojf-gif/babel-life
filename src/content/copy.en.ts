@@ -54,10 +54,12 @@ export const copy: Copy = {
   invalidAddress: 'This address is not in this edition.',
   invalidAddressNote: 'Every volume here has a permanent address. This is not one of them.',
   enterTheLibrary: 'Enter the Library',
-  attribution: 'Inspired by Jorge Luis Borges.',
+  homage:
+    'Babel Life is a humble homage to Jorge Luis Borges’ “The Library of Babel” (1941). An independent project: it does not reproduce the story and is not affiliated with his estate or publishers.',
   copyright: '© 2026 Rolando Fernández. All rights reserved.',
   supportPrefix: 'Support this edition',
   supportLabel: 'Buy me a coffee',
+  dedication: 'For Jorge Luis Borges, who imagined the Library first.',
   aboutHeading: 'About Babel Life',
   aboutBody:
     'Babel Life is an independent literary project inspired by Jorge Luis Borges’ short story “The Library of Babel”. It is not affiliated with, endorsed by or published by the Borges estate or any publisher. No passage from Borges’ story is reproduced here. Its passages and coordinates belong to this edition. This is fiction: the site cannot identify, predict or estimate anyone’s future.',

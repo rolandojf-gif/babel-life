@@ -1,6 +1,7 @@
 # Continuous deployment for the Library of Lives.
-# The build runs the typecheck before Vite, so a type error fails the deploy
-# rather than shipping.
+# The deploy runs `npm run verify`: the typecheck, the tests and the Vite build,
+# in that order, so a type error or a failing test fails the deploy rather than
+# shipping.
 
 [build]
   command = "npm run verify"

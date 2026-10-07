@@ -15,7 +15,7 @@ Babel Life es un sitio estático (TypeScript sin framework, Vite, CSS) en dos ed
 
 ## Commits, push y publicación
 
-- **Netlify despliega en continuo desde `main`: un push a `main`, o el merge de un PR a `main`, publica en vivo.** Netlify ejecuta `npm run build`.
+- **Netlify despliega en continuo desde `main`: un push a `main`, o el merge de un PR a `main`, publica en vivo.** Netlify ejecuta `npm run verify` (`netlify.toml`): typecheck, tests y build.
 - **No hagas commit ni push hasta que él lo autorice.** Suele autorizar en un mensaje aparte, con la rama, los ficheros y a veces el mensaje de commit literal.
 - **Un commit por trabajo.** Los arreglos de fallos van aparte del trabajo visual, y cada pasada independiente en su propio commit.
 - **Un push autorizado cubre solo el trabajo que nombra.** Si hay commits locales sin autorizar, monta el autorizado sobre `origin/main` y empuja solo ese.
@@ -27,7 +27,7 @@ Babel Life es un sitio estático (TypeScript sin framework, Vite, CSS) en dos ed
 ## Verificación
 
 - `npm test` (Vitest, con jsdom en las vistas), `npm run typecheck` y `npm run build`. `npm run verify` hace los tres. Node 22.
-- `npm run build` **no** ejecuta los tests: tenerlos en verde es disciplina del repositorio, no una barrera del despliegue.
+- Netlify ejecuta `npm run verify`, así que un test en rojo para el despliegue igual que un error de tipos o un build roto. `npm run build` por sí solo **no** ejecuta los tests.
 - Un test que choca con una decisión editorial nueva se cambia; el texto no se retuerce para pasar un test viejo. Los límites editoriales se mueven primero en el Blueprint.
 - **Verificación visual económica.** Un conjunto pequeño y representativo (1440, 1024–1280 y 390 px), sin tests de píxeles y sin capturas no esenciales salvo que encuentres una regresión real. El peso va en `npm test`, typecheck y build.
 - Para ver la web en local: `npm run build && npm run preview`.

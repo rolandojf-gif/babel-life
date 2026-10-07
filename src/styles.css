@@ -24,6 +24,9 @@
   --motion-view: 320ms;
   --motion-settle: 420ms;
   --motion-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  /* The hero locator walks the shelves: an unhurried start and arrival. */
+  --motion-locate: 800ms;
+  --motion-locate-ease: cubic-bezier(0.42, 0, 0.58, 1);
   --lift: 0 1px 0 rgba(255, 253, 248, 0.7) inset, 0 1px 2px rgba(23, 21, 15, 0.06),
     0 8px 20px -14px rgba(23, 21, 15, 0.35);
   --lift-hover: 0 1px 0 rgba(255, 253, 248, 0.8) inset, 0 2px 4px rgba(23, 21, 15, 0.08),
@@ -803,6 +806,35 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+/* Set exactly like a book's closing line (`.book--spread .aftertaste`). */
+.wall__dedication {
+  max-width: 34ch;
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  color: var(--oxblood);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.45;
+  text-align: center;
+  /* Two even lines, so no word is left stranded on the second. */
+  text-wrap: balance;
+}
+
+.wall__dedication::before {
+  display: block;
+  width: 2.25rem;
+  height: 1px;
+  margin: 0 auto 1rem;
+  background: var(--rule-strong);
+  content: '';
+}
+
+@media (min-width: 47.5em) {
+  .wall__dedication {
+    font-size: 1.25rem;
+  }
 }
 
 .wall__actions {
@@ -2011,6 +2043,14 @@ body {
   color: var(--oxblood);
 }
 
+.homage {
+  max-width: 44rem;
+  margin: 0 0 0.75rem;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
 .about summary {
   min-height: 44px;
   padding: 0.75rem 0;
@@ -2125,20 +2165,21 @@ body {
   /* Both ends move together, or both update immediately in older browsers. */
   @supports (d: path("M0 0H1V1")) {
     .library-index__locator {
-      transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform var(--motion-locate) var(--motion-locate-ease);
     }
 
     .library-index__leader {
-      transition: d var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+      transition: d var(--motion-locate) var(--motion-locate-ease);
     }
 
     .library-index__ladder {
-      transition: transform var(--motion-settle) cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform var(--motion-locate) var(--motion-locate-ease);
     }
   }
 
+  /* The book's family lights up at the locator's pace, as it arrives. */
   .library-index__spine {
-    transition: fill var(--motion-settle) var(--motion-ease), opacity var(--motion-settle) var(--motion-ease);
+    transition: fill var(--motion-locate) var(--motion-locate-ease), opacity var(--motion-locate) var(--motion-locate-ease);
   }
 
   :is(.backlink__arrow, .nearby__arrow, .shelf-locator__pointer) {

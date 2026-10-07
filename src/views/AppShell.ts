@@ -45,20 +45,8 @@ export function mountAppShell(
   status.setAttribute('aria-live', 'polite');
 
   const footer = element('footer', 'footer');
-  footer.append(element('p', 'attribution', copy.attribution));
+  footer.append(element('p', 'homage', copy.homage));
   footer.append(element('p', 'attribution', copy.copyright));
-
-  const support = element('p', 'support');
-  support.append(document.createTextNode(`${copy.supportPrefix} · `));
-  const supportLink = link(
-    'https://buymeacoffee.com/rolandofernandez',
-    'support__link',
-    `☕ ${copy.supportLabel}`,
-  );
-  supportLink.target = '_blank';
-  supportLink.rel = 'noopener noreferrer';
-  support.append(supportLink);
-  footer.append(support);
 
   const about = element('details', 'about');
   about.append(element('summary', undefined, copy.aboutHeading));
@@ -70,6 +58,18 @@ export function mountAppShell(
   legal.append(element('p', undefined, copy.legalBody));
   legal.append(element('p', undefined, copy.legalOwner));
   footer.append(legal);
+
+  const support = element('div', 'support');
+  support.append(document.createTextNode(`${copy.supportPrefix} · `));
+  const supportLink = link(
+    'https://buymeacoffee.com/rolandofernandez',
+    'support__link',
+    `☕ ${copy.supportLabel}`,
+  );
+  supportLink.target = '_blank';
+  supportLink.rel = 'noopener noreferrer';
+  support.append(supportLink);
+  footer.append(support);
 
   shell.append(grain, createCharcoalDefs(), createLanguageSwitcher(), main, footer, status);
   root.append(shell);

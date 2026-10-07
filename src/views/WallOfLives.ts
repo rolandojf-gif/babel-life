@@ -169,7 +169,10 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
 
   const actionsRow = element('div', 'wall__actions');
 
-  root.append(masthead, preamble, grid, count, actionsRow);
+  // The last line of the wall, whatever the deal: a dedication, not a control.
+  const dedication = element('p', 'wall__dedication', copy.dedication);
+
+  root.append(masthead, preamble, grid, count, actionsRow, dedication);
 
   function update(next: AppState): void {
     defaultBookId = restingBookId(next);

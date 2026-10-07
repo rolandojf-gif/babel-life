@@ -52,10 +52,13 @@ export type Copy = {
   invalidAddress: string;
   invalidAddressNote: string;
   enterTheLibrary: string;
-  attribution: string;
+  /** The homage and independence line that opens the footer of every page. */
+  homage: string;
   copyright: string;
   supportPrefix: string;
   supportLabel: string;
+  /** The dedication that closes the wall, set like a book's closing line. */
+  dedication: string;
   aboutHeading: string;
   aboutBody: string;
   legalHeading: string;
