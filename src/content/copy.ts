@@ -54,6 +54,8 @@ export type Copy = {
   enterTheLibrary: string;
   attribution: string;
   copyright: string;
+  supportPrefix: string;
+  supportLabel: string;
   aboutHeading: string;
   aboutBody: string;
   legalHeading: string;

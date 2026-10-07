@@ -56,12 +56,14 @@ export const copy: Copy = {
   enterTheLibrary: 'Enter the Library',
   attribution: 'Inspired by Jorge Luis Borges.',
   copyright: '© 2026 Rolando Fernández. All rights reserved.',
+  supportPrefix: 'Support this edition',
+  supportLabel: 'Buy me a coffee',
   aboutHeading: 'About Babel Life',
   aboutBody:
     'Babel Life is an independent literary project inspired by Jorge Luis Borges’ short story “The Library of Babel”. It is not affiliated with, endorsed by or published by the Borges estate or any publisher. No passage from Borges’ story is reproduced here. Its passages and coordinates belong to this edition. This is fiction: the site cannot identify, predict or estimate anyone’s future.',
   legalHeading: 'Legal & privacy',
   legalBody:
-    'Babel Life is currently a non-commercial personal project. It does not sell goods or services, offer user accounts, accept form submissions or serve advertising. It uses Cloudflare Web Analytics for aggregate traffic and performance metrics; this service does not use cookies or localStorage for usage metrics and does not collect or use visitors’ personal data. Hosting providers may process technical request data needed to deliver, secure and operate the site.',
+    'Babel Life is an independent personal literary project. It does not sell goods or services, offer user accounts, accept form submissions or serve advertising. Voluntary support through Buy Me a Coffee is optional and provides no goods, services, access or other consideration. It uses Cloudflare Web Analytics for aggregate traffic and performance metrics; this service does not use cookies or localStorage for usage metrics and does not collect or use visitors’ personal data. Hosting providers may process technical request data needed to deliver, secure and operate the site.',
   legalOwner: 'Maintained by Rolando Fernández in Spain.',
   wallCountPartial: '{count} of {total} books.',
   wallCountAll: 'All {total} books.',

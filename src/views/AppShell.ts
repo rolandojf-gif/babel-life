@@ -48,6 +48,18 @@ export function mountAppShell(
   footer.append(element('p', 'attribution', copy.attribution));
   footer.append(element('p', 'attribution', copy.copyright));
 
+  const support = element('p', 'support');
+  support.append(document.createTextNode(`${copy.supportPrefix} · `));
+  const supportLink = link(
+    'https://buymeacoffee.com/rolandofernandez',
+    'support__link',
+    `☕ ${copy.supportLabel}`,
+  );
+  supportLink.target = '_blank';
+  supportLink.rel = 'noopener noreferrer';
+  support.append(supportLink);
+  footer.append(support);
+
   const about = element('details', 'about');
   about.append(element('summary', undefined, copy.aboutHeading));
   about.append(element('p', undefined, copy.aboutBody));
