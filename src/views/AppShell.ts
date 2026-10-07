@@ -59,6 +59,18 @@ export function mountAppShell(
   legal.append(element('p', undefined, copy.legalOwner));
   footer.append(legal);
 
+  const support = element('div', 'support');
+  support.append(document.createTextNode(`${copy.supportPrefix} · `));
+  const supportLink = link(
+    'https://buymeacoffee.com/rolandofernandez',
+    'support__link',
+    `☕ ${copy.supportLabel}`,
+  );
+  supportLink.target = '_blank';
+  supportLink.rel = 'noopener noreferrer';
+  support.append(supportLink);
+  footer.append(support);
+
   shell.append(grain, createCharcoalDefs(), createLanguageSwitcher(), main, footer, status);
   root.append(shell);
   initAtmosphere(shell);

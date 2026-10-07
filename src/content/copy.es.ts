@@ -57,13 +57,15 @@ export const copy: Copy = {
   homage:
     'Babel Life es un humilde homenaje a «La biblioteca de Babel» (1941), de Jorge Luis Borges. Proyecto independiente: no reproduce el cuento ni está vinculado a sus herederos ni a sus editores.',
   copyright: '© 2026 Rolando Fernández. Todos los derechos reservados.',
+  supportPrefix: 'Apoya esta edición',
+  supportLabel: 'Invítame a un café',
   dedication: 'A Jorge Luis Borges, que imaginó la Biblioteca.',
   aboutHeading: 'Sobre Babel Life',
   aboutBody:
     'Babel Life es un proyecto literario independiente inspirado en el cuento «La biblioteca de Babel», de Jorge Luis Borges. No está afiliado, avalado ni publicado por los herederos de Borges ni por ninguna editorial. Aquí no se reproduce ningún pasaje del cuento. Los pasajes y las coordenadas pertenecen a esta edición. Esto es ficción: el sitio no puede identificar, predecir ni estimar el futuro de nadie.',
   legalHeading: 'Aviso legal y privacidad',
   legalBody:
-    'Babel Life es, por ahora, un proyecto personal no comercial. No vende productos ni servicios, no ofrece cuentas de usuario, no acepta formularios ni muestra publicidad. Utiliza Cloudflare Web Analytics para métricas agregadas de tráfico y rendimiento; este servicio no usa cookies ni localStorage para las métricas de uso y no recoge ni utiliza datos personales de los visitantes. Los proveedores de alojamiento pueden tratar los datos técnicos de las peticiones necesarios para servir, proteger y operar el sitio.',
+    'Babel Life es un proyecto literario personal e independiente. No vende productos ni servicios, no ofrece cuentas de usuario, no acepta formularios ni muestra publicidad. El apoyo voluntario mediante Buy Me a Coffee es opcional y no da acceso a bienes, servicios, contenidos ni otras contraprestaciones. Utiliza Cloudflare Web Analytics para métricas agregadas de tráfico y rendimiento; este servicio no usa cookies ni localStorage para las métricas de uso y no recoge ni utiliza datos personales de los visitantes. Los proveedores de alojamiento pueden tratar los datos técnicos de las peticiones necesarios para servir, proteger y operar el sitio.',
   legalOwner: 'Mantenido por Rolando Fernández en España.',
   wallCountPartial: '{count} de {total} libros.',
   wallCountAll: 'Los {total} libros.',

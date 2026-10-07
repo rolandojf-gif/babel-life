@@ -2027,6 +2027,22 @@ body {
   margin: 0;
 }
 
+.support {
+  margin: 0.55rem 0 0;
+  color: var(--ink-soft);
+}
+
+.support__link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.support__link:is(:hover, :focus-visible) {
+  color: var(--oxblood);
+}
+
 .homage {
   max-width: 44rem;
   margin: 0 0 0.75rem;
