@@ -134,9 +134,9 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   root.append(
     createBackLink(),
     spread,
+    createNearbyVolumes(book),
     shelfGutter,
     createEmbeddedShelf(shelfOf(coordinate), book.id),
-    createNearbyVolumes(book),
     createShelfWalk(coordinate),
     createBookActions(book),
   );

@@ -1201,6 +1201,23 @@ body {
     grid-column: 1 / -1;
   }
 
+  /* The DOM follows the reading; on wide screens the shelf stays beside the spread. */
+  .book--spread > .backlink {
+    grid-row: 1;
+  }
+
+  .book--spread > .nearby {
+    grid-row: 3;
+  }
+
+  .book--spread > .shelfwalk {
+    grid-row: 4;
+  }
+
+  .book--spread > .book__actions {
+    grid-row: 5;
+  }
+
   .book--spread > .spread {
     grid-column: 1;
     grid-row: 2;

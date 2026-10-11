@@ -25,6 +25,19 @@ describe('BookView', () => {
     }
   });
 
+  it('offers nearby lives immediately after the story, before the physical shelf', () => {
+    const view = createBookView('b0007', null);
+    const children = Array.from(view.element.children);
+    const spreadIndex = children.findIndex((child) => child.classList.contains('spread'));
+    const nearbyIndex = children.findIndex((child) => child.classList.contains('nearby'));
+    const shelfIndex = children.findIndex((child) => child.classList.contains('book__shelf'));
+
+    expect(spreadIndex).toBeGreaterThanOrEqual(0);
+    expect(nearbyIndex).toBe(spreadIndex + 1);
+    expect(shelfIndex).toBeGreaterThan(nearbyIndex);
+    expect(view.element.querySelectorAll('.book__shelf .shelf__link').length).toBeGreaterThan(0);
+  });
+
   it('structures the spread with verso carrying discovery marker, shelf locator, and consultation note', () => {
     const view = createBookView('b0007', null);
     const verso = view.element.querySelector('.spread__verso');
