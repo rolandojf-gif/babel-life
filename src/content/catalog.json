@@ -376,6 +376,12 @@
           "targetBookId": "b0034",
           "difference": "Every possible home and sequence of addresses changes."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0057",
+          "difference": "That night you change not rooms but sides: you sleep in your own, facing the wall instead of the room."
+        }
       ]
     },
     {
@@ -844,6 +850,12 @@
         {
           "targetBookId": "b0042",
           "difference": "Tomorrow you take twelve steps again, and the final page ends one second later."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0039",
+          "difference": "The step is not added but moved: you take twelve to the kitchen again, and one of your steps lands twenty centimetres to the left."
         }
       ]
     },
@@ -1493,6 +1505,12 @@
           "targetBookId": "b0070",
           "difference": "Completely different people answer to your same name."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0073",
+          "difference": "What survives everything is no longer your name at the foot of a document but your final word."
+        }
       ]
     },
     {
@@ -2047,6 +2065,12 @@
         {
           "targetBookId": "b0090",
           "difference": "The book contains the complete life of the person who matches the child in those three pages."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0088",
+          "difference": "The stranger no longer invents you in three pages: he crosses a doorway with you for four seconds, and in his book you have no name."
         }
       ]
     }

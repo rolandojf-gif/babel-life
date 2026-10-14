@@ -376,6 +376,12 @@
           "targetBookId": "b0034",
           "difference": "Cambian todas las casas y secuencias de direcciones posibles."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0057",
+          "difference": "Esa noche no cambias de cuarto, sino de lado: duermes en el tuyo, mirando hacia la pared en lugar de hacia la habitación."
+        }
       ]
     },
     {
@@ -844,6 +850,12 @@
         {
           "targetBookId": "b0042",
           "difference": "Mañana vuelves a dar doce pasos y la última página termina un segundo después."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0039",
+          "difference": "El paso no se añade: se desplaza. Vuelves a dar doce hasta la cocina, y uno de tus pasos cae veinte centímetros a la izquierda."
         }
       ]
     },
@@ -1493,6 +1505,12 @@
           "targetBookId": "b0070",
           "difference": "Personas completamente distintas responden a tu mismo nombre."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0073",
+          "difference": "Lo que sobrevive a todo deja de ser tu nombre al pie de un documento y pasa a ser tu última palabra."
+        }
       ]
     },
     {
@@ -2047,6 +2065,12 @@
         {
           "targetBookId": "b0090",
           "difference": "El libro contiene la vida completa de la persona que coincide con el niño de aquellas tres páginas."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0088",
+          "difference": "El desconocido ya no te inventa en tres páginas: se cruza contigo cuatro segundos en una puerta, y en su libro no llevas nombre."
         }
       ]
     }
