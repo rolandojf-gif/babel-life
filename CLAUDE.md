@@ -74,6 +74,7 @@ Están en la sección 3 del Blueprint. Las que más se rompen sin querer:
 - Guardarraíl de 30–110 palabras, independiente en cada edición. **Sin paridad de longitud entre inglés y castellano:** son ediciones literarias nativas, no traducciones. La paridad estructural (mismas accesiones, orden y aristas) sí es invariante.
 - Capitalización del catálogo tal como está publicada.
 - Lo que inquieta aquí es la implicación y la cercanía al lector. La versión barata de «perturbador» (sobresalto, crueldad) rompe el registro.
+- **Cierres por sustracción, sin *zoom out* ni causalidad explicativa** (regla 12 del Blueprint). Vale para la última frase del pasaje y para el `aftertaste` que va debajo. El golpe final debe quedarse en la implicación concreta sobre el lector, nunca abrir el plano hacia «incontables variaciones» o la combinatoria general de la Biblioteca. Evita conjunciones causales («porque», «ya que») en ninguno de los dos: la Biblioteca no se justifica, registra. Alterna golpes finales breves con cierres de respiración larga cuando la prosodia lo pida (`b0003`, `b0006`, `b0031`).
 
 ## El muro
 
