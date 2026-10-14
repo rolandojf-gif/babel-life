@@ -388,7 +388,7 @@
       "passage": [
         "There are books for every flat, house, room, city and view you could have.",
         "Then come the sequences: three moves, none, forty; a childhood in one place and old age in another; decades facing the same window. Changing an address alters the nearby shops, the stairs you use and the faces you meet when you leave.",
-        "The Library contains every complete sequence of homes, including the one in which you never inhabit any of the places you now remember."
+        "In this book you spend your whole life under other roofs: you never enter a single one of the rooms your memory rests on today."
       ],
       "aftertaste": "Every address contains a complete life.",
       "neighbors": [
@@ -436,8 +436,8 @@
       "title": "An Instant Earlier",
       "passage": [
         "In the adjacent book, conception occurs an instant earlier. Everything seems the same: the place, the two people, the day. Yet another body is born.",
-        "The person who appears there will have a voice, a face and a complete life. In your book, they do not die or disappear: they simply never begin.",
-        "Around both books are countless variations of that instant, and each introduces someone different who will live through pages that do not exist here."
+        "The person who appears there will have a voice, a face and a complete life.",
+        "In your book, they do not die or disappear: they simply never begin."
       ],
       "aftertaste": "Another person begins in that instant.",
       "neighbors": [
@@ -687,7 +687,7 @@
       "passage": [
         "On one shelf, one object changes at a time. On the next, two; then a hundred; then all of them.",
         "There are lives with rooms full of things and lives in which almost nothing bears your name. Every car combines with every key; every photograph with every home; every garment with every day on which you could wear it. Then come all the sequences of acquisition and loss.",
-        "The Library contains inventories that cannot be finished because each inventory is embedded in a complete life."
+        "The Library contains inventories that cannot be finished."
       ],
       "aftertaste": "Every inventory is inside a life.",
       "neighbors": [
@@ -1083,7 +1083,7 @@
       "passage": [
         "Your book records every sound you have uttered: the first syllables, repeated questions, automatic answers, names, arguments and words you said when no one was listening. It also contains all your silences, with their exact duration.",
         "Some sentences changed a relationship. Most changed nothing.",
-        "The Library writes both with the same care because an exact life cannot replace one forgettable word with another, or one second of silence with one second of speech."
+        "The Library writes both with the same care. An exact life cannot replace one forgettable word with another, or one second of silence with one second of speech."
       ],
       "aftertaste": "One silent second is not equal to one second of speech.",
       "neighbors": [
@@ -1407,10 +1407,10 @@
       "title": "Every Duration",
       "passage": [
         "There are books that end after a few minutes and books that pass through a childhood, an adult life or extreme old age. For every duration, there are all possible final days: ordinary, busy, quiet, shared, unnoticed.",
-        "The Library does not reserve the ending for an extraordinary scene. It may arrive after you wash your hands, look at a street or set a cup on a table.",
-        "Every age reached contains countless complete lives capable of ending there."
+        "The Library does not reserve the ending for an extraordinary scene.",
+        "It may arrive after you wash your hands, look at a street or set a cup on a table."
       ],
-      "aftertaste": "Every age contains countless lives.",
+      "aftertaste": "Any afternoon can be the final page.",
       "neighbors": [
         {
           "targetBookId": "b0065",
@@ -1679,7 +1679,7 @@
         "You are born in the same second, inhabit the same homes, say the same words and make the same gestures. Your job, relationships, journeys, illnesses and death remain the same.",
         "Two people watching both lives from outside would not find a single difference.",
         "But as you perform each action, you think other things, desire other outcomes and interpret what happens differently.",
-        "The Library needs two complete books because inwardly you did not live the same life."
+        "The Library needs two complete books."
       ],
       "aftertaste": "Inwardly, you did not live the same life.",
       "neighbors": [

@@ -388,7 +388,7 @@
       "passage": [
         "Hay libros para cada piso, casa, habitación, ciudad y vista que podrías tener.",
         "Después vienen las secuencias: tres mudanzas, ninguna, cuarenta; una infancia en un lugar y una vejez en otro; décadas frente a la misma ventana. Cambiar una dirección altera los comercios cercanos, las escaleras usadas y los rostros encontrados al salir.",
-        "La Biblioteca contiene cada itinerario doméstico completo, incluido aquel en que nunca habitas ninguno de los lugares que ahora recuerdas."
+        "En este libro pasas la vida entera bajo otros techos: jamás entras en ninguna de las habitaciones que hoy sostienen tu memoria."
       ],
       "aftertaste": "Cada dirección contiene una vida completa.",
       "neighbors": [
@@ -436,8 +436,8 @@
       "title": "Un instante antes",
       "passage": [
         "En el libro contiguo, la concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo.",
-        "La persona que aparece allí tendrá una voz, una cara y una vida completas. En tu libro no muere ni desaparece: simplemente nunca comienza.",
-        "En torno a ambos libros hay incontables variaciones de ese instante, y cada una introduce a alguien distinto que vivirá durante páginas que aquí no existen."
+        "La persona que aparece allí tendrá una voz, una cara y una vida completas.",
+        "En tu libro no muere ni desaparece: simplemente nunca comienza."
       ],
       "aftertaste": "Otra persona comienza en ese instante.",
       "neighbors": [
@@ -687,7 +687,7 @@
       "passage": [
         "Una estantería cambia un objeto cada vez. Las siguientes cambian dos, cien, todos.",
         "Hay vidas con habitaciones llenas y vidas en las que casi nada lleva tu nombre. Cada coche se combina con cada llave; cada fotografía, con cada casa; cada prenda, con cada día en que podrías usarla. Después se ordenan todas las secuencias de adquisición y pérdida.",
-        "La Biblioteca contiene inventarios imposibles de terminar porque cada inventario está incrustado en una vida completa."
+        "La Biblioteca contiene inventarios imposibles de terminar."
       ],
       "aftertaste": "Cada inventario está dentro de una vida.",
       "neighbors": [
@@ -1083,7 +1083,7 @@
       "passage": [
         "Tu libro registra cada sonido que has pronunciado: las primeras sílabas, las preguntas repetidas, las respuestas automáticas, los nombres, las discusiones y las palabras que dijiste sin que nadie escuchara. También contiene todos tus silencios, con su duración exacta.",
         "Algunas frases cambiaron una relación. La mayoría no cambió nada.",
-        "La Biblioteca escribe ambas con el mismo cuidado porque una vida exacta no puede sustituir una palabra olvidable por otra, ni un segundo callado por un segundo de voz."
+        "La Biblioteca escribe ambas con el mismo cuidado. Una vida exacta no puede sustituir una palabra olvidable por otra, ni un segundo callado por un segundo de voz."
       ],
       "aftertaste": "Un segundo callado no equivale a uno de voz.",
       "neighbors": [
@@ -1407,10 +1407,10 @@
       "title": "Cada duración",
       "passage": [
         "Hay libros que terminan a los pocos minutos y libros que atraviesan una infancia, una vida adulta o una vejez extrema. Para cada duración existen todos los últimos días posibles: comunes, ocupados, silenciosos, compartidos, inadvertidos.",
-        "La Biblioteca no reserva el final para una escena extraordinaria. Puede llegar después de lavarte las manos, mirar una calle o dejar una taza sobre una mesa.",
-        "Cada edad alcanzada contiene incontables vidas completas capaces de terminar allí."
+        "La Biblioteca no reserva el final para una escena extraordinaria.",
+        "Puede llegar después de lavarte las manos, mirar una calle o dejar una taza sobre una mesa."
       ],
-      "aftertaste": "Cada edad contiene incontables vidas.",
+      "aftertaste": "Cualquier tarde puede ser la última página.",
       "neighbors": [
         {
           "targetBookId": "b0065",
@@ -1679,7 +1679,7 @@
         "Naces en el mismo segundo, habitas las mismas casas, dices las mismas palabras y haces los mismos gestos. Conservas el trabajo, las relaciones, los viajes, las enfermedades y la muerte.",
         "Dos personas que contemplaran ambas vidas desde fuera no encontrarían una sola diferencia.",
         "Pero mientras realizas cada acción, piensas otras cosas, deseas otras consecuencias e interpretas de otra manera lo que sucede.",
-        "La Biblioteca necesita dos libros completos porque por dentro no viviste la misma vida."
+        "La Biblioteca necesita dos libros completos."
       ],
       "aftertaste": "Por dentro, no viviste la misma vida.",
       "neighbors": [
