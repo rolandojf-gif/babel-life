@@ -1285,26 +1285,24 @@
       "rootId": "b0062",
       "kind": "root",
       "icon": "road",
-      "headline": "YA HAY UN LIBRO EN EL QUE...",
-      "hook": "pasas toda tu vida recorriendo el mundo en coche.",
+      "headline": "TODAS LAS CARRETERAS",
+      "hook": "pasas la vida entera en tránsito y ninguna habitación llega a ser la tuya.",
       "title": "Todas las carreteras",
       "passage": [
-        "Existe un libro en el que pasas toda tu vida viajando en coche.",
-        "Cada mañana despiertas en un lugar distinto. Conduces durante horas, atraviesas ciudades, carreteras secundarias, puertos de montaña, desiertos, costas y pueblos que nunca volverás a ver.",
-        "Al anochecer aparcas, comes, duermes y al día siguiente vuelves a conducir.",
-        "No llegas a ningún destino definitivo.",
-        "Recorres todos los lugares a los que una carretera puede llevarte.",
-        "Y eres feliz."
+        "Existe un libro en el que nunca llegas a vivir en ningún sitio. Cada mañana despiertas frente a otra carretera y conduces hasta que anochece.",
+        "Atraviesas ciudades, puertos de montaña, polígonos, desiertos y pueblos cuyos nombres olvidas antes de cruzar el siguiente. Las casas que en otros libros habitas durante décadas aquí pasan al otro lado del cristal en tres segundos.",
+        "Las personas que podrían haberte conocido quedan reducidas a una gasolinera, un cruce o las luces de otro coche de frente.",
+        "No huyes de nada ni te diriges a ninguna parte. Simplemente ocupas el libro en el que tu vida no se detiene hasta la última página."
       ],
-      "aftertaste": "Cada carretera posible puede contener una vida entera.",
+      "aftertaste": "Ningún lugar dura más que el trayecto.",
       "neighbors": [
         {
           "targetBookId": "b0063",
-          "difference": "La misma vida en movimiento, pero sobre dos ruedas."
+          "difference": "El trayecto continúa sin motor y a la intemperie."
         },
         {
           "targetBookId": "b0064",
-          "difference": "La misma necesidad de avanzar, pero por el cielo."
+          "difference": "En lugar de cruzar el territorio, pasas la vida sobrevolándolo entre escalas."
         }
       ]
     },
@@ -1313,25 +1311,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "bicycle",
-      "headline": "EN EL LIBRO CONTIGUO...",
-      "title": "Todas las bicicletas",
+      "headline": "LA DISTANCIA EN EL CUERPO",
+      "title": "Dos ruedas",
       "passage": [
-        "En el libro contiguo haces lo mismo en bicicleta.",
-        "Cruzas los mismos países más despacio. Algunas carreteras desaparecen y aparecen caminos que el coche no podía recorrer.",
-        "Duermes donde termina cada jornada. Te despiertas y vuelves a pedalear.",
-        "Tu cuerpo envejece sobre la bicicleta. Cambian tus piernas, tu velocidad y la distancia que puedes recorrer en un día.",
-        "Pero nunca dejas de avanzar.",
-        "También aquí eres feliz."
+        "En el libro contiguo haces el mismo recorrido sin motor. Avanzas a la velocidad que permiten tus piernas, el viento y la pendiente.",
+        "El mapa tarda años en cambiar. Duermes en cunetas, pensiones o portales donde termina cada jornada y al amanecer vuelves a pedalear. Tu cuerpo envejece midiendo el mundo en kilómetros diarios: primero ciento veinte, luego ochenta, luego veinte.",
+        "No hay regreso ni llegada. Cuando las piernas ya no pueden sostener la bicicleta, el libro termina."
       ],
-      "aftertaste": "El mundo cambia cuando la velocidad de tu vida cambia.",
+      "aftertaste": "La distancia la mide el desgaste del cuerpo.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Aquí cambias la bicicleta por un coche y vuelves a recorrer todas las carreteras."
+          "difference": "El esfuerzo desaparece tras el cristal de un coche, pero tampoco te detienes."
         },
         {
           "targetBookId": "b0064",
-          "difference": "Aquí abandonas la tierra y continúas el viaje por el aire."
+          "difference": "Dejas de tocar el suelo y encadenas vuelos hasta el final."
         }
       ]
     },
@@ -1340,25 +1335,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "flight",
-      "headline": "EN OTRO LIBRO...",
-      "title": "Todos los cielos",
+      "headline": "ENTRE ESCALAS",
+      "title": "Sin aterrizar",
       "passage": [
-        "En otro libro pasas tu vida viajando en avión.",
-        "Cada día vuelas a otro lugar. Cambian los aeropuertos, las compañías, los asientos, las rutas, las escalas y las personas que se sientan a tu lado.",
-        "Aterrizas, duermes unas horas y vuelves a despegar.",
-        "Durante una vida completa ves desde arriba ciudades que en otros libros recorres en coche o en bicicleta.",
-        "Nunca decides quedarte.",
-        "Y tampoco necesitas hacerlo."
+        "En otro libro pasas la vida encadenando vuelos comerciales. Cada día tienes otra tarjeta de embarque, otro pasillo de moqueta, otra puerta y otro desconocido durmiendo a pocos centímetros de tu hombro.",
+        "Aterrizas, cruzas una terminal iluminada sin salir a la ciudad, duermes unas horas junto a una pista y vuelves a despegar. Tu reloj nunca coincide con la luz que entra por la ventanilla.",
+        "Durante décadas sobrevuelas a diez mil metros las calles, las casas y las vidas que en el resto de la Biblioteca ocurren abajo."
       ],
-      "aftertaste": "Una vida puede no tener un lugar definitivo y seguir estando completa.",
+      "aftertaste": "Toda tu vida ocurre a diez mil metros de las demás.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Aquí vuelves al suelo y recorres el mundo por carretera."
+          "difference": "Desciendes a las carreteras y no vuelves a detener el coche."
         },
         {
           "targetBookId": "b0063",
-          "difference": "Aquí recorres el mismo mundo mucho más despacio, en bicicleta."
+          "difference": "Desciendes al asfalto y avanzas solo con la fuerza de tus piernas."
         }
       ]
     },

@@ -334,9 +334,9 @@ NEARBY B: Every bodily trait combines with every other one.
 
 18
 TITLE: Every Road
-WALL HOOK: you spend your whole life travelling the world by car.
-NEARBY A: The same life in motion, but on two wheels.
-NEARBY B: The same need to keep moving, but through the sky.
+WALL HOOK: you spend your whole life in transit, and no room ever becomes yours.
+NEARBY A: The journey continues without an engine and in the open.
+NEARBY B: Instead of crossing the territory, you spend your life flying over it between layovers.
 
 19
 TITLE: The Exact Age

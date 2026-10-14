@@ -1285,26 +1285,24 @@
       "rootId": "b0062",
       "kind": "root",
       "icon": "road",
-      "headline": "THERE IS ALREADY A BOOK IN WHICH...",
-      "hook": "you spend your whole life travelling the world by car.",
+      "headline": "EVERY ROAD",
+      "hook": "you spend your whole life in transit, and no room ever becomes yours.",
       "title": "Every Road",
       "passage": [
-        "There is a book in which you spend your whole life travelling by car.",
-        "Each morning you wake in a different place. You drive for hours, through cities, back roads, mountain passes, deserts, coastlines and villages you will never see again.",
-        "At nightfall you park, eat, sleep and the following day you drive once more.",
-        "You never reach a final destination.",
-        "You travel every place a road can take you.",
-        "And you are happy."
+        "There is a book in which you never come to live anywhere. Each morning you wake facing another road and drive until dark.",
+        "You cross cities, mountain passes, industrial estates, deserts and towns whose names you forget before reaching the next. The homes you inhabit for decades in other books pass on the other side of the glass in three seconds here.",
+        "The people who might have known you are reduced to a petrol station, a junction or the headlights of an oncoming car.",
+        "You are neither fleeing anything nor heading anywhere. You simply occupy the book in which your life does not stop until the final page."
       ],
-      "aftertaste": "Every possible road can hold an entire life.",
+      "aftertaste": "No place lasts longer than the journey.",
       "neighbors": [
         {
           "targetBookId": "b0063",
-          "difference": "The same life in motion, but on two wheels."
+          "difference": "The journey continues without an engine and in the open."
         },
         {
           "targetBookId": "b0064",
-          "difference": "The same need to keep moving, but through the sky."
+          "difference": "Instead of crossing the territory, you spend your life flying over it between layovers."
         }
       ]
     },
@@ -1313,25 +1311,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "bicycle",
-      "headline": "IN THE ADJACENT BOOK...",
-      "title": "Every Bicycle",
+      "headline": "THE DISTANCE IN THE BODY",
+      "title": "Two Wheels",
       "passage": [
-        "In the adjacent book you do the same thing by bicycle.",
-        "You cross the same countries more slowly. Some roads vanish and paths appear that the car could never follow.",
-        "You sleep wherever the day ends. You wake and pedal again.",
-        "Your body ages on the bicycle. Your legs change, your speed changes and the distance you can cover in a day grows shorter.",
-        "But you never stop moving forward.",
-        "Here, too, you are happy."
+        "In the adjacent book you make the same journey without an engine. You advance at the speed your legs, the wind and the gradient allow.",
+        "The map takes years to change. You sleep by the roadside, in boarding houses or in doorways wherever each day ends, and at dawn you pedal again. Your body grows old measuring the world in daily kilometres: first a hundred and twenty, then eighty, then twenty.",
+        "There is neither a return nor an arrival. When your legs can no longer hold the bicycle upright, the book ends."
       ],
-      "aftertaste": "The world changes when the speed of your life changes.",
+      "aftertaste": "The distance is measured by the wearing down of the body.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Here you swap the bicycle for a car and travel every road again."
+          "difference": "The effort vanishes behind the glass of a car, yet you still never stop."
         },
         {
           "targetBookId": "b0064",
-          "difference": "Here you leave the ground and continue the journey by air."
+          "difference": "You stop touching the ground and string flights together until the end."
         }
       ]
     },
@@ -1340,25 +1335,22 @@
       "rootId": "b0062",
       "kind": "nearby",
       "icon": "flight",
-      "headline": "IN ANOTHER BOOK...",
-      "title": "Every Sky",
+      "headline": "BETWEEN LAYOVERS",
+      "title": "Never Landing",
       "passage": [
-        "In another book you spend your life travelling by aeroplane.",
-        "Each day you fly somewhere new. The airports change, the airlines, the seats, the routes, the layovers and the people sitting beside you.",
-        "You land, sleep for a few hours and take off again.",
-        "Over a complete lifetime you see from above the cities that in other books you cross by car or bicycle.",
-        "You never decide to stay.",
-        "And you never need to."
+        "In another book you spend your life stringing commercial flights together. Every day brings another boarding pass, another carpeted corridor, another gate and another stranger sleeping a few centimetres from your shoulder.",
+        "You land, cross a lit terminal without going out into the city, sleep a few hours beside a runway and take off again. Your watch never matches the light coming through the window.",
+        "For decades you pass ten thousand metres above the streets, the homes and the lives that in the rest of the Library take place below."
       ],
-      "aftertaste": "A life can have no final place and still be complete.",
+      "aftertaste": "Your whole life takes place ten thousand metres above the others.",
       "neighbors": [
         {
           "targetBookId": "b0062",
-          "difference": "Here you return to the ground and travel the world by road."
+          "difference": "You descend to the roads and never stop the car again."
         },
         {
           "targetBookId": "b0063",
-          "difference": "Here you cross the same world far more slowly, by bicycle."
+          "difference": "You descend to the tarmac and move forward only by the strength of your legs."
         }
       ]
     },
