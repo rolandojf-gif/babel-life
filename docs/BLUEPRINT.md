@@ -291,7 +291,7 @@ NEARBY A: A single step lands twenty centimetres to the left.
 NEARBY B: Every route and the people encountered along it change.
 
 11
-TITLE: Your Book
+TITLE: Yours
 WALL HOOK: your exact life is written from birth to the circumstances of your death.
 NEARBY A: The same life ends one second later.
 NEARBY B: Tomorrow you take thirteen steps to the kitchen instead of twelve.

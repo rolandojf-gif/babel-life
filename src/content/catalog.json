@@ -775,7 +775,7 @@
       "icon": "book",
       "headline": "YOUR EXACT LIFE",
       "hook": "your exact life is written from birth to the circumstances of your death.",
-      "title": "Your Book",
+      "title": "Yours",
       "passage": [
         "There is a book containing your exact life. Its first page gives the date, time and place of your birth. Then come every home, every meal, every conversation and every day you have forgotten.",
         "One page describes how you have come to read these words. The pages after it contain the time you will wake tomorrow, the first object you will touch and the words you will say before leaving.",
@@ -975,7 +975,7 @@
         "Same family. Same body. Same meals, jobs, conversations and journeys. They arrive together at the final minute.",
         "Afterwards only your death changes: in one book it is an illness, in another an accident, in another you end it yourself."
       ],
-      "aftertaste": "In each book, you die in another way.",
+      "aftertaste": "In each book, you die a different way.",
       "neighbors": [
         {
           "targetBookId": "b0047",
