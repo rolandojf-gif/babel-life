@@ -201,6 +201,7 @@ All passages and card copy must adhere strictly to these principles:
     *   A **volume** is the physical object at an address: what stands on a shelf, what the shelf walk steps through, what is counted as thirty-two per shelf, and what the unreadable addresses hold. Use it where the Library is being described as a place.
     *   The inventory therefore reads: 27 narrative families, 27 root books on the Wall, 54 nearby books, 81 books and 81 complete lives in total.
     *   Both editions follow the same distinction (`libro`, `vida`, `volumen`). `SHOW ME ANOTHER LIFE` is consistent with it: it hands the visitor another complete life, which is another book.
+12. **Closings by Subtraction.** A book ends on the reader's concrete wound. Neither the last sentence of its passage nor the aftertaste under it pulls the camera back to countless variations or to the Library's general arithmetic to restate the thesis, and neither explains itself with a causal conjunction (*because*, *since*; *porque*, *ya que*): the Library does not justify, it records. Short, dry closings and long cadences both belong to the edition; neither is a template.
 
 ---
 
