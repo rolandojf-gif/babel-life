@@ -161,6 +161,65 @@ describe('the nearby edges', () => {
   });
 });
 
+/** Every crossing an edition opens, with the family it leaves and the one it enters. */
+function crossingsOf(locale: (typeof LOCALES)[number]) {
+  const edition = catalogFor(locale).books;
+  const familyOf = new Map(edition.map((book) => [book.id, book.rootId]));
+  return edition.flatMap((book) =>
+    (book.crossings ?? []).map((edge) => ({
+      from: book,
+      targetBookId: edge.targetBookId,
+      targetFamily: familyOf.get(edge.targetBookId),
+    })),
+  );
+}
+
+function tally(keys: (string | undefined)[]): Map<string | undefined, number> {
+  const counts = new Map<string | undefined, number>();
+  for (const key of keys) counts.set(key, (counts.get(key) ?? 0) + 1);
+  return counts;
+}
+
+/**
+ * The scarcity of the blueprint, section 3, rule 8: a family opens at most one
+ * crossing, always from a nearby book, and receives at most one across its
+ * three books, and a book that receives a crossing never opens one. Checked in
+ * each edition on its own.
+ */
+describe('the crossings', () => {
+  it('open only from a nearby book, never from a root', () => {
+    for (const locale of LOCALES) {
+      for (const crossing of crossingsOf(locale)) {
+        expect(crossing.from.kind, `${locale} ${crossing.from.id}`).toBe('nearby');
+      }
+    }
+  });
+
+  it('leave each family at most once', () => {
+    for (const locale of LOCALES) {
+      const exits = tally(crossingsOf(locale).map((crossing) => crossing.from.rootId));
+      for (const [family, count] of exits) expect(count, `${locale} ${family}`).toBe(1);
+    }
+  });
+
+  it('enter each family at most once, across its three books', () => {
+    for (const locale of LOCALES) {
+      const entries = tally(crossingsOf(locale).map((crossing) => crossing.targetFamily));
+      for (const [family, count] of entries) expect(count, `${locale} ${family}`).toBe(1);
+    }
+  });
+
+  it('never leave from a book that one enters', () => {
+    for (const locale of LOCALES) {
+      const crossings = crossingsOf(locale);
+      const entered = new Set(crossings.map((crossing) => crossing.targetBookId));
+      for (const crossing of crossings) {
+        expect(entered.has(crossing.from.id), `${locale} ${crossing.from.id}`).toBe(false);
+      }
+    }
+  });
+});
+
 describe('the wall', () => {
   it('shows a curated opening twelve and a stranger remainder, and nothing twice', () => {
     expect(catalog.wall.first).toHaveLength(12);

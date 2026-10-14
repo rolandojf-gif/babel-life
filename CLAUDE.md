@@ -75,6 +75,7 @@ Están en la sección 3 del Blueprint. Las que más se rompen sin querer:
 - Capitalización del catálogo tal como está publicada.
 - Lo que inquieta aquí es la implicación y la cercanía al lector. La versión barata de «perturbador» (sobresalto, crueldad) rompe el registro.
 - **Cierres por sustracción, sin *zoom out* ni causalidad explicativa** (regla 12 del Blueprint). Vale para la última frase del pasaje y para el `aftertaste` que va debajo. El golpe final debe quedarse en la implicación concreta sobre el lector, nunca abrir el plano hacia «incontables variaciones» o la combinatoria general de la Biblioteca. Evita conjunciones causales («porque», «ya que») en ninguno de los dos: la Biblioteca no se justifica, registra. Alterna golpes finales breves con cierres de respiración larga cuando la prosodia lo pida (`b0003`, `b0006`, `b0031`).
+- **Pasadizos escasos** (`crossings`, regla 8 del Blueprint): cada familia abre como máximo uno, siempre desde un cercano y nunca desde la raíz, y recibe como máximo uno entre sus tres libros; un libro que recibe un pasadizo nunca abre otro. Lo vigila `tests/catalog.test.ts`.
 
 ## El muro
 
