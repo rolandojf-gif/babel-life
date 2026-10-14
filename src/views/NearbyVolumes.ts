@@ -11,7 +11,8 @@ function nearbyOpen(): HTMLSpanElement {
 
 /**
  * The exploration mechanic: two to four lives one difference away, each one
- * naming the difference before the visitor commits to it.
+ * naming the difference before the visitor commits to it. A crossing into
+ * another narrative family comes last and says so before anything else.
  */
 export function createNearbyVolumes(book: Book): HTMLElement {
   const section = element('section', 'nearby nearby--cinematic');
@@ -20,16 +21,19 @@ export function createNearbyVolumes(book: Book): HTMLElement {
   section.setAttribute('aria-labelledby', heading.id);
 
   const list = element('ul', 'nearby__list');
+  const edges = [...book.neighbors, ...(book.crossings ?? [])];
 
-  for (const [edgeIndex, edge] of book.neighbors.entries()) {
+  for (const [edgeIndex, edge] of edges.entries()) {
     const target = findBook(edge.targetBookId);
     if (!target) continue;
+    const crossing = target.rootId !== book.rootId;
 
     const item = element('li', 'nearby__item');
     // Stagger index for the paired entrance; the two volumes arrive as one beat.
     item.style.setProperty('--i', String(edgeIndex));
-    const anchor = link(`#book=${target.id}`, 'nearby__link');
+    const anchor = link(`#book=${target.id}`, crossing ? 'nearby__link nearby__link--crossing' : 'nearby__link');
     anchor.setAttribute('data-nearby', 'true');
+    if (crossing) anchor.append(element('span', 'nearby__family', copy.anotherFamily));
     anchor.append(
       element('span', 'nearby__difference', edge.difference),
       element('span', 'nearby__headline', target.headline),

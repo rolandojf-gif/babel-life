@@ -9,6 +9,9 @@ const BOOK_ID = /^b\d{4}$/;
 /** Exactly two nearby volumes hang off every root life. */
 const NEARBY_PER_ROOT = 2;
 
+/** A book may open at most one passage into another narrative family. */
+const MAX_CROSSINGS = 1;
+
 /**
  * Rejects an unusable catalog at load time: bad ID syntax, duplicate identities,
  * unresolved or cross-family nearby edges, a root without its two variations, or
@@ -61,6 +64,20 @@ export function validate(data: Catalog): Catalog {
       if (edge.difference.trim() === '') throw new Error(`Book ${book.id} has an unlabelled edge`);
       targets.add(edge.targetBookId);
     }
+
+    const crossings = book.crossings ?? [];
+    if (crossings.length > MAX_CROSSINGS) {
+      throw new Error(`Book ${book.id} offers ${String(crossings.length)} crossings`);
+    }
+    for (const edge of crossings) {
+      const target = books.get(edge.targetBookId);
+      if (!target) throw new Error(`Book ${book.id} crosses to unknown ${edge.targetBookId}`);
+      // The one sanctioned exception to adjacency: it must leave the family.
+      if (target.rootId === book.rootId) {
+        throw new Error(`Book ${book.id} crosses inside its own family to ${edge.targetBookId}`);
+      }
+      if (edge.difference.trim() === '') throw new Error(`Book ${book.id} has an unlabelled crossing`);
+    }
   }
 
   const roots = data.books.filter((book): book is RootBook => book.kind === 'root');
@@ -89,7 +106,7 @@ export function validate(data: Catalog): Catalog {
 const englishCatalog = validate(englishData as Catalog);
 const spanishCatalog = validate(spanishData as Catalog);
 
-function assertAligned(english: Catalog, spanish: Catalog): void {
+export function assertAligned(english: Catalog, spanish: Catalog): void {
   if (english.books.length !== spanish.books.length) {
     throw new Error('English and Spanish catalogs differ in length');
   }
@@ -98,6 +115,12 @@ function assertAligned(english: Catalog, spanish: Catalog): void {
     const right = spanish.books[index];
     if (left === undefined || right === undefined || left.id !== right.id) {
       throw new Error(`Catalog identity mismatch at index ${String(index)}`);
+    }
+    // A crossing is structure, not prose: both editions open the same passages.
+    const leftCrossings = (left.crossings ?? []).map((edge) => edge.targetBookId).join();
+    const rightCrossings = (right.crossings ?? []).map((edge) => edge.targetBookId).join();
+    if (leftCrossings !== rightCrossings) {
+      throw new Error(`Book ${left.id} crosses to different families in each edition`);
     }
   }
 }

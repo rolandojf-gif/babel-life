@@ -1598,6 +1598,27 @@ body {
   text-underline-offset: 4px;
 }
 
+/* A crossing leaves the family: a quiet small-caps line above the difference. */
+.nearby__family {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--ink-muted);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+}
+
+.nearby__link--crossing .nearby__difference {
+  grid-row: 2;
+}
+
+.nearby__link--crossing .nearby__headline {
+  grid-row: 3;
+}
+
+.nearby__link--crossing .nearby__open {
+  grid-row: 1 / span 3;
+}
+
 .book__actions {
   display: flex;
   flex-wrap: wrap;

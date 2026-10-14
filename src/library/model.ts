@@ -25,6 +25,12 @@ interface BookBase {
   /** One restrained line under the narrative. */
   aftertaste: string;
   neighbors: NeighborEdge[];
+  /**
+   * A way out of the family: a complete life in another narrative family, still
+   * one named difference away. Optional, at most one, never one of the two
+   * nearby lives.
+   */
+  crossings?: NeighborEdge[];
 }
 
 /** One of the twenty-seven lives on the wall. Only a root carries a wall hook. */

@@ -5,7 +5,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { validate } from '../src/library/catalog';
+import { assertAligned, validate } from '../src/library/catalog';
 import type { Book, Catalog, NearbyBook, RootBook } from '../src/library/model';
 
 function root(id: string): RootBook {
@@ -222,5 +222,72 @@ describe('the validator refuses', () => {
     expect(() => validate(broken((data) => { data.wall.first = ['b0002']; }))).toThrow(
       /lists nearby volume/,
     );
+  });
+});
+
+/** The sound catalog plus a second family, so a crossing has somewhere to go. */
+function twoFamilies(): Catalog {
+  const data = soundCatalog();
+  const d = root('b0004');
+  const e = nearby('b0005', 'b0004');
+  const f = nearby('b0006', 'b0004');
+  d.neighbors = [
+    { targetBookId: e.id, difference: 'The door opens.' },
+    { targetBookId: f.id, difference: 'The door stays shut.' },
+  ];
+  e.neighbors = [
+    { targetBookId: d.id, difference: 'The door is as it was.' },
+    { targetBookId: f.id, difference: 'The door stays shut.' },
+  ];
+  f.neighbors = [
+    { targetBookId: d.id, difference: 'The door is as it was.' },
+    { targetBookId: e.id, difference: 'The door opens.' },
+  ];
+  data.books.push(d, e, f);
+  data.wall.second.push(d.id);
+  return data;
+}
+
+describe('a crossing into another family', () => {
+  it('is accepted when it leaves the family and says what differs', () => {
+    const data = twoFamilies();
+    data.books[1]!.crossings = [{ targetBookId: 'b0005', difference: 'The cup is a door.' }];
+    expect(validate(data)).toBe(data);
+  });
+
+  it('is refused when it stays inside the family', () => {
+    const data = twoFamilies();
+    data.books[1]!.crossings = [{ targetBookId: 'b0003', difference: 'The cup moves right.' }];
+    expect(() => validate(data)).toThrow(/crosses inside its own family/);
+  });
+
+  it('is refused when it leads nowhere', () => {
+    const data = twoFamilies();
+    data.books[1]!.crossings = [{ targetBookId: 'b0099', difference: 'Nothing.' }];
+    expect(() => validate(data)).toThrow(/crosses to unknown/);
+  });
+
+  it('is refused unlabelled', () => {
+    const data = twoFamilies();
+    data.books[1]!.crossings = [{ targetBookId: 'b0005', difference: ' ' }];
+    expect(() => validate(data)).toThrow(/unlabelled crossing/);
+  });
+
+  it('is refused when a book opens more than one', () => {
+    const data = twoFamilies();
+    data.books[1]!.crossings = [
+      { targetBookId: 'b0005', difference: 'The cup is a door.' },
+      { targetBookId: 'b0006', difference: 'The cup is a wall.' },
+    ];
+    expect(() => validate(data)).toThrow(/offers 2 crossings/);
+  });
+
+  it('must open the same passage in both editions', () => {
+    const english = twoFamilies();
+    const spanish = twoFamilies();
+    english.books[1]!.crossings = [{ targetBookId: 'b0005', difference: 'The cup is a door.' }];
+    expect(() => assertAligned(english, spanish)).toThrow(/different families/);
+    spanish.books[1]!.crossings = [{ targetBookId: 'b0005', difference: 'La taza es una puerta.' }];
+    expect(() => assertAligned(english, spanish)).not.toThrow();
   });
 });

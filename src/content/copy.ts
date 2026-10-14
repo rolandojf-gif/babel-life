@@ -32,6 +32,8 @@ export type Copy = {
   alreadyHere: string;
   nearbyVolumes: string;
   openNearby: string;
+  /** Marks a nearby link that leaves the book's narrative family. */
+  anotherFamily: string;
   shelfEyebrow: string;
   openThisShelf: string;
   shelfHolds: readonly [string, string, string, string, string];
