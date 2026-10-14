@@ -441,7 +441,7 @@
       "headline": "AN INSTANT EARLIER",
       "title": "An Instant Earlier",
       "passage": [
-        "In the adjacent book, conception occurs an instant earlier. Everything seems the same: the place, the two people, the day. Yet another body is born.",
+        "Conception occurs an instant earlier. Everything seems the same: the place, the two people, the day. Yet another body is born.",
         "The person who appears there will have a voice, a face and a complete life.",
         "In your book, they do not die or disappear: they simply never begin."
       ],
@@ -740,11 +740,11 @@
       "headline": "TWENTY CENTIMETRES",
       "title": "Twenty Centimetres",
       "passage": [
-        "The next book places one of your steps twenty centimetres to the left.",
+        "As you walk, you put one foot down twenty centimetres farther to the left.",
         "You do not stumble. You meet no one. Your destination, your arrival time and the rest of your life remain the same. Only the sole of your foot touches another piece of ground for less than a second.",
-        "The change vanishes immediately, but it cannot be erased from the record. The Library rewrites every page for a life that strayed only the width of a hand."
+        "The change vanishes immediately, but it cannot be erased from the record: your entire life strayed the width of a hand."
       ],
-      "aftertaste": "The width of a hand rewrites every page.",
+      "aftertaste": "The width of a hand on another piece of ground.",
       "neighbors": [
         {
           "targetBookId": "b0038",
@@ -849,7 +849,7 @@
         },
         {
           "targetBookId": "b0042",
-          "difference": "Tomorrow you take twelve steps again, and the final page ends one second later."
+          "difference": "The final page ends one second later; tomorrow you take twelve steps again."
         }
       ],
       "crossings": [
@@ -928,13 +928,13 @@
         },
         {
           "targetBookId": "b0045",
-          "difference": "You are born behind every possible door on your street."
+          "difference": "Behind every door on your street, another childhood of yours begins."
         }
       ],
       "crossings": [
         {
           "targetBookId": "b0023",
-          "difference": "The child replaced is no longer you but yours: conception occurs an instant earlier."
+          "difference": "The child who loses their place is no longer you, but a child of yours who never begins here."
         }
       ]
     },
@@ -1136,7 +1136,7 @@
       "crossings": [
         {
           "targetBookId": "b0042",
-          "difference": "The extra second leaves the conversation and moves to the final page: you die one second later."
+          "difference": "The extra second leaves the conversation and moves to the end of your life."
         }
       ]
     },
@@ -1197,7 +1197,7 @@
       "headline": "FACING THE OTHER WAY",
       "title": "Facing the Other Way",
       "passage": [
-        "The adjacent book preserves your entire waking life. The same decisions, words, journeys and relationships. Only your position during one night changes: you sleep facing the wall instead of the room.",
+        "The adjacent book preserves your entire waking life. The same decisions, words, journeys and relationships. Only your position during one night changes: you sleep with your back to the room, facing the wall.",
         "You do not remember it in the morning. It affects neither your body nor the following day. The difference exists only while you are unaware of it.",
         "To preserve it, the Library also duplicates every page on which you are awake."
       ],
@@ -1595,7 +1595,7 @@
       "title": "The Last Word",
       "passage": [
         "There are books in which everything changes except your final word. You reach it with another voice, after a life you do not recognise, surrounded by people you will never know here.",
-        "In some books, you say it in another language, but the final sound matches. In others, it means something different. Bodies, families, countries and entire decades are replaced to lead to the same brief utterance.",
+        "In some books, you say it in another language, but the final sound matches. In others, it means something different. Entire decades, countries, families and bodies are replaced to lead to the same brief utterance.",
         "What remains constant no longer seems like a foundation. It seems like the detail that cannot be removed."
       ],
       "aftertaste": "The final word remains.",
@@ -1720,13 +1720,13 @@
       "title": "One Thought Less",
       "passage": [
         "As you lift a glass, a brief sentence appears in your mind.",
-        "You do not say it. It changes neither your expression, the movement of your hand nor what you do next. Three seconds later, you have forgotten it.",
+        "You do not say it. Your expression, the movement of your hand and what you do next remain unchanged. Three seconds later, you have forgotten it.",
         "In the adjacent book, that sentence never forms.",
         "Everything visible matches, as does every earlier and later thought until your death.",
         "For three seconds, one life contains something the other does not.",
         "To preserve that inaccessible difference, the Library writes both of them again in full."
       ],
-      "aftertaste": "Three seconds need two books.",
+      "aftertaste": "A sentence you never said is missing.",
       "neighbors": [
         {
           "targetBookId": "b0077",
@@ -1947,7 +1947,7 @@
       "title": "The Other Window",
       "passage": [
         "There is a book belonging to the woman who lived opposite. It contains her complete life: the job, the seven moves, the sister she stopped speaking to, her long final years.",
-        "And every evening, a line about the house opposite: the lamp came on at ten past seven. Twenty-six years of nearly identical lines.",
+        "And every evening, a line about your house: the lamp came on at ten past seven. Twenty-six years of nearly identical lines.",
         "What is written from the inside in your book is written from here in hers, and neither book is wrong."
       ],
       "aftertaste": "You never exchanged a word, yet you share twenty-six years.",
@@ -1976,7 +1976,7 @@
       "headline": "IN OPPOSITE DIRECTIONS",
       "title": "In Opposite Directions",
       "passage": [
-        "There is a book belonging to the man who crossed a doorway with you in opposite directions in 1996. It contains his childhood by the sea, the night shifts, the daughter he called every Sunday.",
+        "The man who crossed a doorway with you in opposite directions in 1996 has a book of his own. In it are his childhood by the sea, the night shifts, the daughter he called every Sunday.",
         "And one afternoon in 1996, in a lobby, a stranger was leaving as he came in. That stranger is you, and you have no name.",
         "Everything his book contains about you fits into four seconds. Everything your book contains about him does too."
       ],
@@ -2060,7 +2060,7 @@
       "neighbors": [
         {
           "targetBookId": "b0089",
-          "difference": "The book contains the life of the person who invented those three pages."
+          "difference": "It is you who, at nine, invents someone in three pages."
         },
         {
           "targetBookId": "b0090",
@@ -2070,7 +2070,7 @@
       "crossings": [
         {
           "targetBookId": "b0088",
-          "difference": "The stranger no longer invents you in three pages: he crosses a doorway with you for four seconds, and in his book you have no name."
+          "difference": "You are no longer invented in three pages: you occupy four seconds in the life of someone who crosses your path."
         }
       ]
     }

@@ -441,7 +441,7 @@
       "headline": "UN INSTANTE ANTES",
       "title": "Un instante antes",
       "passage": [
-        "En el libro contiguo, la concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo.",
+        "La concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo.",
         "La persona que aparece allí tendrá una voz, una cara y una vida completas.",
         "En tu libro no muere ni desaparece: simplemente nunca comienza."
       ],
@@ -740,11 +740,11 @@
       "headline": "VEINTE CENTÍMETROS",
       "title": "Veinte centímetros",
       "passage": [
-        "El libro siguiente coloca uno de tus pasos veinte centímetros a la izquierda.",
+        "Al caminar, apoyas un pie veinte centímetros más a la izquierda.",
         "No tropiezas. No encuentras a nadie. Tu destino, tu hora de llegada y el resto de tu vida permanecen iguales. Solo la planta de tu pie toca otro fragmento de suelo durante menos de un segundo.",
-        "El cambio desaparece de inmediato, pero no puede borrarse del registro. La Biblioteca vuelve a escribir cada página para una vida que únicamente se desvió el ancho de una mano."
+        "El cambio desaparece de inmediato, pero no puede borrarse del registro: tu vida entera se desvió el ancho de una mano."
       ],
-      "aftertaste": "El ancho de una mano reescribe cada página.",
+      "aftertaste": "El ancho de una mano sobre otro suelo.",
       "neighbors": [
         {
           "targetBookId": "b0038",
@@ -849,7 +849,7 @@
         },
         {
           "targetBookId": "b0042",
-          "difference": "Mañana vuelves a dar doce pasos y la última página termina un segundo después."
+          "difference": "La última página termina un segundo después; mañana vuelves a dar doce pasos."
         }
       ],
       "crossings": [
@@ -928,13 +928,13 @@
         },
         {
           "targetBookId": "b0045",
-          "difference": "Naces detrás de cada puerta posible de tu calle."
+          "difference": "Detrás de cada puerta de tu calle empieza otra infancia tuya."
         }
       ],
       "crossings": [
         {
           "targetBookId": "b0023",
-          "difference": "El niño sustituido ya no eres tú, sino tu hijo: la concepción ocurre un instante antes."
+          "difference": "El niño que pierde su lugar ya no eres tú, sino un hijo tuyo que aquí nunca llega a empezar."
         }
       ]
     },
@@ -1136,7 +1136,7 @@
       "crossings": [
         {
           "targetBookId": "b0042",
-          "difference": "El segundo de más sale de la conversación y pasa a la última página: mueres un segundo después."
+          "difference": "El segundo de más sale de la conversación y pasa al final de tu vida."
         }
       ]
     },
@@ -1197,7 +1197,7 @@
       "headline": "DEL OTRO LADO",
       "title": "Del otro lado",
       "passage": [
-        "El libro contiguo conserva toda tu vida despierta. Las mismas decisiones, palabras, viajes y relaciones. Solo cambia tu postura durante una noche: duermes mirando hacia la pared en lugar de hacia la habitación.",
+        "El libro contiguo conserva toda tu vida despierta. Las mismas decisiones, palabras, viajes y relaciones. Solo cambia tu postura durante una noche: duermes de cara a la pared, de espaldas a la habitación.",
         "No lo recuerdas por la mañana. No afecta a tu cuerpo ni al día siguiente. La diferencia existe únicamente mientras no eres consciente de ella.",
         "Para guardarla, la Biblioteca duplica también cada página en la que estás despierto."
       ],
@@ -1595,7 +1595,7 @@
       "title": "La última palabra",
       "passage": [
         "Hay libros donde todo cambia salvo tu última palabra. Llegas a ella con otra voz, después de una vida que no reconoces, rodeado de personas que nunca conocerás aquí.",
-        "En algunos libros la dices en otro idioma, pero el sonido final coincide. En otros significa algo diferente. Cuerpos, familias, países y décadas enteras se reemplazan para conducir a la misma breve emisión.",
+        "En algunos libros la dices en otro idioma, pero el sonido final coincide. En otros significa algo diferente. Décadas enteras, países, familias y cuerpos se reemplazan para conducir a la misma breve emisión.",
         "Lo constante ya no parece una base. Parece el detalle imposible de quitar."
       ],
       "aftertaste": "La última palabra permanece.",
@@ -1720,13 +1720,13 @@
       "title": "Un pensamiento de menos",
       "passage": [
         "Mientras levantas un vaso, aparece en tu mente una frase breve.",
-        "No la dices. No modifica tu expresión, el movimiento de tu mano ni lo que haces después. Tres segundos más tarde la has olvidado.",
+        "No la dices. Tu expresión, el movimiento de tu mano y lo que haces después no cambian. Tres segundos más tarde la has olvidado.",
         "En el libro contiguo, esa frase no llega a formarse.",
         "Todo lo visible coincide, y también cada pensamiento anterior y posterior hasta tu muerte.",
         "Durante tres segundos, una vida contiene algo que la otra no.",
         "Para guardar esa diferencia inaccesible, la Biblioteca vuelve a escribirlas enteras."
       ],
-      "aftertaste": "Tres segundos necesitan dos libros.",
+      "aftertaste": "Falta una frase que nunca dijiste.",
       "neighbors": [
         {
           "targetBookId": "b0077",
@@ -1947,7 +1947,7 @@
       "title": "La otra ventana",
       "passage": [
         "Existe el libro de la mujer que vivía enfrente. Contiene su vida completa: el trabajo, las siete mudanzas, la hermana con la que dejó de hablar, los años largos del final.",
-        "Y cada tarde, una línea sobre la casa de enfrente: la lámpara se encendió a las siete y diez. Veintiséis años de líneas casi iguales.",
+        "Y cada tarde, una línea sobre tu casa: la lámpara se encendió a las siete y diez. Veintiséis años de líneas casi iguales.",
         "Lo que en tu libro está escrito desde dentro, en el suyo está escrito desde aquí, y ninguno de los dos libros se equivoca."
       ],
       "aftertaste": "Nunca cruzasteis una palabra y compartís veintiséis años.",
@@ -1976,7 +1976,7 @@
       "headline": "EN SENTIDOS OPUESTOS",
       "title": "En sentidos opuestos",
       "passage": [
-        "Existe el libro del hombre que en 1996 cruzó contigo una puerta en sentidos opuestos. Contiene su infancia junto al mar, los turnos de noche, la hija a la que llamaba cada domingo.",
+        "El hombre que en 1996 cruzó contigo una puerta en sentidos opuestos tiene su propio libro. Allí están su infancia junto al mar, los turnos de noche, la hija a la que llamaba cada domingo.",
         "Y una tarde de 1996, en un vestíbulo, un desconocido salía mientras él entraba. Ese desconocido eres tú, y no llevas nombre.",
         "Todo lo que su libro contiene de ti cabe en cuatro segundos. Todo lo que el tuyo contiene de él también."
       ],
@@ -2060,7 +2060,7 @@
       "neighbors": [
         {
           "targetBookId": "b0089",
-          "difference": "El libro contiene la vida de la persona que inventó aquellas tres páginas."
+          "difference": "Eres tú quien, a los nueve años, inventa a alguien en tres páginas."
         },
         {
           "targetBookId": "b0090",
@@ -2070,7 +2070,7 @@
       "crossings": [
         {
           "targetBookId": "b0088",
-          "difference": "El desconocido ya no te inventa en tres páginas: se cruza contigo cuatro segundos en una puerta, y en su libro no llevas nombre."
+          "difference": "Ya no apareces inventado en tres páginas: ocupas cuatro segundos en la vida de quien se cruza contigo."
         }
       ]
     }
