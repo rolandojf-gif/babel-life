@@ -669,6 +669,12 @@
           "targetBookId": "b0037",
           "difference": "Every object and every sequence of acquisition and loss changes."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0078",
+          "difference": "What you keep for a moment and throw away is not a paper clip but a sentence you never say."
+        }
       ]
     },
     {
@@ -912,6 +918,12 @@
           "targetBookId": "b0045",
           "difference": "You are born behind every possible door on your street."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0023",
+          "difference": "The child replaced is no longer you but yours: conception occurs an instant earlier."
+        }
       ]
     },
     {
@@ -1107,6 +1119,12 @@
         {
           "targetBookId": "b0055",
           "difference": "Every possible word, pause and conversation changes."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0042",
+          "difference": "The extra second leaves the conversation and moves to the final page: you die one second later."
         }
       ]
     },
@@ -1923,6 +1941,12 @@
         {
           "targetBookId": "b0088",
           "difference": "The four seconds in which you cross paths appear in both books, each inside the complete life of the other."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0044",
+          "difference": "You are born behind the other window, in the house that watched yours."
         }
       ]
     },

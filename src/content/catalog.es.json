@@ -669,6 +669,12 @@
           "targetBookId": "b0037",
           "difference": "Cambian todos los objetos y sus secuencias de adquisición y pérdida."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0078",
+          "difference": "Lo que guardas un momento y desechas no es un clip, sino una frase que nunca dices."
+        }
       ]
     },
     {
@@ -912,6 +918,12 @@
           "targetBookId": "b0045",
           "difference": "Naces detrás de cada puerta posible de tu calle."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0023",
+          "difference": "El niño sustituido ya no eres tú, sino tu hijo: la concepción ocurre un instante antes."
+        }
       ]
     },
     {
@@ -1107,6 +1119,12 @@
         {
           "targetBookId": "b0055",
           "difference": "Cambian todas las palabras, pausas y conversaciones posibles."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0042",
+          "difference": "El segundo de más sale de la conversación y pasa a la última página: mueres un segundo después."
         }
       ]
     },
@@ -1923,6 +1941,12 @@
         {
           "targetBookId": "b0088",
           "difference": "Los cuatro segundos en que os cruzáis aparecen en ambos libros, cada uno dentro de la vida completa del otro."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0044",
+          "difference": "Naces detrás de la otra ventana, en la casa que miraba la tuya."
         }
       ]
     },
