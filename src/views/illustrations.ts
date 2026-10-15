@@ -113,7 +113,7 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'line', attrs: { x1: '54', y1: '38', x2: '66', y2: '38' } },
     { tag: 'line', attrs: { x1: '52', y1: '56', x2: '68', y2: '56' } },
   ],
-  // A ruled register, with one line read for another.
+  // A ruled register, and the sentence written in it.
   record: [
     { tag: 'rect', attrs: { x: '22', y: '14', width: '76', height: '46', rx: '1' } },
     { tag: 'line', attrs: { x1: '22', y1: '26', x2: '98', y2: '26' } },
@@ -122,7 +122,6 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'line', attrs: { x1: '40', y1: '14', x2: '40', y2: '60' } },
     { tag: 'line', attrs: { x1: '48', y1: '32', x2: '90', y2: '32' } },
     { tag: 'line', attrs: { x1: '48', y1: '44', x2: '76', y2: '44' } },
-    { tag: 'path', attrs: { d: 'M46 34 L92 29' } },
   ],
   // Something said, and nothing facing it.
   speech: [
@@ -199,12 +198,16 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'path', attrs: { d: 'M46 46 C56 36 80 37 98 46' } },
     { tag: 'path', attrs: { d: 'M86 10 a9 9 0 1 0 9 14 a7 7 0 1 1 -9 -14 z' } },
   ],
-  // A road running to the horizon, through the passes.
+  // The road from the driver's seat: the glass, its pillars, the wheel, and a
+  // house the edge of the windscreen is already cutting off.
   road: [
-    { tag: 'line', attrs: { x1: '10', y1: '28', x2: '110', y2: '28' } },
-    { tag: 'path', attrs: { d: 'M28 64 L56 28 M92 64 L64 28' } },
-    { tag: 'line', attrs: { x1: '60', y1: '62', x2: '60', y2: '31', 'stroke-dasharray': '4 5' } },
-    { tag: 'path', attrs: { d: 'M72 28 L84 18 L92 23 L101 15 L110 22' } },
+    { tag: 'path', attrs: { d: 'M6 12 Q60 4 114 12' } },
+    { tag: 'path', attrs: { d: 'M6 12 L18 52 M114 12 L102 52' } },
+    { tag: 'path', attrs: { d: 'M4 52 Q60 46 116 52' } },
+    { tag: 'line', attrs: { x1: '12', y1: '30', x2: '108', y2: '30' } },
+    { tag: 'path', attrs: { d: 'M46 49 L63 30 M90 49 L69 30' } },
+    { tag: 'path', attrs: { d: 'M11.4 30 V22 L18 17 L25 22 V30 M17 24 h4 v3 h-4 z' } },
+    { tag: 'path', attrs: { d: 'M38 71 A22 16 0 0 1 82 71' } },
   ],
   // Two covers carrying the same name; only the first is your book.
   covers: [
@@ -330,6 +333,58 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'path', attrs: { d: 'M14 56 Q60 8 106 56', 'stroke-dasharray': '3 4' } },
     { tag: 'path', attrs: { d: 'M46 32 H76 M66 32 L58 18 M66 32 L58 46 M49 32 L45 26 M49 32 L45 38' } },
   ],
+  // A walk seen from above, between two kerbs: every footfall in its place.
+  footing: [
+    { tag: 'path', attrs: { d: 'M30 6 V66 M90 6 V66' } },
+    ...[
+      [54, 60], [66, 48], [54, 36], [66, 24], [54, 12],
+    ].map(([cx, cy]): Shape => ({
+      tag: 'ellipse',
+      attrs: { cx: String(cx), cy: String(cy), rx: '3', ry: '5.2' },
+    })),
+  ],
+  // Two crossings of one doorway in opposite directions, and the moment inside it.
+  threshold: [
+    { tag: 'line', attrs: { x1: '10', y1: '62', x2: '110', y2: '62' } },
+    { tag: 'path', attrs: { d: 'M46 62 V14 H74 V62' } },
+    { tag: 'line', attrs: { x1: '12', y1: '34', x2: '46', y2: '34' } },
+    { tag: 'line', attrs: { x1: '46', y1: '34', x2: '74', y2: '34' } },
+    { tag: 'path', attrs: { d: 'M74 34 H106 M106 34 l-4 -2.5 M106 34 l-4 2.5' } },
+    { tag: 'path', attrs: { d: 'M46 42 H14 M14 42 l4 -2.5 M14 42 l4 2.5' } },
+    { tag: 'line', attrs: { x1: '46', y1: '42', x2: '74', y2: '42' } },
+    { tag: 'line', attrs: { x1: '74', y1: '42', x2: '106', y2: '42' } },
+  ],
+  // Two people on one floor, and the difference between the tops of their heads.
+  stature: [
+    { tag: 'line', attrs: { x1: '14', y1: '62', x2: '106', y2: '62' } },
+    { tag: 'circle', attrs: { cx: '40', cy: '26', r: '6.5' } },
+    { tag: 'path', attrs: { d: 'M28 62 V46 a12 10 0 0 1 24 0 V62' } },
+    { tag: 'circle', attrs: { cx: '80', cy: '22', r: '6.5' } },
+    { tag: 'path', attrs: { d: 'M68 62 V42 a12 10 0 0 1 24 0 V62' } },
+    { tag: 'line', attrs: { x1: '40', y1: '19.5', x2: '66', y2: '19.5', 'stroke-dasharray': '1 2.5' } },
+    { tag: 'line', attrs: { x1: '54', y1: '15.5', x2: '80', y2: '15.5', 'stroke-dasharray': '1 2.5' } },
+    { tag: 'line', attrs: { x1: '60', y1: '15.5', x2: '60', y2: '19.5' } },
+  ],
+  // A page where every character is the same letter.
+  aes: [
+    { tag: 'rect', attrs: { x: '30', y: '10', width: '60', height: '54', rx: '1' } },
+    ...[19, 28, 37, 46, 55].map((y): Shape => ({
+      tag: 'path',
+      attrs: {
+        d: [40, 49, 58, 67, 76]
+          .map((x) => `M${String(x - 2.2)} ${String(y)} a2.2 2.4 0 1 0 4.4 0 a2.2 2.4 0 1 0 -4.4 0 M${String(x + 2.2)} ${String(y - 2.4)} V${String(y + 2.6)}`)
+          .join(' '),
+      },
+    })),
+  ],
+  // The instant: a moment on the line of time, and one a hair before it.
+  instant: [
+    { tag: 'line', attrs: { x1: '14', y1: '58', x2: '106', y2: '58' } },
+    { tag: 'line', attrs: { x1: '65', y1: '54', x2: '65', y2: '62', 'stroke-dasharray': '2 2' } },
+    { tag: 'circle', attrs: { cx: '65', cy: '32', r: '13', 'stroke-dasharray': '3 3' } },
+    { tag: 'line', attrs: { x1: '55', y1: '54', x2: '55', y2: '62' } },
+    { tag: 'circle', attrs: { cx: '55', cy: '32', r: '13' } },
+  ],
   // A signature on its line.
   signature: [
     { tag: 'line', attrs: { x1: '18', y1: '52', x2: '102', y2: '52' } },
@@ -363,8 +418,8 @@ export const ACCENTS: Record<string, Accent> = {
   b0003: { tint: [2] },
   // The sentence, in the language you learnt first.
   b0031: { tint: [5] },
-  // The ring the day leaves.
-  b0006: { tint: [3] },
+  // The door closed at the end of a shift.
+  b0006: { add: [{ tag: 'path', attrs: { d: 'M88 58 V20 H106 V58 M91 40 h2.5' } }] },
   // The window of the room you sleep in.
   b0005: { tint: [0] },
   // The places laid for people who may never come.
@@ -375,8 +430,8 @@ export const ACCENTS: Record<string, Accent> = {
   b0011: { tint: [2] },
   // The open drawer.
   b0012: { tint: [2] },
-  // Where the two lives cross.
-  b0038: { tint: [2] },
+  // One footfall among all of them.
+  b0038: { tint: [3] },
   // The ribbon at the page being read now.
   b0041: { tint: [3] },
   // The landing between your door and the one opposite.
@@ -387,12 +442,12 @@ export const ACCENTS: Record<string, Accent> = {
   b0050: { tint: [0, 1] },
   // The silence nothing answers.
   b0053: { tint: [3] },
-  // The night itself.
-  b0056: { tint: [3] },
+  // The pillow: which side of the bed the night is slept on.
+  b0056: { tint: [1] },
   // This body.
   b0059: { tint: [2, 3] },
-  // The road ahead.
-  b0062: { tint: [2] },
+  // The wheel: a life spent in transit.
+  b0062: { tint: [6] },
   // The hand that fixes the exact age.
   b0065: { tint: [1] },
   // The name on the cover.
@@ -421,35 +476,48 @@ export const ACCENTS: Record<string, Accent> = {
   b0016: { tint: [1, 4] },
   // The desk in the next row.
   b0018: { tint: [3] },
-  // The line read for another: the same sentence in another language.
-  b0032: { tint: [7] },
-  // The pane of the room next door.
-  b0020: { tint: [4] },
-  // The other person the earlier conception brings.
+  // The same sentence again, at the same length, in another script.
+  b0032: {
+    drop: [6],
+    add: [{ tag: 'line', attrs: { x1: '48', y1: '44', x2: '90', y2: '44', 'stroke-dasharray': '5 2 1 2' } }],
+  },
+  // The window of the room next door, the one slept behind that night.
+  b0020: { add: [{ tag: 'path', attrs: { d: 'M98 12 h16 v46 h-16 z M106 12 V58' } }] },
+  // The other person the earlier instant begins.
   b0023: { tint: [4] },
   // The same parents, living otherwise.
   b0025: { tint: [0, 1] },
   // One parent changed.
   b0026: { tint: [1] },
-  // The one afternoon that remains.
-  b0027: { tint: [0, 1, 2, 3] },
   // A paper clip in the open drawer, for seventeen minutes.
   b0028: { add: [{ tag: 'path', attrs: { d: 'M76 57 H87 a2 2 0 0 0 0 -4 H78.5 a1.3 1.3 0 0 0 0 2.6 H85.5' } }] },
-  // The step, twenty centimetres to the left.
+  // That footfall, twenty centimetres to the left; where it would have been.
   b0039: {
-    drop: [2],
-    add: [{ tag: 'line', attrs: { x1: '53', y1: '37', x2: '53', y2: '45', 'stroke-dasharray': '2 2' } }],
+    drop: [3],
+    base: [{ tag: 'ellipse', attrs: { cx: '54', cy: '36', rx: '3', ry: '5.2', 'stroke-dasharray': '1.5 2.5' } }],
+    add: [{ tag: 'ellipse', attrs: { cx: '46', cy: '36', rx: '3', ry: '5.2' } }],
   },
   // One second more: the second hand.
   b0042: { add: [{ tag: 'path', attrs: { d: 'M62.5 32.5 L50 55' } }] },
   // The thirteenth step.
   b0043: { tint: [6] },
   // Someone else behind your door.
-  b0046: { tint: [1, 4] },
-  // Up to the last minute: the minute hand.
-  b0049: { tint: [1] },
-  // The one Tuesday: the front page.
-  b0051: { tint: [0, 2, 5, 6] },
+  b0046: {
+    add: [
+      { tag: 'circle', attrs: { cx: '39', cy: '42', r: '4' } },
+      { tag: 'path', attrs: { d: 'M31 60 V56 a8 6 0 0 1 16 0 V60' } },
+    ],
+  },
+  // Up to the last minute: the mark where the books part.
+  b0049: { add: [{ tag: 'line', attrs: { x1: '57.4', y1: '12.1', x2: '58', y2: '18.1' } }] },
+  // One Tuesday the right sock goes on first: both worn, the right one marked.
+  b0051: {
+    drop: [2, 3],
+    add: [
+      { tag: 'path', attrs: { d: 'M68 12 H80 V40 H90 A6 6 0 0 1 90 52 H74 A6 6 0 0 1 68 46 Z' } },
+      { tag: 'line', attrs: { x1: '68', y1: '18', x2: '80', y2: '18' } },
+    ],
+  },
   // The right sock, first.
   b0052: { tint: [0, 1] },
   // One pause a second longer.
@@ -460,22 +528,22 @@ export const ACCENTS: Record<string, Accent> = {
   },
   // The sleeper, turned the other way.
   b0057: { drop: [2], add: [{ tag: 'path', attrs: { d: 'M46 46 C64 37 88 36 98 46' } }] },
-  // The reflection a millimetre apart.
-  b0060: { tint: [4, 5] },
+  // The millimetre itself, between the two crowns.
+  b0060: { tint: [7] },
   // The same life on two wheels.
   b0063: { tint: [0, 1, 2, 3] },
   // The same life through the sky.
   b0064: { tint: [2] },
   // One day more: the hour hand.
   b0067: { tint: [2] },
-  // The other covers under your name.
-  b0070: { tint: [3, 4, 5] },
+  // The other book: the cover around your name.
+  b0070: { tint: [3] },
   // The thought that lasts three seconds.
   b0078: { tint: [5] },
   // The other window.
   b0087: { tint: [2, 3] },
-  // The other life the crossing sits inside.
-  b0088: { tint: [1, 4] },
+  // The four seconds inside the doorway, in both lives.
+  b0088: { tint: [3, 6] },
   // The rest of his life, the pages he did not write.
   b0090: { tint: [8] },
   // The three pages someone else wrote.

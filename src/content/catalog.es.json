@@ -437,7 +437,7 @@
       "id": "b0023",
       "rootId": "b0008",
       "kind": "nearby",
-      "icon": "lineage",
+      "icon": "instant",
       "headline": "UN INSTANTE ANTES",
       "title": "Un instante antes",
       "passage": [
@@ -711,7 +711,7 @@
       "id": "b0038",
       "rootId": "b0038",
       "kind": "root",
-      "icon": "paths",
+      "icon": "footing",
       "headline": "POR DONDE PASASTE",
       "hook": "están en orden todos los pasos que has dado, hasta el último antes de leer esto.",
       "title": "Por donde pasaste",
@@ -736,7 +736,7 @@
       "id": "b0039",
       "rootId": "b0038",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "footing",
       "headline": "VEINTE CENTÍMETROS",
       "title": "Veinte centímetros",
       "passage": [
@@ -1040,7 +1040,7 @@
       "id": "b0051",
       "rootId": "b0050",
       "kind": "nearby",
-      "icon": "calendar",
+      "icon": "socks",
       "headline": "UN MARTES",
       "title": "Un martes",
       "passage": [
@@ -1266,7 +1266,7 @@
       "id": "b0060",
       "rootId": "b0059",
       "kind": "nearby",
-      "icon": "mirror",
+      "icon": "stature",
       "headline": "UN MILÍMETRO MÁS",
       "title": "Un milímetro",
       "passage": [
@@ -1867,7 +1867,7 @@
       "id": "b0084",
       "rootId": "b0083",
       "kind": "nearby",
-      "icon": "comma",
+      "icon": "aes",
       "headline": "SOLO AES",
       "title": "Solo aes",
       "passage": [
@@ -1972,7 +1972,7 @@
       "id": "b0088",
       "rootId": "b0086",
       "kind": "nearby",
-      "icon": "paths",
+      "icon": "threshold",
       "headline": "EN SENTIDOS OPUESTOS",
       "title": "En sentidos opuestos",
       "passage": [
