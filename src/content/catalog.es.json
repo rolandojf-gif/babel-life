@@ -552,6 +552,12 @@
           "targetBookId": "b0025",
           "difference": "Los mismos padres viven de otra manera."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0059",
+          "difference": "Conservas ese otro cuerpo, pero naces de tus padres de siempre."
+        }
       ]
     },
     {
@@ -1357,6 +1363,12 @@
         {
           "targetBookId": "b0064",
           "difference": "Dejas de tocar el suelo y encadenas vuelos hasta el final."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0049",
+          "difference": "El recorrido y el desgaste de tus piernas se conservan. Solo cambia de qué mueres."
         }
       ]
     },

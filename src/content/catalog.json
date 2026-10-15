@@ -552,6 +552,12 @@
           "targetBookId": "b0025",
           "difference": "The same parents live differently."
         }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0059",
+          "difference": "You keep that other body, but are born to the parents you know."
+        }
       ]
     },
     {
@@ -1357,6 +1363,12 @@
         {
           "targetBookId": "b0064",
           "difference": "You stop touching the ground and string flights together until the end."
+        }
+      ],
+      "crossings": [
+        {
+          "targetBookId": "b0049",
+          "difference": "The journey and the wear on your legs stay the same. Only the way you die changes."
         }
       ]
     },
