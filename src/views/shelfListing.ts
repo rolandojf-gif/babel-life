@@ -128,6 +128,28 @@ export function createShelfList(shelf: ShelfCoordinate, mode: ShelfListingMode, 
   return list;
 }
 
+
+/**
+ * A quiet caption for the readable spines on a full shelf page. The compact
+ * visual grid identifies each volume by number; this keeps readable titles
+ * visible without printing "illegible" thirty-one times.
+ */
+export function createShelfLegibleKey(shelf: ShelfCoordinate): HTMLParagraphElement | null {
+  const key = element('p', 'shelf__legible-key');
+  let count = 0;
+  for (const address of shelfVolumes(shelf)) {
+    const book = bookAtAddress(address);
+    if (!book) continue;
+    if (count > 0) key.append(document.createTextNode(' · '));
+    const text = `${String(address.volume).padStart(2, '0')} — ${book.title}`;
+    const anchor = link(hashForAddress(address), 'shelf__legible-link', text);
+    anchor.setAttribute('aria-label', `${copy.volumeLabel} ${String(address.volume)}: ${book.title}`);
+    key.append(anchor);
+    count += 1;
+  }
+  return count > 0 ? key : null;
+}
+
 /** In-page target for the compact shelf locator on book views. */
 export const BOOK_EMBEDDED_SHELF_ID = 'book-shelf';
 

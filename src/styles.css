@@ -1808,6 +1808,108 @@ body {
   }
 }
 
+
+/* Open shelf: three short rows of spines rather than thirty-two text rows.
+   Only the full shelf page changes; the book's embedded shelf is untouched. */
+.shelf--page {
+  max-width: 48rem;
+}
+
+.shelf--page .shelf__list {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 0.65rem 0.45rem;
+  margin-bottom: 0;
+  border-top: 0;
+}
+
+.shelf--page .shelf__item {
+  min-width: 0;
+  border-bottom: 0;
+}
+
+.shelf--page .shelf__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 4.75rem;
+  box-sizing: border-box;
+  padding: 0.55rem 0.2rem;
+  border: 1px solid var(--rule);
+  border-bottom: 2px solid var(--rule-strong);
+  border-radius: 2px 2px 0 0;
+  background: var(--paper-card-a);
+}
+
+.shelf--page .shelf__glyph {
+  align-self: center;
+  width: min(52%, 1.6rem);
+  height: 2.25rem;
+}
+
+.shelf--page .shelf__number {
+  width: auto;
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+/* The link's explicit aria-label still gives each address its complete name. */
+.shelf--page .shelf__spine {
+  display: none;
+}
+
+.shelf--page .shelf__link--legible {
+  border-color: var(--oxblood);
+  background: var(--paper-card-b);
+}
+
+.shelf--page .shelf__link--legible .shelf__glyph {
+  border-color: var(--oxblood);
+  background: var(--oxblood);
+  opacity: 1;
+}
+
+.shelf--page .shelf__legible-key {
+  margin: 0.9rem 0 2rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.shelf--page .shelf__legible-link {
+  color: var(--oxblood);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.shelf--page .shelf__legible-link:focus-visible {
+  outline: 2px solid var(--oxblood);
+  outline-offset: 3px;
+}
+
+@media (min-width: 40em) and (max-width: 54.999em) {
+  .shelf--page .shelf__list {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 39.999em) {
+  .shelf--page .shelf__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .shelf--page .shelf__link {
+    min-height: 4.25rem;
+  }
+}
+
 /* The one volume on the shelf this edition can print. */
 .shelf__link--legible {
   color: var(--ink);

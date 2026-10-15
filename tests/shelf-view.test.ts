@@ -33,6 +33,17 @@ describe('a shelf with one volume on it', () => {
     ]);
   });
 
+
+  it('renders the full page as a compact shelf without losing its addresses', () => {
+    const view = createShelfView(shelf);
+    expect(view.element.classList.contains('shelf--page')).toBe(true);
+    expect(view.element.querySelectorAll('.shelf__item')).toHaveLength(SHELF_LENGTH);
+    expect(view.element.querySelectorAll('.shelf__link')).toHaveLength(SHELF_LENGTH);
+    const key = view.element.querySelectorAll('.shelf__legible-link');
+    expect(key).toHaveLength(1);
+    expect(key[0]?.textContent).toContain(findBook('b0003')?.title);
+  });
+
   it('says how many can be read', () => {
     const view = createShelfView(shelf);
     expect(view.element.textContent).toContain('One of them can be read.');
@@ -58,6 +69,16 @@ describe('the shelfmarked shelf', () => {
   it('says that two of them can be read', () => {
     const view = createShelfView(shelf);
     expect(view.element.textContent).toContain('Two of them can be read.');
+  });
+
+  it('names both readable volumes in the compact shelf caption', () => {
+    const view = createShelfView(shelf);
+    const key = [...view.element.querySelectorAll('.shelf__legible-link')];
+    expect(key).toHaveLength(2);
+    expect(key.map((node) => node.textContent)).toEqual([
+      expect.stringContaining(findBook(BESIDE)?.title ?? ''),
+      expect.stringContaining(findBook(MOVED)?.title ?? ''),
+    ]);
   });
 
   it('links both spines to their volumes and the rest to their addresses', () => {

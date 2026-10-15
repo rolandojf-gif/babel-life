@@ -7,7 +7,7 @@ import {
   type ShelfCoordinate,
 } from '../library/coordinates';
 import { hashForShelf } from '../library/routing';
-import { appendShelfIntro, createShelfList } from './shelfListing';
+import { appendShelfIntro, createShelfLegibleKey, createShelfList } from './shelfListing';
 import { element, glyph, link, type ViewHandle } from './view';
 
 /**
@@ -16,7 +16,7 @@ import { element, glyph, link, type ViewHandle } from './view';
  * addresses this edition cannot print.
  */
 export function createShelfView(shelf: ShelfCoordinate): ViewHandle {
-  const root = element('div', 'shelf');
+  const root = element('div', 'shelf shelf--page');
 
   const back = link('#', 'backlink');
   back.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
@@ -25,6 +25,8 @@ export function createShelfView(shelf: ShelfCoordinate): ViewHandle {
 
   const list = createShelfList(shelf, 'page');
   root.append(list);
+  const legibleKey = createShelfLegibleKey(shelf);
+  if (legibleKey) root.append(legibleKey);
 
   // The shelf either side, so the walk does not stop at thirty-two.
   const first = positionOf({ ...shelf, volume: 1 });
