@@ -37,6 +37,27 @@ describe('sanguine accents', () => {
     }
   });
 
+  /**
+   * The root marks where its life could turn; a nearby book marks what turned.
+   * Compared as drawn, so a repeated mark is caught whether it comes from the
+   * same motif stroke tinted twice or from a stroke added again by hand.
+   */
+  it('never repeat on a nearby book the stroke its root marks', () => {
+    const marks = (id: string): string[] => {
+      const book = findBook(id);
+      const svg = createIllustration(book?.icon ?? '', ACCENTS[id]);
+      const group = svg.querySelector('.illustration__stroke--sanguine');
+      return [...(group?.children ?? [])].map((stroke) => stroke.outerHTML);
+    };
+    for (const book of catalog.books) {
+      if (book.kind !== 'nearby' || !(book.id in ACCENTS)) continue;
+      const rootMarks = new Set(marks(book.rootId));
+      for (const mark of marks(book.id)) {
+        expect(rootMarks.has(mark), `${book.id} repeats ${book.rootId}: ${mark}`).toBe(false);
+      }
+    }
+  });
+
   it('draw a sanguine group only where a book has an accent', () => {
     for (const book of catalog.books) {
       const svg = createIllustration(book.icon, ACCENTS[book.id]);
