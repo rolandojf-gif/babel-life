@@ -491,7 +491,7 @@
       "title": "Antes de ti",
       "passage": [
         "Tu libro comienza antes de que puedas recordar. Contiene las decisiones, trabajos, enfermedades y desplazamientos de tus padres que hicieron posible tu nacimiento exacto.",
-        "Registra cómo eran antes de recibir ese nombre y cómo siguieron siendo otras personas mientras tú crecías. Cada cambio en sus vidas altera las condiciones de la tuya: una ciudad, un horario, una conversación, el día en que coincidieron.",
+        "Registra quiénes eran antes de ser tus padres y las vidas propias que siguieron llevando mientras tú crecías. Cada cambio en sus vidas altera las condiciones de la tuya: una ciudad, un horario, una conversación, el día en que coincidieron.",
         "Para describirte por completo, el libro necesita páginas en las que todavía no existes."
       ],
       "aftertaste": "Tu libro necesita páginas anteriores a ti.",
@@ -573,7 +573,7 @@
         "Registra tardes que ocurrieron y ya no puedes recuperar, rostros cuyo nombre perdiste y frases que crees recordar de manera incorrecta. También guarda recuerdos insignificantes que sobrevivieron sin razón visible.",
         "Tu pasado ocupa el libro una vez como acontecimiento y otra como memoria. Las dos versiones empiezan a separarse mucho antes de que adviertas la diferencia."
       ],
-      "aftertaste": "El pasado ocurrió una vez y lo recuerdas de otra.",
+      "aftertaste": "Ocurrió de una manera. Lo recuerdas de otra.",
       "neighbors": [
         {
           "targetBookId": "b0027",
@@ -618,10 +618,9 @@
       "title": "Cada forma de olvidar",
       "passage": [
         "Hay libros con los mismos acontecimientos y memorias distintas. En uno recuerdas cada habitación; en otro, ninguna. Un rostro permanece, una fecha se desplaza, una conversación pierde una palabra.",
-        "Después aparecen todas las combinaciones: lo exacto, lo incompleto, lo deformado y lo perdido. Nada sobrenatural ocurre. El tiempo, la atención, la edad y el cuerpo hacen su trabajo ordinario.",
-        "Para cada manera posible de recordar la misma vida, la Biblioteca necesita escribir otro libro entero."
+        "Después aparecen todas las combinaciones: lo exacto, lo incompleto, lo deformado y lo perdido. Nada sobrenatural ocurre. El tiempo, la atención, la edad y el cuerpo hacen su trabajo ordinario."
       ],
-      "aftertaste": "La misma vida necesita otro recuerdo.",
+      "aftertaste": "Nadie te quitó nada.",
       "neighbors": [
         {
           "targetBookId": "b0011",
@@ -1156,7 +1155,7 @@
       "passage": [
         "Una palabra cambia; luego una sílaba; luego el orden de dos frases. Hay libros para cada conversación que podrías mantener y para cada frase que nunca dirías. Cada versión se combina con todas las voces, pausas y silencios de los demás.",
         "La mayor parte se pierde sin consecuencias. Algunas palabras cambian trabajos, familias o países.",
-        "Los libros no están ordenados por importancia. Junto a una vida transformada por una frase hay millones diferenciadas por sonidos que nadie recordó."
+        "Junto a una vida transformada por una frase hay otra que solo se diferencia en un sonido que nadie recordó."
       ],
       "aftertaste": "Los libros no se ordenan por importancia.",
       "neighbors": [
@@ -1455,10 +1454,9 @@
       "title": "Un día más",
       "passage": [
         "Dos libros describen la misma vida hasta tu última noche. En uno, termina. En otro, despiertas y vives un día adicional sin nada excepcional: te levantas, comes, hablas, esperas.",
-        "Un tercer libro añade otro día. Después aparecen semanas, años y décadas, cada una con todos sus posibles contenidos.",
-        "No existe una única continuación. Desde cualquier edad, la Biblioteca guarda cada cantidad de tiempo restante y cada vida que puede caber dentro de ella."
+        "Un tercer libro añade otro día."
       ],
-      "aftertaste": "Otro día. Después todos los demás.",
+      "aftertaste": "Otro día.",
       "neighbors": [
         {
           "targetBookId": "b0065",

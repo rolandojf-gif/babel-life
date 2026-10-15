@@ -287,7 +287,7 @@ NEARBY B: Every object and every sequence of acquisition and loss changes.
 
 10
 TITLE: Where You Went
-WALL HOOK: every step you have taken stands in order, up to the last one before you read this.
+WALL HOOK: every step you have taken is recorded in sequence, right up to the one before you read this.
 NEARBY A: A single step lands twenty centimetres to the left.
 NEARBY B: Every route and the people encountered along it change.
 
