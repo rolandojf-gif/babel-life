@@ -1,6 +1,6 @@
 import { copy } from '../content/copy';
 import { anotherLifeAfter, findBook } from '../library/catalog';
-import { coordinateFor, shelfOf, step, type Coordinate } from '../library/coordinates';
+import { coordinateFor, formatCoordinate, shelfOf, step, type Coordinate } from '../library/coordinates';
 import { hashForAddress, hashForShelf } from '../library/routing';
 import type { Book } from '../library/model';
 import { ACCENTS, createIllustration } from './illustrations';
@@ -83,6 +83,22 @@ function createBookActions(book: Book): HTMLDivElement {
   return actions;
 }
 
+/**
+ * The running head of the printed sheet: the edition and the book's call mark
+ * in the Library. The title stands just below it, so the head does not repeat
+ * it. The screen has its own ways of saying both, so this line is set only on
+ * paper.
+ */
+function createPrintHead(coordinate: Coordinate): HTMLParagraphElement {
+  const head = element('p', 'print-head');
+  head.setAttribute('aria-hidden', 'true');
+  head.append(
+    element('span', 'print-head__edition', copy.eyebrow),
+    element('span', 'print-head__signature', formatCoordinate(coordinate)),
+  );
+  return head;
+}
+
 function createBackLink(): HTMLAnchorElement {
   const back = link('#', 'backlink');
   back.append(glyph('backlink__arrow', '←'), document.createTextNode(copy.backToWall));
@@ -132,6 +148,7 @@ export function createBookView(bookId: string, address: Coordinate | null, previ
   shelfGutter.setAttribute('aria-hidden', 'true');
 
   root.append(
+    createPrintHead(coordinate),
     createBackLink(),
     spread,
     createNearbyVolumes(book, previousBookId),

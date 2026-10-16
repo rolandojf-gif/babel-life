@@ -2928,3 +2928,377 @@ body {
     animation: none !important;
   }
 }
+
+/* The printed sheet ---------------------------------------------------------
+   Printing a book or an unreadable page sets one sheet of a printed edition:
+   paper and ink only, no room around it, no controls, and never a second
+   page. The running head exists for paper alone. */
+
+.print-head {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 16mm 20mm 22mm;
+  }
+
+  :root {
+    --ink: #141210;
+    --ink-soft: #3d3830;
+    --ink-muted: #3d3830;
+    --ink-faint: #6b645a;
+    --charcoal: #141210;
+    --sanguine: #8b261d;
+    --oxblood: #141210;
+    --oxblood-deep: #141210;
+    --rule: rgba(20, 18, 16, 0.38);
+    --rule-strong: rgba(20, 18, 16, 0.5);
+  }
+
+  html,
+  body {
+    min-height: 0;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    color: var(--ink);
+  }
+
+  /* No room, no lamp, no controls. */
+  .grain,
+  .lamp,
+  .vignette,
+  .dust,
+  .js-cinematic #app::before,
+  .lang,
+  .footer,
+  .backlink,
+  .book__actions,
+  .shelfwalk,
+  .book__shelf,
+  .book__shelf-gutter,
+  .book--spread .spread__gutter,
+  .book--spread .found,
+  .book--spread .shelf-locator,
+  .book--spread .already-here,
+  .consulted__candle,
+  .nearby__open,
+  .nearby__previous,
+  .address > .found,
+  .address__note {
+    display: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  :focus,
+  :focus-visible {
+    outline: none !important;
+  }
+
+  /* What waits on screen to be scrolled into view is already on the sheet. */
+  [data-book-entrance],
+  .js-cinematic .book--spread .passage > p,
+  .js-cinematic .book--spread .aftertaste,
+  .js-cinematic .nearby--cinematic .nearby__item {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .shell,
+  .shell:has(.book--spread),
+  .main {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Vectors as drawn: the charcoal filter would be rasterised by the PDF
+     engine. Its second pass and smudge thicken the line on screen, so the
+     bare stroke is set heavier (1.5 against the screen's 1.1, matched by eye
+     and by ink coverage) to keep the plate's weight. */
+  .illustration__stroke {
+    filter: none;
+  }
+
+  /* The book ---------------------------------------------------------------- */
+
+  .book--spread {
+    max-width: none;
+    margin: 0;
+  }
+
+  /* The sheet is one column of the page's height, so the apparatus and the
+     colophon stand at its foot. The height is set in millimetres, never in
+     viewport units, which some browsers measure against the window when
+     printing. 234mm fits inside the shorter of the two common papers (US
+     Letter leaves 241mm between these margins; A4 leaves 259mm). */
+  .book--spread {
+    display: flex;
+    flex-direction: column;
+    min-height: 234mm;
+    break-inside: avoid;
+  }
+
+  .book--spread .spread,
+  .book--spread .spread__verso,
+  .book--spread .spread__recto {
+    display: contents;
+  }
+
+  .book--spread > .print-head { order: 0; }
+  .book--spread .book__visual { order: 1; }
+  .book--spread .book__header { order: 2; }
+  .book--spread .passage { order: 3; }
+  .book--spread .aftertaste { order: 4; }
+  .book--spread > .nearby { order: 5; }
+  .book--spread .consulted { order: 6; }
+
+  .print-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6mm;
+    margin: 0 0 10mm;
+    padding-bottom: 2mm;
+    border-bottom: 0.5pt solid var(--rule);
+    color: var(--ink-soft);
+    font-family: var(--serif);
+    font-size: 8.5pt;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.16em;
+    line-height: 1.3;
+  }
+
+  .print-head__signature {
+    font-variant-numeric: oldstyle-nums;
+    letter-spacing: 0.1em;
+    text-align: right;
+  }
+
+  /* The text block stands a little above the middle of what is left. */
+  .book--spread .book__visual {
+    display: flex;
+    justify-content: center;
+    margin: auto 0 8mm;
+  }
+
+  .book--spread .book__visual .illustration {
+    width: 58mm;
+    stroke-width: 1.5;
+  }
+
+  .book--spread .book__header {
+    display: block;
+    max-width: none;
+    margin: 0 0 7mm;
+  }
+
+  .book--spread .book__title {
+    font-size: 25pt;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .book--spread .passage {
+    max-width: 60ch;
+    margin: 0 auto;
+    font-size: 11.5pt;
+    line-height: 1.52;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .passage p {
+    margin: 0;
+  }
+
+  /* A printed book indents its paragraphs rather than spacing them. */
+  .passage > p:not(.passage__stamp) + p:not(.passage__stamp) {
+    text-indent: 1.5em;
+  }
+
+  .passage__stamp {
+    margin: 0.6em 0 0.4em;
+    font-size: 8pt;
+    text-align: left;
+  }
+
+  .book--spread .aftertaste {
+    max-width: 44ch;
+    margin: 8mm auto auto;
+    padding-bottom: 22mm;
+    color: var(--ink);
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .book--spread .aftertaste::before {
+    margin-bottom: 4mm;
+  }
+
+  /* The nearby books become the sheet's apparatus: notes at its foot, under
+     a fine rule, each naming a life and the one thing that differs there. */
+  .book--spread .nearby {
+    margin: 0;
+    padding-top: 3mm;
+    border-top: 0.5pt solid var(--rule);
+    break-inside: avoid;
+  }
+
+  .nearby__heading {
+    margin: 0 0 3mm;
+    color: var(--ink-soft);
+    font-size: 7.5pt;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.2em;
+  }
+
+  .nearby__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 7mm;
+    padding-top: 0;
+  }
+
+  .nearby,
+  .nearby__heading,
+  .nearby__family,
+  .nearby__headline,
+  .nearby__difference {
+    font-family: var(--serif);
+  }
+
+  .nearby__link,
+  .js-cinematic .nearby--cinematic .nearby__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2mm;
+    padding: 0;
+    border: 0;
+    background: none;
+    overflow: visible;
+    color: var(--ink);
+  }
+
+  .js-cinematic .nearby--cinematic .nearby__link::before,
+  .js-cinematic .nearby--cinematic .nearby__link::after {
+    display: none;
+  }
+
+  /* Headlines align across the notes; a crossing says so just under its own. */
+  .nearby__family {
+    order: 1;
+    color: var(--ink-faint);
+    font-size: 6.5pt;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.2em;
+  }
+
+  .nearby__headline {
+    order: 0;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 9pt;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.14em;
+  }
+
+  .nearby__difference {
+    order: 2;
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+
+  /* The consultation, kept as the sheet's colophon. */
+  .book--spread .spread__verso .consulted {
+    margin: 6mm 0 0;
+    color: var(--ink-soft);
+    font-family: var(--serif);
+    font-size: 7pt;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  /* The unreadable page ----------------------------------------------------- */
+
+  .book.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    break-inside: avoid;
+  }
+
+  .address > .coordinate--link {
+    min-height: 0;
+    margin: 0 0 9mm;
+    padding: 0;
+    color: var(--ink-soft);
+    font-family: var(--serif);
+    font-size: 8.5pt;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+  }
+
+  .page__reveal {
+    margin: 0;
+  }
+
+  .page,
+  .js-cinematic .page {
+    width: auto;
+    max-width: none;
+    aspect-ratio: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    overflow: visible;
+  }
+
+  .js-cinematic .page::after {
+    display: none;
+  }
+
+  /* Forty lines of thirty-two: every symbol, the space too, takes one cell,
+     and a line may end before a comma or a period, so the block breaks only
+     where the column ends. */
+  .page__symbols {
+    flex: none;
+    width: calc(32 * (1ch + 0.42em) + 0.5ch);
+    overflow: visible;
+    color: var(--ink);
+    font-size: 8.4pt;
+    line-height: 1.62;
+    letter-spacing: 0.42em;
+    white-space: break-spaces;
+    line-break: anywhere;
+    word-break: break-all;
+    overflow-wrap: normal;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .page__caption {
+    margin: 8mm 0 0;
+    color: var(--ink-soft);
+    font-size: 9pt;
+  }
+}
