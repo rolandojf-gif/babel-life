@@ -132,6 +132,23 @@ describe('the wall', () => {
     expect(document.activeElement).not.toBe(cards[0]);
   });
 
+  it('focuses the first card show-all actually adds, whichever deal it opens from', () => {
+    // From the opening deal, the fifteen others arrive after the twelve.
+    const fromFirst = mount();
+    fromFirst.update(state('all'));
+    fromFirst.focus('wallAppended');
+    expect(document.activeElement).toBe(fromFirst.element.querySelectorAll('a.card')[12]);
+
+    // From the stranger deal, the twelve arrive before the fifteen on screen.
+    const fromSecond = mount();
+    fromSecond.update(state('second'));
+    fromSecond.update(state('all'));
+    fromSecond.focus('wallAppended');
+    const cards = fromSecond.element.querySelectorAll('a.card');
+    expect(document.activeElement).toBe(cards[0]);
+    expect(cards[0]?.getAttribute('href')).toBe(`#book=${wallBooks('first', SEED)[0]!.id}`);
+  });
+
   it('still focuses the first card when the stranger grid replaces the wall', () => {
     const view = mount();
     view.update(state('second'));

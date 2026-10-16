@@ -12,9 +12,6 @@ interface WallActions {
   onShowAll(): void;
 }
 
-/** Cards in the opening deal. Show-all appends after these and does not reorder them. */
-const OPENING_WALL = 12;
-
 function createScaleLabel(text: string, motif: SVGSVGElement): HTMLParagraphElement {
   const label = element('p', 'masthead__scale-label');
   label.append(motif, document.createTextNode(text));
@@ -40,6 +37,10 @@ function createScaleValue(mantissa: string, exponent: string, unit: string, spok
   );
   value.append(visual);
   return value;
+}
+
+function cardsOf(grid: HTMLElement): HTMLAnchorElement[] {
+  return [...grid.querySelectorAll<HTMLAnchorElement>('a.card')];
 }
 
 /** The wall of lives: the whole site, understandable by looking at it. */
@@ -109,6 +110,8 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
 
   let pointerBookId: string | undefined;
   let focusBookId: string | undefined;
+  /** The first card the latest deal added to the wall, where show-all hands focus. */
+  let firstAddedCard: HTMLAnchorElement | undefined;
 
   function bookIdFrom(node: EventTarget | null): string | undefined {
     if (!(node instanceof Element)) return undefined;
@@ -180,7 +183,9 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
     focusBookId = undefined;
 
     const books = wallBooks(next.wallSelection, next.wallSeed);
+    const before = new Set(cardsOf(grid).map((card) => card.getAttribute('href')));
     grid.replaceChildren(...books.map((book, cardIndex) => createBookCard(book, cardIndex)));
+    firstAddedCard = cardsOf(grid).find((card) => !before.has(card.getAttribute('href')));
     locate();
 
     // Spelled from the cards actually dealt and the roots in the catalogue, so
@@ -220,12 +225,9 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
           return;
         }
       }
-      if (target === 'wallAppended') {
-        const revealed = grid.querySelectorAll<HTMLAnchorElement>('a.card').item(OPENING_WALL);
-        if (revealed) {
-          revealed.focus();
-          return;
-        }
+      if (target === 'wallAppended' && firstAddedCard?.isConnected) {
+        firstAddedCard.focus();
+        return;
       }
       heading.focus();
     },
