@@ -213,7 +213,7 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
   return {
     element: root,
     update,
-    focus(target): void {
+    focus(target, returnRootId): void {
       if (target === 'stranger' && strangerButton.isConnected) {
         strangerButton.focus();
         return;
@@ -228,6 +228,17 @@ export function createWallOfLives(state: AppState, actions: WallActions): ViewHa
       if (target === 'wallAppended' && firstAddedCard?.isConnected) {
         firstAddedCard.focus();
         return;
+      }
+      if (target === 'wallReturn') {
+        const card = cardsOf(grid).find((node) => node.getAttribute('href') === `#book=${returnRootId}`);
+        if (card) {
+          card.focus();
+          // Focus came back with the visitor, not under their hand: the index
+          // keeps resting on the book they closed.
+          focusBookId = undefined;
+          locate();
+          return;
+        }
       }
       heading.focus();
     },

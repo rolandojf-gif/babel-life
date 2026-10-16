@@ -169,6 +169,32 @@ describe('moving between views', () => {
   });
 });
 
+describe('returning to the wall', () => {
+  it('asks for the card of the family the visitor closed, when the deal shows it', () => {
+    const { controller, renders } = mount('');
+    const rootId = wallBooks('first', controller.state.wallSeed)[3]!.id;
+    const nearbyId = findBook(rootId)!.neighbors[1]!.targetBookId;
+
+    navigate(`#book=${nearbyId}`);
+    navigate('');
+    expect(renders.at(-1)?.hint).toEqual({ focus: 'wallReturn', returnRootId: rootId });
+    // The index's resting book is untouched by the new hint.
+    expect(controller.state.lastBookId).toBe(nearbyId);
+  });
+
+  it('keeps the plain focus when the family is not dealt or no book was open', () => {
+    const { controller, renders } = mount('');
+    const unseen = wallBooks('second', controller.state.wallSeed)[0]!.id;
+    navigate(`#book=${unseen}`);
+    navigate('');
+    expect(renders.at(-1)?.hint).toEqual({ focus: 'view' });
+
+    navigate(hashForShelf(shelfOf(coordinateFor(unseen))));
+    navigate('');
+    expect(renders.at(-1)?.hint).toEqual({ focus: 'view' });
+  });
+});
+
 describe('the wall selection', () => {
   it('swaps to the stranger remainder, then to all of them', () => {
     const { controller, render, renders } = mount('');

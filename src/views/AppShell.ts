@@ -154,12 +154,13 @@ export function mountAppShell(
       currentView = view;
       main.replaceChildren(view.element);
       document.title = documentTitle(state);
-      if (hint.focus !== 'none') window.scrollTo(0, 0);
+      // Back from a book, the focused card brings itself into view instead.
+      if (hint.focus !== 'none' && hint.focus !== 'wallReturn') window.scrollTo(0, 0);
     } else {
       view.update(state);
     }
 
-    if (hint.focus !== 'none') view.focus(hint.focus);
+    if (hint.focus !== 'none') view.focus(hint.focus, hint.returnRootId);
     if (hint.announce !== undefined) status.textContent = hint.announce;
     refreshReveals(main);
   }

@@ -7,8 +7,10 @@
 
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { createWallOfLives } from '../src/views/WallOfLives';
+import { mountAppShell } from '../src/views/AppShell';
+import { createController } from '../src/library/controller';
 import { copy } from '../src/content/copy';
-import { catalog, PINNED_ROOT_IDS, TOTAL_ROOTS, wallBooks } from '../src/library/catalog';
+import { catalog, findBook, PINNED_ROOT_IDS, TOTAL_ROOTS, wallBooks } from '../src/library/catalog';
 import type { AppState } from '../src/library/model';
 import * as locale from '../src/content/locale';
 
@@ -319,5 +321,82 @@ describe('the dedication', () => {
     const dedication = view.element.querySelector('.wall__dedication');
     expect(dedication?.tagName).toBe('P');
     expect(dedication?.querySelector('a, button')).toBeNull();
+  });
+});
+
+describe('returning to the wall from a book', () => {
+  // Each case mounts its own shell; an earlier one must not hear later navigation.
+  const listening: [string, EventListenerOrEventListenerObject][] = [];
+  afterEach(() => {
+    for (const [type, listener] of listening.splice(0)) window.removeEventListener(type, listener);
+  });
+
+  function open() {
+    window.location.hash = '';
+    const root = document.createElement('div');
+    document.body.replaceChildren(root);
+    const scrollTo = vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
+    const listen = window.addEventListener.bind(window);
+    vi.spyOn(window, 'addEventListener').mockImplementation((type, listener, options) => {
+      if (listener) listening.push([type, listener]);
+      listen(type, listener, options);
+    });
+    let render: ReturnType<typeof mountAppShell> = () => {};
+    const controller = createController((next, hint) => render(next, hint), SEED);
+    render = mountAppShell(root, controller);
+    controller.start();
+    return { controller, scrollTo };
+  }
+
+  function navigate(hash: string): void {
+    window.location.hash = hash;
+    window.dispatchEvent(new window.HashChangeEvent('hashchange'));
+  }
+
+  const card = (rootId: string) =>
+    [...document.querySelectorAll<HTMLAnchorElement>('a.card')].find(
+      (node) => node.getAttribute('href') === `#book=${rootId}`,
+    );
+
+  it('hands focus back to the card of the family just read, without scrolling to the top', () => {
+    const { scrollTo } = open();
+    const rootId = wallBooks('first', SEED)[9]!.id;
+    const nearbyId = findBook(rootId)!.neighbors[0]!.targetBookId;
+
+    navigate(`#book=${rootId}`);
+    navigate(`#book=${nearbyId}`);
+    scrollTo.mockClear();
+    navigate('');
+
+    expect(document.activeElement).toBe(card(rootId));
+    expect(scrollTo).not.toHaveBeenCalled();
+    // The index still rests on the book the visitor closed, the nearby one.
+    expect(document.querySelector('.library-index__locator')?.getAttribute('data-book')).toBe(nearbyId);
+  });
+
+  it('finds the card again once the whole wall is showing', () => {
+    const { controller, scrollTo } = open();
+    controller.showAll();
+    const rootId = wallBooks('second', SEED)[14]!.id;
+
+    navigate(`#book=${rootId}`);
+    scrollTo.mockClear();
+    navigate('');
+
+    expect(document.activeElement).toBe(card(rootId));
+    expect(scrollTo).not.toHaveBeenCalled();
+  });
+
+  it('opens at the top when the family is not in the deal on show', () => {
+    const { scrollTo } = open();
+    const rootId = wallBooks('second', SEED)[0]!.id;
+
+    navigate(`#book=${rootId}`);
+    scrollTo.mockClear();
+    navigate('');
+
+    expect(card(rootId)).toBeUndefined();
+    expect(document.activeElement).toBe(document.getElementById('wall-heading'));
+    expect(scrollTo).toHaveBeenCalledWith(0, 0);
   });
 });

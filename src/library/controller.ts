@@ -83,7 +83,18 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
     }
 
     renderedHref = window.location.href;
-    render(state, hint);
+    render(state, state.view === 'wall' && hint.focus === 'view' ? returnHint(departingBookId) ?? hint : hint);
+  }
+
+  /**
+   * Back on the wall straight from a book: focus returns to the card of that
+   * book's family, when this deal shows it. Otherwise the wall opens at the top.
+   */
+  function returnHint(departingBookId: string | null): RenderHint | undefined {
+    const rootId = departingBookId === null ? undefined : findBook(departingBookId)?.rootId;
+    if (rootId === undefined) return undefined;
+    const dealt = wallBooks(state.wallSelection, state.wallSeed).some((book) => book.id === rootId);
+    return dealt ? { focus: 'wallReturn', returnRootId: rootId } : undefined;
   }
 
   function onLocationChange(): void {
