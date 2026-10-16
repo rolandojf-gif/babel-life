@@ -44,4 +44,56 @@ describe('NearbyVolumes', () => {
     expect(crossing.firstElementChild?.className).toBe('nearby__family');
     expect(crossing.querySelector('.nearby__family')?.textContent).toBe('ANOTHER FAMILY');
   });
+  it('orders every family as R:[A,B], A:[B,R], B:[R,A] for direct entries', () => {
+    for (const root of catalog.books.filter((book) => book.kind === 'root')) {
+      const aId = root.neighbors[0]!.targetBookId;
+      const bId = root.neighbors[1]!.targetBookId;
+      const a = findBook(aId)!;
+      const b = findBook(bId)!;
+      const destinations = (book: Book) =>
+        [...createNearbyVolumes(book).querySelectorAll('.nearby__link:not(.nearby__link--crossing)')]
+          .map((anchor) => anchor.getAttribute('href'));
+      expect(destinations(root), root.id).toEqual([`#book=${aId}`, `#book=${bId}`]);
+      expect(destinations(a), aId).toEqual([`#book=${bId}`, `#book=${root.id}`]);
+      expect(destinations(b), bId).toEqual([`#book=${root.id}`, `#book=${aId}`]);
+    }
+  });
+
+  it('moves an immediate return to the second position from either neighbor', () => {
+    for (const book of catalog.books) {
+      for (const edge of book.neighbors) {
+        const section = createNearbyVolumes(book, edge.targetBookId);
+        const links = [...section.querySelectorAll('.nearby__link:not(.nearby__link--crossing)')];
+        expect(links).toHaveLength(2);
+        expect(links[1]?.getAttribute('href'), book.id).toBe(`#book=${edge.targetBookId}`);
+        expect(links[0]?.getAttribute('href')).not.toBe(`#book=${edge.targetBookId}`);
+        expect(links[0]?.querySelector('.nearby__previous')).toBeNull();
+        expect(links[1]?.querySelector('.nearby__previous')?.textContent).toBe('PREVIOUS');
+      }
+    }
+  });
+
+  it('never invents a previous mark on direct entry or on a cross-family jump', () => {
+    const book = findBook('b0043')!;
+    const direct = createNearbyVolumes(book);
+    expect(direct.querySelector('.nearby__previous')).toBeNull();
+    const remote = createNearbyVolumes(book, 'b0007');
+    expect(remote.querySelector('.nearby__previous')).toBeNull();
+    const crossings = [...remote.querySelectorAll('.nearby__link--crossing')];
+    expect(crossings).toHaveLength(book.crossings?.length ?? 0);
+  });
+
+  it('retains the authored difference for every rotated neighbor', () => {
+    for (const book of catalog.books) {
+      const section = createNearbyVolumes(book, book.neighbors[0]!.targetBookId);
+      const rows = [...section.querySelectorAll('.nearby__link:not(.nearby__link--crossing)')];
+      for (const row of rows) {
+        const id = row.getAttribute('href')?.slice('#book='.length);
+        const edge = book.neighbors.find((item) => item.targetBookId === id);
+        expect(edge, `${book.id} → ${id}`).toBeDefined();
+        expect(row.querySelector('.nearby__difference')?.textContent).toBe(edge?.difference);
+      }
+    }
+  });
+
 });

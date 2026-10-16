@@ -90,7 +90,7 @@ function createBackLink(): HTMLAnchorElement {
 }
 
 /** A discovered volume: left leaf, narrative, and the shelf it stands on. */
-export function createBookView(bookId: string, address: Coordinate | null): ViewHandle {
+export function createBookView(bookId: string, address: Coordinate | null, previousBookId: string | null = null): ViewHandle {
   const book = findBook(bookId);
   if (!book) throw new Error(`No such book: ${bookId}`);
   const coordinate = address ?? coordinateFor(book.id);
@@ -134,7 +134,7 @@ export function createBookView(bookId: string, address: Coordinate | null): View
   root.append(
     createBackLink(),
     spread,
-    createNearbyVolumes(book),
+    createNearbyVolumes(book, previousBookId),
     shelfGutter,
     createEmbeddedShelf(shelfOf(coordinate), book.id),
     createShelfWalk(coordinate),

@@ -132,6 +132,34 @@ describe('moving between views', () => {
     expect(controller.state.lastBookId).toBe(nearby.id);
   });
 
+  it('tracks an immediate book origin but clears it after the wall or a shelf', () => {
+    const root = findBook('b0041')!;
+    const a = root.neighbors[0]!.targetBookId;
+    const b = root.neighbors[1]!.targetBookId;
+    const { controller } = mount(`#book=${root.id}`);
+    expect(controller.state.previousBookId).toBeNull();
+
+    navigate(`#book=${a}`);
+    expect(controller.state.previousBookId).toBe(root.id);
+    navigate(`#book=${b}`);
+    expect(controller.state.previousBookId).toBe(a);
+
+    // Browser Back returns to A from B: B is now the immediate origin.
+    navigate(`#book=${a}`);
+    expect(controller.state.previousBookId).toBe(b);
+
+    navigate('');
+    expect(controller.state.previousBookId).toBeNull();
+    expect(controller.state.lastBookId).toBe(a);
+    navigate(`#book=${root.id}`);
+    expect(controller.state.previousBookId).toBeNull();
+
+    navigate(hashForShelf(shelfOf(coordinateFor(root.id))));
+    expect(controller.state.previousBookId).toBeNull();
+    navigate(`#book=${a}`);
+    expect(controller.state.previousBookId).toBeNull();
+  });
+
   it('does not render again for the location it is already showing', () => {
     const { render } = mount(`#book=${known.id}`);
     expect(render).toHaveBeenCalledTimes(1);

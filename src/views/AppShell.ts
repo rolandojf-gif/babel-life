@@ -107,7 +107,7 @@ export function mountAppShell(
 
   function build(state: AppState): ViewHandle {
     if (state.view === 'book' && state.currentBookId !== null) {
-      return createBookView(state.currentBookId, state.address);
+      return createBookView(state.currentBookId, state.address, state.previousBookId ?? null);
     }
     if (state.view === 'shelf' && state.shelf !== null) return createShelfView(state.shelf);
     if (state.view === 'address' && state.address !== null) return createAddressView(state.address);
@@ -143,7 +143,7 @@ export function mountAppShell(
   };
 
   function renderView(state: AppState, hint: RenderHint): void {
-    const key = `${state.view}:${state.currentBookId ?? ''}:${
+    const key = `${state.view}:${state.currentBookId ?? ''}:${state.previousBookId ?? ''}:${
       state.address ? formatCoordinate(state.address) : ''
     }:${state.shelf ? formatShelf(state.shelf) : ''}`;
     let view = currentView;

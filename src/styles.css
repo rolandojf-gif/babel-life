@@ -1574,6 +1574,25 @@ body {
   overflow-wrap: break-word;
 }
 
+
+/* Immediate return is identifiable without dimming the literary sanguine. */
+.nearby__previous {
+  display: inline-block;
+  margin-left: 0.75em;
+  color: var(--ink-muted);
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.nearby__previous::before {
+  content: '·';
+  margin-right: 0.65em;
+}
+
 .nearby__open {
   grid-column: 2;
   grid-row: 1 / span 2;

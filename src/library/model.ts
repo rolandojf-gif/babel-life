@@ -72,6 +72,8 @@ export interface AppState {
   currentBookId: string | null;
   /** The last book the visitor had open, root or nearby, kept after they leave it. */
   lastBookId: string | null;
+  /** Immediate origin of a book-to-book navigation, not a persistent reading history. */
+  previousBookId?: string | null;
   /** The address being looked at, when the visitor came in by one. */
   address: Coordinate | null;
   /** The shelf being walked. */

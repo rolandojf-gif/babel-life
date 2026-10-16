@@ -28,6 +28,7 @@ export const copy: Copy = {
   alreadyHere: 'This book was already here.',
   nearbyVolumes: 'NEARBY BOOKS',
   openNearby: 'OPEN',
+  previousBook: 'PREVIOUS',
   anotherFamily: 'ANOTHER FAMILY',
   shelfEyebrow: 'ONE SHELF',
   openThisShelf: 'open this shelf',

@@ -32,6 +32,8 @@ export type Copy = {
   alreadyHere: string;
   nearbyVolumes: string;
   openNearby: string;
+  /** Marks the book immediately read before this one, without tracking visits. */
+  previousBook: string;
   /** Marks a nearby link that leaves the book's narrative family. */
   anotherFamily: string;
   shelfEyebrow: string;

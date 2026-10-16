@@ -28,6 +28,7 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
     wallSeed: seed,
     currentBookId: null,
     lastBookId: null,
+    previousBookId: null,
     address: null,
     shelf: null,
   };
@@ -37,9 +38,11 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
 
   function applyLocation(hint: RenderHint): void {
     const route = parseRoute(window.location.hash);
+    const departingBookId = state.view === 'book' ? state.currentBookId : null;
     // The wall's index stands on the book the visitor has just closed.
     if (state.currentBookId !== null) state.lastBookId = state.currentBookId;
     state.currentBookId = null;
+    state.previousBookId = null;
     state.address = null;
     state.shelf = null;
 
@@ -72,6 +75,11 @@ export function createController(render: Render, seed: bigint = sessionSeed()): 
       state.view = 'wall';
     } else {
       state.view = 'invalidAddress';
+    }
+
+    // Only a direct transition between two different books can have an origin.
+    if (state.view === 'book' && state.currentBookId !== departingBookId) {
+      state.previousBookId = departingBookId;
     }
 
     renderedHref = window.location.href;
