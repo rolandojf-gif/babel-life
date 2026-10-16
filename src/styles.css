@@ -1097,6 +1097,7 @@ body {
   color: var(--oxblood);
   font-size: 1.125rem;
   line-height: 1.45;
+  text-wrap: pretty;
 }
 
 .book--spread .aftertaste::before {
@@ -1572,6 +1573,7 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 
 
