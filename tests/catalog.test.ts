@@ -92,7 +92,15 @@ describe('the passages', () => {
       for (const paragraph of book.passage) expect(paragraph.trim()).not.toBe('');
       expect(book.title.trim()).not.toBe('');
       expect(book.headline.trim()).not.toBe('');
-      expect(book.aftertaste.trim()).not.toBe('');
+    }
+  });
+
+  it('gives each closing authored text or an explicit empty string in both editions', () => {
+    for (const locale of LOCALES) {
+      for (const book of catalogFor(locale).books) {
+        expect(typeof book.aftertaste, `${locale} ${book.id}`).toBe('string');
+        if (book.aftertaste !== '') expect(book.aftertaste.trim(), `${locale} ${book.id}`).not.toBe('');
+      }
     }
   });
 

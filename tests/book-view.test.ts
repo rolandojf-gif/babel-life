@@ -5,9 +5,14 @@
  * against obsolete 08:14 special-case handling.
  */
 
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { createBookView } from '../src/views/BookView';
 import { catalog } from '../src/library/catalog';
+import { LOCALES } from '../src/content/locale';
+
+afterEach(() => {
+  window.history.replaceState(null, '', '/');
+});
 
 describe('BookView', () => {
   it('treats b0007 as a normal book without obsolete 0814 classes or elements', () => {
@@ -22,6 +27,32 @@ describe('BookView', () => {
       const view = createBookView(book.id, null);
       expect(view.element.className).toBe('book book--spread');
       expect(view.element.classList.contains('book--0814')).toBe(false);
+    }
+  });
+
+  it.each(LOCALES)('renders the authored ending without an empty screen/print block in %s', (locale) => {
+    window.history.replaceState(null, '', locale === 'es' ? '/es/' : '/');
+    expect(catalog.books.some((book) => book.aftertaste === '')).toBe(true);
+    expect(catalog.books.some((book) => book.aftertaste !== '')).toBe(true);
+    for (const book of catalog.books) {
+      const view = createBookView(book.id, null);
+      const recto = view.element.querySelector('.spread__recto')!;
+      const passage = recto.querySelector('.passage')!;
+      expect(Array.from(passage.children, (p) => p.textContent)).toEqual(book.passage);
+      if (book.aftertaste === '') {
+        expect(view.element.querySelector('.aftertaste')).toBeNull();
+        expect(recto.lastElementChild).toBe(passage);
+        expect(recto.children).toHaveLength(3);
+      } else {
+        const closing = recto.querySelector('.aftertaste');
+        expect(closing?.textContent).toBe(book.aftertaste);
+        expect(recto.lastElementChild).toBe(closing);
+        expect(recto.querySelectorAll('.aftertaste')).toHaveLength(1);
+      }
+      expect(view.element.querySelector('.print-head')).not.toBeNull();
+      expect(view.element.querySelectorAll('.nearby__item')).toHaveLength(
+        book.neighbors.length + (book.crossings?.length ?? 0),
+      );
     }
   });
 

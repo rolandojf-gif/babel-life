@@ -22,7 +22,7 @@ interface BookBase {
   title: string;
   /** The authored narrative, one string per paragraph. */
   passage: string[];
-  /** One restrained line under the narrative. */
+  /** One restrained line under the narrative, or "" to end at the passage. */
   aftertaste: string;
   neighbors: NeighborEdge[];
   /**

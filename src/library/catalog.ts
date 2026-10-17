@@ -34,7 +34,9 @@ export function validate(data: Catalog): Catalog {
     }
     if (book.headline.trim() === '') throw new Error(`Book ${book.id} has no headline`);
     if (book.title.trim() === '') throw new Error(`Book ${book.id} has no title`);
-    if (book.aftertaste.trim() === '') throw new Error(`Book ${book.id} has no aftertaste`);
+    if (typeof book.aftertaste !== 'string' || (book.aftertaste !== '' && book.aftertaste.trim() === '')) {
+      throw new Error(`Book ${book.id} has an invalid aftertaste: expected text or an empty string`);
+    }
     if (book.kind === 'root') {
       if (book.rootId !== book.id) throw new Error(`Root ${book.id} is not its own root`);
       if (book.hook.trim() === '') throw new Error(`Root ${book.id} has no wall hook`);

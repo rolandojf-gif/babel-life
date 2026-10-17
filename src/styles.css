@@ -3159,6 +3159,12 @@ body {
     break-inside: avoid;
   }
 
+  /* Keep the apparatus at the foot when the passage itself closes the book,
+     without reserving the absent aftertaste's ornament, padding or text. */
+  .book--spread:not(:has(.aftertaste)) > .nearby {
+    margin-top: auto;
+  }
+
   .nearby__heading {
     margin: 0 0 3mm;
     color: var(--ink-soft);

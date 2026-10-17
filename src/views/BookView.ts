@@ -138,8 +138,8 @@ export function createBookView(bookId: string, address: Coordinate | null, previ
     header,
     element('p', 'already-here', copy.alreadyHere),
     createPassage(book),
-    element('p', 'aftertaste', book.aftertaste),
   );
+  if (book.aftertaste !== '') recto.append(element('p', 'aftertaste', book.aftertaste));
 
   const spread = element('div', 'spread');
   spread.append(verso, gutter, recto);

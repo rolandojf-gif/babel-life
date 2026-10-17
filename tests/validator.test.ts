@@ -69,6 +69,13 @@ describe('a sound catalog', () => {
     const data = soundCatalog();
     expect(validate(data)).toBe(data);
   });
+
+  it('accepts an explicitly empty aftertaste on roots and nearby books', () => {
+    const data = soundCatalog();
+    for (const book of data.books) book.aftertaste = '';
+    expect(validate(data)).toBe(data);
+    expect(data.books.every((book) => book.aftertaste === '')).toBe(true);
+  });
 });
 
 describe('the validator refuses', () => {
@@ -99,14 +106,23 @@ describe('the validator refuses', () => {
     );
   });
 
-  it('a volume missing its title, headline or aftertaste', () => {
+  it('a volume missing its title or headline', () => {
     expect(() => validate(broken((_, books) => { books[1]!.title = ''; }))).toThrow(/no title/);
     expect(() => validate(broken((_, books) => { books[1]!.headline = ' '; }))).toThrow(
       /no headline/,
     );
-    expect(() => validate(broken((_, books) => { books[1]!.aftertaste = ''; }))).toThrow(
-      /no aftertaste/,
-    );
+  });
+
+  it.each([undefined, null, 0, false, [], {}, ' ', '\n\t'].map((value) => [value]))('an invalid aftertaste: %j', (value) => {
+    const data = soundCatalog();
+    Object.assign(data.books[1]!, { aftertaste: value });
+    expect(() => validate(data)).toThrow(/invalid aftertaste/);
+  });
+
+  it('a missing aftertaste field rather than an explicit empty string', () => {
+    const data = soundCatalog();
+    Reflect.deleteProperty(data.books[1]!, 'aftertaste');
+    expect(() => validate(data)).toThrow(/invalid aftertaste/);
   });
 
   it('a life on the wall with no premise', () => {

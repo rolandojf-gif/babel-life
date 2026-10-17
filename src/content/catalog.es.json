@@ -71,7 +71,7 @@
         "Nadie lo advierte. El médico no cambia de postura. Tu madre respira igual. Fuera, los mismos coches avanzan bajo la misma lluvia.",
         "Durante toda tu vida ocurre exactamente lo mismo, pero cada edad comienza cuatro segundos más tarde. Incluso tu muerte conserva la misma fecha y el mismo lugar."
       ],
-      "aftertaste": "Fuera, la lluvia no lleva la cuenta.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0007",
@@ -95,7 +95,7 @@
         "Después aparecen todas las fechas, todas las duraciones del embarazo y todos los cuerpos que podrías haber recibido. Cada nacimiento exige una vida posterior completa.",
         "En cada uno de esos lugares naces una sola vez."
       ],
-      "aftertaste": "Cualquiera de esas salas pudo ser la primera.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0007",
@@ -237,8 +237,7 @@
       "title": "Todo lo que podrías entender",
       "passage": [
         "Una estantería contiene las vidas en que hablas una lengua; la siguiente, dos; después vienen todas las combinaciones posibles.",
-        "En unos libros discutes con tu familia en un idioma y trabajas en otro. En otros piensas, cuentas, insultas, amas y mueres usando palabras diferentes. Cada lengua se combina con cada país, educación, profesión y relación.",
-        "Algunas de esas palabras no volverás a oírlas."
+        "En unos libros discutes con tu familia en un idioma y trabajas en otro. En otros piensas, cuentas, insultas, amas y mueres usando palabras diferentes. Cada lengua se combina con cada país, educación, profesión y relación."
       ],
       "aftertaste": "Puedes entender una palabra y no reconocer la vida en que la usas.",
       "neighbors": [
@@ -411,10 +410,10 @@
       "hook": "tus hijos, si los tienes, están escritos enteros, también los años que vivan después de ti.",
       "title": "Quienes aparecen",
       "passage": [
-        "Este libro registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades, palabras y vidas después de que la tuya termine. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años.",
+        "Este libro registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades y palabras. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años.",
         "Lo que en una página puede expresarse con un número determina centenares de personas conocidas, habitaciones ocupadas, comidas preparadas y fechas recordadas."
       ],
-      "aftertaste": "Si alguien te llama mamá o papá, no está usando tu nombre.",
+      "aftertaste": "Si tus hijos te sobreviven, esos años también están escritos.",
       "neighbors": [
         {
           "targetBookId": "b0023",
@@ -435,7 +434,7 @@
       "title": "Un instante antes",
       "passage": [
         "La concepción ocurre un instante antes. Todo parece igual: el lugar, las dos personas, el día. Sin embargo, nace otro cuerpo.",
-        "Nunca oirías su voz, ni verías su cara, ni sabrías su nombre."
+        "La persona que aparece allí tendrá una voz, una cara y una vida completas."
       ],
       "aftertaste": "En tu libro no muere ni desaparece: simplemente nunca comienza.",
       "neighbors": [
@@ -658,7 +657,7 @@
         "No sirve para nada. Nadie lo ve. No modifica una decisión, una conversación ni un recuerdo. Todas las demás páginas coinciden con tu vida exacta.",
         "Sin embargo, durante diecisiete minutos posees algo que aquí nunca fue tuyo."
       ],
-      "aftertaste": "El azul dura más en la frase que en tu bolsillo.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0012",
@@ -941,7 +940,7 @@
         "Para cada asiento existen todos los aviones, compañías, aeropuertos, destinos, rutas, alturas, retrasos y condiciones meteorológicas. En unos libros mueres con seis meses. En otros, a los diecisiete, a los cincuenta y dos o a los ciento diez años.",
         "Antes de ese asiento, está todo lo que viviste para llegar hasta él."
       ],
-      "aftertaste": "La edad no forma parte del número de asiento.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0048",
@@ -965,7 +964,7 @@
         "Y los libros donde mueres caminando, nadando, bailando, comiendo, durmiendo o trabajando. Para cada actividad cambian la edad, el lugar, la hora y las personas presentes.",
         "La primera página todavía está lejos de todo esto: allí estás naciendo."
       ],
-      "aftertaste": "Caminar no es, por sí solo, el nombre de una muerte.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -1014,7 +1013,7 @@
         "El orden no modifica ninguna conversación, ningún trabajo ni ninguna relación. Llegas a los mismos lugares a la misma hora. Mueres el mismo día.",
         "Desde los dieciocho años hasta el final, el izquierdo va primero."
       ],
-      "aftertaste": "El izquierdo no gana nada.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0051",
@@ -1109,7 +1108,7 @@
         "En el libro de al lado tardas un segundo adicional en responder una pregunta. Después dices exactamente lo mismo. La otra persona espera.",
         "Su interpretación, la conversación siguiente y el día se conservan tal cual. Solo ese silencio es más largo."
       ],
-      "aftertaste": "La otra persona te presta un segundo sin saberlo.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1137,9 +1136,9 @@
       "passage": [
         "Una palabra cambia; luego una sílaba; luego el orden de dos frases. Hay libros para cada conversación que podrías mantener y para cada frase que nunca dirías. Cada versión se combina con todas las voces, pausas y silencios de los demás.",
         "La mayor parte se pierde sin consecuencias. Algunas palabras cambian trabajos, familias o países.",
-        "Nunca sabrías qué frase lo cambió todo."
+        "Junto a una vida transformada por una frase hay otra que solo se diferencia en un sonido que nadie recordó."
       ],
-      "aftertaste": "Una vida puede cambiar sin que cambie el volumen de la voz.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1208,9 +1207,9 @@
       "title": "Todas las camas",
       "passage": [
         "Hay libros donde cada una de tus noches ocurre en otra habitación, otro país, junto a otra persona o en una cama vacía. Hay vidas con décadas de sueño interrumpido y otras en que despiertas siempre a la misma hora.",
-        "Solo algunas cambian tus días."
+        "Después vienen todas las combinaciones de posiciones, despertares, sueños y olvidos. Algunas cambian tus días. Otras permanecen encerradas en la noche."
       ],
-      "aftertaste": "Compartir la cama no asegura haber pasado la misma noche.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0056",
@@ -1257,7 +1256,7 @@
         "Dos de esos libros coinciden en tu familia, tu rostro, tu salud y cada acontecimiento de tu vida.",
         "En uno alcanzas una estatura adulta un milímetro mayor. La diferencia aparece durante el crecimiento y permanece hasta la muerte."
       ],
-      "aftertaste": "Medirte no te diría qué hacer con la diferencia.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1279,9 +1278,9 @@
       "passage": [
         "Para cada estatura existen todas las voces. Para cada voz, todos los rostros. Para cada rostro, todas las enfermedades, lesiones, capacidades y maneras de envejecer.",
         "Después, cada uno de esos cuerpos vive con cada familia, en cada ciudad, junto a cada persona que podría conocer.",
-        "El tuyo es el que llevas puesto."
+        "En uno de esos libros conservas tu cuerpo actual, pero cambian tu familia y la ciudad donde vives."
       ],
-      "aftertaste": "Las personas que conocen ese cuerpo podrían no saber nada de ti.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1307,7 +1306,7 @@
         "Las personas que podrían haberte conocido quedan reducidas a una gasolinera, un cruce o las luces de otro coche de frente.",
         "No huyes de nada ni te diriges a ninguna parte."
       ],
-      "aftertaste": "Ningún lugar dura más que el trayecto.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0063",
@@ -1331,7 +1330,7 @@
         "El mapa tarda años en cambiar. Duermes en cunetas, pensiones o portales donde termina cada jornada y al amanecer vuelves a pedalear. Tu cuerpo envejece midiendo el mundo en kilómetros diarios: primero ciento veinte, luego ochenta, luego veinte.",
         "No hay regreso ni llegada. Cuando las piernas ya no pueden sostener la bicicleta, el libro termina."
       ],
-      "aftertaste": "Te desgastas kilómetro a kilómetro.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0062",
@@ -1361,7 +1360,7 @@
         "Aterrizas, cruzas una terminal iluminada sin salir a la ciudad, duermes unas horas junto a una pista y vuelves a despegar. Tu reloj nunca coincide con la luz que entra por la ventanilla.",
         "Durante décadas miras desde diez mil metros unas calles que nunca pisarás."
       ],
-      "aftertaste": "A pocos centímetros de tu hombro, también eres un desconocido.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0062",
@@ -1386,7 +1385,7 @@
         "En otro mueres un segundo después.",
         "En otro, diez años antes. Cada uno guarda toda la vida que tuvo que ocurrir antes para que llegaras hasta ese instante exacto."
       ],
-      "aftertaste": "Decir tu edad lleva más tiempo que aquel último segundo.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0066",
@@ -1407,9 +1406,9 @@
       "title": "Cada duración",
       "passage": [
         "Hay libros que terminan a los pocos minutos y libros que atraviesan una infancia, una vida adulta o una vejez extrema. Para cada duración existen todos los últimos días posibles: comunes, ocupados, silenciosos, compartidos, inadvertidos.",
-        "Puede llegar después de lavarte las manos, mirar una calle o dejar una taza sobre una mesa."
+        "A veces el final llega después de lavarte las manos, mirar una calle o dejar una taza sobre una mesa."
       ],
-      "aftertaste": "Ninguno de esos gestos se hace como si fuera el último.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0065",
@@ -1480,7 +1479,7 @@
         "Naciste en otro país, hablas otra lengua y perteneces a otra familia. Tu educación, trabajo, creencias y recuerdos no coinciden. Nunca has visto los lugares que ahora llamas tuyos.",
         "Aun así, la firma al pie de ciertos documentos reproduce exactamente el mismo nombre. Todo lo que eres ha cambiado alrededor de esas letras."
       ],
-      "aftertaste": "La firma parece una prueba hasta que miras la mano.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0068",
@@ -1532,10 +1531,9 @@
       "title": "Solo queda el gesto",
       "passage": [
         "Existe un libro donde casi nada de tu vida actual permanece. Otro cuerpo, otra familia, otro país, otra lengua, otro trabajo y otra muerte. No conoces a ninguna de las personas que aquí forman tus días.",
-        "Sin embargo, a la misma edad haces exactamente un gesto que hiciste en esta vida: apartas una silla con la mano antes de sentarte. La postura de los dedos, la fuerza y la duración coinciden.",
-        "Todo el libro parece ajeno salvo ese segundo preciso."
+        "Sin embargo, a la misma edad haces exactamente un gesto que hiciste en esta vida: apartas una silla con la mano antes de sentarte. La postura de los dedos, la fuerza y la duración coinciden."
       ],
-      "aftertaste": "Para la silla, solo eres el peso que va a sentarse.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0072",
@@ -1556,9 +1554,9 @@
       "title": "El mismo desayuno",
       "passage": [
         "Dos vidas no comparten nacimiento, rostro, educación, ciudad, creencias ni relaciones. Pero en una fecha determinada comes el mismo desayuno, en el mismo orden, con las mismas cantidades y durante el mismo número de minutos.",
-        "Después los libros se separan otra vez hasta dos muertes distintas. Entre miles de diferencias, esa comida idéntica resulta más difícil de ignorar que cualquier cambio."
+        "Después los libros se separan otra vez hasta dos muertes distintas."
       ],
-      "aftertaste": "La misma cantidad no tiene por qué dejarte igual de satisfecho.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0071",
@@ -1607,7 +1605,7 @@
         "Muchas de esas personas nunca entrarán en tu vida actual.",
         "Ahora mismo viven en algún lugar sin saber quién eres."
       ],
-      "aftertaste": "Aquí ni siquiera sabes cómo se llaman.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0075",
@@ -1629,7 +1627,7 @@
       "passage": [
         "Para cada persona que ha existido o existe en el mundo hay libros en los que vuestras vidas llegan a coincidir y mantenéis cada relación posible.",
         "La misma persona puede ser tu pareja, tu amistad más cercana, quien te contrata, quien te cuida, quien te perjudica o alguien con quien solo compartes una cola.",
-        "Cada una dura unos minutos o una vida entera, y no eliges cuál."
+        "Cada relación puede durar unos minutos, varios años o una vida entera."
       ],
       "aftertaste": "La distancia entre dos personas en una cola puede ser toda vuestra intimidad.",
       "neighbors": [
@@ -1777,9 +1775,9 @@
       "title": "Un solo martes",
       "passage": [
         "Incluso si tu familia, tu cuerpo, tu casa y tu trabajo permanecen fijos, quedan todos los martes posibles.",
-        "Dentro de un solo día se combinan esas diferencias: cada hora de despertar. Cada desayuno. Cada persona que podrías cruzarte."
+        "Cada hora de despertar. Cada desayuno. Cada ruta. Cada persona que podrías cruzarte. Cada palabra que podrías decir y cada palabra que podrías callar."
       ],
-      "aftertaste": "Tus pasos dejan un recorrido; lo que callaste, no.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0080",
@@ -1878,7 +1876,7 @@
         "Entre todas esas combinaciones existe también un libro que describe exactamente tu vida: tu nacimiento, estas palabras y las circunstancias de tu muerte.",
         "No fue escrito para ti."
       ],
-      "aftertaste": "Podrías leerlo como si fuera tuyo.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0083",
@@ -1903,7 +1901,7 @@
         "Los veintiséis años en que encendiste la lámpara al anochecer están también en el libro de la mujer que vivía enfrente, escritos desde la otra ventana. Las mañanas de autobús están también en el libro del conductor. Los cuatro segundos de una puerta cruzada están en el libro de un hombre que no sabrías reconocer.",
         "Solo tu libro los contiene seguidos."
       ],
-      "aftertaste": "Ningún minuto tuyo está escrito una sola vez.",
+      "aftertaste": "Los demás te guardan a ratos, entre sus propios años.",
       "neighbors": [
         {
           "targetBookId": "b0087",
@@ -2005,7 +2003,7 @@
         "Luego vienen cosas que nunca escribiste. Aprende un oficio. Se muda. Pierde el pelo y deja de esconder la cicatriz. Cuida a alguien y años después necesita que lo cuiden.",
         "Nunca oye tu nombre."
       ],
-      "aftertaste": "Dejaste de pensar en él. Su vida continuó.",
+      "aftertaste": "",
       "neighbors": [
         {
           "targetBookId": "b0089",
