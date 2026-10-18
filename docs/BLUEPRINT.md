@@ -350,7 +350,7 @@ NEARBY B: After the final night, you live one more day.
 
 20
 TITLE: Your Full Name
-WALL HOOK: your full name belongs to the exact life you know, with everything that currently gives it meaning.
+WALL HOOK: your full name fits on a single line, and everything it means fills the rest of the book.
 NEARBY A: The same signature belongs to a completely different life.
 NEARBY B: Completely different people answer to your same name.
 
