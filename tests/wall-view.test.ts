@@ -284,7 +284,7 @@ describe('the wall’s deal and its count', () => {
 
 describe('the dedication', () => {
   const DEDICATIONS = {
-    en: 'For Jorge Luis Borges, who imagined the Library first.',
+    en: 'For Jorge Luis Borges, who imagined the Library.',
     es: 'A Jorge Luis Borges, que imaginó la Biblioteca.',
   } as const;
 

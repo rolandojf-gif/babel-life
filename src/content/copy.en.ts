@@ -61,7 +61,7 @@ export const copy: Copy = {
   copyright: '© 2026 Rolando Fernández. All rights reserved.',
   supportPrefix: 'Support this edition',
   supportLabel: 'Buy me a coffee',
-  dedication: 'For Jorge Luis Borges, who imagined the Library first.',
+  dedication: 'For Jorge Luis Borges, who imagined the Library.',
   aboutHeading: 'About Babel Life',
   aboutBody:
     'Babel Life is an independent literary project inspired by Jorge Luis Borges’ short story “The Library of Babel”. It is not affiliated with, endorsed by or published by the Borges estate or any publisher. No passage from Borges’ story is reproduced here. Its passages and coordinates belong to this edition. This is fiction: the site cannot identify, predict or estimate anyone’s future.',
