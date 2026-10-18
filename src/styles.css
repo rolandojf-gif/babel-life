@@ -2039,8 +2039,13 @@ body {
   line-height: 1.88;
   letter-spacing: 0.075em;
   color: rgba(87, 80, 63, 0.82);
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
+  /* Every symbol, the space too, holds its cell, and a line breaks only where
+     the column ends: lines of one measure, as on any page of the Library,
+     never the ragged margin of prose. */
+  white-space: break-spaces;
+  line-break: anywhere;
+  word-break: break-all;
+  overflow-wrap: normal;
 }
 
 .page__caption {
@@ -2072,7 +2077,8 @@ body {
   .page__symbols {
     font-size: 0.7rem;
     line-height: 1.55;
-    letter-spacing: 0.045em;
+    /* Open enough that the even block reaches the foot of the sheet. */
+    letter-spacing: 0.22em;
   }
 
   .page__caption {
