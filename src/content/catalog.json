@@ -336,7 +336,7 @@
         "That room belongs to one stretch of your life and then disappears. Yet it stays on the list of places you have called home.",
         "The book preserves them all, even those you could no longer walk through from memory."
       ],
-      "aftertaste": "Your hand might still reach for a place where there is nothing now.",
+      "aftertaste": "You might still reach out in the dark for something that is no longer there.",
       "neighbors": [
         {
           "targetBookId": "b0020",
@@ -413,7 +413,7 @@
         "This book records whether you have children, how many, with whom and in what order they arrive. It describes their bodies, temperaments, illnesses and words. If you have none, it also records that absence throughout all your years.",
         "One number on one page determines hundreds of people you know, rooms occupied, meals prepared and dates remembered."
       ],
-      "aftertaste": "If your children outlive you, those years are written too.",
+      "aftertaste": "Some of those dates will be remembered without you.",
       "neighbors": [
         {
           "targetBookId": "b0023",
@@ -964,7 +964,7 @@
         "There are also books in which you die walking, swimming, dancing, eating, sleeping or working. For each activity, the age, place, time and people present all change.",
         "The first page is still far from all this: there, you are being born."
       ],
-      "aftertaste": "Dancing and sleeping appear on the same list as trains.",
+      "aftertaste": "There, no one is thinking about trains yet.",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -1108,7 +1108,7 @@
         "In this book, you take one additional second to answer a question. Then you say exactly the same thing. The other person waits.",
         "Their interpretation, the conversation that follows and the day stay as they were. Only that silence is longer."
       ],
-      "aftertaste": "The other person waited one second longer and heard the same thing.",
+      "aftertaste": "That second belonged to the one who waited.",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1135,10 +1135,9 @@
       "title": "Everything You Could Say",
       "passage": [
         "One word changes; then a syllable; then the order of two sentences. There are books for every conversation you could have and for every sentence you would never say. Each version combines with every voice, pause and silence of everyone else.",
-        "Most disappear without consequence. Some words change jobs, families or countries.",
         "Beside a life transformed by one sentence stands another that differs only in a sound no one remembered."
       ],
-      "aftertaste": "The sound no one remembered is written down too.",
+      "aftertaste": "You were the one who said it.",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1209,7 +1208,7 @@
         "There are books in which every one of your nights takes place in another room, another country, beside another person or in an empty bed. There are lives with decades of interrupted sleep and others in which you always wake at the same time.",
         "Then come all the combinations of positions, awakenings, dreams and forgetting. Some change your days. Others remain sealed inside the night."
       ],
-      "aftertaste": "An empty bed is one of them too.",
+      "aftertaste": "On many of those nights, no one breathes nearby.",
       "neighbors": [
         {
           "targetBookId": "b0056",
@@ -1234,7 +1233,7 @@
         "Height, face, sex, voice, strength, mobility and health all change.",
         "On the first day, one of those bodies weighs differently in the same arms."
       ],
-      "aftertaste": "From inside that body, this one would be the unfamiliar one.",
+      "aftertaste": "From inside that body, this one would be the stranger.",
       "neighbors": [
         {
           "targetBookId": "b0060",
@@ -1257,7 +1256,7 @@
         "Two of those books give you the same family, the same face, the same health and the same events throughout your life.",
         "In one, you grow to be one millimetre taller as an adult. The difference appears as you grow and remains until your death."
       ],
-      "aftertaste": "It took you years to grow one millimetre taller.",
+      "aftertaste": "By evening, your body has already shrunk by more than that.",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1383,10 +1382,10 @@
       "title": "The Exact Age",
       "passage": [
         "There is a book in which you die at 86 years, 3 months, 11 days, 7 hours, 14 minutes and 8 seconds.",
-        "In another you die one second later.",
-        "In another, ten years earlier. Each one holds the whole life that had to happen first for you to reach that exact instant."
+        "Your death notice will say eighty-six. Those who read it will remember a few of your dates and round off the rest.",
+        "The book does not round."
       ],
-      "aftertaste": "Months, days, hours and minutes: all of it fits before the final second.",
+      "aftertaste": "The last eight seconds are yours too.",
       "neighbors": [
         {
           "targetBookId": "b0066",
@@ -1409,7 +1408,7 @@
         "There are books that end after a few minutes and books that pass through a childhood, an adult life or extreme old age. For every duration, there are all possible final days: ordinary, busy, quiet, shared, unnoticed.",
         "Sometimes the end comes after you wash your hands, look at a street or set a cup on a table."
       ],
-      "aftertaste": "Washing your hands can also be the last thing you do.",
+      "aftertaste": "The cup is still on the table.",
       "neighbors": [
         {
           "targetBookId": "b0065",
@@ -1557,7 +1556,7 @@
         "Two lives have different births, faces, educations, cities, beliefs and relationships. But on a particular date, you eat the same breakfast, in the same order, in the same quantities and for the same number of minutes.",
         "Afterwards, the books separate again until two different deaths."
       ],
-      "aftertaste": "Halfway through breakfast, what you're eating doesn't give away which life you're in.",
+      "aftertaste": "Halfway through breakfast, nothing on the plate tells you which life you are in.",
       "neighbors": [
         {
           "targetBookId": "b0071",
@@ -1779,7 +1778,7 @@
         "Every time you could wake. Every breakfast. Every route. Every person you could cross paths with. Every word you could say and every word you could leave unsaid.",
         "In one of them, you butter the toast after the coffee instead of before."
       ],
-      "aftertaste": "One of those books is distinguished by the order of the toast.",
+      "aftertaste": "A Tuesday like any other.",
       "neighbors": [
         {
           "targetBookId": "b0080",

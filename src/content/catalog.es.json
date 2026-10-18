@@ -336,7 +336,7 @@
         "Esa habitación forma parte de un tramo de tu vida y luego desaparece. Sin embargo, sigue en la lista de lugares a los que has llamado casa.",
         "El libro conserva todos, incluso los que ya no podrías recorrer de memoria."
       ],
-      "aftertaste": "La mano aún podría buscar donde ya no hay nada.",
+      "aftertaste": "Aún podrías buscar a tientas donde ya no hay nada.",
       "neighbors": [
         {
           "targetBookId": "b0020",
@@ -413,7 +413,7 @@
         "Este libro registra si tienes hijos, cuántos, con quién y en qué orden llegan. Describe sus cuerpos, temperamentos, enfermedades y palabras. Si no tienes ninguno, también registra esa ausencia a lo largo de todos tus años.",
         "Lo que en una página puede expresarse con un número determina centenares de personas conocidas, habitaciones ocupadas, comidas preparadas y fechas recordadas."
       ],
-      "aftertaste": "Si tus hijos te sobreviven, esos años también están escritos.",
+      "aftertaste": "Algunas de esas fechas se recordarán sin ti.",
       "neighbors": [
         {
           "targetBookId": "b0023",
@@ -964,7 +964,7 @@
         "Y los libros donde mueres caminando, nadando, bailando, comiendo, durmiendo o trabajando. Para cada actividad cambian la edad, el lugar, la hora y las personas presentes.",
         "La primera página todavía está lejos de todo esto: allí estás naciendo."
       ],
-      "aftertaste": "Bailar y dormir figuran en la misma lista que los trenes.",
+      "aftertaste": "Allí nadie piensa todavía en trenes.",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -1108,7 +1108,7 @@
         "En este libro tardas un segundo adicional en responder una pregunta. Después dices exactamente lo mismo. La otra persona espera.",
         "Su interpretación, la conversación siguiente y el día se conservan tal cual. Solo ese silencio es más largo."
       ],
-      "aftertaste": "La otra persona esperó un segundo más y oyó lo mismo.",
+      "aftertaste": "Ese segundo fue de quien esperaba.",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1135,10 +1135,9 @@
       "title": "Todo lo pronunciable",
       "passage": [
         "Una palabra cambia; luego una sílaba; luego el orden de dos frases. Hay libros para cada conversación que podrías mantener y para cada frase que nunca dirías. Cada versión se combina con todas las voces, pausas y silencios de los demás.",
-        "La mayor parte se pierde sin consecuencias. Algunas palabras cambian trabajos, familias o países.",
         "Junto a una vida transformada por una frase hay otra que solo se diferencia en un sonido que nadie recordó."
       ],
-      "aftertaste": "El sonido que nadie recordó también está escrito.",
+      "aftertaste": "Lo pronunciaste tú.",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1209,7 +1208,7 @@
         "Hay libros donde cada una de tus noches ocurre en otra habitación, otro país, junto a otra persona o en una cama vacía. Hay vidas con décadas de sueño interrumpido y otras en que despiertas siempre a la misma hora.",
         "Después vienen todas las combinaciones de posiciones, despertares, sueños y olvidos. Algunas cambian tus días. Otras permanecen encerradas en la noche."
       ],
-      "aftertaste": "Una cama vacía también es una de ellas.",
+      "aftertaste": "En muchas de esas noches, nadie respira cerca.",
       "neighbors": [
         {
           "targetBookId": "b0056",
@@ -1257,7 +1256,7 @@
         "Dos de esos libros coinciden en tu familia, tu rostro, tu salud y cada acontecimiento de tu vida.",
         "En uno alcanzas una estatura adulta un milímetro mayor. La diferencia aparece durante el crecimiento y permanece hasta la muerte."
       ],
-      "aftertaste": "Tardaste años en crecer un milímetro de más.",
+      "aftertaste": "Al anochecer, tu cuerpo ya ha encogido más que eso.",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1383,10 +1382,10 @@
       "title": "La edad exacta",
       "passage": [
         "Hay un libro en el que mueres a los 86 años, 3 meses, 11 días, 7 horas, 14 minutos y 8 segundos.",
-        "En otro mueres un segundo después.",
-        "En otro, diez años antes. Cada uno guarda toda la vida que tuvo que ocurrir antes para que llegaras hasta ese instante exacto."
+        "La esquela dirá ochenta y seis años. Quienes la lean recordarán de ti unas pocas fechas y redondearán el resto.",
+        "El libro no redondea."
       ],
-      "aftertaste": "Meses, días, horas y minutos: todo cabe antes del último segundo.",
+      "aftertaste": "Los últimos ocho segundos también son tuyos.",
       "neighbors": [
         {
           "targetBookId": "b0066",
@@ -1409,7 +1408,7 @@
         "Hay libros que terminan a los pocos minutos y libros que atraviesan una infancia, una vida adulta o una vejez extrema. Para cada duración existen todos los últimos días posibles: comunes, ocupados, silenciosos, compartidos, inadvertidos.",
         "A veces el final llega después de lavarte las manos, mirar una calle o dejar una taza sobre una mesa."
       ],
-      "aftertaste": "Lavarse las manos también puede ser lo último.",
+      "aftertaste": "La taza sigue sobre la mesa.",
       "neighbors": [
         {
           "targetBookId": "b0065",
@@ -1557,7 +1556,7 @@
         "Dos vidas no comparten nacimiento, rostro, educación, ciudad, creencias ni relaciones. Pero en una fecha determinada comes el mismo desayuno, en el mismo orden, con las mismas cantidades y durante el mismo número de minutos.",
         "Después los libros se separan otra vez hasta dos muertes distintas."
       ],
-      "aftertaste": "A mitad del desayuno, lo que comes no delata en qué vida estás.",
+      "aftertaste": "A mitad del desayuno, nada en el plato dice en qué vida estás.",
       "neighbors": [
         {
           "targetBookId": "b0071",
@@ -1779,7 +1778,7 @@
         "Cada hora de despertar. Cada desayuno. Cada ruta. Cada persona que podrías cruzarte. Cada palabra que podrías decir y cada palabra que podrías callar.",
         "En uno de ellos, untas la tostada después del café en lugar de antes."
       ],
-      "aftertaste": "Uno de esos libros se distingue por el orden de la tostada.",
+      "aftertaste": "Un martes cualquiera.",
       "neighbors": [
         {
           "targetBookId": "b0080",
