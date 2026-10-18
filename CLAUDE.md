@@ -60,7 +60,7 @@ Babel Life es un sitio estático (TypeScript sin framework, Vite, CSS) en dos ed
 
 ## Modelo conceptual y terminología (regla fija)
 
-- **Una vida completa es un libro.** El raíz contiene una vida completa y cada cercano contiene **otra** vida completa.
+- **Una vida completa es un libro.** El raíz contiene una vida completa y cada cercano contiene **otra** vida completa. La única excepción, deliberada, es `b0083` (Una sola coma): espacios y una coma, sin vida; es el umbral de su familia.
 - Raíz más dos cercanos es una **familia narrativa**, y **nunca se llama «vida»**. Definir una vida como la familia de tres libros es un error que él ya corrigió una vez.
 - «Volumen» queda para el objeto físico y la coordenada.
 - N familias, N raíces en el muro, 2N cercanos, 3N libros o vidas completas.
@@ -73,6 +73,7 @@ Están en la sección 3 del Blueprint. Las que más se rompen sin querer:
 - Cada premisa expone una consecuencia de variación, contingencia, identidad o posibilidad combinatoria. La especificidad concreta vale si afila la idea y debe ser exacta. Nada de misterio vago ni de números inventados. «La escala es el asunto» **no** es regla universal.
 - Guardarraíl de 30–110 palabras, independiente en cada edición. **Sin paridad de longitud entre inglés y castellano:** son ediciones literarias nativas, no traducciones. La paridad estructural (mismas accesiones, orden y aristas) sí es invariante.
 - Capitalización del catálogo tal como está publicada.
+- **Ningún texto sitúa su libro en el anaquel** («el libro contiguo», «el libro de al lado»): el anaquel lo enseña, y lo enseña ilegible. El libro se nombra «este libro». «En otro libro» sí vale: es la gramática del catálogo (regla 9 del Blueprint).
 - Lo que inquieta aquí es la implicación y la cercanía al lector. La versión barata de «perturbador» (sobresalto, crueldad) rompe el registro.
 - **Cierres por sustracción, sin *zoom out* ni causalidad explicativa** (regla 12 del Blueprint). Vale para la última frase del pasaje y para el `aftertaste` que va debajo. El golpe final debe quedarse en la implicación concreta sobre el lector, nunca abrir el plano hacia «incontables variaciones» o la combinatoria general de la Biblioteca. Evita conjunciones causales («porque», «ya que») en ninguno de los dos: la Biblioteca no se justifica, registra. Alterna golpes finales breves con cierres de respiración larga cuando la prosodia lo pida (`b0003`, `b0006`, `b0031`).
 - **Pasadizos escasos** (`crossings`, regla 8 del Blueprint): cada familia abre como máximo uno, siempre desde un cercano y nunca desde la raíz, y recibe como máximo uno entre sus tres libros; un libro que recibe un pasadizo nunca abre otro. Lo vigila `tests/catalog.test.ts`.
