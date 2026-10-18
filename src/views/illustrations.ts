@@ -540,6 +540,19 @@ export const ACCENTS: Record<string, Accent> = {
   b0070: { tint: [3] },
   // The thought that lasts three seconds.
   b0078: { tint: [5] },
+  // The one letter that does not match.
+  b0084: {
+    drop: [4],
+    base: [
+      {
+        tag: 'path',
+        attrs: {
+          d: 'M37.8 46 a2.2 2.4 0 1 0 4.4 0 a2.2 2.4 0 1 0 -4.4 0 M42.2 43.6 V48.6 M46.8 46 a2.2 2.4 0 1 0 4.4 0 a2.2 2.4 0 1 0 -4.4 0 M51.2 43.6 V48.6 M55.8 46 a2.2 2.4 0 1 0 4.4 0 a2.2 2.4 0 1 0 -4.4 0 M60.2 43.6 V48.6 M73.8 46 a2.2 2.4 0 1 0 4.4 0 a2.2 2.4 0 1 0 -4.4 0 M78.2 43.6 V48.6',
+        },
+      },
+    ],
+    add: [{ tag: 'path', attrs: { d: 'M64.8 46 a2.2 2.4 0 1 0 4.4 0 a2.2 2.4 0 1 0 -4.4 0' } }],
+  },
   // The other window.
   b0087: { tint: [2, 3] },
   // The four seconds inside the doorway, in both lives.
