@@ -238,6 +238,14 @@ const MOTIFS: Record<string, Shape[]> = {
     { tag: 'line', attrs: { x1: '42', y1: '34', x2: '60', y2: '42' } },
     { tag: 'path', attrs: { d: 'M42 34 L24 40 M42 34 L54 20 M42 34 L36 56', 'stroke-dasharray': '2 3' } },
   ],
+  // Two lives side by side: the day they are introduced marked on both, and a day before it marked only on one.
+  firstday: [
+    { tag: 'path', attrs: { d: 'M10 22 H64 C74 22 76 32 86 32 H110' } },
+    { tag: 'path', attrs: { d: 'M10 58 H64 C74 58 76 44 86 44 H110' } },
+    { tag: 'line', attrs: { x1: '60', y1: '17', x2: '60', y2: '27' } },
+    { tag: 'line', attrs: { x1: '60', y1: '53', x2: '60', y2: '63' } },
+    { tag: 'line', attrs: { x1: '30', y1: '17', x2: '30', y2: '27' } },
+  ],
   // Two figures no one could tell apart, thinking different things.
   interior: [
     { tag: 'circle', attrs: { cx: '40', cy: '28', r: '12' } },
@@ -538,6 +546,8 @@ export const ACCENTS: Record<string, Accent> = {
   b0067: { tint: [2] },
   // The other book: the cover around your name.
   b0070: { tint: [3] },
+  // The first day, written only in your book.
+  b0076: { tint: [4] },
   // The thought that lasts three seconds.
   b0078: { tint: [5] },
   // The one letter that does not match.
