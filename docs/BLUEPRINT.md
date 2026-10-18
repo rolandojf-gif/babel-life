@@ -366,7 +366,7 @@ NEARBY B: Everything changes except the final word.
 TITLE: Every Living Person
 WALL HOOK: you spend your life with someone alive right now who does not know who you are.
 NEARBY A: Every possible relationship exists with each person.
-NEARBY B: Every possible relationship combines into complete networks.
+NEARBY B: One of those people shares your life, and the first day is not the same in both books.
 
 23
 TITLE: What No One Saw

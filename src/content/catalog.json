@@ -1613,7 +1613,7 @@
         },
         {
           "targetBookId": "b0076",
-          "difference": "Every possible relationship combines into complete networks."
+          "difference": "One of those people shares your life, and the first day is not the same in both books."
         }
       ]
     },
@@ -1637,7 +1637,7 @@
         },
         {
           "targetBookId": "b0076",
-          "difference": "Every relationship combines with every other relationship."
+          "difference": "A single relationship lasts a lifetime and begins twice."
         }
       ]
     },
@@ -1646,18 +1646,18 @@
       "rootId": "b0074",
       "kind": "nearby",
       "icon": "crowd",
-      "headline": "THE WHOLE NETWORK",
-      "title": "The Whole Network",
+      "headline": "THE FIRST DAY",
+      "title": "The First Day",
       "passage": [
-        "Changing one person is not enough.",
-        "For every possible partner there are all the possible friends. For every group of friends, all the colleagues, neighbours, doctors, teachers and strangers who could affect you.",
-        "In one book, a colleague introduces you to your partner; in another, the same two people cross paths beside you without ever speaking."
+        "In this book you share your life with someone who, right now, somewhere, does not know who you are.",
+        "The day you first see them fills a whole page of your book: what they are wearing, the light, what they say, the walk home.",
+        "In theirs it does not take up a single line. There, the first day comes more than a year later, when a colleague introduces you to each other."
       ],
-      "aftertaste": "People who never meet here sit at your table there.",
+      "aftertaste": "Every year you celebrate the second day together.",
       "neighbors": [
         {
           "targetBookId": "b0074",
-          "difference": "Every living person appears in every possible bond with you."
+          "difference": "Every living person shares your life in some book."
         },
         {
           "targetBookId": "b0075",

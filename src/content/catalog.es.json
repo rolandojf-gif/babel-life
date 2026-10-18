@@ -1613,7 +1613,7 @@
         },
         {
           "targetBookId": "b0076",
-          "difference": "Todas las relaciones posibles se combinan en redes completas."
+          "difference": "Una de esas personas comparte tu vida, y el primer día no es el mismo en los dos libros."
         }
       ]
     },
@@ -1637,7 +1637,7 @@
         },
         {
           "targetBookId": "b0076",
-          "difference": "Cada relación se combina con todas las demás relaciones."
+          "difference": "Una sola relación dura toda la vida y empieza dos veces."
         }
       ]
     },
@@ -1646,18 +1646,18 @@
       "rootId": "b0074",
       "kind": "nearby",
       "icon": "crowd",
-      "headline": "LA RED COMPLETA",
-      "title": "La red completa",
+      "headline": "EL PRIMER DÍA",
+      "title": "El primer día",
       "passage": [
-        "No basta con cambiar a una persona.",
-        "Para cada pareja posible existen todos los amigos posibles. Para cada grupo de amigos, todos los compañeros de trabajo, vecinos, médicos, profesores y desconocidos que podrían afectarte.",
-        "En un libro, un compañero de trabajo te presenta a tu pareja; en otro, esas mismas dos personas se cruzan a tu lado sin dirigirse la palabra."
+        "En este libro compartes tu vida con una persona que ahora mismo, en algún lugar, no sabe quién eres.",
+        "El día en que la ves por primera vez ocupa una página entera de tu libro: la ropa que lleva, la luz, lo que dice, el camino de vuelta a casa.",
+        "En el suyo no ocupa ni una línea. Allí el primer día llega más de un año después, cuando un compañero de trabajo os presenta."
       ],
-      "aftertaste": "Personas que aquí ni se conocen se sientan allí a tu misma mesa.",
+      "aftertaste": "Cada año celebráis el segundo día.",
       "neighbors": [
         {
           "targetBookId": "b0074",
-          "difference": "Cada persona viva aparece en todos los vínculos posibles contigo."
+          "difference": "Cada persona viva comparte tu vida en algún libro."
         },
         {
           "targetBookId": "b0075",
