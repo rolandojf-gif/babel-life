@@ -44,7 +44,7 @@
       "title": "La hora exacta",
       "passage": [
         "El libro registra tu llegada con una precisión absurda: el segundo exacto, la duración del embarazo, la temperatura de la sala, la luz sobre cada superficie, las personas presentes y la posición de sus cuerpos.",
-        "Conserva cómo estabas colocado, qué parte de ti apareció primero y cuánto tardaste en respirar.",
+        "Conserva en qué posición venías, qué parte de ti apareció primero y cuánto tardaste en respirar.",
         "Cambiar un grado, un gesto o una fracción de segundo produce otro nacimiento."
       ],
       "aftertaste": "Hasta el aire de tu primera respiración está medido.",
@@ -883,7 +883,7 @@
       "title": "Cada puerta",
       "passage": [
         "Por cada puerta de tu calle, hay un libro en el que naciste detrás de esa puerta.",
-        "En uno eres hijo único. En otro compartes habitación con tres hermanos. En otro, la persona a quien ahora llamas hermana vive dos edificios más lejos y nunca aprende tu nombre."
+        "En uno no tienes hermanos. En otro compartes habitación con tres hermanos. En otro, la persona a quien ahora llamas hermana vive dos edificios más lejos y nunca aprende tu nombre."
       ],
       "aftertaste": "Para entrar en esa infancia, tendrías que llamar a la puerta.",
       "neighbors": [
@@ -936,7 +936,7 @@
       "hook": "mueres en un accidente aéreo en el asiento 1A.",
       "title": "Cada asiento",
       "passage": [
-        "Hay un libro en el que mueres en un accidente aéreo sentado en el 1A. Otro en el 1B. Otro en el 1C. Y así, un libro distinto por cada asiento posible.",
+        "Hay un libro en el que mueres en un accidente aéreo en el asiento 1A. Otro en el 1B. Otro en el 1C. Y así, un libro distinto por cada asiento posible.",
         "Para cada asiento existen todos los aviones, compañías, aeropuertos, destinos, rutas, alturas, retrasos y condiciones meteorológicas. En unos libros mueres con seis meses. En otros, a los diecisiete, a los cincuenta y dos o a los ciento diez años.",
         "Antes de ese asiento, está todo lo que viviste para llegar hasta él."
       ],
@@ -1576,7 +1576,7 @@
       "headline": "LA ÚLTIMA PALABRA",
       "title": "La última palabra",
       "passage": [
-        "Hay libros donde todo cambia salvo tu última palabra. Llegas a ella con otra voz, después de una vida que no reconoces, rodeado de personas que nunca conocerás aquí.",
+        "Hay libros donde todo cambia salvo tu última palabra. Llegas a ella con otra voz, después de una vida que no reconoces, entre personas que nunca conocerás aquí.",
         "En algunos la dices en otro idioma, pero el sonido final coincide. En otros significa algo diferente. Décadas enteras, países, familias y cuerpos se reemplazan para conducir a la misma breve emisión."
       ],
       "aftertaste": "¿Iba dirigida a alguien, o solo fue la última?",
@@ -2042,7 +2042,7 @@
       "crossings": [
         {
           "targetBookId": "b0088",
-          "difference": "Ya no apareces inventado en tres páginas: ocupas cuatro segundos en la vida de quien se cruza contigo."
+          "difference": "Ya nadie te inventa en tres páginas: ocupas cuatro segundos en la vida de quien se cruza contigo."
         }
       ]
     }
