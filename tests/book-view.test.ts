@@ -5,7 +5,7 @@
  * against obsolete 08:14 special-case handling.
  */
 
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { createBookView } from '../src/views/BookView';
 import { catalog } from '../src/library/catalog';
 import { LOCALES } from '../src/content/locale';
@@ -32,27 +32,49 @@ describe('BookView', () => {
 
   it.each(LOCALES)('renders the authored ending without an empty screen/print block in %s', (locale) => {
     window.history.replaceState(null, '', locale === 'es' ? '/es/' : '/');
-    expect(catalog.books.some((book) => book.aftertaste === '')).toBe(true);
-    expect(catalog.books.some((book) => book.aftertaste !== '')).toBe(true);
+    expect(catalog.books.some((book) => book.aftertaste === '')).toBe(false);
+    expect(catalog.books).toHaveLength(81);
     for (const book of catalog.books) {
+      expect(book.aftertaste.trim()).not.toBe('');
       const view = createBookView(book.id, null);
       const recto = view.element.querySelector('.spread__recto')!;
       const passage = recto.querySelector('.passage')!;
       expect(Array.from(passage.children, (p) => p.textContent)).toEqual(book.passage);
-      if (book.aftertaste === '') {
-        expect(view.element.querySelector('.aftertaste')).toBeNull();
-        expect(recto.lastElementChild).toBe(passage);
-        expect(recto.children).toHaveLength(3);
-      } else {
-        const closing = recto.querySelector('.aftertaste');
-        expect(closing?.textContent).toBe(book.aftertaste);
-        expect(recto.lastElementChild).toBe(closing);
-        expect(recto.querySelectorAll('.aftertaste')).toHaveLength(1);
-      }
+      const closing = recto.querySelector('.aftertaste');
+      expect(closing?.textContent).toBe(book.aftertaste);
+      expect(recto.lastElementChild).toBe(closing);
+      expect(recto.querySelectorAll('.aftertaste')).toHaveLength(1);
       expect(view.element.querySelector('.print-head')).not.toBeNull();
       expect(view.element.querySelectorAll('.nearby__item')).toHaveLength(
         book.neighbors.length + (book.crossings?.length ?? 0),
       );
+    }
+  });
+
+  /**
+   * The catalog ships every book with an aftertaste (Blueprint rule 12), so the
+   * still-supported empty state is proved with a fixture instead of with a book
+   * left deliberately silent in the real edition.
+   */
+  it.each(LOCALES)('renders no closing element when a book ends on its passage in %s', async (locale) => {
+    vi.resetModules();
+    window.history.replaceState(null, '', locale === 'es' ? '/es/' : '/');
+    const { catalog: fresh } = await import('../src/library/catalog');
+    const { createBookView: createFreshView } = await import('../src/views/BookView');
+    const silent = fresh.books.find((book) => book.id === 'b0007')!;
+    const authored = silent.aftertaste;
+    silent.aftertaste = '';
+
+    try {
+      const view = createFreshView('b0007', null);
+      const recto = view.element.querySelector('.spread__recto')!;
+      expect(recto.querySelector('.aftertaste')).toBeNull();
+      expect(recto.lastElementChild).toBe(recto.querySelector('.passage'));
+      expect(recto.children).toHaveLength(3);
+      expect(view.element.querySelector('.print-head')).not.toBeNull();
+    } finally {
+      silent.aftertaste = authored;
+      vi.resetModules();
     }
   });
 

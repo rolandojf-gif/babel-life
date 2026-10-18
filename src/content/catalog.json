@@ -71,7 +71,7 @@
         "No one notices. The doctor does not change position. Your mother breathes the same way. Outside, the same cars move through the same rain.",
         "Throughout your life, everything happens in exactly the same way, but every age begins four seconds later. Even your death keeps the same date and place."
       ],
-      "aftertaste": "",
+      "aftertaste": "Four seconds were never a delay.",
       "neighbors": [
         {
           "targetBookId": "b0007",
@@ -95,7 +95,7 @@
         "Then come every date, every length of pregnancy and every body you could have been born with. Each birth requires a complete life to follow it.",
         "In each of those places, you are born only once."
       ],
-      "aftertaste": "",
+      "aftertaste": "Yours is one of those rooms.",
       "neighbors": [
         {
           "targetBookId": "b0007",
@@ -657,7 +657,7 @@
         "It serves no purpose. No one sees it. It changes no decision, conversation or memory. Every other page matches your exact life.",
         "Yet for seventeen minutes you own something that was never yours here."
       ],
-      "aftertaste": "",
+      "aftertaste": "By the end of the day, your pockets match again.",
       "neighbors": [
         {
           "targetBookId": "b0012",
@@ -940,7 +940,7 @@
         "Each seat combines with every aircraft, airline, airport, destination, route, altitude, delay and weather condition. In some books you die at six months. In others, at seventeen, at fifty-two or at one hundred and ten.",
         "Before that seat comes everything you lived through to reach it."
       ],
-      "aftertaste": "",
+      "aftertaste": "Six months and a hundred and ten years fit in the same seat.",
       "neighbors": [
         {
           "targetBookId": "b0048",
@@ -964,7 +964,7 @@
         "There are also books in which you die walking, swimming, dancing, eating, sleeping or working. For each activity, the age, place, time and people present all change.",
         "The first page is still far from all this: there, you are being born."
       ],
-      "aftertaste": "",
+      "aftertaste": "Dancing and sleeping appear on the same list as trains.",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -985,10 +985,10 @@
       "title": "Until the Final Minute",
       "passage": [
         "These books match throughout your life.",
-        "Same family. Same body. Same meals, jobs, conversations and journeys. They arrive together at the final minute.",
-        "Afterwards only your death changes: in one it is an illness, in another an accident, in another you end it yourself."
+        "On the last day you walk the same street at the same hour, with the same bag on your shoulder. You wait at the same crossing for the light to change.",
+        "In one book your heart stops as you wait. In another a bus takes you as you cross. In another you step in front of it yourself."
       ],
-      "aftertaste": "An ending can change how you read a morning that did not change.",
+      "aftertaste": "The light changes for all three.",
       "neighbors": [
         {
           "targetBookId": "b0047",
@@ -1013,7 +1013,7 @@
         "The order changes no conversation, job or relationship. You reach the same places at the same time. You die on the same day.",
         "From eighteen until the end, the left goes first."
       ],
-      "aftertaste": "",
+      "aftertaste": "The right sock waits its turn every morning.",
       "neighbors": [
         {
           "targetBookId": "b0051",
@@ -1108,7 +1108,7 @@
         "In the book beside it, you take one additional second to answer a question. Then you say exactly the same thing. The other person waits.",
         "Their interpretation, the conversation that follows and the day stay as they were. Only that silence is longer."
       ],
-      "aftertaste": "",
+      "aftertaste": "The other person waited one second longer and heard the same thing.",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1138,7 +1138,7 @@
         "Most disappear without consequence. Some words change jobs, families or countries.",
         "Beside a life transformed by one sentence stands another that differs only in a sound no one remembered."
       ],
-      "aftertaste": "",
+      "aftertaste": "The sound no one remembered is written down too.",
       "neighbors": [
         {
           "targetBookId": "b0053",
@@ -1209,7 +1209,7 @@
         "There are books in which every one of your nights takes place in another room, another country, beside another person or in an empty bed. There are lives with decades of interrupted sleep and others in which you always wake at the same time.",
         "Then come all the combinations of positions, awakenings, dreams and forgetting. Some change your days. Others remain sealed inside the night."
       ],
-      "aftertaste": "",
+      "aftertaste": "An empty bed is one of them too.",
       "neighbors": [
         {
           "targetBookId": "b0056",
@@ -1231,7 +1231,8 @@
       "title": "Every Body",
       "passage": [
         "There are books in which you are born on the same day, to the same parents and in the same room, with every body you could have had.",
-        "Height, face, sex, voice, strength, mobility and health all change."
+        "Height, face, sex, voice, strength, mobility and health all change.",
+        "On the first day, one of those bodies weighs differently in the same arms."
       ],
       "aftertaste": "From inside that body, this one would be the unfamiliar one.",
       "neighbors": [
@@ -1256,7 +1257,7 @@
         "Two of those books give you the same family, the same face, the same health and the same events throughout your life.",
         "In one, you grow to be one millimetre taller as an adult. The difference appears as you grow and remains until your death."
       ],
-      "aftertaste": "",
+      "aftertaste": "It took you years to grow one millimetre taller.",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1280,7 +1281,7 @@
         "Then each of those bodies lives with every family, in every city, beside every person it could meet.",
         "In one of those books you keep your present body, but your family and the city you live in are different."
       ],
-      "aftertaste": "",
+      "aftertaste": "You would recognise your hands in a house that is not yours.",
       "neighbors": [
         {
           "targetBookId": "b0059",
@@ -1306,7 +1307,7 @@
         "The people who might have known you are reduced to a petrol station, a junction or the headlights of an oncoming car.",
         "You are neither fleeing anything nor heading anywhere."
       ],
-      "aftertaste": "",
+      "aftertaste": "Petrol stations are your only address.",
       "neighbors": [
         {
           "targetBookId": "b0063",
@@ -1330,7 +1331,7 @@
         "The map takes years to change. You sleep by the roadside, in boarding houses or in doorways wherever each day ends, and at dawn you pedal again. Your body grows old measuring the world in daily kilometres: first a hundred and twenty, then eighty, then twenty.",
         "There is neither a return nor an arrival. When your legs can no longer hold the bicycle upright, the book ends."
       ],
-      "aftertaste": "",
+      "aftertaste": "Each year fits into fewer kilometres.",
       "neighbors": [
         {
           "targetBookId": "b0062",
@@ -1360,7 +1361,7 @@
         "You land, cross a lit terminal without going out into the city, sleep a few hours beside a runway and take off again. Your watch never matches the light coming through the window.",
         "For decades you look down from ten thousand metres at streets you will never walk."
       ],
-      "aftertaste": "",
+      "aftertaste": "You know those streets from above.",
       "neighbors": [
         {
           "targetBookId": "b0062",
@@ -1385,7 +1386,7 @@
         "In another you die one second later.",
         "In another, ten years earlier. Each one holds the whole life that had to happen first for you to reach that exact instant."
       ],
-      "aftertaste": "",
+      "aftertaste": "Months, days, hours and minutes: all of it fits before the final second.",
       "neighbors": [
         {
           "targetBookId": "b0066",
@@ -1408,7 +1409,7 @@
         "There are books that end after a few minutes and books that pass through a childhood, an adult life or extreme old age. For every duration, there are all possible final days: ordinary, busy, quiet, shared, unnoticed.",
         "Sometimes the end comes after you wash your hands, look at a street or set a cup on a table."
       ],
-      "aftertaste": "",
+      "aftertaste": "Washing your hands can also be the last thing you do.",
       "neighbors": [
         {
           "targetBookId": "b0065",
@@ -1479,7 +1480,7 @@
         "You were born in another country, speak another language and belong to another family. Your education, work, beliefs and memories are different. You have never seen the places you now call yours.",
         "Even so, the signature at the bottom of certain documents carries exactly the same name. Everything you are has changed around those letters."
       ],
-      "aftertaste": "",
+      "aftertaste": "The signature does not give the hand away.",
       "neighbors": [
         {
           "targetBookId": "b0068",
@@ -1533,7 +1534,7 @@
         "There is a book in which almost nothing from your present life remains. Another body, another family, another country, another language, another job and another death. You know none of the people who make up your days here.",
         "Yet at the same age, you make exactly one gesture that you made in this life: you move a chair aside with your hand before sitting down. The position of your fingers, the force and the duration match."
       ],
-      "aftertaste": "",
+      "aftertaste": "There is a gesture that belongs to neither life.",
       "neighbors": [
         {
           "targetBookId": "b0072",
@@ -1556,7 +1557,7 @@
         "Two lives have different births, faces, educations, cities, beliefs and relationships. But on a particular date, you eat the same breakfast, in the same order, in the same quantities and for the same number of minutes.",
         "Afterwards, the books separate again until two different deaths."
       ],
-      "aftertaste": "",
+      "aftertaste": "Halfway through breakfast, what you're eating doesn't give away which life you're in.",
       "neighbors": [
         {
           "targetBookId": "b0071",
@@ -1605,7 +1606,7 @@
         "Many of those people will never enter your present life.",
         "Right now they live somewhere without knowing who you are."
       ],
-      "aftertaste": "",
+      "aftertaste": "You do not know who they are either.",
       "neighbors": [
         {
           "targetBookId": "b0075",
@@ -1775,9 +1776,10 @@
       "title": "A Single Tuesday",
       "passage": [
         "Even if your family, body, home and job stay fixed, every possible Tuesday remains.",
-        "Every time you could wake. Every breakfast. Every route. Every person you could cross paths with. Every word you could say and every word you could leave unsaid."
+        "Every time you could wake. Every breakfast. Every route. Every person you could cross paths with. Every word you could say and every word you could leave unsaid.",
+        "In one of them, you butter the toast after the coffee instead of before."
       ],
-      "aftertaste": "",
+      "aftertaste": "One of those books is distinguished by the order of the toast.",
       "neighbors": [
         {
           "targetBookId": "b0080",
@@ -1876,7 +1878,7 @@
         "Among all those combinations there is also a book that describes your life exactly: your birth, these words and the circumstances of your death.",
         "It was not written for you."
       ],
-      "aftertaste": "",
+      "aftertaste": "You have been legible all your life.",
       "neighbors": [
         {
           "targetBookId": "b0083",
@@ -2003,7 +2005,7 @@
         "Then come things you never wrote. He learns a trade. He moves house. He loses his hair and stops hiding the scar. He cares for someone, and years later he needs to be cared for.",
         "He never hears your name."
       ],
-      "aftertaste": "",
+      "aftertaste": "The lie about the water was his too.",
       "neighbors": [
         {
           "targetBookId": "b0089",
