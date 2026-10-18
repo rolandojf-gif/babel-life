@@ -69,7 +69,7 @@
       "passage": [
         "Este libro es idéntico al tuyo salvo por cuatro segundos. Naces cuatro segundos después.",
         "Nadie lo advierte. El médico no cambia de postura. Tu madre respira igual. Fuera, los mismos coches avanzan bajo la misma lluvia.",
-        "Durante toda tu vida ocurre exactamente lo mismo, pero cada edad comienza cuatro segundos más tarde. Incluso tu muerte conserva la misma fecha y el mismo lugar."
+        "Durante toda tu vida ocurre exactamente lo mismo, a las mismas horas. Solo tu edad va cuatro segundos por detrás. Mueres en el mismo instante."
       ],
       "aftertaste": "Cuatro segundos nunca fueron un retraso.",
       "neighbors": [
@@ -333,7 +333,7 @@
       "title": "Donde duermes",
       "passage": [
         "Existe un libro para la vida en la que duermes esta noche en tu habitación exacta. Registra la distancia entre la cama y la pared, lo que ves desde la ventana y los objetos que alcanzas sin levantarte.",
-        "Esa habitación forma parte de un tramo de tu vida y luego desaparece. Sin embargo, haber dormido allí modifica la lista completa de lugares a los que has llamado casa.",
+        "Esa habitación forma parte de un tramo de tu vida y luego desaparece. Sin embargo, sigue en la lista de lugares a los que has llamado casa.",
         "El libro conserva todos, incluso los que ya no podrías recorrer de memoria."
       ],
       "aftertaste": "La mano aún podría buscar donde ya no hay nada.",
@@ -558,7 +558,7 @@
       "title": "Lo que conservas",
       "passage": [
         "Existe un libro con los hechos exactos de tu vida y con la parte que todavía recuerdas. Distingue ambas cosas.",
-        "Registra tardes que ocurrieron y ya no puedes recuperar, rostros cuyo nombre perdiste y frases que crees recordar de manera incorrecta. También guarda recuerdos insignificantes que sobrevivieron sin razón visible.",
+        "Registra tardes que ocurrieron y ya no puedes recuperar, rostros cuyo nombre perdiste y frases que recuerdas mal sin saberlo. También guarda recuerdos insignificantes que sobrevivieron sin razón visible.",
         "Las dos versiones empiezan a separarse mucho antes de que adviertas la diferencia."
       ],
       "aftertaste": "La frase correcta podría sonarte menos tuya que el error.",
@@ -733,7 +733,7 @@
       "passage": [
         "Al caminar, apoyas un pie veinte centímetros más a la izquierda.",
         "No tropiezas. No encuentras a nadie. Tu destino, tu hora de llegada y el resto de tu vida permanecen iguales. Solo la planta de tu pie toca otro fragmento de suelo durante menos de un segundo.",
-        "El cambio desaparece de inmediato, pero no puede borrarse del registro: tu vida entera se desvió el ancho de una mano."
+        "El cambio desaparece de inmediato, pero no puede borrarse del registro: tu vida entera se desvió un palmo."
       ],
       "aftertaste": "A los dos fragmentos de suelo los llamarías aquí.",
       "neighbors": [
@@ -1355,7 +1355,7 @@
       "kind": "nearby",
       "icon": "flight",
       "headline": "ENTRE ESCALAS",
-      "title": "Sin aterrizar",
+      "title": "Entre escalas",
       "passage": [
         "En otro libro pasas la vida encadenando vuelos comerciales. Cada día tienes otra tarjeta de embarque, otro pasillo de moqueta, otra puerta y otro desconocido durmiendo a pocos centímetros de tu hombro.",
         "Aterrizas, cruzas una terminal iluminada sin salir a la ciudad, duermes unas horas junto a una pista y vuelves a despegar. Tu reloj nunca coincide con la luz que entra por la ventanilla.",
@@ -1953,8 +1953,8 @@
       "headline": "EN SENTIDOS OPUESTOS",
       "title": "En sentidos opuestos",
       "passage": [
-        "El hombre que en 1996 cruzó contigo una puerta en sentidos opuestos tiene su propio libro. Allí están su infancia junto al mar, los turnos de noche, la hija a la que llamaba cada domingo.",
-        "Y una tarde de 1996, en un vestíbulo, un desconocido salía mientras él entraba. Ese desconocido eres tú, y no llevas nombre."
+        "El hombre que cruzó contigo una puerta en sentidos opuestos tiene su propio libro. Allí están su infancia junto al mar, los turnos de noche, la hija a la que llamaba cada domingo.",
+        "Y una tarde, cuando él tenía cuarenta y un años, en un vestíbulo, alguien salía mientras él entraba. Ese alguien eres tú, y no llevas nombre."
       ],
       "aftertaste": "Cada uno ocupa cuatro segundos en la vida del otro.",
       "neighbors": [
