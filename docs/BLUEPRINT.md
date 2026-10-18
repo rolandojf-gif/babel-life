@@ -381,7 +381,7 @@ NEARBY B: Family, body, language and every other detail all change at once.
 25
 TITLE: A Single Comma
 WALL HOOK: there are no words, only a comma in one exact position.
-NEARBY A: Every character is the same letter.
+NEARBY A: The letters spell out your exact life, except for one.
 NEARBY B: The combinations eventually form a complete life.
 
 26

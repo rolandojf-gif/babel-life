@@ -1832,7 +1832,7 @@
       "neighbors": [
         {
           "targetBookId": "b0084",
-          "difference": "Every character is the same letter."
+          "difference": "The letters spell out your exact life, except for one."
         },
         {
           "targetBookId": "b0085",
@@ -1845,22 +1845,22 @@
       "rootId": "b0083",
       "kind": "nearby",
       "icon": "aes",
-      "headline": "ONLY A'S",
-      "title": "Only A's",
+      "headline": "A MISPRINT",
+      "title": "A Misprint",
       "passage": [
-        "There is a book in which every character is the letter a.",
-        "Another contains only b. Another, only full stops.",
-        "Only one character changes: a b among more than a million a's, a full stop among spaces, a different letter in the final position."
+        "This book is yours, letter for letter, except for one.",
+        "On an ordinary page, a single letter does not match. The sentence means the same thing. Everything you live through is the same; only the spelling changes.",
+        "From inside, no one can see that letter, not even you."
       ],
-      "aftertaste": "You could open it at random and never find the intruding letter.",
+      "aftertaste": "The misprint could be in yours.",
       "neighbors": [
         {
           "targetBookId": "b0083",
-          "difference": "Only the position of a comma changes."
+          "difference": "No word remains, only a comma."
         },
         {
           "targetBookId": "b0085",
-          "difference": "The combinations grow readable until they describe a life."
+          "difference": "No letter is wrong: the book describes your life exactly."
         }
       ]
     },
@@ -1885,7 +1885,7 @@
         },
         {
           "targetBookId": "b0084",
-          "difference": "Every character is again the same symbol."
+          "difference": "Everything matches except for one letter."
         }
       ]
     },

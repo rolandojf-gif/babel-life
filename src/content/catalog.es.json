@@ -1832,7 +1832,7 @@
       "neighbors": [
         {
           "targetBookId": "b0084",
-          "difference": "Todos los caracteres son la misma letra."
+          "difference": "Las letras cuentan tu vida exacta, salvo una."
         },
         {
           "targetBookId": "b0085",
@@ -1845,22 +1845,22 @@
       "rootId": "b0083",
       "kind": "nearby",
       "icon": "aes",
-      "headline": "SOLO AES",
-      "title": "Solo aes",
+      "headline": "UNA ERRATA",
+      "title": "Una errata",
       "passage": [
-        "Existe un libro donde todos los caracteres son la letra a.",
-        "Otro contiene únicamente b. Otro, únicamente puntos.",
-        "Solo cambia un carácter: una b entre más de un millón de aes, un punto entre espacios, una letra distinta en la última posición."
+        "Este libro es el tuyo, letra por letra, salvo una.",
+        "En una página cualquiera, una sola letra no coincide. La frase se entiende igual. Vives exactamente lo mismo; solo cambia cómo está escrito.",
+        "Desde dentro nadie puede ver esa letra, ni siquiera tú."
       ],
-      "aftertaste": "Podrías abrirlo al azar sin dar nunca con la letra intrusa.",
+      "aftertaste": "La errata podría estar en el tuyo.",
       "neighbors": [
         {
           "targetBookId": "b0083",
-          "difference": "Solo cambia la posición de una coma."
+          "difference": "No queda ninguna palabra, solo una coma."
         },
         {
           "targetBookId": "b0085",
-          "difference": "Las combinaciones se vuelven legibles hasta describir una vida."
+          "difference": "Ninguna letra falla: el libro describe exactamente tu vida."
         }
       ]
     },
@@ -1885,7 +1885,7 @@
         },
         {
           "targetBookId": "b0084",
-          "difference": "Todos los caracteres vuelven a ser el mismo símbolo."
+          "difference": "Todo coincide salvo una letra."
         }
       ]
     },
