@@ -1683,7 +1683,7 @@
       "neighbors": [
         {
           "targetBookId": "b0078",
-          "difference": "One thought appears for three seconds and changes nothing."
+          "difference": "As you lift a glass, the sentence that would have crossed your mind never forms."
         },
         {
           "targetBookId": "b0079",
@@ -1737,7 +1737,7 @@
         },
         {
           "targetBookId": "b0078",
-          "difference": "One thought appears for three seconds and changes nothing."
+          "difference": "As you lift a glass, the sentence that would have crossed your mind never forms."
         }
       ]
     },

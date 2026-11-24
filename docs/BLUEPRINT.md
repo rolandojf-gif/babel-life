@@ -371,7 +371,7 @@ NEARBY B: One of those people shares your life, and the first day is not the sam
 23
 TITLE: What No One Saw
 WALL HOOK: your visible life remains identical while the thoughts, desires and interpretations it contains change.
-NEARBY A: One thought appears for three seconds and changes nothing.
+NEARBY A: As you lift a glass, the sentence that would have crossed your mind never forms.
 NEARBY B: Every inner interpretation, intention and combination changes.
 
 24

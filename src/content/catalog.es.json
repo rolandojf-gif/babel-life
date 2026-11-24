@@ -1683,7 +1683,7 @@
       "neighbors": [
         {
           "targetBookId": "b0078",
-          "difference": "Un pensamiento aparece durante tres segundos y no cambia nada."
+          "difference": "Levantas el vaso y la frase que iba a cruzarte la cabeza no llega a formarse."
         },
         {
           "targetBookId": "b0079",
@@ -1737,7 +1737,7 @@
         },
         {
           "targetBookId": "b0078",
-          "difference": "Un pensamiento aparece durante tres segundos y no cambia nada."
+          "difference": "Levantas el vaso y la frase que iba a cruzarte la cabeza no llega a formarse."
         }
       ]
     },
