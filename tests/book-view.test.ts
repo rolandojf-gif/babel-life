@@ -78,16 +78,18 @@ describe('BookView', () => {
     }
   });
 
-  it('offers nearby lives immediately after the story, before the physical shelf', () => {
+  it('keeps the story and nearby lives before the volume details in reading order', () => {
     const view = createBookView('b0007', null);
     const children = Array.from(view.element.children);
-    const spreadIndex = children.findIndex((child) => child.classList.contains('spread'));
+    const storyIndex = children.findIndex((child) => child.classList.contains('spread__recto'));
     const nearbyIndex = children.findIndex((child) => child.classList.contains('nearby'));
+    const detailsIndex = children.findIndex((child) => child.classList.contains('spread__verso'));
     const shelfIndex = children.findIndex((child) => child.classList.contains('book__shelf'));
 
-    expect(spreadIndex).toBeGreaterThanOrEqual(0);
-    expect(nearbyIndex).toBe(spreadIndex + 1);
-    expect(shelfIndex).toBeGreaterThan(nearbyIndex);
+    expect(storyIndex).toBeGreaterThanOrEqual(0);
+    expect(nearbyIndex).toBe(storyIndex + 1);
+    expect(detailsIndex).toBe(nearbyIndex + 1);
+    expect(shelfIndex).toBeGreaterThan(detailsIndex);
     expect(view.element.querySelectorAll('.book__shelf .shelf__link').length).toBeGreaterThan(0);
   });
 

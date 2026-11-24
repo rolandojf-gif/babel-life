@@ -141,17 +141,16 @@ export function createBookView(bookId: string, address: Coordinate | null, previ
   );
   if (book.aftertaste !== '') recto.append(element('p', 'aftertaste', book.aftertaste));
 
-  const spread = element('div', 'spread');
-  spread.append(verso, gutter, recto);
-
   const shelfGutter = element('div', 'book__shelf-gutter');
   shelfGutter.setAttribute('aria-hidden', 'true');
 
   root.append(
     createPrintHead(coordinate),
     createBackLink(),
-    spread,
+    recto,
     createNearbyVolumes(book, previousBookId),
+    verso,
+    gutter,
     shelfGutter,
     createEmbeddedShelf(shelfOf(coordinate), book.id),
     createShelfWalk(coordinate),

@@ -1005,8 +1005,10 @@ body {
   max-width: 77rem;
 }
 
-.book--spread .spread {
+.book--spread .spread__recto,
+.book--spread .spread__verso {
   display: flex;
+  min-width: 0;
   flex-direction: column;
   margin-top: 2rem;
 }
@@ -1016,36 +1018,27 @@ body {
   display: none;
 }
 
-.book--spread .spread__verso,
-.book--spread .spread__recto {
-  display: contents;
-}
-
 .book--spread .found {
-  order: 1;
   margin: 0;
 }
 
 .book--spread .shelf-locator {
-  order: 2;
   width: 100%;
   margin-top: 0.85rem;
 }
 
 .book--spread .consulted {
-  order: 3;
   margin-top: 0.75rem;
 }
 
 .book--spread .book__header {
-  order: 4;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem 1.25rem;
   width: 100%;
   max-width: 52ch;
-  margin: 1.25rem 0 0;
+  margin: 0;
 }
 
 .book--spread .book__title {
@@ -1057,7 +1050,6 @@ body {
 }
 
 .book--spread .book__visual {
-  order: 3;
   flex: none;
   margin-top: 1.75rem;
   color: var(--charcoal);
@@ -1073,12 +1065,10 @@ body {
 }
 
 .book--spread .already-here {
-  order: 5;
   margin-top: 0.75rem;
 }
 
 .book--spread .passage {
-  order: 6;
   max-width: 52ch;
   margin-top: 1.5rem;
   font-size: 1.25rem;
@@ -1086,7 +1076,6 @@ body {
 }
 
 .book--spread .aftertaste {
-  order: 7;
   max-width: 34ch;
   margin: 2.5rem auto 1.5rem;
   padding: 0;
@@ -1113,17 +1102,26 @@ body {
   margin-top: 2.5rem;
 }
 
-@media (min-width: 47.5em) {
-  .book--spread .spread {
+@media screen and (min-width: 47.5em) {
+  .book--spread {
     display: grid;
     grid-template-columns: 17.5rem 4rem minmax(0, 1fr);
+    grid-template-areas:
+      "back back back"
+      "details gutter story"
+      "nearby nearby nearby"
+      "shelf shelf shelf"
+      "walk walk walk"
+      "actions actions actions";
   }
 
-  .book--spread .spread__verso,
-  .book--spread .spread__recto {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
+  .book--spread > .backlink {
+    grid-area: back;
+    justify-self: start;
+  }
+
+  .book--spread > .spread__verso {
+    grid-area: details;
   }
 
   .book--spread .spread__verso .consulted {
@@ -1132,7 +1130,9 @@ body {
 
   .book--spread .spread__gutter {
     display: flex;
+    grid-area: gutter;
     justify-content: center;
+    margin-top: 2rem;
   }
 
   .book--spread .spread__gutter::before {
@@ -1142,29 +1142,28 @@ body {
     content: '';
   }
 
-  .book--spread .found,
-  .book--spread .shelf-locator,
-  .book--spread .book__header,
-  .book--spread .book__title,
-  .book--spread .already-here,
-  .book--spread .consulted,
-  .book--spread .book__visual,
-  .book--spread .passage,
-  .book--spread .aftertaste {
-    order: 0;
+  .book--spread > .nearby {
+    grid-area: nearby;
   }
 
-  .book--spread .spread__recto {
+  .book--spread > .book__shelf {
+    grid-area: shelf;
+  }
+
+  .book--spread > .shelfwalk {
+    grid-area: walk;
+  }
+
+  .book--spread > .book__actions {
+    grid-area: actions;
+  }
+
+  .book--spread > .spread__recto {
+    grid-area: story;
     max-width: 52ch;
   }
 
-  .book--spread .book__header {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   .book--spread .book__title {
-    margin-top: 0;
     font-size: 3rem;
   }
 
@@ -1188,47 +1187,23 @@ body {
 
 }
 
-@media (min-width: 75em) {
+@media screen and (min-width: 75em) {
   .book--spread {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 5rem minmax(11.5rem, 14rem);
-    column-gap: clamp(2rem, 3vw, 3.25rem);
-  }
-
-  .book--spread > .backlink,
-  .book--spread > .nearby,
-  .book--spread > .shelfwalk,
-  .book--spread > .book__actions {
-    grid-column: 1 / -1;
-  }
-
-  /* The DOM follows the reading; on wide screens the shelf stays beside the spread. */
-  .book--spread > .backlink {
-    grid-row: 1;
-  }
-
-  .book--spread > .nearby {
-    grid-row: 3;
-  }
-
-  .book--spread > .shelfwalk {
-    grid-row: 4;
-  }
-
-  .book--spread > .book__actions {
-    grid-row: 5;
-  }
-
-  .book--spread > .spread {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 2rem;
+    --shelf-gap: clamp(2rem, 3vw, 3.25rem);
+    grid-template-columns:
+      17.5rem 4rem minmax(0, 1fr)
+      var(--shelf-gap) 5rem var(--shelf-gap) minmax(11.5rem, 14rem);
+    grid-template-areas:
+      "back    back    back    back    back       back    back"
+      "details gutter  story   .       shelf-rule .       shelf"
+      "nearby  nearby  nearby  nearby  nearby     nearby  nearby"
+      "walk    walk    walk    walk    walk       walk    walk"
+      "actions actions actions actions actions    actions actions";
   }
 
   .book--spread > .book__shelf-gutter {
     display: flex;
-    grid-column: 2;
-    grid-row: 2;
+    grid-area: shelf-rule;
     justify-content: center;
     margin-top: 2rem;
   }
@@ -1241,10 +1216,7 @@ body {
   }
 
   .book--spread > .book__shelf {
-    grid-column: 3;
-    grid-row: 2;
     align-self: start;
-    margin-top: 2rem;
   }
 }
 
@@ -3059,7 +3031,6 @@ body {
     break-inside: avoid;
   }
 
-  .book--spread .spread,
   .book--spread .spread__verso,
   .book--spread .spread__recto {
     display: contents;
