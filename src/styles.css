@@ -1064,6 +1064,37 @@ body {
   stroke-width: 1.1;
 }
 
+.book--spread .book__header-motif {
+  display: none;
+}
+
+@media screen and (width < 47.5em) {
+  .book--spread .book__header {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .book--spread .book__title {
+    flex: 0 1 auto;
+    overflow-wrap: anywhere;
+  }
+
+  .book--spread .book__header-motif {
+    display: block;
+    flex: 0 0 clamp(4rem, 20vw, 6rem);
+    color: var(--charcoal);
+  }
+
+  .book--spread .book__header-motif .illustration {
+    width: 100%;
+  }
+
+  .book--spread .spread__verso .book__visual {
+    display: none;
+  }
+}
+
 .book--spread .already-here {
   margin-top: 0.75rem;
 }

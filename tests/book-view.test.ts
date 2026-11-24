@@ -104,7 +104,13 @@ describe('BookView', () => {
 
     const recto = view.element.querySelector('.spread__recto');
     expect(recto).not.toBeNull();
-    expect(recto?.querySelector('.book__header')).not.toBeNull();
+    const header = recto?.querySelector('.book__header');
+    expect(header?.querySelector('h1')).not.toBeNull();
+    const headerMotif = header?.querySelector('.book__header-motif');
+    expect(headerMotif?.getAttribute('aria-hidden')).toBe('true');
+    const inlineDrawing = headerMotif?.querySelector('.illustration');
+    const plate = verso?.querySelector('.book__visual .illustration') ?? null;
+    expect(inlineDrawing?.isEqualNode(plate)).toBe(true);
     expect(recto?.querySelector('.passage')).not.toBeNull();
     expect(recto?.querySelector('.aftertaste')).not.toBeNull();
     expect(recto?.querySelector('.consulted')).toBeNull();

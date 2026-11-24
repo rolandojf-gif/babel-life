@@ -48,8 +48,8 @@ function createPassage(book: Book): HTMLDivElement {
   return passage;
 }
 
-function createBookVisual(book: Book): HTMLDivElement {
-  const visual = element('div', 'book__visual');
+function createBookVisual(book: Book, className = 'book__visual'): HTMLDivElement {
+  const visual = element('div', className);
   visual.setAttribute('aria-hidden', 'true');
   visual.append(createIllustration(book.icon, ACCENTS[book.id]));
   return visual;
@@ -119,7 +119,7 @@ export function createBookView(bookId: string, address: Coordinate | null, previ
   title.tabIndex = -1;
 
   const header = element('div', 'book__header');
-  header.append(title);
+  header.append(title, createBookVisual(book, 'book__header-motif'));
 
   // The motif stands on the verso as the book's plate, under the reading note.
   const verso = element('div', 'spread__verso');
